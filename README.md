@@ -1,4 +1,6 @@
-# READ ME
+# FOP
+
+[![Build Status](https://img.shields.io/travis/brieucthomas/fop/develop.svg?style=flat-square)](https://travis-ci.org/brieucthomas/fop)
 
 ## Install
 
