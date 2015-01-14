@@ -9,10 +9,8 @@
 
 namespace AppBundle\Tests;
 
-use Doctrine\ORM\EntityManagerInterface;
 use Liip\FunctionalTestBundle\Test\WebTestCase as LiipTest;
 use Symfony\Bundle\FrameworkBundle\Client;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class WebTestCase extends LiipTest
 {

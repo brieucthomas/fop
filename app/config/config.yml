@@ -110,3 +110,8 @@ fos_user:
 
 # Gravatar Configuration
 ornicar_gravatar: ~
+
+# KnpMenu Configuration
+knp_menu:
+    twig:
+        template: :menu:bootstrap.html.twig

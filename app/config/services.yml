@@ -4,11 +4,17 @@ parameters:
 #    parameter_name: value
 
 services:
-    # Twig Extensions
+    # Twig
     twig.text_extension:
         class: Twig_Extensions_Extension_Text
         tags:
             - name: twig.extension
+
+    # Translation
+    translation.menu_extractor:
+        class: AppBundle\Translation\MenuTranslationExtractor
+        tags:
+            - name: jms_translation.file_visitor
 
     # Repositories
     repository.user:
@@ -21,3 +27,35 @@ services:
     service.user:
         class: AppBundle\Service\UserService
         arguments: ["@repository.user"]
+
+    # Menus
+    menu_builder:
+        class: AppBundle\Menu\Builder
+        scope: request
+        arguments: ["@knp_menu.factory", "@request_stack"]
+    menu_main:
+         class: Knp\Menu\MenuItem
+         factory_service: menu_builder
+         factory_method: createMainMenu
+         tags:
+             - { name: knp_menu.menu, alias: main }
+    menu_footer:
+         class: Knp\Menu\MenuItem
+         factory_service: menu_builder
+         factory_method: createFooterMenu
+         tags:
+             - { name: knp_menu.menu, alias: footer }
+    menu_user:
+         class: Knp\Menu\MenuItem
+         factory_service: menu_builder
+         factory_method: createUserMenu
+         arguments: ["@security.authorization_checker"]
+         tags:
+             - { name: knp_menu.menu, alias: user }
+    menu_locale_switcher:
+         class: Knp\Menu\MenuItem
+         factory_service: menu_builder
+         factory_method: createLocaleSwitcherMenu
+         arguments: ["%locales%"]
+         tags:
+             - { name: knp_menu.menu, alias: locale_switcher }

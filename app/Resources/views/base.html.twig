@@ -14,7 +14,34 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ path('homepage') }}">FOP</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    {{ knp_menu_render('main', { 'style': 'navbar' }) }}
+                    {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
+                    {{ knp_menu_render('locale_switcher', { 'currentClass': '', 'template': ':menu:locale_switcher.html.twig', 'style': 'navbar-right' }) }}
+                </div>
+            </div>
+        </nav>
+
         {% block body %}{% endblock %}
+
+        <footer id="site-footer">
+            <div class="container">
+                {{ knp_menu_render('footer', { 'style': 'pills' }) }}
+            </div>
+        </footer>
+
         {% block requirejs include("requirejs.html.twig") %}
         {% block javascripts %}{% endblock %}
     </body>
