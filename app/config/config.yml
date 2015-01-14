@@ -29,6 +29,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources: ['bootstrap_3_layout.html.twig']
 
 # Assetic Configuration
 assetic:
@@ -61,8 +63,17 @@ doctrine:
         #     path:     "%database_path%"
 
     orm:
+        naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+
+# Doctrine Extensions Configuration
+stof_doctrine_extensions:
+    default_locale: "%locale%"
+    orm:
+        default:
+            sluggable: true
+            timestampable: true
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -90,3 +101,12 @@ jms_translation:
             excluded_names:  ["*TestCase.php", "*Test.php"]
             excluded_dirs:   ["var"]
             output_format:   xliff
+
+# FOSUserBundle Configuration
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: AppBundle\Entity\User
+
+# Gravatar Configuration
+ornicar_gravatar: ~

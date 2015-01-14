@@ -2,6 +2,15 @@
 
 ## Install
 
+### Database
+
+``` bash 
+$ bin/console doctrine:database:create
+$ bin/console doctrine:schema:update --force
+```
+
+### Assets
+
 ``` bash
 $ npm update
 ```
@@ -13,6 +22,7 @@ $ ./node_modules/.bin/bower update
 ``` bash
 $ ./node_modules/.bin/gulp
 ```
+
 
 ## Translations
 
