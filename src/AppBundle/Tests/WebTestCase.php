@@ -21,16 +21,6 @@ class WebTestCase extends LiipTest
      */
     protected $client;
 
-    /**
-     * @var ContainerInterface
-     */
-    protected $container;
-
-    /**
-     * @var EntityManagerInterface
-     */
-    protected $em;
-
     protected function setUp()
     {
         $this->client = static::createClient();
