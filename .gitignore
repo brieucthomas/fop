@@ -1,4 +1,7 @@
+/web/vendor/
 /web/bundles/
+/web/assets/
+/web/css/
 /app/config/parameters.yml
 /var/bootstrap.php.cache
 /var/SymfonyRequirements.php
@@ -12,3 +15,4 @@
 !bin/console
 !bin/symfony_requirements
 /composer.phar
+/node_modules/
