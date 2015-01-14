@@ -1,6 +1,6 @@
 # FOP
 
-[![Build Status](https://img.shields.io/travis/brieucthomas/fop/develop.svg?style=flat-square)](https://travis-ci.org/brieucthomas/fop)
+[![Build Status](https://img.shields.io/travis/brieucthomas/fop/master.svg?style=flat-square)](https://travis-ci.org/brieucthomas/fop)
 
 ## Install
 
