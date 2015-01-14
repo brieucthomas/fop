@@ -28,6 +28,7 @@ class WebTestCase extends LiipTest
             'AppBundle\Tests\Fixtures\LoadCircuitData',
             'AppBundle\Tests\Fixtures\LoadDriverData',
             'AppBundle\Tests\Fixtures\LoadConstructorData',
+            'AppBundle\Tests\Fixtures\LoadScoringSystemData',
         ]);
     }
 

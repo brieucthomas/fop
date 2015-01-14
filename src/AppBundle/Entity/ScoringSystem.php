@@ -11,8 +11,8 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * The prediction scoring system entity.
@@ -29,14 +29,23 @@ class ScoringSystem
      * The scoring system identifier.
      *
      * @ORM\Id
-     * @ORM\Column(type="string", length=24, unique=true)
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     *
+     * @var int
+     */
+    protected $id;
+
+    /**
+     * The scoring system name.
+     *
+     * @ORM\Column(type="string", unique=true, length=16)
      * @Assert\NotBlank
-     * @Assert\Length(min="3", max="24")
-     * @Assert\Regex("/^[a-z\-]*$/")
+     * @Assert\Length(min="3", max="16")
      *
      * @var string
      */
-    protected $id;
+    protected $name;
 
     /**
      * The scoring system length.
@@ -87,11 +96,11 @@ class ScoringSystem
     /**
      * Constructor.
      *
-     * @param string $id The scoring system identifier
+     * @param string $name The scoring system name
      */
-    public function __construct($id)
+    public function __construct($name)
     {
-        $this->id = $id;
+        $this->setName($name);
         $this->offsets = new ArrayCollection();
     }
 
@@ -103,6 +112,30 @@ class ScoringSystem
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Returns the scoring system name.
+     *
+     * @return string The scoring system name
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Sets the scoring system name.
+     *
+     * @param string $name The scoring system name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
     }
 
     /**
