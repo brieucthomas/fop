@@ -49,8 +49,16 @@
             {% set listClass = 'nav-list' %}
         {% elseif options.style is defined and options.style == 'navbar' %}
             {% set listClass = 'navbar-nav' %}
+        {% elseif options.style is defined and options.style == 'navbar-center' %}
+            {% set listClass = 'navbar-nav navbar-center' %}
         {% elseif options.style is defined and options.style == 'navbar-right' %}
             {% set listClass = 'navbar-nav navbar-right' %}
+        {% endif %}
+
+        {% if options.style is defined and options.style == 'inline' %}
+            {% set listClass = 'list-inline' %}
+        {% else %}
+            {% set listClass = (options.currentDepth == 0) ? listClass ~ ' nav' : listClass %}
         {% endif %}
 
         {% if options.pull is defined and options.pull == 'right' %}
@@ -58,8 +66,6 @@
         {% elseif options.pull is defined and options.pull == 'left' %}
             {% set listClass = (listClass|default('') ~ 'pull-left')|trim %}
         {% endif %}
-
-        {% set listClass = (options.currentDepth == 0) ? listClass ~ ' nav' : listClass %}
 
         {% set listAttributes = listAttributes|merge({'class': (listAttributes.class|default('') ~ ' ' ~ listClass)|trim}) %}
 

@@ -3,6 +3,22 @@
 // --------------------------------------------------
 
 
-// Iconography
+// Typography
+// --------------------------------------------------
 
-$icon-font-path: "/vendor/bootstrap/fonts/";
+$font-family-sans-serif:     "Titillium Web", sans-serif;
+$headings-font-family:       "Teko", sans-serif;
+
+
+// Iconography
+// --------------------------------------------------
+
+$icon-font-path:             "/vendor/bootstrap/fonts/";
+
+
+// Components
+// --------------------------------------------------
+
+$border-radius-base:         0;
+$border-radius-large:        0;
+$border-radius-small:        0;
