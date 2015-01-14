@@ -22,11 +22,35 @@ services:
         factory_service: doctrine.orm.entity_manager
         factory_method:  getRepository
         arguments: [AppBundle:User]
+    repository.circuit:
+        class: AppBundle\Repository\CircuitRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Circuit]
+    repository.driver:
+        class: AppBundle\Repository\DriverRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Driver]
+    repository.consturctor:
+        class: AppBundle\Repository\ConstructorRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Constructor]
 
     # Services
     service.user:
         class: AppBundle\Service\UserService
         arguments: ["@repository.user"]
+    service.circuit:
+        class: AppBundle\Service\CircuitService
+        arguments: ["@repository.circuit"]
+    service.driver:
+        class: AppBundle\Service\DriverService
+        arguments: ["@repository.driver"]
+    service.constructor:
+        class: AppBundle\Service\ConstructorService
+        arguments: ["@repository.consturctor"]
 
     # Menus
     menu_builder:

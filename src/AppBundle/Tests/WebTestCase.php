@@ -25,11 +25,19 @@ class WebTestCase extends LiipTest
 
         $this->loadFixtures([
             'AppBundle\Tests\Fixtures\LoadUserData',
+            'AppBundle\Tests\Fixtures\LoadCircuitData',
+            'AppBundle\Tests\Fixtures\LoadDriverData',
+            'AppBundle\Tests\Fixtures\LoadConstructorData',
         ]);
     }
 
     protected function tearDown()
     {
         $this->client = null;
+    }
+
+    protected function get($service)
+    {
+        return $this->getContainer()->get($service);
     }
 }
