@@ -32,7 +32,7 @@ class Constructor
      * @ORM\Column(type="string", length=24, unique=true)
      * @Assert\NotBlank
      * @Assert\Length(min="3", max="24")
-     * @Assert\Regex("/^[a-z_]*$/")
+     * @Assert\Regex("/^[a-z\-]*$/")
      *
      * @var string
      */
