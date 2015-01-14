@@ -10,5 +10,5 @@
             bootstrap: ['jquery']
         }
     });
-    require({{ ['common']|merge([module|default])|json_encode|trim|raw }});
+    require({{ ['common']|merge([module|default])|json_encode|raw }});
 </script>
