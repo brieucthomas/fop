@@ -1,0 +1,14 @@
+<script src="{{ asset('vendor/requirejs/require.js') }}"></script>
+<script>
+    requirejs.config({
+        baseUrl: '{{ asset('assets/js') }}',
+        paths: {
+            jquery: '{{ asset('vendor/jquery/dist/jquery.min') }}',
+            bootstrap: '{{ asset('vendor/bootstrap/dist/js/bootstrap.min') }}'
+        },
+        shim: {
+            bootstrap: ['jquery']
+        }
+    });
+    require({{ ['common']|merge([module|default])|json_encode|trim|raw }});
+</script>
