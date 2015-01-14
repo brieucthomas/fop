@@ -1,0 +1,10 @@
+{
+    "name": "fop",
+    "dependencies": {
+        "jquery": "~2.1",
+        "requirejs": "~2.1",
+        "bootstrap": "~3.3",
+        "bootstrap-sass-official": "~3.3",
+        "fontawesome": "~4.2"
+    }
+}
