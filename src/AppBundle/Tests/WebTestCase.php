@@ -24,11 +24,17 @@ class WebTestCase extends LiipTest
         $this->client = static::createClient();
 
         $this->loadFixtures([
-            'AppBundle\Tests\Fixtures\LoadUserData',
+            'AppBundle\Tests\Fixtures\LoadScoringSystemData',
+            'AppBundle\Tests\Fixtures\LoadSeasonData',
             'AppBundle\Tests\Fixtures\LoadCircuitData',
             'AppBundle\Tests\Fixtures\LoadDriverData',
             'AppBundle\Tests\Fixtures\LoadConstructorData',
-            'AppBundle\Tests\Fixtures\LoadScoringSystemData',
+            'AppBundle\Tests\Fixtures\LoadTeamData',
+            'AppBundle\Tests\Fixtures\LoadRaceData',
+            'AppBundle\Tests\Fixtures\LoadFinishingStatusData',
+            'AppBundle\Tests\Fixtures\LoadResultData',
+            'AppBundle\Tests\Fixtures\LoadUserData',
+            'AppBundle\Tests\Fixtures\LoadPredictionData',
         ]);
     }
 
