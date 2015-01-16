@@ -29,6 +29,6 @@ class CircuitServiceTest extends WebTestCase
      */
     private function getCircuitService()
     {
-        return $this->get('service.circuit');
+        return $this->get('circuit_service');
     }
 }

@@ -29,6 +29,6 @@ class ConstructorServiceTest extends WebTestCase
      */
     private function getConstructorService()
     {
-        return $this->get('service.constructor');
+        return $this->get('constructor_service');
     }
 }

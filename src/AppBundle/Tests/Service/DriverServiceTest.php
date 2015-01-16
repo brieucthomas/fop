@@ -29,6 +29,6 @@ class DriverServiceTest extends WebTestCase
      */
     private function getDriverService()
     {
-        return $this->get('service.driver');
+        return $this->get('driver_service');
     }
 }
