@@ -13,14 +13,14 @@ use AppBundle\Entity\Circuit;
 use AppBundle\Repository\CircuitRepositoryInterface;
 
 /**
- * The circuit service.
+ * The Circuit service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class CircuitService implements CircuitServiceInterface
 {
     /**
-     * The circuit repository.
+     * The Circuit repository.
      *
      * @var CircuitRepositoryInterface
      */
