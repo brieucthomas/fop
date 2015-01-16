@@ -83,3 +83,10 @@ services:
          arguments: ["%locales%"]
          tags:
              - { name: knp_menu.menu, alias: locale_switcher }
+
+    # Listener
+    console_exception_listener:
+        class: AppBundle\Listener\ConsoleExceptionListener
+        arguments: ['@logger']
+        tags:
+            - { name: kernel.event_listener, event: console.exception }
