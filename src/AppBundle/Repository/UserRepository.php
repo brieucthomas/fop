@@ -9,7 +9,9 @@
 
 namespace AppBundle\Repository;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\Expr;
 
 /**
  * The user repository.
@@ -18,4 +20,19 @@ use Doctrine\ORM\EntityRepository;
  */
 class UserRepository extends EntityRepository implements UserRepositoryInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function findByYear($year)
+    {
+        $builder = $this->_em->createQueryBuilder();
+        $builder
+            ->select('u')
+            ->from($this->_entityName, 'u', 'u.id')
+            ->where($builder->expr()->lte('u.creationDate', ':year'))
+            ->setParameter(':year', $year.'-01-01')
+        ;
+
+        return new ArrayCollection($builder->getQuery()->getResult());
+    }
 }

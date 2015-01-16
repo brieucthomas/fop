@@ -9,21 +9,19 @@
 
 namespace AppBundle\Repository;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use AppBundle\Entity\ScoringSystem;
 
 /**
- * The user repository.
+ * The ScoringSystem repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
-interface UserRepositoryInterface
+interface ScoringSystemRepositoryInterface
 {
     /**
-     * Returns the a season players.
+     * Finds the default scoring system.
      *
-     * @param int $year The season year
-     *
-     * @return ArrayCollection A collection of User entities
+     * @return ScoringSystem
      */
-    public function findByYear($year);
+    public function findByDefault();
 }
