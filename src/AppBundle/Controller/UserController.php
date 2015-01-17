@@ -25,7 +25,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class UserController extends Controller
 {
     /**
-     * @Route("/{slug}", requirements={"slug" = "[a-z\-]+"}, name="user_show")
+     * @Route("/{slug}", requirements={"slug" = "[a-z\-]+"}, name="user")
      * @Method({"GET"})
      * @Template("user/show.html.twig")
      */

@@ -2,8 +2,10 @@
 
 {% set module = 'app/homepage' %}
 
-{% block body %}
-    <div class="container">
-        {{ 'homepage.greeting'|trans }}
+{% block content %}
+    <div id="page-header" class="section section-inverse section-lg section-header">
+        <div class="container">
+            <h1>{{ 'homepage.greeting'|trans }}</h1>
+        </div>
     </div>
 {% endblock %}

@@ -1,0 +1,295 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Colors
+// -------------------------
+
+.text-turquoise	 			{ color: $turquoise; }
+.text-green-sea 			{ color: $green-sea; }
+
+.text-emerald 				{ color: $emerald; }
+.text-nephritis 			{ color: $nephritis; }
+
+.text-peter-river 			{ color: $peter-river; }
+.text-belize-hole 			{ color: $belize-hole; }
+
+.text-amethyst				{ color: $amethyst; }
+.text-wisteria 				{ color: $wisteria; }
+
+.text-wet-asphalt 			{ color: $wet-asphalt; }
+.text-midnight-blue 		{ color: $midnight-blue; }
+
+.text-sun-flower			{ color: $sun-flower; }
+.text-orange				{ color: $orange; }
+
+.text-carrot 				{ color: $carrot; }
+.text-pumpkin 				{ color: $pumpkin; }
+
+.text-alizarin 				{ color: $alizarin; }
+.text-pomegranate 			{ color: $pomegranate; }
+
+.text-clouds 				{ color: $clouds; }
+.text-silver 				{ color: $silver; }
+
+.text-concrete 				{ color: $concrete; }
+.text-asbestos 				{ color: $asbestos; }
+
+
+.bg-turquoise               { background: $turquoise; }
+.bg-green-sea               { background: $green-sea; }
+
+.bg-emerald                 { background: $emerald; }
+.bg-nephritis               { background: $nephritis; }
+
+.bg-peter-river             { background: $peter-river; }
+.bg-belize-hole             { background: $belize-hole; }
+
+.bg-amethyst                { background: $amethyst; }
+.bg-wisteria                { background: $wisteria; }
+
+.bg-wet-asphalt             { background: $wet-asphalt; }
+.bg-midnight-blue           { background: $midnight-blue; }
+
+.bg-sun-flower              { background: $sun-flower; }
+.bg-orange                  { background: $orange; }
+
+.bg-carrot                  { background: $carrot; }
+.bg-pumpkin                 { background: $pumpkin; }
+
+.bg-alizarin                { background: $alizarin; }
+.bg-pomegranate             { background: $pomegranate; }
+
+.bg-clouds                  { background: $clouds; }
+.bg-silver                  { background: $silver; }
+
+.bg-concrete                { background: $concrete; }
+.bg-asbestos                { background: $asbestos; }
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: uppercase;
+  letter-spacing: .6rem;
+}
+
+
+// Page Header
+// -------------------------
+
+.section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  > .section-inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    @include opacity(.2);
+  }
+}
+
+
+.section-bottom {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+
+.section-center {
+  text-align: center;
+}
+
+.section-lg {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 220px;
+    padding-bottom: 220px;
+  }
+
+  &.section-bottom {
+    padding-top: 280px;
+    padding-bottom: 40px;
+  }
+}
+
+.section-primary {
+  background-color: $brand-primary;
+  color: #fff;
+
+  h1,
+  .h1 {
+    color: #fff;
+  }
+}
+
+.section-inverse {
+  background-color: $gray-darker;
+  color: #fff;
+
+  h1,
+  .h1 {
+    color: #fff;
+  }
+}
+
+.section-hamilton:after {
+  background-image: url('../img/drivers/hamilton.jpg');
+}
+
+.section-header {
+  h1,
+  .h1 {
+    font-size: 12rem;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin-top: -($navbar-height + $navbar-margin-bottom + 4);
+    padding-top: 60px + ($navbar-height + $navbar-margin-bottom + 4);
+  }
+
+  &.section-lg {
+    @media (min-width: $grid-float-breakpoint) {
+      padding-top: 220px + ($navbar-height + $navbar-margin-bottom + 4);
+    }
+  }
+}
+
+.section-bold {
+  h1,
+  .h1 {
+    font-weight: 600;
+    letter-spacing: .6rem;
+  }
+}
+
+
+
+// Lists
+// -------------------------
+
+.list-standings {
+  counter-reset: li;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 4em;
+  display: table;
+  width: 100%;
+
+  > li:before {
+    content: counter(li, decimal-leading-zero);
+    counter-increment: li;
+    background-color: $silver;
+    text-align: center;
+  }
+
+  > li:nth-child(-n+3):before {
+    background-color: $alizarin;
+    color: #fff;
+  }
+
+  > li {
+    display: table-row;
+    text-decoration: none;
+    background-color: $clouds;
+  }
+
+  > li > span, li:before {
+    display: table-cell;
+    padding: 0.2em 0.5em;
+    border-bottom: 1px solid #fff;
+  }
+
+  > li > .list-standings-points {
+    text-align: right;
+  }
+
+  > li > .list-standings-team {
+    color: $concrete;
+
+  }
+}
+
+
+.list-details {
+  @include list-unstyled;
+
+  > li {
+    margin-bottom: 10px;
+  }
+
+  > li > span.list-details-label,
+  > li > span.list-details-value {
+    display: block;
+  }
+
+  > li > span.list-details-label {
+    color: $concrete;
+  }
+}
+
+
+// List segmented
+// -------------------------
+
+.list-highlight {
+  display: table;
+  width: 100%;
+  line-height: 38px;
+  font-family: $headings-font-family;
+  font-size: $font-size-large;
+  letter-spacing: 5px;
+
+  > li {
+    display: table-row;
+    vertical-align: middle;
+
+    > * {
+      display: table-cell;
+      margin: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .flag {
+    height: 38px;
+    margin-bottom: $line-height-computed;
+    padding: 0;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    @extend .list-unstyled;
+
+    > li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    > span,
+    > ul,
+    > ol {
+      display: inline-block;
+    }
+
+    .flag {
+      margin-bottom: 0;
+    }
+  }
+}
