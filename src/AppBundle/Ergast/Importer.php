@@ -9,6 +9,7 @@
 
 namespace AppBundle\Ergast;
 
+use AppBundle\Ergast\Loader\LoaderInterface;
 use AppBundle\Service\SeasonServiceInterface;
 use Doctrine\ORM\EntityManagerInterface;
 
