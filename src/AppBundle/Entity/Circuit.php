@@ -20,6 +20,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table
  * @UniqueEntity("id")
  * @UniqueEntity("name")
+ * @UniqueEntity("slug")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -29,12 +30,10 @@ class Circuit
      * The circuit identifier.
      *
      * @ORM\Id
-     * @ORM\Column(type="string", length=24, unique=true)
-     * @Assert\NotBlank
-     * @Assert\Length(min="3", max="24")
-     * @Assert\Regex("/^[a-z\-]*$/")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      *
-     * @var string
+     * @var int
      */
     protected $id;
 
@@ -48,6 +47,18 @@ class Circuit
      * @var string
      */
     protected $name;
+
+    /**
+     * The circuit slug.
+     *
+     * @ORM\Column(type="string", length=24, unique=true)
+     * @Assert\NotBlank
+     * @Assert\Length(min="3", max="24")
+     * @Assert\Regex("/^[a-z\-]*$/")
+     *
+     * @var string
+     */
+    protected $slug;
 
     /**
      * The circuit location.
@@ -71,19 +82,9 @@ class Circuit
     protected $country;
 
     /**
-     * Constructor.
-     *
-     * @param string $id The circuit identifier
-     */
-    public function __construct($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
      * Returns the circuit identifier.
      *
-     * @return string The circuit identifier
+     * @return int The circuit identifier
      */
     public function getId()
     {
@@ -110,6 +111,30 @@ class Circuit
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Returns the circuit slug.
+     *
+     * @return string The circuit slug
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Sets the circuit slug.
+     *
+     * @param string $slug The circuit slug
+     *
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
 
         return $this;
     }

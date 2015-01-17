@@ -20,11 +20,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 interface DriverServiceInterface
 {
     /**
-     * Finds drivers by identifiers.
+     * Finds drivers by slugs.
      *
-     * @param array $ids An array of driver identifiers
+     * @param array $slugs An array of driver slugs
      *
-     * @return ArrayCollection A collection of driver entities indexed by id
+     * @return ArrayCollection A collection of Driver entities indexed by slug
      */
-    public function findByIds(array $ids);
+    public function findBySlugs(array $slugs);
 }

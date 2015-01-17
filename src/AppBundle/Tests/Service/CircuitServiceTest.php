@@ -14,9 +14,9 @@ use AppBundle\Tests\WebTestCase;
 
 class CircuitServiceTest extends WebTestCase
 {
-    public function testFindCircuitsByIds()
+    public function testFindCircuitsBySlugs()
     {
-        $circuits = $this->getCircuitService()->findByIds(['monza', 'spa', 'london']);
+        $circuits = $this->getCircuitService()->findBySlugs(['monza', 'spa', 'london']);
 
         $this->assertInstanceOf('Doctrine\Common\Collections\ArrayCollection', $circuits);
         $this->assertCount(2, $circuits);

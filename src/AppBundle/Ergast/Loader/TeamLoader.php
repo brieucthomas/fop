@@ -55,27 +55,28 @@ class TeamLoader extends AbstractLoader
         $ergastDrivers = $this->getErgastDriversByYear($season->getYear());
 
         // load constructors from database
-        $constructorIds = $ergastConstructors->map(function (ErgastEntity\Constructor $constructor) {
+        $constructorSlugs = $ergastConstructors->map(function (ErgastEntity\Constructor $constructor) {
             return $constructor->getId();
         });
-        $constructors = $this->constructorService->findByIds($constructorIds->toArray());
+        $constructors = $this->constructorService->findBySlugs($constructorSlugs->toArray());
 
         // load drivers from database
-        $driverIds = $ergastDrivers->map(function (ErgastEntity\Driver $driver) {
+        $driverSlugs = $ergastDrivers->map(function (ErgastEntity\Driver $driver) {
             return $driver->getId();
         });
-        $drivers = $this->driverService->findByIds($driverIds->toArray());
+        $drivers = $this->driverService->findBySlugs($driverSlugs->toArray());
 
         foreach ($this->getErgastConstructorsByYear($season->getYear()) as $ergastConstructor) {
             /* @var $ergastConstructor ErgastEntity\Constructor */
             $constructor = $constructors->get($ergastConstructor->getId());
 
             if (!$constructor) {
-                $constructor = new AppEntity\Constructor($ergastConstructor->getId());
+                $constructor = new AppEntity\Constructor();
             }
 
             $constructor
                 ->setName($ergastConstructor->getName())
+                ->setSlug($ergastConstructor->getId())
                 ->setNationality($this->nationality->getCodeByName($ergastConstructor->getNationality()))
             ;
 
@@ -86,13 +87,14 @@ class TeamLoader extends AbstractLoader
                 $driver = $drivers->get($ergastDriver->getId());
 
                 if (!$driver) {
-                    $driver = new AppEntity\Driver($ergastDriver->getId());
+                    $driver = new AppEntity\Driver();
                     $drivers->set($ergastDriver->getId(), $driver);
                 }
 
                 $driver
                     ->setCode($ergastDriver->getCode())
                     ->setNumber($ergastDriver->getNumber())
+                    ->setSlug($ergastDriver->getId())
                     ->setFirstName($ergastDriver->getFirstName())
                     ->setLastName($ergastDriver->getLastName())
                     ->setBirthDate($ergastDriver->getBirthDate())

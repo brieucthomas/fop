@@ -20,11 +20,11 @@ use Doctrine\Common\Collections\ArrayCollection;
 interface ConstructorServiceInterface
 {
     /**
-     * Finds constructors by identifiers.
+     * Finds constructors by slugs.
      *
-     * @param array $ids An array of constructor identifiers
+     * @param array $slugs An array of constructor slugs
      *
-     * @return ArrayCollection A collection of Constructor entities indexed by id
+     * @return ArrayCollection A collection of Constructor entities indexed by slug
      */
-    public function findByIds(array $ids);
+    public function findBySlugs(array $slugs);
 }

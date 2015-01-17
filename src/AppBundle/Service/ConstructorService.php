@@ -39,8 +39,8 @@ class ConstructorService implements ConstructorServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySLugs(array $slugs)
     {
-        return $this->constructorRepository->findByIds($ids);
+        return $this->constructorRepository->findBySLugs($slugs);
     }
 }

@@ -174,16 +174,16 @@ class Season
     /**
      * Returns a team by its driver and constructor.
      *
-     * @param string $driverId      The driver identifier
-     * @param string $constructorId The constructor identifier
+     * @param string $driverSlug      The driver slug
+     * @param string $constructorSlug The constructor slug
      *
      * @return Team|null The Team entity or null if not found
      */
-    public function getTeamByDriverAndConstructor($driverId, $constructorId)
+    public function getTeamByDriverAndConstructor($driverSlug, $constructorSlug)
     {
         foreach ($this->teams as $team) {
             /* @var $team Team */
-            if (($team->getDriver()->getId() == $driverId) && ($team->getConstructor()->getId() == $constructorId)) {
+            if (($team->getDriver()->getSlug() == $driverSlug) && ($team->getConstructor()->getSlug() == $constructorSlug)) {
                 return $team;
             }
         }
@@ -194,7 +194,7 @@ class Season
     /**
      * Returns the season drivers.
      *
-     * @return ArrayCollection A collection of Driver entity
+     * @return ArrayCollection A collection of Driver entities indexed by slug
      */
     public function getDrivers()
     {
@@ -202,7 +202,7 @@ class Season
 
         foreach ($this->teams as $team) {
             /* @var $team Team */
-            $drivers->set($team->getDriver()->getId(), $team->getDriver());
+            $drivers->set($team->getDriver()->getSlug(), $team->getDriver());
         }
 
         return $drivers;
@@ -213,7 +213,7 @@ class Season
      *
      * @param Constructor $constructor A constructor entity
      *
-     * @return ArrayCollection
+     * @return ArrayCollection A collection of Driver entities indexed by slug
      */
     public function getDriversByConstructor(Constructor $constructor)
     {
@@ -222,7 +222,7 @@ class Season
         foreach ($this->teams as $team) {
             /* @var $team Team */
             if ($team->getConstructor() == $constructor) {
-                $drivers->set($team->getDriver()->getId(), $team->getDriver());
+                $drivers->set($team->getDriver()->getSlug(), $team->getDriver());
             }
         }
 
@@ -232,7 +232,7 @@ class Season
     /**
      * Returns the season constructors.
      *
-     * @return ArrayCollection A collection of Constructor entity
+     * @return ArrayCollection A collection of Constructor entities indexed by slug
      */
     public function getConstructors()
     {
@@ -240,7 +240,7 @@ class Season
 
         foreach ($this->teams as $team) {
             /* @var $team Team */
-            $constructor->set($team->getConstructor()->getId(), $team->getConstructor());
+            $constructor->set($team->getConstructor()->getSlug(), $team->getConstructor());
         }
 
         return $constructor;

@@ -70,11 +70,6 @@ class RaceLoader extends AbstractLoader
             $this->seasonService->addRace($season, $race);
         }
 
-        // clean up remaining races
-        foreach ($races as $race) {
-            $this->seasonService->removeRace($season, $race);
-        }
-
         $this->seasonService->save($season);
     }
 
@@ -88,12 +83,12 @@ class RaceLoader extends AbstractLoader
     private function loadCircuits(Response $response)
     {
         // extract circuit identifiers
-        $circuitIds = $response->getRaces()->map(function (ErgastEntity\Race $ergastRace) {
+        $circuitSlugs = $response->getRaces()->map(function (ErgastEntity\Race $ergastRace) {
             return $ergastRace->getCircuit()->getId();
         });
 
         // load circuits from database
-        $circuits = $this->circuitService->findByIds($circuitIds->toArray());
+        $circuits = $this->circuitService->findBySlugs($circuitSlugs->toArray());
 
         // save new circuits
         foreach ($response->getRaces() as $ergastRace) {
@@ -103,12 +98,13 @@ class RaceLoader extends AbstractLoader
             $circuit = $circuits->get($ergastCircuit->getId());
 
             if (!$circuit) {
-                $circuit = new AppEntity\Circuit($ergastCircuit->getId());
+                $circuit = new AppEntity\Circuit();
                 $circuits->set($ergastCircuit->getId(), $circuit);
             }
 
             $circuit
                 ->setName($ergastCircuit->getName())
+                ->setSlug($ergastCircuit->getId())
                 ->setLocation($ergastCircuit->getLocation()->getLocality())
                 ->setCountry($this->country->getCodeByName($ergastCircuit->getLocation()->getCountry()))
             ;

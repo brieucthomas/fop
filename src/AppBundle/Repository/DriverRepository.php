@@ -23,14 +23,14 @@ class DriverRepository extends EntityRepository implements DriverRepositoryInter
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySlugs(array $slugs)
     {
         $builder = $this->_em->createQueryBuilder();
         $builder
             ->select('d')
-            ->from($this->_entityName, 'd', 'd.id')
-            ->where($builder->expr()->in('d.id', ':ids'))
-            ->setParameter(':ids', $ids)
+            ->from($this->_entityName, 'd', 'd.slug')
+            ->where($builder->expr()->in('d.slug', ':slugs'))
+            ->setParameter(':slugs', $slugs)
         ;
 
         return new ArrayCollection($builder->getQuery()->getResult());

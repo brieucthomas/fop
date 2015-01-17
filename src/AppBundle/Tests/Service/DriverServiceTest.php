@@ -14,9 +14,9 @@ use AppBundle\Tests\WebTestCase;
 
 class DriverServiceTest extends WebTestCase
 {
-    public function testFindDriversByIds()
+    public function testFindDriversBySlugs()
     {
-        $drivers = $this->getDriverService()->findByIds(['hamilton', 'alonso', 'foo']);
+        $drivers = $this->getDriverService()->findBySlugs(['hamilton', 'alonso', 'foo']);
 
         $this->assertInstanceOf('Doctrine\Common\Collections\ArrayCollection', $drivers);
         $this->assertCount(2, $drivers);
