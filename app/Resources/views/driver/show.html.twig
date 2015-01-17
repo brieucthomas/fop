@@ -3,7 +3,8 @@
 {% block title driver.name %}
 
 {% block content %}
-    <div class="section section-header section-lg section-center section-inverse section-{{ driver.slug|replace({ '_': '-' }) }}">
+    <div class="section section-header section-lg section-inverse">
+        <div class="background" style="background-image:url('{{ asset('assets/img/drivers/' ~ driver.slug ~ '.jpg') }}')"></div>
         <div class="container">
             <h1>{{ driver.name }}</h1>
             <ul class="list-highlight">
@@ -25,6 +26,44 @@
                     <span class="bg-carrot">{{ wins }}</span>
                 </li>
             </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="list-details">
+                    <li id="driver-dob">
+                        <span class="list-details-label">{{ 'driver.birth_date'|trans }}</span>
+                        <span class="list-details-value">{{ driver.birthDate|format_date }}</span>
+                    </li>
+                    <li id="driver-races">
+                        <span class="list-details-label">{{ 'driver.races'|trans }}</span>
+                        <span class="list-details-value">{{ races }}</span>
+                    </li>
+                    <li id="driver-podiums">
+                        <span class="list-details-label">{{ 'driver.podiums'|trans }}</span>
+                        <span class="list-details-value">{{ podiums }}</span>
+                    </li>
+                    <li id="driver-points">
+                        <span class="list-details-label">{{ 'driver.points'|trans }}</span>
+                        <span class="list-details-value">{{ points }}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <h2>{{ 'driver.teams.title'|trans }}</h2>
+                {% if teams.count %}
+                    <ul id="driver-teams" class="list-unstyled">
+                        {% for team in teams %}
+                            <li>
+                                <span class="text-emerald">{{ team.season.year }}</span>
+                                <a href="{{ path('constructor', { 'slug': team.constructor.slug }) }}">{{ team.constructor.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}

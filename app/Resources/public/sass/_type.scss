@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-// Page Header
+// Section
 // -------------------------
 
 .section {
@@ -86,23 +86,9 @@ h1, h2, h3, h4, h5, h6,
   padding-top: 60px;
   padding-bottom: 60px;
 
-  > .section-inner {
+  > .container {
     position: relative;
     z-index: 2;
-  }
-
-  &:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    content: "";
-    z-index: 1;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    @include opacity(.2);
   }
 }
 
@@ -149,10 +135,6 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-.section-hamilton:after {
-  background-image: url('../img/drivers/hamilton.jpg');
-}
-
 .section-header {
   h1,
   .h1 {
@@ -179,7 +161,24 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
+// Background
+// -------------------------
 
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index:1;
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  @include opacity(.2);
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
 
 // Lists
 // -------------------------
@@ -254,6 +253,7 @@ h1, h2, h3, h4, h5, h6,
   line-height: 38px;
   font-family: $headings-font-family;
   font-size: $font-size-large;
+  text-transform: uppercase;
   letter-spacing: 5px;
 
   > li {
