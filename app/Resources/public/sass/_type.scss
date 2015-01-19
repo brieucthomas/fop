@@ -36,6 +36,7 @@
 .text-concrete 				{ color: $concrete; }
 .text-asbestos 				{ color: $asbestos; }
 
+.text-white                 { color: #fff; }
 
 .bg-turquoise               { background: $turquoise; }
 .bg-green-sea               { background: $green-sea; }
@@ -67,6 +68,18 @@
 .bg-concrete                { background: $concrete; }
 .bg-asbestos                { background: $asbestos; }
 
+.bg-inverse                 { background: $gray-darker; }
+
+
+// Size
+// -------------------------
+
+.text-small                 { font-size: $font-size-small; }
+.text-base                  { font-size: $font-size-base; }
+.text-large                 { font-size: $font-size-large; }
+.text-big                   { font-size: $font-size-big; }
+.text-huge                  { font-size: $font-size-huge; }
+
 
 // Headings
 // -------------------------
@@ -90,8 +103,11 @@ h1, h2, h3, h4, h5, h6,
     position: relative;
     z-index: 2;
   }
-}
 
+  h1, h2 {
+    margin: 0;
+  }
+}
 
 .section-bottom {
   padding-top: 80px;
@@ -118,29 +134,14 @@ h1, h2, h3, h4, h5, h6,
 .section-primary {
   background-color: $brand-primary;
   color: #fff;
-
-  h1,
-  .h1 {
-    color: #fff;
-  }
 }
 
 .section-inverse {
   background-color: $gray-darker;
   color: #fff;
-
-  h1,
-  .h1 {
-    color: #fff;
-  }
 }
 
 .section-header {
-  h1,
-  .h1 {
-    font-size: 12rem;
-  }
-
   @media (min-width: $grid-float-breakpoint) {
     margin-top: -($navbar-height + $navbar-margin-bottom + 4);
     padding-top: 60px + ($navbar-height + $navbar-margin-bottom + 4);
@@ -150,14 +151,6 @@ h1, h2, h3, h4, h5, h6,
     @media (min-width: $grid-float-breakpoint) {
       padding-top: 220px + ($navbar-height + $navbar-margin-bottom + 4);
     }
-  }
-}
-
-.section-bold {
-  h1,
-  .h1 {
-    font-weight: 600;
-    letter-spacing: .6rem;
   }
 }
 

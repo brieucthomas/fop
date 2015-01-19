@@ -1,0 +1,30 @@
+//
+// Countdown
+// --------------------------------------------------
+
+.countdown {
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  font-family: $headings-font-family;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+
+  > .countdown-section {
+    display: table-cell;
+    padding: 5px;
+    color: #f8f6ee;
+
+    > .countdown-amount {
+      padding: 5px 0;
+      font-size: $font-size-big;
+    }
+
+    > .countdown-day {
+      color: $text-muted;
+      font-size: $font-size-large;
+    }
+  }
+}
+

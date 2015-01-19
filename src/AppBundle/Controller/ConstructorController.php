@@ -27,9 +27,9 @@ class ConstructorController extends Controller
     /**
      * @Route("/{slug}", requirements={"slug" = "[a-z0-9\_]+"}, name="constructor")
      * @Method({"GET"})
-     * @Template(":constructor:detail.html.twig")
+     * @Template(":constructor:show.html.twig")
      */
-    public function detailAction(Constructor $constructor)
+    public function showAction(Constructor $constructor)
     {
         return [
             'constructor' => $constructor,

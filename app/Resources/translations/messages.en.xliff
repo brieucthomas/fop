@@ -1,20 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-01-14T14:22:49Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2015-01-19T19:38:16Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
     </header>
     <body>
+      <trans-unit id="0331fab51ad9b86f685e4d891d81ca28bfd7cb10" resname="constructor.constructors_championships">
+        <jms:reference-file line="14">views/constructor/show.html.twig</jms:reference-file>
+        <source>constructor.constructors_championships</source>
+        <target state="new">constructor.constructors_championships</target>
+      </trans-unit>
+      <trans-unit id="be5837a315a5ef95327f7291b27f75a298b83861" resname="constructor.drivers_championships">
+        <jms:reference-file line="18">views/constructor/show.html.twig</jms:reference-file>
+        <source>constructor.drivers_championships</source>
+        <target state="new">constructor.drivers_championships</target>
+      </trans-unit>
+      <trans-unit id="22c70f0f8d5b23b57b3a2df2983d62013a4a2fb5" resname="constructor.wins">
+        <jms:reference-file line="22">views/constructor/show.html.twig</jms:reference-file>
+        <source>constructor.wins</source>
+        <target state="new">constructor.wins</target>
+      </trans-unit>
+      <trans-unit id="b3e56c86bcbf85f9b48b586c7127fe0265314771" resname="countdown.days">
+        <jms:reference-file line="15">views/main/homepage.html.twig</jms:reference-file>
+        <source>countdown.days</source>
+        <target>Days</target>
+      </trans-unit>
+      <trans-unit id="99879420019a3a8a801993ef92477f0558408ea3" resname="countdown.hours">
+        <jms:reference-file line="19">views/main/homepage.html.twig</jms:reference-file>
+        <source>countdown.hours</source>
+        <target>Hours</target>
+      </trans-unit>
+      <trans-unit id="6e62a17e376774cee9a46fe054649505b98c7f37" resname="countdown.minutes">
+        <jms:reference-file line="23">views/main/homepage.html.twig</jms:reference-file>
+        <source>countdown.minutes</source>
+        <target>Minutes</target>
+      </trans-unit>
+      <trans-unit id="61980e13e275238c41618c6a1051fd7ca7427d2c" resname="countdown.seconds">
+        <jms:reference-file line="27">views/main/homepage.html.twig</jms:reference-file>
+        <source>countdown.seconds</source>
+        <target>Seconds</target>
+      </trans-unit>
+      <trans-unit id="d7ba682fd28d677f56323dad0248246f34b5f6a6" resname="driver.birth_date">
+        <jms:reference-file line="37">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.birth_date</source>
+        <target state="new">driver.birth_date</target>
+      </trans-unit>
+      <trans-unit id="42b3d197641a8a96c47375b7d80c7f5307c28509" resname="driver.championships">
+        <jms:reference-file line="21">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.championships</source>
+        <target state="new">driver.championships</target>
+      </trans-unit>
+      <trans-unit id="dc942b4ccfb03e34104551850d401ed446266733" resname="driver.number">
+        <jms:reference-file line="16">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.number</source>
+        <target state="new">driver.number</target>
+      </trans-unit>
+      <trans-unit id="d8bd717e8fdca75a01813383b5c201773a8b10ef" resname="driver.podiums">
+        <jms:reference-file line="45">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.podiums</source>
+        <target state="new">driver.podiums</target>
+      </trans-unit>
+      <trans-unit id="b9d4f30a34a21de5bcf362de193c73b458772795" resname="driver.points">
+        <jms:reference-file line="49">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.points</source>
+        <target state="new">driver.points</target>
+      </trans-unit>
+      <trans-unit id="3db614d5baf00fc9f51e64e6cd4e99312e2a47b7" resname="driver.races">
+        <jms:reference-file line="41">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.races</source>
+        <target state="new">driver.races</target>
+      </trans-unit>
+      <trans-unit id="88d1747f44138d8b1ac3abb3555d8f2d10cf37a2" resname="driver.teams.title">
+        <jms:reference-file line="55">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.teams.title</source>
+        <target state="new">driver.teams.title</target>
+      </trans-unit>
+      <trans-unit id="1212969402840d2c81a1592ce2a1fbc7278d97bc" resname="driver.wins">
+        <jms:reference-file line="25">views/driver/show.html.twig</jms:reference-file>
+        <source>driver.wins</source>
+        <target>Wins</target>
+      </trans-unit>
       <trans-unit id="b469507c15ca085ba9753f60ab835f68cda9c725" resname="footer.copyright">
-        <jms:reference-file line="41">Resources/views/base.html.twig</jms:reference-file>
+        <jms:reference-file line="44">Resources/views/base.html.twig</jms:reference-file>
         <source>footer.copyright</source>
         <target>FOP</target>
       </trans-unit>
-      <trans-unit id="c4382db05f63dfd31ef169540e4704742647d9de" resname="homepage.greeting">
-        <jms:reference-file line="7">views/main/homepage.html.twig</jms:reference-file>
-        <source>homepage.greeting</source>
-        <target>Welcome</target>
+      <trans-unit id="1718fefb4bef5cf4d77015242858c33c1cf7b4ad" resname="homepage.next-race.title">
+        <jms:reference-file line="10">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.next-race.title</source>
+        <target>Next Race</target>
+      </trans-unit>
+      <trans-unit id="359224c7f47d6127175fd174defd157cb4b0b5cf" resname="homepage.previous-race.title">
+        <jms:reference-file line="75">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.previous-race.title</source>
+        <target>Last Race</target>
+      </trans-unit>
+      <trans-unit id="7f40ac456d93b7b1b1678c9b8a091511d19b3197" resname="homepage.standings.constructor">
+        <jms:reference-file line="92">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.standings.constructor</source>
+        <target>Constructors</target>
+      </trans-unit>
+      <trans-unit id="dbf8a844034ccdd44eca3b9ed1a1d5410f95e704" resname="homepage.standings.driver">
+        <jms:reference-file line="91">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.standings.driver</source>
+        <target>Drivers</target>
+      </trans-unit>
+      <trans-unit id="578c55851c9855f7f85a8489d41ec5e4bfee4f85" resname="homepage.standings.finished">
+        <jms:reference-file line="86">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.standings.finished</source>
+        <target state="new">homepage.standings.finished</target>
+      </trans-unit>
+      <trans-unit id="8c4273893622056a328e209b7dfb2e6b3efccbac" resname="homepage.standings.title">
+        <jms:reference-file line="84">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.standings.title</source>
+        <target>%year% Standings</target>
+      </trans-unit>
+      <trans-unit id="06f7cd36ea737097c4fcabe4ddda8d1d57f1ceb7" resname="homepage.standings.user">
+        <jms:reference-file line="90">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.standings.user</source>
+        <target>Players</target>
+      </trans-unit>
+      <trans-unit id="4843eea834eeb32d4d44aead79dae3ed2128eac8" resname="homepage.world-champions.constructor">
+        <jms:reference-file line="59">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.world-champions.constructor</source>
+        <target state="new">homepage.world-champions.constructor</target>
+      </trans-unit>
+      <trans-unit id="fc5f3f612a9b5e1dc42a15ce95f75a163920956f" resname="homepage.world-champions.driver">
+        <jms:reference-file line="51">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.world-champions.driver</source>
+        <target state="new">homepage.world-champions.driver</target>
+      </trans-unit>
+      <trans-unit id="8b721102207d8a34f36b8990d2d7eb8c34c5f905" resname="homepage.world-champions.title">
+        <jms:reference-file line="40">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.world-champions.title</source>
+        <target state="new">homepage.world-champions.title</target>
+      </trans-unit>
+      <trans-unit id="f296742ba6e3c6c336174a109f6ac661b127b126" resname="homepage.world-champions.user">
+        <jms:reference-file line="43">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.world-champions.user</source>
+        <target state="new">homepage.world-champions.user</target>
+      </trans-unit>
+      <trans-unit id="5efb4ac2212f109ebc889dc2a735f791dfc4119a" resname="na">
+        <jms:reference-file line="47">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="55">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="63">views/main/homepage.html.twig</jms:reference-file>
+        <source>na</source>
+        <target state="new">na</target>
       </trans-unit>
     </body>
   </file>

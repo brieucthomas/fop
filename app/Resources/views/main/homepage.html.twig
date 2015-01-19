@@ -2,10 +2,158 @@
 
 {% set module = 'app/homepage' %}
 
+{% if nextRace %}
+    {% block header %}
+        <section id="next-race" class="section section-header section-lg section-inverse">
+            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
+            <div class="container">
+                <h1 class="text-big text-muted">{{ 'homepage.next-race.title'|trans }}</h1>
+                <h2 lang="en" class="text-huge"><span class="text-primary">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
+                <ul class="list-highlight">
+                    <li id="next-race-country">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
+                    </li>
+                    <li id="next-race-date">
+                        <span class="bg-orange"><span class="fa fa-clock-o" aria-label="{{ 'next-race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'next-race.date'|trans }}"></span></span>
+                        <span class="list-inline bg-sun-flower">{{ nextRace.date|format_date }}</span>
+                    </li>
+                    <li id="next-race-time">
+                        <span class="bg-orange"><span class="fa fa-clock-o" aria-label="{{ 'next-race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'next-race.date'|trans }}"></span></span>
+                        <span class="list-inline bg-sun-flower">{{ nextRace.date|format_time }}</span>
+                    </li>
+                </ul>
+                <div id="next-race-countdown" class="countdown hidden" role="timer" data-end-date="{{ nextRace.date.timestamp*1000 }}">
+                    <div class="countdown-section">
+                        <div class="countdown-amount">%D</div>
+                        <div class="countdown-day">{{ 'countdown.days'|trans }}</div>
+                    </div>
+                    <div class="countdown-section">
+                        <div class="countdown-amount">%H</div>
+                        <div class="countdown-day">{{ 'countdown.hours'|trans }}</div>
+                    </div>
+                    <div class="countdown-section">
+                        <div class="countdown-amount">%M</div>
+                        <div class="countdown-day">{{ 'countdown.minutes'|trans }}</div>
+                    </div>
+                    <div class="countdown-section">
+                        <div class="countdown-amount">%S</div>
+                        <div class="countdown-day">{{ 'countdown.seconds'|trans }}</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}
+{% endif %}
+
 {% block content %}
-    <div id="page-header" class="section section-inverse section-lg section-header">
-        <div class="container">
-            <h1>{{ 'homepage.greeting'|trans }}</h1>
-        </div>
-    </div>
+    {% if lastRaceWithResults and lastRaceWithResults.season.finished %}
+        <section id="world-champions" class="section section-center section-primary">
+            <div class="container">
+                <h1>{{ 'homepage.world-champions.title'|trans({ '%year%': lastRaceWithResults.season.year }) }}</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <i class="fa fa-trophy fa-5x"></i>
+                        <h2>{{ 'homepage.world-champions.user'|trans }}</h2>
+                        {% if lastRaceWithResults.userStandings|length %}
+                            {{ lastRaceWithResults.userStandings.first.user.username }}
+                        {% else %}
+                            {{ 'na'|trans }}
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-trophy fa-5x"></i>
+                        <h2>{{ 'homepage.world-champions.driver'|trans }}</h2>
+                        {% if lastRaceWithResults.driverStandings|length %}
+                            {{ lastRaceWithResults.driverStandings.first.driver.name }}
+                        {% else %}
+                            {{ 'na'|trans }}
+                        {% endif %}
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-trophy fa-5x"></i>
+                        <h2>{{ 'homepage.world-champions.constructor'|trans }}</h2>
+                        {% if lastRaceWithResults.constructorStandings|length %}
+                            {{ lastRaceWithResults.constructorStandings.first.constructor.name }}
+                        {% else %}
+                            {{ 'na'|trans }}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+    {% if lastRace %}
+        <section id="last-race" class="section section-lg section-inverse">
+            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ lastRace.circuit.slug ~ '.jpg') }}')"></div>
+            <div class="container">
+                <h1 class="text-big text-muted">{{ 'homepage.previous-race.title'|trans }}</h1>
+                <h2 lang="en" class="text-huge"><span class="text-primary">{{ lastRace.season.year }}</span> {{ lastRace.name }}</h2>
+                <ul class="list-highlight">
+                    <li id="last-race-country">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+                    </li>
+                    <li id="last-race-date">
+                        <span class="bg-orange"><span class="fa fa-clock-o" aria-label="{{ 'last-race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'last-race.date'|trans }}"></span></span>
+                        <span class="list-inline bg-sun-flower">{{ lastRace.date|format_date }}</span>
+                    </li>
+                    <li id="last-race-time">
+                        <span class="bg-orange"><span class="fa fa-clock-o" aria-label="{{ 'last-race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'last-race.date'|trans }}"></span></span>
+                        <span class="list-inline bg-sun-flower">{{ lastRace.date|format_time }}</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    {% endif %}
+
+    {% if lastRaceWithResults and not lastRaceWithResults.season.finished %}
+        <section class="section section-lg section-inverse">
+            <div class="container">
+                <h1>{{ 'homepage.standings.title'|trans({ '%year%': lastRaceWithResults.season.year }) }}</h1>
+                {% if lastRaceWithResults.season.finished %}
+                    <p class="text-muted">{{ 'homepage.standings.finished'|trans }}</p>
+                {% endif %}
+                <div role="tabpanel">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#user-standings" aria-controls="user-standings" role="tab" data-toggle="tab">{{ 'homepage.standings.user'|trans }}</a></li>
+                        <li role="presentation"><a href="#driver-standings" aria-controls="driver-standings" role="tab" data-toggle="tab">{{ 'homepage.standings.driver'|trans }}</a></li>
+                        <li role="presentation"><a href="#constructor-standings" aria-controls="constructor-standings" role="tab" data-toggle="tab">{{ 'homepage.standings.constructor'|trans }}</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="user-standings">
+                            <ol class="list-standings">
+                                {% for standings in lastRaceWithResults.userStandings|slice(0,10) %}
+                                    <li>
+                                        <span><a href="{{ path('user', { 'username': standings.user.username }) }}">{{ standings.user.username }}</a></span>
+                                        <span>{{ standings.points }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="driver-standings">
+                            <ol class="list-standings">
+                                {% for standings in lastRaceWithResults.driverStandings|slice(0,10) %}
+                                    <li>
+                                        <span><a href="{{ path('driver', { 'slug': standings.driver.slug }) }}">{{ standings.driver.shortName }}</a></span>
+                                        <span>{{ standings.points }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="constructor-standings">
+                            <ol class="list-standings">
+                                {% for standings in lastRaceWithResults.constructorStandings|slice(0,10) %}
+                                    <li>
+                                        <span><a href="{{ path('constructor', { 'slug': standings.constructor.slug }) }}">{{ standings.constructor.name }}</a></span>
+                                        <span>{{ standings.points }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
 {% endblock %}

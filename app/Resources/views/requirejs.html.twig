@@ -4,10 +4,12 @@
         baseUrl: '{{ asset('assets/js') }}',
         paths: {
             jquery: '{{ asset('vendor/jquery/dist/jquery.min') }}',
-            bootstrap: '{{ asset('vendor/bootstrap/dist/js/bootstrap.min') }}'
+            bootstrap: '{{ asset('vendor/bootstrap/dist/js/bootstrap.min') }}',
+            countdown: '{{ asset('vendor/jquery.countdown/dist/jquery.countdown.min') }}'
         },
         shim: {
-            bootstrap: ['jquery']
+            bootstrap: ['jquery'],
+            countdown: ['jquery']
         }
     });
     require({{ ['common']|merge([module|default])|json_encode|raw }});

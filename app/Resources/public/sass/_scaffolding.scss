@@ -18,15 +18,14 @@ body {
   width: 100%;
   height: 6rem;
   text-align: center;
+  border-top: .1rem solid $gray-lighter;
+  padding-top: 20px;
 
   a {
     color: $text-color;
   }
 
-  > .container {
-    border-top: .1rem solid $gray-lighter;
-    padding-top: 2rem;
-  }
+
 
   @media (min-width: $grid-float-breakpoint) {
     > .container {

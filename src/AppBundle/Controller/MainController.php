@@ -28,6 +28,10 @@ class MainController extends Controller
      */
     public function homepageAction()
     {
-        return [];
+        return [
+            'nextRace' => $this->get('race_service')->findNextRace(),
+            'lastRace' => $this->get('race_service')->findLastRace(),
+            'lastRaceWithResults' => $this->get('race_service')->findLastRaceWithResults(),
+        ];
     }
 }
