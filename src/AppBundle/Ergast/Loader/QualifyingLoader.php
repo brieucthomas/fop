@@ -10,6 +10,7 @@
 namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
+use AppBundle\Service\QualifyingServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
 use AppBundle\Service\RaceServiceInterface;
 use BrieucThomas\ErgastClient\Url\Builder\QualifyingUrlBuilder;
@@ -22,6 +23,11 @@ use BrieucThomas\ErgastClient\Url\Builder\QualifyingUrlBuilder;
 class QualifyingLoader extends AbstractLoader
 {
     /**
+     * @var QualifyingServiceInterface
+     */
+    private $qualifyingService;
+
+    /**
      * @var RaceServiceInterface
      */
     private $raceService;
@@ -29,10 +35,12 @@ class QualifyingLoader extends AbstractLoader
     /**
      * Constructor.
      *
-     * @param RaceServiceInterface $raceService
+     * @param QualifyingServiceInterface $qualifyingService
+     * @param RaceServiceInterface       $raceService
      */
-    public function __construct(RaceServiceInterface $raceService)
+    public function __construct(QualifyingServiceInterface $qualifyingService, RaceServiceInterface $raceService)
     {
+        $this->qualifyingService = $qualifyingService;
         $this->raceService = $raceService;
     }
 
@@ -45,10 +53,12 @@ class QualifyingLoader extends AbstractLoader
         $urlBuilder->findBySeason($season->getYear());
         $response = $this->client->execute($urlBuilder->build());
 
+        // remove all season qualifying
+        $this->qualifyingService->removeBySeason($season);
+
         foreach ($response->getRaces() as $ergastRace) {
             /* @var $ergastRace ErgastEntity\Race */
             $race = $season->getRaceByRound($ergastRace->getRound());
-            $raceQualifying = clone $race->getQualifying();
             foreach ($ergastRace->getQualifying() as $ergastQualifying) {
                 /* @var $ergastQualifying ErgastEntity\Qualifying */
                 $team = $season->getTeamByDriverAndConstructor(
@@ -56,17 +66,9 @@ class QualifyingLoader extends AbstractLoader
                     $ergastQualifying->getConstructor()->getId()
                 );
 
-                $qualifying = $race->getQualifyingByTeamAndPosition($team, $ergastQualifying->getPosition());
-
-                if (!$qualifying) {
-                    $qualifying = new AppEntity\Qualifying();
-                    $this->raceService->addQualifying($race, $qualifying);
-                } else {
-                    $raceQualifying->removeElement($qualifying);
-                }
+                $qualifying = new AppEntity\Qualifying();
 
                 $qualifying
-                    ->setRace($race)
                     ->setPosition($ergastQualifying->getPosition())
                     ->setTeam($team)
                     ->setQ1($ergastQualifying->getQ1())
@@ -74,13 +76,10 @@ class QualifyingLoader extends AbstractLoader
                     ->setQ3($ergastQualifying->getQ3())
                 ;
 
-                $this->raceService->persist($race);
+                $this->raceService->addQualifying($race, $qualifying);
             }
 
-            // clean up remaining results
-            foreach ($raceQualifying as $entry) {
-                $this->raceService->removeQualifying($race, $entry);
-            }
+            $this->raceService->persist($race);
         }
 
         $this->raceService->flush();

@@ -16,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * The user standings entity.
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UserStandingsRepository")
  * @ORM\Table(uniqueConstraints={
  *     @ORM\UniqueConstraint(columns={"race_id", "user_id"})
  * })

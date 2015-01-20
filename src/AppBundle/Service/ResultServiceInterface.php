@@ -11,6 +11,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Driver;
 use AppBundle\Entity\Result;
+use AppBundle\Entity\Season;
 
 /**
  * The result service.
@@ -81,4 +82,13 @@ interface ResultServiceInterface
      * @return int The best finishing position
      */
     public function getBestPositionByDriver($driverId);
+
+    /**
+     * Removes results by season.
+     *
+     * @param Season $season A Season entity
+     *
+     * @return $this
+     */
+    public function removeBySeason(Season $season);
 }

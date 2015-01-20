@@ -10,6 +10,7 @@
 namespace AppBundle\Service;
 
 use AppBundle\Entity\Qualifying;
+use AppBundle\Entity\Season;
 use AppBundle\Repository\QualifyingRepositoryInterface;
 
 /**
@@ -50,5 +51,15 @@ class QualifyingService implements QualifyingServiceInterface
     public function getBestGridByDriver($driverId)
     {
         return $this->qualifyingRepository->getBestGridByDriver($driverId);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeBySeason(Season $season)
+    {
+        $this->qualifyingRepository->removeBySeason($season);
+
+        return $this;
     }
 }

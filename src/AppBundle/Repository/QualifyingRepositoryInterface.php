@@ -11,6 +11,7 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Driver;
 use AppBundle\Entity\Qualifying;
+use AppBundle\Entity\Season;
 
 /**
  * The qualifying repository.
@@ -36,4 +37,13 @@ interface QualifyingRepositoryInterface
      * @return int The best grid position
      */
     public function getBestGridByDriver($driverId);
+
+    /**
+     * Removes qualifying by season.
+     *
+     * @param Season $season A Season entity
+     *
+     * @return $this
+     */
+    public function removeBySeason(Season $season);
 }

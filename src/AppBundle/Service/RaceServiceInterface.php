@@ -54,16 +54,6 @@ interface RaceServiceInterface
     public function addConstructorStandings(Race $race, ConstructorStandings $constructorStandings);
 
     /**
-     * Remove a constructor standings to a race.
-     *
-     * @param Race                 $race                 A Race entity
-     * @param ConstructorStandings $constructorStandings A ConstructorStandings entity
-     *
-     * @return $this
-     */
-    public function removeConstructorStandings(Race $race, ConstructorStandings $constructorStandings);
-
-    /**
      * Adds a driver standings to a race.
      *
      * @param Race            $race            A Race entity
@@ -72,16 +62,6 @@ interface RaceServiceInterface
      * @return $this
      */
     public function addDriverStandings(Race $race, DriverStandings $driverStandings);
-
-    /**
-     * Removes a driver standings to a race.
-     *
-     * @param Race            $race            A Race entity
-     * @param DriverStandings $driverStandings A ConstructorStandings entity
-     *
-     * @return $this
-     */
-    public function removeDriverStandings(Race $race, DriverStandings $driverStandings);
 
     /**
      * Adds a result to a race.
@@ -94,16 +74,6 @@ interface RaceServiceInterface
     public function addResult(Race $race, Result $result);
 
     /**
-     * Removes a driver standings to a race.
-     *
-     * @param Race   $race   A Race entity
-     * @param Result $result A Result entity
-     *
-     * @return $this
-     */
-    public function removeResult(Race $race, Result $result);
-
-    /**
      * Adds a qualifying to a race.
      *
      * @param Race       $race       A Race entity
@@ -112,16 +82,6 @@ interface RaceServiceInterface
      * @return $this
      */
     public function addQualifying(Race $race, Qualifying $qualifying);
-
-    /**
-     * Removes a qualifying to a race.
-     *
-     * @param Race       $race       A Race entity
-     * @param Qualifying $qualifying A Qualifying entity
-     *
-     * @return $this
-     */
-    public function removeQualifying(Race $race, Qualifying $qualifying);
 
     /**
      * Saves a race.

@@ -51,32 +51,32 @@ class TeamLoader extends AbstractLoader
      */
     public function load(AppEntity\Season $season)
     {
-        $ergastConstructors = $this->getErgastConstructorsByYear($season->getYear());
-        $ergastDrivers = $this->getErgastDriversByYear($season->getYear());
-
         // load constructors from database
+        $ergastConstructors = $this->getErgastConstructorsByYear($season->getYear());
         $constructorSlugs = $ergastConstructors->map(function (ErgastEntity\Constructor $constructor) {
             return $constructor->getId();
         });
         $constructors = $this->constructorService->findBySlugs($constructorSlugs->toArray());
 
         // load drivers from database
+        $ergastDrivers = $this->getErgastDriversByYear($season->getYear());
         $driverSlugs = $ergastDrivers->map(function (ErgastEntity\Driver $driver) {
             return $driver->getId();
         });
         $drivers = $this->driverService->findBySlugs($driverSlugs->toArray());
 
-        foreach ($this->getErgastConstructorsByYear($season->getYear()) as $ergastConstructor) {
+        foreach ($ergastConstructors as $ergastConstructor) {
             /* @var $ergastConstructor ErgastEntity\Constructor */
             $constructor = $constructors->get($ergastConstructor->getId());
 
             if (!$constructor) {
                 $constructor = new AppEntity\Constructor();
+                $constructor->setSlug($ergastConstructor->getId());
+                $constructors->set($constructor->getSlug(), $constructor);
             }
 
             $constructor
                 ->setName($ergastConstructor->getName())
-                ->setSlug($ergastConstructor->getId())
                 ->setNationality($this->nationality->getCodeByName($ergastConstructor->getNationality()))
             ;
 
@@ -88,20 +88,20 @@ class TeamLoader extends AbstractLoader
 
                 if (!$driver) {
                     $driver = new AppEntity\Driver();
-                    $drivers->set($ergastDriver->getId(), $driver);
+                    $driver->setSlug($ergastDriver->getId());
+                    $drivers->set($driver->getSlug(), $driver);
                 }
 
                 $driver
                     ->setCode($ergastDriver->getCode())
                     ->setNumber($ergastDriver->getNumber())
-                    ->setSlug($ergastDriver->getId())
                     ->setFirstName($ergastDriver->getFirstName())
                     ->setLastName($ergastDriver->getLastName())
                     ->setBirthDate($ergastDriver->getBirthDate())
                     ->setNationality($this->nationality->getCodeByName($ergastDriver->getNationality()))
                 ;
 
-                $team = $season->getTeamByDriverAndConstructor($driver->getId(), $constructor->getId());
+                $team = $season->getTeamByDriverAndConstructor($driver->getSlug(), $constructor->getSlug());
 
                 if (!$team) {
                     $team = new AppEntity\Team($constructor, $driver);

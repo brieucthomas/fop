@@ -77,29 +77,9 @@ class RaceService implements RaceServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function removeConstructorStandings(Race $race, ConstructorStandings $constructorStandings)
-    {
-        $race->removeConstructorStandings($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function addDriverStandings(Race $race, DriverStandings $driverStandings)
     {
         $race->addDriverStandings($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function removeDriverStandings(Race $race, DriverStandings $driverStandings)
-    {
-        $race->removeDriverStandings($driverStandings);
 
         return $this;
     }
@@ -117,29 +97,9 @@ class RaceService implements RaceServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function removeResult(Race $race, Result $result)
-    {
-        $race->removeResult($result);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function addQualifying(Race $race, Qualifying $qualifying)
     {
         $race->addQualifying($qualifying);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function removeQualifying(Race $race, Qualifying $qualifying)
-    {
-        $race->removeQualifying($qualifying);
 
         return $this;
     }

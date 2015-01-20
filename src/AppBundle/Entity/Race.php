@@ -451,26 +451,6 @@ class Race
     }
 
     /**
-     * Returns a qualifying by its team and position.
-     *
-     * @param Team $team     A Team entity
-     * @param int  $position A finishing position
-     *
-     * @return Qualifying|null A Qualifying entity or null if not found
-     */
-    public function getQualifyingByTeamAndPosition(Team $team, $position)
-    {
-        foreach ($this->qualifying as $qualifying) {
-            /* @var $qualifying Qualifying */
-            if (($qualifying->getPosition() == $position) && ($qualifying->getTeam()->getId() == $team->getId())) {
-                return $qualifying;
-            }
-        }
-
-        return;
-    }
-
-    /**
      * Returns the race results.
      *
      * @return ArrayCollection the race results
@@ -488,26 +468,6 @@ class Race
     public function hasResults()
     {
         return !$this->results->isEmpty();
-    }
-
-    /**
-     * Returns a result by its team and position.
-     *
-     * @param Team $team     A Team entity
-     * @param int  $position A finishing position
-     *
-     * @return Result|null A Result entity or null if not found
-     */
-    public function getResultByTeamAndPosition(Team $team, $position)
-    {
-        foreach ($this->results as $result) {
-            /* @var $result Result */
-            if (($result->getPosition() == $position) && ($result->getTeam()->getId() == $team->getId())) {
-                return $result;
-            }
-        }
-
-        return;
     }
 
     /**
@@ -602,20 +562,6 @@ class Race
         $driverStandings->setRace($this);
 
         $this->driverStandings->add($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * Removes a driver standings.
-     *
-     * @param DriverStandings $driverStandings The constructor standings to remove
-     *
-     * @return $this
-     */
-    public function removeDriverStandings(DriverStandings $driverStandings)
-    {
-        unset($this->driverStandings[$driverStandings->getDriver()->getId()]);
 
         return $this;
     }

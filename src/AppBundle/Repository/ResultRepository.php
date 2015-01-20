@@ -10,6 +10,9 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Driver;
+use AppBundle\Entity\Race;
+use AppBundle\Entity\Result;
+use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query\Expr;
 
@@ -139,5 +142,28 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
         $result = $builder->getQuery()->getOneOrNullResult();
 
         return (null !== $result) ? (int) array_shift($result) : 0;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeBySeason(Season $season)
+    {
+        $builder = $this->createQueryBuilder('r');
+        $builder
+            ->join('r.race', 'race')
+            ->where($builder->expr()->eq('race.season', ':season'))
+            ->setParameter(':season', $season)
+        ;
+
+        $entities = $builder->getQuery()->execute();
+
+        foreach ($entities as $entity) {
+            $this->_em->remove($entity);
+        }
+
+        $this->_em->flush();
+
+        return $this;
     }
 }

@@ -84,6 +84,26 @@ services:
         factory_service: doctrine.orm.entity_manager
         factory_method:  getRepository
         arguments: [AppBundle:Team]
+    team_repository:
+        class: AppBundle\Repository\TeamRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Team]
+    driver_standings_repository:
+        class: AppBundle\Repository\DriverStandingsRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:DriverStandings]
+    constructor_standings_repository:
+        class: AppBundle\Repository\ConstructorStandingsRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:ConstructorStandings]
+    user_standings_repository:
+        class: AppBundle\Repository\UserStandingsRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:UserStandings]
 
     # Services
     user_service:
@@ -116,6 +136,15 @@ services:
     team_service:
         class: AppBundle\Service\TeamService
         arguments: ["@team_repository"]
+    driver_standings_service:
+        class: AppBundle\Service\DriverStandingsService
+        arguments: ["@driver_standings_repository"]
+    constructor_standings_service:
+        class: AppBundle\Service\ConstructorStandingsService
+        arguments: ["@constructor_standings_repository"]
+    user_standings_service:
+        class: AppBundle\Service\UserStandingsService
+        arguments: ["@user_standings_repository"]
 
     # Menus
     menu_builder:
@@ -199,7 +228,7 @@ services:
     ergast_loader_qualifying:
         class: AppBundle\Ergast\Loader\QualifyingLoader
         parent: ergast_loader
-        arguments: ["@race_service"]
+        arguments: ["@qualifying_service", "@race_service"]
     ergast_loader_finishing_status:
         class: AppBundle\Ergast\Loader\FinishingStatusLoader
         parent: ergast_loader
@@ -207,12 +236,12 @@ services:
     ergast_loader_result:
         class: AppBundle\Ergast\Loader\ResultLoader
         parent: ergast_loader
-        arguments: ["@race_service", "@finishing_status_service"]
+        arguments: ["@result_service", "@race_service", "@finishing_status_service"]
     ergast_loader_driver_standings:
         class: AppBundle\Ergast\Loader\DriverStandingsLoader
         parent: ergast_loader
-        arguments: ["@race_service"]
+        arguments: ["@driver_standings_service", "@race_service"]
     ergast_loader_constructor_standings:
         class: AppBundle\Ergast\Loader\ConstructorStandingsLoader
         parent: ergast_loader
-        arguments: ["@race_service"]
+        arguments: ["@constructor_standings_service", "@race_service"]

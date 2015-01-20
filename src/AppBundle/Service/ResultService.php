@@ -9,6 +9,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Season;
 use AppBundle\Repository\ResultRepositoryInterface;
 
 /**
@@ -90,4 +91,15 @@ class ResultService implements ResultServiceInterface
     {
         return $this->resultRepository->getBestPositionByDriver($driverId);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeBySeason(Season $season)
+    {
+        $this->resultRepository->removeBySeason($season);
+
+        return $this;
+    }
+
 }

@@ -12,6 +12,7 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\FinishingStatusServiceInterface;
 use AppBundle\Service\RaceServiceInterface;
+use AppBundle\Service\ResultServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
 use BrieucThomas\ErgastClient\Entity\Response;
 use BrieucThomas\ErgastClient\Url\Builder\ResultUrlBuilder;
@@ -23,6 +24,11 @@ use BrieucThomas\ErgastClient\Url\Builder\ResultUrlBuilder;
  */
 class ResultLoader extends AbstractLoader
 {
+    /**
+     * @var ResultServiceInterface
+     */
+    private $resultService;
+
     /**
      * @var RaceServiceInterface
      */
@@ -36,13 +42,16 @@ class ResultLoader extends AbstractLoader
     /**
      * Constructor.
      *
+     * @param ResultServiceInterface          $resultService
      * @param RaceServiceInterface            $raceService
      * @param FinishingStatusServiceInterface $finishingStatusService
      */
     public function __construct(
+        ResultServiceInterface $resultService,
         RaceServiceInterface $raceService,
         FinishingStatusServiceInterface $finishingStatusService
     ) {
+        $this->resultService = $resultService;
         $this->raceService = $raceService;
         $this->finishingStatusService = $finishingStatusService;
     }
@@ -55,12 +64,16 @@ class ResultLoader extends AbstractLoader
         $urlBuilder = new ResultUrlBuilder('f1');
         $urlBuilder->findBySeason($season->getYear());
         $response = $this->client->execute($urlBuilder->build());
+
+        // load all finishing statues
         $finishingStatus = $this->finishingStatusService->findAll();
+
+        // remove all season results
+        $this->resultService->removeBySeason($season);
 
         foreach ($response->getRaces() as $ergastRace) {
             /* @var $ergastRace ErgastEntity\Race */
             $race = $season->getRaceByRound($ergastRace->getRound());
-            $raceResults = clone $race->getResults();
             foreach ($ergastRace->getResults() as $ergastResult) {
                 /* @var $ergastResult ErgastEntity\Result */
                 $team = $season->getTeamByDriverAndConstructor(
@@ -68,14 +81,7 @@ class ResultLoader extends AbstractLoader
                     $ergastResult->getConstructor()->getId()
                 );
 
-                $result = $race->getResultByTeamAndPosition($team, $ergastResult->getPosition());
-
-                if (!$result) {
-                    $result = new AppEntity\Result();
-                    $this->raceService->addResult($race, $result);
-                } else {
-                    $raceResults->removeElement($result);
-                }
+                $result = new AppEntity\Result();
 
                 $result
                     ->setPosition($ergastResult->getPosition())
@@ -101,11 +107,8 @@ class ResultLoader extends AbstractLoader
                         ->setFastestLapTime($ergastResult->getFastestLap()->getTime())
                     ;
                 }
-            }
 
-            // clean up remaining results
-            foreach ($raceResults as $entry) {
-                $this->raceService->removeResult($race, $entry);
+                $this->raceService->addResult($race, $result);
             }
 
             $this->raceService->persist($race);

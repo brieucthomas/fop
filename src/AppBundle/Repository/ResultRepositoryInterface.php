@@ -9,6 +9,9 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Result;
+use AppBundle\Entity\Season;
+
 /**
  * The result repository.
  *
@@ -78,4 +81,13 @@ interface ResultRepositoryInterface
      * @return int The best finishing position
      */
     public function getBestPositionByDriver($driverId);
+
+    /**
+     * Removes results by season.
+     *
+     * @param Season $season A Season entity
+     *
+     * @return $this
+     */
+    public function removeBySeason(Season $season);
 }

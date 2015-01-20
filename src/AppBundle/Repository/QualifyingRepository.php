@@ -9,6 +9,7 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -54,5 +55,28 @@ class QualifyingRepository extends EntityRepository implements QualifyingReposit
         $result = $builder->getQuery()->getOneOrNullResult();
 
         return (null !== $result) ? (int) array_shift($result) : 0;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function removeBySeason(Season $season)
+    {
+        $builder = $this->createQueryBuilder('q');
+        $builder
+            ->join('q.race', 'r')
+            ->where($builder->expr()->eq('r.season', ':season'))
+            ->setParameter(':season', $season)
+        ;
+
+        $entities = $builder->getQuery()->execute();
+
+        foreach ($entities as $entity) {
+            $this->_em->remove($entity);
+        }
+
+        $this->_em->flush();
+
+        return $this;
     }
 }
