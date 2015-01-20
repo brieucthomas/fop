@@ -11,7 +11,6 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
-use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * The user standings service.

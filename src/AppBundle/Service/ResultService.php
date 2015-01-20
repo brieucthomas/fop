@@ -101,5 +101,4 @@ class ResultService implements ResultServiceInterface
 
         return $this;
     }
-
 }
