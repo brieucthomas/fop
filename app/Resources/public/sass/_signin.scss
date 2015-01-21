@@ -1,0 +1,17 @@
+//
+// Login
+// --------------------------------------------------
+
+#form-signin {
+  max-width: $screen-xs - ($padding-large-horizontal*2);
+  padding: $padding-large-vertical $padding-large-horizontal;
+  margin: $padding-large-vertical auto;
+
+  .form-signin-heading {
+    text-align: center;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin: 60px auto;
+  }
+}
