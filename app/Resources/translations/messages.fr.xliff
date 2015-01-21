@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-01-21T10:16:29Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+  <file date="2015-01-21T11:02:54Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -29,7 +29,7 @@
       <trans-unit id="99879420019a3a8a801993ef92477f0558408ea3" resname="countdown.hours">
         <jms:reference-file line="33">views/main/homepage.html.twig</jms:reference-file>
         <source>countdown.hours</source>
-        <target>Heures</target>
+        <target>Nom d'utilisateur ou Email</target>
       </trans-unit>
       <trans-unit id="6e62a17e376774cee9a46fe054649505b98c7f37" resname="countdown.minutes">
         <jms:reference-file line="37">views/main/homepage.html.twig</jms:reference-file>
