@@ -3,8 +3,8 @@
 {% block title driver.name %}
 
 {% block content %}
-    <div class="section section-header section-lg section-inverse">
-        <div class="background" style="background-image:url('{{ asset('assets/img/drivers/' ~ driver.slug ~ '.jpg') }}')"></div>
+    <div class="jumbotron">
+        <div class="background" style="background-image:url('{{ asset('assets/img/drivers/' ~ driver.slug ~ '.jpg') }}')" aria-hidden="true"></div>
         <div class="container">
             <h1>{{ driver.name }}</h1>
             <ul class="list-highlight">
@@ -12,17 +12,17 @@
                     <img class="flag" src="{{ asset('assets/img/flags/' ~ driver.nationality|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ driver.nationality|country }}"/>
                 </li>
                 {% if driver.number %}
-                    <li id="driver-number">
-                        <span class="bg-green-sea"><span class="fa fa-car" aria-label="{{ 'driver.number'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.number'|trans }}"></span></span>
+                    <li id="driver-number" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.number'|trans }}">
+                        <span class="bg-green-sea"><span class="fa fa-car" aria-label="{{ 'driver.number'|trans }}"></span></span>
                         <span class="bg-turquoise">{{ driver.number }}</span>
                     </li>
                 {% endif %}
-                <li id="driver-championships">
-                    <span class="bg-orange"><span class="fa fa-star" aria-label="{{ 'driver.championships'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.championships'|trans }}"></span></span>
+                <li id="driver-championships" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.championships'|trans }}">
+                    <span class="bg-orange"><span class="fa fa-star" aria-label="{{ 'driver.championships'|trans }}"></span></span>
                     <span class="list-inline bg-sun-flower">{{ championships.count }}</span>
                 </li>
-                <li id="driver-wins">
-                    <span class="bg-pumpkin"><span class="fa fa-trophy" aria-label="{{ 'driver.wins'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.wins'|trans }}"></span></span>
+                <li id="driver-wins" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.wins'|trans }}">
+                    <span class="bg-pumpkin"><span class="fa fa-trophy" aria-label="{{ 'driver.wins'|trans }}"></span></span>
                     <span class="bg-carrot">{{ wins }}</span>
                 </li>
             </ul>

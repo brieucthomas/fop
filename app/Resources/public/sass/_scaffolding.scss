@@ -2,22 +2,38 @@
 // Scaffolding
 // --------------------------------------------------
 
-#site-footer {
-  @include clearfix;
+html {
   position: relative;
-  margin-top: $line-height-computed;
-  padding-top: $line-height-computed;
-  padding-bottom: $line-height-computed;
-  border-top: 1px solid $gray-lighter;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 160px;
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin-bottom: 60px;
+  }
+}
+
+#site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 160px;
   text-align: center;
+  text-transform: uppercase;
+  font-size: $font-size-small;
+
+  > .container {
+    padding-top: ($padding-large-vertical*2);
+  }
 
   &,
   a {
     color: $gray-light;
   }
 
-  > .site-footer-links,
-  > .site-footer-links-right {
+  .site-footer-links {
     padding: 0;
     list-style: none;
 
@@ -26,19 +42,16 @@
     }
 
     > li + li {
-      margin-left: 10px
+      margin-left: $padding-large-horizontal;
     }
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    > .site-footer-links,
-    > .site-footer-links-right {
+    height: 60px;
+    text-align: left;
+
+    .site-footer-links {
       margin: 0;
-    }
-    > .site-footer-links {
-      float: left;
-    }
-    > .site-footer-links-right {
       float: right;
     }
   }

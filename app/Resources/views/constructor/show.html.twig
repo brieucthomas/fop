@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <div class="section section-header section-inverse section-lg">
-        <div class="background" style="background-image:url('{{ asset('assets/img/constructors/' ~ constructor.slug ~ '.jpg') }}')"></div>
+    <div class="jumbotron">
+        <div class="background" style="background-image:url('{{ asset('assets/img/constructors/' ~ constructor.slug ~ '.jpg') }}')" aria-hidden="true"></div>
         <div class="container">
             <h1>{{ constructor.name }}</h1>
             {% spaceless %}

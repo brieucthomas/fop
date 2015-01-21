@@ -3,6 +3,15 @@
 // --------------------------------------------------
 
 
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  text-transform: uppercase;
+}
+
+
 // Colors
 // -------------------------
 
@@ -68,110 +77,12 @@
 .bg-concrete                { background: $concrete; }
 .bg-asbestos                { background: $asbestos; }
 
-.bg-inverse                 { background: $gray-darker; }
 
-
-// Size
-// -------------------------
-
-.text-small                 { font-size: $font-size-small; }
-.text-base                  { font-size: $font-size-base; }
-.text-large                 { font-size: $font-size-large; }
-.text-big                   { font-size: $font-size-big; }
-.text-huge                  { font-size: $font-size-huge; }
-
-
-// Headings
-// -------------------------
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  text-transform: uppercase;
-  letter-spacing: .6rem;
-}
-
-
-// Section
-// -------------------------
-
-.section {
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
-
-  > .container {
-    position: relative;
-    z-index: 2;
-  }
-
-  h1, h2 {
-    margin: 0;
-  }
-}
-
-.section-bottom {
-  padding-top: 80px;
-  padding-bottom: 20px;
-}
-
-
-.section-center {
-  text-align: center;
-}
-
-.section-lg {
-  @media (min-width: $grid-float-breakpoint) {
-    padding-top: 220px;
-    padding-bottom: 220px;
-  }
-
-  &.section-bottom {
-    padding-top: 280px;
-    padding-bottom: 40px;
-  }
-}
-
-.section-primary {
-  background-color: $brand-primary;
-  color: #fff;
-}
-
-.section-inverse {
-  background-color: $gray-darker;
-  color: #fff;
-}
-
-.section-header {
-  @media (min-width: $grid-float-breakpoint) {
-    margin-top: -($navbar-height + $navbar-margin-bottom + 4);
-    padding-top: 60px + ($navbar-height + $navbar-margin-bottom + 4);
-  }
-
-  &.section-lg {
-    @media (min-width: $grid-float-breakpoint) {
-      padding-top: 220px + ($navbar-height + $navbar-margin-bottom + 4);
-    }
-  }
-}
 
 // Background
 // -------------------------
 
-.background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index:1;
-  background: 50% 50% no-repeat;
-  background-size: cover;
-  @include opacity(.2);
 
-  @media (max-width: $screen-sm) {
-    display: none;
-  }
-}
 
 // Lists
 // -------------------------
@@ -220,6 +131,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 .list-details {
+  text-transform: uppercase;
   @include list-unstyled;
 
   > li {
@@ -244,10 +156,6 @@ h1, h2, h3, h4, h5, h6,
   display: table;
   width: 100%;
   line-height: 38px;
-  font-family: $headings-font-family;
-  font-size: $font-size-large;
-  text-transform: uppercase;
-  letter-spacing: 5px;
 
   > li {
     display: table-row;
@@ -285,4 +193,26 @@ h1, h2, h3, h4, h5, h6,
       margin-bottom: 0;
     }
   }
+}
+
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  @include opacity(.2);
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
 }

@@ -2,5 +2,18 @@
 // Fonts
 // --------------------------------------------------
 
-@import url('http://fonts.googleapis.com/css?family=Teko:300');
 
+// Conduit
+// --------------------------------------------------
+
+@font-face {
+  font-family: "Conduit";
+  src: url("/fonts/conduit/conduit_itc_light.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Conduit";
+  src: url("/fonts/conduit/conduit_itc_medium.woff") format("woff");
+  font-weight: 700;
+}

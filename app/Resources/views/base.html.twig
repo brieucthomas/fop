@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <nav id="site-navbar" class="navbar navbar-inverse navbar-static-top">
+        <nav id="site-navbar" class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navbar-collapse">
@@ -29,7 +29,6 @@
                 <div class="collapse navbar-collapse" id="site-navbar-collapse">
                     {{ knp_menu_render('main', { 'style': 'navbar' }) }}
                     {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
-                    {{ knp_menu_render('locale_switcher', { 'currentClass': '', 'template': ':menu:locale_switcher.html.twig', 'style': 'navbar-right' }) }}
                 </div>
             </div>
         </nav>
@@ -38,13 +37,14 @@
             {% block content %}{% endblock %}
         </div>
 
-        <div class="container">
-            <footer id="site-footer">
-                {{ knp_menu_render('footer', { 'style': 'site-footer-right' }) }}
+
+        <footer id="site-footer">
+            <div class="container">
                 {{ knp_menu_render('footer', { 'style': 'site-footer' }) }}
                 <p class="text-muted">&copy; {{ 'now'|date('Y') }} {{ 'footer.copyright'|trans }}</p>
-            </footer>
-        </div>
+            </div>
+        </footer>
+
 
         {% block requirejs include("requirejs.html.twig") %}
         {% block javascripts %}{% endblock %}
