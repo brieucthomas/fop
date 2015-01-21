@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <nav id="site-navbar" class="navbar navbar-inverse navbar-static-top {% if block('header') %}navbar-no-bg{% endif %}">
+        <nav id="site-navbar" class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navbar-collapse">
@@ -35,18 +35,16 @@
         </nav>
 
         <div id="site-content">
-            {% block header %}{% endblock %}
             {% block content %}{% endblock %}
         </div>
 
-        <footer id="site-footer">
-            <div class="container clearfix">
-                <p>&copy; {{ 'footer.copyright'|trans }}</p>
-                <nav>
-                    {{ knp_menu_render('footer', { 'currentClass': '', 'style': 'inline' }) }}
-                </nav>
-            </div>
-        </footer>
+        <div class="container">
+            <footer id="site-footer">
+                {{ knp_menu_render('footer', { 'style': 'site-footer-right' }) }}
+                {{ knp_menu_render('footer', { 'style': 'site-footer' }) }}
+                <p class="text-muted">&copy; {{ 'now'|date('Y') }} {{ 'footer.copyright'|trans }}</p>
+            </footer>
+        </div>
 
         {% block requirejs include("requirejs.html.twig") %}
         {% block javascripts %}{% endblock %}

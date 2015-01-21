@@ -2,8 +2,9 @@
 
 {% set module = 'app/homepage' %}
 
-{% if nextRace %}
-    {% block header %}
+{% block content %}
+
+    {% if nextRace %}
         <section id="next-race" class="section section-header section-lg section-inverse">
             <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
@@ -42,10 +43,8 @@
                 </div>
             </div>
         </section>
-    {% endblock %}
-{% endif %}
+    {% endif %}
 
-{% block content %}
     {% if lastRaceWithResults and lastRaceWithResults.season.finished %}
         <section id="world-champions" class="section section-center section-primary">
             <div class="container">
