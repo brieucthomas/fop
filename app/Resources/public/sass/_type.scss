@@ -2,7 +2,6 @@
 // Typography
 // --------------------------------------------------
 
-
 // Headings
 // -------------------------
 
@@ -11,78 +10,175 @@ h1, h2, h3, h4, h5, h6,
   text-transform: uppercase;
 }
 
-
 // Colors
 // -------------------------
 
-.text-turquoise	 			{ color: $turquoise; }
-.text-green-sea 			{ color: $green-sea; }
+.text-turquoise {
+  color: $turquoise;
+}
 
-.text-emerald 				{ color: $emerald; }
-.text-nephritis 			{ color: $nephritis; }
+.text-green-sea {
+  color: $green-sea;
+}
 
-.text-peter-river 			{ color: $peter-river; }
-.text-belize-hole 			{ color: $belize-hole; }
+.text-emerald {
+  color: $emerald;
+}
 
-.text-amethyst				{ color: $amethyst; }
-.text-wisteria 				{ color: $wisteria; }
+.text-nephritis {
+  color: $nephritis;
+}
 
-.text-wet-asphalt 			{ color: $wet-asphalt; }
-.text-midnight-blue 		{ color: $midnight-blue; }
+.text-peter-river {
+  color: $peter-river;
+}
 
-.text-sun-flower			{ color: $sun-flower; }
-.text-orange				{ color: $orange; }
+.text-belize-hole {
+  color: $belize-hole;
+}
 
-.text-carrot 				{ color: $carrot; }
-.text-pumpkin 				{ color: $pumpkin; }
+.text-amethyst {
+  color: $amethyst;
+}
 
-.text-alizarin 				{ color: $alizarin; }
-.text-pomegranate 			{ color: $pomegranate; }
+.text-wisteria {
+  color: $wisteria;
+}
 
-.text-clouds 				{ color: $clouds; }
-.text-silver 				{ color: $silver; }
+.text-wet-asphalt {
+  color: $wet-asphalt;
+}
 
-.text-concrete 				{ color: $concrete; }
-.text-asbestos 				{ color: $asbestos; }
+.text-midnight-blue {
+  color: $midnight-blue;
+}
 
-.text-white                 { color: #fff; }
+.text-sun-flower {
+  color: $sun-flower;
+}
 
-.bg-turquoise               { background: $turquoise; }
-.bg-green-sea               { background: $green-sea; }
+.text-orange {
+  color: $orange;
+}
 
-.bg-emerald                 { background: $emerald; }
-.bg-nephritis               { background: $nephritis; }
+.text-carrot {
+  color: $carrot;
+}
 
-.bg-peter-river             { background: $peter-river; }
-.bg-belize-hole             { background: $belize-hole; }
+.text-pumpkin {
+  color: $pumpkin;
+}
 
-.bg-amethyst                { background: $amethyst; }
-.bg-wisteria                { background: $wisteria; }
+.text-alizarin {
+  color: $alizarin;
+}
 
-.bg-wet-asphalt             { background: $wet-asphalt; }
-.bg-midnight-blue           { background: $midnight-blue; }
+.text-pomegranate {
+  color: $pomegranate;
+}
 
-.bg-sun-flower              { background: $sun-flower; }
-.bg-orange                  { background: $orange; }
+.text-clouds {
+  color: $clouds;
+}
 
-.bg-carrot                  { background: $carrot; }
-.bg-pumpkin                 { background: $pumpkin; }
+.text-silver {
+  color: $silver;
+}
 
-.bg-alizarin                { background: $alizarin; }
-.bg-pomegranate             { background: $pomegranate; }
+.text-concrete {
+  color: $concrete;
+}
 
-.bg-clouds                  { background: $clouds; }
-.bg-silver                  { background: $silver; }
+.text-asbestos {
+  color: $asbestos;
+}
 
-.bg-concrete                { background: $concrete; }
-.bg-asbestos                { background: $asbestos; }
+.text-white {
+  color: #fff;
+}
 
+.bg-turquoise {
+  background: $turquoise;
+}
 
+.bg-green-sea {
+  background: $green-sea;
+}
+
+.bg-emerald {
+  background: $emerald;
+}
+
+.bg-nephritis {
+  background: $nephritis;
+}
+
+.bg-peter-river {
+  background: $peter-river;
+}
+
+.bg-belize-hole {
+  background: $belize-hole;
+}
+
+.bg-amethyst {
+  background: $amethyst;
+}
+
+.bg-wisteria {
+  background: $wisteria;
+}
+
+.bg-wet-asphalt {
+  background: $wet-asphalt;
+}
+
+.bg-midnight-blue {
+  background: $midnight-blue;
+}
+
+.bg-sun-flower {
+  background: $sun-flower;
+}
+
+.bg-orange {
+  background: $orange;
+}
+
+.bg-carrot {
+  background: $carrot;
+}
+
+.bg-pumpkin {
+  background: $pumpkin;
+}
+
+.bg-alizarin {
+  background: $alizarin;
+}
+
+.bg-pomegranate {
+  background: $pomegranate;
+}
+
+.bg-clouds {
+  background: $clouds;
+}
+
+.bg-silver {
+  background: $silver;
+}
+
+.bg-concrete {
+  background: $concrete;
+}
+
+.bg-asbestos {
+  background: $asbestos;
+}
 
 // Background
 // -------------------------
-
-
 
 // Lists
 // -------------------------
@@ -129,7 +225,6 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-
 .list-details {
   text-transform: uppercase;
   @include list-unstyled;
@@ -147,7 +242,6 @@ h1, h2, h3, h4, h5, h6,
     color: $concrete;
   }
 }
-
 
 // List segmented
 // -------------------------
@@ -195,7 +289,6 @@ h1, h2, h3, h4, h5, h6,
   }
 }
 
-
 .background {
   position: absolute;
   left: 0;
@@ -215,4 +308,39 @@ h1, h2, h3, h4, h5, h6,
 .container {
   position: relative;
   z-index: 2;
+}
+
+// Sections
+// -------------------------
+
+.section {
+  position: relative;
+  margin-bottom: $line-height-computed;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: ($line-height-computed / 2);
+  }
+
+  + .section {
+    margin-top: -$line-height-computed;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    text-align: left;
+
+    //&:first-child {
+    //  margin-top: -$navbar-height;
+    //}
+  }
+}
+
+.section-inverse {
+  background-color: $midnight-blue;
+  color: #fff;
 }
