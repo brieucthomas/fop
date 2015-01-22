@@ -16,7 +16,7 @@ use AppBundle\Entity\Team;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The Season service.
+ * The season service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

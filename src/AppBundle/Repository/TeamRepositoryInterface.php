@@ -13,7 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\QueryBuilder;
 
 /**
- * The Team repository.
+ * The team repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

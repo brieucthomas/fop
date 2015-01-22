@@ -13,7 +13,7 @@ use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The result repository.
+ * The qualifying repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

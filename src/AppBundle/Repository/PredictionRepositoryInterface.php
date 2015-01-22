@@ -9,19 +9,12 @@
 
 namespace AppBundle\Repository;
 
-use AppBundle\Entity\ScoringSystem;
 
 /**
- * The scoring system repository.
+ * The prediction repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
-interface ScoringSystemRepositoryInterface
+interface PredictionRepositoryInterface
 {
-    /**
-     * Finds the default scoring system.
-     *
-     * @return ScoringSystem
-     */
-    public function findByDefault();
 }

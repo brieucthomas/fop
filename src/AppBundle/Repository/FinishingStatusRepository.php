@@ -14,7 +14,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The FinishingStatus repository.
+ * The finishing status repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

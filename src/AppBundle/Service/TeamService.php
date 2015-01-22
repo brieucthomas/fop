@@ -12,7 +12,7 @@ namespace AppBundle\Service;
 use AppBundle\Repository\TeamRepositoryInterface;
 
 /**
- * The Team service.
+ * The team service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

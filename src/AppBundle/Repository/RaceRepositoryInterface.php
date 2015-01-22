@@ -12,7 +12,7 @@ namespace AppBundle\Repository;
 use AppBundle\Entity\Race;
 
 /**
- * The Race repository.
+ * The race repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

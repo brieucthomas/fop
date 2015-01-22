@@ -17,7 +17,7 @@ use AppBundle\Entity\Result;
 use AppBundle\Repository\RaceRepositoryInterface;
 
 /**
- * The Race service.
+ * The race service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

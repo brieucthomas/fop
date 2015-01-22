@@ -22,7 +22,7 @@ use AppBundle\Repository\UserRepositoryInterface;
 use Doctrine\Common\Collections\Criteria;
 
 /**
- * The Season service.
+ * The season service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

@@ -13,7 +13,7 @@ use AppBundle\Entity\Constructor;
 use AppBundle\Repository\ConstructorRepositoryInterface;
 
 /**
- * The Constructor service.
+ * The constructor service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

@@ -13,7 +13,7 @@ use AppBundle\Entity\Driver;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The Driver repository.
+ * The driver repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

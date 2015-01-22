@@ -12,17 +12,10 @@ namespace AppBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The scoring system repository.
+ * The prediction repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
-class ScoringSystemRepository extends EntityRepository implements ScoringSystemRepositoryInterface
+class PredictionRepository extends EntityRepository implements PredictionRepositoryInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function findByDefault()
-    {
-        return $this->findOneBy(['isDefault' => true]);
-    }
 }

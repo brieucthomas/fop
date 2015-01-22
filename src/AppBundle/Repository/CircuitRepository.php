@@ -14,7 +14,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The Circuit repository.
+ * The circuit repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

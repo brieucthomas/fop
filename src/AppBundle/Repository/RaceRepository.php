@@ -14,7 +14,7 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query\Expr;
 
 /**
- * The Race repository.
+ * The race repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -26,7 +26,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
     public function findNextRace()
     {
         $builder = $this->createQueryBuilder('r');
-        $query   = $builder
+        $builder
             ->where($builder->expr()->gt('r.date', ':now'))
             ->setParameter(':now', new \DateTime())
             ->orderBy($builder->expr()->asc('r.date'))
@@ -34,7 +34,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
             ->getQuery()
         ;
 
-        return $query->getOneOrNullResult();
+        return $builder->getQuery()->getOneOrNullResult();
     }
 
     /**
@@ -43,7 +43,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
     public function findLastRace()
     {
         $builder = $this->createQueryBuilder('r');
-        $query   = $builder
+        $builder
             ->where($builder->expr()->lt('r.date', ':now'))
             ->setParameter(':now', new \DateTime())
             ->orderBy($builder->expr()->desc('r.date'))
@@ -51,7 +51,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
             ->getQuery()
         ;
 
-        return $query->getOneOrNullResult();
+        return $builder->getQuery()->getOneOrNullResult();
     }
 
     /**
@@ -60,7 +60,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
     public function findLastRaceWithResults()
     {
         $builder = $this->createQueryBuilder('r');
-        $query   = $builder
+        $builder
             ->join('r.results', 'res', Expr\Join::WITH)
             ->where($builder->expr()->lt('r.date', ':now'))
             ->setParameter(':now', new \DateTime())
@@ -69,7 +69,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
             ->getQuery()
         ;
 
-        return $query->getOneOrNullResult();
+        return $builder->getQuery()->getOneOrNullResult();
     }
 
     /**

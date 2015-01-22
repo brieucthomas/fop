@@ -13,7 +13,7 @@ use AppBundle\Entity\FinishingStatus;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The FinishingStatus repository.
+ * The finishing status repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

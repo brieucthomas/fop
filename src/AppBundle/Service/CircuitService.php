@@ -13,7 +13,7 @@ use AppBundle\Entity\Circuit;
 use AppBundle\Repository\CircuitRepositoryInterface;
 
 /**
- * The Circuit service.
+ * The circuit service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

@@ -9,21 +9,21 @@
 
 namespace AppBundle\Service;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use AppBundle\Entity\Season;
 
 /**
- * The team service.
+ * The prediction service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
-interface TeamServiceInterface
+interface PredictionServiceInterface
 {
     /**
-     * Returns the teams of a driver.
+     * Updates a season predictions finishing positions.
      *
-     * @param string $driverId A driver identifier
+     * @param int $year A season year in 4 digits
      *
-     * @return ArrayCollection A collection of Team entities
+     * @return $this
      */
-    public function findByDriver($driverId);
+    public function updateFinishingPositionsByYear($year);
 }

@@ -14,7 +14,7 @@ use AppBundle\Entity\Season;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The Season repository.
+ * The season repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

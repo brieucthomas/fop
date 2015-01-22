@@ -13,7 +13,7 @@ use AppBundle\Entity\Constructor;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The Constructor service.
+ * The constructor service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

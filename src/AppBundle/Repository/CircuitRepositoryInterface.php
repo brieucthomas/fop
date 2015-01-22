@@ -13,7 +13,7 @@ use AppBundle\Entity\Circuit;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The Circuit repository.
+ * The circuit repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

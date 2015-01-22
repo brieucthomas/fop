@@ -16,7 +16,7 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query\Expr;
 
 /**
- * The Season repository.
+ * The season repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
