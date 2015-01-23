@@ -152,7 +152,7 @@ services:
         arguments: ["@user_standings_repository"]
     prediction_service:
         class: AppBundle\Service\PredictionService
-        arguments: ["@prediction_service", "@finishing_position_repository"]
+        arguments: ["@prediction_repository", "@finishing_position_repository"]
 
     # Menus
     menu_builder:
