@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="page-header">
+        <div class="container">
+            <p>{{ 'season.races.standings.subtitle'|trans({ '%year%': season.year }) }}</p>
+            <h1>{{ 'season.races.standings.title'|trans }}</h1>
+        </div>
+    </div>
+
+
+    <div class="container">
+        {% if season.lastRaceWithResults %}
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>{{ 'season.standings.user.title'|trans }}</h2>
+                    <ol class="list-standings">
+                        {% for standings in season.lastRaceWithResults.userStandings %}
+                            <li>
+                                <span>{{ standings.user.username }}</span>
+                                <span>{{ standings.points }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <h2>{{ 'season.standings.driver.title'|trans }}</h2>
+                    <ol class="list-standings">
+                        {% for standings in season.lastRaceWithResults.driverStandings %}
+                            <li>
+                                <span><a href="{{ path('driver', { 'slug': standings.driver.slug }) }}">{{ standings.driver.name }}</a></span>
+                                <span>{{ standings.points }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div class="col-md-4">
+                    <h2>{{ 'season.standings.constrcutor.title'|trans }}</h2>
+                    <ol class="list-standings">
+                        {% for standings in season.lastRaceWithResults.constructorStandings %}
+                            <li>
+                                <span><a href="{{ path('constructor', { 'slug': standings.constructor.slug }) }}">{{ standings.constructor.name }}</a></span>
+                                <span>{{ standings.points }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        {% else %}
+            no data
+        {% endif %}
+    </div>
+{% endblock %}

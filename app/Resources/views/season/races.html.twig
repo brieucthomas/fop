@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div id="page-header">
+        <div class="container">
+            <p>{{ 'season.races.leading'|trans }}</p>
+            <h1>{{ 'season.races.title'|trans({ '%year%': season.year }) }}</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        {% if season.races.isEmpty %}
+            no data
+        {% else %}
+            <div class="table-responsive">
+                <table id="races" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">{{ 'season.races.round'|trans }}</th>
+                            <th scope="col">{{ 'season.races.name'|trans }}</th>
+                            <th scope="col">{{ 'season.races.circuit'|trans }}</th>
+                            <th scope="col">{{ 'season.races.country'|trans }}</th>
+                            <th scope="col">{{ 'season.races.date'|trans }}</th>
+                            <th scope="col">{{ 'season.races.time'|trans }}</th>
+                            <th scope="col">{{ 'season.races.winner.driver'|trans }}</th>
+                            <th scope="col">{{ 'season.races.winner.user'|trans }}</th>
+                            <th scope="col">{{ 'season.races.winner.actions'|trans }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for race in season.races %}
+                            <tr>
+                                <td>{{ race.round }}</td>
+                                <td lang="en">{{ race.name }}</td>
+                                <td>{{ race.circuit.name }}</td>
+                                <td>{{ race.circuit.country|country }}</td>
+                                <td>{{ race.date|format_date }}</td>
+                                <td>{{ race.date|format_time }}</td>
+                                <td>{% if race.hasResults %}{{ race.results.first.team.driver.shortName }}{% endif %}</td>
+                                <td>{% if race.hasResults and race.hasPredictions %}{{ race.predictions.first.user.username }}{% endif %}</td>
+                                <td><a class="btn" href="{{ path('race', { 'season': season.year, 'round': race.round }) }}">SEE</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

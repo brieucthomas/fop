@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div id="page-header">
+        <div class="container">
+            <p>{{ 'season.teams.subtitle'|trans }}</p>
+            <h1>{{ 'season.teams.title'|trans({ '%year%': season.year }) }}</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul id="teams">
+            {% for constructor in season.constructors %}
+                <li>
+                    <a href="{{ path('constructor', { 'slug': constructor.slug }) }}">{{ constructor.name }}</a>
+                    <ul>
+                        {% for driver in season.getDriversByConstructor(constructor) %}
+                        <li><a href="{{ path('driver', { 'slug': driver.slug }) }}">{{ driver.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
