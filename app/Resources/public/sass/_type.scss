@@ -177,8 +177,20 @@ h1, h2, h3, h4, h5, h6,
   background: $asbestos;
 }
 
-// Background
+// Sizes
 // -------------------------
+
+.text-small {
+  font-size: $font-size-small;
+}
+
+.text-base {
+  font-size: $font-size-base;
+}
+
+.text-large {
+  font-size: $font-size-large;
+}
 
 // Lists
 // -------------------------
@@ -249,7 +261,9 @@ h1, h2, h3, h4, h5, h6,
 .list-highlight {
   display: table;
   width: 100%;
+  margin: $padding-base-vertical 0;
   line-height: 38px;
+  text-transform: uppercase;
 
   > li {
     display: table-row;
@@ -320,13 +334,8 @@ h1, h2, h3, h4, h5, h6,
   padding-bottom: 60px;
   text-align: center;
 
-  h1 {
-    margin-top: 0;
-    margin-bottom: ($line-height-computed / 2);
-  }
-
-  + .section {
-    margin-top: -$line-height-computed;
+  h1, h2, .h1, .h2 {
+    margin: 0;
   }
 
   @media (min-width: $grid-float-breakpoint) {
