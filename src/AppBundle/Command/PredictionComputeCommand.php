@@ -33,9 +33,7 @@ class PredictionComputeCommand extends ContainerAwareCommand
     {
         $year = ('current' == $input->getArgument('year')) ? date('Y') : $input->getArgument('year');
 
-        $service = $this->getContainer()->get('season_service');
-
-        $season = $service->findByYear($year);
+        $season = $this->getContainer()->get('season_service')->findByYear($year);
 
         if (!$season) {
             throw new \Exception('Season not found');
@@ -43,6 +41,6 @@ class PredictionComputeCommand extends ContainerAwareCommand
 
         $output->writeln(sprintf('Computing the %d season...', $year));
 
-        $service->computePredictions($season);
+        $this->getContainer()->get('prediction_service')->computeBySeason($season);
     }
 }
