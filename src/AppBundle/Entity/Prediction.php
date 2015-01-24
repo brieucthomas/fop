@@ -18,7 +18,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * The result prediction entity.
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PredictionRepository")
  * @ORM\Table(uniqueConstraints={
  *     @ORM\UniqueConstraint(columns={"race_id", "user_id"}),
  * })

@@ -9,6 +9,8 @@
 
 namespace AppBundle\Tests;
 
+use AppBundle\Service\SeasonServiceInterface;
+use AppBundle\Service\UserServiceInterface;
 use Liip\FunctionalTestBundle\Test\WebTestCase as LiipTest;
 use Symfony\Bundle\FrameworkBundle\Client;
 
@@ -46,5 +48,21 @@ class WebTestCase extends LiipTest
     protected function get($service)
     {
         return $this->getContainer()->get($service);
+    }
+
+    /**
+     * @return SeasonServiceInterface
+     */
+    protected function getSeasonService()
+    {
+        return $this->get('season_service');
+    }
+
+    /**
+     * @return UserServiceInterface
+     */
+    protected function getUserService()
+    {
+        return $this->get('user_service');
     }
 }

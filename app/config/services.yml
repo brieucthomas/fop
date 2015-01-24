@@ -152,7 +152,7 @@ services:
         arguments: ["@user_standings_repository"]
     prediction_service:
         class: AppBundle\Service\PredictionService
-        arguments: ["@prediction_repository", "@finishing_position_repository"]
+        arguments: ["@doctrine.orm.entity_manager", "@prediction_repository", "@finishing_position_repository", "@season_repository", "@user_repository", "@user_standings_repository"]
 
     # Menus
     menu_builder:

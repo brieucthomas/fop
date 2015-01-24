@@ -698,13 +698,17 @@ class Race
      */
     public function computeBonus(ScoringSystem $system)
     {
-        // extract predictions points
-        $points = $this->predictions->map(function (Prediction $prediction) {
-            return $prediction->getPoints();
-        });
+        if ($this->predictions->isEmpty()) {
+            $this->setBonus(0);
+        } else {
+            // extract predictions points
+            $points = $this->predictions->map(function (Prediction $prediction) {
+                return $prediction->getPoints();
+            });
 
-        // compute race bonus from the lowest prediction points
-        $this->setBonus(min($points->toArray()) - $system->getBonus());
+            // compute race bonus from the lowest prediction points
+            $this->setBonus(min($points->toArray()) - $system->getBonus());
+        }
 
         return $this;
     }
@@ -718,29 +722,6 @@ class Race
      */
     public function computePredictionsPoints(ScoringSystem $system)
     {
-        // reset previous finishing positions
-        foreach ($this->predictions as $prediction) {
-            /* @var $prediction Prediction */
-            foreach ($prediction->getFinishingPositions() as $item) {
-                /* @var $item FinishingPosition */
-                $item->setFinishingPosition(null);
-            }
-        }
-
-        // set finishing positions
-        foreach ($this->results as $result) {
-            /* @var $result Result */
-            foreach ($this->predictions as $prediction) {
-                /* @var $prediction Prediction */
-                foreach ($prediction->getFinishingPositions() as $item) {
-                    /* @var $item FinishingPosition */
-                    if ($item->getTeam() == $result->getTeam()) {
-                        $item->setFinishingPosition($result->getPosition());
-                    }
-                }
-            }
-        }
-
         // compute predictions points
         foreach ($this->predictions as $prediction) {
             /* @var $prediction Prediction */

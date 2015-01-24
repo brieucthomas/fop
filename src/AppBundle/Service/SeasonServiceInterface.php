@@ -122,15 +122,6 @@ interface SeasonServiceInterface
     public function addTeam(Season $season, Team $team);
 
     /**
-     * Computes season predictions scores.
-     *
-     * @param Season $season
-     *
-     * @return $this
-     */
-    public function computePredictions(Season $season);
-
-    /**
      * Persists a season.
      *
      * @param Season $season The season to persist

@@ -75,4 +75,18 @@ class User extends BaseUser
     {
         return $this->created;
     }
+
+    /**
+     * Sets the created date.
+     *
+     * @param \DateTime $created
+     *
+     * @return $this
+     */
+    public function setCreated(\DateTime $created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
 }

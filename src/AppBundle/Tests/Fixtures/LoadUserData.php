@@ -26,6 +26,7 @@ class LoadUserData extends AbstractFixture
             ->setPassword('foo')
             ->setEnabled(true)
             ->setEmail('foo@test.com')
+            ->setCreated(new \DateTime('2013-06-01'))
         ;
 
         $user2 = new User();

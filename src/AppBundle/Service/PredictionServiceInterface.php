@@ -19,11 +19,11 @@ use AppBundle\Entity\Season;
 interface PredictionServiceInterface
 {
     /**
-     * Updates a season predictions finishing positions.
+     * Computes season predictions scores.
      *
-     * @param int $year A season year in 4 digits
+     * @param Season $season
      *
      * @return $this
      */
-    public function updateFinishingPositionsByYear($year);
+    public function computeBySeason(Season $season);
 }

@@ -9,7 +9,6 @@
 
 namespace AppBundle\Repository;
 
-
 /**
  * The prediction repository.
  *

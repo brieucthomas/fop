@@ -16,7 +16,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * The position entity.
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\FinishingPositionRepository")
  * @ORM\Table(uniqueConstraints={
  *     @ORM\UniqueConstraint(columns={"prediction_id", "team_id"}),
  *     @ORM\UniqueConstraint(columns={"prediction_id", "predicted_position"})

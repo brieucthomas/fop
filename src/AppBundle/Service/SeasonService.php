@@ -9,17 +9,14 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\Season;
 use AppBundle\Entity\Team;
 use AppBundle\Entity\User;
-use AppBundle\Entity\UserStandings;
 use AppBundle\Repository\ScoringSystemRepository;
 use AppBundle\Repository\ScoringSystemRepositoryInterface;
 use AppBundle\Repository\SeasonRepositoryInterface;
 use AppBundle\Repository\UserRepositoryInterface;
-use Doctrine\Common\Collections\Criteria;
 
 /**
  * The season service.
@@ -163,64 +160,6 @@ class SeasonService implements SeasonServiceInterface
     public function addTeam(Season $season, Team $team)
     {
         $season->addTeam($team);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function computePredictions(Season $season)
-    {
-        $season->computePredictionsPoints();
-
-        $users = $this->userRepository->findByYear($season->getYear());
-
-        /* @var $previousRace Race */
-        $previousRace = null;
-
-        foreach ($season->getRaces() as $race) {
-            /* @var $race Race */
-            foreach ($users as $user) {
-                /* @var $user User */
-                if ($previousRace) {
-                    $userStanding = clone $previousRace->getUserStandingsByUser($user);
-                } else {
-                    $userStanding = new UserStandings();
-                    $userStanding->setUser($user);
-                }
-
-                $race->addUserStanding($userStanding);
-
-                $prediction = $race->getPredictionByUser($user);
-
-                if ($prediction) {
-                    $userStanding->addPoints($prediction->getPoints());
-
-                    if ($prediction->isWin()) {
-                        $userStanding->increaseWins();
-                    }
-                } else {
-                    $userStanding->addPoints($race->getBonus());
-                }
-            }
-
-            $userStandings = $race->getUserStandings()->matching(
-                Criteria::create()->orderBy(['points' => Criteria::DESC])
-            );
-
-            $position = 0;
-            foreach ($userStandings as $userStanding) {
-                /* @var $userStanding UserStandings */
-                $userStanding->setPosition(++$position);
-            }
-
-            $race->setUserStandings($userStandings);
-
-            $previousRace = $race;
-        }
-
-        $this->save($season);
 
         return $this;
     }

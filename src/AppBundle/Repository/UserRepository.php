@@ -29,7 +29,7 @@ class UserRepository extends EntityRepository implements UserRepositoryInterface
         $builder
             ->select('u')
             ->from($this->_entityName, 'u', 'u.id')
-            ->where($builder->expr()->lte('u.creationDate', ':year'))
+            ->where($builder->expr()->lte('u.created', ':year'))
             ->setParameter(':year', $year.'-01-01')
         ;
 
