@@ -5,53 +5,81 @@
 {% block content %}
 
     {% if nextRace %}
-        <div id="next-race" class="section section-inverse">
+        <div id="next-race" class="section section-lg section-inverse section-left">
             <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
             <div class="container">
                 <h1 class="text-concrete text-large">{{ 'homepage.next-race.title'|trans }}</h1>
-                <h2 class="h1" lang="en"><span class="text-emerald">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
+                <h2 class="h1" lang="en">
+                    <a href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}">
+                        <span class="text-emerald">{{ nextRace.season.year }}</span> {{ nextRace.name }}
+                    </a>
+                </h2>
                 <ul class="list-highlight">
                     <li id="next-race-nationality">
                         <img class="flag" src="{{ asset('assets/img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
                     </li>
                     <li id="next-race-round">
-                        <span class="bg-peter-river">{{ 'homepage.next-race.round'|trans }}</span>
-                        <span class="bg-belize-hole">{{ nextRace.round }}</span>
+                        <span class="bg-concrete">{{ 'homepage.next-race.round'|trans }}</span>
+                        <span class="bg-silver">{{ nextRace.round }}</span>
                     </li>
                     <li id="next-race-date">
                         <span class="bg-amethyst"><span class="fa fa-calendar-o" aria-label="{{ 'homepage.next-race.date'|trans }}"></span></span>
                         <span class="bg-wisteria">{{ nextRace.date|format_date }} {{ nextRace.date|format_time }}</span>
+                    </li>
+                    <li id="next-race-remaining-time" role="timer" data-date="{{ nextRace.date.timestamp*1000 }}" data-hover="tooltip" data-placement="bottom" title="{{ 'homepage.next-race.remaining_time'|trans }}">
+                        <span class="bg-amethyst"><span class="fa fa-clock-o" aria-label="{{ 'homepage.next-race.remaining_time'|trans }}"></span></span>
+                        <span class="bg-wisteria">%D:%H:%M:%S</span>
                     </li>
                     <li id="next-race-qualifying" data-hover="tooltip" data-placement="bottom" title="{{ 'homepage.next-race.qualifying.full'|trans }}">
                         <span class="{{ nextRace.hasQualifying? 'bg-emerald' : 'bg-alizarin' }}">{{ 'homepage.next-race.qualifying.short'|trans }}</span>
                         <span class="{{ nextRace.hasQualifying? 'bg-nephritis' : 'bg-pomegranate' }}">{{ nextRace.hasQualifying? 'available'|trans:'na'|trans }}</span>
                     </li>
                 </ul>
-                <div id="next-race-countdown" class="countdown hidden" role="timer" data-end-date="{{ nextRace.date.timestamp*1000 }}">
-                    <div class="countdown-section">
-                        <div class="countdown-amount">%D</div>
-                        <div class="countdown-day">{{ 'countdown.days'|trans }}</div>
-                    </div>
-                    <div class="countdown-section">
-                        <div class="countdown-amount">%H</div>
-                        <div class="countdown-day">{{ 'countdown.hours'|trans }}</div>
-                    </div>
-                    <div class="countdown-section">
-                        <div class="countdown-amount">%M</div>
-                        <div class="countdown-day">{{ 'countdown.minutes'|trans }}</div>
-                    </div>
-                    <div class="countdown-section">
-                        <div class="countdown-amount">%S</div>
-                        <div class="countdown-day">{{ 'countdown.seconds'|trans }}</div>
-                    </div>
-                </div>
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Forecast &raquo;</a></p>
             </div>
         </div>
     {% endif %}
 
+    {% if lastRace %}
+        <section id="last-race" class="section section-sm bg-clouds section-left">
+            <div class="container">
+                <h1 class="text-concrete text-large">{{ 'homepage.previous-race.title'|trans }}</h1>
+                <h2 lang="en" class="h1">
+                    <a href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">
+                        <span class="text-emerald">{{ lastRace.season.year }}</span> {{ lastRace.name }}
+                    </a>
+                </h2>
+                <ul class="list-highlight">
+                    <li id="last-race-country">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+                    </li>
+                    <li id="last-race-round">
+                        <span class="bg-concrete">{{ 'homepage.last-race.round'|trans }}</span>
+                        <span class="bg-silver">{{ lastRace.round }}</span>
+                    </li>
+                    <li id="last-race-date">
+                        <span class="bg-amethyst"><span class="fa fa-calendar-o" aria-label="{{ 'homepage.last-race.date'|trans }}"></span></span>
+                        <span class="bg-wisteria">{{ lastRace.date|format_date }} {{ lastRace.date|format_time }}</span>
+                    </li>
+                    {% if lastRace.hasResults %}
+                        <li id="last-race-winner">
+                            <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                            <span class="bg-orange">{{ lastRace.results.first.team.driver.shortName }}</span>
+                        </li>
+                        {% if lastRace.hasPredictions %}
+                            <li id="last-race-winner">
+                                <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                                <span class="bg-orange">{{ lastRace.predictions.first.user.username }}</span>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                </ul>
+            </div>
+        </section>
+    {% endif %}
+
     {% if lastRaceWithResults and lastRaceWithResults.season.finished %}
-        <section id="world-champions" class="section">
+        <section id="world-champions" class="section bg-orange text-center">
             <div class="container">
                 <h1>{{ 'homepage.world-champions.title'|trans({ '%year%': lastRaceWithResults.season.year }) }}</h1>
                 <div class="row">
@@ -87,28 +115,7 @@
         </section>
     {% endif %}
 
-    {% if lastRace %}
-        <section id="last-race" class="section section-inverse">
-            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ lastRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
-            <div class="container">
-                <h1 class="text-concrete text-large">{{ 'homepage.previous-race.title'|trans }}</h1>
-                <h2 lang="en" class="h1"><span class="text-primary">{{ lastRace.season.year }}</span> {{ lastRace.name }}</h2>
-                <ul class="list-highlight">
-                    <li id="last-race-country">
-                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
-                    </li>
-                    <li id="last-race-date">
-                        <span class="bg-amethyst"><span class="fa fa-clock-o" aria-label="{{ 'last-race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'last-race.date'|trans }}"></span></span>
-                        <span class="bg-wisteria">{{ lastRace.date|format_date }}</span>
-                    </li>
-                    <li id="last-race-time">
-                        <span class="bg-amethyst"><span class="fa fa-clock-o" aria-label="{{ 'last-race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'last-race.date'|trans }}"></span></span>
-                        <span class="bg-wisteria">{{ lastRace.date|format_time }}</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    {% endif %}
+
 
     {% if lastRaceWithResults and not lastRaceWithResults.season.finished %}
         <section class="section section-inverse">

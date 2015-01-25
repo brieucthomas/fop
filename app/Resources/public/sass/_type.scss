@@ -2,13 +2,6 @@
 // Typography
 // --------------------------------------------------
 
-// Headings
-// -------------------------
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  text-transform: uppercase;
-}
 
 // Colors
 // -------------------------
@@ -177,6 +170,7 @@ h1, h2, h3, h4, h5, h6,
   background: $asbestos;
 }
 
+
 // Sizes
 // -------------------------
 
@@ -191,6 +185,15 @@ h1, h2, h3, h4, h5, h6,
 .text-large {
   font-size: $font-size-large;
 }
+
+
+// Weight
+// -------------------------
+
+.text-bold {
+  font-weight: 700;
+}
+
 
 // Lists
 // -------------------------
@@ -238,7 +241,6 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .list-details {
-  text-transform: uppercase;
   @include list-unstyled;
 
   > li {
@@ -261,9 +263,9 @@ h1, h2, h3, h4, h5, h6,
 .list-highlight {
   display: table;
   width: 100%;
-  margin: $padding-base-vertical 0;
+  margin: $padding-large-vertical 0;
   line-height: 38px;
-  text-transform: uppercase;
+  color: #fff;
 
   > li {
     display: table-row;
@@ -336,20 +338,44 @@ h1, h2, h3, h4, h5, h6,
 
   h1, h2, .h1, .h2 {
     margin: 0;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    padding-top: 250px;
-    padding-bottom: 250px;
-    text-align: left;
-
-    //&:first-child {
-    //  margin-top: -$navbar-height;
-    //}
+    padding-top: 160px;
+    padding-bottom: 160px;
   }
 }
 
 .section-inverse {
   background-color: $midnight-blue;
   color: #fff;
+}
+
+.section-sm {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-left {
+  @media (min-width: $grid-float-breakpoint) {
+    text-align: left;
+  }
+}
+
+.section-lg {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-01-24T18:44:51Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+  <file date="2015-01-25T10:30:24Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
     </header>
     <body>
       <trans-unit id="7b231a50a498ef151e291795f46f56bee569eae5" resname="available">
-        <jms:reference-file line="27">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="35">views/main/homepage.html.twig</jms:reference-file>
         <source>available</source>
         <target>Disponible</target>
       </trans-unit>
@@ -25,26 +25,6 @@
         <jms:reference-file line="22">views/constructor/show.html.twig</jms:reference-file>
         <source>constructor.wins</source>
         <target state="new">constructor.wins</target>
-      </trans-unit>
-      <trans-unit id="b3e56c86bcbf85f9b48b586c7127fe0265314771" resname="countdown.days">
-        <jms:reference-file line="33">views/main/homepage.html.twig</jms:reference-file>
-        <source>countdown.days</source>
-        <target>Jours</target>
-      </trans-unit>
-      <trans-unit id="99879420019a3a8a801993ef92477f0558408ea3" resname="countdown.hours">
-        <jms:reference-file line="37">views/main/homepage.html.twig</jms:reference-file>
-        <source>countdown.hours</source>
-        <target>Heures</target>
-      </trans-unit>
-      <trans-unit id="6e62a17e376774cee9a46fe054649505b98c7f37" resname="countdown.minutes">
-        <jms:reference-file line="41">views/main/homepage.html.twig</jms:reference-file>
-        <source>countdown.minutes</source>
-        <target>Minutes</target>
-      </trans-unit>
-      <trans-unit id="61980e13e275238c41618c6a1051fd7ca7427d2c" resname="countdown.seconds">
-        <jms:reference-file line="45">views/main/homepage.html.twig</jms:reference-file>
-        <source>countdown.seconds</source>
-        <target>Secondes</target>
       </trans-unit>
       <trans-unit id="d7ba682fd28d677f56323dad0248246f34b5f6a6" resname="driver.birth_date">
         <jms:reference-file line="37">views/driver/show.html.twig</jms:reference-file>
@@ -94,23 +74,39 @@
         <source>footer.copyright</source>
         <target>FOP</target>
       </trans-unit>
+      <trans-unit id="824f6713ea170ca421767df734eaf26bc17b20bc" resname="homepage.last-race.date">
+        <jms:reference-file line="61">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.last-race.date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="fac0c33e22a2a37eb0e0cfe98788505132a409b1" resname="homepage.last-race.round">
+        <jms:reference-file line="57">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.last-race.round</source>
+        <target>Manche</target>
+      </trans-unit>
       <trans-unit id="32c4d4e8e6cd8e812c52a0a1ba96a60f3fef1017" resname="homepage.next-race.date">
-        <jms:reference-file line="22">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="26">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.next-race.date</source>
         <target>Date</target>
       </trans-unit>
       <trans-unit id="3eee51c68b69311c7f4f93ec5ee81a6fb11752f7" resname="homepage.next-race.qualifying.full">
-        <jms:reference-file line="25">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="33">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.next-race.qualifying.full</source>
         <target>Qualifications</target>
       </trans-unit>
       <trans-unit id="5ca816f0bcc60de4e6953636fc1ca835caa92b50" resname="homepage.next-race.qualifying.short">
-        <jms:reference-file line="26">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="34">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.next-race.qualifying.short</source>
         <target>Q</target>
       </trans-unit>
+      <trans-unit id="fbdf48f5e4810d0487b59ae0b577c15f8aa9f537" resname="homepage.next-race.remaining_time">
+        <jms:reference-file line="29">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="30">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.next-race.remaining_time</source>
+        <target>Temps restant</target>
+      </trans-unit>
       <trans-unit id="583a3671c9328ad63b3563127322f28d6c43ac94" resname="homepage.next-race.round">
-        <jms:reference-file line="18">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="22">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.next-race.round</source>
         <target>Manche</target>
       </trans-unit>
@@ -120,243 +116,232 @@
         <target>Prochain Grand Prix</target>
       </trans-unit>
       <trans-unit id="359224c7f47d6127175fd174defd157cb4b0b5cf" resname="homepage.previous-race.title">
-        <jms:reference-file line="94">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="46">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.previous-race.title</source>
         <target>Dernier Grand Prix</target>
       </trans-unit>
       <trans-unit id="7f40ac456d93b7b1b1678c9b8a091511d19b3197" resname="homepage.standings.constructor">
-        <jms:reference-file line="124">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="131">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.constructor</source>
         <target>Équipes</target>
       </trans-unit>
       <trans-unit id="dbf8a844034ccdd44eca3b9ed1a1d5410f95e704" resname="homepage.standings.driver">
-        <jms:reference-file line="123">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="130">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.driver</source>
         <target>Pilotes</target>
       </trans-unit>
       <trans-unit id="578c55851c9855f7f85a8489d41ec5e4bfee4f85" resname="homepage.standings.finished">
-        <jms:reference-file line="118">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="125">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.finished</source>
         <target>Saison terminée</target>
       </trans-unit>
       <trans-unit id="8c4273893622056a328e209b7dfb2e6b3efccbac" resname="homepage.standings.title">
-        <jms:reference-file line="116">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="123">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.title</source>
         <target>Classement %year%</target>
       </trans-unit>
       <trans-unit id="06f7cd36ea737097c4fcabe4ddda8d1d57f1ceb7" resname="homepage.standings.user">
-        <jms:reference-file line="122">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="129">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.user</source>
         <target>Joueurs</target>
       </trans-unit>
       <trans-unit id="4843eea834eeb32d4d44aead79dae3ed2128eac8" resname="homepage.world-champions.constructor">
-        <jms:reference-file line="78">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="106">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.world-champions.constructor</source>
         <target>Équipe</target>
       </trans-unit>
       <trans-unit id="fc5f3f612a9b5e1dc42a15ce95f75a163920956f" resname="homepage.world-champions.driver">
-        <jms:reference-file line="69">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="97">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.world-champions.driver</source>
         <target>Pilote</target>
       </trans-unit>
       <trans-unit id="8b721102207d8a34f36b8990d2d7eb8c34c5f905" resname="homepage.world-champions.title">
-        <jms:reference-file line="56">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="84">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.world-champions.title</source>
         <target>Champions du monde %year%</target>
       </trans-unit>
       <trans-unit id="f296742ba6e3c6c336174a109f6ac661b127b126" resname="homepage.world-champions.user">
-        <jms:reference-file line="60">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="88">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.world-champions.user</source>
         <target>Joueur</target>
       </trans-unit>
-      <trans-unit id="ceb1711c76629da862cef976ad81616094434c55" resname="last-race.date">
-        <jms:reference-file line="101">views/main/homepage.html.twig</jms:reference-file>
-        <jms:reference-file line="105">views/main/homepage.html.twig</jms:reference-file>
-        <source>last-race.date</source>
-        <target>Date</target>
-      </trans-unit>
       <trans-unit id="5efb4ac2212f109ebc889dc2a735f791dfc4119a" resname="na">
-        <jms:reference-file line="27">views/main/homepage.html.twig</jms:reference-file>
-        <jms:reference-file line="64">views/main/homepage.html.twig</jms:reference-file>
-        <jms:reference-file line="73">views/main/homepage.html.twig</jms:reference-file>
-        <jms:reference-file line="82">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="35">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="92">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="101">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="110">views/main/homepage.html.twig</jms:reference-file>
         <source>na</source>
         <target>Non disponible</target>
       </trans-unit>
       <trans-unit id="aa693b01105dad39ce7fccb7c6c9864bdd28e573" resname="race.bonus">
-        <jms:reference-file line="61">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="56">views/race/show.html.twig</jms:reference-file>
         <source>race.bonus</source>
-        <target state="new">race.bonus</target>
+        <target>Bonus</target>
       </trans-unit>
       <trans-unit id="547259d58aa5299d9237b062a16ae35b00c01d66" resname="race.circuit">
-        <jms:reference-file line="57">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="52">views/race/show.html.twig</jms:reference-file>
         <source>race.circuit</source>
-        <target state="new">race.circuit</target>
+        <target>Circuit</target>
       </trans-unit>
       <trans-unit id="580816abd14aa5da19ee24abab3278d727fb0548" resname="race.country">
-        <jms:reference-file line="49">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="44">views/race/show.html.twig</jms:reference-file>
         <source>race.country</source>
-        <target state="new">race.country</target>
+        <target>Pays</target>
       </trans-unit>
       <trans-unit id="5c0335157fa53bdda3d2a01f2b83fe469b2f54c2" resname="race.date">
-        <jms:reference-file line="21">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="20">views/race/show.html.twig</jms:reference-file>
         <source>race.date</source>
-        <target state="new">race.date</target>
+        <target>Date</target>
       </trans-unit>
       <trans-unit id="e913263db4e0cf06e6ec5a3f8d612dfe5f358553" resname="race.location">
-        <jms:reference-file line="53">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="48">views/race/show.html.twig</jms:reference-file>
         <source>race.location</source>
-        <target state="new">race.location</target>
+        <target>Localisation</target>
       </trans-unit>
       <trans-unit id="0033202a483892dd7d64c87e1df82014f7553269" resname="race.predictions.constructor">
-        <jms:reference-file line="86">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="81">views/race/show.html.twig</jms:reference-file>
         <source>race.predictions.constructor</source>
-        <target state="new">race.predictions.constructor</target>
+        <target>Équipe</target>
       </trans-unit>
       <trans-unit id="5f64361b0ca0f282868a999df9194a109ae55e6b" resname="race.predictions.driver">
-        <jms:reference-file line="85">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="80">views/race/show.html.twig</jms:reference-file>
         <source>race.predictions.driver</source>
-        <target state="new">race.predictions.driver</target>
+        <target>Pilote</target>
       </trans-unit>
       <trans-unit id="9bc523bc96dbea171077ebe1db95ed7864ccfba6" resname="race.predictions.finishing_position">
-        <jms:reference-file line="87">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="82">views/race/show.html.twig</jms:reference-file>
         <source>race.predictions.finishing_position</source>
-        <target state="new">race.predictions.finishing_position</target>
+        <target>Position finale</target>
       </trans-unit>
       <trans-unit id="530007e6282707bcc38b3f7307832238fd47f9ea" resname="race.predictions.points">
-        <jms:reference-file line="88">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="83">views/race/show.html.twig</jms:reference-file>
         <source>race.predictions.points</source>
-        <target state="new">race.predictions.points</target>
+        <target>Points</target>
       </trans-unit>
       <trans-unit id="0d467db02b3141191c6a87bcb7fd95d2e94859d5" resname="race.predictions.predicted_position">
-        <jms:reference-file line="84">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="79">views/race/show.html.twig</jms:reference-file>
         <source>race.predictions.predicted_position</source>
-        <target state="new">race.predictions.predicted_position</target>
+        <target>Position prédite</target>
       </trans-unit>
       <trans-unit id="ccc71381d330603b49c9bf1cf782c4d70dc655b2" resname="race.predictions.title">
-        <jms:reference-file line="69">views/race/show.html.twig</jms:reference-file>
-        <jms:reference-file line="78">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="64">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="73">views/race/show.html.twig</jms:reference-file>
         <source>race.predictions.title</source>
-        <target state="new">race.predictions.title</target>
+        <target>Pronostics</target>
       </trans-unit>
       <trans-unit id="84204cf4b4861fbd931b3ef399ff2baa124d4c49" resname="race.qualifying.constructor">
-        <jms:reference-file line="113">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="108">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.constructor</source>
-        <target state="new">race.qualifying.constructor</target>
+        <target>Équipe</target>
       </trans-unit>
       <trans-unit id="943f35663e6c58a15bc3afcecff9dd7ae5311d19" resname="race.qualifying.driver">
-        <jms:reference-file line="112">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="107">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.driver</source>
-        <target state="new">race.qualifying.driver</target>
+        <target>Pilote</target>
       </trans-unit>
       <trans-unit id="cfd1de0fa36bf9f8586b2138201d9a37530d476a" resname="race.qualifying.nationality">
-        <jms:reference-file line="111">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="106">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.nationality</source>
-        <target state="new">race.qualifying.nationality</target>
+        <target>Nationalité</target>
       </trans-unit>
       <trans-unit id="eb3b28bd0d24ced425c7059b0511c6446f664d38" resname="race.qualifying.position">
-        <jms:reference-file line="110">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="105">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.position</source>
-        <target state="new">race.qualifying.position</target>
+        <target>Position</target>
       </trans-unit>
       <trans-unit id="0373c0b177ed932842fb93c5efddb59c9d205622" resname="race.qualifying.q1">
-        <jms:reference-file line="114">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="109">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.q1</source>
-        <target state="new">race.qualifying.q1</target>
+        <target>Q1</target>
       </trans-unit>
       <trans-unit id="fd14872b9eabdf776710a4eed6a6cb53f6a63497" resname="race.qualifying.q2">
-        <jms:reference-file line="115">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="110">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.q2</source>
-        <target state="new">race.qualifying.q2</target>
+        <target>Q2</target>
       </trans-unit>
       <trans-unit id="6aaf0e39850df8621b9478413cba99dd08dfab19" resname="race.qualifying.q3">
-        <jms:reference-file line="116">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="111">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.q3</source>
-        <target state="new">race.qualifying.q3</target>
+        <target>Q3</target>
       </trans-unit>
       <trans-unit id="28dc58a5ad528ed79d0e2e41c00667c8dfde34d7" resname="race.qualifying.title">
-        <jms:reference-file line="70">views/race/show.html.twig</jms:reference-file>
-        <jms:reference-file line="106">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="65">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="101">views/race/show.html.twig</jms:reference-file>
         <source>race.qualifying.title</source>
-        <target state="new">race.qualifying.title</target>
+        <target>Qualifications</target>
       </trans-unit>
       <trans-unit id="8fcd03f562b72d2d555b0a5ddebb24308eff4ebd" resname="race.results.constructor">
-        <jms:reference-file line="142">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="137">views/race/show.html.twig</jms:reference-file>
         <source>race.results.constructor</source>
-        <target state="new">race.results.constructor</target>
+        <target>Équipe</target>
       </trans-unit>
       <trans-unit id="7a7ec394ea13091e0972fe2b0212e844183c8749" resname="race.results.driver">
-        <jms:reference-file line="141">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="136">views/race/show.html.twig</jms:reference-file>
         <source>race.results.driver</source>
         <target state="new">race.results.driver</target>
       </trans-unit>
       <trans-unit id="d759b1d84a935a45b1ec82223d7f6c04d181e2f9" resname="race.results.laps">
-        <jms:reference-file line="143">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="138">views/race/show.html.twig</jms:reference-file>
         <source>race.results.laps</source>
-        <target state="new">race.results.laps</target>
+        <target>Tours</target>
       </trans-unit>
       <trans-unit id="cee5646f0c55398bfaffc764536168fc95d493d6" resname="race.results.nationality">
-        <jms:reference-file line="140">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="135">views/race/show.html.twig</jms:reference-file>
         <source>race.results.nationality</source>
-        <target state="new">race.results.nationality</target>
+        <target>Nationalité</target>
       </trans-unit>
       <trans-unit id="2227b924ff173d1df02045fdb66dd462c12d9653" resname="race.results.points">
-        <jms:reference-file line="145">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="140">views/race/show.html.twig</jms:reference-file>
         <source>race.results.points</source>
-        <target state="new">race.results.points</target>
+        <target>Points</target>
       </trans-unit>
       <trans-unit id="4fd78f8dc8d029371c5f03ad8fca2aa12a544892" resname="race.results.position">
-        <jms:reference-file line="139">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="134">views/race/show.html.twig</jms:reference-file>
         <source>race.results.position</source>
-        <target state="new">race.results.position</target>
+        <target>Position</target>
       </trans-unit>
       <trans-unit id="208b8978db65e4022f5020cab1814314764feb89" resname="race.results.status">
-        <jms:reference-file line="144">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="139">views/race/show.html.twig</jms:reference-file>
         <source>race.results.status</source>
-        <target state="new">race.results.status</target>
+        <target>race.results.status</target>
       </trans-unit>
       <trans-unit id="3998882790c072719a1e6660646e62ac3f6cb2bd" resname="race.results.title">
-        <jms:reference-file line="71">views/race/show.html.twig</jms:reference-file>
-        <jms:reference-file line="135">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="66">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="130">views/race/show.html.twig</jms:reference-file>
         <source>race.results.title</source>
-        <target state="new">race.results.title</target>
+        <target>Résultats</target>
+      </trans-unit>
+      <trans-unit id="de3b7f894fede3764cd9eadda6ee64b0476811eb" resname="race.round">
+        <jms:reference-file line="16">views/race/show.html.twig</jms:reference-file>
+        <source>race.round</source>
+        <target>Manche</target>
       </trans-unit>
       <trans-unit id="02205056e5668b43d89789515d270d9be73cdc0c" resname="race.standings.constructor.title">
-        <jms:reference-file line="191">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="186">views/race/show.html.twig</jms:reference-file>
         <source>race.standings.constructor.title</source>
-        <target state="new">race.standings.constructor.title</target>
+        <target>Équipes</target>
       </trans-unit>
       <trans-unit id="6a309eedc5b08e01e883f050695e724d653c4691" resname="race.standings.driver.title">
-        <jms:reference-file line="180">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="175">views/race/show.html.twig</jms:reference-file>
         <source>race.standings.driver.title</source>
-        <target state="new">race.standings.driver.title</target>
+        <target>Pilotes</target>
       </trans-unit>
       <trans-unit id="2c530eed3e369a0577ed480e6f783eed4c552ed2" resname="race.standings.title">
-        <jms:reference-file line="72">views/race/show.html.twig</jms:reference-file>
-        <jms:reference-file line="166">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="67">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="161">views/race/show.html.twig</jms:reference-file>
         <source>race.standings.title</source>
-        <target state="new">race.standings.title</target>
+        <target>Classements</target>
       </trans-unit>
       <trans-unit id="83681eec13078ad842f41487dd347005c59eb11c" resname="race.standings.user.title">
-        <jms:reference-file line="169">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="164">views/race/show.html.twig</jms:reference-file>
         <source>race.standings.user.title</source>
-        <target state="new">race.standings.user.title</target>
-      </trans-unit>
-      <trans-unit id="84b8d59e856626e03c8a7406e86e4b0f260af391" resname="race.time">
-        <jms:reference-file line="25">views/race/show.html.twig</jms:reference-file>
-        <source>race.time</source>
-        <target state="new">race.time</target>
-      </trans-unit>
-      <trans-unit id="358b6126712a404f893a89a5ae0dae38320f0836" resname="race.title">
-        <jms:reference-file line="10">views/race/show.html.twig</jms:reference-file>
-        <source>race.title</source>
-        <target state="new">race.title</target>
+        <target>Joueurs</target>
       </trans-unit>
       <trans-unit id="3d0687800435313053181b1801a541ffbca13df4" resname="race.winner">
-        <jms:reference-file line="30">views/race/show.html.twig</jms:reference-file>
-        <jms:reference-file line="36">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="25">views/race/show.html.twig</jms:reference-file>
+        <jms:reference-file line="31">views/race/show.html.twig</jms:reference-file>
         <source>race.winner</source>
-        <target state="new">race.winner</target>
+        <target>Vainqueur</target>
       </trans-unit>
       <trans-unit id="b92cab147c89c3be15730d302f703bab8336dfc7" resname="season.races.circuit">
         <jms:reference-file line="21">views/season/races.html.twig</jms:reference-file>

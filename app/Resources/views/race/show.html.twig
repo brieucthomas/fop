@@ -4,26 +4,21 @@
 
 {% block content %}
     {% if race %}
-        <div class="page-header">
-            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ race.circuit.id ~ '.jpg') }}')"></div>
+        <div class="section section-inverse section-left">
+            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ race.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
-                <p>{% block race_title %}{{ 'race.title'|trans }}{% endblock %}</p>
                 <h1 lang="en"><span class="text-emerald">{{ race.season.year }}</span> {{ race.name }}</h1>
-                <ul>
+                <ul class="list-highlight">
                     <li id="next-race-country">
                         <img class="flag" src="{{ asset('assets/img/flags/' ~ race.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ race.circuit.country|country }}"/>
                     </li>
                     <li id="next-race-round">
-                        <span class="bg-nephritis">ROUND</span>
-                        <span class="bg-emerald">{{ race.round }}</span>
+                        <span class="bg-concrete">{{ 'race.round'|trans }}</span>
+                        <span class="bg-silver">{{ race.round }}</span>
                     </li>
                     <li id="next-race-date">
-                        <span class="bg-belize-hole"><span class="fa fa-calendar" aria-label="{{ 'race.date'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'race.date'|trans }}"></span></span>
-                        <span class="bg-peter-river">{{ race.date|format_date }}</span>
-                    </li>
-                    <li id="next-race-time">
-                        <span class="bg-belize-hole"><span class="fa fa-clock-o" aria-label="{{ 'race.time'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'race.time'|trans }}"></span></span>
-                        <span class="bg-peter-river">{{ race.date|format_time }}</span>
+                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'race.date'|trans }}"></span></span>
+                        <span class="bg-green-sea">{{ race.date|format_date }} {{ race.date|format_time }}</span>
                     </li>
                     {% if race.hasResults %}
                         <li id="last-race-winner">

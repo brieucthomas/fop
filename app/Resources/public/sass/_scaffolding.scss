@@ -2,26 +2,13 @@
 // Scaffolding
 // --------------------------------------------------
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 160px;
-
-  @media (min-width: $grid-float-breakpoint) {
-    margin-bottom: 60px;
-  }
+  text-transform: uppercase;
 }
 
 #site-footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 160px;
   text-align: center;
-  text-transform: uppercase;
   font-size: $font-size-small;
 
   > .container {
@@ -47,7 +34,6 @@ body {
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    height: 60px;
     text-align: left;
 
     .site-footer-links {
