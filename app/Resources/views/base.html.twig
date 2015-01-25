@@ -7,7 +7,8 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% stylesheets
             'assets/css/fop.css'
-            'vendor/fontawesome/css/font-awesome.min.css' filter='cssrewrite' %}
+            'vendor/fontawesome/css/font-awesome.min.css'
+            'vendor/c3js-chart/c3.min.css' filter='cssrewrite' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
         {% block stylesheets %}{% endblock %}
