@@ -34,7 +34,7 @@ class Builder
      * Constructor.
      *
      * @param FactoryInterface $factory
-     * @param RequestStack     $requestStack
+     * @param RequestStack $requestStack
      */
     public function __construct(FactoryInterface $factory, RequestStack $requestStack)
     {
@@ -47,6 +47,22 @@ class Builder
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
+        $menu->addChild(
+            'navigation.season.last',
+            [
+                'route'           => 'season_home',
+                'routeParameters' => ['year' => date('Y') - 1],
+                'extras'          => ['translation_params' => [date('Y') - 1]]
+            ]
+        );
+        $menu->addChild(
+            'navigation.season.next',
+            [
+                'route'           => 'season_home',
+                'routeParameters' => ['year' => date('Y')],
+                'extras'          => ['translation_params' => [date('Y')]]
+            ]
+        );
 
         return $menu;
     }
@@ -76,14 +92,30 @@ class Builder
             $child = $parent->addChild(
                 $local,
                 [
-                    'route' => $request->get('_route'),
+                    'route'           => $request->get('_route'),
                     'routeParameters' => array_merge($request->get('_route_params'), ['_locale' => $local]),
                     /** @Ignore */
-                    'label' => $local
+                    'label'           => $local
                 ]
             );
-            $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
+            $child->setLinkAttribute('title', 'navigation.locale_switcher.' . $local);
         }
+
+        return $menu;
+    }
+
+    public function createSeasonMenu()
+    {
+        $request = $this->requestStack->getCurrentRequest();
+        $params = ['year' => $request->get('year')];
+
+        $menu = $this->factory->createItem('root');
+
+        $menu->addChild('navigation.season.home', ['route' => 'season_home', 'routeParameters' => $params]);
+        $menu->addChild('navigation.season.races', ['route' => 'season_races', 'routeParameters' => $params]);
+        $menu->addChild('navigation.season.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
+        $menu->addChild('navigation.season.standings', ['route' => 'season_standings', 'routeParameters' => $params]);
+        $menu->addChild('navigation.season.graphs', ['route' => 'season_graphs', 'routeParameters' => $params]);
 
         return $menu;
     }
