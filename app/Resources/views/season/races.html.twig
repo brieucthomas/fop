@@ -1,12 +1,7 @@
-{% extends 'base.html.twig' %}
+{% extends ':season:layout.html.twig' %}
 
 {% block content %}
-    <div id="page-header">
-        <div class="container">
-            <p>{{ 'season.races.leading'|trans }}</p>
-            <h1>{{ 'season.races.title'|trans({ '%year%': season.year }) }}</h1>
-        </div>
-    </div>
+    {{ parent() }}
 
     <div class="container">
         {% if season.races.isEmpty %}

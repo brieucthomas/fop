@@ -1,13 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends ':season:layout.html.twig' %}
 
 {% set module = 'app/seasons/graphs' %}
 
 {% block content %}
-    <div class="section section-sm">
-        <div class="container">
-            <h1>{{ 'season.graphs.title'|trans({ '%year%': season.year }) }}</h1>
-        </div>
-    </div>
+    {{ parent() }}
 
     <div class="container">
         <div id="chart-user-standings" class="c3" data-url="{{ path('season_graphs_user_standings_data', { 'year': season.year }) }}"></div>

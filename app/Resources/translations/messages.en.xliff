@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-01-25T10:24:43Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2015-01-25T12:00:53Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -70,7 +70,7 @@
         <target>Wins</target>
       </trans-unit>
       <trans-unit id="b469507c15ca085ba9753f60ab835f68cda9c725" resname="footer.copyright">
-        <jms:reference-file line="44">Resources/views/base.html.twig</jms:reference-file>
+        <jms:reference-file line="45">Resources/views/base.html.twig</jms:reference-file>
         <source>footer.copyright</source>
         <target>FOP</target>
       </trans-unit>
@@ -344,97 +344,67 @@
         <target state="new">race.winner</target>
       </trans-unit>
       <trans-unit id="b92cab147c89c3be15730d302f703bab8336dfc7" resname="season.races.circuit">
-        <jms:reference-file line="21">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="16">views/season/races.html.twig</jms:reference-file>
         <source>season.races.circuit</source>
         <target state="new">season.races.circuit</target>
       </trans-unit>
       <trans-unit id="30568e18bda156cafc5a197c4493d0cbc591efb6" resname="season.races.country">
-        <jms:reference-file line="22">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="17">views/season/races.html.twig</jms:reference-file>
         <source>season.races.country</source>
         <target state="new">season.races.country</target>
       </trans-unit>
       <trans-unit id="b3107f468df3571b19397885f9df465712f20af4" resname="season.races.date">
-        <jms:reference-file line="23">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="18">views/season/races.html.twig</jms:reference-file>
         <source>season.races.date</source>
         <target state="new">season.races.date</target>
       </trans-unit>
-      <trans-unit id="b0477181fe69329597e80eb1d4556670acb446aa" resname="season.races.leading">
-        <jms:reference-file line="6">views/season/races.html.twig</jms:reference-file>
-        <source>season.races.leading</source>
-        <target state="new">season.races.leading</target>
-      </trans-unit>
       <trans-unit id="58649f0bec3a8bd3a4c94a5a427e4c618e57e7f8" resname="season.races.name">
-        <jms:reference-file line="20">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="15">views/season/races.html.twig</jms:reference-file>
         <source>season.races.name</source>
         <target state="new">season.races.name</target>
       </trans-unit>
       <trans-unit id="f4d991831242bc5bacca9734f72f48f7921766cb" resname="season.races.round">
-        <jms:reference-file line="19">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="14">views/season/races.html.twig</jms:reference-file>
         <source>season.races.round</source>
         <target state="new">season.races.round</target>
       </trans-unit>
-      <trans-unit id="14edf234679ce1c2c6f3b76002ec783a3ea2424b" resname="season.races.standings.subtitle">
-        <jms:reference-file line="6">views/season/standings.html.twig</jms:reference-file>
-        <source>season.races.standings.subtitle</source>
-        <target state="new">season.races.standings.subtitle</target>
-      </trans-unit>
-      <trans-unit id="76bfe320a026cdb411208e4ff460d3b4e9183a4c" resname="season.races.standings.title">
-        <jms:reference-file line="7">views/season/standings.html.twig</jms:reference-file>
-        <source>season.races.standings.title</source>
-        <target state="new">season.races.standings.title</target>
-      </trans-unit>
       <trans-unit id="0fff291bbdb012b9acb4a016db3d0c5c312672ab" resname="season.races.time">
-        <jms:reference-file line="24">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="19">views/season/races.html.twig</jms:reference-file>
         <source>season.races.time</source>
         <target state="new">season.races.time</target>
       </trans-unit>
-      <trans-unit id="3e6a87899169107ba96615a1bef1639907b0a533" resname="season.races.title">
-        <jms:reference-file line="7">views/season/races.html.twig</jms:reference-file>
-        <source>season.races.title</source>
-        <target state="new">season.races.title</target>
-      </trans-unit>
       <trans-unit id="8161df8456a626d72532c336e47e9d3af1e70261" resname="season.races.winner.actions">
-        <jms:reference-file line="27">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="22">views/season/races.html.twig</jms:reference-file>
         <source>season.races.winner.actions</source>
         <target state="new">season.races.winner.actions</target>
       </trans-unit>
       <trans-unit id="4c296db174c903f9cf7deaac0ded41e30c938231" resname="season.races.winner.driver">
-        <jms:reference-file line="25">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="20">views/season/races.html.twig</jms:reference-file>
         <source>season.races.winner.driver</source>
         <target state="new">season.races.winner.driver</target>
       </trans-unit>
       <trans-unit id="100241d5c32066fff3d941f6711b042d4152e970" resname="season.races.winner.user">
-        <jms:reference-file line="26">views/season/races.html.twig</jms:reference-file>
+        <jms:reference-file line="21">views/season/races.html.twig</jms:reference-file>
         <source>season.races.winner.user</source>
         <target state="new">season.races.winner.user</target>
       </trans-unit>
       <trans-unit id="d832ef2e97a2ef7f73f9de09f96d382dd92bf7c5" resname="season.standings.constrcutor.title">
-        <jms:reference-file line="38">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="33">views/season/standings.html.twig</jms:reference-file>
         <source>season.standings.constrcutor.title</source>
         <target state="new">season.standings.constrcutor.title</target>
       </trans-unit>
       <trans-unit id="1f21addf96c0eab77905a84c46bcb2457f1929b6" resname="season.standings.driver.title">
-        <jms:reference-file line="27">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="22">views/season/standings.html.twig</jms:reference-file>
         <source>season.standings.driver.title</source>
         <target state="new">season.standings.driver.title</target>
       </trans-unit>
       <trans-unit id="184bd57219be6bf996d2572497f8e9da4c8d8bc0" resname="season.standings.user.title">
-        <jms:reference-file line="16">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="11">views/season/standings.html.twig</jms:reference-file>
         <source>season.standings.user.title</source>
         <target state="new">season.standings.user.title</target>
       </trans-unit>
-      <trans-unit id="481b783f755865ef64a000a1a32da99eb5cc1247" resname="season.teams.subtitle">
-        <jms:reference-file line="6">views/season/teams.html.twig</jms:reference-file>
-        <source>season.teams.subtitle</source>
-        <target state="new">season.teams.subtitle</target>
-      </trans-unit>
-      <trans-unit id="e504dac8aa0240a3ece1563b2d0e1fe1916be90b" resname="season.teams.title">
-        <jms:reference-file line="7">views/season/teams.html.twig</jms:reference-file>
-        <source>season.teams.title</source>
-        <target state="new">season.teams.title</target>
-      </trans-unit>
       <trans-unit id="751b918c758028a201f7bbd2f4f9d0e80a823324" resname="season.title">
-        <jms:reference-file line="5">views/season/show.html.twig</jms:reference-file>
+        <jms:reference-file line="8">views/season/layout.html.twig</jms:reference-file>
         <source>season.title</source>
         <target state="new">season.title</target>
       </trans-unit>
