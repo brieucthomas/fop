@@ -10,8 +10,10 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Race;
+use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -33,6 +35,20 @@ class RaceController extends Controller
     {
         return [
             'race' => $race
+        ];
+    }
+
+    /**
+     * @Route("/{season}/{round}/predict/{slug}", name="race_prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
+     * @Method({"GET"})
+     * @Security("has_role('ROLE_USER')")
+     * @Template(":race:predict.html.twig")
+     */
+    public function predictAction(Race $race, User $user)
+    {
+        return [
+            'race' => $race,
+            'user' => $user
         ];
     }
 }
