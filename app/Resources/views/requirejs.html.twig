@@ -4,15 +4,17 @@
         baseUrl: '{{ asset('assets/js') }}',
         paths: {
             jquery: '{{ asset('vendor/jquery/dist/jquery.min') }}',
+            jqueryui: '{{ asset('vendor/jquery-ui/jquery-ui.min') }}',
             bootstrap: '{{ asset('vendor/bootstrap/dist/js/bootstrap.min') }}',
             countdown: '{{ asset('vendor/jquery.countdown/dist/jquery.countdown.min') }}',
             d3: '{{ asset('vendor/d3/d3.min') }}',
             c3: '{{ asset('vendor/c3js-chart/c3.min') }}',
-            sortable: '{{ asset('vendor/Sortable/Sortable.min') }}'
+            sortable: '{{ asset('bundles/sonataadmin/vendor/jqueryui/ui/minified/jquery.ui.sortable.min') }}'
         },
         shim: {
             bootstrap: ['jquery'],
             countdown: ['jquery'],
+            sortable: ['jqueryui'],
             c3: ['d3']
         }
     });

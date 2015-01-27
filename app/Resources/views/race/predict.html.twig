@@ -3,11 +3,17 @@
 {% set module = 'app/race/predict' %}
 
 {% block content %}
-    <h1>{{ user.username }}</h1>
+    <div class="container">
+        <h1>{{ user.username }}</h1>
 
-    <ol id="list-teams">
-        {% for team in teams %}
-            <li>{{ team.driver.name }}</li>
-        {% endfor %}
-    </ol>
+        {{ form_start(form) }}
+        
+        {{ form_widget(form) }}
+
+        <ol id="list-teams"></ol>
+        <button type="submit" class="btn btn-success">{{ 'submit' }}</button>
+        {{ form_end(form) }}
+
+
+    </div>
 {% endblock %}

@@ -9,13 +9,17 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\FinishingPosition;
+use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\User;
+use AppBundle\Form\PredictionType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
@@ -41,11 +45,11 @@ class RaceController extends Controller
 
     /**
      * @Route("/{season}/{round}/predict/{slug}", name="race_prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
-     * @Method({"GET"})
+     * @Method({"GET", "POST"})
      * @Security("has_role('ROLE_USER')")
      * @Template(":race:predict.html.twig")
      */
-    public function predictAction(Race $race, User $user)
+    public function predictAction(Request $request, Race $race, User $user)
     {
         /* @var $loggedUser User */
         $loggedUser = $this->getUser();
@@ -63,13 +67,38 @@ class RaceController extends Controller
             }
         }
 
-        // build a collection of teams
-        $teams = $race->getSeason()->getTeams();
+        $prediction = new Prediction($race, $user);
+
+        $limit = $race->getSeason()->getScoringSystem()->getLength();
+
+        for ($position = 1; $position <= $limit; $position++) {
+            $prediction->addFinishingPosition(new FinishingPosition($position));
+        }
+
+        $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($prediction);
+            $em->flush();
+
+            return $this->redirect(
+                $this->generateUrl(
+                    'race_prediction',
+                    [
+                        'season' => $race->getSeason()->getYear(),
+                        'round'  => $race->getRound(),
+                        'user'   => $user->getSlug()
+                    ]
+                )
+            );
+        }
 
         return [
             'race' => $race,
             'user' => $user,
-            'teams' => $teams
+            'form' => $form->createView()
         ];
     }
 }
