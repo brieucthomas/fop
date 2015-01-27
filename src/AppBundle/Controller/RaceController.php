@@ -59,7 +59,7 @@ class RaceController extends Controller
 
             // only admins can edit past predictions
             if ($race->getDate() > new \DateTime()) {
-                throw new AccessDeniedException();
+                //throw new AccessDeniedException();
             }
         }
 
