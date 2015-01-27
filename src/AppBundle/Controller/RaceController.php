@@ -16,6 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * The race controller.
@@ -46,6 +47,21 @@ class RaceController extends Controller
      */
     public function predictAction(Race $race, User $user)
     {
+        /* @var $loggedUser User */
+        $loggedUser = $this->getUser();
+
+        // only admins can edit others predictions
+        if (!$loggedUser->hasRole('ROLE_ADMIN')) {
+            if ($user != $loggedUser) {
+                throw new AccessDeniedException();
+            }
+            if ($race->getDate() > new \DateTime()) {
+                throw new AccessDeniedException();
+            }
+        }
+
+        //
+
         return [
             'race' => $race,
             'user' => $user
