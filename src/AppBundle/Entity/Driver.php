@@ -261,7 +261,9 @@ class Driver
      */
     public function setBirthDate(\DateTime $birthDate)
     {
-        $this->birthDate = $birthDate;
+        if ($birthDate != $this->birthDate) {
+            $this->birthDate = $birthDate;
+        }
 
         return $this;
     }
