@@ -34,7 +34,7 @@ class Builder
      * Constructor.
      *
      * @param FactoryInterface $factory
-     * @param RequestStack $requestStack
+     * @param RequestStack     $requestStack
      */
     public function __construct(FactoryInterface $factory, RequestStack $requestStack)
     {
@@ -98,7 +98,7 @@ class Builder
                     'label'           => $local
                 ]
             );
-            $child->setLinkAttribute('title', 'navigation.locale_switcher.' . $local);
+            $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
         }
 
         return $menu;

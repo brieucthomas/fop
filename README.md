@@ -26,6 +26,9 @@ $ ./node_modules/.bin/bower update
 $ ./node_modules/.bin/gulp
 ```
 
+``` bash
+bin/console assets:install --symlink
+```
 
 ## Translations
 
