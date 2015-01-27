@@ -131,7 +131,6 @@ easy_admin:
         - AppBundle\Entity\Race
         - AppBundle\Entity\Result
         - AppBundle\Entity\ScoringSystem
-        - AppBundle\Entity\ScoringSystemOffset
         - AppBundle\Entity\Season
         - AppBundle\Entity\Team
         - AppBundle\Entity\User

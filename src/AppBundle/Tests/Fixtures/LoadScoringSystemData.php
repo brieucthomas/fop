@@ -10,7 +10,6 @@
 namespace AppBundle\Tests\Fixtures;
 
 use AppBundle\Entity\ScoringSystem;
-use AppBundle\Entity\ScoringSystemOffset;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
@@ -39,15 +38,15 @@ class LoadScoringSystemData extends AbstractFixture
         $manager->flush();
 
         $scoringSystem1
-            ->addOffset(new ScoringSystemOffset(0, 6))
-            ->addOffset(new ScoringSystemOffset(1, 4))
-            ->addOffset(new ScoringSystemOffset(2, 2))
+            ->addOffset(0, 6)
+            ->addOffset(1, 4)
+            ->addOffset(2, 2)
         ;
 
         $scoringSystem2
-            ->addOffset(new ScoringSystemOffset(0, 10))
-            ->addOffset(new ScoringSystemOffset(1, 8))
-            ->addOffset(new ScoringSystemOffset(2, 6))
+            ->addOffset(0, 10)
+            ->addOffset(1, 8)
+            ->addOffset(2, 6)
         ;
 
         $this->addReference('scoring-system-foo', $scoringSystem1);
