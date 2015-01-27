@@ -20,229 +20,252 @@ class LoadDriverData extends AbstractFixture
      */
     public function load(ObjectManager $manager)
     {
-        $driver1 = new Driver('hamilton');
+        $driver1 = new Driver();
         $driver1
             ->setCode('HAM')
-            ->setNumber('44')
+            ->setNumber(44)
+            ->setSlug('hamilton')
             ->setFirstName('Lewis')
             ->setLastName('Hamilton')
             ->setBirthdate(new \DateTime('1985-01-07'))
             ->setNationality('GB')
         ;
 
-        $driver2 = new Driver('rosberg');
+        $driver2 = new Driver();
         $driver2
             ->setCode('ROS')
-            ->setNumber('6')
+            ->setNumber(6)
+            ->setSlug('rosberg')
             ->setFirstName('Nico')
             ->setLastName('Rosberg')
             ->setBirthdate(new \DateTime('1985-06-27'))
             ->setNationality('DE')
         ;
 
-        $driver3 = new Driver('alonso');
+        $driver3 = new Driver();
         $driver3
             ->setCode('ALO')
-            ->setNumber('14')
+            ->setNumber(14)
+            ->setSlug('alonso')
             ->setFirstName('Fernando')
             ->setLastName('Alonso')
             ->setBirthdate(new \DateTime('1981-07-29'))
             ->setNationality('ES')
         ;
 
-        $driver4 = new Driver('raikkonen');
+        $driver4 = new Driver();
         $driver4
             ->setCode('RAI')
-            ->setNumber('7')
+            ->setNumber(7)
+            ->setSlug('raikkonen')
             ->setFirstName('Kimi')
             ->setLastName('Räikkönen')
             ->setBirthdate(new \DateTime('1979-10-17'))
             ->setNationality('FI');
 
-        $driver5 = new Driver('vettel');
+        $driver5 = new Driver();
         $driver5
             ->setCode('VET')
-            ->setNumber('5')
+            ->setNumber(5)
+            ->setSlug('vettel')
             ->setFirstName('Sebastian')
             ->setLastName('Vettel')
             ->setBirthdate(new \DateTime('1987-07-03'))
             ->setNationality('DE')
         ;
 
-        $driver6 = new Driver('ricciardo');
+        $driver6 = new Driver();
         $driver6
             ->setCode('RIC')
-            ->setNumber('3')
+            ->setNumber(3)
+            ->setSlug('ricciardo')
             ->setFirstName('Daniel')
             ->setLastName('Ricciardo')
             ->setBirthdate(new \DateTime('1989-07-01'))
             ->setNationality('AU')
         ;
 
-        $driver7 = new Driver('bottas');
+        $driver7 = new Driver();
         $driver7
             ->setCode('BOT')
-            ->setNumber('77')
+            ->setNumber(77)
+            ->setSlug('bottas')
             ->setFirstName('Valtteri')
             ->setLastName('Bottas')
             ->setBirthdate(new \DateTime('1989-08-29'))
             ->setNationality('FI')
         ;
 
-        $driver8 = new Driver('massa');
+        $driver8 = new Driver();
         $driver8
             ->setCode('MAS')
-            ->setNumber('19')
+            ->setNumber(19)
+            ->setSlug('massa')
             ->setFirstName('Felipe')
             ->setLastName('Massa')
             ->setBirthdate(new \DateTime('1981-04-25'))
             ->setNationality('BR')
         ;
 
-        $driver9 = new Driver('perez');
+        $driver9 = new Driver();
         $driver9
             ->setCode('PER')
-            ->setNumber('11')
+            ->setNumber(11)
+            ->setSlug('perez')
             ->setFirstName('Sergio')
             ->setLastName('Pérez')
             ->setBirthdate(new \DateTime('1990-01-26'))
             ->setNationality('MX')
         ;
 
-        $driver10 = new Driver('sutil');
+        $driver10 = new Driver();
         $driver10
             ->setCode('SUT')
-            ->setNumber('99')
+            ->setNumber(99)
+            ->setSlug('sutil')
             ->setFirstName('Adrian')
             ->setLastName('Sutil')
             ->setBirthdate(new \DateTime('1983-01-11'))
             ->setNationality('DE')
         ;
 
-        $driver11 = new Driver('vergne');
+        $driver11 = new Driver();
         $driver11
             ->setCode('VER')
-            ->setNumber('25')
+            ->setNumber(25)
+            ->setSlug('vergne')
             ->setFirstName('Jean-Éric')
             ->setLastName('Vergne')
             ->setBirthdate(new \DateTime('1990-04-25'))
             ->setNationality('FR')
         ;
 
-        $driver12 = new Driver('maldonado');
+        $driver12 = new Driver();
         $driver12
             ->setCode('MAL')
-            ->setNumber('13')
+            ->setNumber(13)
+            ->setSlug('maldonado')
             ->setFirstName('Pastor')
             ->setLastName('Maldonado')
             ->setBirthdate(new \DateTime('1985-03-09'))
             ->setNationality('VE')
         ;
 
-        $driver13 = new Driver('kevin_magnussen');
+        $driver13 = new Driver();
         $driver13
             ->setCode('MAG')
-            ->setNumber('20')
+            ->setNumber(20)
+            ->setSlug('kevin_magnussen')
             ->setFirstName('Kevin')
             ->setLastName('Magnussen')
             ->setBirthdate(new \DateTime('1992-10-05'))
             ->setNationality('DK')
         ;
 
-        $driver14 = new Driver('lotterer');
+        $driver14 = new Driver();
         $driver14
             ->setCode('LOT')
-            ->setNumber('45')
+            ->setNumber(45)
+            ->setSlug('lotterer')
             ->setFirstName('André')
             ->setLastName('Lotterer')
             ->setBirthdate(new \DateTime('1981-11-19'))
             ->setNationality('DE')
         ;
 
-        $driver15 = new Driver('kvyat');
+        $driver15 = new Driver();
         $driver15
             ->setCode('KVY')
-            ->setNumber('26')
+            ->setNumber(26)
+            ->setSlug('kvyat')
             ->setFirstName('Daniil')
             ->setLastName('Kvyat')
             ->setBirthdate(new \DateTime('1994-04-26'))
             ->setNationality('RU')
         ;
 
-        $driver16 = new Driver('kobayashi');
+        $driver16 = new Driver();
         $driver16
             ->setCode('KOB')
-            ->setNumber('10')
+            ->setNumber(10)
+            ->setSlug('kobayashi')
             ->setFirstName('Kamui')
             ->setLastName('Kobayashi')
             ->setBirthdate(new \DateTime('1986-09-13'))
             ->setNationality('JP')
         ;
 
-        $driver17 = new Driver('hulkenberg');
+        $driver17 = new Driver();
         $driver17
             ->setCode('HUL')
-            ->setNumber('27')
+            ->setNumber(27)
+            ->setSlug('hulkenberg')
             ->setFirstName('Nico')
             ->setLastName('Hülkenberg')
             ->setBirthdate(new \DateTime('1987-08-19'))
             ->setNationality('DE')
         ;
 
-        $driver18 = new Driver('gutierrez');
+        $driver18 = new Driver();
         $driver18
             ->setCode('GUT')
-            ->setNumber('21')
+            ->setNumber(21)
+            ->setSlug('gutierrez')
             ->setFirstName('Esteban')
             ->setLastName('Gutiérrez')
             ->setBirthdate(new \DateTime('1991-08-05'))
             ->setNationality('MX')
         ;
 
-        $driver19 = new Driver('grosjean');
+        $driver19 = new Driver();
         $driver19
             ->setCode('GRO')
-            ->setNumber('8')
+            ->setNumber(8)
+            ->setSlug('grosjean')
             ->setFirstName('Romain')
             ->setLastName('Grosjean')
             ->setBirthdate(new \DateTime('1986-04-17'))
             ->setNationality('FR')
         ;
 
-        $driver20 = new Driver('ericsson');
+        $driver20 = new Driver();
         $driver20
             ->setCode('ERI')
-            ->setNumber('9')
+            ->setNumber(9)
+            ->setSlug('ericsson')
             ->setFirstName('Marcus')
             ->setLastName('Ericsson')
             ->setBirthdate(new \DateTime('1990-09-02'))
             ->setNationality('SE')
         ;
 
-        $driver21 = new Driver('chilton');
+        $driver21 = new Driver();
         $driver21
             ->setCode('CHI')
-            ->setNumber('4')
+            ->setNumber(4)
+            ->setSlug('chilton')
             ->setFirstName('Max')
             ->setLastName('Chilton')
             ->setBirthdate(new \DateTime('1991-04-21'))
             ->setNationality('GB')
         ;
 
-        $driver22 = new Driver('button');
+        $driver22 = new Driver();
         $driver22
             ->setCode('BUT')
-            ->setNumber('22')
+            ->setNumber(22)
+            ->setSlug('button')
             ->setFirstName('Jenson')
             ->setLastName('Button')
             ->setBirthdate(new \DateTime('1980-01-19'))
             ->setNationality('GB')
         ;
 
-        $driver23 = new Driver('jules_bianchi');
+        $driver23 = new Driver();
         $driver23
             ->setCode('BIA')
-            ->setNumber('17')
+            ->setNumber(17)
+            ->setSlug('jules_bianchi')
             ->setFirstName('Jules')
             ->setLastName('Bianchi')
             ->setBirthdate(new \DateTime('1989-08-03'))

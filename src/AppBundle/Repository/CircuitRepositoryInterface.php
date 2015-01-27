@@ -13,20 +13,20 @@ use AppBundle\Entity\Circuit;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The Circuit repository.
+ * The circuit repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface CircuitRepositoryInterface
 {
     /**
-     * Finds circuits by identifiers.
+     * Finds circuits by slugs.
      *
-     * @param array $ids An array of circuit identifiers
+     * @param array $slugs An array of circuit slugs
      *
-     * @return ArrayCollection A collection of Circuit entities indexed by id
+     * @return ArrayCollection A collection of Circuit entities indexed by slug
      */
-    public function findByIds(array $ids);
+    public function findBySlugs(array $slugs);
 
     /**
      * Saves a circuit.

@@ -14,9 +14,9 @@ use AppBundle\Tests\WebTestCase;
 
 class ConstructorServiceTest extends WebTestCase
 {
-    public function testFindConstructorsByIds()
+    public function testFindConstructorsBySlugs()
     {
-        $constructors = $this->getConstructorService()->findByIds(['ferrari', 'williams', 'peugeot']);
+        $constructors = $this->getConstructorService()->findBySlugs(['ferrari', 'williams', 'peugeot']);
 
         $this->assertInstanceOf('Doctrine\Common\Collections\ArrayCollection', $constructors);
         $this->assertCount(2, $constructors);
@@ -29,6 +29,6 @@ class ConstructorServiceTest extends WebTestCase
      */
     private function getConstructorService()
     {
-        return $this->get('service.constructor');
+        return $this->get('constructor_service');
     }
 }

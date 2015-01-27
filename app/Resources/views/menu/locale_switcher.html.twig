@@ -2,7 +2,7 @@
 
 {% block linkElement %}
   {% import 'knp_menu.html.twig' as knp_menu %}
-  <a title="{{ item.name|language(item.name)|capitalize }}" data-toggle="tooltip" data-placement="bottom" href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes) }}>
+  <a href="{{ item.uri }}"{{ knp_menu.attributes(item.linkAttributes) }}>
       {{ item.name|language(item.name)|capitalize }}
   </a>
 {% endblock %}

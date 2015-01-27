@@ -1,0 +1,21 @@
+//
+// Signin
+// --------------------------------------------------
+
+#form-signin {
+  max-width: 330px;
+  padding: $padding-large-vertical $padding-large-horizontal;
+  margin: $padding-large-vertical auto;
+
+  a {
+
+  }
+
+  .form-signin-heading {
+    text-align: center;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin: 60px auto;
+  }
+}

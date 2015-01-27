@@ -1,3 +1,3 @@
-require(['bootstrap'], function () {
-    console.debug('bootstrap loaded');
+require(['jquery', 'bootstrap'], function ($, twbs) {
+    $('[data-toggle="tooltip"], [data-hover="tooltip"]').tooltip();
 });

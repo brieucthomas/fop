@@ -4,6 +4,18 @@ parameters:
 #    parameter_name: value
 
 services:
+    # Utils
+    country:
+        class: AppBundle\Utils\Country
+        factory_class: AppBundle\Utils\Country
+        factory_method: loadFromYaml
+        arguments: ["%kernel.root_dir%/Resources/data/countries.yml"]
+    nationality:
+        class: AppBundle\Utils\Nationality
+        factory_class: AppBundle\Utils\Nationality
+        factory_method: loadFromYaml
+        arguments: ["%kernel.root_dir%/Resources/data/nationalities.yml"]
+
     # Twig
     twig.text_extension:
         class: Twig_Extensions_Extension_Text
@@ -17,40 +29,130 @@ services:
             - name: jms_translation.file_visitor
 
     # Repositories
-    repository.user:
+    user_repository:
         class: AppBundle\Repository\UserRepository
         factory_service: doctrine.orm.entity_manager
         factory_method:  getRepository
         arguments: [AppBundle:User]
-    repository.circuit:
+    circuit_repository:
         class: AppBundle\Repository\CircuitRepository
         factory_service: doctrine.orm.entity_manager
         factory_method:  getRepository
         arguments: [AppBundle:Circuit]
-    repository.driver:
-        class: AppBundle\Repository\DriverRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
-        arguments: [AppBundle:Driver]
-    repository.consturctor:
+    constructor_repository:
         class: AppBundle\Repository\ConstructorRepository
         factory_service: doctrine.orm.entity_manager
         factory_method:  getRepository
         arguments: [AppBundle:Constructor]
+    driver_repository:
+        class: AppBundle\Repository\DriverRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Driver]
+    scoring_system_repository:
+        class: AppBundle\Repository\ScoringSystemRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:ScoringSystem]
+    season_repository:
+        class: AppBundle\Repository\SeasonRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Season]
+    race_repository:
+        class: AppBundle\Repository\RaceRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Race]
+    finishing_status_repository:
+        class: AppBundle\Repository\FinishingStatusRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:FinishingStatus]
+    result_repository:
+        class: AppBundle\Repository\ResultRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Result]
+    qualifying_repository:
+        class: AppBundle\Repository\QualifyingRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Qualifying]
+    team_repository:
+        class: AppBundle\Repository\TeamRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Team]
+    driver_standings_repository:
+        class: AppBundle\Repository\DriverStandingsRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:DriverStandings]
+    constructor_standings_repository:
+        class: AppBundle\Repository\ConstructorStandingsRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:ConstructorStandings]
+    user_standings_repository:
+        class: AppBundle\Repository\UserStandingsRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:UserStandings]
+    prediction_repository:
+        class: AppBundle\Repository\PredictionRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:Prediction]
+    finishing_position_repository:
+        class: AppBundle\Repository\FinishingPositionRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method:  getRepository
+        arguments: [AppBundle:FinishingPosition]
 
     # Services
-    service.user:
+    user_service:
         class: AppBundle\Service\UserService
-        arguments: ["@repository.user"]
-    service.circuit:
+        arguments: ["@user_repository"]
+    circuit_service:
         class: AppBundle\Service\CircuitService
-        arguments: ["@repository.circuit"]
-    service.driver:
-        class: AppBundle\Service\DriverService
-        arguments: ["@repository.driver"]
-    service.constructor:
+        arguments: ["@circuit_repository"]
+    season_service:
+        class: AppBundle\Service\SeasonService
+        arguments: ["@season_repository", "@scoring_system_repository", "@user_repository"]
+    constructor_service:
         class: AppBundle\Service\ConstructorService
-        arguments: ["@repository.consturctor"]
+        arguments: ["@constructor_repository"]
+    driver_service:
+        class: AppBundle\Service\DriverService
+        arguments: ["@driver_repository"]
+    race_service:
+        class: AppBundle\Service\RaceService
+        arguments: ["@race_repository"]
+    finishing_status_service:
+        class: AppBundle\Service\FinishingStatusService
+        arguments: ["@finishing_status_repository"]
+    result_service:
+        class: AppBundle\Service\ResultService
+        arguments: ["@result_repository"]
+    qualifying_service:
+        class: AppBundle\Service\QualifyingService
+        arguments: ["@qualifying_repository"]
+    team_service:
+        class: AppBundle\Service\TeamService
+        arguments: ["@team_repository"]
+    driver_standings_service:
+        class: AppBundle\Service\DriverStandingsService
+        arguments: ["@driver_standings_repository"]
+    constructor_standings_service:
+        class: AppBundle\Service\ConstructorStandingsService
+        arguments: ["@constructor_standings_repository"]
+    user_standings_service:
+        class: AppBundle\Service\UserStandingsService
+        arguments: ["@user_standings_repository"]
+    prediction_service:
+        class: AppBundle\Service\PredictionService
+        arguments: ["@doctrine.orm.entity_manager", "@prediction_repository", "@finishing_position_repository", "@season_repository", "@user_repository", "@user_standings_repository"]
 
     # Menus
     menu_builder:
@@ -76,6 +178,12 @@ services:
          arguments: ["@security.authorization_checker"]
          tags:
              - { name: knp_menu.menu, alias: user }
+    menu_season:
+         class: Knp\Menu\MenuItem
+         factory_service: menu_builder
+         factory_method: createSeasonMenu
+         tags:
+             - { name: knp_menu.menu, alias: season }
     menu_locale_switcher:
          class: Knp\Menu\MenuItem
          factory_service: menu_builder
@@ -83,3 +191,71 @@ services:
          arguments: ["%locales%"]
          tags:
              - { name: knp_menu.menu, alias: locale_switcher }
+
+    # Listeners
+    console_exception_listener:
+        class: AppBundle\Listener\ConsoleExceptionListener
+        arguments: ['@logger']
+        tags:
+            - { name: kernel.event_listener, event: console.exception }
+
+    # Ergast
+    ergast_http_adapter:
+        class: Ivory\HttpAdapter\FileGetContentsHttpAdapter
+    ergast_serializer_builder:
+        class: JMS\Serializer\SerializerBuilder
+        factory_class: JMS\Serializer\SerializerBuilder
+        factory_method: create
+    ergast_serializer:
+        class: JMS\Serializer\Serializer
+        factory_service: ergast_serializer_builder
+        factory_method: build
+    ergast_client:
+        class: BrieucThomas\ErgastClient\ErgastClient
+        arguments: ["@ergast_http_adapter", "@ergast_serializer"]
+    ergast_importer:
+        class: AppBundle\Ergast\Importer
+        arguments: ["@doctrine.orm.default_entity_manager", "@season_service"]
+        calls:
+            - [ addLoader, ["@ergast_loader_race"] ]
+            - [ addLoader, ["@ergast_loader_team"] ]
+            - [ addLoader, ["@ergast_loader_qualifying"] ]
+            - [ addLoader, ["@ergast_loader_finishing_status"] ]
+            - [ addLoader, ["@ergast_loader_result"] ]
+            - [ addLoader, ["@ergast_loader_driver_standings"] ]
+            - [ addLoader, ["@ergast_loader_constructor_standings"] ]
+    ergast_loader:
+        abstract: true
+        calls:
+            - [ setClient, ["@ergast_client"] ]
+            - [ setCountry, ["@country"] ]
+            - [ setNationality, ["@nationality"] ]
+            - [ setSeasonService, ["@season_service"] ]
+    ergast_loader_race:
+        class: AppBundle\Ergast\Loader\RaceLoader
+        parent: ergast_loader
+        arguments: ["@circuit_service"]
+    ergast_loader_team:
+        class: AppBundle\Ergast\Loader\TeamLoader
+        parent: ergast_loader
+        arguments: ["@constructor_service", "@driver_service"]
+    ergast_loader_qualifying:
+        class: AppBundle\Ergast\Loader\QualifyingLoader
+        parent: ergast_loader
+        arguments: ["@qualifying_service", "@race_service"]
+    ergast_loader_finishing_status:
+        class: AppBundle\Ergast\Loader\FinishingStatusLoader
+        parent: ergast_loader
+        arguments: ["@finishing_status_service"]
+    ergast_loader_result:
+        class: AppBundle\Ergast\Loader\ResultLoader
+        parent: ergast_loader
+        arguments: ["@result_service", "@race_service", "@finishing_status_service"]
+    ergast_loader_driver_standings:
+        class: AppBundle\Ergast\Loader\DriverStandingsLoader
+        parent: ergast_loader
+        arguments: ["@driver_standings_service", "@race_service"]
+    ergast_loader_constructor_standings:
+        class: AppBundle\Ergast\Loader\ConstructorStandingsLoader
+        parent: ergast_loader
+        arguments: ["@constructor_standings_service", "@race_service"]

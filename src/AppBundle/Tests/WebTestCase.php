@@ -9,6 +9,8 @@
 
 namespace AppBundle\Tests;
 
+use AppBundle\Service\SeasonServiceInterface;
+use AppBundle\Service\UserServiceInterface;
 use Liip\FunctionalTestBundle\Test\WebTestCase as LiipTest;
 use Symfony\Bundle\FrameworkBundle\Client;
 
@@ -24,10 +26,17 @@ class WebTestCase extends LiipTest
         $this->client = static::createClient();
 
         $this->loadFixtures([
-            'AppBundle\Tests\Fixtures\LoadUserData',
+            'AppBundle\Tests\Fixtures\LoadScoringSystemData',
+            'AppBundle\Tests\Fixtures\LoadSeasonData',
             'AppBundle\Tests\Fixtures\LoadCircuitData',
             'AppBundle\Tests\Fixtures\LoadDriverData',
             'AppBundle\Tests\Fixtures\LoadConstructorData',
+            'AppBundle\Tests\Fixtures\LoadTeamData',
+            'AppBundle\Tests\Fixtures\LoadRaceData',
+            'AppBundle\Tests\Fixtures\LoadFinishingStatusData',
+            'AppBundle\Tests\Fixtures\LoadResultData',
+            'AppBundle\Tests\Fixtures\LoadUserData',
+            'AppBundle\Tests\Fixtures\LoadPredictionData',
         ]);
     }
 
@@ -39,5 +48,21 @@ class WebTestCase extends LiipTest
     protected function get($service)
     {
         return $this->getContainer()->get($service);
+    }
+
+    /**
+     * @return SeasonServiceInterface
+     */
+    protected function getSeasonService()
+    {
+        return $this->get('season_service');
+    }
+
+    /**
+     * @return UserServiceInterface
+     */
+    protected function getUserService()
+    {
+        return $this->get('user_service');
     }
 }

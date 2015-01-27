@@ -20,6 +20,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table
  * @UniqueEntity("id")
  * @UniqueEntity("name")
+ * @UniqueEntity("slug")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -29,12 +30,10 @@ class Constructor
      * The constructor identifier.
      *
      * @ORM\Id
-     * @ORM\Column(type="string", length=24, unique=true)
-     * @Assert\NotBlank
-     * @Assert\Length(min="3", max="24")
-     * @Assert\Regex("/^[a-z_]*$/")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      *
-     * @var string
+     * @var int
      */
     protected $id;
 
@@ -50,6 +49,18 @@ class Constructor
     protected $name;
 
     /**
+     * The constructor slug.
+     *
+     * @ORM\Column(type="string", length=24, unique=true)
+     * @Assert\NotBlank
+     * @Assert\Length(min="3", max="24")
+     * @Assert\Regex("/^[a-z\-]*$/")
+     *
+     * @var string
+     */
+    protected $slug;
+
+    /**
      * The constructor nationality code.
      *
      * @ORM\Column(type="string", length=2)
@@ -58,16 +69,6 @@ class Constructor
      * @var string
      */
     protected $nationality;
-
-    /**
-     * Constructor.
-     *
-     * @param string $id The constructor identifier
-     */
-    public function __construct($id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * Returns the constructor identifier.
@@ -99,6 +100,30 @@ class Constructor
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Returns the constructor slug.
+     *
+     * @return string The constructor slug
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Sets the constructor slug.
+     *
+     * @param string $slug The constructor slug
+     *
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
 
         return $this;
     }

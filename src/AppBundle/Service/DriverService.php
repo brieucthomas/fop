@@ -13,7 +13,7 @@ use AppBundle\Entity\Driver;
 use AppBundle\Repository\DriverRepositoryInterface;
 
 /**
- * The Driver service.
+ * The driver service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -39,8 +39,8 @@ class DriverService implements DriverServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySlugs(array $slugs)
     {
-        return $this->driverRepository->findByIds($ids);
+        return $this->driverRepository->findBySlugs($slugs);
     }
 }

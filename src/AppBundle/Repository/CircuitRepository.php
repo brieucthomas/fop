@@ -14,7 +14,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The Circuit repository.
+ * The circuit repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -23,14 +23,14 @@ class CircuitRepository extends EntityRepository implements CircuitRepositoryInt
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySlugs(array $slugs)
     {
         $builder = $this->_em->createQueryBuilder();
         $builder
             ->select('c')
-            ->from($this->_entityName, 'c', 'c.id')
-            ->where($builder->expr()->in('c.id', ':ids'))
-            ->setParameter(':ids', $ids)
+            ->from($this->_entityName, 'c', 'c.slug')
+            ->where($builder->expr()->in('c.slug', ':slugs'))
+            ->setParameter(':slugs', $slugs)
         ;
 
         return new ArrayCollection($builder->getQuery()->getResult());

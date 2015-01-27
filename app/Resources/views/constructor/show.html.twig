@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="section section-inverse">
+        <div class="background" style="background-image:url('{{ asset('assets/img/constructors/' ~ constructor.slug ~ '.jpg') }}')" aria-hidden="true"></div>
+        <div class="container">
+            <h1>{{ constructor.name }}</h1>
+            {% spaceless %}
+                <ul class="list-highlight">
+                    <li id="constructor-nationality">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ constructor.nationality|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ constructor.nationality|country }}"/>
+                    </li>
+                    <li id="constructor-constructors-championships">
+                        <span class="bg-orange"><span class="fa fa-star" aria-label="{{ 'constructor.constructors_championships'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'constructor.constructors_championships'|trans }}"></span></span>
+                        <span class="bg-sun-flower">{{ constructorsChampionships.count }}</span>
+                    </li>
+                    <li id="constructor-drivers-championships">
+                        <span class="bg-orange"><span class="fa fa-star" aria-label="{{ 'constructor.drivers_championships'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'constructor.drivers_championships'|trans }}"></span></span>
+                        <span class="bg-sun-flower">{{ driversChampionships.count }}</span>
+                    </li>
+                    <li id="constructor-wins">
+                        <span class="bg-pumpkin"><span class="fa fa-trophy" aria-label="{{ 'constructor.wins'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'constructor.wins'|trans }}"></span></span>
+                        <span class="bg-carrot">{{ wins }}</span>
+                    </li>
+                </ul>
+            {% endspaceless %}
+        </div>
+    </div>
+{% endblock %}

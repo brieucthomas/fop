@@ -7,7 +7,8 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% stylesheets
             'assets/css/fop.css'
-            'vendor/fontawesome/css/font-awesome.min.css' filter='cssrewrite' %}
+            'vendor/fontawesome/css/font-awesome.min.css'
+            'vendor/c3js-chart/c3.min.css' filter='cssrewrite' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
         {% block stylesheets %}{% endblock %}
@@ -15,7 +16,7 @@
     </head>
     <body>
 
-        <nav id="site-navbar" class="navbar navbar-inverse navbar-static-top">
+        <nav id="site-navbar" class="navbar navbar-default navbar-static-top navbar-no-bg">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navbar-collapse">
@@ -29,21 +30,22 @@
                 <div class="collapse navbar-collapse" id="site-navbar-collapse">
                     {{ knp_menu_render('main', { 'style': 'navbar' }) }}
                     {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
-                    {{ knp_menu_render('locale_switcher', { 'currentClass': '', 'template': ':menu:locale_switcher.html.twig', 'style': 'navbar-right' }) }}
                 </div>
             </div>
         </nav>
 
-        {% block body %}{% endblock %}
+        <div id="site-container">
+            {% block content %}{% endblock %}
+        </div>
+
 
         <footer id="site-footer">
-            <div class="container clearfix">
-                <p>&copy; {{ 'footer.copyright'|trans }}</p>
-                <nav>
-                    {{ knp_menu_render('footer', { 'currentClass': '', 'style': 'inline' }) }}
-                </nav>
+            <div class="container">
+                {{ knp_menu_render('footer', { 'style': 'site-footer' }) }}
+                <p class="text-muted">&copy; {{ 'now'|date('Y') }} {{ 'footer.copyright'|trans }}</p>
             </div>
         </footer>
+
 
         {% block requirejs include("requirejs.html.twig") %}
         {% block javascripts %}{% endblock %}

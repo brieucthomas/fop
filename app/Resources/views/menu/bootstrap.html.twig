@@ -57,6 +57,10 @@
 
         {% if options.style is defined and options.style == 'inline' %}
             {% set listClass = 'list-inline' %}
+        {% elseif options.style is defined and options.style == 'site-footer' %}
+            {% set listClass = 'site-footer-links' %}
+        {% elseif options.style is defined and options.style == 'site-footer-right' %}
+            {% set listClass = 'site-footer-links-right' %}
         {% else %}
             {% set listClass = (options.currentDepth == 0) ? listClass ~ ' nav' : listClass %}
         {% endif %}

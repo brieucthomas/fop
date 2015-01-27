@@ -20,21 +20,20 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table
  * @UniqueEntity("id")
  * @UniqueEntity("number")
+ * @UniqueEntity("slug")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class Driver
 {
     /**
-     * The driver identifier.
+     * The constructor identifier.
      *
      * @ORM\Id
-     * @ORM\Column(type="string", length=24, unique=true)
-     * @Assert\NotBlank
-     * @Assert\Length(min="3", max="24")
-     * @Assert\Regex("/^[a-z_]*$/")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      *
-     * @var string
+     * @var int
      */
     protected $id;
 
@@ -57,6 +56,18 @@ class Driver
      * @var int
      */
     protected $number;
+
+    /**
+     * The driver slug.
+     *
+     * @ORM\Column(type="string", length=24, unique=true)
+     * @Assert\NotBlank
+     * @Assert\Length(min="3", max="24")
+     * @Assert\Regex("/^[a-z\-]*$/")
+     *
+     * @var string
+     */
+    protected $slug;
 
     /**
      * The driver first name.
@@ -100,16 +111,6 @@ class Driver
      * @var string
      */
     protected $nationality;
-
-    /**
-     * Constructor.
-     *
-     * @param string $id The driver identifier
-     */
-    public function __construct($id)
-    {
-        $this->id = $id;
-    }
 
     /**
      * Returns the driver identifier.
@@ -165,6 +166,30 @@ class Driver
     public function setNumber($number)
     {
         $this->number = $number;
+
+        return $this;
+    }
+
+    /**
+     * Returns the driver slug.
+     *
+     * @return string The driver slug
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Sets the driver slug.
+     *
+     * @param string $slug The driver slug
+     *
+     * @return $this
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
 
         return $this;
     }

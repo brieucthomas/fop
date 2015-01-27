@@ -13,7 +13,7 @@ use AppBundle\Entity\Constructor;
 use AppBundle\Repository\ConstructorRepositoryInterface;
 
 /**
- * The Constructor service.
+ * The constructor service.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -39,8 +39,8 @@ class ConstructorService implements ConstructorServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySlugs(array $slugs)
     {
-        return $this->constructorRepository->findByIds($ids);
+        return $this->constructorRepository->findBySLugs($slugs);
     }
 }

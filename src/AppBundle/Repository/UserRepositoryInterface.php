@@ -9,6 +9,8 @@
 
 namespace AppBundle\Repository;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * The user repository.
  *
@@ -16,4 +18,12 @@ namespace AppBundle\Repository;
  */
 interface UserRepositoryInterface
 {
+    /**
+     * Returns the a season players.
+     *
+     * @param int $year The season year
+     *
+     * @return ArrayCollection A collection of User entities
+     */
+    public function findByYear($year);
 }

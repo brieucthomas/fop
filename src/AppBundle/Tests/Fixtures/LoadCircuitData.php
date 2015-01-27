@@ -20,65 +20,74 @@ class LoadCircuitData extends AbstractFixture
      */
     public function load(ObjectManager $manager)
     {
-        $circuit1 = new Circuit('albert_park');
+        $circuit1 = new Circuit();
         $circuit1
             ->setName('Albert Park Grand Prix Circuit')
+            ->setSlug('albert_park')
             ->setLocation('Melbourne')
             ->setCountry('AU')
         ;
 
-        $circuit2 = new Circuit('catalunya');
+        $circuit2 = new Circuit();
         $circuit2
             ->setName('Circuit de Catalunya')
+            ->setSlug('catalunya')
             ->setLocation('Montmeló')
             ->setCountry('ES')
         ;
 
-        $circuit3 = new Circuit('interlagos');
+        $circuit3 = new Circuit();
         $circuit3
             ->setName('Autódromo José Carlos Pace')
+            ->setSlug('interlagos')
             ->setLocation('São Paulo')
             ->setCountry('BR')
         ;
 
-        $circuit4 = new Circuit('monaco');
+        $circuit4 = new Circuit();
         $circuit4
             ->setName('Circuit de Monaco')
+            ->setSlug('monaco')
             ->setLocation('Monte-Carlo')
             ->setCountry('MC')
         ;
 
-        $circuit5 = new Circuit('monza');
+        $circuit5 = new Circuit();
         $circuit5
             ->setName('Autodromo Nazionale di Monza')
+            ->setSlug('monza')
             ->setLocation('Monza')
             ->setCountry('IT')
         ;
 
-        $circuit6 = new Circuit('suzuka');
+        $circuit6 = new Circuit();
         $circuit6
             ->setName('Suzuka Circuit')
+            ->setSlug('suzuka')
             ->setLocation('Suzuka')
             ->setCountry('JP')
         ;
 
-        $circuit7 = new Circuit('spa');
+        $circuit7 = new Circuit();
         $circuit7
             ->setName('Circuit de Spa-Francorchamps')
+            ->setSlug('spa')
             ->setLocation('Spa')
             ->setCountry('BE')
         ;
 
-        $circuit8 = new Circuit('yas_marina');
+        $circuit8 = new Circuit();
         $circuit8
             ->setName('Yas Marina Circuit')
+            ->setSlug('yas_marina')
             ->setLocation('Abu Dhabi')
             ->setCountry('AE')
         ;
 
-        $circuit9 = new Circuit('silverstone');
+        $circuit9 = new Circuit();
         $circuit9
             ->setName('Silverstone Circuit')
+            ->setSlug('silverstone')
             ->setLocation('Silverstone')
             ->setCountry('GB')
         ;

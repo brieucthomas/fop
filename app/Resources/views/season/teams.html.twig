@@ -1,0 +1,20 @@
+{% extends ':season:layout.html.twig' %}
+
+{% block content %}
+    {{ parent() }}
+
+    <div class="container">
+        <ul id="teams">
+            {% for constructor in season.constructors %}
+                <li>
+                    <a href="{{ path('constructor', { 'slug': constructor.slug }) }}">{{ constructor.name }}</a>
+                    <ul>
+                        {% for driver in season.getDriversByConstructor(constructor) %}
+                        <li><a href="{{ path('driver', { 'slug': driver.slug }) }}">{{ driver.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

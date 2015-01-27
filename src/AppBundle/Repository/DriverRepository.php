@@ -14,7 +14,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The Driver repository.
+ * The driver repository.
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -23,14 +23,14 @@ class DriverRepository extends EntityRepository implements DriverRepositoryInter
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySlugs(array $slugs)
     {
         $builder = $this->_em->createQueryBuilder();
         $builder
             ->select('d')
-            ->from($this->_entityName, 'd', 'd.id')
-            ->where($builder->expr()->in('d.id', ':ids'))
-            ->setParameter(':ids', $ids)
+            ->from($this->_entityName, 'd', 'd.slug')
+            ->where($builder->expr()->in('d.slug', ':slugs'))
+            ->setParameter(':slugs', $slugs)
         ;
 
         return new ArrayCollection($builder->getQuery()->getResult());

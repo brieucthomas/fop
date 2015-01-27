@@ -20,75 +20,80 @@ class LoadConstructorData extends AbstractFixture
      */
     public function load(ObjectManager $manager)
     {
-        $constructor1 = new constructor('mercedes');
+        $constructor1 = new constructor();
         $constructor1
             ->setName('Mercedes')
+            ->setSlug('mercedes')
             ->setNationality('DE')
         ;
 
-        $constructor2 = new constructor('ferrari');
+        $constructor2 = new constructor();
         $constructor2
             ->setName('Ferrari')
+            ->setSlug('ferrari')
             ->setNationality('IT')
         ;
 
-        $constructor3 = new constructor('red_bull');
+        $constructor3 = new constructor();
         $constructor3
             ->setName('Red Bull')
+            ->setSlug('red_bull')
             ->setNationality('AT')
         ;
 
-        $constructor4 = new constructor('lotus_f1');
+        $constructor4 = new constructor();
         $constructor4
             ->setName('Lotus F1')
+            ->setSlug('lotus_f1')
             ->setNationality('GB')
         ;
 
-        $constructor5 = new constructor('mclaren');
+        $constructor5 = new constructor();
         $constructor5
             ->setName('McLaren')
+            ->setSlug('mclaren')
             ->setNationality('GB')
         ;
 
-        $constructor6 = new constructor('williams');
+        $constructor6 = new constructor();
         $constructor6
             ->setName('Williams')
+            ->setSlug('williams')
             ->setNationality('GB')
         ;
 
-        $constructor7 = new constructor('toro_rosso');
+        $constructor7 = new constructor();
         $constructor7
             ->setName('Toro Rosso')
+            ->setSlug('toro_rosso')
             ->setNationality('IT')
         ;
 
-        $constructor8 = new constructor('mclaren');
+        $constructor8 = new constructor();
         $constructor8
             ->setName('McLaren')
+            ->setSlug('mclaren')
             ->setNationality('GB')
         ;
 
-        $constructor9 = new constructor('marussia');
+        $constructor9 = new constructor();
         $constructor9
             ->setName('Marussia')
+            ->setSlug('marussia')
             ->setNationality('RU')
         ;
 
-        $constructor10 = new constructor('caterham');
+        $constructor10 = new constructor();
         $constructor10
             ->setName('Caterham')
+            ->setSlug('caterham')
             ->setNationality('MY')
         ;
 
-        $constructor11 = new constructor('caterham');
+        $constructor11 = new constructor();
         $constructor11
-            ->setName('Caterham')
-            ->setNationality('MY')
-        ;
-
-        $constructor12 = new constructor('sauber');
-        $constructor12
             ->setName('Sauber')
+            ->setSlug('sauber')
             ->setNationality('CH')
         ;
 
@@ -100,8 +105,8 @@ class LoadConstructorData extends AbstractFixture
         $this->addReference('constructor-williams', $constructor6);
         $this->addReference('constructor-tororosso', $constructor7);
         $this->addReference('constructor-marussia', $constructor9);
-        $this->addReference('constructor-caterham', $constructor11);
-        $this->addReference('constructor-sauber', $constructor12);
+        $this->addReference('constructor-caterham', $constructor10);
+        $this->addReference('constructor-sauber', $constructor11);
 
         $manager->persist($constructor1);
         $manager->persist($constructor2);
@@ -111,9 +116,8 @@ class LoadConstructorData extends AbstractFixture
         $manager->persist($constructor6);
         $manager->persist($constructor7);
         $manager->persist($constructor9);
+        $manager->persist($constructor10);
         $manager->persist($constructor11);
-        $manager->persist($constructor12);
-
         $manager->flush();
     }
 }

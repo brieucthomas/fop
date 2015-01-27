@@ -20,7 +20,7 @@ use AppBundle\Repository\CircuitRepositoryInterface;
 class CircuitService implements CircuitServiceInterface
 {
     /**
-     * The circuit repository.
+     * The Circuit repository.
      *
      * @var CircuitRepositoryInterface
      */
@@ -39,9 +39,9 @@ class CircuitService implements CircuitServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findByIds(array $ids)
+    public function findBySlugs(array $slugs)
     {
-        return $this->circuitRepository->findByIds($ids);
+        return $this->circuitRepository->findBySlugs($slugs);
     }
 
     /**
