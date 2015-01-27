@@ -1,5 +1,14 @@
 {% extends 'base.html.twig' %}
 
+{% set module = 'app/race/predict' %}
+
 {% block content %}
     <h1>{{ user.username }}</h1>
+
+    <ol id="list-teams">
+    {% for team in teams %}
+        {{ team.driver.name }}
+    {% endfor %}
+    </ol>
+
 {% endblock %}

@@ -8,6 +8,7 @@
         "fontawesome": "~4.3",
         "d3": "~3.5",
         "c3js-chart": "~0.4",
-        "jquery.countdown": "~2.0"
+        "jquery.countdown": "~2.0",
+        "Sortable": "~1.0"
     }
 }

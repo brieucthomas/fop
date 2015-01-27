@@ -50,21 +50,26 @@ class RaceController extends Controller
         /* @var $loggedUser User */
         $loggedUser = $this->getUser();
 
-        // only admins can edit others predictions
         if (!$loggedUser->hasRole('ROLE_ADMIN')) {
+
+            // only admins can edit others predictions
             if ($user != $loggedUser) {
                 throw new AccessDeniedException();
             }
+
+            // only admins can edit past predictions
             if ($race->getDate() > new \DateTime()) {
                 throw new AccessDeniedException();
             }
         }
 
-        //
+        // build a collection of teams
+        $teams = $race->getSeason()->getTeams();
 
         return [
             'race' => $race,
-            'user' => $user
+            'user' => $user,
+            'teams' => $teams
         ];
     }
 }
