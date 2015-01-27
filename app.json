@@ -1,0 +1,8 @@
+{
+    "name": "Formula One Prediction",
+    "description": "The Formula One Prediction Game.",
+    "repository": "https://github.com/brieucthomas/fop",
+    "env": {
+        "SYMFONY_ENV": "prod"
+    }
+}
