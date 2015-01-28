@@ -67,21 +67,23 @@ class RaceController extends Controller
             }
         }
 
-        $prediction = new Prediction($race, $user);
+        $prediction = $this->get('prediction_repository')->findByRaceAndUser($race, $user);
 
-        $limit = $race->getSeason()->getScoringSystem()->getLength();
+        if (! $prediction) {
+            $prediction = new Prediction($race, $user);
 
-        for ($position = 1; $position <= $limit; $position++) {
-            $prediction->addFinishingPosition(new FinishingPosition($position));
+            $limit = $race->getSeason()->getScoringSystem()->getLength();
+
+            for ($position = 1; $position <= $limit; $position++) {
+                $prediction->addFinishingPosition(new FinishingPosition($position));
+            }
         }
 
         $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($prediction);
-            $em->flush();
+            $this->get('prediction_repository')->save($prediction);
 
             return $this->redirect(
                 $this->generateUrl(

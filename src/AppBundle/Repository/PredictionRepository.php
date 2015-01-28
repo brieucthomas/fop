@@ -9,6 +9,9 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Prediction;
+use AppBundle\Entity\Race;
+use AppBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -18,4 +21,22 @@ use Doctrine\ORM\EntityRepository;
  */
 class PredictionRepository extends EntityRepository implements PredictionRepositoryInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function findByRaceAndUser(Race $race, User $user)
+    {
+        return $this->findOneBy(['race' => $race, 'user' => $user]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Prediction $prediction)
+    {
+        $this->_em->persist($prediction);
+        $this->_em->flush();
+
+        return $this;
+    }
 }
