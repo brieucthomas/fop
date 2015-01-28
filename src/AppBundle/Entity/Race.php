@@ -742,4 +742,14 @@ class Race
 
         return $this;
     }
+
+    /**
+     * Returns whether the race is finished or not.
+     *
+     * @return bool true if the race is finished, false otherwise
+     */
+    public function isFinished()
+    {
+        return $this->date && $this->date < new \DateTime();
+    }
 }

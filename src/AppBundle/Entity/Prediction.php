@@ -329,7 +329,7 @@ class Prediction
     }
 
     /**
-     * Returns whether the given user is the author of this prediction.
+     * Returns whether the given user is the author of this prediction or not.
      *
      * @param User $user A User entity
      *
