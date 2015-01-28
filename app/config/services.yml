@@ -4,6 +4,13 @@ parameters:
 #    parameter_name: value
 
 services:
+    # Security
+    prediction_voter:
+        class: AppBundle\Security\PredictionVoter
+        public: false
+        tags:
+            - { name: security.voter }
+
     # Utils
     country:
         class: AppBundle\Utils\Country

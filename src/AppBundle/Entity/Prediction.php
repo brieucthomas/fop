@@ -327,4 +327,16 @@ class Prediction
 
         return $this;
     }
+
+    /**
+     * Returns whether the given user is the author of this prediction.
+     *
+     * @param User $user A User entity
+     *
+     * @return bool true if the given user is the author, false otherwise
+     */
+    public function isAuthor(User $user = null)
+    {
+        return $user && $user->getId() == $this->user->getId();
+    }
 }

@@ -20,7 +20,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 /**
  * The race controller.
@@ -51,27 +50,12 @@ class RaceController extends Controller
      */
     public function predictAction(Request $request, Race $race, User $user)
     {
-        /* @var $loggedUser User */
-        $loggedUser = $this->getUser();
-
-        if (!$loggedUser->hasRole('ROLE_ADMIN')) {
-
-            // only admins can edit others predictions
-            if ($user != $loggedUser) {
-                throw new AccessDeniedException();
-            }
-
-            // only admins can edit past predictions
-            if ($race->getDate() > new \DateTime()) {
-                //throw new AccessDeniedException();
-            }
-        }
-
         $prediction = $this->get('prediction_repository')->findByRaceAndUser($race, $user);
 
-        if (! $prediction) {
-            $prediction = new Prediction($race, $user);
+        $this->denyAccessUnlessGranted($prediction ? 'edit' : 'create', $prediction);
 
+        if (!$prediction) {
+            $prediction = new Prediction($race, $user);
             $limit = $race->getSeason()->getScoringSystem()->getLength();
 
             for ($position = 1; $position <= $limit; $position++) {
@@ -90,8 +74,8 @@ class RaceController extends Controller
                     'race_prediction',
                     [
                         'season' => $race->getSeason()->getYear(),
-                        'round'  => $race->getRound(),
-                        'user'   => $user->getSlug()
+                        'round' => $race->getRound(),
+                        'user' => $user->getSlug()
                     ]
                 )
             );
