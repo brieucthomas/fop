@@ -19,6 +19,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class PredictionVoter extends AbstractVoter
 {
+    const SHOW = 'show';
     const CREATE = 'create';
     const EDIT = 'edit';
 
@@ -27,7 +28,7 @@ class PredictionVoter extends AbstractVoter
      */
     protected function getSupportedAttributes()
     {
-        return array(self::CREATE, self::EDIT);
+        return [self::SHOW, self::CREATE, self::EDIT];
     }
 
     /**
@@ -35,7 +36,7 @@ class PredictionVoter extends AbstractVoter
      */
     protected function getSupportedClasses()
     {
-        return array('AppBundle\Entity\Prediction');
+        return ['AppBundle\Entity\Prediction'];
     }
 
     /**
@@ -48,6 +49,10 @@ class PredictionVoter extends AbstractVoter
         }
 
         if (in_array('ROLE_ADMIN', $user->getRoles(), true)) {
+            return true;
+        }
+
+        if ($attribute === self::SHOW && ($prediction->isAuthor($user) || $prediction->getRace()->isFinished())) {
             return true;
         }
 
