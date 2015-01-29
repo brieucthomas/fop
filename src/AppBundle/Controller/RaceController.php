@@ -52,8 +52,6 @@ class RaceController extends Controller
     {
         $prediction = $this->get('prediction_repository')->findByRaceAndUser($race, $user);
 
-        $this->denyAccessUnlessGranted($prediction ? 'edit' : 'create', $prediction);
-
         if (!$prediction) {
             $prediction = new Prediction($race, $user);
             $limit = $race->getSeason()->getScoringSystem()->getLength();
@@ -62,6 +60,8 @@ class RaceController extends Controller
                 $prediction->addFinishingPosition(new FinishingPosition($position));
             }
         }
+
+        $this->denyAccessUnlessGranted('edit', $prediction);
 
         $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
         $form->handleRequest($request);

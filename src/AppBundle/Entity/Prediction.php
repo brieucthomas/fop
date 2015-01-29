@@ -337,6 +337,6 @@ class Prediction
      */
     public function isAuthor(User $user = null)
     {
-        return $user && $user->getId() == $this->user->getId();
+        return $user && $user->getId() === $this->user->getId();
     }
 }

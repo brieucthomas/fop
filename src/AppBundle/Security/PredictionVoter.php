@@ -20,7 +20,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class PredictionVoter extends AbstractVoter
 {
     const SHOW = 'show';
-    const CREATE = 'create';
     const EDIT = 'edit';
 
     /**
@@ -28,7 +27,7 @@ class PredictionVoter extends AbstractVoter
      */
     protected function getSupportedAttributes()
     {
-        return [self::SHOW, self::CREATE, self::EDIT];
+        return [self::SHOW, self::EDIT];
     }
 
     /**
@@ -56,11 +55,7 @@ class PredictionVoter extends AbstractVoter
             return true;
         }
 
-        if ($attribute === self::CREATE && in_array('ROLE_USER', $user->getRoles(), true) && !$prediction->getRace()->isFinished()) {
-            return true;
-        }
-
-        if ($attribute === self::EDIT && $prediction->isAuthor($user) && !$prediction->getRace()->isFinished()) {
+        if ($attribute === self::EDIT && in_array('ROLE_USER', $user->getRoles(), true) && $prediction->isAuthor($user) && !$prediction->getRace()->isFinished()) {
             return true;
         }
 

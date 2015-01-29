@@ -9,7 +9,14 @@
 
 namespace AppBundle\Tests\Security;
 
+use AppBundle\Entity\Prediction;
+use AppBundle\Entity\Race;
+use AppBundle\Entity\User;
 use AppBundle\Security\PredictionVoter;
+use AppBundle\Tests\Fixtures\UserFixture;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class PredictionVoterTest extends \PHPUnit_Framework_TestCase
 {
@@ -28,9 +35,131 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
         $this->voter = null;
     }
 
-    public function testShowPrediction()
+    public function testAdminCanShowAllPredictions()
     {
+        $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
+        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
 
-        //$this->assertTrue($this->voter->vote());
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
+    }
+
+    public function testAdminCanEditAllPredictions()
+    {
+        $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
+        $prediction1 = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+        $prediction2 = new Prediction($this->getRace('Yesterday'), $this->getUserLoggedAsUser(3));
+
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction1, ['edit']));
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction2, ['edit']));
+    }
+
+    public function testUserCanAllaysShowHisPrediction()
+    {
+        $user = $this->getUserLoggedAsUser(1);
+        $token = $this->getMockedToken($user);
+        $prediction1 = new Prediction($this->getRace('Tomorrow'), $user);
+        $prediction2 = new Prediction($this->getRace('Yesterday'), $user);
+
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction1, ['show']));
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction2, ['show']));
+    }
+
+    public function testUserCannotShowOtherPredictionWhenTheRaceInNotFinished()
+    {
+        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+
+        $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['show']));
+    }
+
+    public function testUserCanShowOtherPredictionWhenTheRaceInFinished()
+    {
+        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $prediction = new Prediction($this->getRace('Yesterday'), $this->getUserLoggedAsUser(2));
+
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
+    }
+
+    public function testUserCanEditAPredictionWhenTheRaceInNotFinished()
+    {
+        $user = $this->getUserLoggedAsUser(1);
+        $token = $this->getMockedToken($user);
+        $prediction = new Prediction($this->getRace('Tomorrow'), $user);
+
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
+    }
+
+    public function testUserCannotEditHisPredictionWhenTheRaceIsFinished()
+    {
+        $user = $this->getUserLoggedAsUser(1);
+        $token = $this->getMockedToken($user);
+        $prediction = new Prediction($this->getRace('Yesterday'), $user);
+
+        $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['edit']));
+    }
+
+    public function testUserCannotEditOtherPredictions()
+    {
+        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+
+        $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['edit']));
+    }
+
+    /**
+     * @return TokenInterface
+     */
+    private function getMockedToken(UserInterface $user = null)
+    {
+        $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
+        $token
+            ->expects($this->any())
+            ->method('getUser')
+            ->willReturn($user)
+        ;
+
+        return $token;
+    }
+
+    /**
+     * @return Race
+     */
+    private function getRace($time)
+    {
+        $race = new Race();
+        $race->setDate(new \DateTime($time));
+
+        return $race;
+    }
+
+    /**
+     * @return User
+     */
+    private function getUserLoggedAsUser($id)
+    {
+        return $this->getUser($id, ['ROLE_USER']);
+    }
+
+    /**
+     * @return User
+     */
+    private function getUserLoggedAsAdmin($id)
+    {
+        return $this->getUser($id, ['ROLE_ADMIN']);
+    }
+
+    /**
+     * @return User
+     */
+    private function getUser($id, $roles = [])
+    {
+        $user = new UserFixture();
+        $user->setId($id);
+
+        foreach ($roles as $role) {
+            $user->addRole($role);
+        }
+
+        return $user;
     }
 }
