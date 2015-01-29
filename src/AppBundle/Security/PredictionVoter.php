@@ -59,8 +59,8 @@ class PredictionVoter extends AbstractVoter
             return true;
         }
 
-        if ($attribute === self::EDIT && !$prediction->isAuthor($user)) {
-            return false;
+        if ($attribute === self::EDIT && $prediction->isAuthor($user)) {
+            return true;
         }
 
         return false;
