@@ -38,16 +38,15 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     public function testAdminCanShowOtherPredictionWhenTheRaceIsNotFinished()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
-        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
 
     public function testUserCanShowHisPredictionWhenTheRaceIsNotFinished()
     {
-        $user = $this->getUserLoggedAsUser(1);
-        $token = $this->getMockedToken($user);
-        $prediction = new Prediction($this->getRace('Tomorrow'), $user);
+        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $prediction = new Prediction($this->getNextRace(), $token->getUser());
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
@@ -55,7 +54,7 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     public function testUserCanShowOtherPredictionWhenTheRaceInFinished()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
-        $prediction = new Prediction($this->getRace('Yesterday'), $this->getUserLoggedAsUser(2));
+        $prediction = new Prediction($this->getFinishedRace(), $this->getUserLoggedAsUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
@@ -63,7 +62,7 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     public function testUserCannotShowOtherPredictionWhenTheRaceInNotFinished()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
-        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['show']));
     }
@@ -71,7 +70,7 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     public function testAdminCanEditOtherPredictionWhenTheRaceInNotFinished()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
-        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
     }
@@ -79,25 +78,23 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     public function testAdminCanEditOtherPredictionWhenTheRaceInFinished()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
-        $prediction = new Prediction($this->getRace('Yesterday'), $this->getUserLoggedAsUser(2));
+        $prediction = new Prediction($this->getFinishedRace(), $this->getUserLoggedAsUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
     }
 
     public function testUserCanEditAPredictionWhenTheRaceInNotFinished()
     {
-        $user = $this->getUserLoggedAsUser(1);
-        $token = $this->getMockedToken($user);
-        $prediction = new Prediction($this->getRace('Tomorrow'), $user);
+        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $prediction = new Prediction($this->getNextRace(), $token->getUser());
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
     }
 
     public function testUserCannotEditHisPredictionWhenTheRaceIsFinished()
     {
-        $user = $this->getUserLoggedAsUser(1);
-        $token = $this->getMockedToken($user);
-        $prediction = new Prediction($this->getRace('Yesterday'), $user);
+        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $prediction = new Prediction($this->getFinishedRace(), $token->getUser());
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['edit']));
     }
@@ -105,7 +102,7 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     public function testUserCannotEditOtherPredictions()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
-        $prediction = new Prediction($this->getRace('Tomorrow'), $this->getUserLoggedAsUser(2));
+        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['edit']));
     }
@@ -123,6 +120,22 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
         ;
 
         return $token;
+    }
+
+    /**
+     * @return Race
+     */
+    private function getNextRace()
+    {
+        return $this->getRace('Tomorrow');
+    }
+
+    /**
+     * @return Race
+     */
+    private function getFinishedRace()
+    {
+        return $this->getRace('Yesterday');
     }
 
     /**
