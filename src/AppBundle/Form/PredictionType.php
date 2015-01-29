@@ -9,7 +9,6 @@
 
 namespace AppBundle\Form;
 
-use AppBundle\Entity\Race;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -55,7 +54,7 @@ class PredictionType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Prediction'
+            'data_class' => 'AppBundle\Entity\Prediction',
         ));
     }
 

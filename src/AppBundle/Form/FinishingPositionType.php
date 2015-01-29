@@ -9,7 +9,6 @@
 
 namespace AppBundle\Form;
 
-use AppBundle\Entity\Race;
 use AppBundle\Repository\TeamRepositoryInterface;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -57,7 +56,7 @@ class FinishingPositionType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\FinishingPosition'
+            'data_class' => 'AppBundle\Entity\FinishingPosition',
         ));
     }
 

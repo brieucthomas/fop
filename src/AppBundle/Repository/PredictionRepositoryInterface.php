@@ -8,6 +8,7 @@
  */
 
 namespace AppBundle\Repository;
+
 use AppBundle\Entity\Prediction;
 use AppBundle\Entity\User;
 use AppBundle\Entity\Race;
