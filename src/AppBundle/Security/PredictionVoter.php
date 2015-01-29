@@ -56,15 +56,11 @@ class PredictionVoter extends AbstractVoter
             return true;
         }
 
-        if ($prediction->getRace()->isFinished()) {
-            return false;
-        }
-
-        if ($attribute === self::CREATE && in_array('ROLE_USER', $user->getRoles(), true)) {
+        if ($attribute === self::CREATE && in_array('ROLE_USER', $user->getRoles(), true) && !$prediction->getRace()->isFinished()) {
             return true;
         }
 
-        if ($attribute === self::EDIT && $prediction->isAuthor($user)) {
+        if ($attribute === self::EDIT && $prediction->isAuthor($user) && !$prediction->getRace()->isFinished()) {
             return true;
         }
 
