@@ -9,24 +9,65 @@
 
 namespace AppBundle\Tests;
 
-class UrlTests
+class UrlTests extends WebTestCase
 {
-    /** @dataProvider provideUrls */
-    public function testPageIsSuccessful($url)
+    /**
+     * @dataProvider provideSuccessUrls
+     */
+    public function __testPageIsSuccessful($url)
     {
         $client = self::createClient();
         $client->request('GET', $url);
 
-        $this->assertTrue($client->getResponse()->isSuccessful());
+        $this->assertTrue($client->getResponse()->isOk());
     }
 
-    public function provideUrls()
+    /**
+     * @dataProvider provideNotFoundUrls
+     */
+    public function __testPageIsNotFound($url)
     {
-        return array(
-            array('/en/'),
-            array('/en/constructors/ferrari'),
-            array('/en/drivers/hamilton'),
-            array('/en/users/foo'),
-        );
+        $client = self::createClient();
+        $client->request('GET', $url);
+
+        $this->assertTrue($client->getResponse()->isNotFound());
+    }
+
+    /**
+     * @dataProvider provideRedirectUrls
+     */
+    public function testPageIsRedirect($from, $to)
+    {
+        $client = self::createClient();
+        $client->request('GET', $from);
+
+        $this->assertTrue($client->getResponse()->isRedirect($to));
+    }
+
+    public function provideSuccessUrls()
+    {
+        return [
+            ['/en/'],
+            ['/en/constructors/ferrari'],
+            ['/en/drivers/hamilton'],
+            ['/en/users/foo'],
+        ];
+    }
+
+    public function provideNotFoundUrls()
+    {
+        return [
+            ['/ru/'],
+            ['/en/constructors/nintendo'],
+            ['/en/drivers/luidgi'],
+            ['/en/users/mario'],
+        ];
+    }
+
+    public function provideRedirectUrls()
+    {
+        return [
+            ['/', '/en']
+        ];
     }
 }
