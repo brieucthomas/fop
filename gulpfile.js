@@ -31,11 +31,6 @@ gulp.task('js', ['clean'], function () {
         .pipe(gulp.dest(paths.dist + '/js'));
 });
 
-gulp.task('img', ['clean'], function () {
-    return gulp.src(paths.images)
-        .pipe(gulp.dest(paths.dist + '/img'));
-});
-
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['css'])
         .on('change', function (evt) {
@@ -45,4 +40,4 @@ gulp.task('watch', function () {
         });
 });
 
-gulp.task('default', ['css', 'js', 'img']);
+gulp.task('default', ['css', 'js']);

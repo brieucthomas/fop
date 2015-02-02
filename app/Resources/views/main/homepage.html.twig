@@ -6,7 +6,7 @@
 
     {% if nextRace %}
         <div id="next-race" class="section section-lg section-inverse section-left">
-            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
+            <div class="background" style="background-image:url('{{ asset('img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
             <div class="container">
                 <h1 class="text-concrete text-large">{{ 'homepage.next-race.title'|trans }}</h1>
                 <h2 class="h1" lang="en">
@@ -16,7 +16,7 @@
                 </h2>
                 <ul class="list-highlight">
                     <li id="next-race-nationality">
-                        <img class="flag" src="{{ asset('assets/img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
+                        <img class="flag" src="{{ asset('img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
                     </li>
                     <li id="next-race-round">
                         <span class="bg-concrete">{{ 'homepage.next-race.round'|trans }}</span>
@@ -51,7 +51,7 @@
                 </h2>
                 <ul class="list-highlight">
                     <li id="last-race-country">
-                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+                        <img class="flag" src="{{ asset('img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
                     </li>
                     <li id="last-race-round">
                         <span class="bg-concrete">{{ 'homepage.last-race.round'|trans }}</span>
