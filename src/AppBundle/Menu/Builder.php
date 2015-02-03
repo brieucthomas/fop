@@ -43,37 +43,14 @@ class Builder
         $this->requestStack = $requestStack;
     }
 
-    public function createMainMenu(RaceServiceInterface $raceService)
+    public function createMainMenu()
     {
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
 
-        if ($lastRace = $raceService->findLastRace()) {
-            $menu->addChild(
-                'navigation.main.last-race',
-                [
-                    'route'           => 'race',
-                    'routeParameters' => [
-                        'season' => $lastRace->getSeason()->getYear(),
-                        'round'  => $lastRace->getRound()
-                    ]
-                ]
-            );
-        }
-
-        if ($nextRace = $raceService->findNextRace()) {
-            $menu->addChild(
-                'navigation.main.next-race',
-                [
-                    'route'           => 'race',
-                    'routeParameters' => [
-                        'season' => $nextRace->getSeason()->getYear(),
-                        'round'  => $nextRace->getRound()
-                    ]
-                ]
-            );
-        }
+        $menu->addChild('navigation.main.last-race', [ 'route' => 'last_race' ]);
+        $menu->addChild('navigation.main.next-race', [ 'route' => 'next_race' ]);
 
         $menu->addChild(
             'navigation.season.last',

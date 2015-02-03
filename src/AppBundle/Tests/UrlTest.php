@@ -33,17 +33,6 @@ class UrlTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isNotFound());
     }
 
-    /**
-     * @dataProvider provideRedirectUrls
-     */
-    public function testPageIsRedirect($from, $to)
-    {
-        $client = self::createClient();
-        $client->request('GET', $from);
-
-        $this->assertTrue($client->getResponse()->isRedirect($to));
-    }
-
     public function provideSuccessUrls()
     {
         return [
@@ -61,13 +50,6 @@ class UrlTest extends WebTestCase
             ['/en/constructors/nintendo'],
             ['/en/drivers/luidgi'],
             ['/en/users/mario'],
-        ];
-    }
-
-    public function provideRedirectUrls()
-    {
-        return [
-            ['/', '/en'],
         ];
     }
 }

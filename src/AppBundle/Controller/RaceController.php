@@ -43,6 +43,42 @@ class RaceController extends Controller
     }
 
     /**
+     * @Route("/last", name="last_race")
+     * @Method({"GET"})
+     * @Template(":race:show.html.twig")
+     */
+    public function lastAction()
+    {
+        $race = $this->get('race_service')->findLastRace();
+
+        if (!$race) {
+            $this->createNotFoundException();
+        }
+
+        return [
+            'race' => $race
+        ];
+    }
+
+    /**
+     * @Route("/next", name="next_race")
+     * @Method({"GET"})
+     * @Template(":race:show.html.twig")
+     */
+    public function nextAction()
+    {
+        $race = $this->get('race_service')->findNextRace();
+
+        if (!$race) {
+            $this->createNotFoundException();
+        }
+
+        return [
+            'race' => $race
+        ];
+    }
+
+    /**
      * @Route("/{season}/{round}/predict/{slug}", name="race_prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
      * @Method({"GET", "POST"})
      * @Security("has_role('ROLE_USER')")
@@ -74,8 +110,8 @@ class RaceController extends Controller
                     'race_prediction',
                     [
                         'season' => $race->getSeason()->getYear(),
-                        'round' => $race->getRound(),
-                        'user' => $user->getSlug()
+                        'round'  => $race->getRound(),
+                        'user'   => $user->getSlug()
                     ]
                 )
             );
