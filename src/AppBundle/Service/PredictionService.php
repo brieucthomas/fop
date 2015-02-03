@@ -116,7 +116,8 @@ class PredictionService implements PredictionServiceInterface
                     if ($previousRace) {
                         $userStanding = clone $previousRace->getUserStandingsByUser($user);
                     } else {
-                        $userStanding = new UserStandings($user);
+                        $userStanding = new UserStandings();
+                        $userStanding->setUser($user);
                     }
 
                     $race->addUserStanding($userStanding);

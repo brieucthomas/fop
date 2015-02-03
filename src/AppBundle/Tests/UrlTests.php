@@ -67,7 +67,7 @@ class UrlTests extends WebTestCase
     public function provideRedirectUrls()
     {
         return [
-            ['/', '/en']
+            ['/', '/en'],
         ];
     }
 }

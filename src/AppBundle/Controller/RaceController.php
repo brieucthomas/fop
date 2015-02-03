@@ -38,7 +38,7 @@ class RaceController extends Controller
     public function showAction(Race $race)
     {
         return [
-            'race' => $race
+            'race' => $race,
         ];
     }
 
@@ -84,7 +84,7 @@ class RaceController extends Controller
         return [
             'race' => $race,
             'user' => $user,
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ];
     }
 }

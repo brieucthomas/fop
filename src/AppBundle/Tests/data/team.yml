@@ -1,66 +1,21 @@
 AppBundle\Entity\Team:
-    team_2013_caterham_pic:
-        __construct: ['@constructor_caterham', '@driver_pic']
-        season: '@season_2013'
-    team_2013_caterham_garde:
-        __construct: ['@constructor_caterham', '@driver_garde']
-        season: '@season_2013'
     team_2013_ferrari_alonso:
         __construct: ['@constructor_ferrari', '@driver_alonso']
         season: '@season_2013'
     team_2013_ferrari_massa:
         __construct: ['@constructor_ferrari', '@driver_massa']
         season: '@season_2013'
-    team_2013_force_india_sutil:
-        __construct: ['@constructor_force_india', '@driver_sutil']
-        season: '@season_2013'
-    team_2013_force_india_resta:
-        __construct: ['@constructor_force_india', '@driver_resta']
-        season: '@season_2013'
-    team_2013_lotus_f1_raikkonen:
-        __construct: ['@constructor_lotus_f1', '@driver_raikkonen']
-        season: '@season_2013'
-    team_2013_lotus_f1_grosjean:
-        __construct: ['@constructor_lotus_f1', '@driver_grosjean']
-        season: '@season_2013'
-    team_2013_lotus_f1_kovalainen:
-        __construct: ['@constructor_lotus_f1', '@driver_kovalainen']
-        season: '@season_2013'
-    team_2013_marussia_jules_bianchi:
-        __construct: ['@constructor_marussia', '@driver_jules_bianchi']
-        season: '@season_2013'
-    team_2013_marussia_chilton:
-        __construct: ['@constructor_marussia', '@driver_chilton']
-        season: '@season_2013'
-    team_2013_mclaren_perez:
-        __construct: ['@constructor_mclaren', '@driver_perez']
-        season: '@season_2013'
-    team_2013_mclaren_button:
-        __construct: ['@constructor_mclaren', '@driver_button']
+    team_2013_mercedes_rosberg:
+        __construct: ['@constructor_mercedes', '@driver_rosberg']
         season: '@season_2013'
     team_2013_mercedes_hamilton:
         __construct: ['@constructor_mercedes', '@driver_hamilton']
         season: '@season_2013'
-    team_2013_mercedes_rosberg:
-        __construct: ['@constructor_mercedes', '@driver_rosberg']
+    team_2013_mclaren_button:
+        __construct: ['@constructor_mclaren', '@driver_button']
         season: '@season_2013'
-    team_2013_red_bull_vettel:
-        __construct: ['@constructor_red_bull', '@driver_vettel']
-        season: '@season_2013'
-    team_2013_red_bull_webber:
-        __construct: ['@constructor_red_bull', '@driver_webber']
-        season: '@season_2013'
-    team_2013_sauber_hulkenberg:
-        __construct: ['@constructor_sauber', '@driver_hulkenberg']
-        season: '@season_2013'
-    team_2013_sauber_gutierrez:
-        __construct: ['@constructor_sauber', '@driver_gutierrez']
-        season: '@season_2013'
-    team_2013_toro_rosso_ricciardo:
-        __construct: ['@constructor_toro_rosso', '@driver_ricciardo']
-        season: '@season_2013'
-    team_2013_toro_rosso_vergne:
-        __construct: ['@constructor_toro_rosso', '@driver_vergne']
+    team_2013_mclaren_perez:
+        __construct: ['@constructor_mclaren', '@driver_perez']
         season: '@season_2013'
     team_2013_williams_maldonado:
         __construct: ['@constructor_williams', '@driver_maldonado']
@@ -68,29 +23,110 @@ AppBundle\Entity\Team:
     team_2013_williams_bottas:
         __construct: ['@constructor_williams', '@driver_bottas']
         season: '@season_2013'
-    team_2014_caterham_ericsson:
-        __construct: ['@constructor_caterham', '@driver_ericsson']
-        season: '@season_2014'
-    team_2014_caterham_kobayashi:
-        __construct: ['@constructor_caterham', '@driver_kobayashi']
-        season: '@season_2014'
-    team_2014_caterham_lotterer:
-        __construct: ['@constructor_caterham', '@driver_lotterer']
-        season: '@season_2014'
-    team_2014_caterham_stevens:
-        __construct: ['@constructor_caterham', '@driver_stevens']
-        season: '@season_2014'
+    team_2013_sauber_hulkenberg:
+        __construct: ['@constructor_sauber', '@driver_hulkenberg']
+        season: '@season_2013'
+    team_2013_sauber_gutierrez:
+        __construct: ['@constructor_sauber', '@driver_gutierrez']
+        season: '@season_2013'
+    team_2013_red_bull_webber:
+        __construct: ['@constructor_red_bull', '@driver_webber']
+        season: '@season_2013'
+    team_2013_red_bull_vettel:
+        __construct: ['@constructor_red_bull', '@driver_vettel']
+        season: '@season_2013'
+    team_2013_toro_rosso_ricciardo:
+        __construct: ['@constructor_toro_rosso', '@driver_ricciardo']
+        season: '@season_2013'
+    team_2013_toro_rosso_vergne:
+        __construct: ['@constructor_toro_rosso', '@driver_vergne']
+        season: '@season_2013'
+    team_2013_force_india_sutil:
+        __construct: ['@constructor_force_india', '@driver_sutil']
+        season: '@season_2013'
+    team_2013_force_india_resta:
+        __construct: ['@constructor_force_india', '@driver_resta']
+        season: '@season_2013'
+    team_2013_caterham_pic:
+        __construct: ['@constructor_caterham', '@driver_pic']
+        season: '@season_2013'
+    team_2013_caterham_garde:
+        __construct: ['@constructor_caterham', '@driver_garde']
+        season: '@season_2013'
+    team_2013_lotus_f1_raikkonen:
+        __construct: ['@constructor_lotus_f1', '@driver_raikkonen']
+        season: '@season_2013'
+    team_2013_lotus_f1_kovalainen:
+        __construct: ['@constructor_lotus_f1', '@driver_kovalainen']
+        season: '@season_2013'
+    team_2013_lotus_f1_grosjean:
+        __construct: ['@constructor_lotus_f1', '@driver_grosjean']
+        season: '@season_2013'
+    team_2013_marussia_jules_bianchi:
+        __construct: ['@constructor_marussia', '@driver_jules_bianchi']
+        season: '@season_2013'
+    team_2013_marussia_chilton:
+        __construct: ['@constructor_marussia', '@driver_chilton']
+        season: '@season_2013'
     team_2014_ferrari_alonso:
         __construct: ['@constructor_ferrari', '@driver_alonso']
         season: '@season_2014'
     team_2014_ferrari_raikkonen:
         __construct: ['@constructor_ferrari', '@driver_raikkonen']
         season: '@season_2014'
+    team_2014_mercedes_rosberg:
+        __construct: ['@constructor_mercedes', '@driver_rosberg']
+        season: '@season_2014'
+    team_2014_mercedes_hamilton:
+        __construct: ['@constructor_mercedes', '@driver_hamilton']
+        season: '@season_2014'
+    team_2014_mclaren_button:
+        __construct: ['@constructor_mclaren', '@driver_button']
+        season: '@season_2014'
+    team_2014_mclaren_kevin_magnussen:
+        __construct: ['@constructor_mclaren', '@driver_kevin_magnussen']
+        season: '@season_2014'
+    team_2014_williams_massa:
+        __construct: ['@constructor_williams', '@driver_massa']
+        season: '@season_2014'
+    team_2014_williams_bottas:
+        __construct: ['@constructor_williams', '@driver_bottas']
+        season: '@season_2014'
+    team_2014_sauber_sutil:
+        __construct: ['@constructor_sauber', '@driver_sutil']
+        season: '@season_2014'
+    team_2014_sauber_gutierrez:
+        __construct: ['@constructor_sauber', '@driver_gutierrez']
+        season: '@season_2014'
+    team_2014_red_bull_vettel:
+        __construct: ['@constructor_red_bull', '@driver_vettel']
+        season: '@season_2014'
+    team_2014_red_bull_ricciardo:
+        __construct: ['@constructor_red_bull', '@driver_ricciardo']
+        season: '@season_2014'
+    team_2014_toro_rosso_vergne:
+        __construct: ['@constructor_toro_rosso', '@driver_vergne']
+        season: '@season_2014'
+    team_2014_toro_rosso_kvyat:
+        __construct: ['@constructor_toro_rosso', '@driver_kvyat']
+        season: '@season_2014'
     team_2014_force_india_hulkenberg:
         __construct: ['@constructor_force_india', '@driver_hulkenberg']
         season: '@season_2014'
     team_2014_force_india_perez:
         __construct: ['@constructor_force_india', '@driver_perez']
+        season: '@season_2014'
+    team_2014_caterham_kobayashi:
+        __construct: ['@constructor_caterham', '@driver_kobayashi']
+        season: '@season_2014'
+    team_2014_caterham_ericsson:
+        __construct: ['@constructor_caterham', '@driver_ericsson']
+        season: '@season_2014'
+    team_2014_caterham_lotterer:
+        __construct: ['@constructor_caterham', '@driver_lotterer']
+        season: '@season_2014'
+    team_2014_caterham_stevens:
+        __construct: ['@constructor_caterham', '@driver_stevens']
         season: '@season_2014'
     team_2014_lotus_f1_grosjean:
         __construct: ['@constructor_lotus_f1', '@driver_grosjean']
@@ -103,40 +139,4 @@ AppBundle\Entity\Team:
         season: '@season_2014'
     team_2014_marussia_chilton:
         __construct: ['@constructor_marussia', '@driver_chilton']
-        season: '@season_2014'
-    team_2014_mclaren_button:
-        __construct: ['@constructor_mclaren', '@driver_button']
-        season: '@season_2014'
-    team_2014_mclaren_kevin_magnussen:
-        __construct: ['@constructor_mclaren', '@driver_kevin_magnussen']
-        season: '@season_2014'
-    team_2014_mercedes_hamilton:
-        __construct: ['@constructor_mercedes', '@driver_hamilton']
-        season: '@season_2014'
-    team_2014_mercedes_rosberg:
-        __construct: ['@constructor_mercedes', '@driver_rosberg']
-        season: '@season_2014'
-    team_2014_red_bull_ricciardo:
-        __construct: ['@constructor_red_bull', '@driver_ricciardo']
-        season: '@season_2014'
-    team_2014_red_bull_vettel:
-        __construct: ['@constructor_red_bull', '@driver_vettel']
-        season: '@season_2014'
-    team_2014_sauber_gutierrez:
-        __construct: ['@constructor_sauber', '@driver_gutierrez']
-        season: '@season_2014'
-    team_2014_sauber_sutil:
-        __construct: ['@constructor_sauber', '@driver_sutil']
-        season: '@season_2014'
-    team_2014_toro_rosso_kvyat:
-        __construct: ['@constructor_toro_rosso', '@driver_kvyat']
-        season: '@season_2014'
-    team_2014_toro_rosso_vergne:
-        __construct: ['@constructor_toro_rosso', '@driver_vergne']
-        season: '@season_2014'
-    team_2014_williams_bottas:
-        __construct: ['@constructor_williams', '@driver_bottas']
-        season: '@season_2014'
-    team_2014_williams_massa:
-        __construct: ['@constructor_williams', '@driver_massa']
         season: '@season_2014'

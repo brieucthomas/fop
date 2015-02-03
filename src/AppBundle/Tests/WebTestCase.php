@@ -26,7 +26,7 @@ class WebTestCase extends LiipTest
         $this->client = static::createClient();
 
         $this->loadFixtures([
-            'AppBundle\Tests\FixtureLoader'
+            'AppBundle\Tests\FixtureLoader',
         ]);
     }
 
