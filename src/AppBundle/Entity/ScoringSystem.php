@@ -87,16 +87,6 @@ class ScoringSystem
     protected $isDefault = true;
 
     /**
-     * Constructor.
-     *
-     * @param string $name The scoring system name
-     */
-    public function __construct($name)
-    {
-        $this->setName($name);
-    }
-
-    /**
      * Returns the scoring system identifier.
      *
      * @return int The scoring system identifier
@@ -165,16 +155,15 @@ class ScoringSystem
     }
 
     /**
-     * Adds an offset.
+     * Sets a collection of offsets.
      *
-     * @param int $offset
-     * @param int $points
+     * @param array $offsets
      *
      * @return $this
      */
-    public function addOffset($offset, $points)
+    public function setOffsets(array $offsets)
     {
-        $this->offsets[$offset] = $points;
+        $this->offsets = $offsets;
 
         return $this;
     }

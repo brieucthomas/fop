@@ -1,0 +1,116 @@
+AppBundle\Entity\Circuit:
+    circuit_albert_park:
+        name: 'Albert Park Grand Prix Circuit'
+        slug: albert_park
+        location: Melbourne
+        country: AU
+    circuit_sepang:
+        name: 'Sepang International Circuit'
+        slug: sepang
+        location: 'Kuala Lumpur'
+        country: MY
+    circuit_shanghai:
+        name: 'Shanghai International Circuit'
+        slug: shanghai
+        location: Shanghai
+        country: CN
+    circuit_bahrain:
+        name: 'Bahrain International Circuit'
+        slug: bahrain
+        location: Sakhir
+        country: BH
+    circuit_catalunya:
+        name: 'Circuit de Catalunya'
+        slug: catalunya
+        location: Montmeló
+        country: ES
+    circuit_monaco:
+        name: 'Circuit de Monaco'
+        slug: monaco
+        location: Monte-Carlo
+        country: MC
+    circuit_villeneuve:
+        name: 'Circuit Gilles Villeneuve'
+        slug: villeneuve
+        location: Montreal
+        country: CA
+    circuit_silverstone:
+        name: 'Silverstone Circuit'
+        slug: silverstone
+        location: Silverstone
+        country: GB
+    circuit_nurburgring:
+        name: Nürburgring
+        slug: nurburgring
+        location: Nürburg
+        country: DE
+    circuit_hungaroring:
+        name: Hungaroring
+        slug: hungaroring
+        location: Budapest
+        country: HU
+    circuit_spa:
+        name: 'Circuit de Spa-Francorchamps'
+        slug: spa
+        location: Spa
+        country: BE
+    circuit_monza:
+        name: 'Autodromo Nazionale di Monza'
+        slug: monza
+        location: Monza
+        country: IT
+    circuit_marina_bay:
+        name: 'Marina Bay Street Circuit'
+        slug: marina_bay
+        location: 'Marina Bay'
+        country: SG
+    circuit_yeongam:
+        name: 'Korean International Circuit'
+        slug: yeongam
+        location: 'Yeongam County'
+        country: KR
+    circuit_suzuka:
+        name: 'Suzuka Circuit'
+        slug: suzuka
+        location: Suzuka
+        country: JP
+    circuit_buddh:
+        name: 'Buddh International Circuit'
+        slug: buddh
+        location: 'Uttar Pradesh'
+        country: IN
+    circuit_yas_marina:
+        name: 'Yas Marina Circuit'
+        slug: yas_marina
+        location: 'Abu Dhabi'
+        country: AE
+    circuit_americas:
+        name: 'Circuit of the Americas'
+        slug: americas
+        location: Austin
+        country: US
+    circuit_interlagos:
+        name: 'Autódromo José Carlos Pace'
+        slug: interlagos
+        location: 'São Paulo'
+        country: BR
+    circuit_red_bull_ring:
+        name: 'Red Bull Ring'
+        slug: red_bull_ring
+        location: Spielburg
+        country: AT
+    circuit_hockenheimring:
+        name: Hockenheimring
+        slug: hockenheimring
+        location: Hockenheim
+        country: DE
+    circuit_sochi:
+        name: 'Sochi International Street Circuit'
+        slug: sochi
+        location: Sochi
+        country: RU
+    circuit_rodriguez:
+        name: 'Autódromo Hermanos Rodríguez'
+        slug: rodriguez
+        location: 'Mexico City'
+        country: MX

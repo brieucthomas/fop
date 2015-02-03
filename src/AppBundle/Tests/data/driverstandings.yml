@@ -1,0 +1,5083 @@
+AppBundle\Entity\DriverStandings:
+    driver_standings_2013_1_1:
+        race: '@race_2013_1'
+        driver: '@driver_raikkonen'
+        position: 1
+        points: !!float 25
+        wins: 1
+    driver_standings_2013_1_2:
+        race: '@race_2013_1'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_1_3:
+        race: '@race_2013_1'
+        driver: '@driver_vettel'
+        position: 3
+        points: !!float 15
+        wins: 0
+    driver_standings_2013_1_4:
+        race: '@race_2013_1'
+        driver: '@driver_massa'
+        position: 4
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_1_5:
+        race: '@race_2013_1'
+        driver: '@driver_hamilton'
+        position: 5
+        points: !!float 10
+        wins: 0
+    driver_standings_2013_1_6:
+        race: '@race_2013_1'
+        driver: '@driver_webber'
+        position: 6
+        points: !!float 8
+        wins: 0
+    driver_standings_2013_1_7:
+        race: '@race_2013_1'
+        driver: '@driver_sutil'
+        position: 7
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_1_8:
+        race: '@race_2013_1'
+        driver: '@driver_resta'
+        position: 8
+        points: !!float 4
+        wins: 0
+    driver_standings_2013_1_9:
+        race: '@race_2013_1'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 2
+        wins: 0
+    driver_standings_2013_1_10:
+        race: '@race_2013_1'
+        driver: '@driver_grosjean'
+        position: 10
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_1_11:
+        race: '@race_2013_1'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_12:
+        race: '@race_2013_1'
+        driver: '@driver_vergne'
+        position: 12
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_13:
+        race: '@race_2013_1'
+        driver: '@driver_gutierrez'
+        position: 13
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_14:
+        race: '@race_2013_1'
+        driver: '@driver_bottas'
+        position: 14
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_15:
+        race: '@race_2013_1'
+        driver: '@driver_jules_bianchi'
+        position: 15
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_16:
+        race: '@race_2013_1'
+        driver: '@driver_pic'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_17:
+        race: '@race_2013_1'
+        driver: '@driver_chilton'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_18:
+        race: '@race_2013_1'
+        driver: '@driver_garde'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_19:
+        race: '@race_2013_1'
+        driver: '@driver_ricciardo'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_20:
+        race: '@race_2013_1'
+        driver: '@driver_rosberg'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_21:
+        race: '@race_2013_1'
+        driver: '@driver_maldonado'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_1_22:
+        race: '@race_2013_1'
+        driver: '@driver_hulkenberg'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_1:
+        race: '@race_2013_2'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 40
+        wins: 1
+    driver_standings_2013_2_2:
+        race: '@race_2013_2'
+        driver: '@driver_raikkonen'
+        position: 2
+        points: !!float 31
+        wins: 1
+    driver_standings_2013_2_3:
+        race: '@race_2013_2'
+        driver: '@driver_webber'
+        position: 3
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_2_4:
+        race: '@race_2013_2'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 25
+        wins: 0
+    driver_standings_2013_2_5:
+        race: '@race_2013_2'
+        driver: '@driver_massa'
+        position: 5
+        points: !!float 22
+        wins: 0
+    driver_standings_2013_2_6:
+        race: '@race_2013_2'
+        driver: '@driver_alonso'
+        position: 6
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_2_7:
+        race: '@race_2013_2'
+        driver: '@driver_rosberg'
+        position: 7
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_2_8:
+        race: '@race_2013_2'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 9
+        wins: 0
+    driver_standings_2013_2_9:
+        race: '@race_2013_2'
+        driver: '@driver_sutil'
+        position: 9
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_2_10:
+        race: '@race_2013_2'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 4
+        wins: 0
+    driver_standings_2013_2_11:
+        race: '@race_2013_2'
+        driver: '@driver_hulkenberg'
+        position: 11
+        points: !!float 4
+        wins: 0
+    driver_standings_2013_2_12:
+        race: '@race_2013_2'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 2
+        wins: 0
+    driver_standings_2013_2_13:
+        race: '@race_2013_2'
+        driver: '@driver_button'
+        position: 13
+        points: !!float 2
+        wins: 0
+    driver_standings_2013_2_14:
+        race: '@race_2013_2'
+        driver: '@driver_vergne'
+        position: 14
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_2_15:
+        race: '@race_2013_2'
+        driver: '@driver_bottas'
+        position: 15
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_16:
+        race: '@race_2013_2'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_17:
+        race: '@race_2013_2'
+        driver: '@driver_jules_bianchi'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_18:
+        race: '@race_2013_2'
+        driver: '@driver_pic'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_19:
+        race: '@race_2013_2'
+        driver: '@driver_garde'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_20:
+        race: '@race_2013_2'
+        driver: '@driver_chilton'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_21:
+        race: '@race_2013_2'
+        driver: '@driver_ricciardo'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_2_22:
+        race: '@race_2013_2'
+        driver: '@driver_maldonado'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_1:
+        race: '@race_2013_3'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 52
+        wins: 1
+    driver_standings_2013_3_2:
+        race: '@race_2013_3'
+        driver: '@driver_raikkonen'
+        position: 2
+        points: !!float 49
+        wins: 1
+    driver_standings_2013_3_3:
+        race: '@race_2013_3'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 43
+        wins: 1
+    driver_standings_2013_3_4:
+        race: '@race_2013_3'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 40
+        wins: 0
+    driver_standings_2013_3_5:
+        race: '@race_2013_3'
+        driver: '@driver_massa'
+        position: 5
+        points: !!float 30
+        wins: 0
+    driver_standings_2013_3_6:
+        race: '@race_2013_3'
+        driver: '@driver_webber'
+        position: 6
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_3_7:
+        race: '@race_2013_3'
+        driver: '@driver_rosberg'
+        position: 7
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_3_8:
+        race: '@race_2013_3'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_3_9:
+        race: '@race_2013_3'
+        driver: '@driver_grosjean'
+        position: 9
+        points: !!float 11
+        wins: 0
+    driver_standings_2013_3_10:
+        race: '@race_2013_3'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 8
+        wins: 0
+    driver_standings_2013_3_11:
+        race: '@race_2013_3'
+        driver: '@driver_ricciardo'
+        position: 11
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_3_12:
+        race: '@race_2013_3'
+        driver: '@driver_sutil'
+        position: 12
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_3_13:
+        race: '@race_2013_3'
+        driver: '@driver_hulkenberg'
+        position: 13
+        points: !!float 5
+        wins: 0
+    driver_standings_2013_3_14:
+        race: '@race_2013_3'
+        driver: '@driver_perez'
+        position: 14
+        points: !!float 2
+        wins: 0
+    driver_standings_2013_3_15:
+        race: '@race_2013_3'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_3_16:
+        race: '@race_2013_3'
+        driver: '@driver_bottas'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_17:
+        race: '@race_2013_3'
+        driver: '@driver_gutierrez'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_18:
+        race: '@race_2013_3'
+        driver: '@driver_jules_bianchi'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_19:
+        race: '@race_2013_3'
+        driver: '@driver_pic'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_20:
+        race: '@race_2013_3'
+        driver: '@driver_maldonado'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_21:
+        race: '@race_2013_3'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_3_22:
+        race: '@race_2013_3'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_1:
+        race: '@race_2013_4'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 77
+        wins: 2
+    driver_standings_2013_4_2:
+        race: '@race_2013_4'
+        driver: '@driver_raikkonen'
+        position: 2
+        points: !!float 67
+        wins: 1
+    driver_standings_2013_4_3:
+        race: '@race_2013_4'
+        driver: '@driver_hamilton'
+        position: 3
+        points: !!float 50
+        wins: 0
+    driver_standings_2013_4_4:
+        race: '@race_2013_4'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 47
+        wins: 1
+    driver_standings_2013_4_5:
+        race: '@race_2013_4'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 32
+        wins: 0
+    driver_standings_2013_4_6:
+        race: '@race_2013_4'
+        driver: '@driver_massa'
+        position: 6
+        points: !!float 30
+        wins: 0
+    driver_standings_2013_4_7:
+        race: '@race_2013_4'
+        driver: '@driver_grosjean'
+        position: 7
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_4_8:
+        race: '@race_2013_4'
+        driver: '@driver_resta'
+        position: 8
+        points: !!float 20
+        wins: 0
+    driver_standings_2013_4_9:
+        race: '@race_2013_4'
+        driver: '@driver_rosberg'
+        position: 9
+        points: !!float 14
+        wins: 0
+    driver_standings_2013_4_10:
+        race: '@race_2013_4'
+        driver: '@driver_button'
+        position: 10
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_4_11:
+        race: '@race_2013_4'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 10
+        wins: 0
+    driver_standings_2013_4_12:
+        race: '@race_2013_4'
+        driver: '@driver_sutil'
+        position: 12
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_4_13:
+        race: '@race_2013_4'
+        driver: '@driver_ricciardo'
+        position: 13
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_4_14:
+        race: '@race_2013_4'
+        driver: '@driver_hulkenberg'
+        position: 14
+        points: !!float 5
+        wins: 0
+    driver_standings_2013_4_15:
+        race: '@race_2013_4'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_4_16:
+        race: '@race_2013_4'
+        driver: '@driver_bottas'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_17:
+        race: '@race_2013_4'
+        driver: '@driver_maldonado'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_18:
+        race: '@race_2013_4'
+        driver: '@driver_gutierrez'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_19:
+        race: '@race_2013_4'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_20:
+        race: '@race_2013_4'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_21:
+        race: '@race_2013_4'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_4_22:
+        race: '@race_2013_4'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_1:
+        race: '@race_2013_5'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 89
+        wins: 2
+    driver_standings_2013_5_2:
+        race: '@race_2013_5'
+        driver: '@driver_raikkonen'
+        position: 2
+        points: !!float 85
+        wins: 1
+    driver_standings_2013_5_3:
+        race: '@race_2013_5'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 72
+        wins: 2
+    driver_standings_2013_5_4:
+        race: '@race_2013_5'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 50
+        wins: 0
+    driver_standings_2013_5_5:
+        race: '@race_2013_5'
+        driver: '@driver_massa'
+        position: 5
+        points: !!float 45
+        wins: 0
+    driver_standings_2013_5_6:
+        race: '@race_2013_5'
+        driver: '@driver_webber'
+        position: 6
+        points: !!float 42
+        wins: 0
+    driver_standings_2013_5_7:
+        race: '@race_2013_5'
+        driver: '@driver_grosjean'
+        position: 7
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_5_8:
+        race: '@race_2013_5'
+        driver: '@driver_resta'
+        position: 8
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_5_9:
+        race: '@race_2013_5'
+        driver: '@driver_rosberg'
+        position: 9
+        points: !!float 22
+        wins: 0
+    driver_standings_2013_5_10:
+        race: '@race_2013_5'
+        driver: '@driver_button'
+        position: 10
+        points: !!float 17
+        wins: 0
+    driver_standings_2013_5_11:
+        race: '@race_2013_5'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_5_12:
+        race: '@race_2013_5'
+        driver: '@driver_ricciardo'
+        position: 12
+        points: !!float 7
+        wins: 0
+    driver_standings_2013_5_13:
+        race: '@race_2013_5'
+        driver: '@driver_sutil'
+        position: 13
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_5_14:
+        race: '@race_2013_5'
+        driver: '@driver_hulkenberg'
+        position: 14
+        points: !!float 5
+        wins: 0
+    driver_standings_2013_5_15:
+        race: '@race_2013_5'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_5_16:
+        race: '@race_2013_5'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_17:
+        race: '@race_2013_5'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_18:
+        race: '@race_2013_5'
+        driver: '@driver_maldonado'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_19:
+        race: '@race_2013_5'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_20:
+        race: '@race_2013_5'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_21:
+        race: '@race_2013_5'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_5_22:
+        race: '@race_2013_5'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_1:
+        race: '@race_2013_6'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 107
+        wins: 2
+    driver_standings_2013_6_2:
+        race: '@race_2013_6'
+        driver: '@driver_raikkonen'
+        position: 2
+        points: !!float 86
+        wins: 1
+    driver_standings_2013_6_3:
+        race: '@race_2013_6'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 78
+        wins: 2
+    driver_standings_2013_6_4:
+        race: '@race_2013_6'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 62
+        wins: 0
+    driver_standings_2013_6_5:
+        race: '@race_2013_6'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 57
+        wins: 0
+    driver_standings_2013_6_6:
+        race: '@race_2013_6'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 47
+        wins: 1
+    driver_standings_2013_6_7:
+        race: '@race_2013_6'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 45
+        wins: 0
+    driver_standings_2013_6_8:
+        race: '@race_2013_6'
+        driver: '@driver_resta'
+        position: 8
+        points: !!float 28
+        wins: 0
+    driver_standings_2013_6_9:
+        race: '@race_2013_6'
+        driver: '@driver_grosjean'
+        position: 9
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_6_10:
+        race: '@race_2013_6'
+        driver: '@driver_button'
+        position: 10
+        points: !!float 25
+        wins: 0
+    driver_standings_2013_6_11:
+        race: '@race_2013_6'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 16
+        wins: 0
+    driver_standings_2013_6_12:
+        race: '@race_2013_6'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_6_13:
+        race: '@race_2013_6'
+        driver: '@driver_ricciardo'
+        position: 13
+        points: !!float 7
+        wins: 0
+    driver_standings_2013_6_14:
+        race: '@race_2013_6'
+        driver: '@driver_hulkenberg'
+        position: 14
+        points: !!float 5
+        wins: 0
+    driver_standings_2013_6_15:
+        race: '@race_2013_6'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 5
+        wins: 0
+    driver_standings_2013_6_16:
+        race: '@race_2013_6'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_17:
+        race: '@race_2013_6'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_18:
+        race: '@race_2013_6'
+        driver: '@driver_maldonado'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_19:
+        race: '@race_2013_6'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_20:
+        race: '@race_2013_6'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_21:
+        race: '@race_2013_6'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_6_22:
+        race: '@race_2013_6'
+        driver: '@driver_garde'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_1:
+        race: '@race_2013_7'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 132
+        wins: 3
+    driver_standings_2013_7_2:
+        race: '@race_2013_7'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 96
+        wins: 2
+    driver_standings_2013_7_3:
+        race: '@race_2013_7'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 88
+        wins: 1
+    driver_standings_2013_7_4:
+        race: '@race_2013_7'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 77
+        wins: 0
+    driver_standings_2013_7_5:
+        race: '@race_2013_7'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 69
+        wins: 0
+    driver_standings_2013_7_6:
+        race: '@race_2013_7'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 57
+        wins: 1
+    driver_standings_2013_7_7:
+        race: '@race_2013_7'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 49
+        wins: 0
+    driver_standings_2013_7_8:
+        race: '@race_2013_7'
+        driver: '@driver_resta'
+        position: 8
+        points: !!float 34
+        wins: 0
+    driver_standings_2013_7_9:
+        race: '@race_2013_7'
+        driver: '@driver_grosjean'
+        position: 9
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_7_10:
+        race: '@race_2013_7'
+        driver: '@driver_button'
+        position: 10
+        points: !!float 25
+        wins: 0
+    driver_standings_2013_7_11:
+        race: '@race_2013_7'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 17
+        wins: 0
+    driver_standings_2013_7_12:
+        race: '@race_2013_7'
+        driver: '@driver_vergne'
+        position: 12
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_7_13:
+        race: '@race_2013_7'
+        driver: '@driver_perez'
+        position: 13
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_7_14:
+        race: '@race_2013_7'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 7
+        wins: 0
+    driver_standings_2013_7_15:
+        race: '@race_2013_7'
+        driver: '@driver_hulkenberg'
+        position: 15
+        points: !!float 5
+        wins: 0
+    driver_standings_2013_7_16:
+        race: '@race_2013_7'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_17:
+        race: '@race_2013_7'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_18:
+        race: '@race_2013_7'
+        driver: '@driver_maldonado'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_19:
+        race: '@race_2013_7'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_20:
+        race: '@race_2013_7'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_21:
+        race: '@race_2013_7'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_7_22:
+        race: '@race_2013_7'
+        driver: '@driver_garde'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_1:
+        race: '@race_2013_8'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 132
+        wins: 3
+    driver_standings_2013_8_2:
+        race: '@race_2013_8'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 111
+        wins: 2
+    driver_standings_2013_8_3:
+        race: '@race_2013_8'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 98
+        wins: 1
+    driver_standings_2013_8_4:
+        race: '@race_2013_8'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 89
+        wins: 0
+    driver_standings_2013_8_5:
+        race: '@race_2013_8'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 87
+        wins: 0
+    driver_standings_2013_8_6:
+        race: '@race_2013_8'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 82
+        wins: 2
+    driver_standings_2013_8_7:
+        race: '@race_2013_8'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 57
+        wins: 0
+    driver_standings_2013_8_8:
+        race: '@race_2013_8'
+        driver: '@driver_resta'
+        position: 8
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_8_9:
+        race: '@race_2013_8'
+        driver: '@driver_grosjean'
+        position: 9
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_8_10:
+        race: '@race_2013_8'
+        driver: '@driver_button'
+        position: 10
+        points: !!float 25
+        wins: 0
+    driver_standings_2013_8_11:
+        race: '@race_2013_8'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 23
+        wins: 0
+    driver_standings_2013_8_12:
+        race: '@race_2013_8'
+        driver: '@driver_vergne'
+        position: 12
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_8_13:
+        race: '@race_2013_8'
+        driver: '@driver_perez'
+        position: 13
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_8_14:
+        race: '@race_2013_8'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 11
+        wins: 0
+    driver_standings_2013_8_15:
+        race: '@race_2013_8'
+        driver: '@driver_hulkenberg'
+        position: 15
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_8_16:
+        race: '@race_2013_8'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_17:
+        race: '@race_2013_8'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_18:
+        race: '@race_2013_8'
+        driver: '@driver_gutierrez'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_19:
+        race: '@race_2013_8'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_20:
+        race: '@race_2013_8'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_21:
+        race: '@race_2013_8'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_8_22:
+        race: '@race_2013_8'
+        driver: '@driver_garde'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_1:
+        race: '@race_2013_9'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 157
+        wins: 4
+    driver_standings_2013_9_2:
+        race: '@race_2013_9'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 123
+        wins: 2
+    driver_standings_2013_9_3:
+        race: '@race_2013_9'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 116
+        wins: 1
+    driver_standings_2013_9_4:
+        race: '@race_2013_9'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 99
+        wins: 0
+    driver_standings_2013_9_5:
+        race: '@race_2013_9'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 93
+        wins: 0
+    driver_standings_2013_9_6:
+        race: '@race_2013_9'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 84
+        wins: 2
+    driver_standings_2013_9_7:
+        race: '@race_2013_9'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 57
+        wins: 0
+    driver_standings_2013_9_8:
+        race: '@race_2013_9'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 41
+        wins: 0
+    driver_standings_2013_9_9:
+        race: '@race_2013_9'
+        driver: '@driver_resta'
+        position: 9
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_9_10:
+        race: '@race_2013_9'
+        driver: '@driver_button'
+        position: 10
+        points: !!float 33
+        wins: 0
+    driver_standings_2013_9_11:
+        race: '@race_2013_9'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 23
+        wins: 0
+    driver_standings_2013_9_12:
+        race: '@race_2013_9'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 16
+        wins: 0
+    driver_standings_2013_9_13:
+        race: '@race_2013_9'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_9_14:
+        race: '@race_2013_9'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 11
+        wins: 0
+    driver_standings_2013_9_15:
+        race: '@race_2013_9'
+        driver: '@driver_hulkenberg'
+        position: 15
+        points: !!float 7
+        wins: 0
+    driver_standings_2013_9_16:
+        race: '@race_2013_9'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_17:
+        race: '@race_2013_9'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_18:
+        race: '@race_2013_9'
+        driver: '@driver_gutierrez'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_19:
+        race: '@race_2013_9'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_20:
+        race: '@race_2013_9'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_21:
+        race: '@race_2013_9'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_9_22:
+        race: '@race_2013_9'
+        driver: '@driver_garde'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_10_1:
+        race: '@race_2013_10'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 172
+        wins: 4
+    driver_standings_2013_10_2:
+        race: '@race_2013_10'
+        driver: '@driver_raikkonen'
+        position: 2
+        points: !!float 134
+        wins: 1
+    driver_standings_2013_10_3:
+        race: '@race_2013_10'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 133
+        wins: 2
+    driver_standings_2013_10_4:
+        race: '@race_2013_10'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 124
+        wins: 1
+    driver_standings_2013_10_5:
+        race: '@race_2013_10'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 105
+        wins: 0
+    driver_standings_2013_10_6:
+        race: '@race_2013_10'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 84
+        wins: 2
+    driver_standings_2013_10_7:
+        race: '@race_2013_10'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 61
+        wins: 0
+    driver_standings_2013_10_8:
+        race: '@race_2013_10'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 49
+        wins: 0
+    driver_standings_2013_10_9:
+        race: '@race_2013_10'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 39
+        wins: 0
+    driver_standings_2013_10_10:
+        race: '@race_2013_10'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_10_11:
+        race: '@race_2013_10'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 23
+        wins: 0
+    driver_standings_2013_10_12:
+        race: '@race_2013_10'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_10_13:
+        race: '@race_2013_10'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_10_14:
+        race: '@race_2013_10'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 11
+        wins: 0
+    driver_standings_2013_10_15:
+        race: '@race_2013_10'
+        driver: '@driver_hulkenberg'
+        position: 15
+        points: !!float 7
+        wins: 0
+    driver_standings_2013_10_16:
+        race: '@race_2013_10'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_10_17:
+        race: '@race_2013_10'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_10_18:
+        race: '@race_2013_10'
+        driver: '@driver_gutierrez'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_10_19:
+        race: '@race_2013_10'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_10_20:
+        race: '@race_2013_10'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_10_21:
+        race: '@race_2013_10'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_10_22:
+        race: '@race_2013_10'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_11_1:
+        race: '@race_2013_11'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 197
+        wins: 5
+    driver_standings_2013_11_2:
+        race: '@race_2013_11'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 151
+        wins: 2
+    driver_standings_2013_11_3:
+        race: '@race_2013_11'
+        driver: '@driver_hamilton'
+        position: 3
+        points: !!float 139
+        wins: 1
+    driver_standings_2013_11_4:
+        race: '@race_2013_11'
+        driver: '@driver_raikkonen'
+        position: 4
+        points: !!float 134
+        wins: 1
+    driver_standings_2013_11_5:
+        race: '@race_2013_11'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 115
+        wins: 0
+    driver_standings_2013_11_6:
+        race: '@race_2013_11'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 96
+        wins: 2
+    driver_standings_2013_11_7:
+        race: '@race_2013_11'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 67
+        wins: 0
+    driver_standings_2013_11_8:
+        race: '@race_2013_11'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 53
+        wins: 0
+    driver_standings_2013_11_9:
+        race: '@race_2013_11'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 47
+        wins: 0
+    driver_standings_2013_11_10:
+        race: '@race_2013_11'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_11_11:
+        race: '@race_2013_11'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 25
+        wins: 0
+    driver_standings_2013_11_12:
+        race: '@race_2013_11'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_11_13:
+        race: '@race_2013_11'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_11_14:
+        race: '@race_2013_11'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 12
+        wins: 0
+    driver_standings_2013_11_15:
+        race: '@race_2013_11'
+        driver: '@driver_hulkenberg'
+        position: 15
+        points: !!float 7
+        wins: 0
+    driver_standings_2013_11_16:
+        race: '@race_2013_11'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_11_17:
+        race: '@race_2013_11'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_11_18:
+        race: '@race_2013_11'
+        driver: '@driver_gutierrez'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_11_19:
+        race: '@race_2013_11'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_11_20:
+        race: '@race_2013_11'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_11_21:
+        race: '@race_2013_11'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_11_22:
+        race: '@race_2013_11'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_12_1:
+        race: '@race_2013_12'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 222
+        wins: 6
+    driver_standings_2013_12_2:
+        race: '@race_2013_12'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 169
+        wins: 2
+    driver_standings_2013_12_3:
+        race: '@race_2013_12'
+        driver: '@driver_hamilton'
+        position: 3
+        points: !!float 141
+        wins: 1
+    driver_standings_2013_12_4:
+        race: '@race_2013_12'
+        driver: '@driver_raikkonen'
+        position: 4
+        points: !!float 134
+        wins: 1
+    driver_standings_2013_12_5:
+        race: '@race_2013_12'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 130
+        wins: 0
+    driver_standings_2013_12_6:
+        race: '@race_2013_12'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 104
+        wins: 2
+    driver_standings_2013_12_7:
+        race: '@race_2013_12'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 79
+        wins: 0
+    driver_standings_2013_12_8:
+        race: '@race_2013_12'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 57
+        wins: 0
+    driver_standings_2013_12_9:
+        race: '@race_2013_12'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 48
+        wins: 0
+    driver_standings_2013_12_10:
+        race: '@race_2013_12'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_12_11:
+        race: '@race_2013_12'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 25
+        wins: 0
+    driver_standings_2013_12_12:
+        race: '@race_2013_12'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_12_13:
+        race: '@race_2013_12'
+        driver: '@driver_ricciardo'
+        position: 13
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_12_14:
+        race: '@race_2013_12'
+        driver: '@driver_hulkenberg'
+        position: 14
+        points: !!float 17
+        wins: 0
+    driver_standings_2013_12_15:
+        race: '@race_2013_12'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_12_16:
+        race: '@race_2013_12'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_12_17:
+        race: '@race_2013_12'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_12_18:
+        race: '@race_2013_12'
+        driver: '@driver_gutierrez'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_12_19:
+        race: '@race_2013_12'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_12_20:
+        race: '@race_2013_12'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_12_21:
+        race: '@race_2013_12'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_12_22:
+        race: '@race_2013_12'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_13_1:
+        race: '@race_2013_13'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 247
+        wins: 7
+    driver_standings_2013_13_2:
+        race: '@race_2013_13'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 187
+        wins: 2
+    driver_standings_2013_13_3:
+        race: '@race_2013_13'
+        driver: '@driver_hamilton'
+        position: 3
+        points: !!float 151
+        wins: 1
+    driver_standings_2013_13_4:
+        race: '@race_2013_13'
+        driver: '@driver_raikkonen'
+        position: 4
+        points: !!float 149
+        wins: 1
+    driver_standings_2013_13_5:
+        race: '@race_2013_13'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 130
+        wins: 0
+    driver_standings_2013_13_6:
+        race: '@race_2013_13'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 116
+        wins: 2
+    driver_standings_2013_13_7:
+        race: '@race_2013_13'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 87
+        wins: 0
+    driver_standings_2013_13_8:
+        race: '@race_2013_13'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 57
+        wins: 0
+    driver_standings_2013_13_9:
+        race: '@race_2013_13'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 54
+        wins: 0
+    driver_standings_2013_13_10:
+        race: '@race_2013_13'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_13_11:
+        race: '@race_2013_13'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_13_12:
+        race: '@race_2013_13'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 22
+        wins: 0
+    driver_standings_2013_13_13:
+        race: '@race_2013_13'
+        driver: '@driver_hulkenberg'
+        position: 13
+        points: !!float 19
+        wins: 0
+    driver_standings_2013_13_14:
+        race: '@race_2013_13'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_13_15:
+        race: '@race_2013_13'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_13_16:
+        race: '@race_2013_13'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_13_17:
+        race: '@race_2013_13'
+        driver: '@driver_gutierrez'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_13_18:
+        race: '@race_2013_13'
+        driver: '@driver_bottas'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_13_19:
+        race: '@race_2013_13'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_13_20:
+        race: '@race_2013_13'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_13_21:
+        race: '@race_2013_13'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_13_22:
+        race: '@race_2013_13'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_14_1:
+        race: '@race_2013_14'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 272
+        wins: 8
+    driver_standings_2013_14_2:
+        race: '@race_2013_14'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 195
+        wins: 2
+    driver_standings_2013_14_3:
+        race: '@race_2013_14'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 167
+        wins: 1
+    driver_standings_2013_14_4:
+        race: '@race_2013_14'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 161
+        wins: 1
+    driver_standings_2013_14_5:
+        race: '@race_2013_14'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 130
+        wins: 0
+    driver_standings_2013_14_6:
+        race: '@race_2013_14'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 122
+        wins: 2
+    driver_standings_2013_14_7:
+        race: '@race_2013_14'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 89
+        wins: 0
+    driver_standings_2013_14_8:
+        race: '@race_2013_14'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 72
+        wins: 0
+    driver_standings_2013_14_9:
+        race: '@race_2013_14'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 58
+        wins: 0
+    driver_standings_2013_14_10:
+        race: '@race_2013_14'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_14_11:
+        race: '@race_2013_14'
+        driver: '@driver_hulkenberg'
+        position: 11
+        points: !!float 31
+        wins: 0
+    driver_standings_2013_14_12:
+        race: '@race_2013_14'
+        driver: '@driver_sutil'
+        position: 12
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_14_13:
+        race: '@race_2013_14'
+        driver: '@driver_perez'
+        position: 13
+        points: !!float 23
+        wins: 0
+    driver_standings_2013_14_14:
+        race: '@race_2013_14'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_14_15:
+        race: '@race_2013_14'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_14_16:
+        race: '@race_2013_14'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_14_17:
+        race: '@race_2013_14'
+        driver: '@driver_gutierrez'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_14_18:
+        race: '@race_2013_14'
+        driver: '@driver_bottas'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_14_19:
+        race: '@race_2013_14'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_14_20:
+        race: '@race_2013_14'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_14_21:
+        race: '@race_2013_14'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_14_22:
+        race: '@race_2013_14'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_15_1:
+        race: '@race_2013_15'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 297
+        wins: 9
+    driver_standings_2013_15_2:
+        race: '@race_2013_15'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 207
+        wins: 2
+    driver_standings_2013_15_3:
+        race: '@race_2013_15'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 177
+        wins: 1
+    driver_standings_2013_15_4:
+        race: '@race_2013_15'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 161
+        wins: 1
+    driver_standings_2013_15_5:
+        race: '@race_2013_15'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 148
+        wins: 0
+    driver_standings_2013_15_6:
+        race: '@race_2013_15'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 126
+        wins: 2
+    driver_standings_2013_15_7:
+        race: '@race_2013_15'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 90
+        wins: 0
+    driver_standings_2013_15_8:
+        race: '@race_2013_15'
+        driver: '@driver_grosjean'
+        position: 8
+        points: !!float 87
+        wins: 0
+    driver_standings_2013_15_9:
+        race: '@race_2013_15'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 60
+        wins: 0
+    driver_standings_2013_15_10:
+        race: '@race_2013_15'
+        driver: '@driver_hulkenberg'
+        position: 10
+        points: !!float 39
+        wins: 0
+    driver_standings_2013_15_11:
+        race: '@race_2013_15'
+        driver: '@driver_resta'
+        position: 11
+        points: !!float 36
+        wins: 0
+    driver_standings_2013_15_12:
+        race: '@race_2013_15'
+        driver: '@driver_sutil'
+        position: 12
+        points: !!float 26
+        wins: 0
+    driver_standings_2013_15_13:
+        race: '@race_2013_15'
+        driver: '@driver_perez'
+        position: 13
+        points: !!float 23
+        wins: 0
+    driver_standings_2013_15_14:
+        race: '@race_2013_15'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 18
+        wins: 0
+    driver_standings_2013_15_15:
+        race: '@race_2013_15'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_15_16:
+        race: '@race_2013_15'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_15_17:
+        race: '@race_2013_15'
+        driver: '@driver_maldonado'
+        position: 17
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_15_18:
+        race: '@race_2013_15'
+        driver: '@driver_bottas'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_15_19:
+        race: '@race_2013_15'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_15_20:
+        race: '@race_2013_15'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_15_21:
+        race: '@race_2013_15'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_15_22:
+        race: '@race_2013_15'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_16_1:
+        race: '@race_2013_16'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 322
+        wins: 10
+    driver_standings_2013_16_2:
+        race: '@race_2013_16'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 207
+        wins: 2
+    driver_standings_2013_16_3:
+        race: '@race_2013_16'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 183
+        wins: 1
+    driver_standings_2013_16_4:
+        race: '@race_2013_16'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 169
+        wins: 1
+    driver_standings_2013_16_5:
+        race: '@race_2013_16'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 148
+        wins: 0
+    driver_standings_2013_16_6:
+        race: '@race_2013_16'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 144
+        wins: 2
+    driver_standings_2013_16_7:
+        race: '@race_2013_16'
+        driver: '@driver_grosjean'
+        position: 7
+        points: !!float 102
+        wins: 0
+    driver_standings_2013_16_8:
+        race: '@race_2013_16'
+        driver: '@driver_massa'
+        position: 8
+        points: !!float 102
+        wins: 0
+    driver_standings_2013_16_9:
+        race: '@race_2013_16'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 60
+        wins: 0
+    driver_standings_2013_16_10:
+        race: '@race_2013_16'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 40
+        wins: 0
+    driver_standings_2013_16_11:
+        race: '@race_2013_16'
+        driver: '@driver_hulkenberg'
+        position: 11
+        points: !!float 39
+        wins: 0
+    driver_standings_2013_16_12:
+        race: '@race_2013_16'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 33
+        wins: 0
+    driver_standings_2013_16_13:
+        race: '@race_2013_16'
+        driver: '@driver_sutil'
+        position: 13
+        points: !!float 28
+        wins: 0
+    driver_standings_2013_16_14:
+        race: '@race_2013_16'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 19
+        wins: 0
+    driver_standings_2013_16_15:
+        race: '@race_2013_16'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_16_16:
+        race: '@race_2013_16'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_16_17:
+        race: '@race_2013_16'
+        driver: '@driver_maldonado'
+        position: 17
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_16_18:
+        race: '@race_2013_16'
+        driver: '@driver_bottas'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_16_19:
+        race: '@race_2013_16'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_16_20:
+        race: '@race_2013_16'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_16_21:
+        race: '@race_2013_16'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_16_22:
+        race: '@race_2013_16'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_17_1:
+        race: '@race_2013_17'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 347
+        wins: 11
+    driver_standings_2013_17_2:
+        race: '@race_2013_17'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 217
+        wins: 2
+    driver_standings_2013_17_3:
+        race: '@race_2013_17'
+        driver: '@driver_raikkonen'
+        position: 3
+        points: !!float 183
+        wins: 1
+    driver_standings_2013_17_4:
+        race: '@race_2013_17'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 175
+        wins: 1
+    driver_standings_2013_17_5:
+        race: '@race_2013_17'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 166
+        wins: 0
+    driver_standings_2013_17_6:
+        race: '@race_2013_17'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 159
+        wins: 2
+    driver_standings_2013_17_7:
+        race: '@race_2013_17'
+        driver: '@driver_grosjean'
+        position: 7
+        points: !!float 114
+        wins: 0
+    driver_standings_2013_17_8:
+        race: '@race_2013_17'
+        driver: '@driver_massa'
+        position: 8
+        points: !!float 106
+        wins: 0
+    driver_standings_2013_17_9:
+        race: '@race_2013_17'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 60
+        wins: 0
+    driver_standings_2013_17_10:
+        race: '@race_2013_17'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 48
+        wins: 0
+    driver_standings_2013_17_11:
+        race: '@race_2013_17'
+        driver: '@driver_hulkenberg'
+        position: 11
+        points: !!float 39
+        wins: 0
+    driver_standings_2013_17_12:
+        race: '@race_2013_17'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 35
+        wins: 0
+    driver_standings_2013_17_13:
+        race: '@race_2013_17'
+        driver: '@driver_sutil'
+        position: 13
+        points: !!float 29
+        wins: 0
+    driver_standings_2013_17_14:
+        race: '@race_2013_17'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 19
+        wins: 0
+    driver_standings_2013_17_15:
+        race: '@race_2013_17'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_17_16:
+        race: '@race_2013_17'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_17_17:
+        race: '@race_2013_17'
+        driver: '@driver_maldonado'
+        position: 17
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_17_18:
+        race: '@race_2013_17'
+        driver: '@driver_bottas'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_17_19:
+        race: '@race_2013_17'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_17_20:
+        race: '@race_2013_17'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_17_21:
+        race: '@race_2013_17'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_17_22:
+        race: '@race_2013_17'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_18_1:
+        race: '@race_2013_18'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 372
+        wins: 12
+    driver_standings_2013_18_2:
+        race: '@race_2013_18'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 227
+        wins: 2
+    driver_standings_2013_18_3:
+        race: '@race_2013_18'
+        driver: '@driver_hamilton'
+        position: 3
+        points: !!float 187
+        wins: 1
+    driver_standings_2013_18_4:
+        race: '@race_2013_18'
+        driver: '@driver_raikkonen'
+        position: 4
+        points: !!float 183
+        wins: 1
+    driver_standings_2013_18_5:
+        race: '@race_2013_18'
+        driver: '@driver_webber'
+        position: 5
+        points: !!float 181
+        wins: 0
+    driver_standings_2013_18_6:
+        race: '@race_2013_18'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 161
+        wins: 2
+    driver_standings_2013_18_7:
+        race: '@race_2013_18'
+        driver: '@driver_grosjean'
+        position: 7
+        points: !!float 132
+        wins: 0
+    driver_standings_2013_18_8:
+        race: '@race_2013_18'
+        driver: '@driver_massa'
+        position: 8
+        points: !!float 106
+        wins: 0
+    driver_standings_2013_18_9:
+        race: '@race_2013_18'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 61
+        wins: 0
+    driver_standings_2013_18_10:
+        race: '@race_2013_18'
+        driver: '@driver_resta'
+        position: 10
+        points: !!float 48
+        wins: 0
+    driver_standings_2013_18_11:
+        race: '@race_2013_18'
+        driver: '@driver_hulkenberg'
+        position: 11
+        points: !!float 47
+        wins: 0
+    driver_standings_2013_18_12:
+        race: '@race_2013_18'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 41
+        wins: 0
+    driver_standings_2013_18_13:
+        race: '@race_2013_18'
+        driver: '@driver_sutil'
+        position: 13
+        points: !!float 29
+        wins: 0
+    driver_standings_2013_18_14:
+        race: '@race_2013_18'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 19
+        wins: 0
+    driver_standings_2013_18_15:
+        race: '@race_2013_18'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_18_16:
+        race: '@race_2013_18'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_18_17:
+        race: '@race_2013_18'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 4
+        wins: 0
+    driver_standings_2013_18_18:
+        race: '@race_2013_18'
+        driver: '@driver_maldonado'
+        position: 18
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_18_19:
+        race: '@race_2013_18'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_18_20:
+        race: '@race_2013_18'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_18_21:
+        race: '@race_2013_18'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_18_22:
+        race: '@race_2013_18'
+        driver: '@driver_chilton'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_18_23:
+        race: '@race_2013_18'
+        driver: '@driver_kovalainen'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_19_1:
+        race: '@race_2013_19'
+        driver: '@driver_vettel'
+        position: 1
+        points: !!float 397
+        wins: 13
+    driver_standings_2013_19_2:
+        race: '@race_2013_19'
+        driver: '@driver_alonso'
+        position: 2
+        points: !!float 242
+        wins: 2
+    driver_standings_2013_19_3:
+        race: '@race_2013_19'
+        driver: '@driver_webber'
+        position: 3
+        points: !!float 199
+        wins: 0
+    driver_standings_2013_19_4:
+        race: '@race_2013_19'
+        driver: '@driver_hamilton'
+        position: 4
+        points: !!float 189
+        wins: 1
+    driver_standings_2013_19_5:
+        race: '@race_2013_19'
+        driver: '@driver_raikkonen'
+        position: 5
+        points: !!float 183
+        wins: 1
+    driver_standings_2013_19_6:
+        race: '@race_2013_19'
+        driver: '@driver_rosberg'
+        position: 6
+        points: !!float 171
+        wins: 2
+    driver_standings_2013_19_7:
+        race: '@race_2013_19'
+        driver: '@driver_grosjean'
+        position: 7
+        points: !!float 132
+        wins: 0
+    driver_standings_2013_19_8:
+        race: '@race_2013_19'
+        driver: '@driver_massa'
+        position: 8
+        points: !!float 112
+        wins: 0
+    driver_standings_2013_19_9:
+        race: '@race_2013_19'
+        driver: '@driver_button'
+        position: 9
+        points: !!float 73
+        wins: 0
+    driver_standings_2013_19_10:
+        race: '@race_2013_19'
+        driver: '@driver_hulkenberg'
+        position: 10
+        points: !!float 51
+        wins: 0
+    driver_standings_2013_19_11:
+        race: '@race_2013_19'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 49
+        wins: 0
+    driver_standings_2013_19_12:
+        race: '@race_2013_19'
+        driver: '@driver_resta'
+        position: 12
+        points: !!float 48
+        wins: 0
+    driver_standings_2013_19_13:
+        race: '@race_2013_19'
+        driver: '@driver_sutil'
+        position: 13
+        points: !!float 29
+        wins: 0
+    driver_standings_2013_19_14:
+        race: '@race_2013_19'
+        driver: '@driver_ricciardo'
+        position: 14
+        points: !!float 20
+        wins: 0
+    driver_standings_2013_19_15:
+        race: '@race_2013_19'
+        driver: '@driver_vergne'
+        position: 15
+        points: !!float 13
+        wins: 0
+    driver_standings_2013_19_16:
+        race: '@race_2013_19'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 6
+        wins: 0
+    driver_standings_2013_19_17:
+        race: '@race_2013_19'
+        driver: '@driver_bottas'
+        position: 17
+        points: !!float 4
+        wins: 0
+    driver_standings_2013_19_18:
+        race: '@race_2013_19'
+        driver: '@driver_maldonado'
+        position: 18
+        points: !!float 1
+        wins: 0
+    driver_standings_2013_19_19:
+        race: '@race_2013_19'
+        driver: '@driver_jules_bianchi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_19_20:
+        race: '@race_2013_19'
+        driver: '@driver_pic'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_19_21:
+        race: '@race_2013_19'
+        driver: '@driver_garde'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_19_22:
+        race: '@race_2013_19'
+        driver: '@driver_kovalainen'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2013_19_23:
+        race: '@race_2013_19'
+        driver: '@driver_chilton'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_1:
+        race: '@race_2014_1'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 25
+        wins: 1
+    driver_standings_2014_1_2:
+        race: '@race_2014_1'
+        driver: '@driver_kevin_magnussen'
+        position: 2
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_1_3:
+        race: '@race_2014_1'
+        driver: '@driver_button'
+        position: 3
+        points: !!float 15
+        wins: 0
+    driver_standings_2014_1_4:
+        race: '@race_2014_1'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 12
+        wins: 0
+    driver_standings_2014_1_5:
+        race: '@race_2014_1'
+        driver: '@driver_bottas'
+        position: 5
+        points: !!float 10
+        wins: 0
+    driver_standings_2014_1_6:
+        race: '@race_2014_1'
+        driver: '@driver_hulkenberg'
+        position: 6
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_1_7:
+        race: '@race_2014_1'
+        driver: '@driver_raikkonen'
+        position: 7
+        points: !!float 6
+        wins: 0
+    driver_standings_2014_1_8:
+        race: '@race_2014_1'
+        driver: '@driver_vergne'
+        position: 8
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_1_9:
+        race: '@race_2014_1'
+        driver: '@driver_kvyat'
+        position: 9
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_1_10:
+        race: '@race_2014_1'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 1
+        wins: 0
+    driver_standings_2014_1_11:
+        race: '@race_2014_1'
+        driver: '@driver_sutil'
+        position: 11
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_12:
+        race: '@race_2014_1'
+        driver: '@driver_gutierrez'
+        position: 12
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_13:
+        race: '@race_2014_1'
+        driver: '@driver_chilton'
+        position: 13
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_14:
+        race: '@race_2014_1'
+        driver: '@driver_jules_bianchi'
+        position: 14
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_15:
+        race: '@race_2014_1'
+        driver: '@driver_grosjean'
+        position: 15
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_16:
+        race: '@race_2014_1'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_17:
+        race: '@race_2014_1'
+        driver: '@driver_ericsson'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_18:
+        race: '@race_2014_1'
+        driver: '@driver_vettel'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_19:
+        race: '@race_2014_1'
+        driver: '@driver_hamilton'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_20:
+        race: '@race_2014_1'
+        driver: '@driver_massa'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_21:
+        race: '@race_2014_1'
+        driver: '@driver_kobayashi'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_1_22:
+        race: '@race_2014_1'
+        driver: '@driver_ricciardo'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_1:
+        race: '@race_2014_2'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 43
+        wins: 1
+    driver_standings_2014_2_2:
+        race: '@race_2014_2'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 25
+        wins: 1
+    driver_standings_2014_2_3:
+        race: '@race_2014_2'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 24
+        wins: 0
+    driver_standings_2014_2_4:
+        race: '@race_2014_2'
+        driver: '@driver_button'
+        position: 4
+        points: !!float 23
+        wins: 0
+    driver_standings_2014_2_5:
+        race: '@race_2014_2'
+        driver: '@driver_kevin_magnussen'
+        position: 5
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_2_6:
+        race: '@race_2014_2'
+        driver: '@driver_hulkenberg'
+        position: 6
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_2_7:
+        race: '@race_2014_2'
+        driver: '@driver_vettel'
+        position: 7
+        points: !!float 15
+        wins: 0
+    driver_standings_2014_2_8:
+        race: '@race_2014_2'
+        driver: '@driver_bottas'
+        position: 8
+        points: !!float 14
+        wins: 0
+    driver_standings_2014_2_9:
+        race: '@race_2014_2'
+        driver: '@driver_raikkonen'
+        position: 9
+        points: !!float 6
+        wins: 0
+    driver_standings_2014_2_10:
+        race: '@race_2014_2'
+        driver: '@driver_massa'
+        position: 10
+        points: !!float 6
+        wins: 0
+    driver_standings_2014_2_11:
+        race: '@race_2014_2'
+        driver: '@driver_vergne'
+        position: 11
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_2_12:
+        race: '@race_2014_2'
+        driver: '@driver_kvyat'
+        position: 12
+        points: !!float 3
+        wins: 0
+    driver_standings_2014_2_13:
+        race: '@race_2014_2'
+        driver: '@driver_perez'
+        position: 13
+        points: !!float 1
+        wins: 0
+    driver_standings_2014_2_14:
+        race: '@race_2014_2'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_15:
+        race: '@race_2014_2'
+        driver: '@driver_sutil'
+        position: 15
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_16:
+        race: '@race_2014_2'
+        driver: '@driver_gutierrez'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_17:
+        race: '@race_2014_2'
+        driver: '@driver_chilton'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_18:
+        race: '@race_2014_2'
+        driver: '@driver_kobayashi'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_19:
+        race: '@race_2014_2'
+        driver: '@driver_ericsson'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_20:
+        race: '@race_2014_2'
+        driver: '@driver_jules_bianchi'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_21:
+        race: '@race_2014_2'
+        driver: '@driver_maldonado'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_2_22:
+        race: '@race_2014_2'
+        driver: '@driver_ricciardo'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_1:
+        race: '@race_2014_3'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 61
+        wins: 1
+    driver_standings_2014_3_2:
+        race: '@race_2014_3'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 50
+        wins: 2
+    driver_standings_2014_3_3:
+        race: '@race_2014_3'
+        driver: '@driver_hulkenberg'
+        position: 3
+        points: !!float 28
+        wins: 0
+    driver_standings_2014_3_4:
+        race: '@race_2014_3'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 26
+        wins: 0
+    driver_standings_2014_3_5:
+        race: '@race_2014_3'
+        driver: '@driver_button'
+        position: 5
+        points: !!float 23
+        wins: 0
+    driver_standings_2014_3_6:
+        race: '@race_2014_3'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 23
+        wins: 0
+    driver_standings_2014_3_7:
+        race: '@race_2014_3'
+        driver: '@driver_kevin_magnussen'
+        position: 7
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_3_8:
+        race: '@race_2014_3'
+        driver: '@driver_bottas'
+        position: 8
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_3_9:
+        race: '@race_2014_3'
+        driver: '@driver_perez'
+        position: 9
+        points: !!float 16
+        wins: 0
+    driver_standings_2014_3_10:
+        race: '@race_2014_3'
+        driver: '@driver_ricciardo'
+        position: 10
+        points: !!float 12
+        wins: 0
+    driver_standings_2014_3_11:
+        race: '@race_2014_3'
+        driver: '@driver_massa'
+        position: 11
+        points: !!float 12
+        wins: 0
+    driver_standings_2014_3_12:
+        race: '@race_2014_3'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 7
+        wins: 0
+    driver_standings_2014_3_13:
+        race: '@race_2014_3'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_3_14:
+        race: '@race_2014_3'
+        driver: '@driver_kvyat'
+        position: 14
+        points: !!float 3
+        wins: 0
+    driver_standings_2014_3_15:
+        race: '@race_2014_3'
+        driver: '@driver_grosjean'
+        position: 15
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_16:
+        race: '@race_2014_3'
+        driver: '@driver_sutil'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_17:
+        race: '@race_2014_3'
+        driver: '@driver_gutierrez'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_18:
+        race: '@race_2014_3'
+        driver: '@driver_chilton'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_19:
+        race: '@race_2014_3'
+        driver: '@driver_kobayashi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_20:
+        race: '@race_2014_3'
+        driver: '@driver_maldonado'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_21:
+        race: '@race_2014_3'
+        driver: '@driver_ericsson'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_3_22:
+        race: '@race_2014_3'
+        driver: '@driver_jules_bianchi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_1:
+        race: '@race_2014_4'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 79
+        wins: 1
+    driver_standings_2014_4_2:
+        race: '@race_2014_4'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 75
+        wins: 3
+    driver_standings_2014_4_3:
+        race: '@race_2014_4'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 41
+        wins: 0
+    driver_standings_2014_4_4:
+        race: '@race_2014_4'
+        driver: '@driver_hulkenberg'
+        position: 4
+        points: !!float 36
+        wins: 0
+    driver_standings_2014_4_5:
+        race: '@race_2014_4'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 33
+        wins: 0
+    driver_standings_2014_4_6:
+        race: '@race_2014_4'
+        driver: '@driver_ricciardo'
+        position: 6
+        points: !!float 24
+        wins: 0
+    driver_standings_2014_4_7:
+        race: '@race_2014_4'
+        driver: '@driver_bottas'
+        position: 7
+        points: !!float 24
+        wins: 0
+    driver_standings_2014_4_8:
+        race: '@race_2014_4'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 23
+        wins: 0
+    driver_standings_2014_4_9:
+        race: '@race_2014_4'
+        driver: '@driver_kevin_magnussen'
+        position: 9
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_4_10:
+        race: '@race_2014_4'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_4_11:
+        race: '@race_2014_4'
+        driver: '@driver_massa'
+        position: 11
+        points: !!float 12
+        wins: 0
+    driver_standings_2014_4_12:
+        race: '@race_2014_4'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 11
+        wins: 0
+    driver_standings_2014_4_13:
+        race: '@race_2014_4'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_4_14:
+        race: '@race_2014_4'
+        driver: '@driver_kvyat'
+        position: 14
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_4_15:
+        race: '@race_2014_4'
+        driver: '@driver_grosjean'
+        position: 15
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_16:
+        race: '@race_2014_4'
+        driver: '@driver_sutil'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_17:
+        race: '@race_2014_4'
+        driver: '@driver_gutierrez'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_18:
+        race: '@race_2014_4'
+        driver: '@driver_chilton'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_19:
+        race: '@race_2014_4'
+        driver: '@driver_kobayashi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_20:
+        race: '@race_2014_4'
+        driver: '@driver_maldonado'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_21:
+        race: '@race_2014_4'
+        driver: '@driver_ericsson'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_4_22:
+        race: '@race_2014_4'
+        driver: '@driver_jules_bianchi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_1:
+        race: '@race_2014_5'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 100
+        wins: 4
+    driver_standings_2014_5_2:
+        race: '@race_2014_5'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 97
+        wins: 1
+    driver_standings_2014_5_3:
+        race: '@race_2014_5'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 49
+        wins: 0
+    driver_standings_2014_5_4:
+        race: '@race_2014_5'
+        driver: '@driver_vettel'
+        position: 4
+        points: !!float 45
+        wins: 0
+    driver_standings_2014_5_5:
+        race: '@race_2014_5'
+        driver: '@driver_ricciardo'
+        position: 5
+        points: !!float 39
+        wins: 0
+    driver_standings_2014_5_6:
+        race: '@race_2014_5'
+        driver: '@driver_hulkenberg'
+        position: 6
+        points: !!float 37
+        wins: 0
+    driver_standings_2014_5_7:
+        race: '@race_2014_5'
+        driver: '@driver_bottas'
+        position: 7
+        points: !!float 34
+        wins: 0
+    driver_standings_2014_5_8:
+        race: '@race_2014_5'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 23
+        wins: 0
+    driver_standings_2014_5_9:
+        race: '@race_2014_5'
+        driver: '@driver_kevin_magnussen'
+        position: 9
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_5_10:
+        race: '@race_2014_5'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_5_11:
+        race: '@race_2014_5'
+        driver: '@driver_raikkonen'
+        position: 11
+        points: !!float 17
+        wins: 0
+    driver_standings_2014_5_12:
+        race: '@race_2014_5'
+        driver: '@driver_massa'
+        position: 12
+        points: !!float 12
+        wins: 0
+    driver_standings_2014_5_13:
+        race: '@race_2014_5'
+        driver: '@driver_grosjean'
+        position: 13
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_5_14:
+        race: '@race_2014_5'
+        driver: '@driver_vergne'
+        position: 14
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_5_15:
+        race: '@race_2014_5'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_5_16:
+        race: '@race_2014_5'
+        driver: '@driver_sutil'
+        position: 16
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_17:
+        race: '@race_2014_5'
+        driver: '@driver_gutierrez'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_18:
+        race: '@race_2014_5'
+        driver: '@driver_chilton'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_19:
+        race: '@race_2014_5'
+        driver: '@driver_kobayashi'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_20:
+        race: '@race_2014_5'
+        driver: '@driver_maldonado'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_21:
+        race: '@race_2014_5'
+        driver: '@driver_ericsson'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_5_22:
+        race: '@race_2014_5'
+        driver: '@driver_jules_bianchi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_6_1:
+        race: '@race_2014_6'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 122
+        wins: 2
+    driver_standings_2014_6_2:
+        race: '@race_2014_6'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 118
+        wins: 4
+    driver_standings_2014_6_3:
+        race: '@race_2014_6'
+        driver: '@driver_alonso'
+        position: 3
+        points: !!float 61
+        wins: 0
+    driver_standings_2014_6_4:
+        race: '@race_2014_6'
+        driver: '@driver_ricciardo'
+        position: 4
+        points: !!float 54
+        wins: 0
+    driver_standings_2014_6_5:
+        race: '@race_2014_6'
+        driver: '@driver_hulkenberg'
+        position: 5
+        points: !!float 47
+        wins: 0
+    driver_standings_2014_6_6:
+        race: '@race_2014_6'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 45
+        wins: 0
+    driver_standings_2014_6_7:
+        race: '@race_2014_6'
+        driver: '@driver_bottas'
+        position: 7
+        points: !!float 34
+        wins: 0
+    driver_standings_2014_6_8:
+        race: '@race_2014_6'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 31
+        wins: 0
+    driver_standings_2014_6_9:
+        race: '@race_2014_6'
+        driver: '@driver_kevin_magnussen'
+        position: 9
+        points: !!float 21
+        wins: 0
+    driver_standings_2014_6_10:
+        race: '@race_2014_6'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_6_11:
+        race: '@race_2014_6'
+        driver: '@driver_massa'
+        position: 11
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_6_12:
+        race: '@race_2014_6'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 17
+        wins: 0
+    driver_standings_2014_6_13:
+        race: '@race_2014_6'
+        driver: '@driver_grosjean'
+        position: 13
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_6_14:
+        race: '@race_2014_6'
+        driver: '@driver_vergne'
+        position: 14
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_6_15:
+        race: '@race_2014_6'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_6_16:
+        race: '@race_2014_6'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_6_17:
+        race: '@race_2014_6'
+        driver: '@driver_ericsson'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_6_18:
+        race: '@race_2014_6'
+        driver: '@driver_sutil'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_6_19:
+        race: '@race_2014_6'
+        driver: '@driver_gutierrez'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_6_20:
+        race: '@race_2014_6'
+        driver: '@driver_chilton'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_6_21:
+        race: '@race_2014_6'
+        driver: '@driver_kobayashi'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_6_22:
+        race: '@race_2014_6'
+        driver: '@driver_maldonado'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_7_1:
+        race: '@race_2014_7'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 140
+        wins: 2
+    driver_standings_2014_7_2:
+        race: '@race_2014_7'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 118
+        wins: 4
+    driver_standings_2014_7_3:
+        race: '@race_2014_7'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 79
+        wins: 1
+    driver_standings_2014_7_4:
+        race: '@race_2014_7'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 69
+        wins: 0
+    driver_standings_2014_7_5:
+        race: '@race_2014_7'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 60
+        wins: 0
+    driver_standings_2014_7_6:
+        race: '@race_2014_7'
+        driver: '@driver_hulkenberg'
+        position: 6
+        points: !!float 57
+        wins: 0
+    driver_standings_2014_7_7:
+        race: '@race_2014_7'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 43
+        wins: 0
+    driver_standings_2014_7_8:
+        race: '@race_2014_7'
+        driver: '@driver_bottas'
+        position: 8
+        points: !!float 40
+        wins: 0
+    driver_standings_2014_7_9:
+        race: '@race_2014_7'
+        driver: '@driver_kevin_magnussen'
+        position: 9
+        points: !!float 23
+        wins: 0
+    driver_standings_2014_7_10:
+        race: '@race_2014_7'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 20
+        wins: 0
+    driver_standings_2014_7_11:
+        race: '@race_2014_7'
+        driver: '@driver_massa'
+        position: 11
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_7_12:
+        race: '@race_2014_7'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 18
+        wins: 0
+    driver_standings_2014_7_13:
+        race: '@race_2014_7'
+        driver: '@driver_grosjean'
+        position: 13
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_7_14:
+        race: '@race_2014_7'
+        driver: '@driver_vergne'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_7_15:
+        race: '@race_2014_7'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_7_16:
+        race: '@race_2014_7'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_7_17:
+        race: '@race_2014_7'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_7_18:
+        race: '@race_2014_7'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_7_19:
+        race: '@race_2014_7'
+        driver: '@driver_gutierrez'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_7_20:
+        race: '@race_2014_7'
+        driver: '@driver_chilton'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_7_21:
+        race: '@race_2014_7'
+        driver: '@driver_kobayashi'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_7_22:
+        race: '@race_2014_7'
+        driver: '@driver_maldonado'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_8_1:
+        race: '@race_2014_8'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 165
+        wins: 3
+    driver_standings_2014_8_2:
+        race: '@race_2014_8'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 136
+        wins: 4
+    driver_standings_2014_8_3:
+        race: '@race_2014_8'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 83
+        wins: 1
+    driver_standings_2014_8_4:
+        race: '@race_2014_8'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 79
+        wins: 0
+    driver_standings_2014_8_5:
+        race: '@race_2014_8'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 60
+        wins: 0
+    driver_standings_2014_8_6:
+        race: '@race_2014_8'
+        driver: '@driver_hulkenberg'
+        position: 6
+        points: !!float 59
+        wins: 0
+    driver_standings_2014_8_7:
+        race: '@race_2014_8'
+        driver: '@driver_bottas'
+        position: 7
+        points: !!float 55
+        wins: 0
+    driver_standings_2014_8_8:
+        race: '@race_2014_8'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 43
+        wins: 0
+    driver_standings_2014_8_9:
+        race: '@race_2014_8'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 30
+        wins: 0
+    driver_standings_2014_8_10:
+        race: '@race_2014_8'
+        driver: '@driver_kevin_magnussen'
+        position: 10
+        points: !!float 29
+        wins: 0
+    driver_standings_2014_8_11:
+        race: '@race_2014_8'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 28
+        wins: 0
+    driver_standings_2014_8_12:
+        race: '@race_2014_8'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 19
+        wins: 0
+    driver_standings_2014_8_13:
+        race: '@race_2014_8'
+        driver: '@driver_grosjean'
+        position: 13
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_8_14:
+        race: '@race_2014_8'
+        driver: '@driver_vergne'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_8_15:
+        race: '@race_2014_8'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 4
+        wins: 0
+    driver_standings_2014_8_16:
+        race: '@race_2014_8'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_8_17:
+        race: '@race_2014_8'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_8_18:
+        race: '@race_2014_8'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_8_19:
+        race: '@race_2014_8'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_8_20:
+        race: '@race_2014_8'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_8_21:
+        race: '@race_2014_8'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_8_22:
+        race: '@race_2014_8'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_9_1:
+        race: '@race_2014_9'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 165
+        wins: 3
+    driver_standings_2014_9_2:
+        race: '@race_2014_9'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 161
+        wins: 5
+    driver_standings_2014_9_3:
+        race: '@race_2014_9'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 98
+        wins: 1
+    driver_standings_2014_9_4:
+        race: '@race_2014_9'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 87
+        wins: 0
+    driver_standings_2014_9_5:
+        race: '@race_2014_9'
+        driver: '@driver_bottas'
+        position: 5
+        points: !!float 73
+        wins: 0
+    driver_standings_2014_9_6:
+        race: '@race_2014_9'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 70
+        wins: 0
+    driver_standings_2014_9_7:
+        race: '@race_2014_9'
+        driver: '@driver_hulkenberg'
+        position: 7
+        points: !!float 63
+        wins: 0
+    driver_standings_2014_9_8:
+        race: '@race_2014_9'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 55
+        wins: 0
+    driver_standings_2014_9_9:
+        race: '@race_2014_9'
+        driver: '@driver_kevin_magnussen'
+        position: 9
+        points: !!float 35
+        wins: 0
+    driver_standings_2014_9_10:
+        race: '@race_2014_9'
+        driver: '@driver_massa'
+        position: 10
+        points: !!float 30
+        wins: 0
+    driver_standings_2014_9_11:
+        race: '@race_2014_9'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 28
+        wins: 0
+    driver_standings_2014_9_12:
+        race: '@race_2014_9'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 19
+        wins: 0
+    driver_standings_2014_9_13:
+        race: '@race_2014_9'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 9
+        wins: 0
+    driver_standings_2014_9_14:
+        race: '@race_2014_9'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_9_15:
+        race: '@race_2014_9'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 6
+        wins: 0
+    driver_standings_2014_9_16:
+        race: '@race_2014_9'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_9_17:
+        race: '@race_2014_9'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_9_18:
+        race: '@race_2014_9'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_9_19:
+        race: '@race_2014_9'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_9_20:
+        race: '@race_2014_9'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_9_21:
+        race: '@race_2014_9'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_9_22:
+        race: '@race_2014_9'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_10_1:
+        race: '@race_2014_10'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 190
+        wins: 4
+    driver_standings_2014_10_2:
+        race: '@race_2014_10'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 176
+        wins: 5
+    driver_standings_2014_10_3:
+        race: '@race_2014_10'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 106
+        wins: 1
+    driver_standings_2014_10_4:
+        race: '@race_2014_10'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 97
+        wins: 0
+    driver_standings_2014_10_5:
+        race: '@race_2014_10'
+        driver: '@driver_bottas'
+        position: 5
+        points: !!float 91
+        wins: 0
+    driver_standings_2014_10_6:
+        race: '@race_2014_10'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 82
+        wins: 0
+    driver_standings_2014_10_7:
+        race: '@race_2014_10'
+        driver: '@driver_hulkenberg'
+        position: 7
+        points: !!float 69
+        wins: 0
+    driver_standings_2014_10_8:
+        race: '@race_2014_10'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 59
+        wins: 0
+    driver_standings_2014_10_9:
+        race: '@race_2014_10'
+        driver: '@driver_kevin_magnussen'
+        position: 9
+        points: !!float 37
+        wins: 0
+    driver_standings_2014_10_10:
+        race: '@race_2014_10'
+        driver: '@driver_massa'
+        position: 10
+        points: !!float 30
+        wins: 0
+    driver_standings_2014_10_11:
+        race: '@race_2014_10'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 29
+        wins: 0
+    driver_standings_2014_10_12:
+        race: '@race_2014_10'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 19
+        wins: 0
+    driver_standings_2014_10_13:
+        race: '@race_2014_10'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 9
+        wins: 0
+    driver_standings_2014_10_14:
+        race: '@race_2014_10'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_10_15:
+        race: '@race_2014_10'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 6
+        wins: 0
+    driver_standings_2014_10_16:
+        race: '@race_2014_10'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_10_17:
+        race: '@race_2014_10'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_10_18:
+        race: '@race_2014_10'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_10_19:
+        race: '@race_2014_10'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_10_20:
+        race: '@race_2014_10'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_10_21:
+        race: '@race_2014_10'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_10_22:
+        race: '@race_2014_10'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_11_1:
+        race: '@race_2014_11'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 202
+        wins: 4
+    driver_standings_2014_11_2:
+        race: '@race_2014_11'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 191
+        wins: 5
+    driver_standings_2014_11_3:
+        race: '@race_2014_11'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 131
+        wins: 2
+    driver_standings_2014_11_4:
+        race: '@race_2014_11'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 115
+        wins: 0
+    driver_standings_2014_11_5:
+        race: '@race_2014_11'
+        driver: '@driver_bottas'
+        position: 5
+        points: !!float 95
+        wins: 0
+    driver_standings_2014_11_6:
+        race: '@race_2014_11'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 88
+        wins: 0
+    driver_standings_2014_11_7:
+        race: '@race_2014_11'
+        driver: '@driver_hulkenberg'
+        position: 7
+        points: !!float 69
+        wins: 0
+    driver_standings_2014_11_8:
+        race: '@race_2014_11'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 60
+        wins: 0
+    driver_standings_2014_11_9:
+        race: '@race_2014_11'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 40
+        wins: 0
+    driver_standings_2014_11_10:
+        race: '@race_2014_11'
+        driver: '@driver_kevin_magnussen'
+        position: 10
+        points: !!float 37
+        wins: 0
+    driver_standings_2014_11_11:
+        race: '@race_2014_11'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 29
+        wins: 0
+    driver_standings_2014_11_12:
+        race: '@race_2014_11'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 27
+        wins: 0
+    driver_standings_2014_11_13:
+        race: '@race_2014_11'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 11
+        wins: 0
+    driver_standings_2014_11_14:
+        race: '@race_2014_11'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_11_15:
+        race: '@race_2014_11'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 6
+        wins: 0
+    driver_standings_2014_11_16:
+        race: '@race_2014_11'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_11_17:
+        race: '@race_2014_11'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_11_18:
+        race: '@race_2014_11'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_11_19:
+        race: '@race_2014_11'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_11_20:
+        race: '@race_2014_11'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_11_21:
+        race: '@race_2014_11'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_11_22:
+        race: '@race_2014_11'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_1:
+        race: '@race_2014_12'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 220
+        wins: 4
+    driver_standings_2014_12_2:
+        race: '@race_2014_12'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 191
+        wins: 5
+    driver_standings_2014_12_3:
+        race: '@race_2014_12'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 156
+        wins: 3
+    driver_standings_2014_12_4:
+        race: '@race_2014_12'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 121
+        wins: 0
+    driver_standings_2014_12_5:
+        race: '@race_2014_12'
+        driver: '@driver_bottas'
+        position: 5
+        points: !!float 110
+        wins: 0
+    driver_standings_2014_12_6:
+        race: '@race_2014_12'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 98
+        wins: 0
+    driver_standings_2014_12_7:
+        race: '@race_2014_12'
+        driver: '@driver_hulkenberg'
+        position: 7
+        points: !!float 70
+        wins: 0
+    driver_standings_2014_12_8:
+        race: '@race_2014_12'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 68
+        wins: 0
+    driver_standings_2014_12_9:
+        race: '@race_2014_12'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 40
+        wins: 0
+    driver_standings_2014_12_10:
+        race: '@race_2014_12'
+        driver: '@driver_raikkonen'
+        position: 10
+        points: !!float 39
+        wins: 0
+    driver_standings_2014_12_11:
+        race: '@race_2014_12'
+        driver: '@driver_kevin_magnussen'
+        position: 11
+        points: !!float 37
+        wins: 0
+    driver_standings_2014_12_12:
+        race: '@race_2014_12'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 33
+        wins: 0
+    driver_standings_2014_12_13:
+        race: '@race_2014_12'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 11
+        wins: 0
+    driver_standings_2014_12_14:
+        race: '@race_2014_12'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_12_15:
+        race: '@race_2014_12'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_12_16:
+        race: '@race_2014_12'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_12_17:
+        race: '@race_2014_12'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_18:
+        race: '@race_2014_12'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_19:
+        race: '@race_2014_12'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_20:
+        race: '@race_2014_12'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_21:
+        race: '@race_2014_12'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_22:
+        race: '@race_2014_12'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_12_23:
+        race: '@race_2014_12'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_1:
+        race: '@race_2014_13'
+        driver: '@driver_rosberg'
+        position: 1
+        points: !!float 238
+        wins: 4
+    driver_standings_2014_13_2:
+        race: '@race_2014_13'
+        driver: '@driver_hamilton'
+        position: 2
+        points: !!float 216
+        wins: 6
+    driver_standings_2014_13_3:
+        race: '@race_2014_13'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 166
+        wins: 3
+    driver_standings_2014_13_4:
+        race: '@race_2014_13'
+        driver: '@driver_bottas'
+        position: 4
+        points: !!float 122
+        wins: 0
+    driver_standings_2014_13_5:
+        race: '@race_2014_13'
+        driver: '@driver_alonso'
+        position: 5
+        points: !!float 121
+        wins: 0
+    driver_standings_2014_13_6:
+        race: '@race_2014_13'
+        driver: '@driver_vettel'
+        position: 6
+        points: !!float 106
+        wins: 0
+    driver_standings_2014_13_7:
+        race: '@race_2014_13'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 72
+        wins: 0
+    driver_standings_2014_13_8:
+        race: '@race_2014_13'
+        driver: '@driver_hulkenberg'
+        position: 8
+        points: !!float 70
+        wins: 0
+    driver_standings_2014_13_9:
+        race: '@race_2014_13'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 55
+        wins: 0
+    driver_standings_2014_13_10:
+        race: '@race_2014_13'
+        driver: '@driver_raikkonen'
+        position: 10
+        points: !!float 41
+        wins: 0
+    driver_standings_2014_13_11:
+        race: '@race_2014_13'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 39
+        wins: 0
+    driver_standings_2014_13_12:
+        race: '@race_2014_13'
+        driver: '@driver_kevin_magnussen'
+        position: 12
+        points: !!float 38
+        wins: 0
+    driver_standings_2014_13_13:
+        race: '@race_2014_13'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 11
+        wins: 0
+    driver_standings_2014_13_14:
+        race: '@race_2014_13'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_13_15:
+        race: '@race_2014_13'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_13_16:
+        race: '@race_2014_13'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_13_17:
+        race: '@race_2014_13'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_18:
+        race: '@race_2014_13'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_19:
+        race: '@race_2014_13'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_20:
+        race: '@race_2014_13'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_21:
+        race: '@race_2014_13'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_22:
+        race: '@race_2014_13'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_13_23:
+        race: '@race_2014_13'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_1:
+        race: '@race_2014_14'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 241
+        wins: 7
+    driver_standings_2014_14_2:
+        race: '@race_2014_14'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 238
+        wins: 4
+    driver_standings_2014_14_3:
+        race: '@race_2014_14'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 181
+        wins: 3
+    driver_standings_2014_14_4:
+        race: '@race_2014_14'
+        driver: '@driver_alonso'
+        position: 4
+        points: !!float 133
+        wins: 0
+    driver_standings_2014_14_5:
+        race: '@race_2014_14'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 124
+        wins: 0
+    driver_standings_2014_14_6:
+        race: '@race_2014_14'
+        driver: '@driver_bottas'
+        position: 6
+        points: !!float 122
+        wins: 0
+    driver_standings_2014_14_7:
+        race: '@race_2014_14'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 72
+        wins: 0
+    driver_standings_2014_14_8:
+        race: '@race_2014_14'
+        driver: '@driver_hulkenberg'
+        position: 8
+        points: !!float 72
+        wins: 0
+    driver_standings_2014_14_9:
+        race: '@race_2014_14'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 65
+        wins: 0
+    driver_standings_2014_14_10:
+        race: '@race_2014_14'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 45
+        wins: 0
+    driver_standings_2014_14_11:
+        race: '@race_2014_14'
+        driver: '@driver_raikkonen'
+        position: 11
+        points: !!float 45
+        wins: 0
+    driver_standings_2014_14_12:
+        race: '@race_2014_14'
+        driver: '@driver_kevin_magnussen'
+        position: 12
+        points: !!float 39
+        wins: 0
+    driver_standings_2014_14_13:
+        race: '@race_2014_14'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 19
+        wins: 0
+    driver_standings_2014_14_14:
+        race: '@race_2014_14'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_14_15:
+        race: '@race_2014_14'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_14_16:
+        race: '@race_2014_14'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_14_17:
+        race: '@race_2014_14'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_18:
+        race: '@race_2014_14'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_19:
+        race: '@race_2014_14'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_20:
+        race: '@race_2014_14'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_21:
+        race: '@race_2014_14'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_22:
+        race: '@race_2014_14'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_14_23:
+        race: '@race_2014_14'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_1:
+        race: '@race_2014_15'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 266
+        wins: 8
+    driver_standings_2014_15_2:
+        race: '@race_2014_15'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 256
+        wins: 4
+    driver_standings_2014_15_3:
+        race: '@race_2014_15'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 193
+        wins: 3
+    driver_standings_2014_15_4:
+        race: '@race_2014_15'
+        driver: '@driver_vettel'
+        position: 4
+        points: !!float 139
+        wins: 0
+    driver_standings_2014_15_5:
+        race: '@race_2014_15'
+        driver: '@driver_alonso'
+        position: 5
+        points: !!float 133
+        wins: 0
+    driver_standings_2014_15_6:
+        race: '@race_2014_15'
+        driver: '@driver_bottas'
+        position: 6
+        points: !!float 130
+        wins: 0
+    driver_standings_2014_15_7:
+        race: '@race_2014_15'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 82
+        wins: 0
+    driver_standings_2014_15_8:
+        race: '@race_2014_15'
+        driver: '@driver_hulkenberg'
+        position: 8
+        points: !!float 76
+        wins: 0
+    driver_standings_2014_15_9:
+        race: '@race_2014_15'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 71
+        wins: 0
+    driver_standings_2014_15_10:
+        race: '@race_2014_15'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 46
+        wins: 0
+    driver_standings_2014_15_11:
+        race: '@race_2014_15'
+        driver: '@driver_raikkonen'
+        position: 11
+        points: !!float 45
+        wins: 0
+    driver_standings_2014_15_12:
+        race: '@race_2014_15'
+        driver: '@driver_kevin_magnussen'
+        position: 12
+        points: !!float 39
+        wins: 0
+    driver_standings_2014_15_13:
+        race: '@race_2014_15'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 21
+        wins: 0
+    driver_standings_2014_15_14:
+        race: '@race_2014_15'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_15_15:
+        race: '@race_2014_15'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_15_16:
+        race: '@race_2014_15'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_15_17:
+        race: '@race_2014_15'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_18:
+        race: '@race_2014_15'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_19:
+        race: '@race_2014_15'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_20:
+        race: '@race_2014_15'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_21:
+        race: '@race_2014_15'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_22:
+        race: '@race_2014_15'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_15_23:
+        race: '@race_2014_15'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_1:
+        race: '@race_2014_16'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 291
+        wins: 9
+    driver_standings_2014_16_2:
+        race: '@race_2014_16'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 274
+        wins: 4
+    driver_standings_2014_16_3:
+        race: '@race_2014_16'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 199
+        wins: 3
+    driver_standings_2014_16_4:
+        race: '@race_2014_16'
+        driver: '@driver_bottas'
+        position: 4
+        points: !!float 145
+        wins: 0
+    driver_standings_2014_16_5:
+        race: '@race_2014_16'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 143
+        wins: 0
+    driver_standings_2014_16_6:
+        race: '@race_2014_16'
+        driver: '@driver_alonso'
+        position: 6
+        points: !!float 141
+        wins: 0
+    driver_standings_2014_16_7:
+        race: '@race_2014_16'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 94
+        wins: 0
+    driver_standings_2014_16_8:
+        race: '@race_2014_16'
+        driver: '@driver_hulkenberg'
+        position: 8
+        points: !!float 76
+        wins: 0
+    driver_standings_2014_16_9:
+        race: '@race_2014_16'
+        driver: '@driver_massa'
+        position: 9
+        points: !!float 71
+        wins: 0
+    driver_standings_2014_16_10:
+        race: '@race_2014_16'
+        driver: '@driver_kevin_magnussen'
+        position: 10
+        points: !!float 49
+        wins: 0
+    driver_standings_2014_16_11:
+        race: '@race_2014_16'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 47
+        wins: 0
+    driver_standings_2014_16_12:
+        race: '@race_2014_16'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 47
+        wins: 0
+    driver_standings_2014_16_13:
+        race: '@race_2014_16'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 21
+        wins: 0
+    driver_standings_2014_16_14:
+        race: '@race_2014_16'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_16_15:
+        race: '@race_2014_16'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_16_16:
+        race: '@race_2014_16'
+        driver: '@driver_jules_bianchi'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_16_17:
+        race: '@race_2014_16'
+        driver: '@driver_sutil'
+        position: 17
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_18:
+        race: '@race_2014_16'
+        driver: '@driver_ericsson'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_19:
+        race: '@race_2014_16'
+        driver: '@driver_maldonado'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_20:
+        race: '@race_2014_16'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_21:
+        race: '@race_2014_16'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_22:
+        race: '@race_2014_16'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_16_23:
+        race: '@race_2014_16'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_17_1:
+        race: '@race_2014_17'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 316
+        wins: 10
+    driver_standings_2014_17_2:
+        race: '@race_2014_17'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 292
+        wins: 4
+    driver_standings_2014_17_3:
+        race: '@race_2014_17'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 214
+        wins: 3
+    driver_standings_2014_17_4:
+        race: '@race_2014_17'
+        driver: '@driver_bottas'
+        position: 4
+        points: !!float 155
+        wins: 0
+    driver_standings_2014_17_5:
+        race: '@race_2014_17'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 149
+        wins: 0
+    driver_standings_2014_17_6:
+        race: '@race_2014_17'
+        driver: '@driver_alonso'
+        position: 6
+        points: !!float 149
+        wins: 0
+    driver_standings_2014_17_7:
+        race: '@race_2014_17'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 94
+        wins: 0
+    driver_standings_2014_17_8:
+        race: '@race_2014_17'
+        driver: '@driver_massa'
+        position: 8
+        points: !!float 83
+        wins: 0
+    driver_standings_2014_17_9:
+        race: '@race_2014_17'
+        driver: '@driver_hulkenberg'
+        position: 9
+        points: !!float 76
+        wins: 0
+    driver_standings_2014_17_10:
+        race: '@race_2014_17'
+        driver: '@driver_kevin_magnussen'
+        position: 10
+        points: !!float 53
+        wins: 0
+    driver_standings_2014_17_11:
+        race: '@race_2014_17'
+        driver: '@driver_perez'
+        position: 11
+        points: !!float 47
+        wins: 0
+    driver_standings_2014_17_12:
+        race: '@race_2014_17'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 47
+        wins: 0
+    driver_standings_2014_17_13:
+        race: '@race_2014_17'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 22
+        wins: 0
+    driver_standings_2014_17_14:
+        race: '@race_2014_17'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_17_15:
+        race: '@race_2014_17'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_17_16:
+        race: '@race_2014_17'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_17_17:
+        race: '@race_2014_17'
+        driver: '@driver_jules_bianchi'
+        position: 17
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_17_18:
+        race: '@race_2014_17'
+        driver: '@driver_sutil'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_17_19:
+        race: '@race_2014_17'
+        driver: '@driver_ericsson'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_17_20:
+        race: '@race_2014_17'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_17_21:
+        race: '@race_2014_17'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_17_22:
+        race: '@race_2014_17'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_17_23:
+        race: '@race_2014_17'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_18_1:
+        race: '@race_2014_18'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 334
+        wins: 10
+    driver_standings_2014_18_2:
+        race: '@race_2014_18'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 317
+        wins: 5
+    driver_standings_2014_18_3:
+        race: '@race_2014_18'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 214
+        wins: 3
+    driver_standings_2014_18_4:
+        race: '@race_2014_18'
+        driver: '@driver_vettel'
+        position: 4
+        points: !!float 159
+        wins: 0
+    driver_standings_2014_18_5:
+        race: '@race_2014_18'
+        driver: '@driver_alonso'
+        position: 5
+        points: !!float 157
+        wins: 0
+    driver_standings_2014_18_6:
+        race: '@race_2014_18'
+        driver: '@driver_bottas'
+        position: 6
+        points: !!float 156
+        wins: 0
+    driver_standings_2014_18_7:
+        race: '@race_2014_18'
+        driver: '@driver_button'
+        position: 7
+        points: !!float 106
+        wins: 0
+    driver_standings_2014_18_8:
+        race: '@race_2014_18'
+        driver: '@driver_massa'
+        position: 8
+        points: !!float 98
+        wins: 0
+    driver_standings_2014_18_9:
+        race: '@race_2014_18'
+        driver: '@driver_hulkenberg'
+        position: 9
+        points: !!float 80
+        wins: 0
+    driver_standings_2014_18_10:
+        race: '@race_2014_18'
+        driver: '@driver_kevin_magnussen'
+        position: 10
+        points: !!float 55
+        wins: 0
+    driver_standings_2014_18_11:
+        race: '@race_2014_18'
+        driver: '@driver_raikkonen'
+        position: 11
+        points: !!float 53
+        wins: 0
+    driver_standings_2014_18_12:
+        race: '@race_2014_18'
+        driver: '@driver_perez'
+        position: 12
+        points: !!float 47
+        wins: 0
+    driver_standings_2014_18_13:
+        race: '@race_2014_18'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 22
+        wins: 0
+    driver_standings_2014_18_14:
+        race: '@race_2014_18'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_18_15:
+        race: '@race_2014_18'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_18_16:
+        race: '@race_2014_18'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_18_17:
+        race: '@race_2014_18'
+        driver: '@driver_jules_bianchi'
+        position: 17
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_18_18:
+        race: '@race_2014_18'
+        driver: '@driver_sutil'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_18_19:
+        race: '@race_2014_18'
+        driver: '@driver_ericsson'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_18_20:
+        race: '@race_2014_18'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_18_21:
+        race: '@race_2014_18'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_18_22:
+        race: '@race_2014_18'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_18_23:
+        race: '@race_2014_18'
+        driver: '@driver_lotterer'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_1:
+        race: '@race_2014_19'
+        driver: '@driver_hamilton'
+        position: 1
+        points: !!float 384
+        wins: 11
+    driver_standings_2014_19_2:
+        race: '@race_2014_19'
+        driver: '@driver_rosberg'
+        position: 2
+        points: !!float 317
+        wins: 5
+    driver_standings_2014_19_3:
+        race: '@race_2014_19'
+        driver: '@driver_ricciardo'
+        position: 3
+        points: !!float 238
+        wins: 3
+    driver_standings_2014_19_4:
+        race: '@race_2014_19'
+        driver: '@driver_bottas'
+        position: 4
+        points: !!float 186
+        wins: 0
+    driver_standings_2014_19_5:
+        race: '@race_2014_19'
+        driver: '@driver_vettel'
+        position: 5
+        points: !!float 167
+        wins: 0
+    driver_standings_2014_19_6:
+        race: '@race_2014_19'
+        driver: '@driver_alonso'
+        position: 6
+        points: !!float 161
+        wins: 0
+    driver_standings_2014_19_7:
+        race: '@race_2014_19'
+        driver: '@driver_massa'
+        position: 7
+        points: !!float 134
+        wins: 0
+    driver_standings_2014_19_8:
+        race: '@race_2014_19'
+        driver: '@driver_button'
+        position: 8
+        points: !!float 126
+        wins: 0
+    driver_standings_2014_19_9:
+        race: '@race_2014_19'
+        driver: '@driver_hulkenberg'
+        position: 9
+        points: !!float 96
+        wins: 0
+    driver_standings_2014_19_10:
+        race: '@race_2014_19'
+        driver: '@driver_perez'
+        position: 10
+        points: !!float 59
+        wins: 0
+    driver_standings_2014_19_11:
+        race: '@race_2014_19'
+        driver: '@driver_kevin_magnussen'
+        position: 11
+        points: !!float 55
+        wins: 0
+    driver_standings_2014_19_12:
+        race: '@race_2014_19'
+        driver: '@driver_raikkonen'
+        position: 12
+        points: !!float 55
+        wins: 0
+    driver_standings_2014_19_13:
+        race: '@race_2014_19'
+        driver: '@driver_vergne'
+        position: 13
+        points: !!float 22
+        wins: 0
+    driver_standings_2014_19_14:
+        race: '@race_2014_19'
+        driver: '@driver_grosjean'
+        position: 14
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_19_15:
+        race: '@race_2014_19'
+        driver: '@driver_kvyat'
+        position: 15
+        points: !!float 8
+        wins: 0
+    driver_standings_2014_19_16:
+        race: '@race_2014_19'
+        driver: '@driver_maldonado'
+        position: 16
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_19_17:
+        race: '@race_2014_19'
+        driver: '@driver_jules_bianchi'
+        position: 17
+        points: !!float 2
+        wins: 0
+    driver_standings_2014_19_18:
+        race: '@race_2014_19'
+        driver: '@driver_sutil'
+        position: 18
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_19:
+        race: '@race_2014_19'
+        driver: '@driver_ericsson'
+        position: 19
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_20:
+        race: '@race_2014_19'
+        driver: '@driver_gutierrez'
+        position: 20
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_21:
+        race: '@race_2014_19'
+        driver: '@driver_chilton'
+        position: 21
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_22:
+        race: '@race_2014_19'
+        driver: '@driver_kobayashi'
+        position: 22
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_23:
+        race: '@race_2014_19'
+        driver: '@driver_stevens'
+        position: 23
+        points: !!float 0
+        wins: 0
+    driver_standings_2014_19_24:
+        race: '@race_2014_19'
+        driver: '@driver_lotterer'
+        position: 24
+        points: !!float 0
+        wins: 0

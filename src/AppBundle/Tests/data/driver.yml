@@ -1,0 +1,233 @@
+AppBundle\Entity\Driver:
+    driver_pic:
+        firstName: Charles
+        lastName: Pic
+        slug: pic
+        code: PIC
+        number: null
+        nationality: FR
+        birthDate: '1990-02-15'
+    driver_garde:
+        firstName: Giedo
+        lastName: 'van der Garde'
+        slug: garde
+        code: VDG
+        number: null
+        nationality: NL
+        birthDate: '1985-04-25'
+    driver_alonso:
+        firstName: Fernando
+        lastName: Alonso
+        slug: alonso
+        code: ALO
+        number: 14
+        nationality: ES
+        birthDate: '1981-07-29'
+    driver_massa:
+        firstName: Felipe
+        lastName: Massa
+        slug: massa
+        code: MAS
+        number: 19
+        nationality: BR
+        birthDate: '1981-04-25'
+    driver_sutil:
+        firstName: Adrian
+        lastName: Sutil
+        slug: sutil
+        code: SUT
+        number: 99
+        nationality: DE
+        birthDate: '1983-01-11'
+    driver_resta:
+        firstName: Paul
+        lastName: 'di Resta'
+        slug: resta
+        code: DIR
+        number: null
+        nationality: GB
+        birthDate: '1986-04-16'
+    driver_raikkonen:
+        firstName: Kimi
+        lastName: Räikkönen
+        slug: raikkonen
+        code: RAI
+        number: 7
+        nationality: FI
+        birthDate: '1979-10-17'
+    driver_grosjean:
+        firstName: Romain
+        lastName: Grosjean
+        slug: grosjean
+        code: GRO
+        number: 8
+        nationality: FR
+        birthDate: '1986-04-17'
+    driver_kovalainen:
+        firstName: Heikki
+        lastName: Kovalainen
+        slug: kovalainen
+        code: KOV
+        number: null
+        nationality: FI
+        birthDate: '1981-10-19'
+    driver_jules_bianchi:
+        firstName: Jules
+        lastName: Bianchi
+        slug: jules_bianchi
+        code: BIA
+        number: 17
+        nationality: FR
+        birthDate: '1989-08-03'
+    driver_chilton:
+        firstName: Max
+        lastName: Chilton
+        slug: chilton
+        code: CHI
+        number: 4
+        nationality: GB
+        birthDate: '1991-04-21'
+    driver_perez:
+        firstName: Sergio
+        lastName: Pérez
+        slug: perez
+        code: PER
+        number: 11
+        nationality: MX
+        birthDate: '1990-01-26'
+    driver_button:
+        firstName: Jenson
+        lastName: Button
+        slug: button
+        code: BUT
+        number: 22
+        nationality: GB
+        birthDate: '1980-01-19'
+    driver_hamilton:
+        firstName: Lewis
+        lastName: Hamilton
+        slug: hamilton
+        code: HAM
+        number: 44
+        nationality: GB
+        birthDate: '1985-01-07'
+    driver_rosberg:
+        firstName: Nico
+        lastName: Rosberg
+        slug: rosberg
+        code: ROS
+        number: 6
+        nationality: DE
+        birthDate: '1985-06-27'
+    driver_vettel:
+        firstName: Sebastian
+        lastName: Vettel
+        slug: vettel
+        code: VET
+        number: 5
+        nationality: DE
+        birthDate: '1987-07-03'
+    driver_webber:
+        firstName: Mark
+        lastName: Webber
+        slug: webber
+        code: WEB
+        number: null
+        nationality: AU
+        birthDate: '1976-08-27'
+    driver_hulkenberg:
+        firstName: Nico
+        lastName: Hülkenberg
+        slug: hulkenberg
+        code: HUL
+        number: 27
+        nationality: DE
+        birthDate: '1987-08-19'
+    driver_gutierrez:
+        firstName: Esteban
+        lastName: Gutiérrez
+        slug: gutierrez
+        code: GUT
+        number: 21
+        nationality: MX
+        birthDate: '1991-08-05'
+    driver_ricciardo:
+        firstName: Daniel
+        lastName: Ricciardo
+        slug: ricciardo
+        code: RIC
+        number: 3
+        nationality: AU
+        birthDate: '1989-07-01'
+    driver_vergne:
+        firstName: Jean-Éric
+        lastName: Vergne
+        slug: vergne
+        code: VER
+        number: 25
+        nationality: FR
+        birthDate: '1990-04-25'
+    driver_maldonado:
+        firstName: Pastor
+        lastName: Maldonado
+        slug: maldonado
+        code: MAL
+        number: 13
+        nationality: VE
+        birthDate: '1985-03-09'
+    driver_bottas:
+        firstName: Valtteri
+        lastName: Bottas
+        slug: bottas
+        code: BOT
+        number: 77
+        nationality: FI
+        birthDate: '1989-08-29'
+    driver_ericsson:
+        firstName: Marcus
+        lastName: Ericsson
+        slug: ericsson
+        code: ERI
+        number: 9
+        nationality: SE
+        birthDate: '1990-09-02'
+    driver_kobayashi:
+        firstName: Kamui
+        lastName: Kobayashi
+        slug: kobayashi
+        code: KOB
+        number: 10
+        nationality: JP
+        birthDate: '1986-09-13'
+    driver_lotterer:
+        firstName: André
+        lastName: Lotterer
+        slug: lotterer
+        code: LOT
+        number: 45
+        nationality: DE
+        birthDate: '1981-11-19'
+    driver_stevens:
+        firstName: Will
+        lastName: Stevens
+        slug: stevens
+        code: STE
+        number: null
+        nationality: GB
+        birthDate: '1991-06-28'
+    driver_kevin_magnussen:
+        firstName: Kevin
+        lastName: Magnussen
+        slug: kevin_magnussen
+        code: MAG
+        number: 20
+        nationality: DK
+        birthDate: '1992-10-05'
+    driver_kvyat:
+        firstName: Daniil
+        lastName: Kvyat
+        slug: kvyat
+        code: KVY
+        number: 26
+        nationality: RU
+        birthDate: '1994-04-26'

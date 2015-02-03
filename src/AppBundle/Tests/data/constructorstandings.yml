@@ -1,0 +1,2509 @@
+AppBundle\Entity\ConstructorStandings:
+    constructor_standings_2013_1_1:
+        race: '@race_2013_1'
+        constructor: '@constructor_ferrari'
+        position: 1
+        points: !!float 30
+        wins: 0
+    constructor_standings_2013_1_2:
+        race: '@race_2013_1'
+        constructor: '@constructor_lotus_f1'
+        position: 2
+        points: !!float 26
+        wins: 1
+    constructor_standings_2013_1_3:
+        race: '@race_2013_1'
+        constructor: '@constructor_red_bull'
+        position: 3
+        points: !!float 23
+        wins: 0
+    constructor_standings_2013_1_4:
+        race: '@race_2013_1'
+        constructor: '@constructor_mercedes'
+        position: 4
+        points: !!float 10
+        wins: 0
+    constructor_standings_2013_1_5:
+        race: '@race_2013_1'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 10
+        wins: 0
+    constructor_standings_2013_1_6:
+        race: '@race_2013_1'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 2
+        wins: 0
+    constructor_standings_2013_1_7:
+        race: '@race_2013_1'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_1_8:
+        race: '@race_2013_1'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_1_9:
+        race: '@race_2013_1'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_1_10:
+        race: '@race_2013_1'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_1_11:
+        race: '@race_2013_1'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_2_1:
+        race: '@race_2013_2'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 66
+        wins: 1
+    constructor_standings_2013_2_2:
+        race: '@race_2013_2'
+        constructor: '@constructor_lotus_f1'
+        position: 2
+        points: !!float 40
+        wins: 1
+    constructor_standings_2013_2_3:
+        race: '@race_2013_2'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 40
+        wins: 0
+    constructor_standings_2013_2_4:
+        race: '@race_2013_2'
+        constructor: '@constructor_mercedes'
+        position: 4
+        points: !!float 37
+        wins: 0
+    constructor_standings_2013_2_5:
+        race: '@race_2013_2'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 10
+        wins: 0
+    constructor_standings_2013_2_6:
+        race: '@race_2013_2'
+        constructor: '@constructor_sauber'
+        position: 6
+        points: !!float 4
+        wins: 0
+    constructor_standings_2013_2_7:
+        race: '@race_2013_2'
+        constructor: '@constructor_mclaren'
+        position: 7
+        points: !!float 4
+        wins: 0
+    constructor_standings_2013_2_8:
+        race: '@race_2013_2'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_2_9:
+        race: '@race_2013_2'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_2_10:
+        race: '@race_2013_2'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_2_11:
+        race: '@race_2013_2'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_3_1:
+        race: '@race_2013_3'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 78
+        wins: 1
+    constructor_standings_2013_3_2:
+        race: '@race_2013_3'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 73
+        wins: 1
+    constructor_standings_2013_3_3:
+        race: '@race_2013_3'
+        constructor: '@constructor_lotus_f1'
+        position: 3
+        points: !!float 60
+        wins: 1
+    constructor_standings_2013_3_4:
+        race: '@race_2013_3'
+        constructor: '@constructor_mercedes'
+        position: 4
+        points: !!float 52
+        wins: 0
+    constructor_standings_2013_3_5:
+        race: '@race_2013_3'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 14
+        wins: 0
+    constructor_standings_2013_3_6:
+        race: '@race_2013_3'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 14
+        wins: 0
+    constructor_standings_2013_3_7:
+        race: '@race_2013_3'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 7
+        wins: 0
+    constructor_standings_2013_3_8:
+        race: '@race_2013_3'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_3_9:
+        race: '@race_2013_3'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_3_10:
+        race: '@race_2013_3'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_3_11:
+        race: '@race_2013_3'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_4_1:
+        race: '@race_2013_4'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 109
+        wins: 2
+    constructor_standings_2013_4_2:
+        race: '@race_2013_4'
+        constructor: '@constructor_lotus_f1'
+        position: 2
+        points: !!float 93
+        wins: 1
+    constructor_standings_2013_4_3:
+        race: '@race_2013_4'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 77
+        wins: 1
+    constructor_standings_2013_4_4:
+        race: '@race_2013_4'
+        constructor: '@constructor_mercedes'
+        position: 4
+        points: !!float 64
+        wins: 0
+    constructor_standings_2013_4_5:
+        race: '@race_2013_4'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 26
+        wins: 0
+    constructor_standings_2013_4_6:
+        race: '@race_2013_4'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 23
+        wins: 0
+    constructor_standings_2013_4_7:
+        race: '@race_2013_4'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 7
+        wins: 0
+    constructor_standings_2013_4_8:
+        race: '@race_2013_4'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_4_9:
+        race: '@race_2013_4'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_4_10:
+        race: '@race_2013_4'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_4_11:
+        race: '@race_2013_4'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_5_1:
+        race: '@race_2013_5'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 131
+        wins: 2
+    constructor_standings_2013_5_2:
+        race: '@race_2013_5'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 117
+        wins: 2
+    constructor_standings_2013_5_3:
+        race: '@race_2013_5'
+        constructor: '@constructor_lotus_f1'
+        position: 3
+        points: !!float 111
+        wins: 1
+    constructor_standings_2013_5_4:
+        race: '@race_2013_5'
+        constructor: '@constructor_mercedes'
+        position: 4
+        points: !!float 72
+        wins: 0
+    constructor_standings_2013_5_5:
+        race: '@race_2013_5'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 32
+        wins: 0
+    constructor_standings_2013_5_6:
+        race: '@race_2013_5'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 29
+        wins: 0
+    constructor_standings_2013_5_7:
+        race: '@race_2013_5'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 8
+        wins: 0
+    constructor_standings_2013_5_8:
+        race: '@race_2013_5'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_5_9:
+        race: '@race_2013_5'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_5_10:
+        race: '@race_2013_5'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_5_11:
+        race: '@race_2013_5'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_6_1:
+        race: '@race_2013_6'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 164
+        wins: 2
+    constructor_standings_2013_6_2:
+        race: '@race_2013_6'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 123
+        wins: 2
+    constructor_standings_2013_6_3:
+        race: '@race_2013_6'
+        constructor: '@constructor_lotus_f1'
+        position: 3
+        points: !!float 112
+        wins: 1
+    constructor_standings_2013_6_4:
+        race: '@race_2013_6'
+        constructor: '@constructor_mercedes'
+        position: 4
+        points: !!float 109
+        wins: 1
+    constructor_standings_2013_6_5:
+        race: '@race_2013_6'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 44
+        wins: 0
+    constructor_standings_2013_6_6:
+        race: '@race_2013_6'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 37
+        wins: 0
+    constructor_standings_2013_6_7:
+        race: '@race_2013_6'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 12
+        wins: 0
+    constructor_standings_2013_6_8:
+        race: '@race_2013_6'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_6_9:
+        race: '@race_2013_6'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_6_10:
+        race: '@race_2013_6'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_6_11:
+        race: '@race_2013_6'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_7_1:
+        race: '@race_2013_7'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 201
+        wins: 3
+    constructor_standings_2013_7_2:
+        race: '@race_2013_7'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 145
+        wins: 2
+    constructor_standings_2013_7_3:
+        race: '@race_2013_7'
+        constructor: '@constructor_mercedes'
+        position: 3
+        points: !!float 134
+        wins: 1
+    constructor_standings_2013_7_4:
+        race: '@race_2013_7'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 114
+        wins: 1
+    constructor_standings_2013_7_5:
+        race: '@race_2013_7'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 51
+        wins: 0
+    constructor_standings_2013_7_6:
+        race: '@race_2013_7'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 37
+        wins: 0
+    constructor_standings_2013_7_7:
+        race: '@race_2013_7'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 20
+        wins: 0
+    constructor_standings_2013_7_8:
+        race: '@race_2013_7'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_7_9:
+        race: '@race_2013_7'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_7_10:
+        race: '@race_2013_7'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_7_11:
+        race: '@race_2013_7'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_8_1:
+        race: '@race_2013_8'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 219
+        wins: 3
+    constructor_standings_2013_8_2:
+        race: '@race_2013_8'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 171
+        wins: 2
+    constructor_standings_2013_8_3:
+        race: '@race_2013_8'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 168
+        wins: 2
+    constructor_standings_2013_8_4:
+        race: '@race_2013_8'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 124
+        wins: 1
+    constructor_standings_2013_8_5:
+        race: '@race_2013_8'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 59
+        wins: 0
+    constructor_standings_2013_8_6:
+        race: '@race_2013_8'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 37
+        wins: 0
+    constructor_standings_2013_8_7:
+        race: '@race_2013_8'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 24
+        wins: 0
+    constructor_standings_2013_8_8:
+        race: '@race_2013_8'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 6
+        wins: 0
+    constructor_standings_2013_8_9:
+        race: '@race_2013_8'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_8_10:
+        race: '@race_2013_8'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_8_11:
+        race: '@race_2013_8'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_9_1:
+        race: '@race_2013_9'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 250
+        wins: 4
+    constructor_standings_2013_9_2:
+        race: '@race_2013_9'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 183
+        wins: 2
+    constructor_standings_2013_9_3:
+        race: '@race_2013_9'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 180
+        wins: 2
+    constructor_standings_2013_9_4:
+        race: '@race_2013_9'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 157
+        wins: 1
+    constructor_standings_2013_9_5:
+        race: '@race_2013_9'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 59
+        wins: 0
+    constructor_standings_2013_9_6:
+        race: '@race_2013_9'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 49
+        wins: 0
+    constructor_standings_2013_9_7:
+        race: '@race_2013_9'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 24
+        wins: 0
+    constructor_standings_2013_9_8:
+        race: '@race_2013_9'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 7
+        wins: 0
+    constructor_standings_2013_9_9:
+        race: '@race_2013_9'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_9_10:
+        race: '@race_2013_9'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_9_11:
+        race: '@race_2013_9'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_10_1:
+        race: '@race_2013_10'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 277
+        wins: 4
+    constructor_standings_2013_10_2:
+        race: '@race_2013_10'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 208
+        wins: 3
+    constructor_standings_2013_10_3:
+        race: '@race_2013_10'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 194
+        wins: 2
+    constructor_standings_2013_10_4:
+        race: '@race_2013_10'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 183
+        wins: 1
+    constructor_standings_2013_10_5:
+        race: '@race_2013_10'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 59
+        wins: 0
+    constructor_standings_2013_10_6:
+        race: '@race_2013_10'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 57
+        wins: 0
+    constructor_standings_2013_10_7:
+        race: '@race_2013_10'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 24
+        wins: 0
+    constructor_standings_2013_10_8:
+        race: '@race_2013_10'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 7
+        wins: 0
+    constructor_standings_2013_10_9:
+        race: '@race_2013_10'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_10_10:
+        race: '@race_2013_10'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_10_11:
+        race: '@race_2013_10'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_11_1:
+        race: '@race_2013_11'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 312
+        wins: 5
+    constructor_standings_2013_11_2:
+        race: '@race_2013_11'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 235
+        wins: 3
+    constructor_standings_2013_11_3:
+        race: '@race_2013_11'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 218
+        wins: 2
+    constructor_standings_2013_11_4:
+        race: '@race_2013_11'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 187
+        wins: 1
+    constructor_standings_2013_11_5:
+        race: '@race_2013_11'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 65
+        wins: 0
+    constructor_standings_2013_11_6:
+        race: '@race_2013_11'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 61
+        wins: 0
+    constructor_standings_2013_11_7:
+        race: '@race_2013_11'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 25
+        wins: 0
+    constructor_standings_2013_11_8:
+        race: '@race_2013_11'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 7
+        wins: 0
+    constructor_standings_2013_11_9:
+        race: '@race_2013_11'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_11_10:
+        race: '@race_2013_11'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_11_11:
+        race: '@race_2013_11'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_12_1:
+        race: '@race_2013_12'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 352
+        wins: 6
+    constructor_standings_2013_12_2:
+        race: '@race_2013_12'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 248
+        wins: 2
+    constructor_standings_2013_12_3:
+        race: '@race_2013_12'
+        constructor: '@constructor_mercedes'
+        position: 3
+        points: !!float 245
+        wins: 3
+    constructor_standings_2013_12_4:
+        race: '@race_2013_12'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 191
+        wins: 1
+    constructor_standings_2013_12_5:
+        race: '@race_2013_12'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 66
+        wins: 0
+    constructor_standings_2013_12_6:
+        race: '@race_2013_12'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 61
+        wins: 0
+    constructor_standings_2013_12_7:
+        race: '@race_2013_12'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 31
+        wins: 0
+    constructor_standings_2013_12_8:
+        race: '@race_2013_12'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 17
+        wins: 0
+    constructor_standings_2013_12_9:
+        race: '@race_2013_12'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_12_10:
+        race: '@race_2013_12'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_12_11:
+        race: '@race_2013_12'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_13_1:
+        race: '@race_2013_13'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 377
+        wins: 7
+    constructor_standings_2013_13_2:
+        race: '@race_2013_13'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 274
+        wins: 2
+    constructor_standings_2013_13_3:
+        race: '@race_2013_13'
+        constructor: '@constructor_mercedes'
+        position: 3
+        points: !!float 267
+        wins: 3
+    constructor_standings_2013_13_4:
+        race: '@race_2013_13'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 206
+        wins: 1
+    constructor_standings_2013_13_5:
+        race: '@race_2013_13'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 76
+        wins: 0
+    constructor_standings_2013_13_6:
+        race: '@race_2013_13'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 62
+        wins: 0
+    constructor_standings_2013_13_7:
+        race: '@race_2013_13'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 31
+        wins: 0
+    constructor_standings_2013_13_8:
+        race: '@race_2013_13'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 19
+        wins: 0
+    constructor_standings_2013_13_9:
+        race: '@race_2013_13'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_13_10:
+        race: '@race_2013_13'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_13_11:
+        race: '@race_2013_13'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_14_1:
+        race: '@race_2013_14'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 402
+        wins: 8
+    constructor_standings_2013_14_2:
+        race: '@race_2013_14'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 284
+        wins: 2
+    constructor_standings_2013_14_3:
+        race: '@race_2013_14'
+        constructor: '@constructor_mercedes'
+        position: 3
+        points: !!float 283
+        wins: 3
+    constructor_standings_2013_14_4:
+        race: '@race_2013_14'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 239
+        wins: 1
+    constructor_standings_2013_14_5:
+        race: '@race_2013_14'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 81
+        wins: 0
+    constructor_standings_2013_14_6:
+        race: '@race_2013_14'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 62
+        wins: 0
+    constructor_standings_2013_14_7:
+        race: '@race_2013_14'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 31
+        wins: 0
+    constructor_standings_2013_14_8:
+        race: '@race_2013_14'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 31
+        wins: 0
+    constructor_standings_2013_14_9:
+        race: '@race_2013_14'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_14_10:
+        race: '@race_2013_14'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_14_11:
+        race: '@race_2013_14'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_15_1:
+        race: '@race_2013_15'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 445
+        wins: 9
+    constructor_standings_2013_15_2:
+        race: '@race_2013_15'
+        constructor: '@constructor_ferrari'
+        position: 2
+        points: !!float 297
+        wins: 2
+    constructor_standings_2013_15_3:
+        race: '@race_2013_15'
+        constructor: '@constructor_mercedes'
+        position: 3
+        points: !!float 287
+        wins: 3
+    constructor_standings_2013_15_4:
+        race: '@race_2013_15'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 264
+        wins: 1
+    constructor_standings_2013_15_5:
+        race: '@race_2013_15'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 83
+        wins: 0
+    constructor_standings_2013_15_6:
+        race: '@race_2013_15'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 62
+        wins: 0
+    constructor_standings_2013_15_7:
+        race: '@race_2013_15'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 45
+        wins: 0
+    constructor_standings_2013_15_8:
+        race: '@race_2013_15'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 31
+        wins: 0
+    constructor_standings_2013_15_9:
+        race: '@race_2013_15'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_15_10:
+        race: '@race_2013_15'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_15_11:
+        race: '@race_2013_15'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_16_1:
+        race: '@race_2013_16'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 470
+        wins: 10
+    constructor_standings_2013_16_2:
+        race: '@race_2013_16'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 313
+        wins: 3
+    constructor_standings_2013_16_3:
+        race: '@race_2013_16'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 309
+        wins: 2
+    constructor_standings_2013_16_4:
+        race: '@race_2013_16'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 285
+        wins: 1
+    constructor_standings_2013_16_5:
+        race: '@race_2013_16'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 93
+        wins: 0
+    constructor_standings_2013_16_6:
+        race: '@race_2013_16'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 68
+        wins: 0
+    constructor_standings_2013_16_7:
+        race: '@race_2013_16'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 45
+        wins: 0
+    constructor_standings_2013_16_8:
+        race: '@race_2013_16'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 32
+        wins: 0
+    constructor_standings_2013_16_9:
+        race: '@race_2013_16'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_16_10:
+        race: '@race_2013_16'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_16_11:
+        race: '@race_2013_16'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_17_1:
+        race: '@race_2013_17'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 513
+        wins: 11
+    constructor_standings_2013_17_2:
+        race: '@race_2013_17'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 334
+        wins: 3
+    constructor_standings_2013_17_3:
+        race: '@race_2013_17'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 323
+        wins: 2
+    constructor_standings_2013_17_4:
+        race: '@race_2013_17'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 297
+        wins: 1
+    constructor_standings_2013_17_5:
+        race: '@race_2013_17'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 95
+        wins: 0
+    constructor_standings_2013_17_6:
+        race: '@race_2013_17'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 77
+        wins: 0
+    constructor_standings_2013_17_7:
+        race: '@race_2013_17'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 45
+        wins: 0
+    constructor_standings_2013_17_8:
+        race: '@race_2013_17'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 32
+        wins: 0
+    constructor_standings_2013_17_9:
+        race: '@race_2013_17'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 1
+        wins: 0
+    constructor_standings_2013_17_10:
+        race: '@race_2013_17'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_17_11:
+        race: '@race_2013_17'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_18_1:
+        race: '@race_2013_18'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 553
+        wins: 12
+    constructor_standings_2013_18_2:
+        race: '@race_2013_18'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 348
+        wins: 3
+    constructor_standings_2013_18_3:
+        race: '@race_2013_18'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 333
+        wins: 2
+    constructor_standings_2013_18_4:
+        race: '@race_2013_18'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 315
+        wins: 1
+    constructor_standings_2013_18_5:
+        race: '@race_2013_18'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 102
+        wins: 0
+    constructor_standings_2013_18_6:
+        race: '@race_2013_18'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 77
+        wins: 0
+    constructor_standings_2013_18_7:
+        race: '@race_2013_18'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 53
+        wins: 0
+    constructor_standings_2013_18_8:
+        race: '@race_2013_18'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 32
+        wins: 0
+    constructor_standings_2013_18_9:
+        race: '@race_2013_18'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_18_10:
+        race: '@race_2013_18'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_18_11:
+        race: '@race_2013_18'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_19_1:
+        race: '@race_2013_19'
+        constructor: '@constructor_red_bull'
+        position: 1
+        points: !!float 596
+        wins: 13
+    constructor_standings_2013_19_2:
+        race: '@race_2013_19'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 360
+        wins: 3
+    constructor_standings_2013_19_3:
+        race: '@race_2013_19'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 354
+        wins: 2
+    constructor_standings_2013_19_4:
+        race: '@race_2013_19'
+        constructor: '@constructor_lotus_f1'
+        position: 4
+        points: !!float 315
+        wins: 1
+    constructor_standings_2013_19_5:
+        race: '@race_2013_19'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 122
+        wins: 0
+    constructor_standings_2013_19_6:
+        race: '@race_2013_19'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 77
+        wins: 0
+    constructor_standings_2013_19_7:
+        race: '@race_2013_19'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 57
+        wins: 0
+    constructor_standings_2013_19_8:
+        race: '@race_2013_19'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 33
+        wins: 0
+    constructor_standings_2013_19_9:
+        race: '@race_2013_19'
+        constructor: '@constructor_williams'
+        position: 9
+        points: !!float 5
+        wins: 0
+    constructor_standings_2013_19_10:
+        race: '@race_2013_19'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2013_19_11:
+        race: '@race_2013_19'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_1_1:
+        race: '@race_2014_1'
+        constructor: '@constructor_mclaren'
+        position: 1
+        points: !!float 33
+        wins: 0
+    constructor_standings_2014_1_2:
+        race: '@race_2014_1'
+        constructor: '@constructor_mercedes'
+        position: 2
+        points: !!float 25
+        wins: 1
+    constructor_standings_2014_1_3:
+        race: '@race_2014_1'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 18
+        wins: 0
+    constructor_standings_2014_1_4:
+        race: '@race_2014_1'
+        constructor: '@constructor_williams'
+        position: 4
+        points: !!float 10
+        wins: 0
+    constructor_standings_2014_1_5:
+        race: '@race_2014_1'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 9
+        wins: 0
+    constructor_standings_2014_1_6:
+        race: '@race_2014_1'
+        constructor: '@constructor_toro_rosso'
+        position: 6
+        points: !!float 6
+        wins: 0
+    constructor_standings_2014_1_7:
+        race: '@race_2014_1'
+        constructor: '@constructor_sauber'
+        position: 7
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_1_8:
+        race: '@race_2014_1'
+        constructor: '@constructor_marussia'
+        position: 8
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_1_9:
+        race: '@race_2014_1'
+        constructor: '@constructor_lotus_f1'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_1_10:
+        race: '@race_2014_1'
+        constructor: '@constructor_caterham'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_1_11:
+        race: '@race_2014_1'
+        constructor: '@constructor_red_bull'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_2_1:
+        race: '@race_2014_2'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 68
+        wins: 2
+    constructor_standings_2014_2_2:
+        race: '@race_2014_2'
+        constructor: '@constructor_mclaren'
+        position: 2
+        points: !!float 43
+        wins: 0
+    constructor_standings_2014_2_3:
+        race: '@race_2014_2'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 30
+        wins: 0
+    constructor_standings_2014_2_4:
+        race: '@race_2014_2'
+        constructor: '@constructor_williams'
+        position: 4
+        points: !!float 20
+        wins: 0
+    constructor_standings_2014_2_5:
+        race: '@race_2014_2'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 19
+        wins: 0
+    constructor_standings_2014_2_6:
+        race: '@race_2014_2'
+        constructor: '@constructor_red_bull'
+        position: 6
+        points: !!float 15
+        wins: 0
+    constructor_standings_2014_2_7:
+        race: '@race_2014_2'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 7
+        wins: 0
+    constructor_standings_2014_2_8:
+        race: '@race_2014_2'
+        constructor: '@constructor_sauber'
+        position: 8
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_2_9:
+        race: '@race_2014_2'
+        constructor: '@constructor_lotus_f1'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_2_10:
+        race: '@race_2014_2'
+        constructor: '@constructor_caterham'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_2_11:
+        race: '@race_2014_2'
+        constructor: '@constructor_marussia'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_3_1:
+        race: '@race_2014_3'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 111
+        wins: 3
+    constructor_standings_2014_3_2:
+        race: '@race_2014_3'
+        constructor: '@constructor_force_india'
+        position: 2
+        points: !!float 44
+        wins: 0
+    constructor_standings_2014_3_3:
+        race: '@race_2014_3'
+        constructor: '@constructor_mclaren'
+        position: 3
+        points: !!float 43
+        wins: 0
+    constructor_standings_2014_3_4:
+        race: '@race_2014_3'
+        constructor: '@constructor_red_bull'
+        position: 4
+        points: !!float 35
+        wins: 0
+    constructor_standings_2014_3_5:
+        race: '@race_2014_3'
+        constructor: '@constructor_ferrari'
+        position: 5
+        points: !!float 33
+        wins: 0
+    constructor_standings_2014_3_6:
+        race: '@race_2014_3'
+        constructor: '@constructor_williams'
+        position: 6
+        points: !!float 30
+        wins: 0
+    constructor_standings_2014_3_7:
+        race: '@race_2014_3'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 7
+        wins: 0
+    constructor_standings_2014_3_8:
+        race: '@race_2014_3'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_3_9:
+        race: '@race_2014_3'
+        constructor: '@constructor_sauber'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_3_10:
+        race: '@race_2014_3'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_3_11:
+        race: '@race_2014_3'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_4_1:
+        race: '@race_2014_4'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 154
+        wins: 4
+    constructor_standings_2014_4_2:
+        race: '@race_2014_4'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 57
+        wins: 0
+    constructor_standings_2014_4_3:
+        race: '@race_2014_4'
+        constructor: '@constructor_force_india'
+        position: 3
+        points: !!float 54
+        wins: 0
+    constructor_standings_2014_4_4:
+        race: '@race_2014_4'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 52
+        wins: 0
+    constructor_standings_2014_4_5:
+        race: '@race_2014_4'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 43
+        wins: 0
+    constructor_standings_2014_4_6:
+        race: '@race_2014_4'
+        constructor: '@constructor_williams'
+        position: 6
+        points: !!float 36
+        wins: 0
+    constructor_standings_2014_4_7:
+        race: '@race_2014_4'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_4_8:
+        race: '@race_2014_4'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_4_9:
+        race: '@race_2014_4'
+        constructor: '@constructor_sauber'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_4_10:
+        race: '@race_2014_4'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_4_11:
+        race: '@race_2014_4'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_5_1:
+        race: '@race_2014_5'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 197
+        wins: 5
+    constructor_standings_2014_5_2:
+        race: '@race_2014_5'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 84
+        wins: 0
+    constructor_standings_2014_5_3:
+        race: '@race_2014_5'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 66
+        wins: 0
+    constructor_standings_2014_5_4:
+        race: '@race_2014_5'
+        constructor: '@constructor_force_india'
+        position: 4
+        points: !!float 57
+        wins: 0
+    constructor_standings_2014_5_5:
+        race: '@race_2014_5'
+        constructor: '@constructor_williams'
+        position: 5
+        points: !!float 46
+        wins: 0
+    constructor_standings_2014_5_6:
+        race: '@race_2014_5'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 43
+        wins: 0
+    constructor_standings_2014_5_7:
+        race: '@race_2014_5'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_5_8:
+        race: '@race_2014_5'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 4
+        wins: 0
+    constructor_standings_2014_5_9:
+        race: '@race_2014_5'
+        constructor: '@constructor_sauber'
+        position: 9
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_5_10:
+        race: '@race_2014_5'
+        constructor: '@constructor_marussia'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_5_11:
+        race: '@race_2014_5'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_6_1:
+        race: '@race_2014_6'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 240
+        wins: 6
+    constructor_standings_2014_6_2:
+        race: '@race_2014_6'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 99
+        wins: 0
+    constructor_standings_2014_6_3:
+        race: '@race_2014_6'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 78
+        wins: 0
+    constructor_standings_2014_6_4:
+        race: '@race_2014_6'
+        constructor: '@constructor_force_india'
+        position: 4
+        points: !!float 67
+        wins: 0
+    constructor_standings_2014_6_5:
+        race: '@race_2014_6'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 52
+        wins: 0
+    constructor_standings_2014_6_6:
+        race: '@race_2014_6'
+        constructor: '@constructor_williams'
+        position: 6
+        points: !!float 52
+        wins: 0
+    constructor_standings_2014_6_7:
+        race: '@race_2014_6'
+        constructor: '@constructor_lotus_f1'
+        position: 7
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_6_8:
+        race: '@race_2014_6'
+        constructor: '@constructor_toro_rosso'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_6_9:
+        race: '@race_2014_6'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_6_10:
+        race: '@race_2014_6'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_6_11:
+        race: '@race_2014_6'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_7_1:
+        race: '@race_2014_7'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 258
+        wins: 6
+    constructor_standings_2014_7_2:
+        race: '@race_2014_7'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 139
+        wins: 1
+    constructor_standings_2014_7_3:
+        race: '@race_2014_7'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 87
+        wins: 0
+    constructor_standings_2014_7_4:
+        race: '@race_2014_7'
+        constructor: '@constructor_force_india'
+        position: 4
+        points: !!float 77
+        wins: 0
+    constructor_standings_2014_7_5:
+        race: '@race_2014_7'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 66
+        wins: 0
+    constructor_standings_2014_7_6:
+        race: '@race_2014_7'
+        constructor: '@constructor_williams'
+        position: 6
+        points: !!float 58
+        wins: 0
+    constructor_standings_2014_7_7:
+        race: '@race_2014_7'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 12
+        wins: 0
+    constructor_standings_2014_7_8:
+        race: '@race_2014_7'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_7_9:
+        race: '@race_2014_7'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_7_10:
+        race: '@race_2014_7'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_7_11:
+        race: '@race_2014_7'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_8_1:
+        race: '@race_2014_8'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 301
+        wins: 7
+    constructor_standings_2014_8_2:
+        race: '@race_2014_8'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 143
+        wins: 1
+    constructor_standings_2014_8_3:
+        race: '@race_2014_8'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 98
+        wins: 0
+    constructor_standings_2014_8_4:
+        race: '@race_2014_8'
+        constructor: '@constructor_force_india'
+        position: 4
+        points: !!float 87
+        wins: 0
+    constructor_standings_2014_8_5:
+        race: '@race_2014_8'
+        constructor: '@constructor_williams'
+        position: 5
+        points: !!float 85
+        wins: 0
+    constructor_standings_2014_8_6:
+        race: '@race_2014_8'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 72
+        wins: 0
+    constructor_standings_2014_8_7:
+        race: '@race_2014_8'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 12
+        wins: 0
+    constructor_standings_2014_8_8:
+        race: '@race_2014_8'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_8_9:
+        race: '@race_2014_8'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_8_10:
+        race: '@race_2014_8'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_8_11:
+        race: '@race_2014_8'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_9_1:
+        race: '@race_2014_9'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 326
+        wins: 8
+    constructor_standings_2014_9_2:
+        race: '@race_2014_9'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 168
+        wins: 1
+    constructor_standings_2014_9_3:
+        race: '@race_2014_9'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 106
+        wins: 0
+    constructor_standings_2014_9_4:
+        race: '@race_2014_9'
+        constructor: '@constructor_williams'
+        position: 4
+        points: !!float 103
+        wins: 0
+    constructor_standings_2014_9_5:
+        race: '@race_2014_9'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 91
+        wins: 0
+    constructor_standings_2014_9_6:
+        race: '@race_2014_9'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 90
+        wins: 0
+    constructor_standings_2014_9_7:
+        race: '@race_2014_9'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 15
+        wins: 0
+    constructor_standings_2014_9_8:
+        race: '@race_2014_9'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_9_9:
+        race: '@race_2014_9'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_9_10:
+        race: '@race_2014_9'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_9_11:
+        race: '@race_2014_9'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_10_1:
+        race: '@race_2014_10'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 366
+        wins: 9
+    constructor_standings_2014_10_2:
+        race: '@race_2014_10'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 188
+        wins: 1
+    constructor_standings_2014_10_3:
+        race: '@race_2014_10'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 121
+        wins: 0
+    constructor_standings_2014_10_4:
+        race: '@race_2014_10'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 116
+        wins: 0
+    constructor_standings_2014_10_5:
+        race: '@race_2014_10'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 98
+        wins: 0
+    constructor_standings_2014_10_6:
+        race: '@race_2014_10'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 96
+        wins: 0
+    constructor_standings_2014_10_7:
+        race: '@race_2014_10'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 15
+        wins: 0
+    constructor_standings_2014_10_8:
+        race: '@race_2014_10'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_10_9:
+        race: '@race_2014_10'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_10_10:
+        race: '@race_2014_10'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_10_11:
+        race: '@race_2014_10'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_11_1:
+        race: '@race_2014_11'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 393
+        wins: 9
+    constructor_standings_2014_11_2:
+        race: '@race_2014_11'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 219
+        wins: 2
+    constructor_standings_2014_11_3:
+        race: '@race_2014_11'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 142
+        wins: 0
+    constructor_standings_2014_11_4:
+        race: '@race_2014_11'
+        constructor: '@constructor_williams'
+        position: 4
+        points: !!float 135
+        wins: 0
+    constructor_standings_2014_11_5:
+        race: '@race_2014_11'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 98
+        wins: 0
+    constructor_standings_2014_11_6:
+        race: '@race_2014_11'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 97
+        wins: 0
+    constructor_standings_2014_11_7:
+        race: '@race_2014_11'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 17
+        wins: 0
+    constructor_standings_2014_11_8:
+        race: '@race_2014_11'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_11_9:
+        race: '@race_2014_11'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_11_10:
+        race: '@race_2014_11'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_11_11:
+        race: '@race_2014_11'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_12_1:
+        race: '@race_2014_12'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 411
+        wins: 9
+    constructor_standings_2014_12_2:
+        race: '@race_2014_12'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 254
+        wins: 3
+    constructor_standings_2014_12_3:
+        race: '@race_2014_12'
+        constructor: '@constructor_ferrari'
+        position: 3
+        points: !!float 160
+        wins: 0
+    constructor_standings_2014_12_4:
+        race: '@race_2014_12'
+        constructor: '@constructor_williams'
+        position: 4
+        points: !!float 150
+        wins: 0
+    constructor_standings_2014_12_5:
+        race: '@race_2014_12'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 105
+        wins: 0
+    constructor_standings_2014_12_6:
+        race: '@race_2014_12'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 103
+        wins: 0
+    constructor_standings_2014_12_7:
+        race: '@race_2014_12'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 19
+        wins: 0
+    constructor_standings_2014_12_8:
+        race: '@race_2014_12'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_12_9:
+        race: '@race_2014_12'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_12_10:
+        race: '@race_2014_12'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_12_11:
+        race: '@race_2014_12'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_13_1:
+        race: '@race_2014_13'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 454
+        wins: 10
+    constructor_standings_2014_13_2:
+        race: '@race_2014_13'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 272
+        wins: 3
+    constructor_standings_2014_13_3:
+        race: '@race_2014_13'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 177
+        wins: 0
+    constructor_standings_2014_13_4:
+        race: '@race_2014_13'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 162
+        wins: 0
+    constructor_standings_2014_13_5:
+        race: '@race_2014_13'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 110
+        wins: 0
+    constructor_standings_2014_13_6:
+        race: '@race_2014_13'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 109
+        wins: 0
+    constructor_standings_2014_13_7:
+        race: '@race_2014_13'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 19
+        wins: 0
+    constructor_standings_2014_13_8:
+        race: '@race_2014_13'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_13_9:
+        race: '@race_2014_13'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_13_10:
+        race: '@race_2014_13'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_13_11:
+        race: '@race_2014_13'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_14_1:
+        race: '@race_2014_14'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 479
+        wins: 11
+    constructor_standings_2014_14_2:
+        race: '@race_2014_14'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 305
+        wins: 3
+    constructor_standings_2014_14_3:
+        race: '@race_2014_14'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 187
+        wins: 0
+    constructor_standings_2014_14_4:
+        race: '@race_2014_14'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 178
+        wins: 0
+    constructor_standings_2014_14_5:
+        race: '@race_2014_14'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 117
+        wins: 0
+    constructor_standings_2014_14_6:
+        race: '@race_2014_14'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 111
+        wins: 0
+    constructor_standings_2014_14_7:
+        race: '@race_2014_14'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 27
+        wins: 0
+    constructor_standings_2014_14_8:
+        race: '@race_2014_14'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_14_9:
+        race: '@race_2014_14'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_14_10:
+        race: '@race_2014_14'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_14_11:
+        race: '@race_2014_14'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_15_1:
+        race: '@race_2014_15'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 522
+        wins: 12
+    constructor_standings_2014_15_2:
+        race: '@race_2014_15'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 332
+        wins: 3
+    constructor_standings_2014_15_3:
+        race: '@race_2014_15'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 201
+        wins: 0
+    constructor_standings_2014_15_4:
+        race: '@race_2014_15'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 178
+        wins: 0
+    constructor_standings_2014_15_5:
+        race: '@race_2014_15'
+        constructor: '@constructor_force_india'
+        position: 5
+        points: !!float 122
+        wins: 0
+    constructor_standings_2014_15_6:
+        race: '@race_2014_15'
+        constructor: '@constructor_mclaren'
+        position: 6
+        points: !!float 121
+        wins: 0
+    constructor_standings_2014_15_7:
+        race: '@race_2014_15'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 29
+        wins: 0
+    constructor_standings_2014_15_8:
+        race: '@race_2014_15'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_15_9:
+        race: '@race_2014_15'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_15_10:
+        race: '@race_2014_15'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_15_11:
+        race: '@race_2014_15'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_16_1:
+        race: '@race_2014_16'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 565
+        wins: 13
+    constructor_standings_2014_16_2:
+        race: '@race_2014_16'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 342
+        wins: 3
+    constructor_standings_2014_16_3:
+        race: '@race_2014_16'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 216
+        wins: 0
+    constructor_standings_2014_16_4:
+        race: '@race_2014_16'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 188
+        wins: 0
+    constructor_standings_2014_16_5:
+        race: '@race_2014_16'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 143
+        wins: 0
+    constructor_standings_2014_16_6:
+        race: '@race_2014_16'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 123
+        wins: 0
+    constructor_standings_2014_16_7:
+        race: '@race_2014_16'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 29
+        wins: 0
+    constructor_standings_2014_16_8:
+        race: '@race_2014_16'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 8
+        wins: 0
+    constructor_standings_2014_16_9:
+        race: '@race_2014_16'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_16_10:
+        race: '@race_2014_16'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_16_11:
+        race: '@race_2014_16'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_17_1:
+        race: '@race_2014_17'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 608
+        wins: 14
+    constructor_standings_2014_17_2:
+        race: '@race_2014_17'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 363
+        wins: 3
+    constructor_standings_2014_17_3:
+        race: '@race_2014_17'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 238
+        wins: 0
+    constructor_standings_2014_17_4:
+        race: '@race_2014_17'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 196
+        wins: 0
+    constructor_standings_2014_17_5:
+        race: '@race_2014_17'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 147
+        wins: 0
+    constructor_standings_2014_17_6:
+        race: '@race_2014_17'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 123
+        wins: 0
+    constructor_standings_2014_17_7:
+        race: '@race_2014_17'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 30
+        wins: 0
+    constructor_standings_2014_17_8:
+        race: '@race_2014_17'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 10
+        wins: 0
+    constructor_standings_2014_17_9:
+        race: '@race_2014_17'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_17_10:
+        race: '@race_2014_17'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_17_11:
+        race: '@race_2014_17'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_18_1:
+        race: '@race_2014_18'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 651
+        wins: 15
+    constructor_standings_2014_18_2:
+        race: '@race_2014_18'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 373
+        wins: 3
+    constructor_standings_2014_18_3:
+        race: '@race_2014_18'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 254
+        wins: 0
+    constructor_standings_2014_18_4:
+        race: '@race_2014_18'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 210
+        wins: 0
+    constructor_standings_2014_18_5:
+        race: '@race_2014_18'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 161
+        wins: 0
+    constructor_standings_2014_18_6:
+        race: '@race_2014_18'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 127
+        wins: 0
+    constructor_standings_2014_18_7:
+        race: '@race_2014_18'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 30
+        wins: 0
+    constructor_standings_2014_18_8:
+        race: '@race_2014_18'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 10
+        wins: 0
+    constructor_standings_2014_18_9:
+        race: '@race_2014_18'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_18_10:
+        race: '@race_2014_18'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_18_11:
+        race: '@race_2014_18'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_19_1:
+        race: '@race_2014_19'
+        constructor: '@constructor_mercedes'
+        position: 1
+        points: !!float 701
+        wins: 16
+    constructor_standings_2014_19_2:
+        race: '@race_2014_19'
+        constructor: '@constructor_red_bull'
+        position: 2
+        points: !!float 405
+        wins: 3
+    constructor_standings_2014_19_3:
+        race: '@race_2014_19'
+        constructor: '@constructor_williams'
+        position: 3
+        points: !!float 320
+        wins: 0
+    constructor_standings_2014_19_4:
+        race: '@race_2014_19'
+        constructor: '@constructor_ferrari'
+        position: 4
+        points: !!float 216
+        wins: 0
+    constructor_standings_2014_19_5:
+        race: '@race_2014_19'
+        constructor: '@constructor_mclaren'
+        position: 5
+        points: !!float 181
+        wins: 0
+    constructor_standings_2014_19_6:
+        race: '@race_2014_19'
+        constructor: '@constructor_force_india'
+        position: 6
+        points: !!float 155
+        wins: 0
+    constructor_standings_2014_19_7:
+        race: '@race_2014_19'
+        constructor: '@constructor_toro_rosso'
+        position: 7
+        points: !!float 30
+        wins: 0
+    constructor_standings_2014_19_8:
+        race: '@race_2014_19'
+        constructor: '@constructor_lotus_f1'
+        position: 8
+        points: !!float 10
+        wins: 0
+    constructor_standings_2014_19_9:
+        race: '@race_2014_19'
+        constructor: '@constructor_marussia'
+        position: 9
+        points: !!float 2
+        wins: 0
+    constructor_standings_2014_19_10:
+        race: '@race_2014_19'
+        constructor: '@constructor_sauber'
+        position: 10
+        points: !!float 0
+        wins: 0
+    constructor_standings_2014_19_11:
+        race: '@race_2014_19'
+        constructor: '@constructor_caterham'
+        position: 11
+        points: !!float 0
+        wins: 0
