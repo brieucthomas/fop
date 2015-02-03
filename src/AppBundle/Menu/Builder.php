@@ -9,6 +9,7 @@
 
 namespace AppBundle\Menu;
 
+use AppBundle\Service\RaceServiceInterface;
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
@@ -34,7 +35,7 @@ class Builder
      * Constructor.
      *
      * @param FactoryInterface $factory
-     * @param RequestStack     $requestStack
+     * @param RequestStack $requestStack
      */
     public function __construct(FactoryInterface $factory, RequestStack $requestStack)
     {
@@ -42,11 +43,38 @@ class Builder
         $this->requestStack = $requestStack;
     }
 
-    public function createMainMenu()
+    public function createMainMenu(RaceServiceInterface $raceService)
     {
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
+
+        if ($lastRace = $raceService->findLastRace()) {
+            $menu->addChild(
+                'navigation.main.last-race',
+                [
+                    'route'           => 'race',
+                    'routeParameters' => [
+                        'season' => $lastRace->getSeason()->getYear(),
+                        'round'  => $lastRace->getRound()
+                    ]
+                ]
+            );
+        }
+
+        if ($nextRace = $raceService->findNextRace()) {
+            $menu->addChild(
+                'navigation.main.next-race',
+                [
+                    'route'           => 'race',
+                    'routeParameters' => [
+                        'season' => $nextRace->getSeason()->getYear(),
+                        'round'  => $nextRace->getRound()
+                    ]
+                ]
+            );
+        }
+
         $menu->addChild(
             'navigation.season.last',
             [
@@ -56,7 +84,7 @@ class Builder
             ]
         );
         $menu->addChild(
-            'navigation.season.next',
+            'navigation.season.current',
             [
                 'route'           => 'season_home',
                 'routeParameters' => ['year' => date('Y')],
@@ -98,7 +126,7 @@ class Builder
                     'label'           => $local
                 ]
             );
-            $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
+            $child->setLinkAttribute('title', 'navigation.locale_switcher.' . $local);
         }
 
         return $menu;
