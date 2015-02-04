@@ -39,7 +39,7 @@ class UrlTest extends WebTestCase
             ['/en/'],
             ['/en/constructors/ferrari'],
             ['/en/drivers/hamilton'],
-            ['/en/users/foo'],
+            ['/en/users/user1'],
         ];
     }
 
@@ -47,9 +47,9 @@ class UrlTest extends WebTestCase
     {
         return [
             ['/ru/'],
-            ['/en/constructors/nintendo'],
-            ['/en/drivers/luidgi'],
-            ['/en/users/mario'],
+            ['/en/constructors/foo'],
+            ['/en/drivers/foo'],
+            ['/en/users/foo'],
         ];
     }
 }

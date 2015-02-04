@@ -2,60 +2,70 @@ AppBundle\Entity\User:
     user_1:
         username: user_1
         password: user_1
+        slug: user1
         enabled: true
         email: user_1@fop.com
         created: '2013-06-01'
     user_2:
         username: user_2
         password: user_2
+        slug: user2
         enabled: true
         email: user_2@fop.com
         created: '2013-06-01'
     user_3:
         username: user_3
         password: user_3
+        slug: user3
         enabled: true
         email: user_3@fop.com
         created: '2013-06-01'
     user_4:
         username: user_4
         password: user_4
+        slug: user4
         enabled: true
         email: user_4@fop.com
         created: '2013-06-01'
     user_5:
         username: user_5
         password: user_5
+        slug: user5
         enabled: true
         email: user_5@fop.com
         created: '2013-06-01'
     user_6:
         username: user_6
         password: user_6
+        slug: user6
         enabled: true
         email: user_6@fop.com
         created: '2013-06-01'
     user_7:
         username: user_7
         password: user_7
+        slug: user7
         enabled: true
         email: user_7@fop.com
         created: '2013-06-01'
     user_8:
         username: user_8
         password: user_8
+        slug: user8
         enabled: true
         email: user_8@fop.com
         created: '2013-06-01'
     user_9:
         username: user_9
         password: user_9
+        slug: user9
         enabled: true
         email: user_9@fop.com
         created: '2013-06-01'
     user_10:
         username: user_10
         password: user_10
+        slug: user10
         enabled: true
         email: user_10@fop.com
         created: '2013-06-01'
