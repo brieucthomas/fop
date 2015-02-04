@@ -14,7 +14,7 @@ class UrlTest extends WebTestCase
     /**
      * @dataProvider provideSuccessUrls
      */
-    public function __testPageIsSuccessful($url)
+    public function testPageIsSuccessful($url)
     {
         $client = self::createClient();
         $client->request('GET', $url);
@@ -25,7 +25,7 @@ class UrlTest extends WebTestCase
     /**
      * @dataProvider provideNotFoundUrls
      */
-    public function __testPageIsNotFound($url)
+    public function testPageIsNotFound($url)
     {
         $client = self::createClient();
         $client->request('GET', $url);
