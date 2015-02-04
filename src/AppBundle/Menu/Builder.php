@@ -48,26 +48,7 @@ class Builder
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
-
-        $menu->addChild('navigation.main.last-race', [ 'route' => 'last_race' ]);
-        $menu->addChild('navigation.main.next-race', [ 'route' => 'next_race' ]);
-
-        $menu->addChild(
-            'navigation.season.last',
-            [
-                'route'           => 'season_home',
-                'routeParameters' => ['year' => date('Y') - 1],
-                'extras'          => ['translation_params' => [date('Y') - 1]]
-            ]
-        );
-        $menu->addChild(
-            'navigation.season.current',
-            [
-                'route'           => 'season_home',
-                'routeParameters' => ['year' => date('Y')],
-                'extras'          => ['translation_params' => [date('Y')]]
-            ]
-        );
+        $menu->addChild('navigation.main.seasons', [ 'route' => 'season_home' ]);
 
         return $menu;
     }

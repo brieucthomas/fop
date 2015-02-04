@@ -2,3 +2,41 @@
 // Navbars
 // --------------------------------------------------
 
+
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
+
+.navbar-main {
+  margin-bottom: 0;
+  background-color: #fff;
+  border-bottom: 0;
+}
+.bs-home-nav .bs-nav-b {
+  display: none;
+}
+.navbar-main .navbar-brand,
+.navbar-main .navbar-nav > li > a {
+  font-weight: 500;
+  color: #563d7c;
+}
+.navbar-main .navbar-nav > li > a:hover,
+.navbar-main .navbar-nav > .active > a,
+.navbar-main .navbar-nav > .active > a:hover {
+  color: #463265;
+  background-color: #f9f9f9;
+}
+.navbar-main .navbar-toggle .icon-bar {
+  background-color: #563d7c;
+}
+.navbar-main .navbar-header .navbar-toggle {
+  border-color: #fff;
+}
+.navbar-main .navbar-header .navbar-toggle:hover,
+.navbar-main .navbar-header .navbar-toggle:focus {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+}
+

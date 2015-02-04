@@ -2,10 +2,6 @@
 // Scaffolding
 // --------------------------------------------------
 
-body {
-  text-transform: uppercase;
-}
-
 #site-footer {
   width: 100%;
   text-align: center;
@@ -44,3 +40,63 @@ body {
 }
 
 
+
+
+
+/*
+ * Page headers
+ *
+ * Jumbotron-esque headers at the top of every page that's not the homepage.
+ */
+
+/* Page headers */
+/* Share masthead with page headers */
+.jumbotron {
+  position: relative;
+  padding: 30px 15px;
+  color: $concrete;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: $midnight-blue;
+}
+
+
+.jumbotron {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.jumbotron h1 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.jumbotron p {
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.jumbotron .container {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align: left;
+  }
+  .jumbotron h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron h1,
+  .jumbotron p {
+    margin-right: 380px;
+  }
+}

@@ -3,6 +3,13 @@
 {% set module = 'app/homepage' %}
 
 {% block content %}
+    
+    <main class="jumbotron" role="main">
+        <div class="container">
+            <img src="{{ asset('logo.svg') }}"/>
+            <p class="lead">Welcome to the Formula One Prediction game</p>
+        </div>
+    </main>
 
     {% if nextRace %}
         <div id="next-race" class="section section-lg section-inverse section-left">
