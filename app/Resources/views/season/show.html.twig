@@ -2,4 +2,23 @@
 
 {% block content %}
     {{ parent() }}
+
+    {% if season.isFinished %}
+        <div class="container">
+            <h1>Awards</h1>
+            <div class="row">
+                <div class="col-md-4 bg-orange">
+                    <h2>User</h2>
+                    <p>
+                        {% if season.races.last.userStandings.first %}
+                            {{ season.races.last.userStandings.first.user.username }}
+                        {% else %}
+                            {{ 'na'|trans }}
+                        {% endif %}
+                    </p>
+                    <span class="pull-right text-sun-flower fa fa-trophy fa-4x"></span>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}

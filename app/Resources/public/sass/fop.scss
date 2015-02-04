@@ -1,3 +1,4 @@
+@import "functions";
 @import "variables";
 
 @import "../../../../web/vendor/bootstrap-sass-official/assets/stylesheets/bootstrap";
@@ -5,8 +6,8 @@
 @import "fonts";
 @import "scaffolding";
 @import "type";
-@import "navbar";
 
 @import "countdown";
 @import "signin";
 @import "signup";
+@import "navbar";

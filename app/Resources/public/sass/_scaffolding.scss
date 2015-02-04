@@ -2,15 +2,26 @@
 // Scaffolding
 // --------------------------------------------------
 
+body {
+  text-transform: uppercase;
+}
+
+
+
 #site-footer {
-  width: 100%;
+  margin-top: 20px;
   text-align: center;
   font-size: $font-size-small;
+  border-top: 1px solid $gray-lighter;
 
   > .container {
     padding-top: ($padding-large-vertical*2);
+    padding-bottom: ($padding-large-vertical*2);
   }
 
+  p {
+    margin-bottom: 0;
+  }
   &,
   a {
     color: $gray-light;
@@ -57,7 +68,7 @@
   color: $concrete;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
-  background-color: $midnight-blue;
+  background-color: $wet-asphalt;
 }
 
 
