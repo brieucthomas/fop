@@ -105,7 +105,7 @@ class Race
      *
      * @var bool
      */
-    protected $activated = true;
+    protected $enabled = true;
 
     /**
      * The race bonus.
@@ -349,35 +349,35 @@ class Race
     }
 
     /**
-     * Returns whether the race is activated or not.
+     * Returns whether the race is enabled or not.
      *
-     * @return bool true if the race is activated, false otherwise
+     * @return bool true if the race is enabled, false otherwise
      */
-    public function isActivated()
+    public function isEnabled()
     {
-        return $this->activated;
+        return $this->enabled;
     }
 
     /**
-     * Active the race.
+     * Enables the race.
      *
      * @return $this
      */
-    public function active()
+    public function enable()
     {
-        $this->activated = true;
+        $this->enabled = true;
 
         return $this;
     }
 
     /**
-     * Inactive the race.
+     * Disables the race.
      *
      * @return $this
      */
-    public function inactive()
+    public function disable()
     {
-        $this->activated = false;
+        $this->enabled = false;
 
         return $this;
     }
