@@ -249,7 +249,7 @@ services:
     ergast_loader_qualifying:
         class: AppBundle\Ergast\Loader\QualifyingLoader
         parent: ergast_loader
-        arguments: ["@qualifying_service", "@race_service"]
+        arguments: ["@qualifying_service"]
     ergast_loader_finishing_status:
         class: AppBundle\Ergast\Loader\FinishingStatusLoader
         parent: ergast_loader
@@ -257,12 +257,12 @@ services:
     ergast_loader_result:
         class: AppBundle\Ergast\Loader\ResultLoader
         parent: ergast_loader
-        arguments: ["@result_service", "@race_service", "@finishing_status_service"]
+        arguments: ["@result_service", "@finishing_status_service"]
     ergast_loader_driver_standings:
         class: AppBundle\Ergast\Loader\DriverStandingsLoader
         parent: ergast_loader
-        arguments: ["@driver_standings_service", "@race_service"]
+        arguments: ["@driver_standings_service"]
     ergast_loader_constructor_standings:
         class: AppBundle\Ergast\Loader\ConstructorStandingsLoader
         parent: ergast_loader
-        arguments: ["@constructor_standings_service", "@race_service"]
+        arguments: ["@constructor_standings_service"]

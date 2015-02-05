@@ -10,6 +10,7 @@
 namespace AppBundle\Service;
 
 use AppBundle\Entity\Driver;
+use AppBundle\Entity\DriverStandings;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\DriverRepositoryInterface;
 use AppBundle\Repository\DriverStandingsRepositoryInterface;
@@ -36,6 +37,36 @@ class DriverStandingsService implements DriverStandingsServiceInterface
     public function __construct(DriverStandingsRepositoryInterface $driverStandingsRepository)
     {
         $this->driverStandingsRepository = $driverStandingsRepository;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(DriverStandings $driverStandings)
+    {
+        $this->driverStandingsRepository->save($driverStandings);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function persist(DriverStandings $driverStandings)
+    {
+        $this->driverStandingsRepository->persist($driverStandings);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function flush()
+    {
+        $this->driverStandingsRepository->flush();
+
+        return $this;
     }
 
     /**

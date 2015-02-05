@@ -105,7 +105,7 @@ class Race
      *
      * @var bool
      */
-    protected $active = true;
+    protected $activated = true;
 
     /**
      * The race bonus.
@@ -123,8 +123,7 @@ class Race
      *
      * @ORM\OneToMany(
      *      targetEntity="Qualifying",
-     *      mappedBy="race",
-     *      cascade={"all"}
+     *      mappedBy="race"
      * )
      * @ORM\OrderBy({"position"="ASC"})
      *
@@ -137,8 +136,7 @@ class Race
      *
      * @ORM\OneToMany(
      *      targetEntity="Result",
-     *      mappedBy="race",
-     *      cascade={"all"}
+     *      mappedBy="race"
      * )
      * @ORM\OrderBy({"position"="ASC"})
      *
@@ -351,29 +349,35 @@ class Race
     }
 
     /**
-     * @return bool
+     * Returns whether the race is activated or not.
+     *
+     * @return bool true if the race is activated, false otherwise
      */
-    public function isActive()
+    public function isActivated()
     {
-        return $this->active;
+        return $this->activated;
     }
 
     /**
+     * Active the race.
+     *
      * @return $this
      */
     public function active()
     {
-        $this->active = true;
+        $this->activated = true;
 
         return $this;
     }
 
     /**
+     * Inactive the race.
+     *
      * @return $this
      */
     public function inactive()
     {
-        $this->active = false;
+        $this->activated = false;
 
         return $this;
     }
@@ -413,36 +417,6 @@ class Race
     }
 
     /**
-     * Adds qualifying.
-     *
-     * @param Qualifying $qualifying
-     *
-     * @return $this
-     */
-    public function addQualifying(Qualifying $qualifying)
-    {
-        $qualifying->setRace($this);
-
-        $this->qualifying->add($qualifying);
-
-        return $this;
-    }
-
-    /**
-     * Removes a qualifying.
-     *
-     * @param Qualifying $qualifying The Qualifying entity
-     *
-     * @return $this
-     */
-    public function removeQualifying(Qualifying $qualifying)
-    {
-        unset($this->qualifying[$this->qualifying->indexOf($qualifying)]);
-
-        return $this;
-    }
-
-    /**
      * @return bool
      */
     public function hasQualifying()
@@ -471,36 +445,6 @@ class Race
     }
 
     /**
-     * Adds result.
-     *
-     * @param Result $result
-     *
-     * @return $this
-     */
-    public function addResult(Result $result)
-    {
-        $result->setRace($this);
-
-        $this->results->add($result);
-
-        return $this;
-    }
-
-    /**
-     * Removes a result.
-     *
-     * @param Result $result The Result entity
-     *
-     * @return $this
-     */
-    public function removeResult(Result $result)
-    {
-        unset($this->results[$this->results->indexOf($result)]);
-
-        return $this;
-    }
-
-    /**
      * Returns the constructor standings after this race.
      *
      * @return ArrayCollection A collection of ConstructorStanding entities
@@ -511,36 +455,6 @@ class Race
     }
 
     /**
-     * Adds a constructor standings.
-     *
-     * @param ConstructorStandings $constructorStandings
-     *
-     * @return $this
-     */
-    public function addConstructorStandings(ConstructorStandings $constructorStandings)
-    {
-        $constructorStandings->setRace($this);
-
-        $this->constructorStandings->add($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * Removes a constructor standings.
-     *
-     * @param ConstructorStandings $constructorStandings The constructor standings to remove
-     *
-     * @return $this
-     */
-    public function removeConstructorStandings(ConstructorStandings $constructorStandings)
-    {
-        unset($this->constructorStandings[$constructorStandings->getConstructor()->getId()]);
-
-        return $this;
-    }
-
-    /**
      * Returns the driver standings after this race.
      *
      * @return ArrayCollection A collection of DriverStanding entities
@@ -548,22 +462,6 @@ class Race
     public function getDriverStandings()
     {
         return $this->driverStandings;
-    }
-
-    /**
-     * Adds driver standings.
-     *
-     * @param DriverStandings $driverStandings
-     *
-     * @return $this
-     */
-    public function addDriverStandings(DriverStandings $driverStandings)
-    {
-        $driverStandings->setRace($this);
-
-        $this->driverStandings->add($driverStandings);
-
-        return $this;
     }
 
     /**
@@ -586,40 +484,6 @@ class Race
     public function getUserStandings()
     {
         return $this->userStandings;
-    }
-
-    /**
-     * Sets the user standings.
-     *
-     * @param ArrayCollection $userStandings
-     *
-     * @return $this
-     */
-    public function setUserStandings(ArrayCollection $userStandings)
-    {
-        $this->userStandings = new ArrayCollection();
-
-        foreach ($userStandings as $userStanding) {
-            $this->addUserStanding($userStanding);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Adds user standings.
-     *
-     * @param UserStandings $userStandings
-     *
-     * @return $this
-     */
-    public function addUserStanding(UserStandings $userStandings)
-    {
-        $userStandings->setRace($this);
-
-        $this->userStandings->set($userStandings->getUser()->getId(), $userStandings);
-
-        return $this;
     }
 
     /**
@@ -659,34 +523,6 @@ class Race
     public function hasPredictions()
     {
         return !$this->predictions->isEmpty();
-    }
-
-    /**
-     * Adds a prediction.
-     *
-     * @param Prediction $prediction
-     *
-     * @return $this
-     */
-    public function addPrediction(Prediction $prediction)
-    {
-        $prediction->setRace($this);
-
-        $this->predictions->add($prediction);
-
-        return $this;
-    }
-
-    /**
-     * @param ArrayCollection $predictions
-     *
-     * @return $this
-     */
-    public function setPredictions(ArrayCollection $predictions)
-    {
-        $this->predictions = $predictions;
-
-        return $this;
     }
 
     /**

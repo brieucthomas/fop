@@ -10,6 +10,7 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Constructor;
+use AppBundle\Entity\ConstructorStandings;
 use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
 
@@ -20,6 +21,39 @@ use Doctrine\ORM\EntityRepository;
  */
 class ConstructorStandingsRepository extends EntityRepository implements ConstructorStandingsRepositoryInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function save(ConstructorStandings $constructorStandings)
+    {
+        $this
+            ->persist($constructorStandings)
+            ->flush()
+        ;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function persist(ConstructorStandings $constructorStandings)
+    {
+        $this->_em->persist($constructorStandings);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function flush()
+    {
+        $this->_em->flush();
+
+        return $this;
+    }
+
     /**
      * {@inheritdoc}
      */

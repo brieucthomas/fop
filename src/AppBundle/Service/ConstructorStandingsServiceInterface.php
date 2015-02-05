@@ -10,6 +10,7 @@
 namespace AppBundle\Service;
 
 use AppBundle\Entity\Constructor;
+use AppBundle\Entity\ConstructorStandings;
 use AppBundle\Entity\Season;
 
 /**
@@ -19,6 +20,31 @@ use AppBundle\Entity\Season;
  */
 interface ConstructorStandingsServiceInterface
 {
+    /**
+     * Saves a ConstructorStandings.
+     *
+     * @param ConstructorStandings $constructorStandings The ConstructorStandings to save
+     *
+     * @return $this
+     */
+    public function save(ConstructorStandings $constructorStandings);
+
+    /**
+     * Persists a ConstructorStandings.
+     *
+     * @param ConstructorStandings $constructorStandings The ConstructorStandings to persist
+     *
+     * return $this
+     */
+    public function persist(ConstructorStandings $constructorStandings);
+
+    /**
+     * Flushes modifications.
+     *
+     * return $this
+     */
+    public function flush();
+
     /**
      * Removes by season.
      *

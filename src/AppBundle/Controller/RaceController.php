@@ -75,7 +75,7 @@ class RaceController extends Controller
                     [
                         'season' => $race->getSeason()->getYear(),
                         'round'  => $race->getRound(),
-                        'user'   => $user->getSlug()
+                        'user'   => $user->getSlug(),
                     ]
                 )
             );

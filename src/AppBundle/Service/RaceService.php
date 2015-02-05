@@ -9,11 +9,7 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\ConstructorStandings;
-use AppBundle\Entity\DriverStandings;
-use AppBundle\Entity\Qualifying;
 use AppBundle\Entity\Race;
-use AppBundle\Entity\Result;
 use AppBundle\Repository\RaceRepositoryInterface;
 
 /**
@@ -62,46 +58,6 @@ class RaceService implements RaceServiceInterface
     public function findLastRaceWithResults()
     {
         return $this->raceRepository->findLastRaceWithResults();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addConstructorStandings(Race $race, ConstructorStandings $constructorStandings)
-    {
-        $race->addConstructorStandings($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addDriverStandings(Race $race, DriverStandings $driverStandings)
-    {
-        $race->addDriverStandings($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addResult(Race $race, Result $result)
-    {
-        $race->addResult($result);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function addQualifying(Race $race, Qualifying $qualifying)
-    {
-        $race->addQualifying($qualifying);
-
-        return $this;
     }
 
     /**

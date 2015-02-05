@@ -9,7 +9,6 @@
 
 namespace AppBundle\Menu;
 
-use AppBundle\Service\RaceServiceInterface;
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
@@ -35,7 +34,7 @@ class Builder
      * Constructor.
      *
      * @param FactoryInterface $factory
-     * @param RequestStack $requestStack
+     * @param RequestStack     $requestStack
      */
     public function __construct(FactoryInterface $factory, RequestStack $requestStack)
     {
@@ -81,10 +80,10 @@ class Builder
                     'route'           => $request->get('_route'),
                     'routeParameters' => array_merge($request->get('_route_params'), ['_locale' => $local]),
                     /** @Ignore */
-                    'label'           => $local
+                    'label'           => $local,
                 ]
             );
-            $child->setLinkAttribute('title', 'navigation.locale_switcher.' . $local);
+            $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
         }
 
         return $menu;

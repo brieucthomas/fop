@@ -43,7 +43,7 @@ class PredictionType extends AbstractType
         $builder
             ->add('finishingPositions', 'collection', [
                 'type' => new FinishingPositionType($this->year),
-                'allow_add' => true
+                'allow_add' => true,
             ])
         ;
     }

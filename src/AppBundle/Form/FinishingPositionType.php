@@ -46,7 +46,7 @@ class FinishingPositionType extends AbstractType
                 'class' => 'AppBundle:Team',
                 'query_builder' => function (TeamRepositoryInterface $repository) {
                     return $repository->findByYear($this->year);
-                }
+                },
             ]);
     }
 

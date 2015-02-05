@@ -12,7 +12,6 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\QualifyingServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use AppBundle\Service\RaceServiceInterface;
 use BrieucThomas\ErgastClient\Url\Builder\QualifyingUrlBuilder;
 
 /**
@@ -28,20 +27,13 @@ class QualifyingLoader extends AbstractLoader
     private $qualifyingService;
 
     /**
-     * @var RaceServiceInterface
-     */
-    private $raceService;
-
-    /**
      * Constructor.
      *
      * @param QualifyingServiceInterface $qualifyingService
-     * @param RaceServiceInterface       $raceService
      */
-    public function __construct(QualifyingServiceInterface $qualifyingService, RaceServiceInterface $raceService)
+    public function __construct(QualifyingServiceInterface $qualifyingService)
     {
         $this->qualifyingService = $qualifyingService;
-        $this->raceService = $raceService;
     }
 
     /**
@@ -69,6 +61,7 @@ class QualifyingLoader extends AbstractLoader
                 $qualifying = new AppEntity\Qualifying();
 
                 $qualifying
+                    ->setRace($race)
                     ->setPosition($ergastQualifying->getPosition())
                     ->setTeam($team)
                     ->setQ1($ergastQualifying->getQ1())
@@ -76,12 +69,10 @@ class QualifyingLoader extends AbstractLoader
                     ->setQ3($ergastQualifying->getQ3())
                 ;
 
-                $this->raceService->addQualifying($race, $qualifying);
+                $this->qualifyingService->persist($qualifying);
             }
-
-            $this->raceService->persist($race);
         }
 
-        $this->raceService->flush();
+        $this->qualifyingService->flush();
     }
 }
