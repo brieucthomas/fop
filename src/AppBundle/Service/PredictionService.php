@@ -120,7 +120,7 @@ class PredictionService implements PredictionServiceInterface
                         $userStanding->setUser($user);
                     }
 
-                    $race->addUserStanding($userStanding);
+                    $race->addUserStandings($userStanding);
 
                     $prediction = $race->getPredictionByUser($user);
 

@@ -487,6 +487,40 @@ class Race
     }
 
     /**
+     * Sets the user standings.
+     *
+     * @param ArrayCollection $userStandings
+     *
+     * @return $this
+     */
+    public function setUserStandings(ArrayCollection $userStandings)
+    {
+        $this->userStandings = new ArrayCollection();
+
+        foreach ($userStandings as $userStanding) {
+            $this->addUserStandings($userStanding);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Adds user standings.
+     *
+     * @param UserStandings $userStandings
+     *
+     * @return $this
+     */
+    public function addUserStandings(UserStandings $userStandings)
+    {
+        $userStandings->setRace($this);
+
+        $this->userStandings->set($userStandings->getUser()->getId(), $userStandings);
+
+        return $this;
+    }
+
+    /**
      * Returns the race predictions.
      *
      * @return ArrayCollection The race predictions
