@@ -94,21 +94,6 @@ class FinishingPosition
     protected $points = 0;
 
     /**
-     * Constructor.
-     *
-     * @param Team $team
-     * @param int  $position
-     */
-    public function __construct($position, Team $team = null)
-    {
-        $this->setPredictedPosition($position);
-
-        if ($team) {
-            $this->setTeam($team);
-        }
-    }
-
-    /**
      * Return the identifier identifier.
      *
      * @return int The identifier identifier

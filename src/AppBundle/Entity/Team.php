@@ -71,20 +71,6 @@ class Team
     protected $driver;
 
     /**
-     * Constructor.
-     *
-     * @param Constructor $constructor
-     * @param Driver      $driver
-     */
-    public function __construct(Constructor $constructor, Driver $driver)
-    {
-        $this
-            ->setConstructor($constructor)
-            ->setDriver($driver)
-        ;
-    }
-
-    /**
      * Returns the entity identifier.
      *
      * @return int The entity identifier
@@ -171,6 +157,10 @@ class Team
      */
     public function __toString()
     {
-        return $this->getDriver()->getName().' - '.$this->constructor->getName();
+        return join(' - ', [
+            $this->getSeason()->getYear(),
+            $this->getDriver()->getName(),
+            $this->constructor->getName()
+        ]);
     }
 }

@@ -104,7 +104,11 @@ class TeamLoader extends AbstractLoader
                 $team = $season->getTeamByDriverAndConstructor($driver->getSlug(), $constructor->getSlug());
 
                 if (!$team) {
-                    $team = new AppEntity\Team($constructor, $driver);
+                    $team = new AppEntity\Team();
+                    $team
+                        ->setConstructor($constructor)
+                        ->setDriver($driver)
+                    ;
                     $this->seasonService->addTeam($season, $team);
                 }
             }

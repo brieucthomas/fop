@@ -68,6 +68,7 @@ class TestCommand extends ContainerAwareCommand
             $data['AppBundle\Entity\User'][$userIndex] = [
                 'username' => $userIndex,
                 'password' => $userIndex,
+                'slug' => 'user'.$this->usernames[$user->getSlug()],
                 'enabled' => true,
                 'email' => $userIndex.'@fop.com',
                 'created' => '2013-06-01',
@@ -134,8 +135,9 @@ class TestCommand extends ContainerAwareCommand
             ];
 
             $data['AppBundle\Entity\Team'][$teamIndex] = [
-                '__construct' => ['@'.$constructorIndex, '@'.$driverIndex],
                 'season' => '@'.$seasonIndex,
+                'constructor' => '@'.$constructorIndex,
+                'driver' => '@'.$driverIndex,
             ];
         }
 
@@ -253,8 +255,9 @@ class TestCommand extends ContainerAwareCommand
                     $finishingPredictionIndex = 'finishing_position_'.$season->getYear().'_'.$race->getRound().'_'.$userIndex.'_'.$finishingPosition->getPredictedPosition();
                     $teamIndex = 'team_'.$season->getYear().'_'.$finishingPosition->getTeam()->getConstructor()->getSlug().'_'.$finishingPosition->getTeam()->getDriver()->getSlug();
                     $data['AppBundle\Entity\FinishingPosition'][$finishingPredictionIndex] = [
-                        '__construct' => [$finishingPosition->getPredictedPosition(), '@'.$teamIndex],
                         'prediction' => '@'.$predictionIndex,
+                        'team' => '@'.$teamIndex,
+                        'predictedPosition' => $finishingPosition->getPredictedPosition(),
                         'finishingPosition' => $finishingPosition->getFinishingPosition(),
                         'points' => $finishingPosition->getPoints(),
                     ];

@@ -555,12 +555,12 @@ AppBundle\Entity\Prediction:
         __construct: ['@race_2014_3', '@user_1']
         position: 1
         points: 144
-    prediction_2014_3_9:
-        __construct: ['@race_2014_3', '@user_9']
-        position: 2
-        points: 134
     prediction_2014_3_8:
         __construct: ['@race_2014_3', '@user_8']
+        position: 2
+        points: 134
+    prediction_2014_3_9:
+        __construct: ['@race_2014_3', '@user_9']
         position: 3
         points: 134
     prediction_2014_3_4:
@@ -871,12 +871,12 @@ AppBundle\Entity\Prediction:
         __construct: ['@race_2014_14', '@user_7']
         position: 1
         points: 141
-    prediction_2014_14_5:
-        __construct: ['@race_2014_14', '@user_5']
-        position: 2
-        points: 138
     prediction_2014_14_3:
         __construct: ['@race_2014_14', '@user_3']
+        position: 2
+        points: 138
+    prediction_2014_14_5:
+        __construct: ['@race_2014_14', '@user_5']
         position: 3
         points: 138
     prediction_2014_14_6:
@@ -887,24 +887,24 @@ AppBundle\Entity\Prediction:
         __construct: ['@race_2014_14', '@user_1']
         position: 5
         points: 126
-    prediction_2014_14_2:
-        __construct: ['@race_2014_14', '@user_2']
-        position: 6
-        points: 121
     prediction_2014_14_4:
         __construct: ['@race_2014_14', '@user_4']
+        position: 6
+        points: 121
+    prediction_2014_14_2:
+        __construct: ['@race_2014_14', '@user_2']
         position: 7
         points: 121
     prediction_2014_15_5:
         __construct: ['@race_2014_15', '@user_5']
         position: 1
         points: 138
-    prediction_2014_15_6:
-        __construct: ['@race_2014_15', '@user_6']
-        position: 2
-        points: 132
     prediction_2014_15_7:
         __construct: ['@race_2014_15', '@user_7']
+        position: 2
+        points: 132
+    prediction_2014_15_6:
+        __construct: ['@race_2014_15', '@user_6']
         position: 3
         points: 132
     prediction_2014_15_4:
@@ -959,12 +959,12 @@ AppBundle\Entity\Prediction:
         __construct: ['@race_2014_17', '@user_3']
         position: 2
         points: 148
-    prediction_2014_17_7:
-        __construct: ['@race_2014_17', '@user_7']
-        position: 3
-        points: 142
     prediction_2014_17_1:
         __construct: ['@race_2014_17', '@user_1']
+        position: 3
+        points: 142
+    prediction_2014_17_7:
+        __construct: ['@race_2014_17', '@user_7']
         position: 4
         points: 142
     prediction_2014_17_6:

@@ -339,4 +339,18 @@ class Prediction
     {
         return $user && $user->getId() === $this->user->getId();
     }
+
+    /**
+     * __toString.
+     *
+     * @return string The owner username
+     */
+    public function __toString()
+    {
+        return (string) join(' - ', [
+            $this->race->getSeason()->getYear(),
+            $this->race->getName(),
+            $this->user->getUsername()
+        ]);
+    }
 }

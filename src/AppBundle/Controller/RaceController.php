@@ -57,7 +57,9 @@ class RaceController extends Controller
             $limit = $race->getSeason()->getScoringSystem()->getLength();
 
             for ($position = 1; $position <= $limit; $position++) {
-                $prediction->addFinishingPosition(new FinishingPosition($position));
+                $finishingPosition = new FinishingPosition();
+                $finishingPosition->setPredictedPosition($position);
+                $prediction->addFinishingPosition($finishingPosition);
             }
         }
 

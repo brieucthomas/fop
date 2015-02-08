@@ -238,4 +238,14 @@ class ScoringSystem
 
         return 0;
     }
+
+    /**
+     * __toString.
+     *
+     * @return string The scoring system name
+     */
+    public function __toString()
+    {
+        return (string) $this->name;
+    }
 }
