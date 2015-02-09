@@ -47,6 +47,16 @@ class FinishingStatus
     protected $label;
 
     /**
+     * Constructor.
+     *
+     * @param string $label The finishing status label
+     */
+    public function __construct($label)
+    {
+        $this->setLabel($label);
+    }
+
+    /**
      * Returns the status identifier.
      *
      * @return int The status identifier
