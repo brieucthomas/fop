@@ -347,10 +347,10 @@ class Prediction
      */
     public function __toString()
     {
-        return (string) join(' - ', [
+        return (string) implode(' - ', [
             $this->race->getSeason()->getYear(),
             $this->race->getName(),
-            $this->user->getUsername()
+            $this->user->getUsername(),
         ]);
     }
 }

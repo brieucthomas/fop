@@ -157,10 +157,10 @@ class Team
      */
     public function __toString()
     {
-        return join(' - ', [
+        return implode(' - ', [
             $this->getSeason()->getYear(),
             $this->getDriver()->getName(),
-            $this->constructor->getName()
+            $this->constructor->getName(),
         ]);
     }
 }

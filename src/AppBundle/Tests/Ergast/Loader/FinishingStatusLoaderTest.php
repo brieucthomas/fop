@@ -33,7 +33,7 @@ class FinishingStatusLoaderTest extends WebTestCase
         $response->setFinishingStatues(new ArrayCollection([
             $this->getErgastFinishingStatus('Finished'),
             $this->getErgastFinishingStatus('foo'),
-            $this->getErgastFinishingStatus('bar')
+            $this->getErgastFinishingStatus('bar'),
         ]));
 
         $loader = new FinishingStatusLoader($service);
