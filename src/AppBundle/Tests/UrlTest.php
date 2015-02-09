@@ -22,17 +22,6 @@ class UrlTest extends WebTestCase
         $this->assertTrue($client->getResponse()->isOk());
     }
 
-    /**
-     * @dataProvider provideNotFoundUrls
-     */
-    public function testPageIsNotFound($url)
-    {
-        $client = self::createClient();
-        $client->request('GET', $url);
-
-        $this->assertTrue($client->getResponse()->isNotFound());
-    }
-
     public function provideSuccessUrls()
     {
         return [
@@ -40,16 +29,12 @@ class UrlTest extends WebTestCase
             ['/en/constructors/ferrari'],
             ['/en/drivers/hamilton'],
             ['/en/users/user1'],
-        ];
-    }
-
-    public function provideNotFoundUrls()
-    {
-        return [
-            ['/ru/'],
-            ['/en/constructors/foo'],
-            ['/en/drivers/foo'],
-            ['/en/users/foo'],
+            ['/en/races/2014/1'],
+            ['/en/seasons/2014'],
+            ['/en/seasons/2014/races'],
+            ['/en/seasons/2014/teams'],
+            ['/en/seasons/2014/standings'],
+            ['/en/seasons/2014/graphs'],
         ];
     }
 }
