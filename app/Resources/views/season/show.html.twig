@@ -3,8 +3,9 @@
 {% block content %}
     {{ parent() }}
 
-    {% if season.isFinished %}
-        <div class="container">
+    <div class="container">
+
+        {% if season.isFinished %}
             <h1>Awards</h1>
             <div class="row">
                 <div class="col-md-4 bg-orange">
@@ -19,6 +20,17 @@
                     <span class="pull-right text-sun-flower fa fa-trophy fa-4x"></span>
                 </div>
             </div>
+        {% endif %}
+
+
+        <div class="well col-md-4">
+            <h2>Scoring system</h2>
+            <ol class="list-unstyled">
+                {% for points in season.scoringSystem.offsets %}
+                    <li>{{ loop.index0 }}: {{ points }}</li>
+                {% endfor %}
+            </ol>
         </div>
-    {% endif %}
+
+    </div>
 {% endblock %}
