@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),
             new AppBundle\AppBundle(),
         );
 
