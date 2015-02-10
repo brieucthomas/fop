@@ -51,16 +51,6 @@ class UserStandings extends AbstractStandings
     protected $user;
 
     /**
-     * Constructor.
-     *
-     * @param User $user
-     */
-    public function __construct(User $user)
-    {
-        $this->setUser($user);
-    }
-
-    /**
      * Returns the race entity.
      *
      * @return Race The race entity

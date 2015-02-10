@@ -47,22 +47,7 @@ class Builder
         $menu = $this->factory->createItem('root');
 
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
-        $menu->addChild(
-            'navigation.season.last',
-            [
-                'route'           => 'season_home',
-                'routeParameters' => ['year' => date('Y') - 1],
-                'extras'          => ['translation_params' => [date('Y') - 1]]
-            ]
-        );
-        $menu->addChild(
-            'navigation.season.next',
-            [
-                'route'           => 'season_home',
-                'routeParameters' => ['year' => date('Y')],
-                'extras'          => ['translation_params' => [date('Y')]]
-            ]
-        );
+        $menu->addChild('navigation.main.seasons', [ 'route' => 'season_home' ]);
 
         return $menu;
     }
@@ -95,7 +80,7 @@ class Builder
                     'route'           => $request->get('_route'),
                     'routeParameters' => array_merge($request->get('_route_params'), ['_locale' => $local]),
                     /** @Ignore */
-                    'label'           => $local
+                    'label'           => $local,
                 ]
             );
             $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);

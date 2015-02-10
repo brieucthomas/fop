@@ -11,7 +11,6 @@ namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\DriverStandingsServiceInterface;
-use AppBundle\Service\RaceServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
 use BrieucThomas\ErgastClient\Entity\Response;
 use BrieucThomas\ErgastClient\Url\Builder\DriverStandingsUrlBuilder;
@@ -29,20 +28,13 @@ class DriverStandingsLoader extends AbstractLoader
     private $driverStandingsService;
 
     /**
-     * @var RaceServiceInterface
-     */
-    private $raceService;
-
-    /**
      * Constructor.
      *
-     * @param RaceServiceInterface            $raceService
      * @param DriverStandingsServiceInterface $driverStandingsService
      */
-    public function __construct(DriverStandingsServiceInterface $driverStandingsService, RaceServiceInterface $raceService)
+    public function __construct(DriverStandingsServiceInterface $driverStandingsService)
     {
         $this->driverStandingsService = $driverStandingsService;
-        $this->raceService = $raceService;
     }
 
     /**
@@ -69,19 +61,18 @@ class DriverStandingsLoader extends AbstractLoader
 
                     $standing = new AppEntity\DriverStandings();
                     $standing
+                        ->setRace($race)
                         ->setDriver($drivers->get($driverId))
                         ->setPoints($ergastDriverStanding->getPoints())
                         ->setPosition($ergastDriverStanding->getPosition())
                         ->setWins($ergastDriverStanding->getWins())
                     ;
 
-                    $this->raceService->addDriverStandings($race, $standing);
+                    $this->driverStandingsService->persist($standing);
                 }
-
-                $this->raceService->persist($race);
             }
         }
 
-        $this->raceService->flush();
+        $this->driverStandingsService->flush();
     }
 }

@@ -9,10 +9,9 @@
 
 namespace AppBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * The prediction scoring system entity.
@@ -61,17 +60,11 @@ class ScoringSystem
     /**
      * A collection of offsets.
      *
-     * @ORM\OneToMany(
-     *      targetEntity="ScoringSystemOffset",
-     *      mappedBy="system",
-     *      indexBy="offset",
-     *      cascade={"all"}
-     * )
-     * @ORM\OrderBy({"offset"="ASC"})
+     * @ORM\Column(type="array")
      *
-     * @var ArrayCollection
+     * @var array
      */
-    protected $offsets = array();
+    protected $offsets = [];
 
     /**
      * The scoring system bonus.
@@ -92,17 +85,6 @@ class ScoringSystem
      * @var bool
      */
     protected $isDefault = true;
-
-    /**
-     * Constructor.
-     *
-     * @param string $name The scoring system name
-     */
-    public function __construct($name)
-    {
-        $this->setName($name);
-        $this->offsets = new ArrayCollection();
-    }
 
     /**
      * Returns the scoring system identifier.
@@ -165,7 +147,7 @@ class ScoringSystem
     /**
      * Returns a collection of offsets.
      *
-     * @return ArrayCollection A collection of ScoringSystemOffset entities
+     * @return array
      */
     public function getOffsets()
     {
@@ -173,29 +155,15 @@ class ScoringSystem
     }
 
     /**
-     * Returns the associated scoring.
+     * Sets a collection of offsets.
      *
-     * @param int $offset The offset value
-     *
-     * @return ScoringSystemOffset|null An offset entity or null if not found
-     */
-    public function getOffset($offset)
-    {
-        return $this->offsets->get($offset);
-    }
-
-    /**
-     * Adds an offset.
-     *
-     * @param ScoringSystemOffset $offset An PredictionScoringSystemOffset entity
+     * @param array $offsets
      *
      * @return $this
      */
-    public function addOffset(ScoringSystemOffset $offset)
+    public function setOffsets(array $offsets)
     {
-        $offset->setSystem($this);
-
-        $this->offsets->set($offset->getOffset(), $offset);
+        $this->offsets = $offsets;
 
         return $this;
     }
@@ -264,11 +232,20 @@ class ScoringSystem
 
         $offset = abs($finishingPosition - $predictedPosition);
 
-        if ($entity = $this->offsets->get($offset)) {
-            /* @var $entity ScoringSystemOffset */
-            return $entity->getPoints();
+        if (isset($this->offsets[$offset])) {
+            return $this->offsets[$offset];
         }
 
         return 0;
+    }
+
+    /**
+     * __toString.
+     *
+     * @return string The scoring system name
+     */
+    public function __toString()
+    {
+        return (string) $this->name;
     }
 }

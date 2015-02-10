@@ -23,24 +23,24 @@ class PredictionServiceTest extends WebTestCase
         /* @var $race Race */
         $race = $season->getRaces()->first();
 
-        $this->assertCount(0, $race->getUserStandings());
+        $this->assertCount(10, $race->getUserStandings());
 
         /* @var $prediction Prediction */
         $prediction = $race->getPredictions()->first();
 
-        $this->assertSame('foo', $prediction->getUser()->getUsername());
-        $this->assertSame(0, $prediction->getPosition());
-        $this->assertSame(0, $prediction->getPoints());
+        $this->assertSame('user_2', $prediction->getUser()->getUsername());
+        $this->assertSame(1, $prediction->getPosition());
+        $this->assertSame(146, $prediction->getPoints());
 
         $this->getPredictionService()->computeBySeason($season);
 
-        $this->assertCount(1, $race->getUserStandings());
-        $this->assertSame('foo', $race->getUserStandings()->first()->getUser()->getUsername());
+        $this->assertCount(10, $race->getUserStandings());
+        $this->assertSame('user_2', $race->getUserStandings()->first()->getUser()->getUsername());
         $this->assertSame(1, $race->getUserStandings()->first()->getWins());
-        $this->assertSame(6.0, $race->getUserStandings()->first()->getPoints());
+        $this->assertEquals(146, $race->getUserStandings()->first()->getPoints());
 
         $this->assertSame(1, $prediction->getPosition());
-        $this->assertSame(6, $prediction->getPoints());
+        $this->assertSame(146, $prediction->getPoints());
     }
 
     /**

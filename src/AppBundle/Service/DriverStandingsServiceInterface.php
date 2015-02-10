@@ -10,6 +10,7 @@
 namespace AppBundle\Service;
 
 use AppBundle\Entity\Driver;
+use AppBundle\Entity\DriverStandings;
 use AppBundle\Entity\Season;
 
 /**
@@ -19,6 +20,31 @@ use AppBundle\Entity\Season;
  */
 interface DriverStandingsServiceInterface
 {
+    /**
+     * Saves a DriverStandings.
+     *
+     * @param DriverStandings $driverStandings The DriverStandings to save
+     *
+     * @return $this
+     */
+    public function save(DriverStandings $driverStandings);
+
+    /**
+     * Persists a DriverStandings.
+     *
+     * @param DriverStandings $driverStandings The DriverStandings to persist
+     *
+     * return $this
+     */
+    public function persist(DriverStandings $driverStandings);
+
+    /**
+     * Flushes modifications.
+     *
+     * return $this
+     */
+    public function flush();
+
     /**
      * Removes by season.
      *

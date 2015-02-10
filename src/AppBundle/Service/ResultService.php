@@ -9,6 +9,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Result;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\ResultRepositoryInterface;
 
@@ -34,6 +35,36 @@ class ResultService implements ResultServiceInterface
     public function __construct(ResultRepositoryInterface $resultRepository)
     {
         $this->resultRepository = $resultRepository;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Result $result)
+    {
+        $this->resultRepository->save($result);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function persist(Result $result)
+    {
+        $this->resultRepository->persist($result);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function flush()
+    {
+        $this->resultRepository->flush();
+
+        return $this;
     }
 
     /**

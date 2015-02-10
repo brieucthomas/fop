@@ -1,0 +1,1025 @@
+AppBundle\Entity\Prediction:
+    prediction_2013_1_3:
+        __construct: ['@race_2013_1', '@user_3']
+        position: 1
+        points: 115
+    prediction_2013_1_4:
+        __construct: ['@race_2013_1', '@user_4']
+        position: 2
+        points: 110
+    prediction_2013_1_1:
+        __construct: ['@race_2013_1', '@user_1']
+        position: 3
+        points: 102
+    prediction_2013_2_6:
+        __construct: ['@race_2013_2', '@user_6']
+        position: 1
+        points: 136
+    prediction_2013_2_2:
+        __construct: ['@race_2013_2', '@user_2']
+        position: 2
+        points: 121
+    prediction_2013_2_4:
+        __construct: ['@race_2013_2', '@user_4']
+        position: 3
+        points: 113
+    prediction_2013_2_3:
+        __construct: ['@race_2013_2', '@user_3']
+        position: 4
+        points: 104
+    prediction_2013_2_5:
+        __construct: ['@race_2013_2', '@user_5']
+        position: 5
+        points: 101
+    prediction_2013_2_1:
+        __construct: ['@race_2013_2', '@user_1']
+        position: 6
+        points: 78
+    prediction_2013_3_2:
+        __construct: ['@race_2013_3', '@user_2']
+        position: 1
+        points: 162
+    prediction_2013_3_6:
+        __construct: ['@race_2013_3', '@user_6']
+        position: 2
+        points: 149
+    prediction_2013_3_7:
+        __construct: ['@race_2013_3', '@user_7']
+        position: 3
+        points: 148
+    prediction_2013_3_4:
+        __construct: ['@race_2013_3', '@user_4']
+        position: 4
+        points: 132
+    prediction_2013_3_1:
+        __construct: ['@race_2013_3', '@user_1']
+        position: 5
+        points: 130
+    prediction_2013_3_5:
+        __construct: ['@race_2013_3', '@user_5']
+        position: 6
+        points: 126
+    prediction_2013_3_3:
+        __construct: ['@race_2013_3', '@user_3']
+        position: 7
+        points: 112
+    prediction_2013_4_1:
+        __construct: ['@race_2013_4', '@user_1']
+        position: 1
+        points: 128
+    prediction_2013_4_4:
+        __construct: ['@race_2013_4', '@user_4']
+        position: 2
+        points: 117
+    prediction_2013_4_5:
+        __construct: ['@race_2013_4', '@user_5']
+        position: 3
+        points: 113
+    prediction_2013_4_6:
+        __construct: ['@race_2013_4', '@user_6']
+        position: 4
+        points: 106
+    prediction_2013_4_3:
+        __construct: ['@race_2013_4', '@user_3']
+        position: 5
+        points: 105
+    prediction_2013_4_2:
+        __construct: ['@race_2013_4', '@user_2']
+        position: 6
+        points: 100
+    prediction_2013_4_7:
+        __construct: ['@race_2013_4', '@user_7']
+        position: 7
+        points: 97
+    prediction_2013_5_2:
+        __construct: ['@race_2013_5', '@user_2']
+        position: 1
+        points: 149
+    prediction_2013_5_1:
+        __construct: ['@race_2013_5', '@user_1']
+        position: 2
+        points: 134
+    prediction_2013_5_3:
+        __construct: ['@race_2013_5', '@user_3']
+        position: 3
+        points: 120
+    prediction_2013_5_5:
+        __construct: ['@race_2013_5', '@user_5']
+        position: 4
+        points: 115
+    prediction_2013_5_4:
+        __construct: ['@race_2013_5', '@user_4']
+        position: 5
+        points: 114
+    prediction_2013_5_6:
+        __construct: ['@race_2013_5', '@user_6']
+        position: 6
+        points: 112
+    prediction_2013_5_7:
+        __construct: ['@race_2013_5', '@user_7']
+        position: 7
+        points: 102
+    prediction_2013_6_1:
+        __construct: ['@race_2013_6', '@user_1']
+        position: 1
+        points: 131
+    prediction_2013_6_7:
+        __construct: ['@race_2013_6', '@user_7']
+        position: 2
+        points: 128
+    prediction_2013_6_4:
+        __construct: ['@race_2013_6', '@user_4']
+        position: 3
+        points: 127
+    prediction_2013_6_6:
+        __construct: ['@race_2013_6', '@user_6']
+        position: 4
+        points: 109
+    prediction_2013_6_2:
+        __construct: ['@race_2013_6', '@user_2']
+        position: 5
+        points: 101
+    prediction_2013_6_3:
+        __construct: ['@race_2013_6', '@user_3']
+        position: 6
+        points: 100
+    prediction_2013_6_5:
+        __construct: ['@race_2013_6', '@user_5']
+        position: 7
+        points: 99
+    prediction_2013_7_1:
+        __construct: ['@race_2013_7', '@user_1']
+        position: 1
+        points: 152
+    prediction_2013_7_3:
+        __construct: ['@race_2013_7', '@user_3']
+        position: 2
+        points: 143
+    prediction_2013_7_7:
+        __construct: ['@race_2013_7', '@user_7']
+        position: 3
+        points: 129
+    prediction_2013_7_2:
+        __construct: ['@race_2013_7', '@user_2']
+        position: 4
+        points: 124
+    prediction_2013_7_4:
+        __construct: ['@race_2013_7', '@user_4']
+        position: 5
+        points: 120
+    prediction_2013_7_6:
+        __construct: ['@race_2013_7', '@user_6']
+        position: 6
+        points: 106
+    prediction_2013_8_7:
+        __construct: ['@race_2013_8', '@user_7']
+        position: 1
+        points: 141
+    prediction_2013_8_4:
+        __construct: ['@race_2013_8', '@user_4']
+        position: 2
+        points: 133
+    prediction_2013_8_1:
+        __construct: ['@race_2013_8', '@user_1']
+        position: 3
+        points: 131
+    prediction_2013_8_5:
+        __construct: ['@race_2013_8', '@user_5']
+        position: 4
+        points: 121
+    prediction_2013_8_6:
+        __construct: ['@race_2013_8', '@user_6']
+        position: 5
+        points: 118
+    prediction_2013_8_3:
+        __construct: ['@race_2013_8', '@user_3']
+        position: 6
+        points: 112
+    prediction_2013_8_2:
+        __construct: ['@race_2013_8', '@user_2']
+        position: 7
+        points: 108
+    prediction_2013_9_1:
+        __construct: ['@race_2013_9', '@user_1']
+        position: 1
+        points: 138
+    prediction_2013_9_6:
+        __construct: ['@race_2013_9', '@user_6']
+        position: 2
+        points: 137
+    prediction_2013_9_4:
+        __construct: ['@race_2013_9', '@user_4']
+        position: 3
+        points: 127
+    prediction_2013_9_2:
+        __construct: ['@race_2013_9', '@user_2']
+        position: 4
+        points: 124
+    prediction_2013_9_7:
+        __construct: ['@race_2013_9', '@user_7']
+        position: 5
+        points: 115
+    prediction_2013_9_3:
+        __construct: ['@race_2013_9', '@user_3']
+        position: 6
+        points: 91
+    prediction_2013_10_5:
+        __construct: ['@race_2013_10', '@user_5']
+        position: 1
+        points: 161
+    prediction_2013_10_1:
+        __construct: ['@race_2013_10', '@user_1']
+        position: 2
+        points: 125
+    prediction_2013_10_4:
+        __construct: ['@race_2013_10', '@user_4']
+        position: 3
+        points: 124
+    prediction_2013_10_2:
+        __construct: ['@race_2013_10', '@user_2']
+        position: 4
+        points: 124
+    prediction_2013_10_7:
+        __construct: ['@race_2013_10', '@user_7']
+        position: 5
+        points: 123
+    prediction_2013_10_6:
+        __construct: ['@race_2013_10', '@user_6']
+        position: 6
+        points: 118
+    prediction_2013_10_3:
+        __construct: ['@race_2013_10', '@user_3']
+        position: 7
+        points: 98
+    prediction_2013_11_4:
+        __construct: ['@race_2013_11', '@user_4']
+        position: 1
+        points: 142
+    prediction_2013_11_2:
+        __construct: ['@race_2013_11', '@user_2']
+        position: 2
+        points: 137
+    prediction_2013_11_5:
+        __construct: ['@race_2013_11', '@user_5']
+        position: 3
+        points: 134
+    prediction_2013_11_7:
+        __construct: ['@race_2013_11', '@user_7']
+        position: 4
+        points: 132
+    prediction_2013_11_3:
+        __construct: ['@race_2013_11', '@user_3']
+        position: 5
+        points: 130
+    prediction_2013_11_1:
+        __construct: ['@race_2013_11', '@user_1']
+        position: 6
+        points: 125
+    prediction_2013_11_6:
+        __construct: ['@race_2013_11', '@user_6']
+        position: 7
+        points: 120
+    prediction_2013_12_2:
+        __construct: ['@race_2013_12', '@user_2']
+        position: 1
+        points: 195
+    prediction_2013_12_6:
+        __construct: ['@race_2013_12', '@user_6']
+        position: 2
+        points: 181
+    prediction_2013_12_7:
+        __construct: ['@race_2013_12', '@user_7']
+        position: 3
+        points: 168
+    prediction_2013_12_1:
+        __construct: ['@race_2013_12', '@user_1']
+        position: 4
+        points: 166
+    prediction_2013_12_3:
+        __construct: ['@race_2013_12', '@user_3']
+        position: 5
+        points: 160
+    prediction_2013_12_5:
+        __construct: ['@race_2013_12', '@user_5']
+        position: 6
+        points: 139
+    prediction_2013_12_4:
+        __construct: ['@race_2013_12', '@user_4']
+        position: 7
+        points: 124
+    prediction_2013_13_7:
+        __construct: ['@race_2013_13', '@user_7']
+        position: 1
+        points: 140
+    prediction_2013_13_6:
+        __construct: ['@race_2013_13', '@user_6']
+        position: 2
+        points: 138
+    prediction_2013_13_5:
+        __construct: ['@race_2013_13', '@user_5']
+        position: 3
+        points: 130
+    prediction_2013_13_1:
+        __construct: ['@race_2013_13', '@user_1']
+        position: 4
+        points: 128
+    prediction_2013_13_2:
+        __construct: ['@race_2013_13', '@user_2']
+        position: 5
+        points: 123
+    prediction_2013_13_3:
+        __construct: ['@race_2013_13', '@user_3']
+        position: 6
+        points: 120
+    prediction_2013_13_4:
+        __construct: ['@race_2013_13', '@user_4']
+        position: 7
+        points: 98
+    prediction_2013_14_5:
+        __construct: ['@race_2013_14', '@user_5']
+        position: 1
+        points: 175
+    prediction_2013_14_3:
+        __construct: ['@race_2013_14', '@user_3']
+        position: 2
+        points: 155
+    prediction_2013_14_4:
+        __construct: ['@race_2013_14', '@user_4']
+        position: 3
+        points: 144
+    prediction_2013_14_1:
+        __construct: ['@race_2013_14', '@user_1']
+        position: 4
+        points: 140
+    prediction_2013_14_6:
+        __construct: ['@race_2013_14', '@user_6']
+        position: 5
+        points: 115
+    prediction_2013_14_2:
+        __construct: ['@race_2013_14', '@user_2']
+        position: 6
+        points: 113
+    prediction_2013_15_3:
+        __construct: ['@race_2013_15', '@user_3']
+        position: 1
+        points: 178
+    prediction_2013_15_6:
+        __construct: ['@race_2013_15', '@user_6']
+        position: 2
+        points: 173
+    prediction_2013_15_4:
+        __construct: ['@race_2013_15', '@user_4']
+        position: 3
+        points: 165
+    prediction_2013_15_2:
+        __construct: ['@race_2013_15', '@user_2']
+        position: 4
+        points: 165
+    prediction_2013_15_1:
+        __construct: ['@race_2013_15', '@user_1']
+        position: 5
+        points: 153
+    prediction_2013_15_5:
+        __construct: ['@race_2013_15', '@user_5']
+        position: 6
+        points: 134
+    prediction_2013_15_7:
+        __construct: ['@race_2013_15', '@user_7']
+        position: 7
+        points: 131
+    prediction_2013_16_2:
+        __construct: ['@race_2013_16', '@user_2']
+        position: 1
+        points: 115
+    prediction_2013_16_1:
+        __construct: ['@race_2013_16', '@user_1']
+        position: 2
+        points: 114
+    prediction_2013_16_6:
+        __construct: ['@race_2013_16', '@user_6']
+        position: 3
+        points: 108
+    prediction_2013_16_4:
+        __construct: ['@race_2013_16', '@user_4']
+        position: 4
+        points: 94
+    prediction_2013_16_3:
+        __construct: ['@race_2013_16', '@user_3']
+        position: 5
+        points: 93
+    prediction_2013_16_5:
+        __construct: ['@race_2013_16', '@user_5']
+        position: 6
+        points: 91
+    prediction_2013_17_4:
+        __construct: ['@race_2013_17', '@user_4']
+        position: 1
+        points: 144
+    prediction_2013_17_1:
+        __construct: ['@race_2013_17', '@user_1']
+        position: 2
+        points: 134
+    prediction_2013_17_2:
+        __construct: ['@race_2013_17', '@user_2']
+        position: 3
+        points: 132
+    prediction_2013_17_3:
+        __construct: ['@race_2013_17', '@user_3']
+        position: 4
+        points: 131
+    prediction_2013_17_6:
+        __construct: ['@race_2013_17', '@user_6']
+        position: 5
+        points: 124
+    prediction_2013_17_7:
+        __construct: ['@race_2013_17', '@user_7']
+        position: 6
+        points: 99
+    prediction_2013_17_5:
+        __construct: ['@race_2013_17', '@user_5']
+        position: 7
+        points: 88
+    prediction_2013_18_5:
+        __construct: ['@race_2013_18', '@user_5']
+        position: 1
+        points: 181
+    prediction_2013_18_3:
+        __construct: ['@race_2013_18', '@user_3']
+        position: 2
+        points: 165
+    prediction_2013_18_1:
+        __construct: ['@race_2013_18', '@user_1']
+        position: 3
+        points: 165
+    prediction_2013_18_4:
+        __construct: ['@race_2013_18', '@user_4']
+        position: 4
+        points: 154
+    prediction_2013_18_7:
+        __construct: ['@race_2013_18', '@user_7']
+        position: 5
+        points: 144
+    prediction_2013_18_6:
+        __construct: ['@race_2013_18', '@user_6']
+        position: 6
+        points: 144
+    prediction_2013_18_2:
+        __construct: ['@race_2013_18', '@user_2']
+        position: 7
+        points: 127
+    prediction_2013_19_1:
+        __construct: ['@race_2013_19', '@user_1']
+        position: 1
+        points: 156
+    prediction_2013_19_4:
+        __construct: ['@race_2013_19', '@user_4']
+        position: 2
+        points: 143
+    prediction_2013_19_6:
+        __construct: ['@race_2013_19', '@user_6']
+        position: 3
+        points: 142
+    prediction_2013_19_3:
+        __construct: ['@race_2013_19', '@user_3']
+        position: 4
+        points: 132
+    prediction_2013_19_2:
+        __construct: ['@race_2013_19', '@user_2']
+        position: 5
+        points: 126
+    prediction_2013_19_7:
+        __construct: ['@race_2013_19', '@user_7']
+        position: 6
+        points: 120
+    prediction_2013_19_5:
+        __construct: ['@race_2013_19', '@user_5']
+        position: 7
+        points: 112
+    prediction_2014_1_2:
+        __construct: ['@race_2014_1', '@user_2']
+        position: 1
+        points: 146
+    prediction_2014_1_9:
+        __construct: ['@race_2014_1', '@user_9']
+        position: 2
+        points: 124
+    prediction_2014_1_1:
+        __construct: ['@race_2014_1', '@user_1']
+        position: 3
+        points: 102
+    prediction_2014_1_3:
+        __construct: ['@race_2014_1', '@user_3']
+        position: 4
+        points: 100
+    prediction_2014_1_8:
+        __construct: ['@race_2014_1', '@user_8']
+        position: 5
+        points: 99
+    prediction_2014_1_4:
+        __construct: ['@race_2014_1', '@user_4']
+        position: 6
+        points: 95
+    prediction_2014_1_6:
+        __construct: ['@race_2014_1', '@user_6']
+        position: 7
+        points: 94
+    prediction_2014_2_4:
+        __construct: ['@race_2014_2', '@user_4']
+        position: 1
+        points: 150
+    prediction_2014_2_9:
+        __construct: ['@race_2014_2', '@user_9']
+        position: 2
+        points: 146
+    prediction_2014_2_6:
+        __construct: ['@race_2014_2', '@user_6']
+        position: 3
+        points: 132
+    prediction_2014_2_3:
+        __construct: ['@race_2014_2', '@user_3']
+        position: 4
+        points: 129
+    prediction_2014_2_1:
+        __construct: ['@race_2014_2', '@user_1']
+        position: 5
+        points: 125
+    prediction_2014_2_7:
+        __construct: ['@race_2014_2', '@user_7']
+        position: 6
+        points: 108
+    prediction_2014_2_2:
+        __construct: ['@race_2014_2', '@user_2']
+        position: 7
+        points: 106
+    prediction_2014_3_1:
+        __construct: ['@race_2014_3', '@user_1']
+        position: 1
+        points: 144
+    prediction_2014_3_8:
+        __construct: ['@race_2014_3', '@user_8']
+        position: 2
+        points: 134
+    prediction_2014_3_9:
+        __construct: ['@race_2014_3', '@user_9']
+        position: 3
+        points: 134
+    prediction_2014_3_4:
+        __construct: ['@race_2014_3', '@user_4']
+        position: 4
+        points: 128
+    prediction_2014_3_7:
+        __construct: ['@race_2014_3', '@user_7']
+        position: 5
+        points: 124
+    prediction_2014_3_3:
+        __construct: ['@race_2014_3', '@user_3']
+        position: 6
+        points: 121
+    prediction_2014_3_2:
+        __construct: ['@race_2014_3', '@user_2']
+        position: 7
+        points: 117
+    prediction_2014_3_5:
+        __construct: ['@race_2014_3', '@user_5']
+        position: 8
+        points: 115
+    prediction_2014_3_6:
+        __construct: ['@race_2014_3', '@user_6']
+        position: 9
+        points: 111
+    prediction_2014_4_1:
+        __construct: ['@race_2014_4', '@user_1']
+        position: 1
+        points: 169
+    prediction_2014_4_3:
+        __construct: ['@race_2014_4', '@user_3']
+        position: 2
+        points: 155
+    prediction_2014_4_2:
+        __construct: ['@race_2014_4', '@user_2']
+        position: 3
+        points: 152
+    prediction_2014_4_6:
+        __construct: ['@race_2014_4', '@user_6']
+        position: 4
+        points: 150
+    prediction_2014_4_4:
+        __construct: ['@race_2014_4', '@user_4']
+        position: 5
+        points: 134
+    prediction_2014_4_7:
+        __construct: ['@race_2014_4', '@user_7']
+        position: 6
+        points: 121
+    prediction_2014_4_5:
+        __construct: ['@race_2014_4', '@user_5']
+        position: 7
+        points: 91
+    prediction_2014_5_2:
+        __construct: ['@race_2014_5', '@user_2']
+        position: 1
+        points: 203
+    prediction_2014_5_1:
+        __construct: ['@race_2014_5', '@user_1']
+        position: 2
+        points: 164
+    prediction_2014_5_4:
+        __construct: ['@race_2014_5', '@user_4']
+        position: 3
+        points: 159
+    prediction_2014_5_3:
+        __construct: ['@race_2014_5', '@user_3']
+        position: 4
+        points: 157
+    prediction_2014_5_7:
+        __construct: ['@race_2014_5', '@user_7']
+        position: 5
+        points: 147
+    prediction_2014_5_6:
+        __construct: ['@race_2014_5', '@user_6']
+        position: 6
+        points: 147
+    prediction_2014_5_5:
+        __construct: ['@race_2014_5', '@user_5']
+        position: 7
+        points: 144
+    prediction_2014_6_1:
+        __construct: ['@race_2014_6', '@user_1']
+        position: 1
+        points: 121
+    prediction_2014_6_9:
+        __construct: ['@race_2014_6', '@user_9']
+        position: 2
+        points: 116
+    prediction_2014_6_4:
+        __construct: ['@race_2014_6', '@user_4']
+        position: 3
+        points: 109
+    prediction_2014_6_5:
+        __construct: ['@race_2014_6', '@user_5']
+        position: 4
+        points: 102
+    prediction_2014_6_3:
+        __construct: ['@race_2014_6', '@user_3']
+        position: 5
+        points: 101
+    prediction_2014_6_6:
+        __construct: ['@race_2014_6', '@user_6']
+        position: 6
+        points: 99
+    prediction_2014_6_7:
+        __construct: ['@race_2014_6', '@user_7']
+        position: 7
+        points: 88
+    prediction_2014_6_2:
+        __construct: ['@race_2014_6', '@user_2']
+        position: 8
+        points: 84
+    prediction_2014_7_3:
+        __construct: ['@race_2014_7', '@user_3']
+        position: 1
+        points: 146
+    prediction_2014_7_6:
+        __construct: ['@race_2014_7', '@user_6']
+        position: 2
+        points: 139
+    prediction_2014_7_9:
+        __construct: ['@race_2014_7', '@user_9']
+        position: 3
+        points: 137
+    prediction_2014_7_7:
+        __construct: ['@race_2014_7', '@user_7']
+        position: 4
+        points: 120
+    prediction_2014_7_1:
+        __construct: ['@race_2014_7', '@user_1']
+        position: 5
+        points: 119
+    prediction_2014_7_5:
+        __construct: ['@race_2014_7', '@user_5']
+        position: 6
+        points: 116
+    prediction_2014_7_2:
+        __construct: ['@race_2014_7', '@user_2']
+        position: 7
+        points: 114
+    prediction_2014_7_4:
+        __construct: ['@race_2014_7', '@user_4']
+        position: 8
+        points: 112
+    prediction_2014_8_3:
+        __construct: ['@race_2014_8', '@user_3']
+        position: 1
+        points: 201
+    prediction_2014_8_4:
+        __construct: ['@race_2014_8', '@user_4']
+        position: 2
+        points: 157
+    prediction_2014_8_7:
+        __construct: ['@race_2014_8', '@user_7']
+        position: 3
+        points: 154
+    prediction_2014_8_1:
+        __construct: ['@race_2014_8', '@user_1']
+        position: 4
+        points: 146
+    prediction_2014_8_2:
+        __construct: ['@race_2014_8', '@user_2']
+        position: 5
+        points: 132
+    prediction_2014_8_6:
+        __construct: ['@race_2014_8', '@user_6']
+        position: 6
+        points: 128
+    prediction_2014_8_5:
+        __construct: ['@race_2014_8', '@user_5']
+        position: 7
+        points: 125
+    prediction_2014_9_4:
+        __construct: ['@race_2014_9', '@user_4']
+        position: 1
+        points: 124
+    prediction_2014_9_3:
+        __construct: ['@race_2014_9', '@user_3']
+        position: 2
+        points: 123
+    prediction_2014_9_5:
+        __construct: ['@race_2014_9', '@user_5']
+        position: 3
+        points: 121
+    prediction_2014_9_2:
+        __construct: ['@race_2014_9', '@user_2']
+        position: 4
+        points: 117
+    prediction_2014_9_1:
+        __construct: ['@race_2014_9', '@user_1']
+        position: 5
+        points: 116
+    prediction_2014_9_6:
+        __construct: ['@race_2014_9', '@user_6']
+        position: 6
+        points: 114
+    prediction_2014_10_4:
+        __construct: ['@race_2014_10', '@user_4']
+        position: 1
+        points: 158
+    prediction_2014_10_3:
+        __construct: ['@race_2014_10', '@user_3']
+        position: 2
+        points: 155
+    prediction_2014_10_1:
+        __construct: ['@race_2014_10', '@user_1']
+        position: 3
+        points: 153
+    prediction_2014_10_5:
+        __construct: ['@race_2014_10', '@user_5']
+        position: 4
+        points: 131
+    prediction_2014_10_7:
+        __construct: ['@race_2014_10', '@user_7']
+        position: 5
+        points: 125
+    prediction_2014_10_6:
+        __construct: ['@race_2014_10', '@user_6']
+        position: 6
+        points: 124
+    prediction_2014_10_2:
+        __construct: ['@race_2014_10', '@user_2']
+        position: 7
+        points: 119
+    prediction_2014_11_7:
+        __construct: ['@race_2014_11', '@user_7']
+        position: 1
+        points: 141
+    prediction_2014_11_3:
+        __construct: ['@race_2014_11', '@user_3']
+        position: 2
+        points: 119
+    prediction_2014_11_4:
+        __construct: ['@race_2014_11', '@user_4']
+        position: 3
+        points: 117
+    prediction_2014_11_2:
+        __construct: ['@race_2014_11', '@user_2']
+        position: 4
+        points: 112
+    prediction_2014_11_1:
+        __construct: ['@race_2014_11', '@user_1']
+        position: 5
+        points: 109
+    prediction_2014_11_6:
+        __construct: ['@race_2014_11', '@user_6']
+        position: 6
+        points: 107
+    prediction_2014_11_5:
+        __construct: ['@race_2014_11', '@user_5']
+        position: 7
+        points: 106
+    prediction_2014_12_2:
+        __construct: ['@race_2014_12', '@user_2']
+        position: 1
+        points: 134
+    prediction_2014_12_6:
+        __construct: ['@race_2014_12', '@user_6']
+        position: 2
+        points: 127
+    prediction_2014_12_1:
+        __construct: ['@race_2014_12', '@user_1']
+        position: 3
+        points: 121
+    prediction_2014_12_5:
+        __construct: ['@race_2014_12', '@user_5']
+        position: 4
+        points: 116
+    prediction_2014_12_4:
+        __construct: ['@race_2014_12', '@user_4']
+        position: 5
+        points: 99
+    prediction_2014_12_7:
+        __construct: ['@race_2014_12', '@user_7']
+        position: 6
+        points: 98
+    prediction_2014_12_3:
+        __construct: ['@race_2014_12', '@user_3']
+        position: 7
+        points: 95
+    prediction_2014_13_6:
+        __construct: ['@race_2014_13', '@user_6']
+        position: 1
+        points: 157
+    prediction_2014_13_4:
+        __construct: ['@race_2014_13', '@user_4']
+        position: 2
+        points: 156
+    prediction_2014_13_1:
+        __construct: ['@race_2014_13', '@user_1']
+        position: 3
+        points: 150
+    prediction_2014_13_2:
+        __construct: ['@race_2014_13', '@user_2']
+        position: 4
+        points: 142
+    prediction_2014_13_3:
+        __construct: ['@race_2014_13', '@user_3']
+        position: 5
+        points: 141
+    prediction_2014_13_7:
+        __construct: ['@race_2014_13', '@user_7']
+        position: 6
+        points: 134
+    prediction_2014_14_7:
+        __construct: ['@race_2014_14', '@user_7']
+        position: 1
+        points: 141
+    prediction_2014_14_3:
+        __construct: ['@race_2014_14', '@user_3']
+        position: 2
+        points: 138
+    prediction_2014_14_5:
+        __construct: ['@race_2014_14', '@user_5']
+        position: 3
+        points: 138
+    prediction_2014_14_6:
+        __construct: ['@race_2014_14', '@user_6']
+        position: 4
+        points: 132
+    prediction_2014_14_1:
+        __construct: ['@race_2014_14', '@user_1']
+        position: 5
+        points: 126
+    prediction_2014_14_4:
+        __construct: ['@race_2014_14', '@user_4']
+        position: 6
+        points: 121
+    prediction_2014_14_2:
+        __construct: ['@race_2014_14', '@user_2']
+        position: 7
+        points: 121
+    prediction_2014_15_5:
+        __construct: ['@race_2014_15', '@user_5']
+        position: 1
+        points: 138
+    prediction_2014_15_7:
+        __construct: ['@race_2014_15', '@user_7']
+        position: 2
+        points: 132
+    prediction_2014_15_6:
+        __construct: ['@race_2014_15', '@user_6']
+        position: 3
+        points: 132
+    prediction_2014_15_4:
+        __construct: ['@race_2014_15', '@user_4']
+        position: 4
+        points: 131
+    prediction_2014_15_3:
+        __construct: ['@race_2014_15', '@user_3']
+        position: 5
+        points: 122
+    prediction_2014_15_1:
+        __construct: ['@race_2014_15', '@user_1']
+        position: 6
+        points: 112
+    prediction_2014_15_2:
+        __construct: ['@race_2014_15', '@user_2']
+        position: 7
+        points: 93
+    prediction_2014_16_3:
+        __construct: ['@race_2014_16', '@user_3']
+        position: 1
+        points: 183
+    prediction_2014_16_1:
+        __construct: ['@race_2014_16', '@user_1']
+        position: 2
+        points: 175
+    prediction_2014_16_7:
+        __construct: ['@race_2014_16', '@user_7']
+        position: 3
+        points: 164
+    prediction_2014_16_4:
+        __construct: ['@race_2014_16', '@user_4']
+        position: 4
+        points: 147
+    prediction_2014_16_2:
+        __construct: ['@race_2014_16', '@user_2']
+        position: 5
+        points: 144
+    prediction_2014_16_6:
+        __construct: ['@race_2014_16', '@user_6']
+        position: 6
+        points: 142
+    prediction_2014_16_5:
+        __construct: ['@race_2014_16', '@user_5']
+        position: 7
+        points: 124
+    prediction_2014_17_4:
+        __construct: ['@race_2014_17', '@user_4']
+        position: 1
+        points: 176
+    prediction_2014_17_3:
+        __construct: ['@race_2014_17', '@user_3']
+        position: 2
+        points: 148
+    prediction_2014_17_1:
+        __construct: ['@race_2014_17', '@user_1']
+        position: 3
+        points: 142
+    prediction_2014_17_7:
+        __construct: ['@race_2014_17', '@user_7']
+        position: 4
+        points: 142
+    prediction_2014_17_6:
+        __construct: ['@race_2014_17', '@user_6']
+        position: 5
+        points: 137
+    prediction_2014_17_2:
+        __construct: ['@race_2014_17', '@user_2']
+        position: 6
+        points: 122
+    prediction_2014_18_2:
+        __construct: ['@race_2014_18', '@user_2']
+        position: 1
+        points: 168
+    prediction_2014_18_3:
+        __construct: ['@race_2014_18', '@user_3']
+        position: 2
+        points: 152
+    prediction_2014_18_7:
+        __construct: ['@race_2014_18', '@user_7']
+        position: 3
+        points: 150
+    prediction_2014_18_4:
+        __construct: ['@race_2014_18', '@user_4']
+        position: 4
+        points: 149
+    prediction_2014_18_6:
+        __construct: ['@race_2014_18', '@user_6']
+        position: 5
+        points: 147
+    prediction_2014_18_1:
+        __construct: ['@race_2014_18', '@user_1']
+        position: 6
+        points: 146
+    prediction_2014_19_3:
+        __construct: ['@race_2014_19', '@user_3']
+        position: 1
+        points: 132
+    prediction_2014_19_2:
+        __construct: ['@race_2014_19', '@user_2']
+        position: 2
+        points: 130
+    prediction_2014_19_1:
+        __construct: ['@race_2014_19', '@user_1']
+        position: 3
+        points: 126
+    prediction_2014_19_7:
+        __construct: ['@race_2014_19', '@user_7']
+        position: 4
+        points: 120
+    prediction_2014_19_4:
+        __construct: ['@race_2014_19', '@user_4']
+        position: 5
+        points: 120
+    prediction_2014_19_6:
+        __construct: ['@race_2014_19', '@user_6']
+        position: 6
+        points: 97

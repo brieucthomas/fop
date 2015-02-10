@@ -58,9 +58,8 @@ class FinishingStatusLoader extends AbstractLoader
         foreach ($response->getFinishingStatues() as $ergastFinishingStatus) {
             /* @var $ergastFinishingStatus ErgastEntity\FinishingStatus */
             $label = $ergastFinishingStatus->getName();
-            $finishingStatus = $finishingStatues->get($label);
 
-            if (!$finishingStatus) {
+            if (!$finishingStatues->get($label)) {
                 $finishingStatus = new AppEntity\FinishingStatus($label);
                 $this->finishingStatusService->persist($finishingStatus);
             }

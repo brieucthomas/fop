@@ -38,7 +38,7 @@ class DriverController extends Controller
             'podiums' => $this->get('result_service')->countPodiumsByDriver($driver->getId()),
             'points' => $this->get('result_service')->countPointsByDriver($driver->getId()),
             'races' => $this->get('result_service')->countResultsByDriver($driver->getId()),
-            'championships' => $this->get('season_service')->getChampionshipsByDriver($driver->getId())
+            'championships' => $this->get('season_service')->getChampionshipsByDriver($driver->getId()),
         ];
     }
 }

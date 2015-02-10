@@ -11,10 +11,8 @@ namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\FinishingStatusServiceInterface;
-use AppBundle\Service\RaceServiceInterface;
 use AppBundle\Service\ResultServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Entity\Response;
 use BrieucThomas\ErgastClient\Url\Builder\ResultUrlBuilder;
 
 /**
@@ -30,11 +28,6 @@ class ResultLoader extends AbstractLoader
     private $resultService;
 
     /**
-     * @var RaceServiceInterface
-     */
-    private $raceService;
-
-    /**
      * @var FinishingStatusServiceInterface
      */
     private $finishingStatusService;
@@ -43,16 +36,11 @@ class ResultLoader extends AbstractLoader
      * Constructor.
      *
      * @param ResultServiceInterface          $resultService
-     * @param RaceServiceInterface            $raceService
      * @param FinishingStatusServiceInterface $finishingStatusService
      */
-    public function __construct(
-        ResultServiceInterface $resultService,
-        RaceServiceInterface $raceService,
-        FinishingStatusServiceInterface $finishingStatusService
-    ) {
+    public function __construct(ResultServiceInterface $resultService, FinishingStatusServiceInterface $finishingStatusService)
+    {
         $this->resultService = $resultService;
-        $this->raceService = $raceService;
         $this->finishingStatusService = $finishingStatusService;
     }
 
@@ -84,6 +72,7 @@ class ResultLoader extends AbstractLoader
                 $result = new AppEntity\Result();
 
                 $result
+                    ->setRace($race)
                     ->setPosition($ergastResult->getPosition())
                     ->setTeam($team)
                     ->setGrid($ergastResult->getGrid())
@@ -108,12 +97,10 @@ class ResultLoader extends AbstractLoader
                     ;
                 }
 
-                $this->raceService->addResult($race, $result);
+                $this->resultService->persist($result);
             }
-
-            $this->raceService->persist($race);
         }
 
-        $this->raceService->flush();
+        $this->resultService->flush();
     }
 }

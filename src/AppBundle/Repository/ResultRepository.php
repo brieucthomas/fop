@@ -26,6 +26,39 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
     /**
      * {@inheritdoc}
      */
+    public function save(Result $result)
+    {
+        $this
+            ->persist($result)
+            ->flush()
+        ;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function persist(Result $result)
+    {
+        $this->_em->persist($result);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function flush()
+    {
+        $this->_em->flush();
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function countWinsByConstructor($constructorId)
     {
         $builder = $this->createQueryBuilder('r');

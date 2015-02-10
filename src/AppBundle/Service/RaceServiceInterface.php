@@ -9,11 +9,7 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\ConstructorStandings;
-use AppBundle\Entity\DriverStandings;
-use AppBundle\Entity\Qualifying;
 use AppBundle\Entity\Race;
-use AppBundle\Entity\Result;
 
 /**
  * The race service.
@@ -42,46 +38,6 @@ interface RaceServiceInterface
      * @return Race|null The race entity or null if not found
      */
     public function findLastRaceWithResults();
-
-    /**
-     * Adds a constructor standings to a race.
-     *
-     * @param Race                 $race                 A Race entity
-     * @param ConstructorStandings $constructorStandings A ConstructorStandings entity
-     *
-     * @return $this
-     */
-    public function addConstructorStandings(Race $race, ConstructorStandings $constructorStandings);
-
-    /**
-     * Adds a driver standings to a race.
-     *
-     * @param Race            $race            A Race entity
-     * @param DriverStandings $driverStandings A ConstructorStandings entity
-     *
-     * @return $this
-     */
-    public function addDriverStandings(Race $race, DriverStandings $driverStandings);
-
-    /**
-     * Adds a result to a race.
-     *
-     * @param Race   $race   A Race entity
-     * @param Result $result A Result entity
-     *
-     * @return $this
-     */
-    public function addResult(Race $race, Result $result);
-
-    /**
-     * Adds a qualifying to a race.
-     *
-     * @param Race       $race       A Race entity
-     * @param Qualifying $qualifying A Qualifying entity
-     *
-     * @return $this
-     */
-    public function addQualifying(Race $race, Qualifying $qualifying);
 
     /**
      * Saves a race.

@@ -303,8 +303,23 @@ class Season
         return $this;
     }
 
+    /**
+     * Returns whether the season is finished or not.
+     *
+     * @return bool true if the season is finished, false otherwise
+     */
     public function isFinished()
     {
         return $this->races->last() && $this->races->last()->hasResults();
+    }
+
+    /**
+     * __toString.
+     *
+     * @return string The season year
+     */
+    public function __toString()
+    {
+        return (string) $this->year;
     }
 }

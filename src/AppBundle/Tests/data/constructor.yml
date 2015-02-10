@@ -1,0 +1,45 @@
+AppBundle\Entity\Constructor:
+    constructor_ferrari:
+        name: Ferrari
+        nationality: IT
+        slug: ferrari
+    constructor_mercedes:
+        name: Mercedes
+        nationality: DE
+        slug: mercedes
+    constructor_mclaren:
+        name: McLaren
+        nationality: GB
+        slug: mclaren
+    constructor_williams:
+        name: Williams
+        nationality: GB
+        slug: williams
+    constructor_sauber:
+        name: Sauber
+        nationality: CH
+        slug: sauber
+    constructor_red_bull:
+        name: 'Red Bull'
+        nationality: AU
+        slug: red_bull
+    constructor_toro_rosso:
+        name: 'Toro Rosso'
+        nationality: IT
+        slug: toro_rosso
+    constructor_force_india:
+        name: 'Force India'
+        nationality: IN
+        slug: force_india
+    constructor_caterham:
+        name: Caterham
+        nationality: MY
+        slug: caterham
+    constructor_lotus_f1:
+        name: 'Lotus F1'
+        nationality: GB
+        slug: lotus_f1
+    constructor_marussia:
+        name: Marussia
+        nationality: RU
+        slug: marussia

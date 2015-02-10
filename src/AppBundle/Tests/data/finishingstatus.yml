@@ -1,0 +1,261 @@
+AppBundle\Entity\FinishingStatus:
+    finishing_status_1_lap:
+        __construct: ['+1 Lap']
+    finishing_status_10_laps:
+        __construct: ['+10 Laps']
+    finishing_status_11_laps:
+        __construct: ['+11 Laps']
+    finishing_status_12_laps:
+        __construct: ['+12 Laps']
+    finishing_status_13_laps:
+        __construct: ['+13 Laps']
+    finishing_status_14_laps:
+        __construct: ['+14 Laps']
+    finishing_status_15_laps:
+        __construct: ['+15 Laps']
+    finishing_status_16_laps:
+        __construct: ['+16 Laps']
+    finishing_status_17_laps:
+        __construct: ['+17 Laps']
+    finishing_status_18_laps:
+        __construct: ['+18 Laps']
+    finishing_status_19_laps:
+        __construct: ['+19 Laps']
+    finishing_status_2_laps:
+        __construct: ['+2 Laps']
+    finishing_status_20_laps:
+        __construct: ['+20 Laps']
+    finishing_status_21_laps:
+        __construct: ['+21 Laps']
+    finishing_status_22_laps:
+        __construct: ['+22 Laps']
+    finishing_status_23_laps:
+        __construct: ['+23 Laps']
+    finishing_status_24_laps:
+        __construct: ['+24 Laps']
+    finishing_status_25_laps:
+        __construct: ['+25 Laps']
+    finishing_status_26_laps:
+        __construct: ['+26 Laps']
+    finishing_status_29_laps:
+        __construct: ['+29 Laps']
+    finishing_status_3_laps:
+        __construct: ['+3 Laps']
+    finishing_status_30_laps:
+        __construct: ['+30 Laps']
+    finishing_status_4_laps:
+        __construct: ['+4 Laps']
+    finishing_status_42_laps:
+        __construct: ['+42 Laps']
+    finishing_status_44_laps:
+        __construct: ['+44 Laps']
+    finishing_status_46_laps:
+        __construct: ['+46 Laps']
+    finishing_status_5_laps:
+        __construct: ['+5 Laps']
+    finishing_status_6_laps:
+        __construct: ['+6 Laps']
+    finishing_status_7_laps:
+        __construct: ['+7 Laps']
+    finishing_status_8_laps:
+        __construct: ['+8 Laps']
+    finishing_status_9_laps:
+        __construct: ['+9 Laps']
+    finishing_status_107_rule:
+        __construct: ['107% Rule']
+    finishing_status_accident:
+        __construct: [Accident]
+    finishing_status_alternator:
+        __construct: [Alternator]
+    finishing_status_axle:
+        __construct: [Axle]
+    finishing_status_battery:
+        __construct: [Battery]
+    finishing_status_brakes:
+        __construct: [Brakes]
+    finishing_status_broken_wing:
+        __construct: ['Broken wing']
+    finishing_status_chassis:
+        __construct: [Chassis]
+    finishing_status_clutch:
+        __construct: [Clutch]
+    finishing_status_collision:
+        __construct: [Collision]
+    finishing_status_collision_damage:
+        __construct: ['Collision damage']
+    finishing_status_crankshaft:
+        __construct: [Crankshaft]
+    finishing_status_cv_joint:
+        __construct: ['CV joint']
+    finishing_status_did_not_prequalify:
+        __construct: ['Did not prequalify']
+    finishing_status_did_not_qualify:
+        __construct: ['Did not qualify']
+    finishing_status_differential:
+        __construct: [Differential]
+    finishing_status_disqualified:
+        __construct: [Disqualified]
+    finishing_status_distributor:
+        __construct: [Distributor]
+    finishing_status_driver_seat:
+        __construct: ['Driver Seat']
+    finishing_status_driver_unwell:
+        __construct: ['Driver unwell']
+    finishing_status_driveshaft:
+        __construct: [Driveshaft]
+    finishing_status_drivetrain:
+        __construct: [Drivetrain]
+    finishing_status_electrical:
+        __construct: [Electrical]
+    finishing_status_electronics:
+        __construct: [Electronics]
+    finishing_status_engine:
+        __construct: [Engine]
+    finishing_status_engine_fire:
+        __construct: ['Engine fire']
+    finishing_status_engine_misfire:
+        __construct: ['Engine misfire']
+    finishing_status_ers:
+        __construct: [ERS]
+    finishing_status_excluded:
+        __construct: [Excluded]
+    finishing_status_exhaust:
+        __construct: [Exhaust]
+    finishing_status_eye_injury:
+        __construct: ['Eye injury']
+    finishing_status_fatal_accident:
+        __construct: ['Fatal accident']
+    finishing_status_finished:
+        __construct: [Finished]
+    finishing_status_fire:
+        __construct: [Fire]
+    finishing_status_front_wing:
+        __construct: ['Front wing']
+    finishing_status_fuel:
+        __construct: [Fuel]
+    finishing_status_fuel_leak:
+        __construct: ['Fuel leak']
+    finishing_status_fuel_pipe:
+        __construct: ['Fuel pipe']
+    finishing_status_fuel_pressure:
+        __construct: ['Fuel pressure']
+    finishing_status_fuel_pump:
+        __construct: ['Fuel pump']
+    finishing_status_fuel_rig:
+        __construct: ['Fuel rig']
+    finishing_status_fuel_system:
+        __construct: ['Fuel system']
+    finishing_status_gearbox:
+        __construct: [Gearbox]
+    finishing_status_halfshaft:
+        __construct: [Halfshaft]
+    finishing_status_handling:
+        __construct: [Handling]
+    finishing_status_heat_shield_fire:
+        __construct: ['Heat shield fire']
+    finishing_status_hydraulics:
+        __construct: [Hydraulics]
+    finishing_status_ignition:
+        __construct: [Ignition]
+    finishing_status_injection:
+        __construct: [Injection]
+    finishing_status_injured:
+        __construct: [Injured]
+    finishing_status_injury:
+        __construct: [Injury]
+    finishing_status_launch_control:
+        __construct: ['Launch control']
+    finishing_status_magneto:
+        __construct: [Magneto]
+    finishing_status_mechanical:
+        __construct: [Mechanical]
+    finishing_status_not_classified:
+        __construct: ['Not classified']
+    finishing_status_not_restarted:
+        __construct: ['Not restarted']
+    finishing_status_oil_leak:
+        __construct: ['Oil leak']
+    finishing_status_oil_line:
+        __construct: ['Oil line']
+    finishing_status_oil_pipe:
+        __construct: ['Oil pipe']
+    finishing_status_oil_pressure:
+        __construct: ['Oil pressure']
+    finishing_status_oil_pump:
+        __construct: ['Oil pump']
+    finishing_status_out_of_fuel:
+        __construct: ['Out of fuel']
+    finishing_status_overheating:
+        __construct: [Overheating]
+    finishing_status_physical:
+        __construct: [Physical]
+    finishing_status_pneumatics:
+        __construct: [Pneumatics]
+    finishing_status_power_loss:
+        __construct: ['Power loss']
+    finishing_status_power_unit:
+        __construct: ['Power Unit']
+    finishing_status_puncture:
+        __construct: [Puncture]
+    finishing_status_radiator:
+        __construct: [Radiator]
+    finishing_status_rear_wing:
+        __construct: ['Rear wing']
+    finishing_status_refuelling:
+        __construct: [Refuelling]
+    finishing_status_retired:
+        __construct: [Retired]
+    finishing_status_safety:
+        __construct: [Safety]
+    finishing_status_safety_belt:
+        __construct: ['Safety belt']
+    finishing_status_safety_concerns:
+        __construct: ['Safety concerns']
+    finishing_status_spark_plugs:
+        __construct: ['Spark plugs']
+    finishing_status_spun_off:
+        __construct: ['Spun off']
+    finishing_status_stalled:
+        __construct: [Stalled]
+    finishing_status_steering:
+        __construct: [Steering]
+    finishing_status_supercharger:
+        __construct: [Supercharger]
+    finishing_status_suspension:
+        __construct: [Suspension]
+    finishing_status_technical:
+        __construct: [Technical]
+    finishing_status_throttle:
+        __construct: [Throttle]
+    finishing_status_track_rod:
+        __construct: ['Track rod']
+    finishing_status_transmission:
+        __construct: [Transmission]
+    finishing_status_turbo:
+        __construct: [Turbo]
+    finishing_status_tyre:
+        __construct: [Tyre]
+    finishing_status_tyre_puncture:
+        __construct: ['Tyre puncture']
+    finishing_status_underweight:
+        __construct: [Underweight]
+    finishing_status_vibrations:
+        __construct: [Vibrations]
+    finishing_status_water_leak:
+        __construct: ['Water leak']
+    finishing_status_water_pipe:
+        __construct: ['Water pipe']
+    finishing_status_water_pressure:
+        __construct: ['Water pressure']
+    finishing_status_water_pump:
+        __construct: ['Water pump']
+    finishing_status_wheel:
+        __construct: [Wheel]
+    finishing_status_wheel_bearing:
+        __construct: ['Wheel bearing']
+    finishing_status_wheel_nut:
+        __construct: ['Wheel nut']
+    finishing_status_wheel_rim:
+        __construct: ['Wheel rim']
+    finishing_status_withdrew:
+        __construct: [Withdrew]

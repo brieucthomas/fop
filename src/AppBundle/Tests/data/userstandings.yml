@@ -1,0 +1,1939 @@
+AppBundle\Entity\UserStandings:
+    user_standings_2013_1_12:
+        race: '@race_2013_1'
+        user: '@user_3'
+        position: 1
+        points: !!float 115
+        wins: 1
+    user_standings_2013_1_13:
+        race: '@race_2013_1'
+        user: '@user_4'
+        position: 2
+        points: !!float 110
+        wins: 0
+    user_standings_2013_1_14:
+        race: '@race_2013_1'
+        user: '@user_1'
+        position: 3
+        points: !!float 102
+        wins: 0
+    user_standings_2013_1_15:
+        race: '@race_2013_1'
+        user: '@user_7'
+        position: 4
+        points: !!float 87
+        wins: 0
+    user_standings_2013_1_16:
+        race: '@race_2013_1'
+        user: '@user_6'
+        position: 5
+        points: !!float 87
+        wins: 0
+    user_standings_2013_1_17:
+        race: '@race_2013_1'
+        user: '@user_5'
+        position: 6
+        points: !!float 87
+        wins: 0
+    user_standings_2013_1_18:
+        race: '@race_2013_1'
+        user: '@user_2'
+        position: 7
+        points: !!float 87
+        wins: 0
+    user_standings_2013_2_12:
+        race: '@race_2013_2'
+        user: '@user_6'
+        position: 1
+        points: !!float 223
+        wins: 1
+    user_standings_2013_2_13:
+        race: '@race_2013_2'
+        user: '@user_4'
+        position: 2
+        points: !!float 223
+        wins: 0
+    user_standings_2013_2_14:
+        race: '@race_2013_2'
+        user: '@user_3'
+        position: 3
+        points: !!float 219
+        wins: 1
+    user_standings_2013_2_15:
+        race: '@race_2013_2'
+        user: '@user_2'
+        position: 4
+        points: !!float 208
+        wins: 0
+    user_standings_2013_2_16:
+        race: '@race_2013_2'
+        user: '@user_5'
+        position: 5
+        points: !!float 188
+        wins: 0
+    user_standings_2013_2_17:
+        race: '@race_2013_2'
+        user: '@user_1'
+        position: 6
+        points: !!float 180
+        wins: 0
+    user_standings_2013_2_18:
+        race: '@race_2013_2'
+        user: '@user_7'
+        position: 7
+        points: !!float 150
+        wins: 0
+    user_standings_2013_3_12:
+        race: '@race_2013_3'
+        user: '@user_6'
+        position: 1
+        points: !!float 372
+        wins: 1
+    user_standings_2013_3_13:
+        race: '@race_2013_3'
+        user: '@user_2'
+        position: 2
+        points: !!float 370
+        wins: 1
+    user_standings_2013_3_14:
+        race: '@race_2013_3'
+        user: '@user_4'
+        position: 3
+        points: !!float 355
+        wins: 0
+    user_standings_2013_3_15:
+        race: '@race_2013_3'
+        user: '@user_3'
+        position: 4
+        points: !!float 331
+        wins: 1
+    user_standings_2013_3_16:
+        race: '@race_2013_3'
+        user: '@user_5'
+        position: 5
+        points: !!float 314
+        wins: 0
+    user_standings_2013_3_17:
+        race: '@race_2013_3'
+        user: '@user_1'
+        position: 6
+        points: !!float 310
+        wins: 0
+    user_standings_2013_3_18:
+        race: '@race_2013_3'
+        user: '@user_7'
+        position: 7
+        points: !!float 298
+        wins: 0
+    user_standings_2013_4_12:
+        race: '@race_2013_4'
+        user: '@user_6'
+        position: 1
+        points: !!float 478
+        wins: 1
+    user_standings_2013_4_13:
+        race: '@race_2013_4'
+        user: '@user_4'
+        position: 2
+        points: !!float 472
+        wins: 0
+    user_standings_2013_4_14:
+        race: '@race_2013_4'
+        user: '@user_2'
+        position: 3
+        points: !!float 470
+        wins: 1
+    user_standings_2013_4_15:
+        race: '@race_2013_4'
+        user: '@user_1'
+        position: 4
+        points: !!float 438
+        wins: 1
+    user_standings_2013_4_16:
+        race: '@race_2013_4'
+        user: '@user_3'
+        position: 5
+        points: !!float 436
+        wins: 1
+    user_standings_2013_4_17:
+        race: '@race_2013_4'
+        user: '@user_5'
+        position: 6
+        points: !!float 427
+        wins: 0
+    user_standings_2013_4_18:
+        race: '@race_2013_4'
+        user: '@user_7'
+        position: 7
+        points: !!float 395
+        wins: 0
+    user_standings_2013_5_12:
+        race: '@race_2013_5'
+        user: '@user_2'
+        position: 1
+        points: !!float 619
+        wins: 2
+    user_standings_2013_5_13:
+        race: '@race_2013_5'
+        user: '@user_6'
+        position: 2
+        points: !!float 590
+        wins: 1
+    user_standings_2013_5_14:
+        race: '@race_2013_5'
+        user: '@user_4'
+        position: 3
+        points: !!float 586
+        wins: 0
+    user_standings_2013_5_15:
+        race: '@race_2013_5'
+        user: '@user_1'
+        position: 4
+        points: !!float 572
+        wins: 1
+    user_standings_2013_5_16:
+        race: '@race_2013_5'
+        user: '@user_3'
+        position: 5
+        points: !!float 556
+        wins: 1
+    user_standings_2013_5_17:
+        race: '@race_2013_5'
+        user: '@user_5'
+        position: 6
+        points: !!float 542
+        wins: 0
+    user_standings_2013_5_18:
+        race: '@race_2013_5'
+        user: '@user_7'
+        position: 7
+        points: !!float 497
+        wins: 0
+    user_standings_2013_6_12:
+        race: '@race_2013_6'
+        user: '@user_2'
+        position: 1
+        points: !!float 720
+        wins: 2
+    user_standings_2013_6_13:
+        race: '@race_2013_6'
+        user: '@user_4'
+        position: 2
+        points: !!float 713
+        wins: 0
+    user_standings_2013_6_14:
+        race: '@race_2013_6'
+        user: '@user_1'
+        position: 3
+        points: !!float 703
+        wins: 2
+    user_standings_2013_6_15:
+        race: '@race_2013_6'
+        user: '@user_6'
+        position: 4
+        points: !!float 699
+        wins: 1
+    user_standings_2013_6_16:
+        race: '@race_2013_6'
+        user: '@user_3'
+        position: 5
+        points: !!float 656
+        wins: 1
+    user_standings_2013_6_17:
+        race: '@race_2013_6'
+        user: '@user_5'
+        position: 6
+        points: !!float 641
+        wins: 0
+    user_standings_2013_6_18:
+        race: '@race_2013_6'
+        user: '@user_7'
+        position: 7
+        points: !!float 625
+        wins: 0
+    user_standings_2013_7_12:
+        race: '@race_2013_7'
+        user: '@user_1'
+        position: 1
+        points: !!float 855
+        wins: 3
+    user_standings_2013_7_13:
+        race: '@race_2013_7'
+        user: '@user_2'
+        position: 2
+        points: !!float 844
+        wins: 2
+    user_standings_2013_7_14:
+        race: '@race_2013_7'
+        user: '@user_4'
+        position: 3
+        points: !!float 833
+        wins: 0
+    user_standings_2013_7_15:
+        race: '@race_2013_7'
+        user: '@user_6'
+        position: 4
+        points: !!float 805
+        wins: 1
+    user_standings_2013_7_16:
+        race: '@race_2013_7'
+        user: '@user_3'
+        position: 5
+        points: !!float 799
+        wins: 1
+    user_standings_2013_7_17:
+        race: '@race_2013_7'
+        user: '@user_7'
+        position: 6
+        points: !!float 754
+        wins: 0
+    user_standings_2013_7_18:
+        race: '@race_2013_7'
+        user: '@user_5'
+        position: 7
+        points: !!float 732
+        wins: 0
+    user_standings_2013_8_12:
+        race: '@race_2013_8'
+        user: '@user_1'
+        position: 1
+        points: !!float 986
+        wins: 3
+    user_standings_2013_8_13:
+        race: '@race_2013_8'
+        user: '@user_4'
+        position: 2
+        points: !!float 966
+        wins: 0
+    user_standings_2013_8_14:
+        race: '@race_2013_8'
+        user: '@user_2'
+        position: 3
+        points: !!float 952
+        wins: 2
+    user_standings_2013_8_15:
+        race: '@race_2013_8'
+        user: '@user_6'
+        position: 4
+        points: !!float 923
+        wins: 1
+    user_standings_2013_8_16:
+        race: '@race_2013_8'
+        user: '@user_3'
+        position: 5
+        points: !!float 911
+        wins: 1
+    user_standings_2013_8_17:
+        race: '@race_2013_8'
+        user: '@user_7'
+        position: 6
+        points: !!float 895
+        wins: 1
+    user_standings_2013_8_18:
+        race: '@race_2013_8'
+        user: '@user_5'
+        position: 7
+        points: !!float 853
+        wins: 0
+    user_standings_2013_9_12:
+        race: '@race_2013_9'
+        user: '@user_1'
+        position: 1
+        points: !!float 1124
+        wins: 4
+    user_standings_2013_9_13:
+        race: '@race_2013_9'
+        user: '@user_4'
+        position: 2
+        points: !!float 1093
+        wins: 0
+    user_standings_2013_9_14:
+        race: '@race_2013_9'
+        user: '@user_2'
+        position: 3
+        points: !!float 1076
+        wins: 2
+    user_standings_2013_9_15:
+        race: '@race_2013_9'
+        user: '@user_6'
+        position: 4
+        points: !!float 1060
+        wins: 1
+    user_standings_2013_9_16:
+        race: '@race_2013_9'
+        user: '@user_7'
+        position: 5
+        points: !!float 1010
+        wins: 1
+    user_standings_2013_9_17:
+        race: '@race_2013_9'
+        user: '@user_3'
+        position: 6
+        points: !!float 1002
+        wins: 1
+    user_standings_2013_9_18:
+        race: '@race_2013_9'
+        user: '@user_5'
+        position: 7
+        points: !!float 929
+        wins: 0
+    user_standings_2013_10_12:
+        race: '@race_2013_10'
+        user: '@user_1'
+        position: 1
+        points: !!float 1249
+        wins: 4
+    user_standings_2013_10_13:
+        race: '@race_2013_10'
+        user: '@user_4'
+        position: 2
+        points: !!float 1217
+        wins: 0
+    user_standings_2013_10_14:
+        race: '@race_2013_10'
+        user: '@user_2'
+        position: 3
+        points: !!float 1200
+        wins: 2
+    user_standings_2013_10_15:
+        race: '@race_2013_10'
+        user: '@user_6'
+        position: 4
+        points: !!float 1178
+        wins: 1
+    user_standings_2013_10_16:
+        race: '@race_2013_10'
+        user: '@user_7'
+        position: 5
+        points: !!float 1133
+        wins: 1
+    user_standings_2013_10_17:
+        race: '@race_2013_10'
+        user: '@user_3'
+        position: 6
+        points: !!float 1100
+        wins: 1
+    user_standings_2013_10_18:
+        race: '@race_2013_10'
+        user: '@user_5'
+        position: 7
+        points: !!float 1090
+        wins: 1
+    user_standings_2013_11_12:
+        race: '@race_2013_11'
+        user: '@user_1'
+        position: 1
+        points: !!float 1374
+        wins: 4
+    user_standings_2013_11_13:
+        race: '@race_2013_11'
+        user: '@user_4'
+        position: 2
+        points: !!float 1359
+        wins: 1
+    user_standings_2013_11_14:
+        race: '@race_2013_11'
+        user: '@user_2'
+        position: 3
+        points: !!float 1337
+        wins: 2
+    user_standings_2013_11_15:
+        race: '@race_2013_11'
+        user: '@user_6'
+        position: 4
+        points: !!float 1298
+        wins: 1
+    user_standings_2013_11_16:
+        race: '@race_2013_11'
+        user: '@user_7'
+        position: 5
+        points: !!float 1265
+        wins: 1
+    user_standings_2013_11_17:
+        race: '@race_2013_11'
+        user: '@user_3'
+        position: 6
+        points: !!float 1230
+        wins: 1
+    user_standings_2013_11_18:
+        race: '@race_2013_11'
+        user: '@user_5'
+        position: 7
+        points: !!float 1224
+        wins: 1
+    user_standings_2013_12_12:
+        race: '@race_2013_12'
+        user: '@user_1'
+        position: 1
+        points: !!float 1540
+        wins: 4
+    user_standings_2013_12_13:
+        race: '@race_2013_12'
+        user: '@user_2'
+        position: 2
+        points: !!float 1532
+        wins: 3
+    user_standings_2013_12_14:
+        race: '@race_2013_12'
+        user: '@user_4'
+        position: 3
+        points: !!float 1483
+        wins: 1
+    user_standings_2013_12_15:
+        race: '@race_2013_12'
+        user: '@user_6'
+        position: 4
+        points: !!float 1479
+        wins: 1
+    user_standings_2013_12_16:
+        race: '@race_2013_12'
+        user: '@user_7'
+        position: 5
+        points: !!float 1433
+        wins: 1
+    user_standings_2013_12_17:
+        race: '@race_2013_12'
+        user: '@user_3'
+        position: 6
+        points: !!float 1390
+        wins: 1
+    user_standings_2013_12_18:
+        race: '@race_2013_12'
+        user: '@user_5'
+        position: 7
+        points: !!float 1363
+        wins: 1
+    user_standings_2013_13_12:
+        race: '@race_2013_13'
+        user: '@user_1'
+        position: 1
+        points: !!float 1668
+        wins: 4
+    user_standings_2013_13_13:
+        race: '@race_2013_13'
+        user: '@user_2'
+        position: 2
+        points: !!float 1655
+        wins: 3
+    user_standings_2013_13_14:
+        race: '@race_2013_13'
+        user: '@user_6'
+        position: 3
+        points: !!float 1617
+        wins: 1
+    user_standings_2013_13_15:
+        race: '@race_2013_13'
+        user: '@user_4'
+        position: 4
+        points: !!float 1581
+        wins: 1
+    user_standings_2013_13_16:
+        race: '@race_2013_13'
+        user: '@user_7'
+        position: 5
+        points: !!float 1573
+        wins: 2
+    user_standings_2013_13_17:
+        race: '@race_2013_13'
+        user: '@user_3'
+        position: 6
+        points: !!float 1510
+        wins: 1
+    user_standings_2013_13_18:
+        race: '@race_2013_13'
+        user: '@user_5'
+        position: 7
+        points: !!float 1493
+        wins: 1
+    user_standings_2013_14_12:
+        race: '@race_2013_14'
+        user: '@user_1'
+        position: 1
+        points: !!float 1808
+        wins: 4
+    user_standings_2013_14_13:
+        race: '@race_2013_14'
+        user: '@user_2'
+        position: 2
+        points: !!float 1768
+        wins: 3
+    user_standings_2013_14_14:
+        race: '@race_2013_14'
+        user: '@user_6'
+        position: 3
+        points: !!float 1732
+        wins: 1
+    user_standings_2013_14_15:
+        race: '@race_2013_14'
+        user: '@user_4'
+        position: 4
+        points: !!float 1725
+        wins: 1
+    user_standings_2013_14_16:
+        race: '@race_2013_14'
+        user: '@user_7'
+        position: 5
+        points: !!float 1671
+        wins: 2
+    user_standings_2013_14_17:
+        race: '@race_2013_14'
+        user: '@user_5'
+        position: 6
+        points: !!float 1668
+        wins: 2
+    user_standings_2013_14_18:
+        race: '@race_2013_14'
+        user: '@user_3'
+        position: 7
+        points: !!float 1665
+        wins: 1
+    user_standings_2013_15_12:
+        race: '@race_2013_15'
+        user: '@user_1'
+        position: 1
+        points: !!float 1961
+        wins: 4
+    user_standings_2013_15_13:
+        race: '@race_2013_15'
+        user: '@user_2'
+        position: 2
+        points: !!float 1933
+        wins: 3
+    user_standings_2013_15_14:
+        race: '@race_2013_15'
+        user: '@user_6'
+        position: 3
+        points: !!float 1905
+        wins: 1
+    user_standings_2013_15_15:
+        race: '@race_2013_15'
+        user: '@user_4'
+        position: 4
+        points: !!float 1890
+        wins: 1
+    user_standings_2013_15_16:
+        race: '@race_2013_15'
+        user: '@user_3'
+        position: 5
+        points: !!float 1843
+        wins: 2
+    user_standings_2013_15_17:
+        race: '@race_2013_15'
+        user: '@user_7'
+        position: 6
+        points: !!float 1802
+        wins: 2
+    user_standings_2013_15_18:
+        race: '@race_2013_15'
+        user: '@user_5'
+        position: 7
+        points: !!float 1802
+        wins: 2
+    user_standings_2013_16_12:
+        race: '@race_2013_16'
+        user: '@user_1'
+        position: 1
+        points: !!float 2075
+        wins: 4
+    user_standings_2013_16_13:
+        race: '@race_2013_16'
+        user: '@user_2'
+        position: 2
+        points: !!float 2048
+        wins: 4
+    user_standings_2013_16_14:
+        race: '@race_2013_16'
+        user: '@user_6'
+        position: 3
+        points: !!float 2013
+        wins: 1
+    user_standings_2013_16_15:
+        race: '@race_2013_16'
+        user: '@user_4'
+        position: 4
+        points: !!float 1984
+        wins: 1
+    user_standings_2013_16_16:
+        race: '@race_2013_16'
+        user: '@user_3'
+        position: 5
+        points: !!float 1936
+        wins: 2
+    user_standings_2013_16_17:
+        race: '@race_2013_16'
+        user: '@user_5'
+        position: 6
+        points: !!float 1893
+        wins: 2
+    user_standings_2013_16_18:
+        race: '@race_2013_16'
+        user: '@user_7'
+        position: 7
+        points: !!float 1878
+        wins: 2
+    user_standings_2013_17_12:
+        race: '@race_2013_17'
+        user: '@user_1'
+        position: 1
+        points: !!float 2209
+        wins: 4
+    user_standings_2013_17_13:
+        race: '@race_2013_17'
+        user: '@user_2'
+        position: 2
+        points: !!float 2180
+        wins: 4
+    user_standings_2013_17_14:
+        race: '@race_2013_17'
+        user: '@user_6'
+        position: 3
+        points: !!float 2137
+        wins: 1
+    user_standings_2013_17_15:
+        race: '@race_2013_17'
+        user: '@user_4'
+        position: 4
+        points: !!float 2128
+        wins: 2
+    user_standings_2013_17_16:
+        race: '@race_2013_17'
+        user: '@user_3'
+        position: 5
+        points: !!float 2067
+        wins: 2
+    user_standings_2013_17_17:
+        race: '@race_2013_17'
+        user: '@user_5'
+        position: 6
+        points: !!float 1981
+        wins: 2
+    user_standings_2013_17_18:
+        race: '@race_2013_17'
+        user: '@user_7'
+        position: 7
+        points: !!float 1977
+        wins: 2
+    user_standings_2013_18_12:
+        race: '@race_2013_18'
+        user: '@user_1'
+        position: 1
+        points: !!float 2374
+        wins: 4
+    user_standings_2013_18_13:
+        race: '@race_2013_18'
+        user: '@user_2'
+        position: 2
+        points: !!float 2307
+        wins: 4
+    user_standings_2013_18_14:
+        race: '@race_2013_18'
+        user: '@user_4'
+        position: 3
+        points: !!float 2282
+        wins: 2
+    user_standings_2013_18_15:
+        race: '@race_2013_18'
+        user: '@user_6'
+        position: 4
+        points: !!float 2281
+        wins: 1
+    user_standings_2013_18_16:
+        race: '@race_2013_18'
+        user: '@user_3'
+        position: 5
+        points: !!float 2232
+        wins: 2
+    user_standings_2013_18_17:
+        race: '@race_2013_18'
+        user: '@user_5'
+        position: 6
+        points: !!float 2162
+        wins: 3
+    user_standings_2013_18_18:
+        race: '@race_2013_18'
+        user: '@user_7'
+        position: 7
+        points: !!float 2121
+        wins: 2
+    user_standings_2013_19_12:
+        race: '@race_2013_19'
+        user: '@user_1'
+        position: 1
+        points: !!float 2530
+        wins: 5
+    user_standings_2013_19_13:
+        race: '@race_2013_19'
+        user: '@user_2'
+        position: 2
+        points: !!float 2433
+        wins: 4
+    user_standings_2013_19_14:
+        race: '@race_2013_19'
+        user: '@user_4'
+        position: 3
+        points: !!float 2425
+        wins: 2
+    user_standings_2013_19_15:
+        race: '@race_2013_19'
+        user: '@user_6'
+        position: 4
+        points: !!float 2423
+        wins: 1
+    user_standings_2013_19_16:
+        race: '@race_2013_19'
+        user: '@user_3'
+        position: 5
+        points: !!float 2364
+        wins: 2
+    user_standings_2013_19_17:
+        race: '@race_2013_19'
+        user: '@user_5'
+        position: 6
+        points: !!float 2274
+        wins: 3
+    user_standings_2013_19_18:
+        race: '@race_2013_19'
+        user: '@user_7'
+        position: 7
+        points: !!float 2241
+        wins: 2
+    user_standings_2014_1_12:
+        race: '@race_2014_1'
+        user: '@user_2'
+        position: 1
+        points: !!float 146
+        wins: 1
+    user_standings_2014_1_13:
+        race: '@race_2014_1'
+        user: '@user_9'
+        position: 2
+        points: !!float 124
+        wins: 0
+    user_standings_2014_1_14:
+        race: '@race_2014_1'
+        user: '@user_1'
+        position: 3
+        points: !!float 102
+        wins: 0
+    user_standings_2014_1_15:
+        race: '@race_2014_1'
+        user: '@user_3'
+        position: 4
+        points: !!float 100
+        wins: 0
+    user_standings_2014_1_16:
+        race: '@race_2014_1'
+        user: '@user_8'
+        position: 5
+        points: !!float 99
+        wins: 0
+    user_standings_2014_1_17:
+        race: '@race_2014_1'
+        user: '@user_4'
+        position: 6
+        points: !!float 95
+        wins: 0
+    user_standings_2014_1_18:
+        race: '@race_2014_1'
+        user: '@user_6'
+        position: 7
+        points: !!float 94
+        wins: 0
+    user_standings_2014_1_19:
+        race: '@race_2014_1'
+        user: '@user_10'
+        position: 8
+        points: !!float 79
+        wins: 0
+    user_standings_2014_1_20:
+        race: '@race_2014_1'
+        user: '@user_5'
+        position: 9
+        points: !!float 79
+        wins: 0
+    user_standings_2014_1_21:
+        race: '@race_2014_1'
+        user: '@user_7'
+        position: 10
+        points: !!float 79
+        wins: 0
+    user_standings_2014_2_12:
+        race: '@race_2014_2'
+        user: '@user_9'
+        position: 1
+        points: !!float 270
+        wins: 0
+    user_standings_2014_2_13:
+        race: '@race_2014_2'
+        user: '@user_2'
+        position: 2
+        points: !!float 252
+        wins: 1
+    user_standings_2014_2_14:
+        race: '@race_2014_2'
+        user: '@user_4'
+        position: 3
+        points: !!float 245
+        wins: 1
+    user_standings_2014_2_15:
+        race: '@race_2014_2'
+        user: '@user_3'
+        position: 4
+        points: !!float 229
+        wins: 0
+    user_standings_2014_2_16:
+        race: '@race_2014_2'
+        user: '@user_1'
+        position: 5
+        points: !!float 227
+        wins: 0
+    user_standings_2014_2_17:
+        race: '@race_2014_2'
+        user: '@user_6'
+        position: 6
+        points: !!float 226
+        wins: 0
+    user_standings_2014_2_18:
+        race: '@race_2014_2'
+        user: '@user_8'
+        position: 7
+        points: !!float 190
+        wins: 0
+    user_standings_2014_2_19:
+        race: '@race_2014_2'
+        user: '@user_7'
+        position: 8
+        points: !!float 187
+        wins: 0
+    user_standings_2014_2_20:
+        race: '@race_2014_2'
+        user: '@user_10'
+        position: 9
+        points: !!float 170
+        wins: 0
+    user_standings_2014_2_21:
+        race: '@race_2014_2'
+        user: '@user_5'
+        position: 10
+        points: !!float 170
+        wins: 0
+    user_standings_2014_3_12:
+        race: '@race_2014_3'
+        user: '@user_9'
+        position: 1
+        points: !!float 404
+        wins: 0
+    user_standings_2014_3_13:
+        race: '@race_2014_3'
+        user: '@user_4'
+        position: 2
+        points: !!float 373
+        wins: 1
+    user_standings_2014_3_14:
+        race: '@race_2014_3'
+        user: '@user_1'
+        position: 3
+        points: !!float 371
+        wins: 1
+    user_standings_2014_3_15:
+        race: '@race_2014_3'
+        user: '@user_2'
+        position: 4
+        points: !!float 369
+        wins: 1
+    user_standings_2014_3_16:
+        race: '@race_2014_3'
+        user: '@user_3'
+        position: 5
+        points: !!float 350
+        wins: 0
+    user_standings_2014_3_17:
+        race: '@race_2014_3'
+        user: '@user_6'
+        position: 6
+        points: !!float 337
+        wins: 0
+    user_standings_2014_3_18:
+        race: '@race_2014_3'
+        user: '@user_8'
+        position: 7
+        points: !!float 324
+        wins: 0
+    user_standings_2014_3_19:
+        race: '@race_2014_3'
+        user: '@user_7'
+        position: 8
+        points: !!float 311
+        wins: 0
+    user_standings_2014_3_20:
+        race: '@race_2014_3'
+        user: '@user_5'
+        position: 9
+        points: !!float 285
+        wins: 0
+    user_standings_2014_3_21:
+        race: '@race_2014_3'
+        user: '@user_10'
+        position: 10
+        points: !!float 266
+        wins: 0
+    user_standings_2014_4_12:
+        race: '@race_2014_4'
+        user: '@user_1'
+        position: 1
+        points: !!float 540
+        wins: 2
+    user_standings_2014_4_13:
+        race: '@race_2014_4'
+        user: '@user_2'
+        position: 2
+        points: !!float 521
+        wins: 1
+    user_standings_2014_4_14:
+        race: '@race_2014_4'
+        user: '@user_4'
+        position: 3
+        points: !!float 507
+        wins: 1
+    user_standings_2014_4_15:
+        race: '@race_2014_4'
+        user: '@user_3'
+        position: 4
+        points: !!float 505
+        wins: 0
+    user_standings_2014_4_16:
+        race: '@race_2014_4'
+        user: '@user_6'
+        position: 5
+        points: !!float 487
+        wins: 0
+    user_standings_2014_4_17:
+        race: '@race_2014_4'
+        user: '@user_9'
+        position: 6
+        points: !!float 480
+        wins: 0
+    user_standings_2014_4_18:
+        race: '@race_2014_4'
+        user: '@user_7'
+        position: 7
+        points: !!float 432
+        wins: 0
+    user_standings_2014_4_19:
+        race: '@race_2014_4'
+        user: '@user_8'
+        position: 8
+        points: !!float 400
+        wins: 0
+    user_standings_2014_4_20:
+        race: '@race_2014_4'
+        user: '@user_5'
+        position: 9
+        points: !!float 376
+        wins: 0
+    user_standings_2014_4_21:
+        race: '@race_2014_4'
+        user: '@user_10'
+        position: 10
+        points: !!float 342
+        wins: 0
+    user_standings_2014_5_12:
+        race: '@race_2014_5'
+        user: '@user_2'
+        position: 1
+        points: !!float 724
+        wins: 2
+    user_standings_2014_5_13:
+        race: '@race_2014_5'
+        user: '@user_1'
+        position: 2
+        points: !!float 704
+        wins: 2
+    user_standings_2014_5_14:
+        race: '@race_2014_5'
+        user: '@user_4'
+        position: 3
+        points: !!float 666
+        wins: 1
+    user_standings_2014_5_15:
+        race: '@race_2014_5'
+        user: '@user_3'
+        position: 4
+        points: !!float 662
+        wins: 0
+    user_standings_2014_5_16:
+        race: '@race_2014_5'
+        user: '@user_6'
+        position: 5
+        points: !!float 634
+        wins: 0
+    user_standings_2014_5_17:
+        race: '@race_2014_5'
+        user: '@user_9'
+        position: 6
+        points: !!float 609
+        wins: 0
+    user_standings_2014_5_18:
+        race: '@race_2014_5'
+        user: '@user_7'
+        position: 7
+        points: !!float 579
+        wins: 0
+    user_standings_2014_5_19:
+        race: '@race_2014_5'
+        user: '@user_8'
+        position: 8
+        points: !!float 529
+        wins: 0
+    user_standings_2014_5_20:
+        race: '@race_2014_5'
+        user: '@user_5'
+        position: 9
+        points: !!float 520
+        wins: 0
+    user_standings_2014_5_21:
+        race: '@race_2014_5'
+        user: '@user_10'
+        position: 10
+        points: !!float 471
+        wins: 0
+    user_standings_2014_6_12:
+        race: '@race_2014_6'
+        user: '@user_1'
+        position: 1
+        points: !!float 825
+        wins: 3
+    user_standings_2014_6_13:
+        race: '@race_2014_6'
+        user: '@user_2'
+        position: 2
+        points: !!float 808
+        wins: 2
+    user_standings_2014_6_14:
+        race: '@race_2014_6'
+        user: '@user_4'
+        position: 3
+        points: !!float 775
+        wins: 1
+    user_standings_2014_6_15:
+        race: '@race_2014_6'
+        user: '@user_3'
+        position: 4
+        points: !!float 763
+        wins: 0
+    user_standings_2014_6_16:
+        race: '@race_2014_6'
+        user: '@user_6'
+        position: 5
+        points: !!float 733
+        wins: 0
+    user_standings_2014_6_17:
+        race: '@race_2014_6'
+        user: '@user_9'
+        position: 6
+        points: !!float 725
+        wins: 0
+    user_standings_2014_6_18:
+        race: '@race_2014_6'
+        user: '@user_7'
+        position: 7
+        points: !!float 667
+        wins: 0
+    user_standings_2014_6_19:
+        race: '@race_2014_6'
+        user: '@user_5'
+        position: 8
+        points: !!float 622
+        wins: 0
+    user_standings_2014_6_20:
+        race: '@race_2014_6'
+        user: '@user_8'
+        position: 9
+        points: !!float 598
+        wins: 0
+    user_standings_2014_6_21:
+        race: '@race_2014_6'
+        user: '@user_10'
+        position: 10
+        points: !!float 540
+        wins: 0
+    user_standings_2014_7_12:
+        race: '@race_2014_7'
+        user: '@user_1'
+        position: 1
+        points: !!float 944
+        wins: 3
+    user_standings_2014_7_13:
+        race: '@race_2014_7'
+        user: '@user_2'
+        position: 2
+        points: !!float 922
+        wins: 2
+    user_standings_2014_7_14:
+        race: '@race_2014_7'
+        user: '@user_3'
+        position: 3
+        points: !!float 909
+        wins: 1
+    user_standings_2014_7_15:
+        race: '@race_2014_7'
+        user: '@user_4'
+        position: 4
+        points: !!float 887
+        wins: 1
+    user_standings_2014_7_16:
+        race: '@race_2014_7'
+        user: '@user_6'
+        position: 5
+        points: !!float 872
+        wins: 0
+    user_standings_2014_7_17:
+        race: '@race_2014_7'
+        user: '@user_9'
+        position: 6
+        points: !!float 862
+        wins: 0
+    user_standings_2014_7_18:
+        race: '@race_2014_7'
+        user: '@user_7'
+        position: 7
+        points: !!float 787
+        wins: 0
+    user_standings_2014_7_19:
+        race: '@race_2014_7'
+        user: '@user_5'
+        position: 8
+        points: !!float 738
+        wins: 0
+    user_standings_2014_7_20:
+        race: '@race_2014_7'
+        user: '@user_8'
+        position: 9
+        points: !!float 695
+        wins: 0
+    user_standings_2014_7_21:
+        race: '@race_2014_7'
+        user: '@user_10'
+        position: 10
+        points: !!float 637
+        wins: 0
+    user_standings_2014_8_12:
+        race: '@race_2014_8'
+        user: '@user_3'
+        position: 1
+        points: !!float 1110
+        wins: 2
+    user_standings_2014_8_13:
+        race: '@race_2014_8'
+        user: '@user_1'
+        position: 2
+        points: !!float 1090
+        wins: 3
+    user_standings_2014_8_14:
+        race: '@race_2014_8'
+        user: '@user_2'
+        position: 3
+        points: !!float 1054
+        wins: 2
+    user_standings_2014_8_15:
+        race: '@race_2014_8'
+        user: '@user_4'
+        position: 4
+        points: !!float 1044
+        wins: 1
+    user_standings_2014_8_16:
+        race: '@race_2014_8'
+        user: '@user_6'
+        position: 5
+        points: !!float 1000
+        wins: 0
+    user_standings_2014_8_17:
+        race: '@race_2014_8'
+        user: '@user_9'
+        position: 6
+        points: !!float 972
+        wins: 0
+    user_standings_2014_8_18:
+        race: '@race_2014_8'
+        user: '@user_7'
+        position: 7
+        points: !!float 941
+        wins: 0
+    user_standings_2014_8_19:
+        race: '@race_2014_8'
+        user: '@user_5'
+        position: 8
+        points: !!float 863
+        wins: 0
+    user_standings_2014_8_20:
+        race: '@race_2014_8'
+        user: '@user_8'
+        position: 9
+        points: !!float 805
+        wins: 0
+    user_standings_2014_8_21:
+        race: '@race_2014_8'
+        user: '@user_10'
+        position: 10
+        points: !!float 747
+        wins: 0
+    user_standings_2014_9_12:
+        race: '@race_2014_9'
+        user: '@user_3'
+        position: 1
+        points: !!float 1233
+        wins: 2
+    user_standings_2014_9_13:
+        race: '@race_2014_9'
+        user: '@user_1'
+        position: 2
+        points: !!float 1206
+        wins: 3
+    user_standings_2014_9_14:
+        race: '@race_2014_9'
+        user: '@user_2'
+        position: 3
+        points: !!float 1171
+        wins: 2
+    user_standings_2014_9_15:
+        race: '@race_2014_9'
+        user: '@user_4'
+        position: 4
+        points: !!float 1168
+        wins: 2
+    user_standings_2014_9_16:
+        race: '@race_2014_9'
+        user: '@user_6'
+        position: 5
+        points: !!float 1114
+        wins: 0
+    user_standings_2014_9_17:
+        race: '@race_2014_9'
+        user: '@user_9'
+        position: 6
+        points: !!float 1071
+        wins: 0
+    user_standings_2014_9_18:
+        race: '@race_2014_9'
+        user: '@user_7'
+        position: 7
+        points: !!float 1040
+        wins: 0
+    user_standings_2014_9_19:
+        race: '@race_2014_9'
+        user: '@user_5'
+        position: 8
+        points: !!float 984
+        wins: 0
+    user_standings_2014_9_20:
+        race: '@race_2014_9'
+        user: '@user_8'
+        position: 9
+        points: !!float 904
+        wins: 0
+    user_standings_2014_9_21:
+        race: '@race_2014_9'
+        user: '@user_10'
+        position: 10
+        points: !!float 846
+        wins: 0
+    user_standings_2014_10_12:
+        race: '@race_2014_10'
+        user: '@user_3'
+        position: 1
+        points: !!float 1388
+        wins: 2
+    user_standings_2014_10_13:
+        race: '@race_2014_10'
+        user: '@user_1'
+        position: 2
+        points: !!float 1359
+        wins: 3
+    user_standings_2014_10_14:
+        race: '@race_2014_10'
+        user: '@user_4'
+        position: 3
+        points: !!float 1326
+        wins: 3
+    user_standings_2014_10_15:
+        race: '@race_2014_10'
+        user: '@user_2'
+        position: 4
+        points: !!float 1290
+        wins: 2
+    user_standings_2014_10_16:
+        race: '@race_2014_10'
+        user: '@user_6'
+        position: 5
+        points: !!float 1238
+        wins: 0
+    user_standings_2014_10_17:
+        race: '@race_2014_10'
+        user: '@user_9'
+        position: 6
+        points: !!float 1175
+        wins: 0
+    user_standings_2014_10_18:
+        race: '@race_2014_10'
+        user: '@user_7'
+        position: 7
+        points: !!float 1165
+        wins: 0
+    user_standings_2014_10_19:
+        race: '@race_2014_10'
+        user: '@user_5'
+        position: 8
+        points: !!float 1115
+        wins: 0
+    user_standings_2014_10_20:
+        race: '@race_2014_10'
+        user: '@user_8'
+        position: 9
+        points: !!float 1008
+        wins: 0
+    user_standings_2014_10_21:
+        race: '@race_2014_10'
+        user: '@user_10'
+        position: 10
+        points: !!float 950
+        wins: 0
+    user_standings_2014_11_12:
+        race: '@race_2014_11'
+        user: '@user_3'
+        position: 1
+        points: !!float 1507
+        wins: 2
+    user_standings_2014_11_13:
+        race: '@race_2014_11'
+        user: '@user_1'
+        position: 2
+        points: !!float 1468
+        wins: 3
+    user_standings_2014_11_14:
+        race: '@race_2014_11'
+        user: '@user_4'
+        position: 3
+        points: !!float 1443
+        wins: 3
+    user_standings_2014_11_15:
+        race: '@race_2014_11'
+        user: '@user_2'
+        position: 4
+        points: !!float 1402
+        wins: 2
+    user_standings_2014_11_16:
+        race: '@race_2014_11'
+        user: '@user_6'
+        position: 5
+        points: !!float 1345
+        wins: 0
+    user_standings_2014_11_17:
+        race: '@race_2014_11'
+        user: '@user_7'
+        position: 6
+        points: !!float 1306
+        wins: 1
+    user_standings_2014_11_18:
+        race: '@race_2014_11'
+        user: '@user_9'
+        position: 7
+        points: !!float 1266
+        wins: 0
+    user_standings_2014_11_19:
+        race: '@race_2014_11'
+        user: '@user_5'
+        position: 8
+        points: !!float 1221
+        wins: 0
+    user_standings_2014_11_20:
+        race: '@race_2014_11'
+        user: '@user_8'
+        position: 9
+        points: !!float 1099
+        wins: 0
+    user_standings_2014_11_21:
+        race: '@race_2014_11'
+        user: '@user_10'
+        position: 10
+        points: !!float 1041
+        wins: 0
+    user_standings_2014_12_12:
+        race: '@race_2014_12'
+        user: '@user_3'
+        position: 1
+        points: !!float 1602
+        wins: 2
+    user_standings_2014_12_13:
+        race: '@race_2014_12'
+        user: '@user_1'
+        position: 2
+        points: !!float 1589
+        wins: 3
+    user_standings_2014_12_14:
+        race: '@race_2014_12'
+        user: '@user_4'
+        position: 3
+        points: !!float 1542
+        wins: 3
+    user_standings_2014_12_15:
+        race: '@race_2014_12'
+        user: '@user_2'
+        position: 4
+        points: !!float 1536
+        wins: 3
+    user_standings_2014_12_16:
+        race: '@race_2014_12'
+        user: '@user_6'
+        position: 5
+        points: !!float 1472
+        wins: 0
+    user_standings_2014_12_17:
+        race: '@race_2014_12'
+        user: '@user_7'
+        position: 6
+        points: !!float 1404
+        wins: 1
+    user_standings_2014_12_18:
+        race: '@race_2014_12'
+        user: '@user_9'
+        position: 7
+        points: !!float 1346
+        wins: 0
+    user_standings_2014_12_19:
+        race: '@race_2014_12'
+        user: '@user_5'
+        position: 8
+        points: !!float 1337
+        wins: 0
+    user_standings_2014_12_20:
+        race: '@race_2014_12'
+        user: '@user_8'
+        position: 9
+        points: !!float 1179
+        wins: 0
+    user_standings_2014_12_21:
+        race: '@race_2014_12'
+        user: '@user_10'
+        position: 10
+        points: !!float 1121
+        wins: 0
+    user_standings_2014_13_12:
+        race: '@race_2014_13'
+        user: '@user_3'
+        position: 1
+        points: !!float 1743
+        wins: 2
+    user_standings_2014_13_13:
+        race: '@race_2014_13'
+        user: '@user_1'
+        position: 2
+        points: !!float 1739
+        wins: 3
+    user_standings_2014_13_14:
+        race: '@race_2014_13'
+        user: '@user_4'
+        position: 3
+        points: !!float 1698
+        wins: 3
+    user_standings_2014_13_15:
+        race: '@race_2014_13'
+        user: '@user_2'
+        position: 4
+        points: !!float 1678
+        wins: 3
+    user_standings_2014_13_16:
+        race: '@race_2014_13'
+        user: '@user_6'
+        position: 5
+        points: !!float 1629
+        wins: 1
+    user_standings_2014_13_17:
+        race: '@race_2014_13'
+        user: '@user_7'
+        position: 6
+        points: !!float 1538
+        wins: 1
+    user_standings_2014_13_18:
+        race: '@race_2014_13'
+        user: '@user_9'
+        position: 7
+        points: !!float 1465
+        wins: 0
+    user_standings_2014_13_19:
+        race: '@race_2014_13'
+        user: '@user_5'
+        position: 8
+        points: !!float 1456
+        wins: 0
+    user_standings_2014_13_20:
+        race: '@race_2014_13'
+        user: '@user_8'
+        position: 9
+        points: !!float 1298
+        wins: 0
+    user_standings_2014_13_21:
+        race: '@race_2014_13'
+        user: '@user_10'
+        position: 10
+        points: !!float 1240
+        wins: 0
+    user_standings_2014_14_12:
+        race: '@race_2014_14'
+        user: '@user_3'
+        position: 1
+        points: !!float 1881
+        wins: 2
+    user_standings_2014_14_13:
+        race: '@race_2014_14'
+        user: '@user_1'
+        position: 2
+        points: !!float 1865
+        wins: 3
+    user_standings_2014_14_14:
+        race: '@race_2014_14'
+        user: '@user_4'
+        position: 3
+        points: !!float 1819
+        wins: 3
+    user_standings_2014_14_15:
+        race: '@race_2014_14'
+        user: '@user_2'
+        position: 4
+        points: !!float 1799
+        wins: 3
+    user_standings_2014_14_16:
+        race: '@race_2014_14'
+        user: '@user_6'
+        position: 5
+        points: !!float 1761
+        wins: 1
+    user_standings_2014_14_17:
+        race: '@race_2014_14'
+        user: '@user_7'
+        position: 6
+        points: !!float 1679
+        wins: 2
+    user_standings_2014_14_18:
+        race: '@race_2014_14'
+        user: '@user_5'
+        position: 7
+        points: !!float 1594
+        wins: 0
+    user_standings_2014_14_19:
+        race: '@race_2014_14'
+        user: '@user_9'
+        position: 8
+        points: !!float 1571
+        wins: 0
+    user_standings_2014_14_20:
+        race: '@race_2014_14'
+        user: '@user_8'
+        position: 9
+        points: !!float 1404
+        wins: 0
+    user_standings_2014_14_21:
+        race: '@race_2014_14'
+        user: '@user_10'
+        position: 10
+        points: !!float 1346
+        wins: 0
+    user_standings_2014_15_12:
+        race: '@race_2014_15'
+        user: '@user_3'
+        position: 1
+        points: !!float 2003
+        wins: 2
+    user_standings_2014_15_13:
+        race: '@race_2014_15'
+        user: '@user_1'
+        position: 2
+        points: !!float 1977
+        wins: 3
+    user_standings_2014_15_14:
+        race: '@race_2014_15'
+        user: '@user_4'
+        position: 3
+        points: !!float 1950
+        wins: 3
+    user_standings_2014_15_15:
+        race: '@race_2014_15'
+        user: '@user_6'
+        position: 4
+        points: !!float 1893
+        wins: 1
+    user_standings_2014_15_16:
+        race: '@race_2014_15'
+        user: '@user_2'
+        position: 5
+        points: !!float 1892
+        wins: 3
+    user_standings_2014_15_17:
+        race: '@race_2014_15'
+        user: '@user_7'
+        position: 6
+        points: !!float 1811
+        wins: 2
+    user_standings_2014_15_18:
+        race: '@race_2014_15'
+        user: '@user_5'
+        position: 7
+        points: !!float 1732
+        wins: 1
+    user_standings_2014_15_19:
+        race: '@race_2014_15'
+        user: '@user_9'
+        position: 8
+        points: !!float 1649
+        wins: 0
+    user_standings_2014_15_20:
+        race: '@race_2014_15'
+        user: '@user_8'
+        position: 9
+        points: !!float 1482
+        wins: 0
+    user_standings_2014_15_21:
+        race: '@race_2014_15'
+        user: '@user_10'
+        position: 10
+        points: !!float 1424
+        wins: 0
+    user_standings_2014_16_12:
+        race: '@race_2014_16'
+        user: '@user_3'
+        position: 1
+        points: !!float 2186
+        wins: 3
+    user_standings_2014_16_13:
+        race: '@race_2014_16'
+        user: '@user_1'
+        position: 2
+        points: !!float 2152
+        wins: 3
+    user_standings_2014_16_14:
+        race: '@race_2014_16'
+        user: '@user_4'
+        position: 3
+        points: !!float 2097
+        wins: 3
+    user_standings_2014_16_15:
+        race: '@race_2014_16'
+        user: '@user_2'
+        position: 4
+        points: !!float 2036
+        wins: 3
+    user_standings_2014_16_16:
+        race: '@race_2014_16'
+        user: '@user_6'
+        position: 5
+        points: !!float 2035
+        wins: 1
+    user_standings_2014_16_17:
+        race: '@race_2014_16'
+        user: '@user_7'
+        position: 6
+        points: !!float 1975
+        wins: 2
+    user_standings_2014_16_18:
+        race: '@race_2014_16'
+        user: '@user_5'
+        position: 7
+        points: !!float 1856
+        wins: 1
+    user_standings_2014_16_19:
+        race: '@race_2014_16'
+        user: '@user_9'
+        position: 8
+        points: !!float 1758
+        wins: 0
+    user_standings_2014_16_20:
+        race: '@race_2014_16'
+        user: '@user_8'
+        position: 9
+        points: !!float 1591
+        wins: 0
+    user_standings_2014_16_21:
+        race: '@race_2014_16'
+        user: '@user_10'
+        position: 10
+        points: !!float 1533
+        wins: 0
+    user_standings_2014_17_12:
+        race: '@race_2014_17'
+        user: '@user_3'
+        position: 1
+        points: !!float 2334
+        wins: 3
+    user_standings_2014_17_13:
+        race: '@race_2014_17'
+        user: '@user_1'
+        position: 2
+        points: !!float 2294
+        wins: 3
+    user_standings_2014_17_14:
+        race: '@race_2014_17'
+        user: '@user_4'
+        position: 3
+        points: !!float 2273
+        wins: 4
+    user_standings_2014_17_15:
+        race: '@race_2014_17'
+        user: '@user_6'
+        position: 4
+        points: !!float 2172
+        wins: 1
+    user_standings_2014_17_16:
+        race: '@race_2014_17'
+        user: '@user_2'
+        position: 5
+        points: !!float 2158
+        wins: 3
+    user_standings_2014_17_17:
+        race: '@race_2014_17'
+        user: '@user_7'
+        position: 6
+        points: !!float 2117
+        wins: 2
+    user_standings_2014_17_18:
+        race: '@race_2014_17'
+        user: '@user_5'
+        position: 7
+        points: !!float 1963
+        wins: 1
+    user_standings_2014_17_19:
+        race: '@race_2014_17'
+        user: '@user_9'
+        position: 8
+        points: !!float 1865
+        wins: 0
+    user_standings_2014_17_20:
+        race: '@race_2014_17'
+        user: '@user_8'
+        position: 9
+        points: !!float 1698
+        wins: 0
+    user_standings_2014_17_21:
+        race: '@race_2014_17'
+        user: '@user_10'
+        position: 10
+        points: !!float 1640
+        wins: 0
+    user_standings_2014_18_12:
+        race: '@race_2014_18'
+        user: '@user_3'
+        position: 1
+        points: !!float 2486
+        wins: 3
+    user_standings_2014_18_13:
+        race: '@race_2014_18'
+        user: '@user_1'
+        position: 2
+        points: !!float 2440
+        wins: 3
+    user_standings_2014_18_14:
+        race: '@race_2014_18'
+        user: '@user_4'
+        position: 3
+        points: !!float 2422
+        wins: 4
+    user_standings_2014_18_15:
+        race: '@race_2014_18'
+        user: '@user_2'
+        position: 4
+        points: !!float 2326
+        wins: 4
+    user_standings_2014_18_16:
+        race: '@race_2014_18'
+        user: '@user_6'
+        position: 5
+        points: !!float 2319
+        wins: 1
+    user_standings_2014_18_17:
+        race: '@race_2014_18'
+        user: '@user_7'
+        position: 6
+        points: !!float 2267
+        wins: 2
+    user_standings_2014_18_18:
+        race: '@race_2014_18'
+        user: '@user_5'
+        position: 7
+        points: !!float 2094
+        wins: 1
+    user_standings_2014_18_19:
+        race: '@race_2014_18'
+        user: '@user_9'
+        position: 8
+        points: !!float 1996
+        wins: 0
+    user_standings_2014_18_20:
+        race: '@race_2014_18'
+        user: '@user_8'
+        position: 9
+        points: !!float 1829
+        wins: 0
+    user_standings_2014_18_21:
+        race: '@race_2014_18'
+        user: '@user_10'
+        position: 10
+        points: !!float 1771
+        wins: 0
+    user_standings_2014_19_12:
+        race: '@race_2014_19'
+        user: '@user_3'
+        position: 1
+        points: !!float 2618
+        wins: 4
+    user_standings_2014_19_13:
+        race: '@race_2014_19'
+        user: '@user_1'
+        position: 2
+        points: !!float 2566
+        wins: 3
+    user_standings_2014_19_14:
+        race: '@race_2014_19'
+        user: '@user_4'
+        position: 3
+        points: !!float 2542
+        wins: 4
+    user_standings_2014_19_15:
+        race: '@race_2014_19'
+        user: '@user_2'
+        position: 4
+        points: !!float 2456
+        wins: 4
+    user_standings_2014_19_16:
+        race: '@race_2014_19'
+        user: '@user_6'
+        position: 5
+        points: !!float 2416
+        wins: 1
+    user_standings_2014_19_17:
+        race: '@race_2014_19'
+        user: '@user_7'
+        position: 6
+        points: !!float 2387
+        wins: 2
+    user_standings_2014_19_18:
+        race: '@race_2014_19'
+        user: '@user_5'
+        position: 7
+        points: !!float 2176
+        wins: 1
+    user_standings_2014_19_19:
+        race: '@race_2014_19'
+        user: '@user_9'
+        position: 8
+        points: !!float 2078
+        wins: 0
+    user_standings_2014_19_20:
+        race: '@race_2014_19'
+        user: '@user_8'
+        position: 9
+        points: !!float 1911
+        wins: 0
+    user_standings_2014_19_21:
+        race: '@race_2014_19'
+        user: '@user_10'
+        position: 10
+        points: !!float 1853
+        wins: 0

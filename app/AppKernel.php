@@ -15,7 +15,6 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
@@ -27,6 +26,7 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle(),
+            new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle(),
             new AppBundle\AppBundle(),
         );
 
@@ -39,6 +39,8 @@ class AppKernel extends Kernel
 
         if (in_array($this->getEnvironment(), array('test'))) {
             $bundles[] = new Liip\FunctionalTestBundle\LiipFunctionalTestBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
+            $bundles[] = new Hautelook\AliceBundle\HautelookAliceBundle();
         }
 
         return $bundles;

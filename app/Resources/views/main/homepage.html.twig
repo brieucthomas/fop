@@ -8,8 +8,8 @@
         <div id="next-race" class="section section-lg section-inverse section-left">
             <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
             <div class="container">
-                <h1 class="text-concrete text-large">{{ 'homepage.next-race.title'|trans }}</h1>
-                <h2 class="h1" lang="en">
+                <h1 class="text-concrete">{{ 'homepage.next-race.title'|trans }}</h1>
+                <h2 lang="en">
                     <a href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}">
                         <span class="text-emerald">{{ nextRace.season.year }}</span> {{ nextRace.name }}
                     </a>
@@ -43,7 +43,7 @@
     {% if lastRace %}
         <section id="last-race" class="section section-sm bg-clouds section-left">
             <div class="container">
-                <h1 class="text-concrete text-large">{{ 'homepage.previous-race.title'|trans }}</h1>
+                <h1 class="text-concrete text-large">{{ 'homepage.last-race.title'|trans }}</h1>
                 <h2 lang="en" class="h1">
                     <a href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">
                         <span class="text-emerald">{{ lastRace.season.year }}</span> {{ lastRace.name }}
@@ -79,7 +79,7 @@
     {% endif %}
 
     {% if lastRaceWithResults and lastRaceWithResults.season.finished %}
-        <section id="world-champions" class="section bg-orange text-center">
+        <section id="world-champions" class="section text-center">
             <div class="container">
                 <h1>{{ 'homepage.world-champions.title'|trans({ '%year%': lastRaceWithResults.season.year }) }}</h1>
                 <div class="row">

@@ -12,7 +12,6 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\ConstructorStandingsService;
 use AppBundle\Service\ConstructorStandingsServiceInterface;
-use AppBundle\Service\RaceServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
 use BrieucThomas\ErgastClient\Url\Builder\ConstructorStandingsUrlBuilder;
 
@@ -29,20 +28,13 @@ class ConstructorStandingsLoader extends AbstractLoader
     private $constructorStandingsService;
 
     /**
-     * @var RaceServiceInterface
-     */
-    private $raceService;
-
-    /**
      * Constructor.
      *
      * @param ConstructorStandingsServiceInterface $constructorStandingsService
-     * @param RaceServiceInterface                 $raceService
      */
-    public function __construct(ConstructorStandingsServiceInterface $constructorStandingsService, RaceServiceInterface $raceService)
+    public function __construct(ConstructorStandingsServiceInterface $constructorStandingsService)
     {
         $this->constructorStandingsService = $constructorStandingsService;
-        $this->raceService = $raceService;
     }
 
     /**
@@ -69,19 +61,18 @@ class ConstructorStandingsLoader extends AbstractLoader
 
                     $standing = new AppEntity\ConstructorStandings();
                     $standing
+                        ->setRace($race)
                         ->setConstructor($constructors->get($constructorId))
                         ->setPoints($ergastConstructorStanding->getPoints())
                         ->setPosition($ergastConstructorStanding->getPosition())
                         ->setWins($ergastConstructorStanding->getWins())
                     ;
 
-                    $this->raceService->addConstructorStandings($race, $standing);
+                    $this->constructorStandingsService->persist($standing);
                 }
-
-                $this->raceService->persist($race);
             }
         }
 
-        $this->raceService->flush();
+        $this->constructorStandingsService->flush();
     }
 }

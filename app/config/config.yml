@@ -121,18 +121,11 @@ easy_admin:
     entities:
         - AppBundle\Entity\Circuit
         - AppBundle\Entity\Constructor
-        - AppBundle\Entity\ConstructorStandings
         - AppBundle\Entity\Driver
-        - AppBundle\Entity\DriverStandings
         - AppBundle\Entity\FinishingPosition
-        - AppBundle\Entity\FinishingStatus
         - AppBundle\Entity\Prediction
-        - AppBundle\Entity\Qualifying
         - AppBundle\Entity\Race
-        - AppBundle\Entity\Result
         - AppBundle\Entity\ScoringSystem
-        - AppBundle\Entity\ScoringSystemOffset
         - AppBundle\Entity\Season
         - AppBundle\Entity\Team
         - AppBundle\Entity\User
-        - AppBundle\Entity\UserStandings

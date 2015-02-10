@@ -40,6 +40,36 @@ class QualifyingService implements QualifyingServiceInterface
     /**
      * {@inheritdoc}
      */
+    public function save(Qualifying $qualifying)
+    {
+        $this->qualifyingRepository->save($qualifying);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function persist(Qualifying $qualifying)
+    {
+        $this->qualifyingRepository->persist($qualifying);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function flush()
+    {
+        $this->qualifyingRepository->flush();
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function countPolePositionsByDriver($driverId)
     {
         return $this->qualifyingRepository->countPolePositionsByDriver($driverId);

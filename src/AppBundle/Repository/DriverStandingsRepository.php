@@ -10,6 +10,7 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Driver;
+use AppBundle\Entity\DriverStandings;
 use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
 
@@ -20,6 +21,39 @@ use Doctrine\ORM\EntityRepository;
  */
 class DriverStandingsRepository extends EntityRepository implements DriverStandingsRepositoryInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function save(DriverStandings $driverStandings)
+    {
+        $this
+            ->persist($driverStandings)
+            ->flush()
+        ;
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function persist(DriverStandings $driverStandings)
+    {
+        $this->_em->persist($driverStandings);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function flush()
+    {
+        $this->_em->flush();
+
+        return $this;
+    }
+
     /**
      * {@inheritdoc}
      */

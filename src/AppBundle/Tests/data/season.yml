@@ -1,0 +1,10 @@
+AppBundle\Entity\Season:
+    season_2013:
+        __construct: [2013]
+        scoringSystem: '@scoring_system_foo'
+    season_2014:
+        __construct: [2014]
+        scoringSystem: '@scoring_system_foo'
+    season_2015:
+        __construct: [2015]
+        scoringSystem: '@scoring_system_foo'

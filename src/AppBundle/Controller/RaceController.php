@@ -9,11 +9,17 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\FinishingPosition;
+use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
+use AppBundle\Entity\User;
+use AppBundle\Form\PredictionType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * The race controller.
@@ -32,7 +38,55 @@ class RaceController extends Controller
     public function showAction(Race $race)
     {
         return [
-            'race' => $race
+            'race' => $race,
+        ];
+    }
+
+    /**
+     * @Route("/{season}/{round}/predict/{slug}", name="race_prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
+     * @Method({"GET", "POST"})
+     * @Security("has_role('ROLE_USER')")
+     * @Template(":race:predict.html.twig")
+     */
+    public function predictAction(Request $request, Race $race, User $user)
+    {
+        $prediction = $this->get('prediction_repository')->findByRaceAndUser($race, $user);
+
+        if (!$prediction) {
+            $prediction = new Prediction($race, $user);
+            $limit = $race->getSeason()->getScoringSystem()->getLength();
+
+            for ($position = 1; $position <= $limit; $position++) {
+                $finishingPosition = new FinishingPosition();
+                $finishingPosition->setPredictedPosition($position);
+                $prediction->addFinishingPosition($finishingPosition);
+            }
+        }
+
+        $this->denyAccessUnlessGranted('edit', $prediction);
+
+        $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->get('prediction_repository')->save($prediction);
+
+            return $this->redirect(
+                $this->generateUrl(
+                    'race_prediction',
+                    [
+                        'season' => $race->getSeason()->getYear(),
+                        'round'  => $race->getRound(),
+                        'user'   => $user->getSlug(),
+                    ]
+                )
+            );
+        }
+
+        return [
+            'race' => $race,
+            'user' => $user,
+            'form' => $form->createView(),
         ];
     }
 }

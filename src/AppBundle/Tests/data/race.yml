@@ -1,0 +1,343 @@
+AppBundle\Entity\Race:
+    race_2013_1:
+        season: '@season_2013'
+        round: 1
+        name: 'Australian Grand Prix'
+        circuit: '@circuit_albert_park'
+        date: '2013-03-17 06:00:00'
+    race_2013_2:
+        season: '@season_2013'
+        round: 2
+        name: 'Malaysian Grand Prix'
+        circuit: '@circuit_sepang'
+        date: '2013-03-24 08:00:00'
+    race_2013_3:
+        season: '@season_2013'
+        round: 3
+        name: 'Chinese Grand Prix'
+        circuit: '@circuit_shanghai'
+        date: '2013-04-14 07:00:00'
+    race_2013_4:
+        season: '@season_2013'
+        round: 4
+        name: 'Bahrain Grand Prix'
+        circuit: '@circuit_bahrain'
+        date: '2013-04-21 12:00:00'
+    race_2013_5:
+        season: '@season_2013'
+        round: 5
+        name: 'Spanish Grand Prix'
+        circuit: '@circuit_catalunya'
+        date: '2013-05-12 12:00:00'
+    race_2013_6:
+        season: '@season_2013'
+        round: 6
+        name: 'Monaco Grand Prix'
+        circuit: '@circuit_monaco'
+        date: '2013-05-26 12:00:00'
+    race_2013_7:
+        season: '@season_2013'
+        round: 7
+        name: 'Canadian Grand Prix'
+        circuit: '@circuit_villeneuve'
+        date: '2013-06-09 18:00:00'
+    race_2013_8:
+        season: '@season_2013'
+        round: 8
+        name: 'British Grand Prix'
+        circuit: '@circuit_silverstone'
+        date: '2013-06-30 12:00:00'
+    race_2013_9:
+        season: '@season_2013'
+        round: 9
+        name: 'German Grand Prix'
+        circuit: '@circuit_nurburgring'
+        date: '2013-07-07 12:00:00'
+    race_2013_10:
+        season: '@season_2013'
+        round: 10
+        name: 'Hungarian Grand Prix'
+        circuit: '@circuit_hungaroring'
+        date: '2013-07-28 12:00:00'
+    race_2013_11:
+        season: '@season_2013'
+        round: 11
+        name: 'Belgian Grand Prix'
+        circuit: '@circuit_spa'
+        date: '2013-08-25 12:00:00'
+    race_2013_12:
+        season: '@season_2013'
+        round: 12
+        name: 'Italian Grand Prix'
+        circuit: '@circuit_monza'
+        date: '2013-09-08 12:00:00'
+    race_2013_13:
+        season: '@season_2013'
+        round: 13
+        name: 'Singapore Grand Prix'
+        circuit: '@circuit_marina_bay'
+        date: '2013-09-22 12:00:00'
+    race_2013_14:
+        season: '@season_2013'
+        round: 14
+        name: 'Korean Grand Prix'
+        circuit: '@circuit_yeongam'
+        date: '2013-10-06 06:00:00'
+    race_2013_15:
+        season: '@season_2013'
+        round: 15
+        name: 'Japanese Grand Prix'
+        circuit: '@circuit_suzuka'
+        date: '2013-10-13 06:00:00'
+    race_2013_16:
+        season: '@season_2013'
+        round: 16
+        name: 'Indian Grand Prix'
+        circuit: '@circuit_buddh'
+        date: '2013-10-27 09:30:00'
+    race_2013_17:
+        season: '@season_2013'
+        round: 17
+        name: 'Abu Dhabi Grand Prix'
+        circuit: '@circuit_yas_marina'
+        date: '2013-11-03 13:00:00'
+    race_2013_18:
+        season: '@season_2013'
+        round: 18
+        name: 'United States Grand Prix'
+        circuit: '@circuit_americas'
+        date: '2013-11-17 19:00:00'
+    race_2013_19:
+        season: '@season_2013'
+        round: 19
+        name: 'Brazilian Grand Prix'
+        circuit: '@circuit_interlagos'
+        date: '2013-11-24 16:00:00'
+    race_2014_1:
+        season: '@season_2014'
+        round: 1
+        name: 'Australian Grand Prix'
+        circuit: '@circuit_albert_park'
+        date: '2014-03-16 06:00:00'
+    race_2014_2:
+        season: '@season_2014'
+        round: 2
+        name: 'Malaysian Grand Prix'
+        circuit: '@circuit_sepang'
+        date: '2014-03-30 08:00:00'
+    race_2014_3:
+        season: '@season_2014'
+        round: 3
+        name: 'Bahrain Grand Prix'
+        circuit: '@circuit_bahrain'
+        date: '2014-04-06 15:00:00'
+    race_2014_4:
+        season: '@season_2014'
+        round: 4
+        name: 'Chinese Grand Prix'
+        circuit: '@circuit_shanghai'
+        date: '2014-04-20 07:00:00'
+    race_2014_5:
+        season: '@season_2014'
+        round: 5
+        name: 'Spanish Grand Prix'
+        circuit: '@circuit_catalunya'
+        date: '2014-05-11 12:00:00'
+    race_2014_6:
+        season: '@season_2014'
+        round: 6
+        name: 'Monaco Grand Prix'
+        circuit: '@circuit_monaco'
+        date: '2014-05-25 12:00:00'
+    race_2014_7:
+        season: '@season_2014'
+        round: 7
+        name: 'Canadian Grand Prix'
+        circuit: '@circuit_villeneuve'
+        date: '2014-06-08 18:00:00'
+    race_2014_8:
+        season: '@season_2014'
+        round: 8
+        name: 'Austrian Grand Prix'
+        circuit: '@circuit_red_bull_ring'
+        date: '2014-06-22 12:00:00'
+    race_2014_9:
+        season: '@season_2014'
+        round: 9
+        name: 'British Grand Prix'
+        circuit: '@circuit_silverstone'
+        date: '2014-07-06 12:00:00'
+    race_2014_10:
+        season: '@season_2014'
+        round: 10
+        name: 'German Grand Prix'
+        circuit: '@circuit_hockenheimring'
+        date: '2014-07-20 12:00:00'
+    race_2014_11:
+        season: '@season_2014'
+        round: 11
+        name: 'Hungarian Grand Prix'
+        circuit: '@circuit_hungaroring'
+        date: '2014-07-27 12:00:00'
+    race_2014_12:
+        season: '@season_2014'
+        round: 12
+        name: 'Belgian Grand Prix'
+        circuit: '@circuit_spa'
+        date: '2014-08-24 12:00:00'
+    race_2014_13:
+        season: '@season_2014'
+        round: 13
+        name: 'Italian Grand Prix'
+        circuit: '@circuit_monza'
+        date: '2014-09-07 12:00:00'
+    race_2014_14:
+        season: '@season_2014'
+        round: 14
+        name: 'Singapore Grand Prix'
+        circuit: '@circuit_marina_bay'
+        date: '2014-09-21 12:00:00'
+    race_2014_15:
+        season: '@season_2014'
+        round: 15
+        name: 'Japanese Grand Prix'
+        circuit: '@circuit_suzuka'
+        date: '2014-10-05 06:00:00'
+    race_2014_16:
+        season: '@season_2014'
+        round: 16
+        name: 'Russian Grand Prix'
+        circuit: '@circuit_sochi'
+        date: '2014-10-12 11:00:00'
+    race_2014_17:
+        season: '@season_2014'
+        round: 17
+        name: 'United States Grand Prix'
+        circuit: '@circuit_americas'
+        date: '2014-11-02 20:00:00'
+    race_2014_18:
+        season: '@season_2014'
+        round: 18
+        name: 'Brazilian Grand Prix'
+        circuit: '@circuit_interlagos'
+        date: '2014-11-09 16:00:00'
+    race_2014_19:
+        season: '@season_2014'
+        round: 19
+        name: 'Abu Dhabi Grand Prix'
+        circuit: '@circuit_yas_marina'
+        date: '2014-11-23 13:00:00'
+    race_2015_1:
+        season: '@season_2015'
+        round: 1
+        name: 'Australian Grand Prix'
+        circuit: '@circuit_albert_park'
+        date: '2015-03-15 00:00:00'
+    race_2015_2:
+        season: '@season_2015'
+        round: 2
+        name: 'Malaysian Grand Prix'
+        circuit: '@circuit_sepang'
+        date: '2015-03-29 00:00:00'
+    race_2015_3:
+        season: '@season_2015'
+        round: 3
+        name: 'Chinese Grand Prix'
+        circuit: '@circuit_shanghai'
+        date: '2015-04-05 00:00:00'
+    race_2015_4:
+        season: '@season_2015'
+        round: 4
+        name: 'Bahrain Grand Prix'
+        circuit: '@circuit_bahrain'
+        date: '2015-04-19 00:00:00'
+    race_2015_5:
+        season: '@season_2015'
+        round: 5
+        name: 'Spanish Grand Prix'
+        circuit: '@circuit_catalunya'
+        date: '2015-05-10 00:00:00'
+    race_2015_6:
+        season: '@season_2015'
+        round: 6
+        name: 'Monaco Grand Prix'
+        circuit: '@circuit_monaco'
+        date: '2015-05-24 00:00:00'
+    race_2015_7:
+        season: '@season_2015'
+        round: 7
+        name: 'Canadian Grand Prix'
+        circuit: '@circuit_villeneuve'
+        date: '2015-06-07 00:00:00'
+    race_2015_8:
+        season: '@season_2015'
+        round: 8
+        name: 'Austrian Grand Prix'
+        circuit: '@circuit_red_bull_ring'
+        date: '2015-06-21 00:00:00'
+    race_2015_9:
+        season: '@season_2015'
+        round: 9
+        name: 'British Grand Prix'
+        circuit: '@circuit_silverstone'
+        date: '2015-07-05 00:00:00'
+    race_2015_11:
+        season: '@season_2015'
+        round: 11
+        name: 'Hungarian Grand Prix'
+        circuit: '@circuit_hungaroring'
+        date: '2015-07-26 00:00:00'
+    race_2015_12:
+        season: '@season_2015'
+        round: 12
+        name: 'Belgian Grand Prix'
+        circuit: '@circuit_spa'
+        date: '2015-08-23 00:00:00'
+    race_2015_13:
+        season: '@season_2015'
+        round: 13
+        name: 'Italian Grand Prix'
+        circuit: '@circuit_monza'
+        date: '2015-09-06 00:00:00'
+    race_2015_14:
+        season: '@season_2015'
+        round: 14
+        name: 'Singapore Grand Prix'
+        circuit: '@circuit_marina_bay'
+        date: '2015-09-20 00:00:00'
+    race_2015_15:
+        season: '@season_2015'
+        round: 15
+        name: 'Japanese Grand Prix'
+        circuit: '@circuit_suzuka'
+        date: '2015-09-27 00:00:00'
+    race_2015_16:
+        season: '@season_2015'
+        round: 16
+        name: 'Russian Grand Prix'
+        circuit: '@circuit_sochi'
+        date: '2015-10-11 00:00:00'
+    race_2015_17:
+        season: '@season_2015'
+        round: 17
+        name: 'United States Grand Prix'
+        circuit: '@circuit_americas'
+        date: '2015-10-25 00:00:00'
+    race_2015_18:
+        season: '@season_2015'
+        round: 18
+        name: 'Mexican Grand Prix'
+        circuit: '@circuit_rodriguez'
+        date: '2015-11-01 00:00:00'
+    race_2015_19:
+        season: '@season_2015'
+        round: 19
+        name: 'Brazilian Grand Prix'
+        circuit: '@circuit_interlagos'
+        date: '2015-11-15 00:00:00'
+    race_2015_20:
+        season: '@season_2015'
+        round: 20
+        name: 'Abu Dhabi Grand Prix'
+        circuit: '@circuit_yas_marina'
+        date: '2015-11-29 00:00:00'

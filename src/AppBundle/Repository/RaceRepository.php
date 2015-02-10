@@ -28,6 +28,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
         $builder = $this->createQueryBuilder('r');
         $builder
             ->where($builder->expr()->gt('r.date', ':now'))
+            ->andWhere($builder->expr()->eq('r.enabled', true))
             ->setParameter(':now', new \DateTime())
             ->orderBy($builder->expr()->asc('r.date'))
             ->setMaxResults(1)
@@ -45,6 +46,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
         $builder = $this->createQueryBuilder('r');
         $builder
             ->where($builder->expr()->lt('r.date', ':now'))
+            ->andWhere($builder->expr()->eq('r.enabled', true))
             ->setParameter(':now', new \DateTime())
             ->orderBy($builder->expr()->desc('r.date'))
             ->setMaxResults(1)
@@ -63,6 +65,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
         $builder
             ->join('r.results', 'res', Expr\Join::WITH)
             ->where($builder->expr()->lt('r.date', ':now'))
+            ->andWhere($builder->expr()->eq('r.enabled', true))
             ->setParameter(':now', new \DateTime())
             ->orderBy($builder->expr()->desc('r.date'))
             ->setMaxResults(1)

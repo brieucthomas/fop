@@ -261,7 +261,9 @@ class Driver
      */
     public function setBirthDate(\DateTime $birthDate)
     {
-        $this->birthDate = $birthDate;
+        if ($birthDate != $this->birthDate) {
+            $this->birthDate = $birthDate;
+        }
 
         return $this;
     }
@@ -308,5 +310,15 @@ class Driver
     public function getShortName()
     {
         return $this->firstName[0].'. '.$this->lastName;
+    }
+
+    /**
+     * __toString.
+     *
+     * @return string The driver name
+     */
+    public function __toString()
+    {
+        return (string) $this->getName();
     }
 }

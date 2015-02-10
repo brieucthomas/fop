@@ -49,7 +49,7 @@ class FinishingStatus
     /**
      * Constructor.
      *
-     * @param string $label The status label.
+     * @param string $label The finishing status label
      */
     public function __construct($label)
     {

@@ -4,12 +4,12 @@
 
 {% block content %}
     <div class="section section-inverse">
-        <div class="background" style="background-image:url('{{ asset('assets/img/drivers/' ~ driver.slug ~ '.jpg') }}')" aria-hidden="true"></div>
+        <div class="background" style="background-image:url('{{ asset('img/drivers/' ~ driver.slug ~ '.jpg') }}')" aria-hidden="true"></div>
         <div class="container">
             <h1>{{ driver.name }}</h1>
             <ul class="list-highlight">
                 <li id="driver-nationality">
-                    <img class="flag" src="{{ asset('assets/img/flags/' ~ driver.nationality|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ driver.nationality|country }}"/>
+                    <img class="flag" src="{{ asset('img/flags/' ~ driver.nationality|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ driver.nationality|country }}"/>
                 </li>
                 {% if driver.number %}
                     <li id="driver-number" data-hover="tooltip" data-placement="bottom" title="{{ 'driver.number'|trans }}">

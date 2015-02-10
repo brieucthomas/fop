@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 /**
  * The season controller.
  *
- * @Route("/seasons/{year}", requirements={"year" = "\d{4}"})
+ * @Route("/seasons/{year}", requirements={"year" = "\d{4}"}, defaults={"year" = "2015"})
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
@@ -35,7 +35,7 @@ class SeasonController extends Controller
     public function showAction(Season $season)
     {
         return [
-            'season' => $season
+            'season' => $season,
         ];
     }
 
@@ -47,7 +47,7 @@ class SeasonController extends Controller
     public function racesAction(Season $season)
     {
         return [
-            'season' => $season
+            'season' => $season,
         ];
     }
 
@@ -59,7 +59,7 @@ class SeasonController extends Controller
     public function teamsAction(Season $season)
     {
         return [
-            'season' => $season
+            'season' => $season,
         ];
     }
 
@@ -71,7 +71,7 @@ class SeasonController extends Controller
     public function standingsAction(Season $season)
     {
         return [
-            'season' => $season
+            'season' => $season,
         ];
     }
 
@@ -83,7 +83,7 @@ class SeasonController extends Controller
     public function graphsAction(Season $season)
     {
         return [
-            'season' => $season
+            'season' => $season,
         ];
     }
 

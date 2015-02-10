@@ -1,0 +1,136 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Colors
+// --------------------------------------------------
+
+// Color swatches
+$turquoise: 			     #1abc9c;
+$green-sea: 			     #16a085;
+
+$emerald: 				     #2ecc71;
+$nephritis: 			     #27ae60;
+
+$peter-river: 			     #3498db;
+$belize-hole: 			     #2980b9;
+
+$amethyst: 				     #9b59b6;
+$wisteria: 				     #8e44ad;
+
+$wet-asphalt: 			     #34495e;
+$midnight-blue: 		     #2c3e50;
+
+$sun-flower: 			     #f1c40f;
+$orange: 				     #f39c12;
+
+$carrot: 				     #e67e22;
+$pumpkin: 				     #d35400;
+
+$alizarin: 				     #e74c3c;
+$pomegranate: 			     #c0392b;
+
+$clouds: 				     #ecf0f1;
+$silver: 				     #bdc3c7;
+
+$concrete: 				     #95a5a6;
+$asbestos: 				     #7f8c8d;
+
+// Grays
+$gray:                       $concrete;
+$gray-light:                 $silver;
+$inverse:                    #fff;
+
+// Brand colors
+$brand-primary:              $alizarin;
+$brand-secondary:            $turquoise;
+$brand-success:              $emerald;
+$brand-warning:              $sun-flower;
+$brand-danger:               $pomegranate;
+$brand-info:                 $peter-river;
+
+
+// Scaffolding
+// --------------------------------------------------
+
+$text-color:                 $brand-primary;
+
+$link-color:                 $green-sea;
+$link-hover-color:           $turquoise;
+$link-hover-decoration:      none;
+
+
+// Typography
+// -------------------------
+
+$font-family-sans-serif:  "Conduit", Helvetica, Arial, sans-serif !default;
+
+$font-size-small:         18px;
+$font-size-base:          22px;
+$font-size-large:         28px;
+
+$font-size-h1:            floor(($font-size-base * 3.6)) !default; // ~79px
+
+
+// Iconography
+// --------------------------------------------------
+
+$icon-font-path:             "/vendor/bootstrap/fonts/";
+
+
+// Buttons
+// --------------------------------------------------
+
+$btn-default-color:          $inverse;
+$btn-default-bg:             $gray-light;
+$btn-hover-bg:               mix($gray-light, #fff, 80%);
+$btn-active-bg:              mix($gray-light, #000, 85%);
+
+$btn-primary-hover-bg:       mix($brand-secondary, #fff, 80%);
+$btn-primary-active-bg:      mix($brand-secondary, #000, 85%);
+
+$btn-info-hover-bg:          mix($brand-info, #fff, 80%);
+$btn-info-active-bg:         mix($brand-info, #000, 85%);
+
+$btn-success-hover-bg:       mix($brand-success, #fff, 80%);
+$btn-success-active-bg:      mix($brand-success, #000, 85%);
+
+$btn-danger-hover-bg:        mix($brand-danger, #fff, 80%);
+$btn-danger-active-bg:       mix($brand-danger, #000, 85%);
+
+$btn-warning-hover-bg:       overlay($brand-warning, darken(#fff, 37.5%));
+$btn-warning-active-bg:      mix($brand-warning, #000, 85%);
+
+$btn-inverse-hover-bg:       overlay($brand-primary, darken(#fff, 37.5%));
+$btn-inverse-active-bg:      mix($brand-primary, #000, 85%);
+
+$btn-link-disabled-color:    $gray-light;
+
+
+// Form states and alerts
+// --------------------------------------------------
+
+$state-success-text:          $brand-success;
+$state-success-bg:            #dff0d8;
+$state-success-border:        darken(adjust-hue($state-success-bg, -10), 5%);
+
+$state-info-text:             $brand-info;
+$state-info-bg:               #d9edf7;
+$state-info-border:           darken(adjust-hue($state-info-bg, -10), 7%);
+
+$state-warning-text:          $brand-warning;
+$state-warning-bg:            #fcf8e3;
+$state-warning-border:        darken(adjust-hue($state-warning-bg, -10), 5%);
+
+$state-danger-text:           $brand-danger;
+$state-danger-bg:             #f2dede;
+$state-danger-border:         darken(adjust-hue($state-danger-bg, -10), 5%);
+
+
+// Type
+// --------------------------------------------------
+
+$text-muted:                  $gray-light;
+$headings-small-color:        mix($brand-primary, $inverse, 12%);
+$page-header-border-color:    mix($brand-primary, $inverse, 12%);
