@@ -9,10 +9,11 @@ var jpegtran = require('imagemin-jpegtran');
 var svgo = require('imagemin-svgo');
 
 var paths = {
-    sass: ['app/Resources/assets/sass/**/*.scss'],
-    js:   ['app/Resources/assets/js/**/*.js'],
-    img:  ['app/Resources/assets/img/**/*'],
-    dist: 'web/assets'
+    sass:  ['app/Resources/assets/sass/**/*.scss'],
+    js:    ['app/Resources/assets/js/**/*.js'],
+    img:   ['app/Resources/assets/img/**/*'],
+    fonts: ['app/Resources/assets/fonts/**/*'],
+    dist:  'web/assets'
 };
 
 gulp.task('clean', function (cb) {
@@ -45,6 +46,11 @@ gulp.task('img', ['clean'], function () {
         .pipe(gulp.dest(paths.dist + '/img'));
 });
 
+gulp.task('fonts', ['clean'], function () {
+    return gulp.src(paths.fonts)
+        .pipe(gulp.dest(paths.dist + '/fonts'));
+});
+
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['css'])
         .on('change', function (evt) {
@@ -54,4 +60,4 @@ gulp.task('watch', function () {
         });
 });
 
-gulp.task('default', ['css', 'js', 'img']);
+gulp.task('default', ['css', 'js', 'img', 'fonts']);
