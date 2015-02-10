@@ -9,7 +9,7 @@
 
 namespace AppBundle\Tests;
 
-class UrlTest extends WebTestCase
+class SmokeTest extends WebTestCase
 {
     /**
      * @dataProvider provideSuccessUrls

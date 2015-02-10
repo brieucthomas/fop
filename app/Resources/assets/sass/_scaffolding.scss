@@ -8,13 +8,57 @@ body {
 
 
 
+/*
+ * Main navigation
+ *
+ * Turn the `.navbar` at the top of the docs purple.
+ */
+
+.bs-docs-nav {
+  margin-bottom: 0;
+  background-color: transparent;
+  border-bottom: 0;
+}
+.bs-home-nav .bs-nav-b {
+  display: none;
+}
+.bs-docs-nav .navbar-brand,
+.bs-docs-nav .navbar-nav > li > a {
+  font-weight: 500;
+  color: $gray-light;
+}
+.bs-docs-nav .navbar-nav > li > a:hover,
+.bs-docs-nav .navbar-nav > .active > a,
+.bs-docs-nav .navbar-nav > .active > a:hover {
+  color: $gray-darker;
+  background-color: transparent;
+}
+.bs-docs-nav .navbar-toggle .icon-bar {
+  background-color: #563d7c;
+}
+.bs-docs-nav .navbar-header .navbar-toggle {
+  border-color: $gray-lighter;
+}
+.bs-docs-nav .navbar-header .navbar-toggle:hover,
+.bs-docs-nav .navbar-header .navbar-toggle:focus {
+  background-color: transparent;
+  border-color: #f9f9f9;
+}
+
+
+
+
+
+
+
+
 #site-footer {
   margin-top: 20px;
   text-align: center;
   font-size: $font-size-small;
-  border-top: 1px solid $gray-lighter;
 
   > .container {
+    border-top: 1px solid $gray-lighter;
     padding-top: ($padding-large-vertical*2);
     padding-bottom: ($padding-large-vertical*2);
   }
