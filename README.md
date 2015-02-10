@@ -1,7 +1,8 @@
 # FOP
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/brieucthomas/fop)
 [![Build Status](https://img.shields.io/travis/brieucthomas/fop/master.svg?style=flat-square)](https://travis-ci.org/brieucthomas/fop)
+[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/brieucthomas/fop/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/brieucthomas/fop/?branch=master)
+[![Code Quality](http://img.shields.io/scrutinizer/g/brieucthomas/fop/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/brieucthomas/fop/?branch=master)
 
 ## Install
 
