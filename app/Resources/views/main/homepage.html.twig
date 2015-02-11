@@ -4,4 +4,17 @@
 
 {% block content %}
 
+    {% if nextRace %}
+        <section id="next-race" class="section bg-wet-asphalt text-white">
+            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
+            <div class="container">
+                <h1 class="section-heading">{{ 'homepage.next-race.title'|trans }}</h1>
+                <p class="section-description" lang="en">{{ nextRace.season.year }} {{ nextRace.name }}</p>
+                <h2>{{ 'homepage.next-race.remaining_time'|trans }}</h2>
+                <p id="next-race-remaining-time" role="timer" data-date="{{ nextRace.date.timestamp*1000 }}" data-hover="tooltip" data-placement="bottom" data-format="%D:%H:%M:%S" title="{{ 'homepage.next-race.remaining_time'|trans }}"></p>
+                <a href="{{ path('homepage') }}" class="btn btn-primary">Predict now</a>
+            </div>
+        </section>
+    {% endif %}
+
 {% endblock %}
