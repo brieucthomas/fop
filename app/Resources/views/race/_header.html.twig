@@ -1,0 +1,31 @@
+<div class="section section-inverse">
+    <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ race.circuit.slug ~ '.jpg') }}')"></div>
+    <div class="container">
+        <h1 lang="en"><span class="text-primary">{{ race.season.year }}</span> {{ race.name }}</h1>
+        <ul class="list-highlight">
+            <li id="next-race-country">
+                <img class="flag" src="{{ asset('assets/img/flags/' ~ race.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ race.circuit.country|country }}"/>
+            </li>
+            <li id="next-race-round">
+                <span class="bg-concrete">{{ 'race.round'|trans }}</span>
+                <span class="bg-silver">{{ race.round }}</span>
+            </li>
+            <li id="next-race-date">
+                <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'race.date'|trans }}"></span></span>
+                <span class="bg-green-sea">{{ race.date|format_date }} {{ race.date|format_time }}</span>
+            </li>
+            {% if race.hasResults %}
+                <li id="last-race-winner">
+                    <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'race.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'race.winner'|trans }}"></span></span>
+                    <span class="bg-sun-flower">{{ race.results.first.team.driver.shortName }}</span>
+                </li>
+            {% endif %}
+            {% if race.hasResults and race.hasPredictions %}
+                <li id="last-race-winner">
+                    <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'race.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'race.winner'|trans }}"></span></span>
+                    <span class="bg-sun-flower">{{ race.predictions.first.user.username }}</span>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

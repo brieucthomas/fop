@@ -3,17 +3,55 @@
 {% set module = 'app/race/predict' %}
 
 {% block content %}
+    {% include ':race:_header.html.twig' %}
+
     <div class="container">
-        <h1>{{ user.username }}</h1>
+        <div class="row">
+            <div class="col-md-8">
+                <h2>{{ user.username }} Prediction</h2>
 
-        {{ form_start(form) }}
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>POS.</th>
+                            <th>Driver</th>
+                            <th>Constructor</th>
+                            <th>Grid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for team in race.season.teams %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td>{{ team.driver.shortName }}</td>
+                                <td>{{ team.constructor.name }}</td>
+                                <td></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
 
-        {{ form_widget(form) }}
-
-        <ol id="list-teams"></ol>
-        <button type="submit" class="btn btn-success">{{ 'submit' }}</button>
-        {{ form_end(form) }}
-
+                {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <button type="submit" class="btn btn-success">{{ 'submit' }}</button>
+                {{ form_end(form) }}
+            </div>
+            <div id="qualifying" class="col-md-4">
+                <h2>Qualifications</h2>
+                {% if race.hasQUalifying %}
+                    <ol>
+                        {% for qualifying in race.qualifying %}
+                            <li data-team-id="{{ qualifying.team.id }}">
+                                <span>{{ qualifying.team.driver.shortName }}</span>
+                                <span class="text-muted">{{ qualifying.team.constructor.name }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                {% else %}
+                    N/A
+                {% endif %}
+            </div>
+        </div>
 
     </div>
 {% endblock %}

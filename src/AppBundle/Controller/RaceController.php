@@ -68,6 +68,8 @@ class RaceController extends Controller
         $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
         $form->handleRequest($request);
 
+        $teams = $this->get('team_repository')->findByYear($race->getSeason()->getYear());
+
         if ($form->isSubmitted() && $form->isValid()) {
             $this->get('prediction_repository')->save($prediction);
 
@@ -77,7 +79,7 @@ class RaceController extends Controller
                     [
                         'season' => $race->getSeason()->getYear(),
                         'round'  => $race->getRound(),
-                        'user'   => $user->getSlug(),
+                        'slug'   => $user->getSlug(),
                     ]
                 )
             );

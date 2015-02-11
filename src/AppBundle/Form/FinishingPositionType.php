@@ -65,6 +65,6 @@ class FinishingPositionType extends AbstractType
      */
     public function getName()
     {
-        return 'prediction_item';
+        return 'finishing_position';
     }
 }
