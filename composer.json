@@ -21,6 +21,7 @@
         "sensio/distribution-bundle": "~3.0.12",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
+        "roave/security-advisories": "dev-master",
         "stof/doctrine-extensions-bundle": "~1.1",
         "sonata-project/intl-bundle": "~2.2",
         "jms/i18n-routing-bundle": "~1.1",
