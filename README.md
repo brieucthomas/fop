@@ -11,7 +11,6 @@
 ``` bash 
 $ bin/console doctrine:database:create
 $ bin/console doctrine:schema:update --force
-$ bin/console doctrine:fixtures:load --no-interaction
 ```
 
 ### Assets
@@ -50,5 +49,6 @@ $ bin/console translation:extract --config=app
 ## Heroku
 
 ``` bash
-heroku run bin/console doctrine:schema:create
+$ heroku run bin/console doctrine:schema:create
+$ heroku run bin/console doctrine:schema:update --force
 ```
