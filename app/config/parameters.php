@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_ENV['BOOTSTRAP_CLEAR_CACHE_ENV'])) {
+if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
     $url = parse_url($_ENV['CLEARDB_DATABASE_URL']);
 
     $container->setParameter('database_host', $url['host']);
@@ -10,3 +10,6 @@ if (isset($_ENV['BOOTSTRAP_CLEAR_CACHE_ENV'])) {
     $container->setParameter('database_password', $url['pass']);
 }
 
+if (isset($_ENV['SYMFONY_SECRET'])) {
+    $container->setParameter('secret', $_ENV['SYMFONY_SECRET']);
+}
