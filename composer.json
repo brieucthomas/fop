@@ -4,9 +4,9 @@
     "type": "project",
     "description": "Another Formula One Prediction Game",
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "": "src/",
-            "SymfonyStandard": "app/"
+            "SymfonyStandard\\": "app/"
         }
     },
     "require": {
