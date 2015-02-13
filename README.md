@@ -45,3 +45,10 @@ $ bin/console translation:extract --config=app
 ```
 <base_url>/_trans
 ```
+
+
+## Heroku
+
+``` bash
+heroku run bin/console doctrine:schema:create
+```
