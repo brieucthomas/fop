@@ -1,7 +1,8 @@
 {
     "name": "fop",
+    "private": true,
     "engines": {
-        "node": "~0.10"
+        "node": "~0.10.21"
     },
     "dependencies": {
         "bower": "~1.3",
