@@ -15,8 +15,8 @@ if (isset($_ENV['POSTMARK_SMTP_SERVER'])) {
     $container->setParameter('mailer_host', $_ENV['POSTMARK_SMTP_SERVER']);
 }
 
-if (isset($_ENV['POSTMARK_API_TOKEN'])) {
-    $container->setParameter('postmark_token', $_ENV['POSTMARK_API_TOKEN']);
+if (isset($_ENV['POSTMARK_API_KEY'])) {
+    $container->setParameter('postmark_token', $_ENV['POSTMARK_API_KEY']);
 }
 
 if (isset($_ENV['SYMFONY_SECRET'])) {
