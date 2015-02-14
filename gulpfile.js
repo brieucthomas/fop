@@ -59,14 +59,6 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(paths.dist + '/fonts'));
 });
 
-gulp.task('assetic:dump', function (cb) {
-    return exec('bin/console assetic:dump', function (err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
-        cb(err);
-    });
-});
-
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['css'])
         .on('change', function (evt) {
@@ -78,4 +70,4 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['clean', 'css', 'js', 'img', 'fonts']);
 
-gulp.task('heroku:production', ['clean', 'css', 'js', 'img', 'fonts', 'assetic:dump']);
+gulp.task('heroku:production', []);
