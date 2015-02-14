@@ -9,6 +9,8 @@ imports:
 parameters:
     locale: en
     locales: [fr, en]
+    app_name: "FOP"
+    mail_noreply: "noreply@fop.com"
 
 framework:
     #esi:             ~
@@ -114,6 +116,12 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AppBundle\Entity\User
+    registration:
+        confirmation:
+            enabled:    true
+    from_email:
+        address:        "%mail_noreply%"
+        sender_name:    "%app_name%"
 
 # Gravatar Configuration
 ornicar_gravatar: ~
