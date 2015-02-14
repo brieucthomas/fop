@@ -11,15 +11,12 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
 }
 
 if (isset($_ENV['POSTMARK_SMTP_SERVER'])) {
+    $container->setParameter('mailer_transport', 'swift_transport.postmark');
     $container->setParameter('mailer_host', $_ENV['POSTMARK_SMTP_SERVER']);
 }
 
 if (isset($_ENV['POSTMARK_API_TOKEN'])) {
-    $container->setParameter('mailer_host', $_ENV['POSTMARK_API_TOKEN']);
-}
-
-if (isset($_ENV['POSTMARK_INBOUND_ADDRESS'])) {
-    $container->setParameter('mailer_host', $_ENV['POSTMARK_INBOUND_ADDRESS']);
+    $container->setParameter('postmark_token', $_ENV['POSTMARK_API_TOKEN']);
 }
 
 if (isset($_ENV['SYMFONY_SECRET'])) {
