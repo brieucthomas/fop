@@ -10,6 +10,23 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
     $container->setParameter('database_password', $url['pass']);
 }
 
+if (isset($_ENV['POSTMARK_SMTP_SERVER'])) {
+    $container->setParameter('mailer_host', $_ENV['POSTMARK_SMTP_SERVER']);
+}
+
+if (isset($_ENV['POSTMARK_API_TOKEN'])) {
+    $container->setParameter('secret', $_ENV['POSTMARK_API_TOKEN']);
+}
+
+if (isset($_ENV['POSTMARK_INBOUND_ADDRESS'])) {
+    $container->setParameter('secret', $_ENV['POSTMARK_INBOUND_ADDRESS']);
+}
+
 if (isset($_ENV['SYMFONY_SECRET'])) {
     $container->setParameter('secret', $_ENV['SYMFONY_SECRET']);
 }
+
+if (isset($_ENV['SYMFONY_SECRET'])) {
+    $container->setParameter('secret', $_ENV['SYMFONY_SECRET']);
+}
+

@@ -1,13 +1,21 @@
 var gulp = require('gulp');
+var exec = require('child_process').exec;
+var del = require('del');
 var sass = require('gulp-sass');
 var mincss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
-var del = require('del');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var jpegtran = require('imagemin-jpegtran');
 var svgo = require('imagemin-svgo');
 
+gulp.task('task', function (cb) {
+    exec('ping localhost', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+})
 var paths = {
     sass:  ['app/Resources/assets/sass/**/*.scss'],
     js:    ['app/Resources/assets/js/**/*.js'],
@@ -51,6 +59,14 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(paths.dist + '/fonts'));
 });
 
+gulp.task('assetic:dump', function (cb) {
+    return exec('bin/console assetic:dump', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
+
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['css'])
         .on('change', function (evt) {
@@ -61,3 +77,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['clean', 'css', 'js', 'img', 'fonts']);
+
+gulp.task('heroku:production', ['clean', 'css', 'js', 'img', 'fonts', 'assetic:dump']);
