@@ -33,7 +33,6 @@
         "ornicar/gravatar-bundle" : "~1.1",
         "knplabs/knp-menu-bundle": "~2.0",
         "javiereguiluz/easyadmin-bundle": "~1.0",
-        "coresphere/console-bundle": "~0.1",
         "brieucthomas/ergast-client": "~1.0"
     },
     "require-dev": {
