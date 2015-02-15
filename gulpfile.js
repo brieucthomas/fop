@@ -70,4 +70,4 @@ gulp.task('watch', function () {
 
 gulp.task('default', ['clean', 'css', 'js', 'img', 'fonts']);
 
-gulp.task('heroku:production', []);
+gulp.task('heroku:production', ['clean', 'css', 'js', 'img', 'fonts']);
