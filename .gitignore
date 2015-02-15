@@ -1,7 +1,6 @@
 /web/vendor/
 /web/bundles/
 /web/assets/
-/web/css/
 /app/config/parameters.yml
 /var/bootstrap.php.cache
 /var/SymfonyRequirements.php
