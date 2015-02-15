@@ -14,7 +14,7 @@ services:
     # Mailer
     swift_transport.postmark:
         class: Openbuildings\Postmark\Swift_PostmarkTransport
-        arguments: ["%postmark_token%"]
+        arguments: ["%mailer_token%"]
 
     # Utils
     country:
