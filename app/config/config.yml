@@ -9,6 +9,7 @@ imports:
 parameters:
     locale: en
     locales: [fr, en]
+    database_table_prefix: fop_
     app_name: "FOP"
     mail_noreply: "noreply@fop.com"
 

@@ -210,6 +210,11 @@ services:
         arguments: ['@logger']
         tags:
             - { name: kernel.event_listener, event: console.exception }
+    table_prefix_listener:
+        class: AppBundle\Listener\TablePrefixListener
+        arguments: [%database_table_prefix%]
+        tags:
+            - { name: doctrine.event_listener, event: loadClassMetadata }
 
     # Ergast
     ergast_http_adapter:
