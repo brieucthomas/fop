@@ -97,9 +97,12 @@ class TeamLoader extends AbstractLoader
                     ->setNumber($ergastDriver->getNumber())
                     ->setFirstName($ergastDriver->getFirstName())
                     ->setLastName($ergastDriver->getLastName())
-                    ->setBirthDate($ergastDriver->getBirthDate())
                     ->setNationality($this->nationality->getCodeByName($ergastDriver->getNationality()))
                 ;
+
+                if ($ergastDriver->getBirthDate()->format('Y') > 0) {
+                    $driver->setBirthDate($ergastDriver->getBirthDate());
+                }
 
                 $team = $season->getTeamByDriverAndConstructor($driver->getSlug(), $constructor->getSlug());
 

@@ -94,7 +94,7 @@ class Driver
     /**
      * The driver date of birth.
      *
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      * @Assert\NotBlank
      * @Assert\Date
      *
@@ -259,7 +259,7 @@ class Driver
      *
      * @return $this
      */
-    public function setBirthDate(\DateTime $birthDate)
+    public function setBirthDate(\DateTime $birthDate = null)
     {
         if ($birthDate != $this->birthDate) {
             $this->birthDate = $birthDate;
