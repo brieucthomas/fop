@@ -12,7 +12,3 @@ if (isset($_ENV['SYMFONY_SECRET'])) {
     $container->setParameter('secret', $_ENV['SYMFONY_SECRET']);
 }
 
-if (isset($_ENV['SYMFONY_SECRET'])) {
-    $container->setParameter('secret', $_ENV['SYMFONY_SECRET']);
-}
-
