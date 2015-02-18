@@ -8,6 +8,22 @@ if (isset($_ENV['DATABASE_URL']) && (false !== $url = parse_url($_ENV['DATABASE_
     $container->setParameter('database_password', $url['pass']);
 }
 
+if (isset($_ENV['MAILER_HOST'])) {
+    $container->setParameter('mailer_host', $_ENV['MAILER_HOST']);
+}
+
+if (isset($_ENV['MAILER_PORT'])) {
+    $container->setParameter('mailer_port', $_ENV['MAILER_PORT']);
+}
+
+if (isset($_ENV['MAILER_USER'])) {
+    $container->setParameter('mailer_user', $_ENV['MAILER_USER']);
+}
+
+if (isset($_ENV['MAILER_PASSWORD'])) {
+    $container->setParameter('mailer_password', $_ENV['MAILER_PASSWORD']);
+}
+
 if (isset($_ENV['SYMFONY_SECRET'])) {
     $container->setParameter('secret', $_ENV['SYMFONY_SECRET']);
 }

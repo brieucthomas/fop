@@ -11,11 +11,6 @@ services:
         tags:
             - { name: security.voter }
 
-    # Mailer
-    swift_transport.postmark:
-        class: Openbuildings\Postmark\Swift_PostmarkTransport
-        arguments: ["%mailer_token%"]
-
     # Utils
     country:
         class: AppBundle\Utils\Country
