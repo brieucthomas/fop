@@ -32,7 +32,7 @@ class FinishingPosition
      * The prediction identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      *
      * @var int
@@ -85,13 +85,12 @@ class FinishingPosition
     /**
      * The points.
      *
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer", nullable=true)
      * @Assert\GreaterThanOrEqual(0)
      *
      * @var int
      */
-    protected $points = 0;
+    protected $points;
 
     /**
      * Return the identifier identifier.

@@ -34,7 +34,7 @@ class Prediction
      * The prediction identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
      *
      * @var int
@@ -66,24 +66,22 @@ class Prediction
     /**
      * The prediction position.
      *
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer", nullable=true)
      * @Assert\GreaterThanOrEqual(value = 0)
      *
      * @var int
      */
-    protected $position = 0;
+    protected $position;
 
     /**
      * The prediction points.
      *
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank
+     * @ORM\Column(type="integer", nullable=true)
      * @Assert\GreaterThanOrEqual(value = 0)
      *
      * @var int
      */
-    protected $points = 0;
+    protected $points;
 
     /**
      * The prediction status.
