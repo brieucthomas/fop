@@ -121,9 +121,6 @@ fos_user:
     registration:
         confirmation:
             enabled:    true
-    from_email:
-        address:        "%mail_noreply%"
-        sender_name:    "%app_name%"
 
 # Gravatar Configuration
 ornicar_gravatar: ~
