@@ -23,9 +23,9 @@ class TablePrefixListener
         $this->prefix = (string) $prefix;
     }
 
-    public function loadClassMetadata(LoadClassMetadataEventArgs $eventArgs)
+    public function loadClassMetadata(LoadClassMetadataEventArgs $args)
     {
-        $classMetadata = $eventArgs->getClassMetadata();
+        $classMetadata = $args->getClassMetadata();
         $classMetadata->setTableName($this->prefix . $classMetadata->getTableName());
         foreach ($classMetadata->getAssociationMappings() as $fieldName => $mapping) {
             if ($mapping['type'] == \Doctrine\ORM\Mapping\ClassMetadataInfo::MANY_TO_MANY) {

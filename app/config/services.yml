@@ -210,6 +210,11 @@ services:
         arguments: ["%database_prefix%"]
         tags:
             - { name: doctrine.event_listener, event: loadClassMetadata }
+    sequence_prefix_listener:
+        class: AppBundle\Listener\SequencePrefixListener
+        arguments: ["%database_prefix%"]
+        tags:
+            - { name: doctrine.event_listener, event: loadClassMetadata }
 
     # Ergast
     ergast_http_adapter:
