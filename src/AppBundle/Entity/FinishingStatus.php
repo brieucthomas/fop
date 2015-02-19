@@ -28,7 +28,7 @@ class FinishingStatus
      * The finishing status identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      * @ORM\Column(type="integer")
      *
      * @var int

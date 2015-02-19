@@ -30,7 +30,7 @@ class Circuit
      * The circuit identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      * @ORM\Column(type="integer")
      *
      * @var int
