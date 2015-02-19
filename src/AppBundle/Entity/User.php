@@ -29,7 +29,7 @@ class User extends BaseUser
      * The user identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      *
      * @var int

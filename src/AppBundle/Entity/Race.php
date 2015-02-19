@@ -36,7 +36,7 @@ class Race
      * The race identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="SEQUENCE")
+     * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      *
      * @var int
