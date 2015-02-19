@@ -32,7 +32,7 @@ class FinishingPosition
      * The prediction identifier.
      *
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="SEQUENCE")
      * @ORM\Column(type="integer")
      *
      * @var int

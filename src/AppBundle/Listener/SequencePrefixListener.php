@@ -33,7 +33,6 @@ class SequencePrefixListener
         if ($classMetadata->isIdGeneratorSequence()) {
             $newDefinition = $classMetadata->sequenceGeneratorDefinition;
             $newDefinition['sequenceName'] = $this->prefix . $newDefinition['sequenceName'];
-
             $classMetadata->setSequenceGeneratorDefinition($newDefinition);
             $em = $args->getEntityManager();
             if (isset($classMetadata->idGenerator)) {
