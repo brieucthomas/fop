@@ -121,7 +121,9 @@ fos_user:
     registration:
         confirmation:
             enabled:    true
-
+    service:
+            mailer: fos_user.mailer.twig_swift
+            
 # Gravatar Configuration
 ornicar_gravatar: ~
 
