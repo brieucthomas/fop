@@ -23,6 +23,7 @@ class MainController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     *
      * @Method({"GET"})
      * @Template("main/homepage.html.twig")
      */

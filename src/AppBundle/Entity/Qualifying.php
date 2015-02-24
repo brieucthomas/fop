@@ -18,6 +18,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * Cause of shared drives, a position can contains multiple drivers
  * and a driver can have multiple results cause of shared drives.
+ *
  * @see http://en.wikipedia.org/wiki/1960_Argentine_Grand_Prix
  *
  * @ORM\Entity(repositoryClass="AppBundle\Repository\QualifyingRepository")

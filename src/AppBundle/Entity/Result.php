@@ -18,6 +18,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * Cause of shared drives, a position can contains multiple drivers
  * and a driver can have multiple results cause of shared drives.
+ *
  * @see http://en.wikipedia.org/wiki/1960_Argentine_Grand_Prix
  *
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ResultRepository")
@@ -215,7 +216,7 @@ class Result
     }
 
     /**
-     * Get grid
+     * Get grid.
      *
      * @return integer
      */
@@ -225,9 +226,10 @@ class Result
     }
 
     /**
-     * Set grid
+     * Set grid.
      *
-     * @param  integer $grid
+     * @param integer $grid
+     *
      * @return $this
      */
     public function setGrid($grid)
@@ -238,7 +240,7 @@ class Result
     }
 
     /**
-     * Get position
+     * Get position.
      *
      * @return integer
      */
@@ -248,7 +250,7 @@ class Result
     }
 
     /**
-     * Set position
+     * Set position.
      *
      * @param integer $position
      *
@@ -262,7 +264,7 @@ class Result
     }
 
     /**
-     * Get points
+     * Get points.
      *
      * @return float
      */
@@ -272,9 +274,10 @@ class Result
     }
 
     /**
-     * Set points
+     * Set points.
      *
-     * @param  float $points
+     * @param float $points
+     *
      * @return $this
      */
     public function setPoints($points)
@@ -285,7 +288,7 @@ class Result
     }
 
     /**
-     * Get laps
+     * Get laps.
      *
      * @return integer
      */
@@ -295,9 +298,10 @@ class Result
     }
 
     /**
-     * Set laps
+     * Set laps.
      *
-     * @param  integer $laps
+     * @param integer $laps
+     *
      * @return $this
      */
     public function setLaps($laps)
@@ -308,7 +312,7 @@ class Result
     }
 
     /**
-     * Get time
+     * Get time.
      *
      * @return string
      */
@@ -318,7 +322,7 @@ class Result
     }
 
     /**
-     * Set time
+     * Set time.
      *
      * @param string $time
      *
@@ -332,7 +336,7 @@ class Result
     }
 
     /**
-     * Get milliseconds
+     * Get milliseconds.
      *
      * @return integer
      */
@@ -342,9 +346,10 @@ class Result
     }
 
     /**
-     * Set milliseconds
+     * Set milliseconds.
      *
-     * @param  integer $milliseconds
+     * @param integer $milliseconds
+     *
      * @return $this
      */
     public function setMilliseconds($milliseconds)
@@ -355,7 +360,7 @@ class Result
     }
 
     /**
-     * Get fastestLap
+     * Get fastestLap.
      *
      * @return integer
      */
@@ -365,9 +370,10 @@ class Result
     }
 
     /**
-     * Set fastestLap
+     * Set fastestLap.
      *
-     * @param  integer $fastestLap
+     * @param integer $fastestLap
+     *
      * @return $this
      */
     public function setFastestLap($fastestLap)
@@ -378,7 +384,7 @@ class Result
     }
 
     /**
-     * Get fastestLapRank
+     * Get fastestLapRank.
      *
      * @return integer
      */
@@ -388,9 +394,10 @@ class Result
     }
 
     /**
-     * Set fastestLapRank
+     * Set fastestLapRank.
      *
-     * @param  integer $fastestLapRank
+     * @param integer $fastestLapRank
+     *
      * @return $this
      */
     public function setFastestLapRank($fastestLapRank)
@@ -401,7 +408,7 @@ class Result
     }
 
     /**
-     * Get fastestLapTime
+     * Get fastestLapTime.
      *
      * @return string
      */
@@ -411,7 +418,7 @@ class Result
     }
 
     /**
-     * Set fastestLapTime
+     * Set fastestLapTime.
      *
      * @param string $fastestLapTime
      *
@@ -425,7 +432,7 @@ class Result
     }
 
     /**
-     * Get fastestLapSpeed
+     * Get fastestLapSpeed.
      *
      * @return string
      */
@@ -435,7 +442,7 @@ class Result
     }
 
     /**
-     * Set fastestLapSpeed
+     * Set fastestLapSpeed.
      *
      * @param string $fastestLapSpeed
      *
@@ -451,7 +458,7 @@ class Result
     }
 
     /**
-     * Get status
+     * Get status.
      *
      * @return FinishingStatus
      */
@@ -461,7 +468,7 @@ class Result
     }
 
     /**
-     * Set status
+     * Set status.
      *
      * @param FinishingStatus $status
      *

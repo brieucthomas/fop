@@ -26,6 +26,7 @@ class ConstructorController extends Controller
 {
     /**
      * @Route("/{slug}", requirements={"slug" = "[a-z0-9\_]+"}, name="constructor")
+     *
      * @Method({"GET"})
      * @Template(":constructor:show.html.twig")
      */

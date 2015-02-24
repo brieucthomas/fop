@@ -26,6 +26,7 @@ class UserController extends Controller
 {
     /**
      * @Route("/{slug}", requirements={"slug" = "[a-z0-9\-]+"}, name="user")
+     *
      * @Method({"GET"})
      * @Template("user/show.html.twig")
      */

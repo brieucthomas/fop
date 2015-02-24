@@ -32,6 +32,7 @@ class RaceController extends Controller
 {
     /**
      * @Route("/{season}/{round}", name="race", requirements={"season" = "\d{4}", "round" = "\d+"})
+     *
      * @Method({"GET"})
      * @Template(":race:show.html.twig")
      */
@@ -44,6 +45,7 @@ class RaceController extends Controller
 
     /**
      * @Route("/{season}/{round}/predict/{slug}", name="race_prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
+     *
      * @Method({"GET", "POST"})
      * @Security("has_role('ROLE_USER')")
      * @Template(":race:predict.html.twig")

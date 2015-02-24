@@ -288,6 +288,7 @@ class Season
 
     /**
      * Computes the season predictions points.
+     *
      * @return $this
      */
     public function computePredictionsPoints()

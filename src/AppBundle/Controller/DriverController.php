@@ -26,6 +26,7 @@ class DriverController extends Controller
 {
     /**
      * @Route("/{slug}", requirements={"slug" = "[a-z\_]+"}, name="driver")
+     *
      * @Method({"GET"})
      * @Template("driver/show.html.twig")
      */

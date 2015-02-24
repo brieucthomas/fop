@@ -22,8 +22,6 @@ interface LoaderInterface
      * Loads data.
      *
      * @param Season $season
-     *
-     * @return void
      */
     public function load(Season $season);
 }

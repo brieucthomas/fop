@@ -29,6 +29,7 @@ class SeasonController extends Controller
 {
     /**
      * @Route(name="season_home")
+     *
      * @Method({"GET"})
      * @Template(":season:show.html.twig")
      */
@@ -41,6 +42,7 @@ class SeasonController extends Controller
 
     /**
      * @Route("/races", name="season_races")
+     *
      * @Method({"GET"})
      * @Template(":season:races.html.twig")
      */
@@ -53,6 +55,7 @@ class SeasonController extends Controller
 
     /**
      * @Route("/teams", name="season_teams")
+     *
      * @Method({"GET"})
      * @Template(":season:teams.html.twig")
      */
@@ -65,6 +68,7 @@ class SeasonController extends Controller
 
     /**
      * @Route("/standings", name="season_standings")
+     *
      * @Method({"GET"})
      * @Template(":season:standings.html.twig")
      */
@@ -77,6 +81,7 @@ class SeasonController extends Controller
 
     /**
      * @Route("/graphs", name="season_graphs")
+     *
      * @Method({"GET"})
      * @Template(":season:graphs.html.twig")
      */
@@ -89,6 +94,7 @@ class SeasonController extends Controller
 
     /**
      * @Route("/graphs/user-standings-data", name="season_graphs_user_standings_data")
+     *
      * @Method({"GET"})
      */
     public function userStandingsGraphAction(Season $season)
