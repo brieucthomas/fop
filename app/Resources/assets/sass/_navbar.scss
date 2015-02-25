@@ -1,0 +1,29 @@
+//
+// Navbars
+// --------------------------------------------------
+
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.navbar-inverse {
+  @media (min-width: $grid-float-breakpoint) {
+    background: transparent;
+
+    .navbar-brand {
+      color: #fff;
+      background: $brand-primary;
+      font-family: $headings-font-family;
+      &:hover,
+      &:focus {
+        color: #fff;
+        background-color: darken($brand-primary, 10%);
+      }
+    }
+  }
+}
