@@ -29,9 +29,9 @@
                         <a class="navbar-brand" href="{{ path('homepage') }}">FOP</a>
                     </div>
                     <div class="collapse navbar-collapse" id="site-navbar-collapse">
-                        {{ knp_menu_render('main', { 'style': 'navbar' }) }}
                         {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
                         {{ knp_menu_render('locale_switcher', { 'style': 'navbar-right', 'currentClass': '', 'template': ':menu:locale_switcher.html.twig' }) }}
+                        {{ knp_menu_render('main', { 'style': 'navbar-center' }) }}
                     </div>
                 </div>
             </div>

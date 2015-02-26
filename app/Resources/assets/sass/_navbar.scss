@@ -2,7 +2,6 @@
 // Navbars
 // --------------------------------------------------
 
-
 .navbar-wrapper {
   position: absolute;
   top: 0;
@@ -30,12 +29,9 @@
     }
 
     .navbar-nav {
-      display: inline-block;
-      float: none;
       > li > a {
         color: $navbar-inverse-link-color;
         border-bottom: 3px solid transparent;
-
         &:hover,
         &:focus {
           color: #fff;
@@ -55,3 +51,16 @@
     }
   }
 }
+
+// Component alignment
+//
+
+@media (min-width: $grid-float-breakpoint) {
+  .navbar-center {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float:none;
+  }
+}
+
