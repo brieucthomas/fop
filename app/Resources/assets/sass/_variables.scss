@@ -15,14 +15,22 @@ $brand-primary:              $red;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:     'Titillium Web', sans-serif;
+$font-family-sans-serif:     "Titillium Web", sans-serif;
 
-$headings-font-family:       'Teko', sans-serif;
+$headings-font-family:       "Teko", sans-serif;
+
+
+// Components
+// -------------------------
+
+$border-radius-base:         0;
+$border-radius-large:        0;
+$border-radius-small:        0;
 
 
 // Jumbotron
 // -------------------------
 
-$jumbotron-color:                #fff;
-$jumbotron-bg:                   #352d2f;
-$jumbotron-heading-color:        #fff;
+$jumbotron-color:            #fff;
+$jumbotron-bg:               #352d2f;
+$jumbotron-heading-color:    #fff;

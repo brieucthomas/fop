@@ -11,18 +11,46 @@
   z-index: 20;
 }
 
-.navbar-inverse {
+.navbar-main {
   @media (min-width: $grid-float-breakpoint) {
     background: transparent;
+    border-bottom-color: rgba(255,255,255,.4);
 
     .navbar-brand {
       color: #fff;
       background: $brand-primary;
       font-family: $headings-font-family;
+      line-height: $line-height-computed + 6;
+      height: $navbar-height + 3;
       &:hover,
       &:focus {
         color: #fff;
         background-color: darken($brand-primary, 10%);
+      }
+    }
+
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      > li > a {
+        color: $navbar-inverse-link-color;
+        border-bottom: 3px solid transparent;
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          background: transparent;
+          border-bottom-color: #fff;
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: #fff;
+          background: transparent;
+          border-bottom-color: #fff;
+        }
       }
     }
   }
