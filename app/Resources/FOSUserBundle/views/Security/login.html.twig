@@ -1,9 +1,14 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
+    <div class="section section-sm section-inverse">
+        <div class="container">
+            <h1>{{ 'signin.title'|trans }}</h1>
+        </div>
+    </div>
+
     <div class="container">
         <form id="form-signin" class="form-signin" action="{{ path("fos_user_security_check") }}" method="post">
-            <h1 class="form-signin-heading">{{ 'signin.title'|trans }}</h1>
 
             {% if error %}
                 <div class="alert alert-danger" role="alert">{{ error|trans({}, 'FOSUserBundle') }}</div>
