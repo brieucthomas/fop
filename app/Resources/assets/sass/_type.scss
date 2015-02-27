@@ -11,3 +11,91 @@ h1, h2, h3, h4, h5, h6,
   text-transform: uppercase;
   letter-spacing: 1rem;
 }
+
+
+// Background
+// -------------------------
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: 50% 50% no-repeat;
+  background-size: cover;
+  @include opacity(.4);
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+
+// Container
+// -------------------------
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+
+// Sections
+// -------------------------
+
+.section {
+  position: relative;
+  margin-bottom: $line-height-computed;
+  padding: 10rem 0 7rem;
+  text-align: center;
+
+  h1, h2, .h1, .h2 {
+    font-size: ($font-size-base * 4.5);
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: ceil(($font-size-base * 1.5));
+    font-weight: 200;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding: 22rem 0 18rem;
+  }
+}
+
+.section-inverse {
+  background-color: $gray-darker;
+  color: #fff;
+}
+
+.section-sm {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-left {
+  @media (min-width: $grid-float-breakpoint) {
+    text-align: left;
+  }
+}
+
+.section-lg {
+  @media (min-width: $grid-float-breakpoint) {
+    padding-top: 250px;
+    padding-bottom: 250px;
+  }
+}

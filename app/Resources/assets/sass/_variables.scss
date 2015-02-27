@@ -9,6 +9,8 @@
 $red:                        #f63c3c;
 $red-darken:                 darken($red, 13.5%);
 
+$gray-darker:                #352d2f;
+
 $brand-primary:              $red;
 
 
@@ -26,11 +28,3 @@ $headings-font-family:       "Teko", sans-serif;
 $border-radius-base:         0;
 $border-radius-large:        0;
 $border-radius-small:        0;
-
-
-// Jumbotron
-// -------------------------
-
-$jumbotron-color:            #fff;
-$jumbotron-bg:               #352d2f;
-$jumbotron-heading-color:    #fff;
