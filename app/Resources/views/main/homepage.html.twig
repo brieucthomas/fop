@@ -77,7 +77,7 @@
     {% if lastRaceWithResults %}
         <h1>{{ 'homepage.standings.title'|trans({ '%year%': lastRaceWithResults.season.year }) }}</h1>
         {% if lastRaceWithResults.season.finished %}
-            <p class="text-muted">{{ 'homepage.standings.finished'|trans }}</p>
+            <div class="alert alert-warning" role="alert">{{ 'homepage.standings.finished'|trans }}</div>
         {% endif %}
         <div role="tabpanel">
             <ul class="nav nav-tabs" role="tablist">
