@@ -11,6 +11,7 @@ parameters:
     locales: [fr, en]
     database_prefix: fop_
     app_name: "FOP"
+    app_version: "0.0.1"
     mail_noreply: "noreply@fop.com"
 
 framework:
@@ -41,6 +42,9 @@ twig:
     strict_variables: "%kernel.debug%"
     form:
         resources: ['bootstrap_3_layout.html.twig']
+    globals:
+        app_name:    "%app_name%"
+        app_version: "%app_version%"
 
 # Assetic Configuration
 assetic:

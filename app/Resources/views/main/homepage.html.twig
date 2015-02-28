@@ -6,22 +6,72 @@
 
     {% if nextRace %}
         <div class="section section-inverse">
-            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')" aria-hidden="true"></div>
+            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
-                <h1>{{ 'homepage.nextRace.heading'|trans }}</h1>
-                <h2 lang="en">{{ nextRace.season.year }} {{ nextRace.name }}</h2>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+                <h1 class="h4 text-muted">{{ 'homepage.next-race.title'|trans }}</h1>
+                <h2 lang="en" class="h1"><span class="text-primary">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
+                <ul class="list-highlight">
+                    <li id="next-nextRace-country">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
+                    </li>
+                    <li id="next-nextRace-round">
+                        <span class="bg-concrete">{{ 'nextRace.round'|trans }}</span>
+                        <span class="bg-silver">{{ nextRace.round }}</span>
+                    </li>
+                    <li id="next-nextRace-date">
+                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'nextRace.date'|trans }}"></span></span>
+                        <span class="bg-green-sea">{{ nextRace.date|format_date }} {{ nextRace.date|format_time }}</span>
+                    </li>
+                    {% if nextRace.hasResults %}
+                        <li id="last-nextRace-winner">
+                            <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'nextRace.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'nextRace.winner'|trans }}"></span></span>
+                            <span class="bg-sun-flower">{{ nextRace.results.first.team.driver.shortName }}</span>
+                        </li>
+                    {% endif %}
+                    {% if nextRace.hasResults and nextRace.hasPredictions %}
+                        <li id="last-nextRace-winner">
+                            <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'nextRace.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'nextRace.winner'|trans }}"></span></span>
+                            <span class="bg-sun-flower">{{ nextRace.predictions.first.user.username }}</span>
+                        </li>
+                    {% endif %}
+                </ul>
             </div>
         </div>
-    {% else %}
-        <div class="section section-inverse">
+    {% endif %}
+
+    {% if lastRace %}
+        <section id="last-race" class="section section-left">
             <div class="container">
-                <h1>Welcome to formula One prediction</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+                <h1 class="h4 text-muted">{{ 'homepage.last-race.title'|trans }}</h1>
+                <h2 lang="en" class="h1"><span class="text-primary">{{ lastRace.season.year }}</span> {{ lastRace.name }}</h2>
+                <ul class="list-highlight">
+                    <li id="last-race-country">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+                    </li>
+                    <li id="last-race-round">
+                        <span class="bg-concrete">{{ 'homepage.last-race.round'|trans }}</span>
+                        <span class="bg-silver">{{ lastRace.round }}</span>
+                    </li>
+                    <li id="last-race-date">
+                        <span class="bg-amethyst"><span class="fa fa-calendar-o" aria-label="{{ 'homepage.last-race.date'|trans }}"></span></span>
+                        <span class="bg-wisteria">{{ lastRace.date|format_date }} {{ lastRace.date|format_time }}</span>
+                    </li>
+                    {% if lastRace.hasResults %}
+                        <li id="last-race-winner">
+                            <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                            <span class="bg-orange">{{ lastRace.results.first.team.driver.shortName }}</span>
+                        </li>
+                        {% if lastRace.hasPredictions %}
+                            <li id="last-race-winner">
+                                <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                                <span class="bg-orange">{{ lastRace.predictions.first.user.username }}</span>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                </ul>
+                <p><a class="btn btn-primary btn-lg" href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}" role="button">Learn more »</a></p>
             </div>
-        </div>
+        </section>
     {% endif %}
 
 {% endblock %}

@@ -3,5 +3,11 @@
 // --------------------------------------------------
 
 
-@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400');
-@import url('http://fonts.googleapis.com/css?family=Teko:300');
+// Conduit
+// --------------------------------------------------
+
+@font-face {
+  font-family: "Conduit";
+  src: url("../../fonts/conduit_itc_light.woff") format("woff");
+  font-weight: 500;
+}

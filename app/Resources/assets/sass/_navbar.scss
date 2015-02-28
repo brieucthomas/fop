@@ -2,65 +2,52 @@
 // Navbars
 // --------------------------------------------------
 
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+.navbar {
+  text-transform: uppercase;
 }
+
+.navbar-wrapper {
+  @media (min-width: $grid-float-breakpoint) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+  }
+}
+
 
 .navbar-main {
   @media (min-width: $grid-float-breakpoint) {
-    background: transparent;
-    border-bottom-color: rgba(255,255,255,.4);
+    background: none;
+    border: none;
 
     .navbar-brand {
-      color: #fff;
-      background: $brand-primary;
-      font-family: $headings-font-family;
-      line-height: $line-height-computed + 6;
-      height: $navbar-height + 3;
+      color: $gray-light;
       &:hover,
       &:focus {
-        color: #fff;
-        background-color: darken($brand-primary, 10%);
+        color: darken($brand-primary, 10%);
       }
     }
 
     .navbar-nav {
       > li > a {
-        color: $navbar-inverse-link-color;
-        border-bottom: 3px solid transparent;
+        color: $gray-light;
+
         &:hover,
         &:focus {
-          color: #fff;
-          background: transparent;
-          border-bottom-color: #fff;
+          color: $brand-primary;
+          background-color: $navbar-inverse-link-hover-bg;
         }
       }
       > .active > a {
         &,
         &:hover,
         &:focus {
-          color: #fff;
-          background: transparent;
-          border-bottom-color: #fff;
+          color: $brand-primary;
+          background: none;
         }
       }
     }
   }
 }
-
-// Component alignment
-//
-
-@media (min-width: $grid-float-breakpoint) {
-  .navbar-center {
-    margin: 0 auto;
-    display: table;
-    table-layout: fixed;
-    float:none;
-  }
-}
-
