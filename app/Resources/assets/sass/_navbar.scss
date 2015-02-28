@@ -2,10 +2,6 @@
 // Navbars
 // --------------------------------------------------
 
-.navbar {
-  text-transform: uppercase;
-}
-
 .navbar-wrapper {
   @media (min-width: $grid-float-breakpoint) {
     position: absolute;
@@ -15,7 +11,6 @@
     z-index: 20;
   }
 }
-
 
 .navbar-main {
   @media (min-width: $grid-float-breakpoint) {

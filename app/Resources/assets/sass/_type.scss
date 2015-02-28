@@ -2,14 +2,6 @@
 // Type
 // --------------------------------------------------
 
-// Headings
-// -------------------------
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  text-transform: uppercase;
-}
-
 // Colors
 // -------------------------
 
@@ -205,6 +197,7 @@ h1, h2, h3, h4, h5, h6,
 
 .section {
   position: relative;
+  margin-bottom: $line-height-computed;
   padding: 10rem 0 7rem;
   text-align: center;
 
@@ -217,6 +210,10 @@ h1, h2, h3, h4, h5, h6,
         text-decoration: none;
       }
     }
+  }
+
+  .section-heading {
+    font-size: ($font-size-base * 4.5);
   }
 
   h1 + h2 {
@@ -307,7 +304,6 @@ h1, h2, h3, h4, h5, h6,
 
 .list-details {
   @include list-unstyled;
-  text-transform: uppercase;
 
   > li {
     margin-bottom: 10px;
@@ -331,7 +327,6 @@ h1, h2, h3, h4, h5, h6,
   width: 100%;
   margin: $padding-large-vertical 0;
   line-height: 38px;
-  text-transform: uppercase;
   color: #fff;
 
   > li {

@@ -63,8 +63,6 @@ $font-size-small:            18px;
 $font-size-base:             22px;
 $font-size-large:            28px;
 
-$font-size-h1:               ($font-size-base * 4.5);
-
 $line-height-base:           1.1; // 20/18
 $line-height-computed:       floor(($font-size-base * $line-height-base));
 

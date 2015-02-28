@@ -1,15 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout-3-cols.html.twig' %}
 
 {% set module = 'app/homepage' %}
 
-{% block content %}
-
+{% block header %}
     {% if nextRace %}
         <div class="section section-inverse">
             <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
                 <h1 class="h4 text-muted">{{ 'homepage.next-race.title'|trans }}</h1>
-                <h2 lang="en" class="h1"><span class="text-primary">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
+                <h2 lang="en" class="section-heading"><span class="text-primary">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
                 <ul class="list-highlight">
                     <li id="next-nextRace-country">
                         <img class="flag" src="{{ asset('assets/img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
@@ -35,43 +34,89 @@
                         </li>
                     {% endif %}
                 </ul>
+                <p><a class="btn btn-primary btn-lg" href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}" role="button">Learn more »</a></p>
             </div>
         </div>
     {% endif %}
+{% endblock %}
 
+{% block left %}
     {% if lastRace %}
-        <section id="last-race" class="section section-left">
-            <div class="container">
-                <h1 class="h4 text-muted">{{ 'homepage.last-race.title'|trans }}</h1>
-                <h2 lang="en" class="h1"><span class="text-primary">{{ lastRace.season.year }}</span> {{ lastRace.name }}</h2>
-                <ul class="list-highlight">
-                    <li id="last-race-country">
-                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+        <h1 class="h4 text-muted">{{ 'homepage.last-race.title'|trans }}</h1>
+        <h2 lang="en" class="h1"><span class="text-primary">{{ lastRace.season.year }}</span> {{ lastRace.name }}</h2>
+        <ul class="list-highlight">
+            <li id="last-race-country">
+                <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+            </li>
+            <li id="last-race-round">
+                <span class="bg-concrete">{{ 'homepage.last-race.round'|trans }}</span>
+                <span class="bg-silver">{{ lastRace.round }}</span>
+            </li>
+            <li id="last-race-date">
+                <span class="bg-amethyst"><span class="fa fa-calendar-o" aria-label="{{ 'homepage.last-race.date'|trans }}"></span></span>
+                <span class="bg-wisteria">{{ lastRace.date|format_date }} {{ lastRace.date|format_time }}</span>
+            </li>
+            {% if lastRace.hasResults %}
+                <li id="last-race-winner">
+                    <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                    <span class="bg-orange">{{ lastRace.results.first.team.driver.shortName }}</span>
+                </li>
+                {% if lastRace.hasPredictions %}
+                    <li id="last-race-winner">
+                        <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                        <span class="bg-orange">{{ lastRace.predictions.first.user.username }}</span>
                     </li>
-                    <li id="last-race-round">
-                        <span class="bg-concrete">{{ 'homepage.last-race.round'|trans }}</span>
-                        <span class="bg-silver">{{ lastRace.round }}</span>
-                    </li>
-                    <li id="last-race-date">
-                        <span class="bg-amethyst"><span class="fa fa-calendar-o" aria-label="{{ 'homepage.last-race.date'|trans }}"></span></span>
-                        <span class="bg-wisteria">{{ lastRace.date|format_date }} {{ lastRace.date|format_time }}</span>
-                    </li>
-                    {% if lastRace.hasResults %}
-                        <li id="last-race-winner">
-                            <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
-                            <span class="bg-orange">{{ lastRace.results.first.team.driver.shortName }}</span>
-                        </li>
-                        {% if lastRace.hasPredictions %}
-                            <li id="last-race-winner">
-                                <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
-                                <span class="bg-orange">{{ lastRace.predictions.first.user.username }}</span>
-                            </li>
-                        {% endif %}
-                    {% endif %}
-                </ul>
-                <p><a class="btn btn-primary btn-lg" href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}" role="button">Learn more »</a></p>
-            </div>
-        </section>
+                {% endif %}
+            {% endif %}
+        </ul>
+        <p><a class="btn btn-primary btn-lg" href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}" role="button">Learn more »</a></p>
     {% endif %}
+{% endblock %}
 
+{% block right %}
+    {% if lastRaceWithResults %}
+        <h1>{{ 'homepage.standings.title'|trans({ '%year%': lastRaceWithResults.season.year }) }}</h1>
+        {% if lastRaceWithResults.season.finished %}
+            <p class="text-muted">{{ 'homepage.standings.finished'|trans }}</p>
+        {% endif %}
+        <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#user-standings" aria-controls="user-standings" role="tab" data-toggle="tab">{{ 'homepage.standings.user'|trans }}</a></li>
+                <li role="presentation"><a href="#driver-standings" aria-controls="driver-standings" role="tab" data-toggle="tab">{{ 'homepage.standings.driver'|trans }}</a></li>
+                <li role="presentation"><a href="#constructor-standings" aria-controls="constructor-standings" role="tab" data-toggle="tab">{{ 'homepage.standings.constructor'|trans }}</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="user-standings">
+                    <ol class="list-standings">
+                        {% for standings in lastRaceWithResults.userStandings|slice(0,10) %}
+                            <li>
+                                <span><a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></span>
+                                <span>{{ standings.points }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="driver-standings">
+                    <ol class="list-standings">
+                        {% for standings in lastRaceWithResults.driverStandings|slice(0,10) %}
+                            <li>
+                                <span><a href="{{ path('driver', { 'slug': standings.driver.slug }) }}">{{ standings.driver.shortName }}</a></span>
+                                <span>{{ standings.points }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="constructor-standings">
+                    <ol class="list-standings">
+                        {% for standings in lastRaceWithResults.constructorStandings|slice(0,10) %}
+                            <li>
+                                <span><a href="{{ path('constructor', { 'slug': standings.constructor.slug }) }}">{{ standings.constructor.name }}</a></span>
+                                <span>{{ standings.points }}</span>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}
