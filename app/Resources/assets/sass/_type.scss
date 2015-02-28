@@ -269,52 +269,6 @@
 // Lists
 // -------------------------
 
-.list-standings {
-  counter-reset: li;
-  list-style: none;
-  padding: 0;
-  margin-bottom: $line-height-computed;
-  display: table;
-  width: 100%;
-
-  > li:before {
-    content: counter(li, decimal-leading-zero);
-    counter-increment: li;
-    background-color: $silver;
-    text-align: center;
-  }
-
-  > li:nth-child(-n+3):before {
-    background-color: $alizarin;
-    color: #fff;
-  }
-
-  > li {
-    display: table-row;
-    text-decoration: none;
-    background-color: $clouds;
-
-    &:hover {
-      background-color: $table-bg-hover;
-    }
-  }
-
-  > li > span, li:before {
-    display: table-cell;
-    padding: 0.8rem;
-    border-bottom: 1px solid #fff;
-  }
-
-  > li > .list-standings-points {
-    text-align: right;
-  }
-
-  > li > .list-standings-team {
-    color: $concrete;
-
-  }
-}
-
 .list-details {
   @include list-unstyled;
 

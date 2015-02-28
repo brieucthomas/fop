@@ -46,15 +46,24 @@
                 {% if lastRaceWithResults.season.finished %}
                     <p class="text-center text-muted">{{ 'homepage.standings.finished'|trans }}</p>
                 {% endif %}
-                <ol class="list-standings">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>POS</th>
+                            <th>User</th>
+                            <th>Wins</th>
+                            <th class="text-right">Points</th>
+                        </tr>
+                    </thead>
                     {% for standings in lastRaceWithResults.userStandings|slice(0,10) %}
-                        <li>
-                            <span><a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></span>
-                            <span>{{ standings.wins }}</span>
-                            <span>{{ standings.points }}</span>
-                        </li>
+                        <tr class="{% if lastRaceWithResults.season.finished and standings.position == 1  %}bg-orange{% endif %}">
+                            <td>{{ standings.position }}</td>
+                            <td><img src="{{ gravatar(standings.user.email, '22') }}"/> <a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></td>
+                            <td>{{ standings.wins }}</td>
+                            <td class="text-right">{{ standings.points }}</td>
+                        </tr>
                     {% endfor %}
-                </ol>
+                </table>
             </div>
         </section>
     {% endif %}
