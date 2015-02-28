@@ -169,6 +169,21 @@
   background: $asbestos;
 }
 
+// Sizes
+// -------------------------
+
+.text-base {
+  font-size: $font-size-base;
+}
+
+.text-small {
+  font-size: $font-size-small;
+}
+
+.text-large {
+  font-size: $font-size-large;
+}
+
 // Background
 // -------------------------
 
@@ -220,12 +235,6 @@
     margin-top: 0;
   }
 
-  p {
-    margin-bottom: 15px;
-    font-size: ceil(($font-size-base * 1.5));
-    font-weight: 200;
-  }
-
   @media (min-width: $grid-float-breakpoint) {
     padding: 22rem 0 18rem;
     text-align: left;
@@ -264,7 +273,7 @@
   counter-reset: li;
   list-style: none;
   padding: 0;
-  margin-bottom: 4em;
+  margin-bottom: $line-height-computed;
   display: table;
   width: 100%;
 
@@ -284,11 +293,15 @@
     display: table-row;
     text-decoration: none;
     background-color: $clouds;
+
+    &:hover {
+      background-color: $table-bg-hover;
+    }
   }
 
   > li > span, li:before {
     display: table-cell;
-    padding: 0.2em 0.5em;
+    padding: 0.8rem;
     border-bottom: 1px solid #fff;
   }
 

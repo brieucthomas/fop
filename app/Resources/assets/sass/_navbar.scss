@@ -2,47 +2,122 @@
 // Navbars
 // --------------------------------------------------
 
-.navbar-wrapper {
-  @media (min-width: $grid-float-breakpoint) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-  }
-}
+
+// Main navbar
 
 .navbar-main {
-  @media (min-width: $grid-float-breakpoint) {
-    background: none;
-    border: none;
+  background-color: $body-bg;
+  border: none;
 
-    .navbar-brand {
+  .navbar-brand {
+    color: $gray-light;
+    &:hover,
+    &:focus {
+      color: $brand-primary;
+      background: none;
+    }
+  }
+
+  .navbar-text {
+    color: $gray-light;
+  }
+
+  .navbar-nav {
+    > li > a {
       color: $gray-light;
+
       &:hover,
       &:focus {
-        color: darken($brand-primary, 10%);
+        color: $brand-primary;
+        background: none;
       }
     }
-
-    .navbar-nav {
-      > li > a {
-        color: $gray-light;
-
-        &:hover,
-        &:focus {
-          color: $brand-primary;
-          background-color: $navbar-inverse-link-hover-bg;
-        }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+        background: none;
       }
-      > .active > a {
-        &,
+    }
+  }
+
+  .navbar-toggle {
+    border: none;
+    &:hover,
+    &:focus {
+      background-color: $body-bg;
+      .icon-bar {
+        background-color: $brand-primary;
+      }
+    }
+    .icon-bar {
+      background-color: $gray-light;
+    }
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $gray-lighter;
+  }
+
+  // Dropdowns
+  .navbar-nav {
+    > .open > .dropdown-menu {
+      border: none;
+      > li > a {
         &:hover,
         &:focus {
           color: $brand-primary;
           background: none;
         }
       }
+    }
+
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background: none;
+        color: $brand-primary;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display
+      .open .dropdown-menu {
+        > li > a {
+          color: $gray-light;
+          &:hover,
+          &:focus {
+            color: $brand-primary;
+            background: none;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $brand-primary;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-link {
+    color: $gray-light;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  .btn-link {
+    color: $gray-light;
+    &:hover,
+    &:focus {
+      color: $brand-primary;
     }
   }
 }
