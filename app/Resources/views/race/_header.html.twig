@@ -3,16 +3,20 @@
     <div class="container">
         <h1 lang="en"><span class="text-primary">{{ race.season.year }}</span> {{ race.name }}</h1>
         <ul class="list-highlight">
-            <li id="next-race-country">
+            <li id="race-country">
                 <img class="flag" src="{{ asset('assets/img/flags/' ~ race.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ race.circuit.country|country }}"/>
             </li>
-            <li id="next-race-round">
+            <li id="race-round">
                 <span class="bg-concrete">{{ 'race.round'|trans }}</span>
                 <span class="bg-silver">{{ race.round }}</span>
             </li>
-            <li id="next-race-date">
+            <li id="race-date">
                 <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'race.date'|trans }}"></span></span>
-                <span class="bg-green-sea">{{ race.date|format_date }} {{ race.date|format_time }}</span>
+                <span class="bg-green-sea">{{ race.date|format_date }}</span>
+            </li>
+            <li id="race-time">
+                <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'race.time'|trans }}"></span></span>
+                <span class="bg-green-sea" data-load="localize" data-date="{{ race.date.format('Y-m-d H:i:s') }}" data-format="HH:mm">{{ race.date|format_time }}</span>
             </li>
             {% if race.hasResults %}
                 <li id="last-race-winner">

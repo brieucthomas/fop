@@ -4,32 +4,36 @@
 
 {% block content %}
     {% if nextRace %}
-        <section class="section section-inverse">
+        <section id="next-race" class="section section-inverse">
             <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
                 <h1 class="h4 text-muted">{{ 'homepage.next-race.title'|trans }}</h1>
                 <h2 lang="en" class="section-heading"><span class="text-primary">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
                 <ul class="list-highlight">
-                    <li id="next-nextRace-country">
+                    <li id="next-race-country">
                         <img class="flag" src="{{ asset('assets/img/flags/' ~ nextRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ nextRace.circuit.country|country }}"/>
                     </li>
-                    <li id="next-nextRace-round">
-                        <span class="bg-concrete">{{ 'nextRace.round'|trans }}</span>
+                    <li id="next-race-round">
+                        <span class="bg-concrete">{{ 'homepage.next-race.round'|trans }}</span>
                         <span class="bg-silver">{{ nextRace.round }}</span>
                     </li>
-                    <li id="next-nextRace-date">
-                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'nextRace.date'|trans }}"></span></span>
-                        <span class="bg-green-sea">{{ nextRace.date|format_date }} {{ nextRace.date|format_time }}</span>
+                    <li id="next-race-date">
+                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'homepage.next-race.date'|trans }}"></span></span>
+                        <span class="bg-green-sea">{{ nextRace.date|format_date }}</span>
+                    </li>
+                    <li id="next-race-time">
+                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'homepage.next-race.time'|trans }}"></span></span>
+                        <span class="bg-green-sea" data-load="localize" data-date="{{ nextRace.date.format('Y-m-d H:i:s') }}" data-format="HH:mm">{{ nextRace.date|format_time }}</span>
                     </li>
                     {% if nextRace.hasResults %}
-                        <li id="last-nextRace-winner">
-                            <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'nextRace.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'nextRace.winner'|trans }}"></span></span>
+                        <li id="next-race-winner">
+                            <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'homepage.next-race.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'homepage.next-race.winner'|trans }}"></span></span>
                             <span class="bg-sun-flower">{{ nextRace.results.first.team.driver.shortName }}</span>
                         </li>
                     {% endif %}
                     {% if nextRace.hasResults and nextRace.hasPredictions %}
-                        <li id="last-nextRace-winner">
-                            <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'nextRace.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'nextRace.winner'|trans }}"></span></span>
+                        <li id="next-race-winner">
+                            <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'homepage.next-race.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'homepage.next-race.winner'|trans }}"></span></span>
                             <span class="bg-sun-flower">{{ nextRace.predictions.first.user.username }}</span>
                         </li>
                     {% endif %}
@@ -39,8 +43,50 @@
         </section>
     {% endif %}
 
+    {% if lastRace %}
+        <section id="last-race" class="section section-sm">
+            <div class="container">
+                <h1 class="text-concrete text-large">{{ 'homepage.last-race.title'|trans }}</h1>
+                <h2 lang="en" class="h1">
+                    <a href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">
+                        <span class="text-emerald">{{ lastRace.season.year }}</span> {{ lastRace.name }}
+                    </a>
+                </h2>
+                <ul class="list-highlight">
+                    <li id="last-race-country">
+                        <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
+                    </li>
+                    <li id="last-race-round">
+                        <span class="bg-concrete">{{ 'homepage.last-race.round'|trans }}</span>
+                        <span class="bg-silver">{{ lastRace.round }}</span>
+                    </li>
+                    <li id="last-race-date">
+                        <span class="bg-amethyst"><span class="fa fa-calendar-o" aria-label="{{ 'homepage.last-race.date'|trans }}"></span></span>
+                        <span class="bg-wisteria">{{ lastRace.date|format_date }}</span>
+                    </li>
+                    <li id="last-race-time">
+                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'homepage.last-race.time'|trans }}"></span></span>
+                        <span class="bg-green-sea" data-load="localize" data-date="{{ lastRace.date.format('Y-m-d H:i:s') }}" data-format="HH:mm">{{ lastRace.date|format_time }}</span>
+                    </li>
+                    {% if lastRace.hasResults %}
+                        <li id="last-race-winner">
+                            <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                            <span class="bg-orange">{{ lastRace.results.first.team.driver.shortName }}</span>
+                        </li>
+                        {% if lastRace.hasPredictions %}
+                            <li id="last-race-winner">
+                                <span class="bg-sun-flower"><span class="fa fa-trophy"></span></span>
+                                <span class="bg-orange">{{ lastRace.predictions.first.user.username }}</span>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                </ul>
+            </div>
+        </section>
+    {% endif %}
+
     {% if lastRaceWithResults %}
-        <section class="section section-sm">
+        <section class="section section-sm bg-clouds">
             <div class="container">
                 <h1 class="text-center">{{ 'homepage.standings.user'|trans({ '%year%': '<span class="text-primary">' ~ lastRaceWithResults.season.year ~ '</span>' })|raw }}</h1>
                 {% if lastRaceWithResults.season.finished %}
@@ -56,8 +102,14 @@
                         </tr>
                     </thead>
                     {% for standings in lastRaceWithResults.userStandings|slice(0,10) %}
-                        <tr class="{% if lastRaceWithResults.season.finished and standings.position == 1  %}bg-orange{% endif %}">
-                            <td>{{ standings.position }}</td>
+                        {% set isChampion = (lastRaceWithResults.season.finished and standings.position == 1) %}
+                        <tr class="{% if isChampion  %}bg-orange{% endif %}">
+                            <td>
+                                {% if isChampion %}
+                                    <i class="fa fa-trophy"></i>
+                                {% else %}
+                                    {{ standings.position }}
+                                {% endif %}
                             <td><img src="{{ gravatar(standings.user.email, '22') }}"/> <a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></td>
                             <td>{{ standings.wins }}</td>
                             <td class="text-right">{{ standings.points }}</td>

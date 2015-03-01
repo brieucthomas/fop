@@ -1,11 +1,12 @@
 {
     "name": "fop",
     "dependencies": {
-        "jquery": "~2.1",
         "requirejs": "~2.1",
+        "jquery": "~2.1",
         "bootstrap": "~3.3",
         "bootstrap-sass-official": "~3.3",
         "fontawesome": "~4.3",
+        "moment": "~2.9",
         "d3": "~3.5",
         "c3js-chart": "~0.4",
         "jquery.countdown": "~2.0",

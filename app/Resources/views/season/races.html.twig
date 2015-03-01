@@ -30,7 +30,7 @@
                                 <td>{{ race.circuit.name }}</td>
                                 <td>{{ race.circuit.country|country }}</td>
                                 <td>{{ race.date|format_date }}</td>
-                                <td>{{ race.date|format_time }}</td>
+                                <td data-load="localize" data-date="{{ race.date.format('Y-m-d H:i:s') }}" data-format="HH:mm">{{ race.date|format_time }}</td>
                                 <td>{% if race.hasResults %}{{ race.results.first.team.driver.shortName }}{% endif %}</td>
                                 <td>{% if race.hasResults and race.hasPredictions %}{{ race.predictions.first.user.username }}{% endif %}</td>
                                 <td><a class="btn" href="{{ path('race', { 'season': season.year, 'round': race.round }) }}">SEE</a></td>
