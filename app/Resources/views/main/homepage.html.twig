@@ -22,7 +22,7 @@
                         <span class="bg-green-sea">{{ nextRace.date|format_date }}</span>
                     </li>
                     <li id="next-race-time">
-                        <span class="bg-turquoise"><span class="fa fa-calendar" aria-label="{{ 'homepage.next-race.time'|trans }}"></span></span>
+                        <span class="bg-turquoise"><span class="fa fa-clock-o" aria-label="{{ 'homepage.next-race.time'|trans }}"></span></span>
                         <span class="bg-green-sea" data-load="localize" data-date="{{ nextRace.date.format('Y-m-d H:i:s') }}" data-format="HH:mm">{{ nextRace.date|format_time }}</span>
                     </li>
                     {% if nextRace.hasResults %}
@@ -38,6 +38,7 @@
                         </li>
                     {% endif %}
                 </ul>
+                <p id="next-race-remaining-time" data-date="{{ nextRace.date.timestamp * 1000 }}" data-format="%D:%H:%M:%S"></p>
                 <p><a class="btn btn-primary btn-lg" href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}" role="button">Learn more »</a></p>
             </div>
         </section>
