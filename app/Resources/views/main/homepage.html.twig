@@ -25,6 +25,10 @@
                         <span class="bg-turquoise"><span class="fa fa-clock-o" aria-label="{{ 'homepage.next-race.time'|trans }}"></span></span>
                         <span class="bg-green-sea" data-load="localize" data-date="{{ nextRace.date.format('Y-m-d H:i:s') }}" data-format="HH:mm">{{ nextRace.date|format_time }}</span>
                     </li>
+                    <li id="next-race-predictions">
+                        <span class="bg-amethyst"><span class="fa fa-pencil" aria-label="{{ 'homepage.next-race.predictions'|trans }}"></span></span>
+                        <span class="bg-wisteria">{{ nextRace.predictions.count }}</span>
+                    </li>
                     {% if nextRace.hasResults %}
                         <li id="next-race-winner">
                             <span class="bg-orange"><span class="fa fa-trophy" aria-label="{{ 'homepage.next-race.winner'|trans }}" data-hover="tooltip" data-placement="bottom" title="{{ 'homepage.next-race.winner'|trans }}"></span></span>
