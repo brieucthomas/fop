@@ -16,7 +16,7 @@
                     <ol class="list-standings">
                         {% for standings in season.lastRaceWithResults.userStandings %}
                             <li>
-                                <span>{{ standings.user.username }}</span>
+                                <span><a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></span>
                                 <span>{{ standings.points }}</span>
                             </li>
                         {% endfor %}

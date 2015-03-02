@@ -3,8 +3,13 @@
 {% block title user.username %}
 
 {% block content %}
+    <div class="section section-inverse section-sm">
+        <div class="container">
+            <h1 class="text-center">{{ user.username }}</h1>
+        </div>
+    </div>
+
     <div class="container">
-        <h1>{{ user.username }}</h1>
         <img src="{{ gravatar(user.email) }}" />
     </div>
 {% endblock %}
