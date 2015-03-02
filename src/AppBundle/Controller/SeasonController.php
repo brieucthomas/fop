@@ -28,19 +28,6 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class SeasonController extends Controller
 {
     /**
-     * @Route(name="season_home")
-     *
-     * @Method({"GET"})
-     * @Template(":season:show.html.twig")
-     */
-    public function showAction(Season $season)
-    {
-        return [
-            'season' => $season,
-        ];
-    }
-
-    /**
      * @Route("/races", name="season_races")
      *
      * @Method({"GET"})

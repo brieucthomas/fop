@@ -170,6 +170,7 @@ services:
          class: Knp\Menu\MenuItem
          factory_service: menu_builder
          factory_method: createMainMenu
+         arguments: ['%current_season%']
          tags:
              - { name: knp_menu.menu, alias: main }
     menu_footer:
@@ -185,12 +186,6 @@ services:
          arguments: ["@security.authorization_checker"]
          tags:
              - { name: knp_menu.menu, alias: user }
-    menu_season:
-         class: Knp\Menu\MenuItem
-         factory_service: menu_builder
-         factory_method: createSeasonMenu
-         tags:
-             - { name: knp_menu.menu, alias: season }
     menu_locale_switcher:
          class: Knp\Menu\MenuItem
          factory_service: menu_builder

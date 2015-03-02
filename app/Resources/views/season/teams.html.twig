@@ -1,20 +1,27 @@
-{% extends ':season:layout.html.twig' %}
+{% extends '::base.html.twig' %}
 
 {% block content %}
-    {{ parent() }}
+    <div class="section section-inverse section-sm">
+        <div class="background" style="background-image:url('{{ asset('assets/img/covers/teams.jpg') }}')"></div>
+        <div class="container">
+            <h1 class="text-center">{{ 'season.teams.title'|trans({ '%year%': '<span class="text-primary">' ~ season.year ~ '</span>' })|raw }}</h1>
+        </div>
+    </div>
 
     <div class="container">
-        <ul id="teams">
-            {% for constructor in season.constructors %}
-                <li>
-                    <a href="{{ path('constructor', { 'slug': constructor.slug }) }}">{{ constructor.name }}</a>
-                    <ul>
-                        {% for driver in season.getDriversByConstructor(constructor) %}
-                        <li><a href="{{ path('driver', { 'slug': driver.slug }) }}">{{ driver.name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </li>
-            {% endfor %}
-        </ul>
+        {% for constructor in season.constructors %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2><a href="{{ path('constructor', { 'slug': constructor.slug }) }}">{{ constructor.name }}</a></h2>
+                </div>
+                <div class="panel-body">
+                    {% for driver in season.getDriversByConstructor(constructor) %}
+                        <h3><a href="{{ path('driver', { 'slug': driver.slug }) }}">{{ driver.name }}</a></h3>
+                    {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            <div class="alert alert-warning" role="alert">{{ 'na'|trans }}</div>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -42,12 +42,16 @@ class Builder
         $this->requestStack = $requestStack;
     }
 
-    public function createMainMenu()
+    public function createMainMenu($currentSeason)
     {
         $menu = $this->factory->createItem('root');
 
+        $params = ['year' => $currentSeason];
+        
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
-        $menu->addChild('navigation.main.seasons', [ 'route' => 'season_home' ]);
+        $menu->addChild('navigation.season.races', ['route' => 'season_races', 'routeParameters' => $params]);
+        $menu->addChild('navigation.season.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
+        $menu->addChild('navigation.season.standings', ['route' => 'season_standings', 'routeParameters' => $params]);
 
         return $menu;
     }
@@ -85,22 +89,6 @@ class Builder
             );
             $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
         }
-
-        return $menu;
-    }
-
-    public function createSeasonMenu()
-    {
-        $request = $this->requestStack->getCurrentRequest();
-        $params = ['year' => $request->get('year')];
-
-        $menu = $this->factory->createItem('root');
-
-        $menu->addChild('navigation.season.home', ['route' => 'season_home', 'routeParameters' => $params]);
-        $menu->addChild('navigation.season.races', ['route' => 'season_races', 'routeParameters' => $params]);
-        $menu->addChild('navigation.season.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
-        $menu->addChild('navigation.season.standings', ['route' => 'season_standings', 'routeParameters' => $params]);
-        $menu->addChild('navigation.season.graphs', ['route' => 'season_graphs', 'routeParameters' => $params]);
 
         return $menu;
     }

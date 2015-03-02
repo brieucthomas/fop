@@ -1,8 +1,12 @@
-{% extends ':season:layout.html.twig' %}
+{% extends '::base.html.twig' %}
 
 {% block content %}
-    {{ parent() }}
-
+    <div class="section section-inverse section-sm">
+        <div class="background" style="background-image:url('{{ asset('assets/img/covers/standings.jpg') }}')"></div>
+        <div class="container">
+            <h1 class="text-center">{{ 'season.standings.title'|trans({ '%year%': '<span class="text-primary">' ~ season.year ~ '</span>' })|raw }}</h1>
+        </div>
+    </div>
 
     <div class="container">
         {% if season.lastRaceWithResults %}
@@ -42,7 +46,7 @@
                 </div>
             </div>
         {% else %}
-            no data
+            <div class="alert alert-warning" role="alert">{{ 'na'|trans }}</div>
         {% endif %}
     </div>
 {% endblock %}

@@ -13,6 +13,7 @@ parameters:
     app_name: "FOP"
     app_version: "0.0.1"
     mail_noreply: "noreply@fop.com"
+    current_season: 2015
 
 framework:
     #esi:             ~
