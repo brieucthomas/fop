@@ -52,3 +52,9 @@ $ bin/console translation:extract --config=app
 $ heroku run bin/console doctrine:database:create
 $ heroku run bin/console doctrine:schema:create --force
 ```
+
+## Production
+
+``` bash
+$ bin/console assetic:dump 
+```

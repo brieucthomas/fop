@@ -20,6 +20,7 @@ var paths = {
     sass:  ['app/Resources/assets/sass/**/*.scss'],
     js:    ['app/Resources/assets/js/**/*.js'],
     img:   ['app/Resources/assets/img/**/*'],
+    fonts: ['app/Resources/assets/fonts/**/*.woff'],
     dist:  'web/assets'
 };
 
@@ -53,6 +54,11 @@ gulp.task('img', function () {
         .pipe(gulp.dest(paths.dist + '/img'));
 });
 
+gulp.task('fonts', function () {
+    return gulp.src(paths.fonts)
+        .pipe(gulp.dest(paths.dist + '/fonts'));
+});
+
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['css'])
         .on('change', function (evt) {
@@ -62,6 +68,6 @@ gulp.task('watch', function () {
         });
 });
 
-gulp.task('default', ['clean', 'css', 'js', 'img']);
+gulp.task('default', ['clean', 'css', 'js', 'img', 'fonts']);
 
-gulp.task('heroku:production', ['clean', 'css', 'js', 'img']);
+gulp.task('heroku:production', ['default']);
