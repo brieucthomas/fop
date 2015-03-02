@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-02T21:11:30Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+  <file date="2015-03-02T21:21:11Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -358,12 +358,12 @@
       <trans-unit id="d832ef2e97a2ef7f73f9de09f96d382dd92bf7c5" resname="season.standings.constrcutor.title">
         <jms:reference-file line="37">views/season/standings.html.twig</jms:reference-file>
         <source>season.standings.constrcutor.title</source>
-        <target state="new">season.standings.constrcutor.title</target>
+        <target>Équipes</target>
       </trans-unit>
       <trans-unit id="1f21addf96c0eab77905a84c46bcb2457f1929b6" resname="season.standings.driver.title">
         <jms:reference-file line="26">views/season/standings.html.twig</jms:reference-file>
         <source>season.standings.driver.title</source>
-        <target state="new">season.standings.driver.title</target>
+        <target>Pilotes</target>
       </trans-unit>
       <trans-unit id="201107d23cec1b1e3182c32fd4f417081b2e81c0" resname="season.standings.title">
         <jms:reference-file line="7">views/season/standings.html.twig</jms:reference-file>
@@ -373,7 +373,7 @@
       <trans-unit id="184bd57219be6bf996d2572497f8e9da4c8d8bc0" resname="season.standings.user.title">
         <jms:reference-file line="15">views/season/standings.html.twig</jms:reference-file>
         <source>season.standings.user.title</source>
-        <target state="new">season.standings.user.title</target>
+        <target>Joueurs</target>
       </trans-unit>
       <trans-unit id="e504dac8aa0240a3ece1563b2d0e1fe1916be90b" resname="season.teams.title">
         <jms:reference-file line="7">views/season/teams.html.twig</jms:reference-file>
