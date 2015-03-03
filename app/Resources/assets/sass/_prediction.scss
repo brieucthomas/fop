@@ -1,0 +1,14 @@
+//
+// Prediction
+// --------------------------------------------------
+
+#table-prediction {
+  > tbody > tr.wrapped {
+    background: $emerald;
+    color: #fff;
+  }
+  > tbody > tr.dragged {
+    background: $amethyst;
+    color: #fff;
+  }
+}

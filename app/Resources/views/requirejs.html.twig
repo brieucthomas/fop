@@ -9,12 +9,12 @@
             countdown: '{{ asset('vendor/jquery.countdown/dist/jquery.countdown.min') }}',
             d3: '{{ asset('vendor/d3/d3.min') }}',
             c3: '{{ asset('vendor/c3js-chart/c3.min') }}',
-            sortable: '{{ asset('vendor/jquery-sortable/source/js/jquery-sortable-min') }}'
+            tableDnD: '{{ asset('vendor/TableDnD/dist/jquery.tablednd.min') }}'
         },
         shim: {
             bootstrap: ['jquery'],
             countdown: ['jquery'],
-            sortable: ['jquery'],
+            tableDnD: ['jquery'],
             c3: ['d3']
         }
     });

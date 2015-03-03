@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 /**
  * The season controller.
  *
- * @Route("/seasons/{year}", requirements={"year" = "\d{4}"}, defaults={"year" = "2015"})
+ * @Route("/seasons/{year}", requirements={"year" = "\d{4}"})
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

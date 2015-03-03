@@ -10,7 +10,7 @@
             <div class="col-md-8">
                 <h2>{{ user.username }} Prediction</h2>
 
-                <table class="table table-bordered">
+                <table id="table-prediction" class="table table-bordered">
                     <thead>
                         <tr>
                             <th>POS.</th>
@@ -19,16 +19,7 @@
                             <th>Grid</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {% for team in race.season.teams %}
-                            <tr>
-                                <td>{{ loop.index }}</td>
-                                <td>{{ team.driver.shortName }}</td>
-                                <td>{{ team.constructor.name }}</td>
-                                <td></td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
+                    <tbody></tbody>
                 </table>
 
                 {{ form_start(form) }}

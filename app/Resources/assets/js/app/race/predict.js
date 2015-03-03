@@ -1,60 +1,93 @@
-require(['jquery', 'sortable'], function ($, Sortable) {
+require(['jquery', 'tableDnD'], function ($, tableDnD) {
 
-    var form = $('[name=prediction]'),
-        list = $('#list-teams');
+    var $table = $('table#table-prediction'),
+        $form = $('form[name=prediction]'),
+        $selects = $form.find('select'),
+        limit = $selects.length
 
-    form.find('.form-group:first').addClass('no-sr-only');
+    $selects.on('change', function () {
+        // remove this option to other selects
+        updateForm()
+        buildTableFromForm()
+    })
 
-    form.find('select').on('change', function () {
-        updateListFromForm(list, form);
-    });
+    function buildTableFromForm() {
+        var counter = 1
+        // remove all rows
+        $table.find('> tbody > tr').remove()
+        // generate rows from form
+        $form.find('option:selected').each(function (index, option) {
+            var values = $(option).text().split(' - ')
+            $table.find('> tbody').append(
+                $('<tr>')
+                    .attr('id', 'team-' + $(option).val())
+                    .append($('<td>').text(counter++))
+                    .append($('<td>').text(values[1]))
+                    .append($('<td>').text(values[2]))
+                    .append($('<td>').text(''))
+            )
+        })
+        // complete with other drivers
+        $form.find('select:first option').each(function (index, option) {
+            if ($table.find('tr#team-' + $(option).val()).length) {
+                return; // next option
+            }
+            var values = $(option).text().split(' - ')
+            $table.find('> tbody').append(
+                $('<tr>')
+                    .attr('id', 'team-' + $(this).val())
+                    .append($('<td>').text(counter++))
+                    .append($('<td>').text(values[1]))
+                    .append($('<td>').text(values[2]))
+                    .append($('<td>').text(''))
+            )
+        })
+        // init table
+        $table.tableDnD({
+            onDragClass: 'dragged',
+            onDrop: function (table, row) {
+                updateTable()
+                updateFormFromTable()
+            }
+        })
+        updateTable()
+    }
 
-    list.sortable({
-        onDrop: function (item, targetContainer, _super) {
-            updateFormFromList(form, list);
-        }
-    });
+    function updateTable() {
+        // update bg
+        $table
+            .find('> tbody > tr')
+            .removeClass('wrapped')
+            .slice(0, limit)
+            .addClass('wrapped')
 
-    updateListFromForm(list, form);
+        // update positions
+        $table.find('> tbody > tr').each(function (index, row) {
+            $(row).find('.predicted-position').text(++index)
+        })
+    }
+
+    function updateForm() {
+        // show all options
+        $form.find('option').show()
+        // hide selected options
+        $form.find('option:selected').each(function (index, option) {
+            $form.find('option[value=' + $(option).val() + ']').not(this).hide();
+        })
+    }
+
+    function updateFormFromTable() {
+        // show all options
+        $form.find('option').show()
+        $table.find('> tbody > tr').each(function(index, row) {
+            $form.find('select:eq(' + index + ')').val($(row).attr('id').replace('team-',''))
+        })
+    }
+
+    updateForm()
+    buildTableFromForm()
+
+
+    $form.addClass('sr-only')
 });
 
-function removeListItems(list) {
-    list.find('> li').remove();
-}
-
-function updateListFromForm(list, form) {
-    var limit = form.find('select').length;
-
-    removeListItems();
-
-    form.find('select').first().find('> option').each(function () {
-        appendListItemFromSelect(list, $(this));
-    });
-
-    form.find('options:selected').each(function () {
-        removeListItemFromSelect(list, $(this));
-        prependListItemFromSelect(list, $(this));
-    });
-
-    list.find('> li').removeClass('bg-success').slice(0, limit).addClass('bg-success');
-}
-
-
-function updateFormFromList(form, list) {
-    form.find('select').each(function (index, el) {
-        var id = list.find('> li').eq(index).data('id');
-        $(this).val(id);
-    });
-}
-
-function prependListItemFromSelect(list, select) {
-    list.prepend($('<li>').data('id', select.val()).append(select.text()));
-}
-
-function appendListItemFromSelect(list, select) {
-    list.append($('<li>').data('id', select.val()).append(select.text()));
-}
-
-function removeListItemFromSelect(list, select) {
-    list.find('li[data-id=' + select.val() + ']').remove();
-}
