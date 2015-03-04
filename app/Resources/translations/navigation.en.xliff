@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-02T21:11:15Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2015-03-04T19:15:51Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -29,10 +29,6 @@
       <trans-unit id="608639295088059ddcd562109ffa745303b2553d" resname="navigation.main.home">
         <source>navigation.main.home</source>
         <target state="new">navigation.main.home</target>
-      </trans-unit>
-      <trans-unit id="1705f182d2164e6f363132f4068dfda01dc13dc8" resname="navigation.season.graphs">
-        <source>navigation.season.graphs</source>
-        <target state="new">navigation.season.graphs</target>
       </trans-unit>
       <trans-unit id="9de9795373bc73bffc2ac7be6a6052b53e4532cb" resname="navigation.season.races">
         <source>navigation.season.races</source>

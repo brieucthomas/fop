@@ -9,6 +9,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\Season;
 use AppBundle\Entity\User;
@@ -63,12 +64,12 @@ class PredictionService implements PredictionServiceInterface
     /**
      * Constructor.
      *
-     * @param EntityManagerInterface               $em
-     * @param PredictionRepositoryInterface        $predictionRepository
+     * @param EntityManagerInterface $em
+     * @param PredictionRepositoryInterface $predictionRepository
      * @param FinishingPositionRepositoryInterface $finishingPositionRepository
-     * @param SeasonRepositoryInterface            $seasonRepository
-     * @param UserRepositoryInterface              $userRepository
-     * @param UserStandingsRepositoryInterface     $userStandingsRepository
+     * @param SeasonRepositoryInterface $seasonRepository
+     * @param UserRepositoryInterface $userRepository
+     * @param UserStandingsRepositoryInterface $userStandingsRepository
      */
     public function __construct(
         EntityManagerInterface $em,
@@ -84,6 +85,30 @@ class PredictionService implements PredictionServiceInterface
         $this->seasonRepository = $seasonRepository;
         $this->userRepository = $userRepository;
         $this->userStandingsRepository = $userStandingsRepository;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function findByRaceAndUser(Race $race, User $user)
+    {
+        return $this->findByRaceAndUser($race, $user);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Prediction $prediction)
+    {
+        $this->em->beginTransaction();
+
+        try {
+            $this->predictionRepository->remove($prediction)->save($prediction);
+            $this->em->commit();
+        } catch (\Exception $failure) {
+            $this->em->rollback();
+            throw $failure;
+        }
     }
 
     /**

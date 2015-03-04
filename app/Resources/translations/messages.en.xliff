@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-02T21:11:15Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2015-03-04T19:15:51Z" source-language="en" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -70,22 +70,22 @@
         <target>FOP</target>
       </trans-unit>
       <trans-unit id="824f6713ea170ca421767df734eaf26bc17b20bc" resname="homepage.last-race.date">
-        <jms:reference-file line="69">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="73">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.last-race.date</source>
         <target state="new">homepage.last-race.date</target>
       </trans-unit>
       <trans-unit id="fac0c33e22a2a37eb0e0cfe98788505132a409b1" resname="homepage.last-race.round">
-        <jms:reference-file line="65">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="69">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.last-race.round</source>
         <target state="new">homepage.last-race.round</target>
       </trans-unit>
       <trans-unit id="59b13a4341528446de0cb41ecd44c3e7bdd0c83b" resname="homepage.last-race.time">
-        <jms:reference-file line="73">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="77">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.last-race.time</source>
         <target state="new">homepage.last-race.time</target>
       </trans-unit>
       <trans-unit id="329b9114528aff7fa319e0053cbee91890739a1d" resname="homepage.last-race.title">
-        <jms:reference-file line="54">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="58">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.last-race.title</source>
         <target state="new">homepage.last-race.title</target>
       </trans-unit>
@@ -93,6 +93,16 @@
         <jms:reference-file line="21">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.next-race.date</source>
         <target state="new">homepage.next-race.date</target>
+      </trans-unit>
+      <trans-unit id="ba397b5546f2b9f6ad73fd33eae6854ebb933ba8" resname="homepage.next-race.login-to-predict">
+        <jms:reference-file line="49">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.next-race.login-to-predict</source>
+        <target state="new">homepage.next-race.login-to-predict</target>
+      </trans-unit>
+      <trans-unit id="e80c19f41c791e15039eb8a0123b39b434a7dc9c" resname="homepage.next-race.predict-now">
+        <jms:reference-file line="47">views/main/homepage.html.twig</jms:reference-file>
+        <source>homepage.next-race.predict-now</source>
+        <target state="new">homepage.next-race.predict-now</target>
       </trans-unit>
       <trans-unit id="e39aaf3a8e01c0bcb8559c7c91ba811001e4914f" resname="homepage.next-race.predictions">
         <jms:reference-file line="29">views/main/homepage.html.twig</jms:reference-file>
@@ -121,16 +131,17 @@
         <target state="new">homepage.next-race.winner</target>
       </trans-unit>
       <trans-unit id="578c55851c9855f7f85a8489d41ec5e4bfee4f85" resname="homepage.standings.finished">
-        <jms:reference-file line="98">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="102">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.finished</source>
         <target state="new">homepage.standings.finished</target>
       </trans-unit>
       <trans-unit id="06f7cd36ea737097c4fcabe4ddda8d1d57f1ceb7" resname="homepage.standings.user">
-        <jms:reference-file line="96">views/main/homepage.html.twig</jms:reference-file>
+        <jms:reference-file line="100">views/main/homepage.html.twig</jms:reference-file>
         <source>homepage.standings.user</source>
         <target state="new">homepage.standings.user</target>
       </trans-unit>
       <trans-unit id="5efb4ac2212f109ebc889dc2a735f791dfc4119a" resname="na">
+        <jms:reference-file line="49">views/season/standings.html.twig</jms:reference-file>
         <jms:reference-file line="24">views/season/teams.html.twig</jms:reference-file>
         <source>na</source>
         <target state="new">na</target>

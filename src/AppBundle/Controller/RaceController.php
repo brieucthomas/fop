@@ -44,7 +44,7 @@ class RaceController extends Controller
     }
 
     /**
-     * @Route("/{season}/{round}/predict/{slug}", name="race_prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
+     * @Route("/{season}/{round}/predict/{slug}", name="prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
      *
      * @Method({"GET", "POST"})
      * @Security("has_role('ROLE_USER')")
@@ -52,7 +52,7 @@ class RaceController extends Controller
      */
     public function predictAction(Request $request, Race $race, User $user)
     {
-        $prediction = $this->get('prediction_repository')->findByRaceAndUser($race, $user);
+        $prediction = $this->get('prediction_service')->findByRaceAndUser($race, $user);
 
         if (!$prediction) {
             $prediction = new Prediction($race, $user);
@@ -70,14 +70,12 @@ class RaceController extends Controller
         $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
         $form->handleRequest($request);
 
-        $teams = $this->get('team_repository')->findByYear($race->getSeason()->getYear());
-
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->get('prediction_repository')->save($prediction);
+            $this->get('prediction_service')->save($prediction);
 
             return $this->redirect(
                 $this->generateUrl(
-                    'race_prediction',
+                    'prediction',
                     [
                         'season' => $race->getSeason()->getYear(),
                         'round'  => $race->getRound(),

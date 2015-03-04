@@ -31,6 +31,15 @@ interface PredictionRepositoryInterface
     public function findByRaceAndUser(Race $race, User $user);
 
     /**
+     * Removes a prediction.
+     *
+     * @param Prediction $prediction A prediction entity
+     *
+     * @return $this
+     */
+    public function remove(Prediction $prediction);
+
+    /**
      * Saves a prediction.
      *
      * @param Prediction $prediction A Prediction entity

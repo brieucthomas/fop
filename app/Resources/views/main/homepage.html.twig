@@ -43,7 +43,11 @@
                     {% endif %}
                 </ul>
                 <p id="next-race-remaining-time" data-date="{{ nextRace.date.timestamp * 1000 }}" data-format="%D:%H:%M:%S"></p>
-                <p><a class="btn btn-primary btn-lg" href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}" role="button">Learn more »</a></p>
+                {% if app.user %}
+                    <p><a class="btn btn-primary" href="{{ path('prediction', { 'season': nextRace.season.year, 'round': nextRace.round, 'slug': app.user.slug }) }}">{{ 'homepage.next-race.predict-now'|trans }} »</a></p>
+                {% else %}
+                    <p class="text-danger">{{ 'homepage.next-race.login-to-predict'|trans }}</p>
+                {% endif %}
             </div>
         </section>
     {% endif %}

@@ -32,6 +32,16 @@ class PredictionRepository extends EntityRepository implements PredictionReposit
     /**
      * {@inheritdoc}
      */
+    public function remove(Prediction $prediction)
+    {
+        $this->_em->remove($prediction);
+
+        return $this;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function save(Prediction $prediction)
     {
         $this->_em->persist($prediction);

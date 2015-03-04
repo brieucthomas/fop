@@ -19,7 +19,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass="AppBundle\Repository\FinishingPositionRepository")
  * @ORM\Table(uniqueConstraints={
  *     @ORM\UniqueConstraint(columns={"prediction_id", "team_id"}),
- *     @ORM\UniqueConstraint(columns={"prediction_id", "predicted_position"})
  * })
  * @UniqueEntity({"prediction", "team"})
  * @UniqueEntity({"prediction", "predictedPosition"})
@@ -29,19 +28,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 class FinishingPosition
 {
     /**
-     * The prediction identifier.
-     *
-     * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     *
-     * @var int
-     */
-    protected $id;
-
-    /**
      * The prediction entity.
      *
+     * @ORM\Id
      * @ORM\ManyToOne(targetEntity="Prediction", inversedBy="finishingPositions")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\NotNull
@@ -53,6 +42,7 @@ class FinishingPosition
     /**
      * The predicted position.
      *
+     * @ORM\Id
      * @ORM\Column(type="integer")
      * @Assert\NotBlank
      * @Assert\GreaterThanOrEqual(1)
@@ -91,16 +81,6 @@ class FinishingPosition
      * @var int
      */
     protected $points;
-
-    /**
-     * Return the identifier identifier.
-     *
-     * @return int The identifier identifier
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Returns the prediction entity.

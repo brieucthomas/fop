@@ -18,6 +18,9 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
         // generate rows from form
         $form.find('option:selected').each(function (index, option) {
             var values = $(option).text().split(' - ')
+            if ($table.find('> tbody > tr#team-' + $(option).val()).length) {
+                return;
+            }
             $table.find('> tbody').append(
                 $('<tr>')
                     .attr('id', 'team-' + $(option).val())
@@ -88,6 +91,6 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
     buildTableFromForm()
 
 
-    $form.addClass('sr-only')
+    //$form.find('#prediction').addClass('sr-only')
 });
 

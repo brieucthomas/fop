@@ -28,7 +28,7 @@ class FinishingPositionRepository extends EntityRepository implements FinishingP
     {
         $builder = $this->createQueryBuilder('fp');
         $builder
-            ->select('fp.id', 'r.position')
+            ->select('fp', 'r.position')
             ->join('fp.prediction', 'p')
             ->leftJoin(
                 'AppBundle:Result',
@@ -48,7 +48,7 @@ class FinishingPositionRepository extends EntityRepository implements FinishingP
 
         foreach ($rows as $row) {
             /* @var $finishingPosition FinishingPosition */
-            $finishingPosition = $this->find($row['id']);
+            $finishingPosition = reset($row);
             $finishingPosition->setFinishingPosition($row['position']);
 
             $this->_em->persist($finishingPosition);
