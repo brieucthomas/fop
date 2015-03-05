@@ -44,7 +44,7 @@ class RaceController extends Controller
     }
 
     /**
-     * @Route("/{season}/{round}/predict/{slug}", name="prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z_]*"})
+     * @Route("/{season}/{round}/predict/{slug}", name="prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z0-9_]*"})
      *
      * @Method({"GET", "POST"})
      * @Security("has_role('ROLE_USER')")
@@ -72,6 +72,7 @@ class RaceController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->get('prediction_service')->save($prediction);
+            $this->get('session')->getFlashBag()->add('success', $this->get('translator')->trans('race.prediction.success'));
 
             return $this->redirect(
                 $this->generateUrl(
