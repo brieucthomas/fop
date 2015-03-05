@@ -90,7 +90,6 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
     updateForm()
     buildTableFromForm()
 
-
-    //$form.find('#prediction').addClass('sr-only')
+    $form.find('#prediction').addClass('sr-only')
 });
 

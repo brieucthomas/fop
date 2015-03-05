@@ -92,7 +92,7 @@ class PredictionService implements PredictionServiceInterface
      */
     public function findByRaceAndUser(Race $race, User $user)
     {
-        return $this->findByRaceAndUser($race, $user);
+        return $this->predictionRepository->findByRaceAndUser($race, $user);
     }
 
     /**

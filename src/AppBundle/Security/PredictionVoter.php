@@ -43,19 +43,29 @@ class PredictionVoter extends AbstractVoter
      */
     protected function isGranted($attribute, $prediction, $user = null)
     {
-        if (!$user instanceof UserInterface) {
-            return false;
-        }
+        $isLogged = ($user instanceof UserInterface);
+        $isUser = ($isLogged && in_array('ROLE_USER', $user->getRoles(), true));
+        $isAdmin = ($isLogged && in_array('ROLE_ADMIN', $user->getRoles(), true));
+        $isFinished = $prediction->getRace()->isFinished();
+        $isAuthor = $prediction->isAuthor($user);
 
-        if (in_array('ROLE_ADMIN', $user->getRoles(), true)) {
+        // Administrators can do anythings
+        if ($isAdmin) {
             return true;
         }
 
-        if ($attribute === self::SHOW && ($prediction->isAuthor($user) || $prediction->getRace()->isFinished())) {
+        // Finished predictions can be shown be everybody
+        if ($attribute === self::SHOW && $isFinished) {
             return true;
         }
 
-        if ($attribute === self::EDIT && in_array('ROLE_USER', $user->getRoles(), true) && $prediction->isAuthor($user) && !$prediction->getRace()->isFinished()) {
+        // Only author can show his prediction
+        if ($attribute === self::SHOW && (!$isFinished) && $isAuthor) {
+            return true;
+        }
+
+        // Only author can edit his unfinished prediction
+        if ($attribute === self::EDIT && $isUser && $isAuthor && (!$isFinished)) {
             return true;
         }
 

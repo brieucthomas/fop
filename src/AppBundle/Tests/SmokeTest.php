@@ -30,7 +30,6 @@ class SmokeTest extends WebTestCase
             ['/en/drivers/hamilton'],
             ['/en/users/user1'],
             ['/en/races/2014/1'],
-            ['/en/seasons/2014'],
             ['/en/seasons/2014/races'],
             ['/en/seasons/2014/teams'],
             ['/en/seasons/2014/standings'],

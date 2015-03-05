@@ -38,7 +38,6 @@
         "brieucthomas/ergast-client": "~1.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "~2.3",
         "phpunit/phpunit": "~4.4",
         "liip/functional-test-bundle": "~1.0",
         "doctrine/data-fixtures": "~1.0@dev",

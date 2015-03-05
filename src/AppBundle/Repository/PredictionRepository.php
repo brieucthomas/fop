@@ -35,6 +35,8 @@ class PredictionRepository extends EntityRepository implements PredictionReposit
     public function remove(Prediction $prediction)
     {
         $this->_em->remove($prediction);
+        $this->_em->flush();
+        $this->_em->getUnitOfWork()->clear();
 
         return $this;
     }

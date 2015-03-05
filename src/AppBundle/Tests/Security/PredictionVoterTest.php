@@ -51,6 +51,22 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
 
+    public function testAnonymousCannotShowPredictionWhenTheRaceIsNotFinished()
+    {
+        $token = $this->getMockedToken();
+        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
+
+        $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['show']));
+    }
+
+    public function testAnonymousCanShowPredictionWhenTheRaceIsFinished()
+    {
+        $token = $this->getMockedToken();
+        $prediction = new Prediction($this->getFinishedRace(), $this->getUserLoggedAsUser(2));
+
+        $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
+    }
+
     public function testUserCanShowOtherPredictionWhenTheRaceInFinished()
     {
         $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
