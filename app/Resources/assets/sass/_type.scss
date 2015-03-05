@@ -236,7 +236,8 @@
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    padding: 22rem 0 18rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
     text-align: left;
   }
 }
@@ -244,13 +245,6 @@
 .section-inverse {
   background-color: $gray-darker;
   color: #fff;
-}
-
-.section-sm {
-  @media (min-width: $grid-float-breakpoint) {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
 }
 
 .section-left {
@@ -261,8 +255,8 @@
 
 .section-lg {
   @media (min-width: $grid-float-breakpoint) {
-    padding-top: 250px;
-    padding-bottom: 250px;
+    padding-top: 22rem;
+    padding-bottom: 22rem;
   }
 }
 

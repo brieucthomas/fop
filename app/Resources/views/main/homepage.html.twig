@@ -4,7 +4,7 @@
 
 {% block content %}
     {% if nextRace %}
-        <section id="next-race" class="section section-inverse">
+        <section id="next-race" class="section section-lg section-inverse">
             <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
                 <h1 class="h4 text-muted">{{ 'homepage.next-race.title'|trans }}</h1>
@@ -95,7 +95,7 @@
     {% endif %}
 
     {% if lastRaceWithResults %}
-        <section class="section section-sm bg-clouds">
+        <section class="section bg-clouds">
             <div class="container">
                 <h1 class="text-center">{{ 'homepage.standings.user'|trans({ '%year%': '<span class="text-primary">' ~ lastRaceWithResults.season.year ~ '</span>' })|raw }}</h1>
                 {% if lastRaceWithResults.season.finished %}
