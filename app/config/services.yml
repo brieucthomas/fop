@@ -183,7 +183,7 @@ services:
          class: Knp\Menu\MenuItem
          factory_service: menu_builder
          factory_method: createUserMenu
-         arguments: ["@security.authorization_checker"]
+         arguments: ["@security.authorization_checker", "@security.token_storage"]
          tags:
              - { name: knp_menu.menu, alias: user }
     menu_locale_switcher:

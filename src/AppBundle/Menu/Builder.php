@@ -9,9 +9,12 @@
 
 namespace AppBundle\Menu;
 
+use AppBundle\Entity\User;
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
+use Symfony\Component\Security\Core\SecurityContextInterface;
+use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 /**
  * The menu builder.
@@ -56,12 +59,16 @@ class Builder
         return $menu;
     }
 
-    public function createUserMenu(AuthorizationCheckerInterface $authorizationChecker)
+    public function createUserMenu(AuthorizationCheckerInterface $authorizationChecker, TokenStorageInterface $storage)
     {
         $menu = $this->factory->createItem('root');
 
         if ($authorizationChecker->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            $menu->addChild('navigation.user.logout', ['route' => 'fos_user_security_logout']);
+            /* @var $user User */
+            $user = $storage->getToken()->getUser();
+            $parent = $menu->addChild($user->getUsername());
+            $parent->addChild('navigation.user.profile', ['route' => 'user', 'routeParameters' => [ 'slug' => $user->getSlug() ]]);
+            $parent->addChild('navigation.user.logout', ['route' => 'fos_user_security_logout']);
         } else {
             $menu->addChild('navigation.user.login', ['route' => 'fos_user_security_login', 'class']);
             $menu->addChild('navigation.user.register', ['route' => 'fos_user_registration_register']);
