@@ -43,9 +43,15 @@ class PredictionVoter extends AbstractVoter
      */
     protected function isGranted($attribute, $prediction, $user = null)
     {
-        $isLogged = ($user instanceof UserInterface);
-        $isUser = ($isLogged && in_array('ROLE_USER', $user->getRoles(), true));
-        $isAdmin = ($isLogged && in_array('ROLE_ADMIN', $user->getRoles(), true));
+        if ($user instanceof UserInterface) {
+            $isLogged = true;
+            $isUser = in_array('ROLE_USER', $user->getRoles(), true);
+            $isAdmin = in_array('ROLE_ADMIN', $user->getRoles(), true);
+            $isAuthor = $prediction->isAuthor($user);
+        } else {
+            $isLogged = $isUser = $isAuthor = $isAdmin = false;
+        }
+
         $isFinished = $prediction->getRace()->isFinished();
         $isAuthor = $prediction->isAuthor($user);
 
