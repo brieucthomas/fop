@@ -19,6 +19,7 @@ use AppBundle\Repository\PredictionRepositoryInterface;
 use AppBundle\Repository\SeasonRepositoryInterface;
 use AppBundle\Repository\UserRepositoryInterface;
 use AppBundle\Repository\UserStandingsRepositoryInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -135,42 +136,46 @@ class PredictionService implements PredictionServiceInterface
             $previousRace = null;
 
             foreach ($season->getRaces() as $race) {
-                /* @var $race Race */
-                foreach ($users as $user) {
-                    /* @var $user User */
-                    if ($previousRace) {
-                        $userStanding = clone $previousRace->getUserStandingsByUser($user);
-                    } else {
-                        $userStanding = new UserStandings();
-                        $userStanding->setUser($user);
-                    }
-
-                    $race->addUserStandings($userStanding);
-
-                    $prediction = $race->getPredictionByUser($user);
-
-                    if ($prediction) {
-                        $userStanding->addPoints($prediction->getPoints());
-
-                        if ($prediction->isWin()) {
-                            $userStanding->increaseWins();
+                if ($race->hasResults()) {
+                    /* @var $race Race */
+                    foreach ($users as $user) {
+                        /* @var $user User */
+                        if ($previousRace) {
+                            $userStanding = clone $previousRace->getUserStandingsByUser($user);
+                        } else {
+                            $userStanding = new UserStandings();
+                            $userStanding->setUser($user);
                         }
-                    } else {
-                        $userStanding->addPoints($race->getBonus());
+
+                        $race->addUserStandings($userStanding);
+
+                        $prediction = $race->getPredictionByUser($user);
+
+                        if ($prediction) {
+                            $userStanding->addPoints($prediction->getPoints());
+
+                            if ($prediction->isWin()) {
+                                $userStanding->increaseWins();
+                            }
+                        } else {
+                            $userStanding->addPoints($race->getBonus());
+                        }
                     }
+
+                    $userStandings = $race->getUserStandings()->matching(
+                        Criteria::create()->orderBy(['points' => Criteria::DESC])
+                    );
+
+                    $position = 0;
+                    foreach ($userStandings as $userStanding) {
+                        /* @var $userStanding UserStandings */
+                        $userStanding->setPosition(++$position);
+                    }
+
+                    $race->setUserStandings($userStandings);
+                } else {
+                    $race->setUserStandings(new ArrayCollection());
                 }
-
-                $userStandings = $race->getUserStandings()->matching(
-                    Criteria::create()->orderBy(['points' => Criteria::DESC])
-                );
-
-                $position = 0;
-                foreach ($userStandings as $userStanding) {
-                    /* @var $userStanding UserStandings */
-                    $userStanding->setPosition(++$position);
-                }
-
-                $race->setUserStandings($userStandings);
 
                 $previousRace = $race;
             }

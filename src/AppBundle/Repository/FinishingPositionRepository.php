@@ -49,7 +49,7 @@ class FinishingPositionRepository extends EntityRepository implements FinishingP
         foreach ($rows as $row) {
             /* @var $finishingPosition FinishingPosition */
             $finishingPosition = reset($row);
-            $finishingPosition->setFinishingPosition($row['position']);
+            $finishingPosition->setFinishingPosition(($row['position'] > 0)? $row['position'] : null);
 
             $this->_em->persist($finishingPosition);
         }
