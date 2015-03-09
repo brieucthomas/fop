@@ -592,22 +592,24 @@ class Race
      */
     public function computePredictionsPoints(ScoringSystem $system)
     {
-        // compute predictions points
-        foreach ($this->predictions as $prediction) {
-            /* @var $prediction Prediction */
-            $prediction->computePoints($system);
-        }
+        if ($this->hasResults()) {
+            // compute predictions points
+            foreach ($this->predictions as $prediction) {
+                /* @var $prediction Prediction */
+                $prediction->computePoints($system);
+            }
 
-        // set prediction positions
-        $this->predictions = $this->predictions->matching(
-            Criteria::create()->orderBy(['points' => Criteria::DESC, 'date' => Criteria::ASC])
-        );
+            // set prediction positions
+            $this->predictions = $this->predictions->matching(
+                Criteria::create()->orderBy(['points' => Criteria::DESC, 'date' => Criteria::ASC])
+            );
 
-        $position = 1;
+            $position = 1;
 
-        foreach ($this->predictions as $prediction) {
-            /* @var $prediction Prediction */
-            $prediction->setPosition($position++);
+            foreach ($this->predictions as $prediction) {
+                /* @var $prediction Prediction */
+                $prediction->setPosition($position++);
+            }
         }
 
         return $this;
