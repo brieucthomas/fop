@@ -43,35 +43,23 @@ class PredictionVoter extends AbstractVoter
      */
     protected function isGranted($attribute, $prediction, $user = null)
     {
-        if ($user instanceof UserInterface) {
-            $isLogged = true;
-            $isUser = in_array('ROLE_USER', $user->getRoles(), true);
-            $isAdmin = in_array('ROLE_ADMIN', $user->getRoles(), true);
-            $isAuthor = $prediction->isAuthor($user);
-        } else {
-            $isLogged = $isUser = $isAuthor = $isAdmin = false;
-        }
-
-        $isFinished = $prediction->getRace()->isFinished();
-        $isAuthor = $prediction->isAuthor($user);
-
         // Administrators can do anythings
-        if ($isAdmin) {
+        if ($user instanceof UserInterface && in_array('ROLE_ADMIN', $user->getRoles(), true)) {
             return true;
         }
 
         // Finished predictions can be shown be everybody
-        if ($attribute === self::SHOW && $isFinished) {
+        if ($attribute === self::SHOW && $prediction->getRace()->isFinished()) {
             return true;
         }
 
         // Only author can show his prediction
-        if ($attribute === self::SHOW && (!$isFinished) && $isAuthor) {
+        if ($attribute === self::SHOW && (!$prediction->getRace()->isFinished()) && $user instanceof UserInterface && $prediction->isAuthor($user)) {
             return true;
         }
 
         // Only author can edit his unfinished prediction
-        if ($attribute === self::EDIT && $isUser && $isAuthor && (!$isFinished)) {
+        if ($attribute === self::EDIT && $user instanceof UserInterface && in_array('ROLE_USER', $user->getRoles(), true) && $prediction->isAuthor($user) && (!$prediction->getRace()->isFinished())) {
             return true;
         }
 
