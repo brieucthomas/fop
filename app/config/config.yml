@@ -12,7 +12,8 @@ parameters:
     database_prefix: fop_
     app_name: "FOP"
     app_version: "0.0.1"
-    mail_noreply: "noreply@fop.com"
+    mail_noreply: "noreply@fop.wtf"
+    mail_admin: "postmaster@fop.wtf"
     current_season: 2015
 
 framework:

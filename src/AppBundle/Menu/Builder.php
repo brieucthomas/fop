@@ -100,14 +100,11 @@ class Builder
         return $menu;
     }
 
-    public function createFooterMenu()
+    public function createFooterMenu($contactEmail)
     {
         $menu = $this->factory->createItem('root');
 
-        $menu->addChild('navigation.footer.about_us', ['route' => 'homepage']);
-        $menu->addChild('navigation.footer.faq', ['route' => 'homepage']);
-        $menu->addChild('navigation.footer.privacy', ['route' => 'homepage']);
-        $menu->addChild('navigation.footer.contact', ['route' => 'homepage']);
+        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:' . $contactEmail]);
 
         return $menu;
     }
