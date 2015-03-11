@@ -1,0 +1,16 @@
+//
+// Signup
+// --------------------------------------------------
+
+#signup {
+  margin-top: 50px;
+
+  h1 {
+    font-size: $font-size-large * 1.5;
+    text-align: center;
+  }
+
+  @media (min-width: $grid-float-breakpoint-max) {
+    margin-top: 150px;
+  }
+}

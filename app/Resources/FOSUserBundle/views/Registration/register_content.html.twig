@@ -1,5 +1,10 @@
-<form id="form-signup" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
-    <h1>{{ 'signup.title'|trans }}</h1>
-    {{ form_widget(form) }}
-    <button type="submit" class="btn btn-primary btn-block">{{ 'signup.submit'|trans }}</button>
-</form>
+<div id="signup" class="row">
+    <div class="col-md-offset-4 col-md-4">
+        <h1>{{ 'signup.title'|trans }}</h1>
+        <form id="form-signup" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="well">
+            {{ form_widget(form) }}
+            <button type="submit" class="btn btn-primary btn-block">{{ 'signup.submit'|trans }}</button>
+        </form>
+    </div>
+</div>
+
