@@ -89,7 +89,9 @@ class Builder
                 [
                     'route'           => $request->get('_route'),
                     'routeParameters' => array_merge($request->get('_route_params'), ['_locale' => $local]),
-                    /* @Ignore */
+                    /**
+                     * @Ignore
+                     */
                     'label'           => $local,
                 ]
             );
