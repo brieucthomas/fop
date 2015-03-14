@@ -158,6 +158,18 @@ class Season
     }
 
     /**
+     * Returns the season races.
+     *
+     * @return ArrayCollection A collection of race entities
+     */
+    public function getRacesWithResults()
+    {
+        return $this->races->filter(function(Race $race){
+            return $race->hasResults();
+        });
+    }
+
+    /**
      * @param Race $race
      *
      * @return $this

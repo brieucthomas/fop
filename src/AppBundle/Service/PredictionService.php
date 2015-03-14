@@ -19,6 +19,7 @@ use AppBundle\Repository\PredictionRepositoryInterface;
 use AppBundle\Repository\SeasonRepositoryInterface;
 use AppBundle\Repository\UserRepositoryInterface;
 use AppBundle\Repository\UserStandingsRepositoryInterface;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -134,7 +135,7 @@ class PredictionService implements PredictionServiceInterface
             /* @var $previousRace Race */
             $previousRace = null;
 
-            foreach ($season->getRaces() as $race) {
+            foreach ($season->getRacesWithResults() as $race) {
                 /* @var $race Race */
                 foreach ($users as $user) {
                     /* @var $user User */

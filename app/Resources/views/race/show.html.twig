@@ -79,7 +79,6 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">{{ 'race.qualifying.position'|trans }}</th>
-                                    <th scope="col">{{ 'race.qualifying.nationality'|trans }}</th>
                                     <th scope="col">{{ 'race.qualifying.driver'|trans }}</th>
                                     <th scope="col">{{ 'race.qualifying.constructor'|trans }}</th>
                                     <th scope="col">{{ 'race.qualifying.q1'|trans }}</th>
@@ -91,7 +90,6 @@
                                 {% for qualifying in race.qualifying %}
                                     <tr>
                                         <td>{{ qualifying.position }}</td>
-                                        <td>{{ qualifying.team.driver.nationality|country }}</td>
                                         <td>{{ qualifying.team.driver.shortName }}</td>
                                         <td>{{ qualifying.team.constructor.name }}</td>
                                         <td>{{ qualifying.q1 }}</td>
@@ -108,7 +106,6 @@
                                 <thead>
                                 <tr>
                                     <th scope="col">{{ 'race.results.position'|trans }}</th>
-                                    <th scope="col">{{ 'race.results.nationality'|trans }}</th>
                                     <th scope="col">{{ 'race.results.driver'|trans }}</th>
                                     <th scope="col">{{ 'race.results.constructor'|trans }}</th>
                                     <th scope="col">{{ 'race.results.laps'|trans }}</th>
@@ -121,7 +118,6 @@
                                 {% for result in race.results %}
                                     <tr>
                                         <td>{{ result.position }}</td>
-                                        <td>{{ result.team.driver.nationality|country }}</td>
                                         <td>{{ result.team.driver.shortName }}</td>
                                         <td>{{ result.team.constructor.name }}</td>
                                         <td>{{ result.laps }}</td>
