@@ -23,6 +23,14 @@ class DriverRepository extends EntityRepository implements DriverRepositoryInter
     /**
      * {@inheritdoc}
      */
+    public function findBySlug($slug)
+    {
+        return $this->findOneBy(['slug' => $slug]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function findBySlugs(array $slugs)
     {
         $builder = $this->_em->createQueryBuilder();

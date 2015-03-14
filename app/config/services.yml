@@ -231,7 +231,6 @@ services:
         arguments: ["@doctrine.orm.default_entity_manager", "@season_service"]
         calls:
             - [ addLoader, ["@ergast_loader_race"] ]
-            - [ addLoader, ["@ergast_loader_team"] ]
             - [ addLoader, ["@ergast_loader_qualifying"] ]
             - [ addLoader, ["@ergast_loader_finishing_status"] ]
             - [ addLoader, ["@ergast_loader_result"] ]
@@ -244,14 +243,12 @@ services:
             - [ setCountry, ["@country"] ]
             - [ setNationality, ["@nationality"] ]
             - [ setSeasonService, ["@season_service"] ]
+            - [ setDriverService, ["@driver_service"] ]
+            - [ setConstructorService, ["@constructor_service"] ]
     ergast_loader_race:
         class: AppBundle\Ergast\Loader\RaceLoader
         parent: ergast_loader
         arguments: ["@circuit_service"]
-    ergast_loader_team:
-        class: AppBundle\Ergast\Loader\TeamLoader
-        parent: ergast_loader
-        arguments: ["@constructor_service", "@driver_service"]
     ergast_loader_qualifying:
         class: AppBundle\Ergast\Loader\QualifyingLoader
         parent: ergast_loader

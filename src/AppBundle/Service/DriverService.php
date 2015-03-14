@@ -39,6 +39,14 @@ class DriverService implements DriverServiceInterface
     /**
      * {@inheritdoc}
      */
+    public function findBySlug($slug)
+    {
+        return $this->driverRepository->findBySlug($slug);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function findBySlugs(array $slugs)
     {
         return $this->driverRepository->findBySlugs($slugs);

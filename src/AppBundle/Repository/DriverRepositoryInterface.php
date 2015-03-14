@@ -20,6 +20,15 @@ use Doctrine\Common\Collections\ArrayCollection;
 interface DriverRepositoryInterface
 {
     /**
+     * Finds driver by its slug.
+     *
+     * @param string $slug The driver slug
+     *
+     * @return Driver|null The Driver entity or null if not found
+     */
+    public function findBySlug($slug);
+
+    /**
      * Finds drivers by slugs.
      *
      * @param array $slugs An array of driver slugs

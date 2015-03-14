@@ -64,12 +64,12 @@ class PredictionService implements PredictionServiceInterface
     /**
      * Constructor.
      *
-     * @param EntityManagerInterface $em
-     * @param PredictionRepositoryInterface $predictionRepository
+     * @param EntityManagerInterface               $em
+     * @param PredictionRepositoryInterface        $predictionRepository
      * @param FinishingPositionRepositoryInterface $finishingPositionRepository
-     * @param SeasonRepositoryInterface $seasonRepository
-     * @param UserRepositoryInterface $userRepository
-     * @param UserStandingsRepositoryInterface $userStandingsRepository
+     * @param SeasonRepositoryInterface            $seasonRepository
+     * @param UserRepositoryInterface              $userRepository
+     * @param UserStandingsRepositoryInterface     $userStandingsRepository
      */
     public function __construct(
         EntityManagerInterface $em,

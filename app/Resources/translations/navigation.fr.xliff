@@ -1,26 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-09T13:35:26Z" source-language="fr" target-language="fr" datatype="plaintext" original="not.available">
+  <file date="2015-03-14T09:50:05Z" source-language="fr" target-language="fr" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
     </header>
     <body>
-      <trans-unit id="0cbdfd0fd06451aa6be2a6fae8f5189a068150c4" resname="navigation.footer.about_us">
-        <source>navigation.footer.about_us</source>
-        <target>À propos</target>
-      </trans-unit>
       <trans-unit id="02ad8704fa210955487002f30caa025eb9f2171e" resname="navigation.footer.contact">
         <source>navigation.footer.contact</source>
         <target>Contact</target>
-      </trans-unit>
-      <trans-unit id="ef68e497ead6f15c62589c0b3474c1efc200c7de" resname="navigation.footer.faq">
-        <source>navigation.footer.faq</source>
-        <target>FAQ</target>
-      </trans-unit>
-      <trans-unit id="ace1f2ee2dda02bd5735d809791fd230b6c2f760" resname="navigation.footer.privacy">
-        <source>navigation.footer.privacy</source>
-        <target>Mentions Légales</target>
       </trans-unit>
       <trans-unit id="1ac8bc3c6398dfda1517fcef60f9f278ed8e82ac" resname="navigation.locale_switcher.list">
         <source>navigation.locale_switcher.list</source>

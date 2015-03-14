@@ -64,10 +64,7 @@ class ResultLoader extends AbstractLoader
             $race = $season->getRaceByRound($ergastRace->getRound());
             foreach ($ergastRace->getResults() as $ergastResult) {
                 /* @var $ergastResult ErgastEntity\Result */
-                $team = $season->getTeamByDriverAndConstructor(
-                    $ergastResult->getDriver()->getId(),
-                    $ergastResult->getConstructor()->getId()
-                );
+                $team = $this->getTeam($season, $ergastResult->getConstructor(), $ergastResult->getDriver());
 
                 $result = new AppEntity\Result();
 

@@ -53,13 +53,9 @@ class QualifyingLoader extends AbstractLoader
             $race = $season->getRaceByRound($ergastRace->getRound());
             foreach ($ergastRace->getQualifying() as $ergastQualifying) {
                 /* @var $ergastQualifying ErgastEntity\Qualifying */
-                $team = $season->getTeamByDriverAndConstructor(
-                    $ergastQualifying->getDriver()->getId(),
-                    $ergastQualifying->getConstructor()->getId()
-                );
+                $team = $this->getTeam($season, $ergastQualifying->getConstructor(), $ergastQualifying->getDriver());
 
                 $qualifying = new AppEntity\Qualifying();
-
                 $qualifying
                     ->setRace($race)
                     ->setPosition($ergastQualifying->getPosition())

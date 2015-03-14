@@ -13,7 +13,6 @@ use AppBundle\Entity\User;
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
-use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 /**
@@ -50,7 +49,7 @@ class Builder
         $menu = $this->factory->createItem('root');
 
         $params = ['year' => $currentSeason];
-        
+
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
         $menu->addChild('navigation.season.races', ['route' => 'season_races', 'routeParameters' => $params]);
         $menu->addChild('navigation.season.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
@@ -90,7 +89,7 @@ class Builder
                 [
                     'route'           => $request->get('_route'),
                     'routeParameters' => array_merge($request->get('_route_params'), ['_locale' => $local]),
-                    /** @Ignore */
+                    /* @Ignore */
                     'label'           => $local,
                 ]
             );
@@ -104,7 +103,7 @@ class Builder
     {
         $menu = $this->factory->createItem('root');
 
-        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:' . $contactEmail]);
+        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:'.$contactEmail]);
 
         return $menu;
     }

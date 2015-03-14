@@ -9,6 +9,10 @@
 
 namespace AppBundle\Ergast\Loader;
 
+use AppBundle\Entity as AppEntity;
+use AppBundle\Service\ConstructorServiceInterface;
+use AppBundle\Service\DriverServiceInterface;
+use BrieucThomas\ErgastClient\Entity as ErgastEntity;
 use AppBundle\Service\SeasonServiceInterface;
 use AppBundle\Utils\Country;
 use AppBundle\Utils\Nationality;
@@ -40,6 +44,16 @@ abstract class AbstractLoader implements LoaderInterface
      * @var SeasonServiceInterface
      */
     protected $seasonService;
+
+    /**
+     * @var DriverServiceInterface
+     */
+    protected $driverService;
+
+    /**
+     * @var ConstructorServiceInterface
+     */
+    protected $constructorService;
 
     /**
      * Sets the ergast client.
@@ -95,5 +109,78 @@ abstract class AbstractLoader implements LoaderInterface
         $this->seasonService = $service;
 
         return $this;
+    }
+
+    public function setDriverService(DriverServiceInterface $driverService)
+    {
+        $this->driverService = $driverService;
+    }
+
+    public function setConstructorService(ConstructorServiceInterface $constructorService)
+    {
+        $this->constructorService = $constructorService;
+    }
+
+    private function getDriver(ErgastEntity\Driver $ergastDriver)
+    {
+        $driver = $this->driverService->findBySlug($ergastDriver->getId());
+
+        if (!$driver) {
+            $driver = new AppEntity\Driver();
+        }
+
+        $driver
+            ->setCode($ergastDriver->getCode())
+            ->setSlug($ergastDriver->getId())
+            ->setNumber($ergastDriver->getNumber())
+            ->setFirstName($ergastDriver->getFirstName())
+            ->setLastName($ergastDriver->getLastName())
+            ->setNationality($this->nationality->getCodeByName($ergastDriver->getNationality()))
+        ;
+
+        if ($ergastDriver->getBirthDate()->format('Y') > 0) {
+            $driver->setBirthDate($ergastDriver->getBirthDate());
+        }
+
+        return $driver;
+    }
+
+    public function getConstructor(ErgastEntity\Constructor $ergastConstructor)
+    {
+        $constructor = $this->constructorService->findBySlug($ergastConstructor->getId());
+
+        if (!$constructor) {
+            $constructor = new AppEntity\Constructor();
+        }
+
+        $constructor
+            ->setName($ergastConstructor->getName())
+            ->setSlug($ergastConstructor->getId())
+            ->setNationality($this->nationality->getCodeByName($ergastConstructor->getNationality()))
+        ;
+
+        return $constructor;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getTeam(AppEntity\Season $season, ErgastEntity\Constructor $ergastConstructor, ErgastEntity\Driver $ergastDriver)
+    {
+        $driver = $this->getDriver($ergastDriver);
+        $constructor = $this->getConstructor($ergastConstructor);
+        $team = $season->getTeamByDriverAndConstructor($driver->getSlug(), $constructor->getSlug());
+
+        if (!$team) {
+            $team = new AppEntity\Team();
+            $team
+                ->setConstructor($constructor)
+                ->setDriver($driver);
+            $this->seasonService->addTeam($season, $team);
+        }
+
+        $this->seasonService->save($season);
+
+        return $team;
     }
 }

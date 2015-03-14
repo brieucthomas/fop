@@ -23,6 +23,14 @@ class ConstructorRepository extends EntityRepository implements ConstructorRepos
     /**
      * {@inheritdoc}
      */
+    public function findBySlug($slug)
+    {
+        return $this->findOneBy(['slug' => $slug]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function findBySlugs(array $slugs)
     {
         $builder = $this->_em->createQueryBuilder();
