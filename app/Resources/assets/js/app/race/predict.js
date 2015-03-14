@@ -24,7 +24,7 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
             $table.find('> tbody').append(
                 $('<tr>')
                     .attr('id', 'team-' + $(option).val())
-                    .append($('<td>').text(counter++))
+                    .append($('<td class="predicted-position">').text(counter++))
                     .append($('<td>').text(values[1]))
                     .append($('<td>').text(values[2]))
                     .append($('<td>').text(''))
@@ -39,7 +39,7 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
             $table.find('> tbody').append(
                 $('<tr>')
                     .attr('id', 'team-' + $(this).val())
-                    .append($('<td>').text(counter++))
+                    .append($('<td class="predicted-position">').text(counter++))
                     .append($('<td>').text(values[1]))
                     .append($('<td>').text(values[2]))
                     .append($('<td>').text(''))
@@ -89,6 +89,7 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
 
     updateForm()
     buildTableFromForm()
+    updateFormFromTable()
 
     $form.find('#prediction').addClass('sr-only')
 });
