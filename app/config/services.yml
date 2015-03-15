@@ -27,7 +27,12 @@ services:
     twig.text_extension:
         class: Twig_Extensions_Extension_Text
         tags:
-            - name: twig.extension
+            - { name: twig.extension }
+    twig.asset_if_extension:
+        class: AppBundle\Twig\ConditionalAssetExtension
+        arguments: ["@service_container"]
+        tags:
+            - { name: twig.extension }
 
     # Translation
     translation.menu_extractor:

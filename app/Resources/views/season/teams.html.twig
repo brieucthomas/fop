@@ -1,10 +1,12 @@
 {% extends '::base.html.twig' %}
 
+{% block title 'teams.heading'|trans({ '%year%': season.year }) %}
+
 {% block content %}
     <div class="section section-inverse">
         <div class="background" style="background-image:url('{{ asset('assets/img/covers/teams.jpg') }}')"></div>
         <div class="container">
-            <h1 class="text-center">{{ 'season.teams.title'|trans({ '%year%': '<span class="text-primary">' ~ season.year ~ '</span>' })|raw }}</h1>
+            <h1 class="text-center">{{ 'teams.heading'|trans({ '%year%': '<span class="text-primary">' ~ season.year ~ '</span>' })|raw }}</h1>
         </div>
     </div>
 
@@ -21,7 +23,7 @@
                                 <li class="team-driver">
                                     <h3 class="team-driver-heading">
                                         <a href="{{ path('driver', { 'slug': driver.slug }) }}">
-                                            <img class="img-responsive" src="{{ asset('assets/img/drivers/2015/' ~ driver.slug ~ '.png') }}" aria-hidden="true"/>
+                                            <img class="img-responsive" src="{{ asset_if('assets/img/drivers/2015/' ~ driver.slug ~ '.png', 'assets/img/drivers/default.png') }}" aria-hidden="true"/>
                                             {{ driver.name }}
                                         </a>
                                     </h3>

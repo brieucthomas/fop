@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-15T14:42:12Z" source-language="fr" target-language="fr" datatype="plaintext" original="not.available">
+  <file date="2015-03-15T19:16:35Z" source-language="fr" target-language="fr" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -141,8 +141,8 @@
         <target>Classement %year%</target>
       </trans-unit>
       <trans-unit id="5efb4ac2212f109ebc889dc2a735f791dfc4119a" resname="na">
-        <jms:reference-file line="101">views/season/standings.html.twig</jms:reference-file>
-        <jms:reference-file line="24">views/season/teams.html.twig</jms:reference-file>
+        <jms:reference-file line="100">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="15">views/season/teams.html.twig</jms:reference-file>
         <source>na</source>
         <target>Non disponible</target>
       </trans-unit>
@@ -371,11 +371,6 @@
         <source>season.races.winner.user</source>
         <target>Vainqueur</target>
       </trans-unit>
-      <trans-unit id="e504dac8aa0240a3ece1563b2d0e1fe1916be90b" resname="season.teams.title">
-        <jms:reference-file line="7">views/season/teams.html.twig</jms:reference-file>
-        <source>season.teams.title</source>
-        <target>Équipes %year%</target>
-      </trans-unit>
       <trans-unit id="dce9d2de8417cdc3503c859aec55b640f4d8f3a6" resname="signin.new_password">
         <jms:reference-file line="29">views/Security/login.html.twig</jms:reference-file>
         <source>signin.new_password</source>
@@ -413,73 +408,73 @@
       </trans-unit>
       <trans-unit id="46e420d40fc6066474aae7a8aaa390d2d06499bf" resname="standings.constructor.heading">
         <jms:reference-file line="19">views/season/standings.html.twig</jms:reference-file>
-        <jms:reference-file line="73">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="72">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.heading</source>
         <target>Équipes</target>
       </trans-unit>
       <trans-unit id="4411a6ad505770f43408d7d3c53379d6794cc5a9" resname="standings.constructor.name">
-        <jms:reference-file line="78">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="77">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.name</source>
         <target>Équipe</target>
       </trans-unit>
       <trans-unit id="8adb2f2f7742defff3b2f0274679e7497af5f66a" resname="standings.constructor.nationality">
-        <jms:reference-file line="79">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="78">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.nationality</source>
         <target>Nationalité</target>
       </trans-unit>
       <trans-unit id="7c7b091879ce7e193c5f87a3861488c1f3409da9" resname="standings.constructor.offset">
-        <jms:reference-file line="82">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="81">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.offset</source>
         <target state="new">standings.constructor.offset</target>
       </trans-unit>
       <trans-unit id="c5d8c8199b2b40f3c28cd9423d894cb42a6b3d2c" resname="standings.constructor.points">
-        <jms:reference-file line="81">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="80">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.points</source>
         <target>Points</target>
       </trans-unit>
       <trans-unit id="e9f442d0256d5aacc44a5bc9422c862df60a0a48" resname="standings.constructor.position">
-        <jms:reference-file line="77">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="76">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.position</source>
         <target>Position</target>
       </trans-unit>
       <trans-unit id="104cfa4c9939c911e4dea2be50b76316bd721ad9" resname="standings.constructor.wins">
-        <jms:reference-file line="80">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="79">views/season/standings.html.twig</jms:reference-file>
         <source>standings.constructor.wins</source>
         <target>Victoires</target>
       </trans-unit>
       <trans-unit id="4cb3e6b5b7e3772f0cf373f82484924fdc565caf" resname="standings.driver.heading">
         <jms:reference-file line="18">views/season/standings.html.twig</jms:reference-file>
-        <jms:reference-file line="47">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="46">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.heading</source>
         <target>Pilotes</target>
       </trans-unit>
       <trans-unit id="62caa91362cb692849a56d19a14cff45736867d4" resname="standings.driver.name">
-        <jms:reference-file line="52">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="51">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.name</source>
         <target>Pilote</target>
       </trans-unit>
       <trans-unit id="b559b7eb08274fb8ee4869186651171f2ed78dfc" resname="standings.driver.nationality">
-        <jms:reference-file line="53">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="52">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.nationality</source>
         <target>Nationalité</target>
       </trans-unit>
       <trans-unit id="7c075809b173dd287a1cd159fe625b2e0c4ead64" resname="standings.driver.offset">
-        <jms:reference-file line="56">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="55">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.offset</source>
         <target state="new">standings.driver.offset</target>
       </trans-unit>
       <trans-unit id="b414f9acfb7a3ca7d9d07cb450a11da02331c77b" resname="standings.driver.points">
-        <jms:reference-file line="55">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="54">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.points</source>
         <target>Points</target>
       </trans-unit>
       <trans-unit id="0e80de698d7ab914a163061f509e9ae0f236588a" resname="standings.driver.position">
-        <jms:reference-file line="51">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="50">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.position</source>
         <target>Position</target>
       </trans-unit>
       <trans-unit id="fca6da7e71566122a9b6897a3829a40b3f668cfc" resname="standings.driver.wins">
-        <jms:reference-file line="54">views/season/standings.html.twig</jms:reference-file>
+        <jms:reference-file line="53">views/season/standings.html.twig</jms:reference-file>
         <source>standings.driver.wins</source>
         <target>Victoires</target>
       </trans-unit>
@@ -519,6 +514,12 @@
         <jms:reference-file line="29">views/season/standings.html.twig</jms:reference-file>
         <source>standings.user.wins</source>
         <target>Victoires</target>
+      </trans-unit>
+      <trans-unit id="6e9b318e2fc59a0e61508e5b52730fc523f2b627" resname="teams.heading">
+        <jms:reference-file line="3">views/season/teams.html.twig</jms:reference-file>
+        <jms:reference-file line="9">views/season/teams.html.twig</jms:reference-file>
+        <source>teams.heading</source>
+        <target>Équipes %year%</target>
       </trans-unit>
     </body>
   </file>
