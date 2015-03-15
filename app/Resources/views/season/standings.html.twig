@@ -1,48 +1,99 @@
 {% extends '::base.html.twig' %}
 
+{% block title %}{{ 'standings.heading'|trans({ '%year%': season.year }) }}{% endblock %}
+
 {% block content %}
     <div class="section section-inverse">
         <div class="background" style="background-image:url('{{ asset('assets/img/covers/standings.jpg') }}')"></div>
         <div class="container">
-            <h1 class="text-center">{{ 'season.standings.title'|trans({ '%year%': '<span class="text-primary">' ~ season.year ~ '</span>' })|raw }}</h1>
+            <h1 class="text-center">{{ 'standings.heading'|trans({ '%year%': '<span class="text-primary">' ~ season.year ~ '</span>' })|raw }}</h1>
         </div>
     </div>
 
     <div class="container">
         {% if season.lastRaceWithResults %}
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>{{ 'season.standings.user.title'|trans }}</h2>
-                    <ol class="list-standings">
-                        {% for standings in season.lastRaceWithResults.userStandings %}
-                            <li>
-                                <span><a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></span>
-                                <span>{{ standings.points }}</span>
-                            </li>
-                        {% endfor %}
-                    </ol>
-                </div>
-                <div class="col-md-4">
-                    <h2>{{ 'season.standings.driver.title'|trans }}</h2>
-                    <ol class="list-standings">
-                        {% for standings in season.lastRaceWithResults.driverStandings %}
-                            <li>
-                                <span><a href="{{ path('driver', { 'slug': standings.driver.slug }) }}">{{ standings.driver.name }}</a></span>
-                                <span>{{ standings.points }}</span>
-                            </li>
-                        {% endfor %}
-                    </ol>
-                </div>
-                <div class="col-md-4">
-                    <h2>{{ 'season.standings.constrcutor.title'|trans }}</h2>
-                    <ol class="list-standings">
-                        {% for standings in season.lastRaceWithResults.constructorStandings %}
-                            <li>
-                                <span><a href="{{ path('constructor', { 'slug': standings.constructor.slug }) }}">{{ standings.constructor.name }}</a></span>
-                                <span>{{ standings.points }}</span>
-                            </li>
-                        {% endfor %}
-                    </ol>
+            <div role="tabpanel">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation" class="active"><a href="#user-standings" aria-controls="user-standings" role="tab" data-toggle="tab">{{ 'standings.user.heading'|trans }}</a></li>
+                    <li role="presentation"><a href="#driver-standings" aria-controls="driver-standings" role="tab" data-toggle="tab">{{ 'standings.driver.heading'|trans }}</a></li>
+                    <li role="presentation"><a href="#constructor-standings" aria-controls="constructor-standings" role="tab" data-toggle="tab">{{ 'standings.constructor.heading'|trans }}</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="user-standings">
+                        <h2 class="sr-only">{{ 'standings.user.heading'|trans }}</h2>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>{{ 'standings.user.position'|trans }}</th>
+                                <th>{{ 'standings.user.username'|trans }}</th>
+                                <th>{{ 'standings.user.wins'|trans }}</th>
+                                <th class="text-right">{{ 'standings.user.points'|trans }}</th>
+                                <th class="text-right">{{ 'standings.user.offset'|trans }}</th>
+                            </tr>
+                            </thead>
+                            {% for standings in season.lastRaceWithResults.userStandings %}
+                                <tr>
+                                    <td>{{ standings.position }}</td>
+                                    <td><img src="{{ gravatar(standings.user.email, '22') }}"/> <a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></td>
+                                    <td>{{ standings.wins }}</td>
+                                    <td class="text-right">{{ standings.points }}</td>
+                                    <td class="text-right">{{ '+ ' ~ (season.lastRaceWithResults.userStandings.first.points - standings.points) }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="driver-standings">
+                        <h2 class="sr-only">{{ 'standings.driver.heading'|trans }}</h2>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>{{ 'standings.driver.position'|trans }}</th>
+                                <th>{{ 'standings.driver.name'|trans }}</th>
+                                <th>{{ 'standings.driver.nationality'|trans }}</th>
+                                <th>{{ 'standings.driver.wins'|trans }}</th>
+                                <th class="text-right">{{ 'standings.driver.points'|trans }}</th>
+                                <th class="text-right">{{ 'standings.driver.offset'|trans }}</th>
+                            </tr>
+                            </thead>
+                            {% for standings in season.lastRaceWithResults.driverStandings %}
+                                <tr>
+                                    <td>{{ standings.position }}</td>
+                                    <td><a href="{{ path('driver', { 'slug': standings.driver.slug }) }}">{{ standings.driver.name }}</a></td>
+                                    <td><img title="{{ standings.driver.nationality|country }}" src="{{ asset('assets/img/flags/' ~ standings.driver.nationality ~ '.svg') }}" /></td>
+                                    <td>{{ standings.wins }}</td>
+                                    <td class="text-right">{{ standings.points }}</td>
+                                    <td class="text-right">{{ '+ ' ~ (season.lastRaceWithResults.driverStandings.first.points - standings.points) }}</td>
+                                </tr>
+                                {% set previous = standings %}
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="constructor-standings">
+                        <h2 class="sr-only">{{ 'standings.constructor.heading'|trans }}</h2>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>{{ 'standings.constructor.position'|trans }}</th>
+                                <th>{{ 'standings.constructor.name'|trans }}</th>
+                                <th>{{ 'standings.constructor.nationality'|trans }}</th>
+                                <th>{{ 'standings.constructor.wins'|trans }}</th>
+                                <th class="text-right">{{ 'standings.constructor.points'|trans }}</th>
+                                <th class="text-right">{{ 'standings.constructor.offset'|trans }}</th>
+                            </tr>
+                            </thead>
+                            {% for standings in season.lastRaceWithResults.constructorStandings %}
+                                <tr>
+                                    <td>{{ standings.position }}</td>
+                                    <td><a href="{{ path('constructor', { 'slug': standings.constructor.slug }) }}">{{ standings.constructor.name }}</a></td>
+                                    <td><img title="{{ standings.constructor.nationality|country }}" src="{{ asset('assets/img/flags/' ~ standings.constructor.nationality ~ '.svg') }}" /></td>
+                                    <td>{{ standings.wins }}</td>
+                                    <td class="text-right">{{ standings.points }}</td>
+                                    <td class="text-right">{{ '+ ' ~ (season.lastRaceWithResults.constructorStandings.first.points - standings.points) }}</td>
+                                </tr>
+                                {% set previous = standings %}
+                            {% endfor %}
+                        </table>
+                    </div>
                 </div>
             </div>
         {% else %}

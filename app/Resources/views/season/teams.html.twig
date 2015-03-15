@@ -9,19 +9,28 @@
     </div>
 
     <div class="container">
-        {% for constructor in season.constructors %}
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2><a href="{{ path('constructor', { 'slug': constructor.slug }) }}">{{ constructor.name }}</a></h2>
-                </div>
-                <div class="panel-body">
-                    {% for driver in season.getDriversByConstructor(constructor) %}
-                        <h3><a href="{{ path('driver', { 'slug': driver.slug }) }}">{{ driver.name }}</a></h3>
-                    {% endfor %}
-                </div>
-            </div>
-        {% else %}
+        {% if season.constructors.isEmpty %}
             <div class="alert alert-warning" role="alert">{{ 'na'|trans }}</div>
-        {% endfor %}
+        {% else %}
+            <ul id="teams">
+                {% for constructor in season.constructors %}
+                    <li class="team">
+                        <h2 class="team-heading"><a href="{{ path('constructor', { 'slug': constructor.slug }) }}">{{ constructor.name }}</a></h2>
+                        <ul class="team-drivers">
+                            {% for driver in season.getDriversByConstructor(constructor) %}
+                                <li class="team-driver">
+                                    <h3 class="team-driver-heading">
+                                        <a href="{{ path('driver', { 'slug': driver.slug }) }}">
+                                            <img class="img-responsive" src="{{ asset('assets/img/drivers/2015/' ~ driver.slug ~ '.png') }}" aria-hidden="true"/>
+                                            {{ driver.name }}
+                                        </a>
+                                    </h3>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 {% endblock %}

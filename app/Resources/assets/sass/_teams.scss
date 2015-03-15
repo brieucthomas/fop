@@ -1,0 +1,65 @@
+//
+// Teams
+// --------------------------------------------------
+
+#teams {
+  @extend .list-unstyled;
+  @extend .row;
+
+  > li {
+    @extend .col-md-6;
+    > ul {
+      @extend .list-unstyled;
+      display: table;
+      width: 100%;
+      > li {
+        display: table-cell;
+      }
+    }
+  }
+
+  .team {
+    margin-bottom: $padding-large-vertical*4;
+  }
+
+  .team-heading,
+  .team-driver-heading {
+    font-size: $font-size-large;
+    text-align: center;
+    margin: 0;
+    > a {
+      display: block;
+      text-decoration: none;
+      padding: $padding-large-vertical*2 $padding-large-horizontal;
+      &:hover,
+      &:focus {
+        background-color: $gray-lighter;
+        color: $brand-primary;
+      }
+      > img {
+        margin-bottom: $padding-large-vertical*2;
+      }
+    }
+  }
+
+  .team-heading > a {
+    color: $text-color;
+  }
+
+  .team-driver-heading > a {
+    font-size: $font-size-base;
+    color: $text-muted;
+  }
+
+  // Borders
+  .team-heading,
+  .team-drivers {
+    border: solid $gray-lighter;
+  }
+  .team-heading {
+    border-width: 1px 1px 0 1px;
+  }
+  .team-drivers {
+    border-width: 0 1px 1px 1px;
+  }
+}
