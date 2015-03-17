@@ -1,169 +1,182 @@
 {% extends 'base.html.twig' %}
 
+{% block title race.season.year ~ ' ' ~ race.name %}
+
 {% block content %}
-    {% include ':race:_header.html.twig' %}
+    <div class="container">
+
+        <div class="race-header">
+            <img class="race-header-flag" src="{{ asset('assets/img/flags/' ~ race.circuit.country|lower ~ '.svg') }}" alt="{{ race.circuit.country|country }}"/>
+            <h1 class="race-header-title" lang="en">{{ race.season.year ~ ' ' ~ race.name }}</h1>
+            <p class="race-header-subtitle">{{ race.circuit.location }}</p>
+        </div>
+
+        <div class="race-info">
+            <section class="circuit-info">
+                <header>
+                    <h2 class="circuit-info-header">{{ race.circuit.name }}</h2>
+                </header>
+                <div class="circuit-data">
+                    <div class="circuit-data-item">
+                        <h3 class="circuit-info-title">{{ 'race.country'|trans }}</h3>
+                        <p class="circuit-info-value">{{ race.circuit.country|country  }}</p>
+                    </div>
+                    <div class="circuit-data-item">
+                        <h3 class="circuit-info-title">{{ 'race.bonus'|trans }}</h3>
+                        <p class="circuit-info-value">{{ race.bonus ?: 'na'|trans }}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="race-data">
+
+            </section>
+        </div>
+
+        <img class="img-responsive" src="{{ asset('assets/img/circuits/maps/' ~ race.circuit.slug ~ '.svg') }}"/>
+
+
+    </div>
+
+
+
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <ul class="list-details">
-                    <li id="race-country">
-                        <span class="list-details-label">{{ 'race.country'|trans }}</span>
-                        <span class="list-details-value">{{ race.circuit.country|country  }}</span>
-                    </li>
-                    <li id="race-location">
-                        <span class="list-details-label">{{ 'race.location'|trans }}</span>
-                        <span class="list-details-value">{{ race.circuit.location }}</span>
-                    </li>
-                    <li id="race-circuit">
-                        <span class="list-details-label">{{ 'race.circuit'|trans }}</span>
-                        <span class="list-details-value">{{ race.circuit.name  }}</span>
-                    </li>
-                    <li id="race-bonus">
-                        <span class="list-details-label">{{ 'race.bonus'|trans }}</span>
-                        <span class="list-details-value">{{ race.bonus ?: 'N/A' }}</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-10">
-                <div role="tabpanel">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#race-predictions" aria-controls="race-predictions" role="tab" data-toggle="tab">{{ 'race.predictions.title'|trans }}</a></li>
-                        <li role="presentation"><a href="#race-qualifying" aria-controls="race-qualifying" role="tab" data-toggle="tab">{{ 'race.qualifying.title'|trans }}</a></li>
-                        <li role="presentation"><a href="#race-results" aria-controls="race-results" role="tab" data-toggle="tab">{{ 'race.results.title'|trans }}</a></li>
-                        <li role="presentation"><a href="#race-standings" aria-controls="race-standings" role="tab" data-toggle="tab">{{ 'race.standings.title'|trans }}</a></li>
-                    </ul>
+        <div role="tabpanel">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#race-predictions" aria-controls="race-predictions" role="tab" data-toggle="tab">{{ 'race.predictions.title'|trans }}</a></li>
+                <li role="presentation"><a href="#race-qualifying" aria-controls="race-qualifying" role="tab" data-toggle="tab">{{ 'race.qualifying.title'|trans }}</a></li>
+                <li role="presentation"><a href="#race-results" aria-controls="race-results" role="tab" data-toggle="tab">{{ 'race.results.title'|trans }}</a></li>
+                <li role="presentation"><a href="#race-standings" aria-controls="race-standings" role="tab" data-toggle="tab">{{ 'race.standings.title'|trans }}</a></li>
+            </ul>
 
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane in active" id="race-predictions">
-                            <h2 class="sr-only">{{ 'race.predictions.title'|trans }}</h2>
-                            {% for prediction in race.predictions %}
-                                <h3><span class="text-primary">{{ prediction.position }}</span> {{ prediction.user.username }} <small>{{ prediction.points }}</small></h3>
-                                {% if is_granted('edit', prediction) %}
-                                    <p><a href="{{ path('prediction', { 'season': race.season.year, 'round': race.round, 'slug': prediction.user.slug }) }}">{{ 'race.prediction.edit'|trans }}</a></p>
-                                {% endif %}
-                                {% if is_granted('show', prediction) %}
-                                    <table class="table table-striped table-hover table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">{{ 'race.predictions.predicted_position'|trans }}</th>
-                                            <th scope="col">{{ 'race.predictions.driver'|trans }}</th>
-                                            <th scope="col">{{ 'race.predictions.constructor'|trans }}</th>
-                                            <th scope="col">{{ 'race.predictions.finishing_position'|trans }}</th>
-                                            <th scope="col">{{ 'race.predictions.points'|trans }}</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        {% for item in prediction.finishingPositions %}
-                                            <tr>
-                                                <td>{{ item.predictedPosition }}</td>
-                                                <td>{{ item.team.driver.shortName }}</td>
-                                                <td>{{ item.team.constructor.name }}</td>
-                                                <td>{{ item.finishingPosition }}</td>
-                                                <td>{{ item.points }}</td>
-                                            </tr>
-                                        {% endfor %}
-                                        </tbody>
-                                    </table>
-                                {% else %}
-                                    <p>{{ 'race.predictions.show.not-allowed'|trans }}</p>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="race-qualifying">
-                            <h2 class="sr-only">{{ 'race.qualifying.title'|trans }}</h2>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane in active" id="race-predictions">
+                    <h2 class="sr-only">{{ 'race.predictions.title'|trans }}</h2>
+                    {% for prediction in race.predictions %}
+                        <h3><span class="text-primary">{{ prediction.position }}</span> {{ prediction.user.username }} <small>{{ prediction.points }}</small></h3>
+                        {% if is_granted('edit', prediction) %}
+                            <p><a href="{{ path('prediction', { 'season': race.season.year, 'round': race.round, 'slug': prediction.user.slug }) }}">{{ 'race.prediction.edit'|trans }}</a></p>
+                        {% endif %}
+                        {% if is_granted('show', prediction) %}
                             <table class="table table-striped table-hover table-bordered">
                                 <thead>
                                 <tr>
-                                    <th scope="col">{{ 'race.qualifying.position'|trans }}</th>
-                                    <th scope="col">{{ 'race.qualifying.driver'|trans }}</th>
-                                    <th scope="col">{{ 'race.qualifying.constructor'|trans }}</th>
-                                    <th scope="col">{{ 'race.qualifying.q1'|trans }}</th>
-                                    <th scope="col">{{ 'race.qualifying.q2'|trans }}</th>
-                                    <th scope="col">{{ 'race.qualifying.q3'|trans }}</th>
+                                    <th scope="col">{{ 'race.predictions.predicted_position'|trans }}</th>
+                                    <th scope="col">{{ 'race.predictions.driver'|trans }}</th>
+                                    <th scope="col">{{ 'race.predictions.constructor'|trans }}</th>
+                                    <th scope="col">{{ 'race.predictions.finishing_position'|trans }}</th>
+                                    <th scope="col">{{ 'race.predictions.points'|trans }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {% for qualifying in race.qualifying %}
+                                {% for item in prediction.finishingPositions %}
                                     <tr>
-                                        <td>{{ qualifying.position }}</td>
-                                        <td>{{ qualifying.team.driver.shortName }}</td>
-                                        <td>{{ qualifying.team.constructor.name }}</td>
-                                        <td>{{ qualifying.q1 }}</td>
-                                        <td>{{ qualifying.q2 }}</td>
-                                        <td>{{ qualifying.q3 }}</td>
+                                        <td>{{ item.predictedPosition }}</td>
+                                        <td>{{ item.team.driver.shortName }}</td>
+                                        <td>{{ item.team.constructor.name }}</td>
+                                        <td>{{ item.finishingPosition }}</td>
+                                        <td>{{ item.points }}</td>
                                     </tr>
                                 {% endfor %}
                                 </tbody>
                             </table>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="race-results">
-                            <h2 class="sr-only">{{ 'race.results.title'|trans }}</h2>
-                            <table class="table table-striped table-hover table-bordered">
-                                <thead>
-                                <tr>
-                                    <th scope="col">{{ 'race.results.position'|trans }}</th>
-                                    <th scope="col">{{ 'race.results.driver'|trans }}</th>
-                                    <th scope="col">{{ 'race.results.constructor'|trans }}</th>
-                                    <th scope="col">{{ 'race.results.laps'|trans }}</th>
-                                    <th scope="col">{{ 'race.results.status'|trans }}</th>
-                                    <th scope="col">{{ 'race.results.points'|trans }}</th>
-                                    <th scope="col"></th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {% for result in race.results %}
-                                    <tr>
-                                        <td>{{ result.position }}</td>
-                                        <td>{{ result.team.driver.shortName }}</td>
-                                        <td>{{ result.team.constructor.name }}</td>
-                                        <td>{{ result.laps }}</td>
-                                        <td lang="en">{{ result.finishingStatus.label }}</td>
-                                        <td>{{ result.points }}</td>
-                                        <td>{% if result.fastestLapRank == 1 %}FL{% endif %}</td>
-                                    </tr>
+                        {% else %}
+                            <p>{{ 'race.predictions.show.not-allowed'|trans }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div role="tabpanel" class="tab-pane" id="race-qualifying">
+                    <h2 class="sr-only">{{ 'race.qualifying.title'|trans }}</h2>
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">{{ 'race.qualifying.position'|trans }}</th>
+                            <th scope="col">{{ 'race.qualifying.driver'|trans }}</th>
+                            <th scope="col">{{ 'race.qualifying.constructor'|trans }}</th>
+                            <th scope="col">{{ 'race.qualifying.q1'|trans }}</th>
+                            <th scope="col">{{ 'race.qualifying.q2'|trans }}</th>
+                            <th scope="col">{{ 'race.qualifying.q3'|trans }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for qualifying in race.qualifying %}
+                            <tr>
+                                <td>{{ qualifying.position }}</td>
+                                <td>{{ qualifying.team.driver.shortName }}</td>
+                                <td>{{ qualifying.team.constructor.name }}</td>
+                                <td>{{ qualifying.q1 }}</td>
+                                <td>{{ qualifying.q2 }}</td>
+                                <td>{{ qualifying.q3 }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="race-results">
+                    <h2 class="sr-only">{{ 'race.results.title'|trans }}</h2>
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">{{ 'race.results.position'|trans }}</th>
+                            <th scope="col">{{ 'race.results.driver'|trans }}</th>
+                            <th scope="col">{{ 'race.results.constructor'|trans }}</th>
+                            <th scope="col">{{ 'race.results.laps'|trans }}</th>
+                            <th scope="col">{{ 'race.results.status'|trans }}</th>
+                            <th scope="col">{{ 'race.results.points'|trans }}</th>
+                            <th scope="col"></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for result in race.results %}
+                            <tr>
+                                <td>{{ result.position }}</td>
+                                <td>{{ result.team.driver.shortName }}</td>
+                                <td>{{ result.team.constructor.name }}</td>
+                                <td>{{ result.laps }}</td>
+                                <td lang="en">{{ result.finishingStatus.label }}</td>
+                                <td>{{ result.points }}</td>
+                                <td>{% if result.fastestLapRank == 1 %}FL{% endif %}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="race-standings">
+                    <h2 class="sr-only">{{ 'race.standings.title'|trans }}</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>{{ 'race.standings.user.title'|trans }}</h3>
+                            <ol class="list-standings">
+                                {% for userStandings in race.userStandings %}
+                                    <li>
+                                        {{ userStandings.user.username }}
+                                        {{ userStandings.points }}
+                                    </li>
                                 {% endfor %}
-                                </tbody>
-                            </table>
+                            </ol>
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="race-standings">
-                            <h2 class="sr-only">{{ 'race.standings.title'|trans }}</h2>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h3>{{ 'race.standings.user.title'|trans }}</h3>
-                                    <ol class="list-standings">
-                                        {% for userStandings in race.userStandings %}
-                                            <li>
-                                                {{ userStandings.user.username }}
-                                                {{ userStandings.points }}
-                                            </li>
-                                        {% endfor %}
-                                    </ol>
-                                </div>
-                                <div class="col-md-4">
-                                    <h3>{{ 'race.standings.driver.title'|trans }}</h3>
-                                    <ol class="list-standings">
-                                        {% for driverStandings in race.driverStandings %}
-                                            <li>
-                                                {{ driverStandings.driver.shortName }}
-                                                {{ driverStandings.points }}
-                                            </li>
-                                        {% endfor %}
-                                    </ol>
-                                </div>
-                                <div class="col-md-4">
-                                    <h3>{{ 'race.standings.constructor.title'|trans }}</h3>
-                                    <ol class="list-standings">
-                                        {% for constructorStandings in race.constructorStandings %}
-                                            <li>
-                                                {{ constructorStandings.constructor.name }}
-                                                {{ constructorStandings.points }}
-                                            </li>
-                                        {% endfor %}
-                                    </ol>
-                                </div>
-                            </div>
+                        <div class="col-md-4">
+                            <h3>{{ 'race.standings.driver.title'|trans }}</h3>
+                            <ol class="list-standings">
+                                {% for driverStandings in race.driverStandings %}
+                                    <li>
+                                        {{ driverStandings.driver.shortName }}
+                                        {{ driverStandings.points }}
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>{{ 'race.standings.constructor.title'|trans }}</h3>
+                            <ol class="list-standings">
+                                {% for constructorStandings in race.constructorStandings %}
+                                    <li>
+                                        {{ constructorStandings.constructor.name }}
+                                        {{ constructorStandings.points }}
+                                    </li>
+                                {% endfor %}
+                            </ol>
                         </div>
                     </div>
                 </div>
