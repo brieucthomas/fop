@@ -53,6 +53,8 @@
             {% set listClass = 'navbar-nav navbar-center' %}
         {% elseif options.style is defined and options.style == 'navbar-right' %}
             {% set listClass = 'navbar-nav navbar-right' %}
+        {% elseif options.style is defined and options.style == 'breadcrumb' %}
+            {% set listClass = 'breadcrumb' %}
         {% endif %}
 
         {% if options.style is defined and options.style == 'inline' %}
@@ -61,7 +63,7 @@
             {% set listClass = 'site-footer-links' %}
         {% elseif options.style is defined and options.style == 'site-footer-right' %}
             {% set listClass = 'site-footer-links-right' %}
-        {% else %}
+        {% elseif options.style != 'breadcrumb' %}
             {% set listClass = (options.currentDepth == 0) ? listClass ~ ' nav' : listClass %}
         {% endif %}
 
@@ -73,9 +75,15 @@
 
         {% set listAttributes = listAttributes|merge({'class': (listAttributes.class|default('') ~ ' ' ~ listClass)|trim}) %}
 
-        <ul{{ _self.attributes(listAttributes) }}>
-            {{ block('children') }}
-        </ul>
+        {% if options.ordered is defined and options.ordered %}
+            <ol{{ _self.attributes(listAttributes) }}>
+                {{ block('children') }}
+            </ol>
+        {% else %}
+            <ul{{ _self.attributes(listAttributes) }}>
+                {{ block('children') }}
+            </ul>
+        {% endif %}
     {% endif %}
 {% endblock %}
 

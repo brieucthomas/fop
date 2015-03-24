@@ -171,11 +171,16 @@ services:
         class: AppBundle\Menu\Builder
         scope: request
         arguments: ["@knp_menu.factory", "@request_stack"]
+    menu_breadcrumb:
+        class: Knp\Menu\MenuItem
+        factory_service: menu_builder
+        factory_method: createBreadcrumb
+        tags:
+            - { name: knp_menu.menu, alias: breadcrumb }
     menu_main:
          class: Knp\Menu\MenuItem
          factory_service: menu_builder
          factory_method: createMainMenu
-         arguments: ['%current_season%']
          tags:
              - { name: knp_menu.menu, alias: main }
     menu_footer:

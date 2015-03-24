@@ -11,6 +11,14 @@ namespace AppBundle\Menu;
 
 use AppBundle\Entity\User;
 use Knp\Menu\FactoryInterface;
+use Knp\Menu\ItemInterface;
+use Knp\Menu\Iterator\CurrentItemFilterIterator;
+use Knp\Menu\Iterator\RecursiveItemIterator;
+use Knp\Menu\Matcher\MatcherInterface;
+use Knp\Menu\Matcher\Voter\RouteVoter;
+use Knp\Menu\Matcher\Voter\VoterInterface;
+use Knp\Menu\MenuItem;
+use Knp\Menu\Util\MenuManipulator;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -36,7 +44,7 @@ class Builder
      * Constructor.
      *
      * @param FactoryInterface $factory
-     * @param RequestStack     $requestStack
+     * @param RequestStack $requestStack
      */
     public function __construct(FactoryInterface $factory, RequestStack $requestStack)
     {
@@ -44,16 +52,16 @@ class Builder
         $this->requestStack = $requestStack;
     }
 
-    public function createMainMenu($currentSeason)
+    public function createMainMenu()
     {
         $menu = $this->factory->createItem('root');
 
-        $params = ['year' => $currentSeason];
+        $params = ['year' => date('Y')];
 
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
-        $menu->addChild('navigation.season.races', ['route' => 'season_races', 'routeParameters' => $params]);
-        $menu->addChild('navigation.season.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
-        $menu->addChild('navigation.season.standings', ['route' => 'season_standings', 'routeParameters' => $params]);
+        $menu->addChild('navigation.races', ['route' => 'season_races', 'routeParameters' => $params]);
+        $menu->addChild('navigation.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
+        $menu->addChild('navigation.standings', ['route' => 'season_standings', 'routeParameters' => $params]);
 
         return $menu;
     }
@@ -66,7 +74,10 @@ class Builder
             /* @var $user User */
             $user = $storage->getToken()->getUser();
             $parent = $menu->addChild($user->getUsername());
-            $parent->addChild('navigation.user.profile', ['route' => 'user', 'routeParameters' => [ 'slug' => $user->getSlug() ]]);
+            $parent->addChild(
+                'navigation.user.profile',
+                ['route' => 'user', 'routeParameters' => ['slug' => $user->getSlug()]]
+            );
             $parent->addChild('navigation.user.logout', ['route' => 'fos_user_security_logout']);
         } else {
             $menu->addChild('navigation.user.login', ['route' => 'fos_user_security_login', 'class']);
@@ -95,7 +106,7 @@ class Builder
                     'label'           => $local,
                 ]
             );
-            $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
+            $child->setLinkAttribute('title', 'navigation.locale_switcher.' . $local);
         }
 
         return $menu;
@@ -105,7 +116,7 @@ class Builder
     {
         $menu = $this->factory->createItem('root');
 
-        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:'.$contactEmail]);
+        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:' . $contactEmail]);
 
         return $menu;
     }

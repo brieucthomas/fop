@@ -3,42 +3,7 @@
 {% block title race.season.year ~ ' ' ~ race.name %}
 
 {% block content %}
-    <div class="container">
-
-        <div class="race-header">
-            <img class="race-header-flag" src="{{ asset('assets/img/flags/' ~ race.circuit.country|lower ~ '.svg') }}" alt="{{ race.circuit.country|country }}"/>
-            <h1 class="race-header-title" lang="en">{{ race.season.year ~ ' ' ~ race.name }}</h1>
-            <p class="race-header-subtitle">{{ race.circuit.location }}</p>
-        </div>
-
-        <div class="race-info">
-            <section class="circuit-info">
-                <header>
-                    <h2 class="circuit-info-header">{{ race.circuit.name }}</h2>
-                </header>
-                <div class="circuit-data">
-                    <div class="circuit-data-item">
-                        <h3 class="circuit-info-title">{{ 'race.country'|trans }}</h3>
-                        <p class="circuit-info-value">{{ race.circuit.country|country  }}</p>
-                    </div>
-                    <div class="circuit-data-item">
-                        <h3 class="circuit-info-title">{{ 'race.bonus'|trans }}</h3>
-                        <p class="circuit-info-value">{{ race.bonus ?: 'na'|trans }}</p>
-                    </div>
-                </div>
-            </section>
-            <section class="race-data">
-
-            </section>
-        </div>
-
-        <img class="img-responsive" src="{{ asset('assets/img/circuits/maps/' ~ race.circuit.slug ~ '.svg') }}"/>
-
-
-    </div>
-
-
-
+    {% include ':race:_header.html.twig' %}
 
     <div class="container">
         <div role="tabpanel">

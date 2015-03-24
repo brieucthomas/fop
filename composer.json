@@ -18,10 +18,10 @@
         "doctrine/orm": "~2.4",
         "doctrine/doctrine-bundle": "~1.2",
         "twig/extensions": "~1.0",
-        "symfony/assetic-bundle": "~2.3@dev",
+        "symfony/assetic-bundle": "~2.6",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~3.0.12",
+        "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "openbuildings/postmark": "~0.3",
@@ -40,7 +40,7 @@
     "require-dev": {
         "phpunit/phpunit": "~4.4",
         "liip/functional-test-bundle": "~1.0",
-        "doctrine/data-fixtures": "~1.0@dev",
+        "doctrine/data-fixtures": "~1.0",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "hautelook/alice-bundle": "~0.2"
     },
