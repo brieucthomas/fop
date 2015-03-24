@@ -11,14 +11,6 @@ namespace AppBundle\Menu;
 
 use AppBundle\Entity\User;
 use Knp\Menu\FactoryInterface;
-use Knp\Menu\ItemInterface;
-use Knp\Menu\Iterator\CurrentItemFilterIterator;
-use Knp\Menu\Iterator\RecursiveItemIterator;
-use Knp\Menu\Matcher\MatcherInterface;
-use Knp\Menu\Matcher\Voter\RouteVoter;
-use Knp\Menu\Matcher\Voter\VoterInterface;
-use Knp\Menu\MenuItem;
-use Knp\Menu\Util\MenuManipulator;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authorization\AuthorizationCheckerInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -44,7 +36,7 @@ class Builder
      * Constructor.
      *
      * @param FactoryInterface $factory
-     * @param RequestStack $requestStack
+     * @param RequestStack     $requestStack
      */
     public function __construct(FactoryInterface $factory, RequestStack $requestStack)
     {
@@ -106,7 +98,7 @@ class Builder
                     'label'           => $local,
                 ]
             );
-            $child->setLinkAttribute('title', 'navigation.locale_switcher.' . $local);
+            $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);
         }
 
         return $menu;
@@ -116,7 +108,7 @@ class Builder
     {
         $menu = $this->factory->createItem('root');
 
-        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:' . $contactEmail]);
+        $menu->addChild('navigation.footer.contact', ['uri' => 'mailto:'.$contactEmail]);
 
         return $menu;
     }

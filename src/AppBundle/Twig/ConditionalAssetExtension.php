@@ -45,14 +45,15 @@ class ConditionalAssetExtension extends \Twig_Extension
      * Get the path to an asset. If it does not exist, return the path to the
      * fallback path.
      *
-     * @param string $path the path to the asset to display
+     * @param string $path         the path to the asset to display
      * @param string $fallbackPath the path to the asset to return in case asset $path does not exist
+     *
      * @return string path
      */
     public function assetIf($path, $fallbackPath)
     {
         // define the path to look for
-        $pathToCheck = realpath($this->container->get('kernel')->getRootDir() . '/../web/') . '/' . $path;
+        $pathToCheck = realpath($this->container->get('kernel')->getRootDir().'/../web/').'/'.$path;
 
         // if the path does not exist, return the fallback image
         if (!file_exists($pathToCheck)) {

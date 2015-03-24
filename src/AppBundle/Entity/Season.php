@@ -164,7 +164,7 @@ class Season
      */
     public function getRacesWithResults()
     {
-        return $this->races->filter(function(Race $race){
+        return $this->races->filter(function (Race $race) {
             return $race->hasResults();
         });
     }

@@ -12,7 +12,6 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\DriverStandingsServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Entity\Response;
 use BrieucThomas\ErgastClient\Url\Builder\DriverStandingsUrlBuilder;
 
 /**
