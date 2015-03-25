@@ -42,6 +42,14 @@ class DriverStandingsService implements DriverStandingsServiceInterface
     /**
      * {@inheritdoc}
      */
+    public function findByYear($year)
+    {
+        return $this->driverStandingsRepository->findByYear($year);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function save(DriverStandings $driverStandings)
     {
         $this->driverStandingsRepository->save($driverStandings);

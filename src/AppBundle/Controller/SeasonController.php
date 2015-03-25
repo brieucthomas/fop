@@ -52,6 +52,20 @@ class SeasonController extends Controller
             'season' => $season,
         ];
     }
+    /**
+     * @Route("/driver-standings", name="season_driver_standings")
+     *
+     * @Method({"GET"})
+     * @Template(":season:driver-standings.html.twig")
+     */
+    public function driverStandingsAction(Season $season)
+    {
+        return [
+            'season' => $season,
+            'standings' => $this->get('driver_standings_service')->findByYear($season->getYear()),
+        ];
+    }
+
 
     /**
      * @Route("/standings", name="season_standings")

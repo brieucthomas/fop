@@ -53,7 +53,9 @@ class Builder
         $menu->addChild('navigation.main.home', ['route' => 'homepage']);
         $menu->addChild('navigation.races', ['route' => 'season_races', 'routeParameters' => $params]);
         $menu->addChild('navigation.teams', ['route' => 'season_teams', 'routeParameters' => $params]);
-        $menu->addChild('navigation.standings', ['route' => 'season_standings', 'routeParameters' => $params]);
+
+        $standings = $menu->addChild('navigation.standings');
+        $standings->addChild('navigation.standings.driver', ['route' => 'season_driver_standings', 'routeParameters' => $params]);
 
         return $menu;
     }

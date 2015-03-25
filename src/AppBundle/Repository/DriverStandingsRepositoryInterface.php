@@ -21,6 +21,15 @@ use AppBundle\Entity\Season;
 interface DriverStandingsRepositoryInterface
 {
     /**
+     * Returns the driver standings by year.
+     *
+     * @param int $year A year
+     *
+     * @return array
+     */
+    public function findByYear($year);
+
+    /**
      * Saves a DriverStandings.
      *
      * @param DriverStandings $driverStandings The DriverStandings to save
