@@ -12,6 +12,7 @@ namespace AppBundle\Repository;
 use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\Expr;
 
 /**
  * The user standings repository.
@@ -20,6 +21,35 @@ use Doctrine\ORM\EntityRepository;
  */
 class UserStandingsRepository extends EntityRepository implements UserStandingsRepositoryInterface
 {
+    /**
+     * {@inheritdoc}
+     */
+    public function findByYear($year)
+    {
+        // get last race with results
+        $builder = $this->_em->createQueryBuilder();
+        $builder
+            ->select('r')
+            ->from('AppBundle:Race', 'r')
+            ->join('r.results', 'res')
+            ->where($builder->expr()->eq('r.season', ':year'))
+            ->orderBy($builder->expr()->desc('r.date'))
+            ->setParameter(':year', $year)
+            ->setMaxResults(1)
+        ;
+        $race = $builder->getQuery()->getOneOrNullResult();
+
+        $builder = $this->createQueryBuilder('us');
+        $builder
+            ->join('us.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
+            ->addOrderBy($builder->expr()->asc('us.position'))
+            ->addOrderBy($builder->expr()->asc('us.points'))
+            ->addOrderBy($builder->expr()->asc('us.wins'))
+        ;
+
+        return $builder->getQuery()->getResult();
+    }
+
     /**
      * {@inheritdoc}
      */

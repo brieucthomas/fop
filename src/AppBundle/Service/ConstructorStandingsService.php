@@ -42,6 +42,14 @@ class ConstructorStandingsService implements ConstructorStandingsServiceInterfac
     /**
      * {@inheritdoc}
      */
+    public function findByYear($year)
+    {
+        return $this->constructorStandingsRepository->findByYear($year);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function save(ConstructorStandings $constructorStandings)
     {
         $this->constructorStandingsRepository->save($constructorStandings);

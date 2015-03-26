@@ -52,8 +52,23 @@ class SeasonController extends Controller
             'season' => $season,
         ];
     }
+
     /**
-     * @Route("/driver-standings", name="season_driver_standings")
+     * @Route("/standings/user", name="season_user_standings")
+     *
+     * @Method({"GET"})
+     * @Template(":season:user-standings.html.twig")
+     */
+    public function userStandingsAction(Season $season)
+    {
+        return [
+            'season' => $season,
+            'standings' => $this->get('user_standings_service')->findByYear($season->getYear()),
+        ];
+    }
+
+    /**
+     * @Route("/standings/driver", name="season_driver_standings")
      *
      * @Method({"GET"})
      * @Template(":season:driver-standings.html.twig")
@@ -66,17 +81,17 @@ class SeasonController extends Controller
         ];
     }
 
-
     /**
-     * @Route("/standings", name="season_standings")
+     * @Route("/standings/constructor", name="season_constructor_standings")
      *
      * @Method({"GET"})
-     * @Template(":season:standings.html.twig")
+     * @Template(":season:constructor-standings.html.twig")
      */
-    public function standingsAction(Season $season)
+    public function constructorStandingsAction(Season $season)
     {
         return [
             'season' => $season,
+            'standings' => $this->get('constructor_standings_service')->findByYear($season->getYear()),
         ];
     }
 

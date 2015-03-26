@@ -27,13 +27,14 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
      */
     public function findByYear($year)
     {
+        // get last race with results
         $builder = $this->_em->createQueryBuilder();
         $builder
-            ->select('race')
-            ->from('AppBundle:Race', 'race')
-            ->join('race.results', 'results')
-            ->where($builder->expr()->eq('race.season', ':year'))
-            ->orderBy($builder->expr()->desc('race.date'))
+            ->select('r')
+            ->from('AppBundle:Race', 'r')
+            ->join('r.results', 'res')
+            ->where($builder->expr()->eq('r.season', ':year'))
+            ->orderBy($builder->expr()->desc('r.date'))
             ->setParameter(':year', $year)
             ->setMaxResults(1)
         ;
@@ -43,18 +44,10 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
         $builder
             ->select('ds.position', 'ds.points', 'ds.wins', 'd.firstName', 'd.lastName', 'c.slug as constructorSlug', 'c.name as constructorName')
             ->from('AppBundle:DriverStandings', 'ds')
-            ->join('ds.driver', 'd')
-            ->join('AppBundle:Constructor', 'c', Expr\Join::WITH, $builder->expr()->in(
-                'c.id',
-                $this->_em->createQueryBuilder()
-                    ->select('c2.id')
-                    ->from('AppBundle:Team', 't2')
-                    ->join('t2.constructor', 'c2')
-                    ->where($builder->expr()->eq('t2.season', ':year'))
-                    ->andWhere($builder->expr()->eq('t2.driver', 'ds.driver'))
-                    ->getDQL()
-            ))
             ->join('ds.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
+            ->join('AppBundle:Team', 't', Expr\Join::WITH, $builder->expr()->andX($builder->expr()->eq('t.season', ':year'), $builder->expr()->eq('t.driver', 'ds.driver')))
+            ->join('t.driver', 'd')
+            ->join('t.constructor', 'c')
             ->addOrderBy($builder->expr()->asc('ds.position'))
             ->addOrderBy($builder->expr()->asc('ds.points'))
             ->addOrderBy($builder->expr()->asc('ds.wins'))

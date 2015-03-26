@@ -41,6 +41,14 @@ class UserStandingsService implements UserStandingsServiceInterface
     /**
      * {@inheritdoc}
      */
+    public function findByYear($year)
+    {
+        return $this->userStandingsRepository->findByYear($year);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function removeBySeason(Season $season)
     {
         $this->userStandingsRepository->removeBySeason($season);

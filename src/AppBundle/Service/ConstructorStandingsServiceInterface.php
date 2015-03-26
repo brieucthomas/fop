@@ -21,6 +21,15 @@ use AppBundle\Entity\Season;
 interface ConstructorStandingsServiceInterface
 {
     /**
+     * Returns the constructor standings by year.
+     *
+     * @param int $year A year
+     *
+     * @return array
+     */
+    public function findByYear($year);
+
+    /**
      * Saves a ConstructorStandings.
      *
      * @param ConstructorStandings $constructorStandings The ConstructorStandings to save

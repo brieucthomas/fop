@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-24T20:00:24Z" source-language="fr" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2015-03-26T07:05:38Z" source-language="fr" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -25,6 +25,18 @@
       <trans-unit id="4570eb6aa636a14c3e5310018b59f3b4759417db" resname="navigation.standings">
         <source>navigation.standings</source>
         <target>Standings</target>
+      </trans-unit>
+      <trans-unit id="5089acc00229b1f1dd49528f13f4d1d49bd12c1c" resname="navigation.standings.constructor">
+        <source>navigation.standings.constructor</source>
+        <target state="new">navigation.standings.constructor</target>
+      </trans-unit>
+      <trans-unit id="c147461dcf9631598f19c571bc88eda2bedd2418" resname="navigation.standings.driver">
+        <source>navigation.standings.driver</source>
+        <target state="new">navigation.standings.driver</target>
+      </trans-unit>
+      <trans-unit id="251fd2fa99398aba28d105426ecacdc83ff9e2c4" resname="navigation.standings.user">
+        <source>navigation.standings.user</source>
+        <target state="new">navigation.standings.user</target>
       </trans-unit>
       <trans-unit id="511509b8931343dd2b82fd944e2ab3f8a6ed3900" resname="navigation.teams">
         <source>navigation.teams</source>

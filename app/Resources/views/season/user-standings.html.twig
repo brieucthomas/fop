@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}{{ 'standings.heading'|trans({ '%year%': season.year }) }}{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <ol>
+            {% for item in standings %}
+                <li data-position="{{ item.position }}">
+                    <span>{{ item.user.username }}</span>
+                    <span>{{ item.points }}</span>
+                </li>
+            {% endfor %}
+        </ol>
+
+    </div>
+{% endblock %}

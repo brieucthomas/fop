@@ -13,6 +13,7 @@ use AppBundle\Entity\Constructor;
 use AppBundle\Entity\ConstructorStandings;
 use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\Expr;
 
 /**
  * The constructor standings repository.
@@ -24,12 +25,40 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
     /**
      * {@inheritdoc}
      */
+    public function findByYear($year)
+    {
+        // get last race with results
+        $builder = $this->_em->createQueryBuilder();
+        $builder
+            ->select('r')
+            ->from('AppBundle:Race', 'r')
+            ->join('r.results', 'res')
+            ->where($builder->expr()->eq('r.season', ':year'))
+            ->orderBy($builder->expr()->desc('r.date'))
+            ->setParameter(':year', $year)
+            ->setMaxResults(1)
+        ;
+        $race = $builder->getQuery()->getOneOrNullResult();
+
+        $builder = $this->createQueryBuilder('cs');
+        $builder
+            ->join('cs.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
+            ->addOrderBy($builder->expr()->asc('cs.position'))
+            ->addOrderBy($builder->expr()->asc('cs.points'))
+            ->addOrderBy($builder->expr()->asc('cs.wins'))
+        ;
+
+        return $builder->getQuery()->getResult();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function save(ConstructorStandings $constructorStandings)
     {
         $this
             ->persist($constructorStandings)
-            ->flush()
-        ;
+            ->flush();
 
         return $this;
     }
@@ -63,8 +92,7 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
         $builder
             ->join('cs.race', 'r')
             ->where($builder->expr()->eq('r.season', ':season'))
-            ->setParameter(':season', $season)
-        ;
+            ->setParameter(':season', $season);
 
         $entities = $builder->getQuery()->execute();
 

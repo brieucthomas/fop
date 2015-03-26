@@ -20,6 +20,15 @@ use AppBundle\Entity\Season;
 interface UserStandingsServiceInterface
 {
     /**
+     * Returns the driver standings by year.
+     *
+     * @param int $year A year
+     *
+     * @return array
+     */
+    public function findByYear($year);
+
+    /**
      * Removes by season.
      *
      * @param Season $season A Season entity
