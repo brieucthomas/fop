@@ -70,11 +70,12 @@ class Builder
             /* @var $user User */
             $user = $storage->getToken()->getUser();
             $parent = $menu->addChild($user->getUsername());
-            $parent->addChild(
-                'navigation.user.profile',
-                ['route' => 'user', 'routeParameters' => ['slug' => $user->getSlug()]]
-            );
+            $parent->addChild('navigation.user.profile', ['route' => 'user', 'routeParameters' => ['slug' => $user->getSlug()]]);
             $parent->addChild('navigation.user.logout', ['route' => 'fos_user_security_logout']);
+
+            if ($authorizationChecker->isGranted('ROLE_ADMIN')) {
+                $parent->addChild('navigation.user.admin', ['route' => 'admin']);
+            }
         } else {
             $menu->addChild('navigation.user.login', ['route' => 'fos_user_security_login', 'class']);
             $menu->addChild('navigation.user.register', ['route' => 'fos_user_registration_register']);

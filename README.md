@@ -13,6 +13,15 @@ $ bin/console doctrine:database:create
 $ bin/console doctrine:schema:create --force
 ```
 
+### Create an administrator
+
+You can create an administrator account like that (ROLE_ADMIN) :
+
+``` bash 
+$ bin/console fos:user:create
+$ bin/console fos:user:promote
+```
+
 ### Assets
 
 ``` bash
