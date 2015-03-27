@@ -1,0 +1,30 @@
+//
+// Standings
+// --------------------------------------------------
+
+.list-standings {
+  display: table;
+  list-style-type: none;
+  counter-reset: position-counter;
+  margin-bottom: 4em;
+  padding: 0;
+  width: 100%;
+
+  > li {
+    display: table-row;
+    > span,
+    &:before{
+      display: table-cell;
+      padding: $line-height-computed;
+    }
+    img {
+      height: 28px;
+    }
+  }
+
+  > li:before {
+    counter-increment: position-counter;
+    content: counter(position-counter);
+    text-align: center;
+  }
+}

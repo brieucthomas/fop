@@ -3,19 +3,16 @@
 {% block title %}{{ 'standings.heading'|trans({ '%year%': season.year }) }}{% endblock %}
 
 {% block content %}
-
     <div class="container">
-
-        <ol>
+        <ol class="list-standings">
             {% for item in standings %}
                 <li data-position="{{ item.position }}">
-                    <span>{{ item.firstName }} {{ item.lastName }}</span>
+                    <span class="driver-name">{{ item.firstName }} {{ item.lastName }}</span>
                     <span>{{ item.constructorName }}</span>
                     <span><img class="img-responsive" alt="{{ item.constructorName }}" src="{{ asset_if('assets/img/seasons/' ~ season.year ~ '/cars/' ~ item.constructorSlug ~ '.png', 'assets/img/seasons/default/car.png') }}"/></span>
                     <span>{{ item.points }}</span>
                 </li>
             {% endfor %}
         </ol>
-
     </div>
 {% endblock %}
