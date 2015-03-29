@@ -186,4 +186,14 @@ class Circuit
 
         return $this;
     }
+
+    /**
+     * Converts the object to a string.
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
 }

@@ -1,13 +1,19 @@
 {% extends '::base.html.twig' %}
 
-{% block title %}{{ 'standings.heading'|trans({ '%year%': season.year }) }}{% endblock %}
+{% block title %}{{ 'standings.driver.heading'|trans({ '%year%': season.year }) }}{% endblock %}
 
 {% block content %}
+    <div class="section section-inverse">
+        <div class="container">
+            <h1 class="text-center">{{ 'standings.driver.heading'|trans({ '%year%': season.year }) }}</h1>
+        </div>
+    </div>
     <div class="container">
         <ol class="list-standings">
             {% for item in standings %}
                 <li data-position="{{ item.position }}">
-                    <span class="driver-name">{{ item.firstName }} {{ item.lastName }}</span>
+                    <span>{{ item.firstName }} {{ item.lastName }}</span>
+                    <span><img src="{{ asset('assets/img/flags/' ~ item.nationality|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ item.nationality|country }}"/></span>
                     <span>{{ item.constructorName }}</span>
                     <span><img class="img-responsive" alt="{{ item.constructorName }}" src="{{ asset_if('assets/img/seasons/' ~ season.year ~ '/cars/' ~ item.constructorSlug ~ '.png', 'assets/img/seasons/default/car.png') }}"/></span>
                     <span>{{ item.points }}</span>

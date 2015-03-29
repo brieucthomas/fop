@@ -134,6 +134,24 @@ class Season
     }
 
     /**
+     * Returns a race by its circuit.
+     *
+     * @param Circuit $circuit The race circuit
+     *
+     * @return Race|null The Race entity or null if not found
+     */
+    public function getRaceByCircuit(Circuit $circuit)
+    {
+        foreach ($this->races as $race) {
+            if ($race->getCircuit() == $circuit) {
+                return $race;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Returns the last race with results.
      *
      * @return Race|null A Race entity or null if not found

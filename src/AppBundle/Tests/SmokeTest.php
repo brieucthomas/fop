@@ -32,8 +32,10 @@ class SmokeTest extends WebTestCase
             ['/en/races/2014/1'],
             ['/en/seasons/2014/races'],
             ['/en/seasons/2014/teams'],
-            ['/en/seasons/2014/standings'],
             ['/en/seasons/2014/graphs'],
+            ['/en/seasons/2014/standings/driver'],
+            ['/en/seasons/2014/standings/constructor'],
+            ['/en/seasons/2014/standings/user'],
         ];
     }
 }

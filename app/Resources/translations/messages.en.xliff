@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2015-03-26T07:05:38Z" source-language="fr" target-language="en" datatype="plaintext" original="not.available">
+  <file date="2015-03-29T14:44:21Z" source-language="fr" target-language="en" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -385,12 +385,23 @@
         <source>signup.title</source>
         <target state="new">signup.title</target>
       </trans-unit>
-      <trans-unit id="4d215c756c096efd21e8e5f61f129afa33b81bc8" resname="standings.heading">
+      <trans-unit id="46e420d40fc6066474aae7a8aaa390d2d06499bf" resname="standings.constructor.heading">
         <jms:reference-file line="3">views/season/constructor-standings.html.twig</jms:reference-file>
+        <jms:reference-file line="8">views/season/constructor-standings.html.twig</jms:reference-file>
+        <source>standings.constructor.heading</source>
+        <target state="new">standings.constructor.heading</target>
+      </trans-unit>
+      <trans-unit id="4cb3e6b5b7e3772f0cf373f82484924fdc565caf" resname="standings.driver.heading">
         <jms:reference-file line="3">views/season/driver-standings.html.twig</jms:reference-file>
+        <jms:reference-file line="8">views/season/driver-standings.html.twig</jms:reference-file>
+        <source>standings.driver.heading</source>
+        <target state="new">standings.driver.heading</target>
+      </trans-unit>
+      <trans-unit id="c6f307163e98c1e2e135f8c55aa4a8961b4cf0f3" resname="standings.user.heading">
         <jms:reference-file line="3">views/season/user-standings.html.twig</jms:reference-file>
-        <source>standings.heading</source>
-        <target state="new">standings.heading</target>
+        <jms:reference-file line="8">views/season/user-standings.html.twig</jms:reference-file>
+        <source>standings.user.heading</source>
+        <target state="new">standings.user.heading</target>
       </trans-unit>
       <trans-unit id="6e9b318e2fc59a0e61508e5b52730fc523f2b627" resname="teams.heading">
         <jms:reference-file line="3">views/season/teams.html.twig</jms:reference-file>

@@ -52,7 +52,8 @@ class RaceLoader extends AbstractLoader
 
         foreach ($response->getRaces() as $ergastRace) {
             /* @var $ergastRace ErgastEntity\Race */
-            $race = $season->getRaceByRound($ergastRace->getRound());
+            $circuit = $circuits->get($ergastRace->getCircuit()->getId());
+            $race = $season->getRaceByCircuit($circuit);
 
             if (!$race) {
                 $race = new AppEntity\Race();
@@ -63,7 +64,7 @@ class RaceLoader extends AbstractLoader
             $race
                 ->setRound($ergastRace->getRound())
                 ->setName($ergastRace->getName())
-                ->setCircuit($circuits->get($ergastRace->getCircuit()->getId()))
+                ->setCircuit($circuit)
                 ->setDate($ergastRace->getTime() ? $ergastRace->getTime() : $ergastRace->getDate())
             ;
 
