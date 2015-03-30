@@ -42,7 +42,7 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
 
         $builder = $this->_em->createQueryBuilder();
         $builder
-            ->select('ds.position', 'ds.points', 'ds.wins', 'd.firstName', 'd.lastName', 'd.nationality', 'c.slug as constructorSlug', 'c.name as constructorName')
+            ->select('ds.position', 'ds.points', 'ds.wins', 'd.firstName', 'd.lastName', 'd.nationality', 'd.code', 'c.slug as constructorSlug', 'c.name as constructorName')
             ->from('AppBundle:DriverStandings', 'ds')
             ->join('ds.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
             ->join('AppBundle:Team', 't', Expr\Join::WITH, $builder->expr()->andX($builder->expr()->eq('t.season', ':year'), $builder->expr()->eq('t.driver', 'ds.driver')))

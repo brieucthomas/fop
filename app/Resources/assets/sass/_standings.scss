@@ -6,25 +6,51 @@
   display: table;
   list-style-type: none;
   counter-reset: position-counter;
-  margin-bottom: 4em;
+  margin-bottom: $line-height-computed;
   padding: 0;
   width: 100%;
-
   > li {
     display: table-row;
     > span,
-    &:before{
+    &:before {
       display: table-cell;
-      padding: $line-height-computed;
+      padding: $padding-large-vertical $padding-large-horizontal;
     }
-    img {
-      height: 28px;
+    > span {
+      &.name {
+        font-weight: 700;
+      }
+      &.nationality,
+      &.constructor,
+      &.car {
+        display: none;
+      }
+      &.nationality > img {
+        height: 22px;
+      }
+      &.constructor {
+        color: $text-muted;
+      }
+      &.car > img {
+        height: 28px;
+      }
+      &.points {
+        font-weight: 700;
+        text-align: right;
+      }
+    }
+    &:before {
+      counter-increment: position-counter;
+      content: counter(position-counter);
+      text-align: right;
     }
   }
 
-  > li:before {
-    counter-increment: position-counter;
-    content: counter(position-counter);
-    text-align: center;
+  @media (min-width: $grid-float-breakpoint) {
+    > li > span.nationality,
+    > li > span.constructor,
+    > li > span.car {
+      display: table-cell;
+    }
   }
 }
