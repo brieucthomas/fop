@@ -10,16 +10,18 @@
         </div>
     </div>
     <div class="container">
-        <ol id="driver-standings" class="list-standings">
-            {% for item in standings %}
-                <li data-position="{{ item.position }}">
-                    <span class="name">{{ item.firstName }} {{ item.lastName }}</span>
-                    <span class="nationality"><img src="{{ asset('assets/img/flags/' ~ item.nationality|lower ~ '.svg') }}" alt="{{ item.nationality|country }}" data-hover="tooltip" data-placement="bottom" title="{{ item.nationality|country }}"/></span>
-                    <span class="constructor">{{ item.constructorName }}</span>
-                    <span class="car" aria-hidden="true"><img src="{{ asset_if('assets/img/seasons/' ~ season.year ~ '/cars/' ~ item.constructorSlug ~ '.png', 'assets/img/seasons/default/car.png') }}" alt="{{ item.constructorName }}"/></span>
-                    <span class="points">{{ item.points }}</span>
-                </li>
-            {% endfor %}
-        </ol>
+        {% if standings is not empty %}
+            <ol id="driver-standings" class="list-standings">
+                {% for item in standings %}
+                    <li data-position="{{ item.position }}">
+                        <span class="name">{{ item.firstName }} {{ item.lastName }}</span>
+                        <span class="nationality"><img src="{{ asset('assets/img/flags/' ~ item.nationality|lower ~ '.svg') }}" alt="{{ item.nationality|country }}" data-hover="tooltip" data-placement="bottom" title="{{ item.nationality|country }}"/></span>
+                        <span class="constructor">{{ item.constructorName }}</span>
+                        <span class="car" aria-hidden="true"><img src="{{ asset_if('assets/img/seasons/' ~ season.year ~ '/cars/' ~ item.constructorSlug ~ '.png', 'assets/img/seasons/default/car.png') }}" alt="{{ item.constructorName }}"/></span>
+                        <span class="points">{{ item.points }}</span>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% endif %}
     </div>
 {% endblock %}
