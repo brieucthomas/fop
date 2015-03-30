@@ -12,8 +12,8 @@
         <ol class="list-standings">
             {% for item in standings %}
                 <li data-position="{{ item.position }}">
-                    <span>{{ item.user.username }}</span>
-                    <span>{{ item.points }}</span>
+                    <span class="name">{{ item.user.username }}</span>
+                    <span class="points">{{ item.points }}</span>
                 </li>
             {% endfor %}
         </ol>

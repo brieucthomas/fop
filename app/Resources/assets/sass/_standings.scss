@@ -43,6 +43,7 @@
       counter-increment: position-counter;
       content: counter(position-counter);
       text-align: right;
+      width: 20px;
     }
   }
 
