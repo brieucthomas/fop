@@ -3223,16 +3223,16 @@
     "packages-dev": [
         {
             "name": "doctrine/data-fixtures",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "70020ae434da2e87fb62b40aba1211ef4fb04182"
+                "reference": "bd44f6b6e40247b6530bc8abe802e4e4d914976a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/70020ae434da2e87fb62b40aba1211ef4fb04182",
-                "reference": "70020ae434da2e87fb62b40aba1211ef4fb04182",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/bd44f6b6e40247b6530bc8abe802e4e4d914976a",
+                "reference": "bd44f6b6e40247b6530bc8abe802e4e4d914976a",
                 "shasum": ""
             },
             "require": {
@@ -3276,7 +3276,7 @@
             "keywords": [
                 "database"
             ],
-            "time": "2015-03-28 22:24:17"
+            "time": "2015-03-30 12:14:13"
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
@@ -3500,16 +3500,16 @@
         },
         {
             "name": "liip/functional-test-bundle",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipFunctionalTestBundle.git",
-                "reference": "0f7b983a22b59cbee27ff6e26c7a9a8d805eb5e2"
+                "reference": "933cde549faae84d4e5ad2f59480f6de86deaaf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/0f7b983a22b59cbee27ff6e26c7a9a8d805eb5e2",
-                "reference": "0f7b983a22b59cbee27ff6e26c7a9a8d805eb5e2",
+                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/933cde549faae84d4e5ad2f59480f6de86deaaf0",
+                "reference": "933cde549faae84d4e5ad2f59480f6de86deaaf0",
                 "shasum": ""
             },
             "require": {
@@ -3521,12 +3521,13 @@
             "suggest": {
                 "doctrine/dbal": "Required when using the fixture loading functionality with an ORM and SQLite",
                 "doctrine/doctrine-fixtures-bundle": "Required when using the fixture loading functionality",
-                "doctrine/orm": "Required when using the fixture loading functionality with an ORM and SQLite"
+                "doctrine/orm": "Required when using the fixture loading functionality with an ORM and SQLite",
+                "nelmio/alice": "Required when using loadFixtureFiles functionality"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -3552,7 +3553,7 @@
             "keywords": [
                 "Symfony2"
             ],
-            "time": "2015-03-20 15:18:13"
+            "time": "2015-03-30 10:40:25"
         },
         {
             "name": "nelmio/alice",
