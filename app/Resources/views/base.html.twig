@@ -35,13 +35,12 @@
         </nav>
 
         <div id="site-messages" class="container">
-            {% include 'flash.html.twig' %}
+            {% include '_flash.html.twig' %}
         </div>
 
         <div id="site-container">
             {% block content %}{% endblock %}
         </div>
-
 
         <footer id="site-footer">
             <div class="container">
@@ -50,8 +49,7 @@
             </div>
         </footer>
 
-
-        {% block requirejs include("requirejs.html.twig") %}
+        {% block requirejs include('_requirejs.html.twig') %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>
