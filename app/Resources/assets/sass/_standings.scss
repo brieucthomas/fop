@@ -5,10 +5,10 @@
 .list-standings {
   display: table;
   list-style-type: none;
-  counter-reset: position-counter;
   margin-bottom: $line-height-computed;
   padding: 0;
   width: 100%;
+
   > li {
     display: table-row;
     > span,
@@ -40,8 +40,7 @@
       }
     }
     &:before {
-      counter-increment: position-counter;
-      content: counter(position-counter);
+      content: attr(data-position);
       text-align: right;
       width: 20px;
     }
