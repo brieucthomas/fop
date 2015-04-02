@@ -2,14 +2,9 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
 
     var $table = $('table#table-prediction'),
         $form = $('form[name=prediction]'),
+        $qualifying = $('#qualifying'),
         $selects = $form.find('select'),
         limit = $selects.length
-
-    $selects.on('change', function () {
-        // remove this option to other selects
-        updateForm()
-        buildTableFromForm()
-    })
 
     function buildTableFromForm() {
         var counter = 1
@@ -17,7 +12,8 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
         $table.find('> tbody > tr').remove()
         // generate rows from form
         $form.find('option:selected').each(function (index, option) {
-            var values = $(option).text().split(' - ')
+            var values = $(option).text().split(' - '),
+                grid = ($qualifying.length)? $qualifying.find('li[data-team=' + $(option).val() + ']').data('position') : ''
             if ($table.find('> tbody > tr#team-' + $(option).val()).length) {
                 return;
             }
@@ -27,7 +23,7 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
                     .append($('<td class="predicted-position">').text(counter++))
                     .append($('<td>').text(values[1]))
                     .append($('<td>').text(values[2]))
-                    .append($('<td>').text(''))
+                    .append($('<td>').text(grid))
             )
         })
         // complete with other drivers
@@ -35,14 +31,15 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
             if ($table.find('tr#team-' + $(option).val()).length) {
                 return; // next option
             }
-            var values = $(option).text().split(' - ')
+            var values = $(option).text().split(' - '),
+                grid = ($qualifying.length)? $qualifying.find('li[data-team=' + $(option).val() + ']').data('position') : ''
             $table.find('> tbody').append(
                 $('<tr>')
                     .attr('id', 'team-' + $(this).val())
                     .append($('<td class="predicted-position">').text(counter++))
                     .append($('<td>').text(values[1]))
                     .append($('<td>').text(values[2]))
-                    .append($('<td>').text(''))
+                    .append($('<td>').text(grid))
             )
         })
         // init table
@@ -70,6 +67,22 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
         })
     }
 
+    function initForm() {
+        if (!$table.data('id') && $qualifying.length) {
+            // order drivers
+            $qualifying.find('li').each(function(index, elem) {
+                var id = $(elem).data('team')
+                $form.find('select:eq(' + index + ')').val(id);
+            })
+        }
+
+        $selects.on('change', function () {
+            // remove this option to other selects
+            updateForm()
+            buildTableFromForm()
+        })
+    }
+
     function updateForm() {
         // show all options
         $form.find('option').show()
@@ -87,6 +100,7 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
         })
     }
 
+    initForm()
     updateForm()
     buildTableFromForm()
     updateFormFromTable()

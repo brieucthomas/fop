@@ -8,9 +8,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h2>{{ user.username }} Prediction</h2>
-
-                <table id="table-prediction" class="table table-bordered">
+                <h2>{{ prediction.user.username }} Prediction</h2>
+                <table id="table-prediction" class="table table-bordered" data-id="{{ prediction.id }}">
                     <thead>
                         <tr>
                             <th>POS.</th>
@@ -23,15 +22,15 @@
                 </table>
                 {{ form_start(form) }}
                     {{ form_widget(form) }}
-                    <button type="submit" class="btn btn-success">{{ 'submit' }}</button>
+                    <button type="submit" class="btn btn-success">{{ 'prediction.save'|trans }}</button>
                 {{ form_end(form) }}
             </div>
-            <div id="qualifying" class="col-md-4">
+            <div class="col-md-4">
                 <h2>Qualifications</h2>
                 {% if race.hasQUalifying %}
-                    <ol>
+                    <ol id="qualifying" class="list-standings">
                         {% for qualifying in race.qualifying %}
-                            <li data-team-id="{{ qualifying.team.id }}">
+                            <li data-team="{{ qualifying.team.id }}" data-position="{{ qualifying.position }}">
                                 <span>{{ qualifying.team.driver.shortName }}</span>
                                 <span class="text-muted">{{ qualifying.team.constructor.name }}</span>
                             </li>

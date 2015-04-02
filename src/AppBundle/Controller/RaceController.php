@@ -88,7 +88,7 @@ class RaceController extends Controller
 
         return [
             'race' => $race,
-            'user' => $user,
+            'prediction' => $prediction,
             'form' => $form->createView(),
         ];
     }
