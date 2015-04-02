@@ -32,7 +32,6 @@ class MainController extends Controller
         return [
             'nextRace' => $this->get('race_service')->findNextRace(),
             'lastRace' => $this->get('race_service')->findLastRace(),
-            'lastRaceWithResults' => $this->get('race_service')->findLastRaceWithResults(),
         ];
     }
 }

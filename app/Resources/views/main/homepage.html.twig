@@ -41,13 +41,18 @@
                             <span class="bg-sun-flower">{{ nextRace.predictions.first.user.username }}</span>
                         </li>
                     {% endif %}
+                    <li>
+                        <span><a class="btn btn-primary" href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}">{{ 'homeapge.next-race.details'|trans }} »</a></span>
+                    </li>
+                    <li>
+                        {% if app.user %}
+                            <span><a class="btn btn-primary" href="{{ path('prediction', { 'season': nextRace.season.year, 'round': nextRace.round, 'slug': app.user.slug }) }}">{{ 'homepage.next-race.predict-now'|trans }} »</a></span>
+                        {% else %}
+                            <span class="text-danger">{{ 'homepage.next-race.login-to-predict'|trans }}</span>
+                        {% endif %}
+                    </li>
                 </ul>
                 <p id="next-race-remaining-time" data-date="{{ nextRace.date.timestamp * 1000 }}" data-format="%D:%H:%M:%S"></p>
-                {% if app.user %}
-                    <p><a class="btn btn-primary" href="{{ path('prediction', { 'season': nextRace.season.year, 'round': nextRace.round, 'slug': app.user.slug }) }}">{{ 'homepage.next-race.predict-now'|trans }} »</a></p>
-                {% else %}
-                    <p class="text-danger">{{ 'homepage.next-race.login-to-predict'|trans }}</p>
-                {% endif %}
             </div>
         </section>
     {% endif %}
@@ -56,11 +61,7 @@
         <section id="last-race" class="section">
             <div class="container">
                 <h1 class="text-concrete text-large">{{ 'homepage.last-race.title'|trans }}</h1>
-                <h2 lang="en" class="h1">
-                    <a href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">
-                        <span class="text-emerald">{{ lastRace.season.year }}</span> {{ lastRace.name }}
-                    </a>
-                </h2>
+                <h2 lang="en" class="section-heading"><span class="text-primary">{{ lastRace.season.year }}</span> {{ lastRace.name }}</h2>
                 <ul class="list-highlight">
                     <li id="last-race-country">
                         <img class="flag" src="{{ asset('assets/img/flags/' ~ lastRace.circuit.country|lower ~ '.svg') }}" data-hover="tooltip" data-placement="bottom" title="{{ lastRace.circuit.country|country }}"/>
@@ -89,42 +90,10 @@
                             </li>
                         {% endif %}
                     {% endif %}
+                    <li>
+                        <span><a class="btn btn-primary" href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">{{ 'homeapge.last-race.details'|trans }} »</a></span>
+                    </li>
                 </ul>
-            </div>
-        </section>
-    {% endif %}
-
-    {% if lastRaceWithResults %}
-        <section class="section bg-clouds">
-            <div class="container">
-                <h1 class="text-center">{{ 'homepage.standings.user'|trans({ '%year%': '<span class="text-primary">' ~ lastRaceWithResults.season.year ~ '</span>' })|raw }}</h1>
-                {% if lastRaceWithResults.season.finished %}
-                    <p class="text-center text-muted">{{ 'homepage.standings.finished'|trans }}</p>
-                {% endif %}
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>POS</th>
-                            <th>User</th>
-                            <th>Wins</th>
-                            <th class="text-right">Points</th>
-                        </tr>
-                    </thead>
-                    {% for standings in lastRaceWithResults.userStandings|slice(0,10) %}
-                        {% set isChampion = (lastRaceWithResults.season.finished and standings.position == 1) %}
-                        <tr class="{% if isChampion  %}bg-orange{% endif %}">
-                            <td>
-                                {% if isChampion %}
-                                    <i class="fa fa-trophy"></i>
-                                {% else %}
-                                    {{ standings.position }}
-                                {% endif %}
-                            <td><img src="{{ gravatar(standings.user.email, '22') }}"/> <a href="{{ path('user', { 'slug': standings.user.slug }) }}">{{ standings.user.username }}</a></td>
-                            <td>{{ standings.wins }}</td>
-                            <td class="text-right">{{ standings.points }}</td>
-                        </tr>
-                    {% endfor %}
-                </table>
             </div>
         </section>
     {% endif %}
