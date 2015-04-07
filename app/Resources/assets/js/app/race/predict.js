@@ -27,21 +27,39 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
             )
         })
         // complete with other drivers
-        $form.find('select:first option').each(function (index, option) {
-            if ($table.find('tr#team-' + $(option).val()).length) {
-                return; // next option
-            }
-            var values = $(option).text().split(' - '),
-                grid = ($qualifying.length)? $qualifying.find('li[data-team=' + $(option).val() + ']').data('position') : ''
-            $table.find('> tbody').append(
-                $('<tr>')
-                    .attr('id', 'team-' + $(this).val())
-                    .append($('<td class="predicted-position">').text(counter++))
-                    .append($('<td>').text(values[1]))
-                    .append($('<td>').text(values[2]))
-                    .append($('<td>').text(grid))
-            )
-        })
+        if ($qualifying.length) {
+            $qualifying.find('li').each(function (index, element) {
+                var option = $form.find('option[value=' + $(element).data('team') + ']:first');
+                if ($table.find('tr#team-' + $(option).val()).length) {
+                    return; // next option
+                }
+
+                var values = $(option).text().split(' - ')
+                $table.find('> tbody').append(
+                    $('<tr>')
+                        .attr('id', 'team-' + $(this).val())
+                        .append($('<td class="predicted-position">').text(counter++))
+                        .append($('<td>').text(values[1]))
+                        .append($('<td>').text(values[2]))
+                        .append($('<td>').text($(element).data('position')))
+                )
+            })
+        } else {
+            $form.find('select:first option').each(function (index, option) {
+                if ($table.find('tr#team-' + $(option).val()).length) {
+                    return; // next option
+                }
+                var values = $(option).text().split(' - ')
+                $table.find('> tbody').append(
+                    $('<tr>')
+                        .attr('id', 'team-' + $(this).val())
+                        .append($('<td class="predicted-position">').text(counter++))
+                        .append($('<td>').text(values[1]))
+                        .append($('<td>').text(values[2]))
+                        .append($('<td>').text(''))
+                )
+            })
+        }
         // init table
         $table.tableDnD({
             onDragClass: 'dragged',
