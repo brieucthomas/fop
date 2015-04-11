@@ -37,7 +37,7 @@ require(['jquery', 'tableDnD'], function ($, tableDnD) {
                 var values = $(option).text().split(' - ')
                 $table.find('> tbody').append(
                     $('<tr>')
-                        .attr('id', 'team-' + $(this).val())
+                        .attr('id', 'team-' + $(option).val())
                         .append($('<td class="predicted-position">').text(counter++))
                         .append($('<td>').text(values[1]))
                         .append($('<td>').text(values[2]))
