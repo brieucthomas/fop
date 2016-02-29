@@ -2,58 +2,57 @@
     "name": "brieucthomas/fop",
     "license": "MIT",
     "type": "project",
-    "description": "Another Formula One Prediction Game",
     "autoload": {
         "psr-4": {
-            "": "src/",
-            "SymfonyStandard\\": "app/"
+            "": "src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "require": {
-        "php": "~5.6",
+        "php": ">=7.0",
         "ext-intl": "*",
         "ext-mbstring": "*",
         "ext-openssl": "*",
-        "symfony/symfony": "~2.6",
-        "doctrine/orm": "~2.4",
-        "doctrine/doctrine-bundle": "~1.2",
-        "twig/extensions": "~1.0",
-        "symfony/swiftmailer-bundle": "~2.3",
-        "symfony/monolog-bundle": "~2.4",
-        "sensio/distribution-bundle": "~3.0",
-        "sensio/framework-extra-bundle": "~3.0",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "openbuildings/postmark": "~0.3",
-        "roave/security-advisories": "dev-master",
-        "stof/doctrine-extensions-bundle": "~1.1",
-        "sonata-project/intl-bundle": "~2.2",
-        "jms/i18n-routing-bundle": "~1.1",
-        "jms/translation-bundle": "~1.1",
-        "jms/di-extra-bundle": "~1.5",
-        "friendsofsymfony/user-bundle": "~1.3",
-        "ornicar/gravatar-bundle" : "~1.1",
-        "knplabs/knp-menu-bundle": "~2.0",
-        "javiereguiluz/easyadmin-bundle": "~1.0",
-        "brieucthomas/ergast-client": "~1.0"
+        "symfony/symfony": "^3.0",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-bundle": "^1.6",
+        "twig/extensions": "^1.3",
+        "symfony/swiftmailer-bundle": "^2.3",
+        "symfony/monolog-bundle": "^2.8",
+        "sensio/distribution-bundle": "^5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "^2.0",
+        "openbuildings/postmark": "^0.3",
+        "stof/doctrine-extensions-bundle": "dev-master",
+        "sonata-project/intl-bundle": "^2.2",
+        "jms/i18n-routing-bundle": "^2.0",
+        "friendsofsymfony/user-bundle": "^2.0@dev",
+        "ornicar/gravatar-bundle" : "^1.1",
+        "knplabs/knp-menu-bundle": "^2.0",
+        "brieucthomas/ergast-client": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.4",
-        "liip/functional-test-bundle": "~1.0",
-        "doctrine/data-fixtures": "~1.0",
-        "doctrine/doctrine-fixtures-bundle": "~2.2",
-        "hautelook/alice-bundle": "~0.2"
+        "symfony/phpunit-bridge": "^2.7",
+        "liip/functional-test-bundle": "^1.3",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "hautelook/alice-bundle": "dev-master"
     },
     "scripts": {
-        "post-root-package-install": [
-            "SymfonyStandard\\Composer::hookRootPackageInstall"
-        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -61,7 +60,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
     "config": {

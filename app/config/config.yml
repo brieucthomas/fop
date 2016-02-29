@@ -41,8 +41,7 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-    form:
-        resources: ['bootstrap_3_layout.html.twig']
+    form_themes:      ['bootstrap_3_layout.html.twig']
     globals:
         app_name:    "%app_name%"
         app_version: "%app_version%"
@@ -94,19 +93,6 @@ jms_i18n_routing:
     locales:        "%locales%"
     strategy:       prefix
 
-# Tanslation Configuration
-jms_translation:
-    source_language:         "%locale%"
-    locales:                 "%locales%"
-    configs:
-        app:
-            dirs:            ["%kernel.root_dir%", "%kernel.root_dir%/../src"]
-            output_dir:      "%kernel.root_dir%/Resources/translations"
-            ignored_domains: ["routes"]
-            excluded_names:  ["*TestCase.php", "*Test.php"]
-            excluded_dirs:   ["var"]
-            output_format:   xliff
-
 # FOSUserBundle Configuration
 fos_user:
     db_driver: orm
@@ -126,17 +112,3 @@ ornicar_gravatar: ~
 knp_menu:
     twig:
         template: :menu:bootstrap.html.twig
-
-# EsayAdmin Configuration
-easy_admin:
-    entities:
-        - AppBundle\Entity\Circuit
-        - AppBundle\Entity\Constructor
-        - AppBundle\Entity\Driver
-        - AppBundle\Entity\FinishingPosition
-        - AppBundle\Entity\Prediction
-        - AppBundle\Entity\Race
-        - AppBundle\Entity\ScoringSystem
-        - AppBundle\Entity\Season
-        - AppBundle\Entity\Team
-        - AppBundle\Entity\User

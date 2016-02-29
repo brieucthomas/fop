@@ -9,7 +9,10 @@
 
 namespace AppBundle\Security;
 
-use Symfony\Component\Security\Core\Authorization\Voter\AbstractVoter;
+use AppBundle\Entity\Prediction;
+use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Authorization\AccessDecisionManagerInterface;
+use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -17,34 +20,45 @@ use Symfony\Component\Security\Core\User\UserInterface;
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
-class PredictionVoter extends AbstractVoter
+class PredictionVoter extends Voter
 {
     const SHOW = 'show';
     const EDIT = 'edit';
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function getSupportedAttributes()
+    private $decisionManager;
+
+    public function __construct(AccessDecisionManagerInterface $decisionManager)
     {
-        return [self::SHOW, self::EDIT];
+        $this->decisionManager = $decisionManager;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function getSupportedClasses()
+    protected function supports($attribute, $subject)
     {
-        return ['AppBundle\Entity\Prediction'];
+        if (!in_array($attribute, [self::SHOW, self::EDIT])) {
+            return false;
+        }
+
+        if (!$subject instanceof Prediction) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
      * {@inheritdoc}
      */
-    protected function isGranted($attribute, $prediction, $user = null)
+    protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
     {
-        // Administrators can do anythings
-        if ($user instanceof UserInterface && in_array('ROLE_ADMIN', $user->getRoles(), true)) {
+        $user = $token->getUser();
+        /** @var Prediction */
+        $prediction = $subject;
+
+        // administrators can do anythings
+        if ($user instanceof UserInterface && $this->decisionManager->decide($token, ['ROLE_ADMIN'])) {
             return true;
         }
 
@@ -59,7 +73,7 @@ class PredictionVoter extends AbstractVoter
         }
 
         // Only author can edit his unfinished prediction
-        if ($attribute === self::EDIT && $user instanceof UserInterface && in_array('ROLE_USER', $user->getRoles(), true) && $prediction->isAuthor($user) && (!$prediction->getRace()->isFinished())) {
+        if ($attribute === self::EDIT && $user instanceof UserInterface && $this->decisionManager->decide($token, ['ROLE_USER']) && $prediction->isAuthor($user) && (!$prediction->getRace()->isFinished())) {
             return true;
         }
 

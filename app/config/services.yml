@@ -8,6 +8,7 @@ services:
     prediction_voter:
         class: AppBundle\Security\PredictionVoter
         public: false
+        arguments: ['@security.access.decision_manager']
         tags:
             - { name: security.voter }
 
