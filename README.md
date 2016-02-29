@@ -1,8 +1,8 @@
 # FOP
 
-[![Build Status](https://img.shields.io/travis/brieucthomas/fop/master.svg?style=flat-square)](https://travis-ci.org/brieucthomas/fop)
-[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/brieucthomas/fop/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/brieucthomas/fop/?branch=master)
-[![Code Quality](http://img.shields.io/scrutinizer/g/brieucthomas/fop/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/brieucthomas/fop/?branch=master)
+[![Build Status](https://img.shields.io/travis/brieucthomas/fop/develop.svg?style=flat-square)](https://travis-ci.org/brieucthomas/fop)
+[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/brieucthomas/fop/develop.svg?style=flat-square)](https://scrutinizer-ci.com/g/brieucthomas/fop/?branch=master)
+[![Code Quality](http://img.shields.io/scrutinizer/g/brieucthomas/fop/develop.svg?style=flat-square)](https://scrutinizer-ci.com/g/brieucthomas/fop/?branch=master)
 
 ## Install
 
