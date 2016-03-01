@@ -8,7 +8,7 @@ install:
     - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
-    - bin/phpunit --coverage-text --coverage-clover=coverage.clover
+    - phpunit --coverage-text --coverage-clover=coverage.clover
 
 after_script:
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover

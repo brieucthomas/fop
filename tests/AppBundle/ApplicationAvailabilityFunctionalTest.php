@@ -7,22 +7,22 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests;
+namespace Tests\AppBundle;
 
-class SmokeTest extends WebTestCase
+class ApplicationAvailabilityFunctionalTest extends WebTestCase
 {
     /**
-     * @dataProvider provideSuccessUrls
+     * @dataProvider urlProvider
      */
     public function testPageIsSuccessful($url)
     {
-        $client = self::createClient();
-        $client->request('GET', $url);
-
-        $this->assertTrue($client->getResponse()->isOk());
+        $this
+            ->visit($url)
+            ->isOk()
+        ;
     }
 
-    public function provideSuccessUrls()
+    public function urlProvider()
     {
         return [
             ['/en/'],

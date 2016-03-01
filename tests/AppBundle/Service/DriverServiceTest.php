@@ -7,10 +7,10 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Service;
+namespace Tests\AppBundle\Service;
 
 use AppBundle\Service\DriverServiceInterface;
-use AppBundle\Tests\WebTestCase;
+use Tests\AppBundle\WebTestCase;
 
 class DriverServiceTest extends WebTestCase
 {

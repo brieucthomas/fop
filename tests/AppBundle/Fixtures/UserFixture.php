@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Fixtures;
+namespace Tests\AppBundle\Fixtures;
 
 use AppBundle\Entity\User;
 

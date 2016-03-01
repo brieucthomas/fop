@@ -7,12 +7,12 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Ergast\Loader;
+namespace Tests\AppBundle\Ergast\Loader;
 
 use AppBundle\Entity\Season;
 use AppBundle\Ergast\Loader\FinishingStatusLoader;
 use AppBundle\Service\FinishingStatusServiceInterface;
-use AppBundle\Tests\WebTestCase;
+use Tests\AppBundle\WebTestCase;
 use BrieucThomas\ErgastClient\Entity\FinishingStatus;
 use BrieucThomas\ErgastClient\Entity\Response;
 use Doctrine\Common\Collections\ArrayCollection;

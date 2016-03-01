@@ -34,9 +34,9 @@ class ConstructorController extends Controller
     {
         return [
             'constructor' => $constructor,
-            'wins' => $this->get('result_service')->countWinsByConstructor($constructor->getId()),
-            'constructorsChampionships' => $this->get('season_service')->getConstructorsChampionshipsByConstructor($constructor->getId()),
-            'driversChampionships' => $this->get('season_service')->getDriversChampionshipsByConstructor($constructor->getId()),
+            'wins' => $this->get('app.service.result')->countWinsByConstructor($constructor->getId()),
+            'constructorsChampionships' => $this->get('app.service.season')->getConstructorsChampionshipsByConstructor($constructor->getId()),
+            'driversChampionships' => $this->get('app.service.season')->getDriversChampionshipsByConstructor($constructor->getId()),
         ];
     }
 }

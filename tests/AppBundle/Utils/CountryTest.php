@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Utils;
+namespace Tests\AppBundle\Utils;
 
 use AppBundle\Utils\Country;
 

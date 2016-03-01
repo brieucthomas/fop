@@ -63,7 +63,7 @@ class SeasonController extends Controller
     {
         return [
             'season' => $season,
-            'standings' => $this->get('user_standings_service')->findByYear($season->getYear()),
+            'standings' => $this->get('app.service.user_standings')->findByYear($season->getYear()),
         ];
     }
 
@@ -77,7 +77,7 @@ class SeasonController extends Controller
     {
         return [
             'season' => $season,
-            'standings' => $this->get('driver_standings_service')->findByYear($season->getYear()),
+            'standings' => $this->get('app.service.driver_standings')->findByYear($season->getYear()),
         ];
     }
 
@@ -91,7 +91,7 @@ class SeasonController extends Controller
     {
         return [
             'season' => $season,
-            'standings' => $this->get('constructor_standings_service')->findByYear($season->getYear()),
+            'standings' => $this->get('app.service.constructor_standings')->findByYear($season->getYear()),
         ];
     }
 

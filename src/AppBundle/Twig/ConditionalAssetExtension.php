@@ -9,26 +9,20 @@
 
 namespace AppBundle\Twig;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Bundle\FrameworkBundle\Templating\Helper\AssetsHelper;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class ConditionalAssetExtension extends \Twig_Extension
 {
-    /**
-     * @var ContainerInterface
-     */
-    private $container;
+    private $rootDir;
+    private $assetsHelper;
 
-    /**
-     * Constructor.
-     *
-     * @param ContainerInterface $container
-     */
-    public function __construct(ContainerInterface $container)
+    public function __construct(string $rootDir, AssetsHelper $assetsHelper)
     {
-        $this->container = $container;
+        $this->rootDir = $rootDir;
+        $this->assetsHelper = $assetsHelper;
     }
 
     /**
@@ -53,15 +47,15 @@ class ConditionalAssetExtension extends \Twig_Extension
     public function assetIf($path, $fallbackPath)
     {
         // define the path to look for
-        $pathToCheck = realpath($this->container->get('kernel')->getRootDir().'/../web/').'/'.$path;
+        $pathToCheck = realpath($this->rootDir.'/../web/').'/'.$path;
 
         // if the path does not exist, return the fallback image
         if (!file_exists($pathToCheck)) {
-            return $this->container->get('templating.helper.assets')->getUrl($fallbackPath);
+            return $this->assetsHelper->getUrl($fallbackPath);
         }
 
         // return the original image
-        return $this->container->get('templating.helper.assets')->getUrl($path);
+        return $this->assetsHelper->getUrl($path);
     }
 
     /**

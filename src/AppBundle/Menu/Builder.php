@@ -95,12 +95,12 @@ class Builder
             $child = $parent->addChild(
                 $local,
                 [
-                    'route'           => $request->get('_route'),
+                    'route' => $request->get('_route'),
                     'routeParameters' => array_merge($request->get('_route_params'), ['_locale' => $local]),
-                    /**
+                    /*
                      * @Ignore
                      */
-                    'label'           => $local,
+                    'label' => $local,
                 ]
             );
             $child->setLinkAttribute('title', 'navigation.locale_switcher.'.$local);

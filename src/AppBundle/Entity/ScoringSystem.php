@@ -195,7 +195,7 @@ class ScoringSystem
     /**
      * Returns the default flag.
      *
-     * @return boolean
+     * @return bool
      */
     public function isDefault()
     {
@@ -205,7 +205,7 @@ class ScoringSystem
     /**
      * Sets the default flag.
      *
-     * @param boolean $default
+     * @param bool $default
      *
      * @return $this
      */

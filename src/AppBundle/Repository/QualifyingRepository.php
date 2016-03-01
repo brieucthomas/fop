@@ -60,7 +60,7 @@ class QualifyingRepository extends EntityRepository implements QualifyingReposit
     {
         $builder = $this->createQueryBuilder('q');
         $builder
-            ->select($builder->expr()->count('q'))
+            ->select($builder->expr()->count('q.position'))
             ->join('q.team', 't')
             ->where($builder->expr()->eq('q.position', ':position'))
             ->andWhere($builder->expr()->eq('t.driver', ':driver'))

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file date="2015-04-02T20:30:39Z" source-language="fr" target-language="en" datatype="plaintext" original="not.available">
+    <body>
+      <trans-unit id="0331fab51ad9b86f685e4d891d81ca28bfd7cb10" resname="constructor.constructors_championships">
+
+        <source>constructor.constructors_championships</source>
+        <target>constructor.constructors_championships</target>
+      </trans-unit>
+      <trans-unit id="be5837a315a5ef95327f7291b27f75a298b83861" resname="constructor.drivers_championships">
+
+        <source>constructor.drivers_championships</source>
+        <target>constructor.drivers_championships</target>
+      </trans-unit>
+      <trans-unit id="22c70f0f8d5b23b57b3a2df2983d62013a4a2fb5" resname="constructor.wins">
+
+        <source>constructor.wins</source>
+        <target>constructor.wins</target>
+      </trans-unit>
+      <trans-unit id="d7ba682fd28d677f56323dad0248246f34b5f6a6" resname="driver.birth_date">
+
+        <source>driver.birth_date</source>
+        <target>driver.birth_date</target>
+      </trans-unit>
+      <trans-unit id="42b3d197641a8a96c47375b7d80c7f5307c28509" resname="driver.championships">
+
+
+        <source>driver.championships</source>
+        <target>driver.championships</target>
+      </trans-unit>
+      <trans-unit id="dc942b4ccfb03e34104551850d401ed446266733" resname="driver.number">
+
+
+        <source>driver.number</source>
+        <target>driver.number</target>
+      </trans-unit>
+      <trans-unit id="d8bd717e8fdca75a01813383b5c201773a8b10ef" resname="driver.podiums">
+
+        <source>driver.podiums</source>
+        <target>driver.podiums</target>
+      </trans-unit>
+      <trans-unit id="b9d4f30a34a21de5bcf362de193c73b458772795" resname="driver.points">
+
+        <source>driver.points</source>
+        <target state="new">driver.points</target>
+      </trans-unit>
+      <trans-unit id="3db614d5baf00fc9f51e64e6cd4e99312e2a47b7" resname="driver.races">
+
+        <source>driver.races</source>
+        <target state="new">driver.races</target>
+      </trans-unit>
+      <trans-unit id="88d1747f44138d8b1ac3abb3555d8f2d10cf37a2" resname="driver.teams.title">
+
+        <source>driver.teams.title</source>
+        <target state="new">driver.teams.title</target>
+      </trans-unit>
+      <trans-unit id="1212969402840d2c81a1592ce2a1fbc7278d97bc" resname="driver.wins">
+
+
+        <source>driver.wins</source>
+        <target>Wins</target>
+      </trans-unit>
+      <trans-unit id="b469507c15ca085ba9753f60ab835f68cda9c725" resname="footer.copyright">
+
+        <source>footer.copyright</source>
+        <target>FOP</target>
+      </trans-unit>
+      <trans-unit id="74511a90a0042ad6e13cf2420fd573ff0501a354" resname="homeapge.last-race.details">
+
+        <source>homeapge.last-race.details</source>
+        <target state="new">homeapge.last-race.details</target>
+      </trans-unit>
+      <trans-unit id="532da820a92d3ab4cf74e3080273645cc784e16d" resname="homeapge.next-race.details">
+
+        <source>homeapge.next-race.details</source>
+        <target state="new">homeapge.next-race.details</target>
+      </trans-unit>
+      <trans-unit id="824f6713ea170ca421767df734eaf26bc17b20bc" resname="homepage.last-race.date">
+
+        <source>homepage.last-race.date</source>
+        <target state="new">homepage.last-race.date</target>
+      </trans-unit>
+      <trans-unit id="fac0c33e22a2a37eb0e0cfe98788505132a409b1" resname="homepage.last-race.round">
+
+        <source>homepage.last-race.round</source>
+        <target state="new">homepage.last-race.round</target>
+      </trans-unit>
+      <trans-unit id="59b13a4341528446de0cb41ecd44c3e7bdd0c83b" resname="homepage.last-race.time">
+
+        <source>homepage.last-race.time</source>
+        <target state="new">homepage.last-race.time</target>
+      </trans-unit>
+      <trans-unit id="329b9114528aff7fa319e0053cbee91890739a1d" resname="homepage.last-race.title">
+
+        <source>homepage.last-race.title</source>
+        <target state="new">homepage.last-race.title</target>
+      </trans-unit>
+      <trans-unit id="32c4d4e8e6cd8e812c52a0a1ba96a60f3fef1017" resname="homepage.next-race.date">
+
+        <source>homepage.next-race.date</source>
+        <target state="new">homepage.next-race.date</target>
+      </trans-unit>
+      <trans-unit id="ba397b5546f2b9f6ad73fd33eae6854ebb933ba8" resname="homepage.next-race.login-to-predict">
+
+        <source>homepage.next-race.login-to-predict</source>
+        <target state="new">homepage.next-race.login-to-predict</target>
+      </trans-unit>
+      <trans-unit id="e80c19f41c791e15039eb8a0123b39b434a7dc9c" resname="homepage.next-race.predict-now">
+
+        <source>homepage.next-race.predict-now</source>
+        <target state="new">homepage.next-race.predict-now</target>
+      </trans-unit>
+      <trans-unit id="e39aaf3a8e01c0bcb8559c7c91ba811001e4914f" resname="homepage.next-race.predictions">
+
+        <source>homepage.next-race.predictions</source>
+        <target state="new">homepage.next-race.predictions</target>
+      </trans-unit>
+      <trans-unit id="583a3671c9328ad63b3563127322f28d6c43ac94" resname="homepage.next-race.round">
+
+        <source>homepage.next-race.round</source>
+        <target state="new">homepage.next-race.round</target>
+      </trans-unit>
+      <trans-unit id="345bea827bcb4634e86bb15e724c0e725c3772c6" resname="homepage.next-race.time">
+
+        <source>homepage.next-race.time</source>
+        <target state="new">homepage.next-race.time</target>
+      </trans-unit>
+      <trans-unit id="1718fefb4bef5cf4d77015242858c33c1cf7b4ad" resname="homepage.next-race.title">
+
+        <source>homepage.next-race.title</source>
+        <target>Prochain Grand Prix</target>
+      </trans-unit>
+      <trans-unit id="1116dc0f711350f19f8db42b15a255b3d6896aa7" resname="homepage.next-race.winner">
+
+
+        <source>homepage.next-race.winner</source>
+        <target state="new">homepage.next-race.winner</target>
+      </trans-unit>
+      <trans-unit id="5efb4ac2212f109ebc889dc2a735f791dfc4119a" resname="na">
+
+        <source>na</source>
+        <target state="new">na</target>
+      </trans-unit>
+      <trans-unit id="e12897f77c1ad3654c868de239e2d7077afe1bce" resname="prediction.save">
+
+        <source>prediction.save</source>
+        <target state="new">prediction.save</target>
+      </trans-unit>
+      <trans-unit id="5c0335157fa53bdda3d2a01f2b83fe469b2f54c2" resname="race.date">
+
+        <source>race.date</source>
+        <target state="new">race.date</target>
+      </trans-unit>
+      <trans-unit id="c07aa17fc3389e88781f32c2a52343191556f225" resname="race.prediction.edit">
+
+        <source>race.prediction.edit</source>
+        <target state="new">race.prediction.edit</target>
+      </trans-unit>
+      <trans-unit id="11ddd33362bc62d8966d5e6acd034de2622ef3fa" resname="race.prediction.success">
+
+        <source>race.prediction.success</source>
+        <target state="new">race.prediction.success</target>
+      </trans-unit>
+      <trans-unit id="0033202a483892dd7d64c87e1df82014f7553269" resname="race.predictions.constructor">
+
+        <source>race.predictions.constructor</source>
+        <target state="new">race.predictions.constructor</target>
+      </trans-unit>
+      <trans-unit id="5f64361b0ca0f282868a999df9194a109ae55e6b" resname="race.predictions.driver">
+
+        <source>race.predictions.driver</source>
+        <target state="new">race.predictions.driver</target>
+      </trans-unit>
+      <trans-unit id="9bc523bc96dbea171077ebe1db95ed7864ccfba6" resname="race.predictions.finishing_position">
+
+        <source>race.predictions.finishing_position</source>
+        <target state="new">race.predictions.finishing_position</target>
+      </trans-unit>
+      <trans-unit id="530007e6282707bcc38b3f7307832238fd47f9ea" resname="race.predictions.points">
+
+        <source>race.predictions.points</source>
+        <target state="new">race.predictions.points</target>
+      </trans-unit>
+      <trans-unit id="0d467db02b3141191c6a87bcb7fd95d2e94859d5" resname="race.predictions.predicted_position">
+
+        <source>race.predictions.predicted_position</source>
+        <target state="new">race.predictions.predicted_position</target>
+      </trans-unit>
+      <trans-unit id="01f6765bff2627882db63b8205cb9da03b8e9f4b" resname="race.predictions.show.not-allowed">
+
+        <source>race.predictions.show.not-allowed</source>
+        <target state="new">race.predictions.show.not-allowed</target>
+      </trans-unit>
+      <trans-unit id="ccc71381d330603b49c9bf1cf782c4d70dc655b2" resname="race.predictions.title">
+
+
+        <source>race.predictions.title</source>
+        <target state="new">race.predictions.title</target>
+      </trans-unit>
+      <trans-unit id="84204cf4b4861fbd931b3ef399ff2baa124d4c49" resname="race.qualifying.constructor">
+
+        <source>race.qualifying.constructor</source>
+        <target state="new">race.qualifying.constructor</target>
+      </trans-unit>
+      <trans-unit id="943f35663e6c58a15bc3afcecff9dd7ae5311d19" resname="race.qualifying.driver">
+
+        <source>race.qualifying.driver</source>
+        <target state="new">race.qualifying.driver</target>
+      </trans-unit>
+      <trans-unit id="eb3b28bd0d24ced425c7059b0511c6446f664d38" resname="race.qualifying.position">
+
+        <source>race.qualifying.position</source>
+        <target state="new">race.qualifying.position</target>
+      </trans-unit>
+      <trans-unit id="0373c0b177ed932842fb93c5efddb59c9d205622" resname="race.qualifying.q1">
+
+        <source>race.qualifying.q1</source>
+        <target state="new">race.qualifying.q1</target>
+      </trans-unit>
+      <trans-unit id="fd14872b9eabdf776710a4eed6a6cb53f6a63497" resname="race.qualifying.q2">
+
+        <source>race.qualifying.q2</source>
+        <target state="new">race.qualifying.q2</target>
+      </trans-unit>
+      <trans-unit id="6aaf0e39850df8621b9478413cba99dd08dfab19" resname="race.qualifying.q3">
+
+        <source>race.qualifying.q3</source>
+        <target state="new">race.qualifying.q3</target>
+      </trans-unit>
+      <trans-unit id="28dc58a5ad528ed79d0e2e41c00667c8dfde34d7" resname="race.qualifying.title">
+
+
+        <source>race.qualifying.title</source>
+        <target state="new">race.qualifying.title</target>
+      </trans-unit>
+      <trans-unit id="8fcd03f562b72d2d555b0a5ddebb24308eff4ebd" resname="race.results.constructor">
+
+        <source>race.results.constructor</source>
+        <target state="new">race.results.constructor</target>
+      </trans-unit>
+      <trans-unit id="7a7ec394ea13091e0972fe2b0212e844183c8749" resname="race.results.driver">
+
+        <source>race.results.driver</source>
+        <target state="new">race.results.driver</target>
+      </trans-unit>
+      <trans-unit id="d759b1d84a935a45b1ec82223d7f6c04d181e2f9" resname="race.results.laps">
+
+        <source>race.results.laps</source>
+        <target state="new">race.results.laps</target>
+      </trans-unit>
+      <trans-unit id="2227b924ff173d1df02045fdb66dd462c12d9653" resname="race.results.points">
+
+        <source>race.results.points</source>
+        <target state="new">race.results.points</target>
+      </trans-unit>
+      <trans-unit id="4fd78f8dc8d029371c5f03ad8fca2aa12a544892" resname="race.results.position">
+
+        <source>race.results.position</source>
+        <target state="new">race.results.position</target>
+      </trans-unit>
+      <trans-unit id="208b8978db65e4022f5020cab1814314764feb89" resname="race.results.status">
+
+        <source>race.results.status</source>
+        <target state="new">race.results.status</target>
+      </trans-unit>
+      <trans-unit id="3998882790c072719a1e6660646e62ac3f6cb2bd" resname="race.results.title">
+
+
+        <source>race.results.title</source>
+        <target state="new">race.results.title</target>
+      </trans-unit>
+      <trans-unit id="de3b7f894fede3764cd9eadda6ee64b0476811eb" resname="race.round">
+
+        <source>race.round</source>
+        <target state="new">race.round</target>
+      </trans-unit>
+      <trans-unit id="02205056e5668b43d89789515d270d9be73cdc0c" resname="race.standings.constructor.title">
+
+        <source>race.standings.constructor.title</source>
+        <target state="new">race.standings.constructor.title</target>
+      </trans-unit>
+      <trans-unit id="6a309eedc5b08e01e883f050695e724d653c4691" resname="race.standings.driver.title">
+
+        <source>race.standings.driver.title</source>
+        <target state="new">race.standings.driver.title</target>
+      </trans-unit>
+      <trans-unit id="2c530eed3e369a0577ed480e6f783eed4c552ed2" resname="race.standings.title">
+
+
+        <source>race.standings.title</source>
+        <target state="new">race.standings.title</target>
+      </trans-unit>
+      <trans-unit id="83681eec13078ad842f41487dd347005c59eb11c" resname="race.standings.user.title">
+
+        <source>race.standings.user.title</source>
+        <target state="new">race.standings.user.title</target>
+      </trans-unit>
+      <trans-unit id="84b8d59e856626e03c8a7406e86e4b0f260af391" resname="race.time">
+
+        <source>race.time</source>
+        <target state="new">race.time</target>
+      </trans-unit>
+      <trans-unit id="3d0687800435313053181b1801a541ffbca13df4" resname="race.winner">
+
+
+        <source>race.winner</source>
+        <target state="new">race.winner</target>
+      </trans-unit>
+      <trans-unit id="b92cab147c89c3be15730d302f703bab8336dfc7" resname="season.races.circuit">
+
+        <source>season.races.circuit</source>
+        <target state="new">season.races.circuit</target>
+      </trans-unit>
+      <trans-unit id="30568e18bda156cafc5a197c4493d0cbc591efb6" resname="season.races.country">
+
+        <source>season.races.country</source>
+        <target state="new">season.races.country</target>
+      </trans-unit>
+      <trans-unit id="b3107f468df3571b19397885f9df465712f20af4" resname="season.races.date">
+
+        <source>season.races.date</source>
+        <target state="new">season.races.date</target>
+      </trans-unit>
+      <trans-unit id="58649f0bec3a8bd3a4c94a5a427e4c618e57e7f8" resname="season.races.name">
+
+        <source>season.races.name</source>
+        <target state="new">season.races.name</target>
+      </trans-unit>
+      <trans-unit id="f4d991831242bc5bacca9734f72f48f7921766cb" resname="season.races.round">
+
+        <source>season.races.round</source>
+        <target state="new">season.races.round</target>
+      </trans-unit>
+      <trans-unit id="0fff291bbdb012b9acb4a016db3d0c5c312672ab" resname="season.races.time">
+
+        <source>season.races.time</source>
+        <target state="new">season.races.time</target>
+      </trans-unit>
+      <trans-unit id="3e6a87899169107ba96615a1bef1639907b0a533" resname="season.races.title">
+
+        <source>season.races.title</source>
+        <target state="new">season.races.title</target>
+      </trans-unit>
+      <trans-unit id="4c296db174c903f9cf7deaac0ded41e30c938231" resname="season.races.winner.driver">
+
+        <source>season.races.winner.driver</source>
+        <target state="new">season.races.winner.driver</target>
+      </trans-unit>
+      <trans-unit id="100241d5c32066fff3d941f6711b042d4152e970" resname="season.races.winner.user">
+
+        <source>season.races.winner.user</source>
+        <target state="new">season.races.winner.user</target>
+      </trans-unit>
+      <trans-unit id="dce9d2de8417cdc3503c859aec55b640f4d8f3a6" resname="signin.new_password">
+
+        <source>signin.new_password</source>
+        <target state="new">signin.new_password</target>
+      </trans-unit>
+      <trans-unit id="f0389610450ef68bb34adec906bc365fc744659a" resname="signin.password">
+
+        <source>signin.password</source>
+        <target state="new">signin.password</target>
+      </trans-unit>
+      <trans-unit id="e425fdf2a27ffbb74b440c013047bdfff5c7fed0" resname="signin.submit">
+
+        <source>signin.submit</source>
+        <target state="new">signin.submit</target>
+      </trans-unit>
+      <trans-unit id="85dec0592c300cf3347985b542a8ad9dc028c89a" resname="signin.title">
+
+        <source>signin.title</source>
+        <target state="new">signin.title</target>
+      </trans-unit>
+      <trans-unit id="59f5a5e8d2e222d57b35bdfb9134d2f3dafa60b0" resname="signin.username_or_email">
+
+        <source>signin.username_or_email</source>
+        <target state="new">signin.username_or_email</target>
+      </trans-unit>
+      <trans-unit id="fe44c5ea421254431a8afb32c43153ff441c4d3c" resname="signup.submit">
+
+        <source>signup.submit</source>
+        <target state="new">signup.submit</target>
+      </trans-unit>
+      <trans-unit id="286e624a76cf1a60155a8df2f64261636f842c5f" resname="signup.title">
+
+        <source>signup.title</source>
+        <target state="new">signup.title</target>
+      </trans-unit>
+      <trans-unit id="46e420d40fc6066474aae7a8aaa390d2d06499bf" resname="standings.constructor.heading">
+
+
+        <source>standings.constructor.heading</source>
+        <target state="new">standings.constructor.heading</target>
+      </trans-unit>
+      <trans-unit id="4cb3e6b5b7e3772f0cf373f82484924fdc565caf" resname="standings.driver.heading">
+
+
+        <source>standings.driver.heading</source>
+        <target state="new">standings.driver.heading</target>
+      </trans-unit>
+      <trans-unit id="c6f307163e98c1e2e135f8c55aa4a8961b4cf0f3" resname="standings.user.heading">
+
+
+        <source>standings.user.heading</source>
+        <target state="new">standings.user.heading</target>
+      </trans-unit>
+      <trans-unit id="6e9b318e2fc59a0e61508e5b52730fc523f2b627" resname="teams.heading">
+
+
+        <source>teams.heading</source>
+        <target state="new">teams.heading</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

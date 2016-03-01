@@ -7,13 +7,13 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Security;
+namespace Tests\AppBundle\Security;
 
 use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\User;
 use AppBundle\Security\PredictionVoter;
-use AppBundle\Tests\Fixtures\UserFixture;
+use Tests\AppBundle\Fixtures\UserFixture;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;

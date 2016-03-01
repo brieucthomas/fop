@@ -7,18 +7,18 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Service;
+namespace Tests\AppBundle\Service;
 
 use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
 use AppBundle\Service\PredictionServiceInterface;
-use AppBundle\Tests\WebTestCase;
+use Tests\AppBundle\WebTestCase;
 
 class PredictionServiceTest extends WebTestCase
 {
     public function testComputeScoresBySeason()
     {
-        $season = $this->getSeasonService()->findByYear(date('Y') - 1);
+        $season = $this->get('app.service.season')->findByYear(date('Y') - 1);
 
         /* @var $race Race */
         $race = $season->getRaces()->first();

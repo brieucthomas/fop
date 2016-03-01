@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace AppBundle\Tests\Entity;
+namespace Tests\AppBundle\Entity;
 
 use AppBundle\Entity\Driver;
 

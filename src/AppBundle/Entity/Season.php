@@ -148,7 +148,7 @@ class Season
             }
         }
 
-        return null;
+        return;
     }
 
     /**

@@ -30,8 +30,8 @@ class MainController extends Controller
     public function homepageAction()
     {
         return [
-            'nextRace' => $this->get('race_service')->findNextRace(),
-            'lastRace' => $this->get('race_service')->findLastRace(),
+            'nextRace' => $this->get('app.service.race')->findNextRace(),
+            'lastRace' => $this->get('app.service.race')->findLastRace(),
         ];
     }
 }
