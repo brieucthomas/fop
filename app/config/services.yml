@@ -156,34 +156,29 @@ services:
         arguments: ["@knp_menu.factory", "@request_stack"]
     menu_breadcrumb:
         class: Knp\Menu\MenuItem
-        factory_service: menu_builder
-        factory_method: createBreadcrumb
+        factory: ["@menu_builder", createBreadcrumb]
         tags:
             - { name: knp_menu.menu, alias: breadcrumb }
     menu_main:
          class: Knp\Menu\MenuItem
-         factory_service: menu_builder
-         factory_method: createMainMenu
+         factory: ["@menu_builder", createMainMenu]
          tags:
              - { name: knp_menu.menu, alias: main }
     menu_footer:
          class: Knp\Menu\MenuItem
-         factory_service: menu_builder
-         factory_method: createFooterMenu
+         factory: ["@menu_builder", createFooterMenu]
          arguments: [ "%mail_admin%" ]
          tags:
              - { name: knp_menu.menu, alias: footer }
     menu_user:
          class: Knp\Menu\MenuItem
-         factory_service: menu_builder
-         factory_method: createUserMenu
+         factory: ["@menu_builder", createUserMenu]
          arguments: ["@security.authorization_checker", "@security.token_storage"]
          tags:
              - { name: knp_menu.menu, alias: user }
     menu_locale_switcher:
          class: Knp\Menu\MenuItem
-         factory_service: menu_builder
-         factory_method: createLocaleSwitcherMenu
+         factory: ["@menu_builder", createLocaleSwitcherMenu]
          arguments: ["%locales%"]
          tags:
              - { name: knp_menu.menu, alias: locale_switcher }
@@ -210,12 +205,10 @@ services:
         class: Ivory\HttpAdapter\FileGetContentsHttpAdapter
     ergast_serializer_builder:
         class: JMS\Serializer\SerializerBuilder
-        factory_class: JMS\Serializer\SerializerBuilder
-        factory_method: create
+        factory: [JMS\Serializer\SerializerBuilder, create]
     ergast_serializer:
         class: JMS\Serializer\Serializer
-        factory_service: ergast_serializer_builder
-        factory_method: build
+        factory: [JMS\Serializer\SerializerBuilder, build]
     ergast_client:
         class: BrieucThomas\ErgastClient\ErgastClient
         arguments: ["@ergast_http_adapter", "@ergast_serializer"]
