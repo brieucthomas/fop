@@ -73,7 +73,16 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "secret": "SYMFONY_SECRET",
+                "mailer_host": "MAILER_HOST",
+                "mailer_port": "MAILER_PORT",
+                "mailer_user": "MAILER_USER",
+                "mailer_password": "MAILER_PASSWORD",
+                "mailer_auth_mode": "MAILER_AUTH_MODE",
+                "mailer_encryption": "MAILER_ENCRYPTION"
+            }
         }
     }
 }
