@@ -15,13 +15,11 @@ services:
     # Utils
     country:
         class: AppBundle\Utils\Country
-        factory_class: AppBundle\Utils\Country
-        factory_method: loadFromYaml
+        factory: [AppBundle\Utils\Country, loadFromYaml]
         arguments: ["%kernel.root_dir%/Resources/data/countries.yml"]
     nationality:
         class: AppBundle\Utils\Nationality
-        factory_class: AppBundle\Utils\Nationality
-        factory_method: loadFromYaml
+        factory: [AppBundle\Utils\Nationality, loadFromYaml]
         arguments: ["%kernel.root_dir%/Resources/data/nationalities.yml"]
 
     # Twig
@@ -44,83 +42,67 @@ services:
     # Repositories
     user_repository:
         class: AppBundle\Repository\UserRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:User]
     circuit_repository:
         class: AppBundle\Repository\CircuitRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Circuit]
     constructor_repository:
         class: AppBundle\Repository\ConstructorRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Constructor]
     driver_repository:
         class: AppBundle\Repository\DriverRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Driver]
     scoring_system_repository:
         class: AppBundle\Repository\ScoringSystemRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:ScoringSystem]
     season_repository:
         class: AppBundle\Repository\SeasonRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Season]
     race_repository:
         class: AppBundle\Repository\RaceRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Race]
     finishing_status_repository:
         class: AppBundle\Repository\FinishingStatusRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:FinishingStatus]
     result_repository:
         class: AppBundle\Repository\ResultRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Result]
     qualifying_repository:
         class: AppBundle\Repository\QualifyingRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Qualifying]
     team_repository:
         class: AppBundle\Repository\TeamRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Team]
     driver_standings_repository:
         class: AppBundle\Repository\DriverStandingsRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:DriverStandings]
     constructor_standings_repository:
         class: AppBundle\Repository\ConstructorStandingsRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:ConstructorStandings]
     user_standings_repository:
         class: AppBundle\Repository\UserStandingsRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:UserStandings]
     prediction_repository:
         class: AppBundle\Repository\PredictionRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:Prediction]
     finishing_position_repository:
         class: AppBundle\Repository\FinishingPositionRepository
-        factory_service: doctrine.orm.entity_manager
-        factory_method:  getRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
         arguments: [AppBundle:FinishingPosition]
 
     # Services
