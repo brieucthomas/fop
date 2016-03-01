@@ -208,7 +208,7 @@ services:
         factory: [JMS\Serializer\SerializerBuilder, create]
     app.ergast.serializer:
         class: JMS\Serializer\Serializer
-        factory: [JMS\Serializer\SerializerBuilder, build]
+        factory: ["@app.ergast.serializer_builder", build]
     app.ergast.client:
         class: BrieucThomas\ErgastClient\ErgastClient
         arguments: ["@app.ergast.http_adapter", "@app.ergast.serializer"]

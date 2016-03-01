@@ -40,6 +40,10 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
         ;
         $race = $builder->getQuery()->getOneOrNullResult();
 
+        if (!$race) {
+            return [];
+        }
+
         $builder = $this->_em->createQueryBuilder();
         $builder
             ->select('ds.position', 'ds.points', 'ds.wins', 'd.firstName', 'd.lastName', 'd.nationality', 'd.code', 'c.slug as constructorSlug', 'c.name as constructorName')

@@ -40,6 +40,10 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
         ;
         $race = $builder->getQuery()->getOneOrNullResult();
 
+        if (!$race) {
+            return [];
+        }
+
         $builder = $this->createQueryBuilder('cs');
         $builder
             ->join('cs.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
