@@ -29,7 +29,9 @@
         "PATH": {
             "required": true
         },
-        "SYMFONY_ENV": "dev",
+        "SYMFONY_ENV": {
+            "required": true
+        },
         "SYMFONY_SECRET": {
             "required": true
         }
