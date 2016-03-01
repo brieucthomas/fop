@@ -11,6 +11,7 @@ namespace Tests\AppBundle\Service;
 
 use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
+use AppBundle\Entity\Season;
 use AppBundle\Service\PredictionServiceInterface;
 use Tests\AppBundle\WebTestCase;
 
@@ -18,11 +19,12 @@ class PredictionServiceTest extends WebTestCase
 {
     public function testComputeScoresBySeason()
     {
-        $season = $this->get('app.service.season')->findByYear(2013);
+        /* @var $season Season */
+        $season = $this->get('app.service.season')->findByYear(2014);
 
         /* @var $race Race */
         $race = $season->getRaces()->first();
-
+        
         $this->assertCount(10, $race->getUserStandings());
 
         /* @var $prediction Prediction */

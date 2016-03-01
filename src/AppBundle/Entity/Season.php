@@ -10,6 +10,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -165,22 +166,12 @@ class Season
         return $racesWithResults->last();
     }
 
-    /**
-     * Returns the season races.
-     *
-     * @return ArrayCollection A collection of race entities
-     */
-    public function getRaces()
+    public function getRaces() : Collection
     {
         return $this->races;
     }
 
-    /**
-     * Returns the season races.
-     *
-     * @return ArrayCollection A collection of race entities
-     */
-    public function getRacesWithResults()
+    public function getRacesWithResults() : Collection
     {
         return $this->races->filter(function (Race $race) {
             return $race->hasResults();

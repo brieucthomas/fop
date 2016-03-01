@@ -11,27 +11,22 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * The main controller.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class MainController extends Controller
 {
     /**
      * @Route("/", name="homepage")
-     *
      * @Method({"GET"})
-     * @Template("main/homepage.html.twig")
      */
     public function homepageAction()
     {
-        return [
+        return $this->render('main/homepage.html.twig', [
             'nextRace' => $this->get('app.service.race')->findNextRace(),
             'lastRace' => $this->get('app.service.race')->findLastRace(),
-        ];
+        ]);
     }
 }

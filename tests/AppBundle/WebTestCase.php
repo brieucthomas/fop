@@ -9,10 +9,11 @@
 
 namespace Tests\AppBundle;
 
-use AppBundle\Service\SeasonServiceInterface;
-use AppBundle\Service\UserServiceInterface;
+use Doctrine\ORM\EntityManagerInterface;
 use Liip\FunctionalTestBundle\Test\WebTestCase as LiipTest;
 use Symfony\Bundle\FrameworkBundle\Client;
+use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpFoundation\Response;
 
 class WebTestCase extends LiipTest
 {
@@ -46,6 +47,8 @@ class WebTestCase extends LiipTest
 
     protected function setUp()
     {
+        parent::setUp();
+
         $this->loadFixtureFiles([
             '@AppBundle/DataFixtures/ORM/Test/users.yml',
             '@AppBundle/DataFixtures/ORM/Test/scoring_systems.yml',
