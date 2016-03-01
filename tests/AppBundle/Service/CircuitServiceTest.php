@@ -16,19 +16,11 @@ class CircuitServiceTest extends WebTestCase
 {
     public function testFindCircuitsBySlugs()
     {
-        $circuits = $this->getCircuitService()->findBySlugs(['monza', 'spa', 'london']);
+        $circuits = $this->get('app.service.circuit')->findBySlugs(['monza', 'spa', 'london']);
 
         $this->assertInstanceOf('Doctrine\Common\Collections\ArrayCollection', $circuits);
         $this->assertCount(2, $circuits);
         $this->assertInstanceOf('AppBundle\Entity\Circuit', $circuits->get('monza'));
         $this->assertInstanceOf('AppBundle\Entity\Circuit', $circuits->get('spa'));
-    }
-
-    /**
-     * @return CircuitServiceInterface
-     */
-    private function getCircuitService()
-    {
-        return $this->get('circuit_service');
     }
 }

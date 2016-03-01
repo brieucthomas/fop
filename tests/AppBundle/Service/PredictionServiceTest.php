@@ -18,7 +18,7 @@ class PredictionServiceTest extends WebTestCase
 {
     public function testComputeScoresBySeason()
     {
-        $season = $this->get('app.service.season')->findByYear(date('Y') - 1);
+        $season = $this->get('app.service.season')->findByYear(2013);
 
         /* @var $race Race */
         $race = $season->getRaces()->first();
@@ -32,7 +32,7 @@ class PredictionServiceTest extends WebTestCase
         $this->assertSame(1, $prediction->getPosition());
         $this->assertSame(146, $prediction->getPoints());
 
-        $this->getPredictionService()->computeBySeason($season);
+        $this->get('app.service.prediction')->computeBySeason($season);
 
         $this->assertCount(10, $race->getUserStandings());
         $this->assertSame('user_2', $race->getUserStandings()->first()->getUser()->getUsername());
@@ -41,13 +41,5 @@ class PredictionServiceTest extends WebTestCase
 
         $this->assertSame(1, $prediction->getPosition());
         $this->assertSame(146, $prediction->getPoints());
-    }
-
-    /**
-     * @return PredictionServiceInterface
-     */
-    private function getPredictionService()
-    {
-        return $this->get('prediction_service');
     }
 }

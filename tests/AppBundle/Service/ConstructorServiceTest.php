@@ -16,19 +16,11 @@ class ConstructorServiceTest extends WebTestCase
 {
     public function testFindConstructorsBySlugs()
     {
-        $constructors = $this->getConstructorService()->findBySlugs(['ferrari', 'williams', 'peugeot']);
+        $constructors = $this->get('app.service.constructor')->findBySlugs(['ferrari', 'williams', 'peugeot']);
 
         $this->assertInstanceOf('Doctrine\Common\Collections\ArrayCollection', $constructors);
         $this->assertCount(2, $constructors);
         $this->assertInstanceOf('AppBundle\Entity\Constructor', $constructors->get('ferrari'));
         $this->assertInstanceOf('AppBundle\Entity\Constructor', $constructors->get('williams'));
-    }
-
-    /**
-     * @return ConstructorServiceInterface
-     */
-    private function getConstructorService()
-    {
-        return $this->get('constructor_service');
     }
 }

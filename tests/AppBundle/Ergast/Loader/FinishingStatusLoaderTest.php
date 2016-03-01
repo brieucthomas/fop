@@ -22,7 +22,7 @@ class FinishingStatusLoaderTest extends WebTestCase
     public function testLoader()
     {
         /* @var $service FinishingStatusServiceInterface */
-        $service = $this->get('finishing_status_service');
+        $service = $this->get('app.service.finishing_status');
 
         $this->assertCount(130, $service->findAll());
         $this->assertNotNull($service->findAll()->get('Finished'));
