@@ -22,18 +22,8 @@ use AppBundle\Repository\ConstructorStandingsRepositoryInterface;
  */
 class ConstructorStandingsService implements ConstructorStandingsServiceInterface
 {
-    /**
-     * The constructor standings repository.
-     *
-     * @var ConstructorRepositoryInterface
-     */
     private $constructorStandingsRepository;
 
-    /**
-     * Constructor.
-     *
-     * @param ConstructorStandingsRepositoryInterface $constructorStandingsRepository
-     */
     public function __construct(ConstructorStandingsRepositoryInterface $constructorStandingsRepository)
     {
         $this->constructorStandingsRepository = $constructorStandingsRepository;

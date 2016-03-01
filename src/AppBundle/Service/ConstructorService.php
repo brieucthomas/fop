@@ -11,26 +11,15 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Constructor;
 use AppBundle\Repository\ConstructorRepositoryInterface;
+use Nelmio\Alice\Instances\Collection;
 
 /**
- * The constructor service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class ConstructorService implements ConstructorServiceInterface
 {
-    /**
-     * The Constructor repository.
-     *
-     * @var ConstructorRepositoryInterface
-     */
     private $constructorRepository;
 
-    /**
-     * Constructor.
-     *
-     * @param ConstructorRepositoryInterface $constructorRepository A ConstructorRepositoryInterface instance
-     */
     public function __construct(ConstructorRepositoryInterface $constructorRepository)
     {
         $this->constructorRepository = $constructorRepository;
@@ -47,7 +36,7 @@ class ConstructorService implements ConstructorServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs)
+    public function findBySlugs(array $slugs) : Collection
     {
         return $this->constructorRepository->findBySLugs($slugs);
     }

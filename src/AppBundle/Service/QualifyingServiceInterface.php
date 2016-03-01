@@ -14,8 +14,6 @@ use AppBundle\Entity\Qualifying;
 use AppBundle\Entity\Season;
 
 /**
- * The qualifying service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface QualifyingServiceInterface

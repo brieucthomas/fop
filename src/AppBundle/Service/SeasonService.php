@@ -19,8 +19,6 @@ use AppBundle\Repository\SeasonRepositoryInterface;
 use AppBundle\Repository\UserRepositoryInterface;
 
 /**
- * The season service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class SeasonService implements SeasonServiceInterface

@@ -13,8 +13,6 @@ use AppBundle\Entity\Driver;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The driver service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface DriverServiceInterface

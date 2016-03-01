@@ -14,8 +14,6 @@ use AppBundle\Entity\DriverStandings;
 use AppBundle\Entity\Season;
 
 /**
- * The driver standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface DriverStandingsServiceInterface

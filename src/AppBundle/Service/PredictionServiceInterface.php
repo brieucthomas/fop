@@ -15,8 +15,6 @@ use AppBundle\Entity\Season;
 use AppBundle\Entity\User;
 
 /**
- * The prediction service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface PredictionServiceInterface

@@ -16,8 +16,6 @@ use AppBundle\Repository\DriverRepositoryInterface;
 use AppBundle\Repository\DriverStandingsRepositoryInterface;
 
 /**
- * The driver standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class DriverStandingsService implements DriverStandingsServiceInterface

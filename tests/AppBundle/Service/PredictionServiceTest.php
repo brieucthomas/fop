@@ -23,8 +23,9 @@ class PredictionServiceTest extends WebTestCase
         $season = $this->get('app.service.season')->findByYear(2014);
 
         /* @var $race Race */
+        var_dump($season->getRaces()->toArray()); die;
         $race = $season->getRaces()->first();
-        
+
         $this->assertCount(10, $race->getUserStandings());
 
         /* @var $prediction Prediction */

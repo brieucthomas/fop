@@ -14,8 +14,6 @@ use AppBundle\Entity\Season;
 use AppBundle\Repository\ResultRepositoryInterface;
 
 /**
- * The result service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class ResultService implements ResultServiceInterface

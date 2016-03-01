@@ -11,29 +11,14 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Constructor;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
- * The constructor service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface ConstructorServiceInterface
 {
-    /**
-     * Finds constructor by its slug.
-     *
-     * @param string $slug A constructor slug
-     *
-     * @return Constructor|null A Constructor entity or null if not found
-     */
     public function findBySlug($slug);
 
-    /**
-     * Finds constructors by slugs.
-     *
-     * @param array $slugs An array of constructor slugs
-     *
-     * @return ArrayCollection A collection of Constructor entities indexed by slug
-     */
-    public function findBySlugs(array $slugs);
+    public function findBySlugs(array $slugs) : Collection;
 }

@@ -12,8 +12,6 @@ namespace AppBundle\Service;
 use AppBundle\Repository\UserRepositoryInterface;
 
 /**
- * The user service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class UserService implements UserServiceInterface

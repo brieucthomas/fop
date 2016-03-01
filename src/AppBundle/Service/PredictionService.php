@@ -23,8 +23,6 @@ use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * The prediction service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class PredictionService implements PredictionServiceInterface

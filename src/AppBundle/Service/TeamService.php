@@ -12,8 +12,6 @@ namespace AppBundle\Service;
 use AppBundle\Repository\TeamRepositoryInterface;
 
 /**
- * The team service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class TeamService implements TeamServiceInterface

@@ -13,8 +13,6 @@ use AppBundle\Entity\Race;
 use AppBundle\Repository\RaceRepositoryInterface;
 
 /**
- * The race service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class RaceService implements RaceServiceInterface

@@ -14,8 +14,6 @@ use AppBundle\Entity\Season;
 use AppBundle\Repository\QualifyingRepositoryInterface;
 
 /**
- * The qualifying service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class QualifyingService implements QualifyingServiceInterface

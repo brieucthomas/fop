@@ -10,8 +10,6 @@
 namespace AppBundle\Service;
 
 /**
- * The user service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface UserServiceInterface

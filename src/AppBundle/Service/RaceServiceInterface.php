@@ -12,8 +12,6 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Race;
 
 /**
- * The race service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface RaceServiceInterface

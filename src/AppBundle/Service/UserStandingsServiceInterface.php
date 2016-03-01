@@ -13,8 +13,6 @@ use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
 
 /**
- * The user standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface UserStandingsServiceInterface

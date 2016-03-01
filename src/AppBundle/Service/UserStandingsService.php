@@ -15,8 +15,6 @@ use AppBundle\Repository\UserRepositoryInterface;
 use AppBundle\Repository\UserStandingsRepositoryInterface;
 
 /**
- * The user standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class UserStandingsService implements UserStandingsServiceInterface

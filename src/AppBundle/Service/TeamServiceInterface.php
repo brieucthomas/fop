@@ -12,8 +12,6 @@ namespace AppBundle\Service;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The team service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface TeamServiceInterface

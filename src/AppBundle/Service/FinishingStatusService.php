@@ -13,8 +13,6 @@ use AppBundle\Entity\FinishingStatus;
 use AppBundle\Repository\FinishingStatusRepositoryInterface;
 
 /**
- * The finishing status service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class FinishingStatusService implements FinishingStatusServiceInterface
