@@ -11,10 +11,9 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Circuit;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
- * The circuit repository.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface CircuitRepositoryInterface
@@ -24,32 +23,14 @@ interface CircuitRepositoryInterface
      *
      * @param array $slugs An array of circuit slugs
      *
-     * @return ArrayCollection A collection of Circuit entities indexed by slug
+     * @return Collection A collection of Circuit entities indexed by slug
      */
-    public function findBySlugs(array $slugs);
+    public function findBySlugs(array $slugs) : Collection;
 
     /**
      * Saves a circuit.
      *
      * @param Circuit $circuit The circuit to save
-     *
-     * @return $this
      */
     public function save(Circuit $circuit);
-
-    /**
-     * Persists a circuit.
-     *
-     * @param Circuit $circuit The circuit to persist
-     *
-     * return $this
-     */
-    public function persist(Circuit $circuit);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
 }

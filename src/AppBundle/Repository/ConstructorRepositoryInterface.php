@@ -11,6 +11,7 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Constructor;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * The constructor repository.
@@ -33,7 +34,7 @@ interface ConstructorRepositoryInterface
      *
      * @param array $slugs An array of constructor slugs
      *
-     * @return ArrayCollection A collection of Constructor entities indexed by slug
+     * @return Collection A collection of Constructor entities indexed by slug
      */
-    public function findBySlugs(array $slugs);
+    public function findBySlugs(array $slugs) : Collection;
 }
