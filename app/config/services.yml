@@ -200,6 +200,94 @@ services:
         tags:
             - { name: doctrine.event_listener, event: loadClassMetadata }
 
+    # Monolog Processors
+    app.monolog.processor.web:
+        class: Monolog\Processor\WebProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.uid:
+        class: Monolog\Processor\UidProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.user:
+        class: AppBundle\Monolog\Processor\UserProcessor
+        public: false
+        arguments: ["@security.token_storage"]
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.race:
+        class: AppBundle\Monolog\Processor\RaceProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.circuit:
+        class: AppBundle\Monolog\Processor\CircuitProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.driver:
+        class: AppBundle\Monolog\Processor\DriverProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.constructor:
+        class: AppBundle\Monolog\Processor\ConstructorProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.scoring_system:
+        class: AppBundle\Monolog\Processor\ScoringSystemProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.season:
+        class: AppBundle\Monolog\Processor\SeasonProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.team:
+        class: AppBundle\Monolog\Processor\TeamProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.qualifying:
+        class: AppBundle\Monolog\Processor\QualifyingProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.result:
+        class: AppBundle\Monolog\Processor\ResultProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.finishing_status:
+        class: AppBundle\Monolog\Processor\FinishingStatusProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.prediction:
+        class: AppBundle\Monolog\Processor\PredictionProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.driver_standings:
+        class: AppBundle\Monolog\Processor\DriverStandingsProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.constructor_standings:
+        class: AppBundle\Monolog\Processor\ConstructorStandingsProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+    app.monolog.processor.user_standings:
+        class: AppBundle\Monolog\Processor\UserStandingsProcessor
+        public: false
+        tags:
+            - { name: monolog.processor }
+
     # Ergast
     app.ergast.http_adapter:
         class: Ivory\HttpAdapter\FileGetContentsHttpAdapter
