@@ -25,32 +25,8 @@ class QualifyingRepository extends EntityRepository implements QualifyingReposit
      */
     public function save(Qualifying $qualifying)
     {
-        $this
-            ->persist($qualifying)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Qualifying $qualifying)
-    {
         $this->_em->persist($qualifying);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -110,7 +86,5 @@ class QualifyingRepository extends EntityRepository implements QualifyingReposit
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

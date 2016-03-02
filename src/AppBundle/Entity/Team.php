@@ -51,7 +51,7 @@ class Team
     /**
      * The constructor entity.
      *
-     * @ORM\ManyToOne(targetEntity="Constructor", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Constructor")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\NotNull
      *
@@ -62,7 +62,7 @@ class Team
     /**
      * The driver entity.
      *
-     * @ORM\ManyToOne(targetEntity="Driver", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Driver")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\NotNull
      *

@@ -61,11 +61,9 @@ class FinishingStatusLoader extends AbstractLoader
 
             if (!$finishingStatues->get($label)) {
                 $finishingStatus = new AppEntity\FinishingStatus($label);
-                $this->finishingStatusService->persist($finishingStatus);
+                $this->finishingStatusService->save($finishingStatus);
             }
         }
-
-        $this->finishingStatusService->flush();
 
         $this->loaded = true;
     }

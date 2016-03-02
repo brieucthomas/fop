@@ -31,33 +31,13 @@ interface DriverStandingsServiceInterface
      * Saves a DriverStandings.
      *
      * @param DriverStandings $driverStandings The DriverStandings to save
-     *
-     * @return $this
      */
     public function save(DriverStandings $driverStandings);
-
-    /**
-     * Persists a DriverStandings.
-     *
-     * @param DriverStandings $driverStandings The DriverStandings to persist
-     *
-     * return $this
-     */
-    public function persist(DriverStandings $driverStandings);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
 
     /**
      * Removes by season.
      *
      * @param Season $season A Season entity
-     *
-     * @return $this
      */
     public function removeBySeason(Season $season);
 }

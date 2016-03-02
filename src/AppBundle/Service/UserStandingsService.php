@@ -13,27 +13,20 @@ use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\UserRepositoryInterface;
 use AppBundle\Repository\UserStandingsRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class UserStandingsService implements UserStandingsServiceInterface
 {
-    /**
-     * The user standings repository.
-     *
-     * @var UserRepositoryInterface
-     */
     private $userStandingsRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param UserStandingsRepositoryInterface $userStandingsRepository
-     */
-    public function __construct(UserStandingsRepositoryInterface $userStandingsRepository)
+    public function __construct(UserStandingsRepositoryInterface $userStandingsRepository, LoggerInterface $logger)
     {
         $this->userStandingsRepository = $userStandingsRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -50,7 +43,5 @@ class UserStandingsService implements UserStandingsServiceInterface
     public function removeBySeason(Season $season)
     {
         $this->userStandingsRepository->removeBySeason($season);
-
-        return $this;
     }
 }

@@ -35,18 +35,6 @@ interface ConstructorStandingsServiceInterface
     public function save(ConstructorStandings $constructorStandings);
 
     /**
-     * Persists a ConstructorStandings.
-     *
-     * @param ConstructorStandings $constructorStandings The ConstructorStandings to persist
-     */
-    public function persist(ConstructorStandings $constructorStandings);
-
-    /**
-     * Flushes modifications.
-     */
-    public function flush();
-
-    /**
      * Removes by season.
      *
      * @param Season $season A Season entity

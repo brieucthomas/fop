@@ -9,6 +9,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Team;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -24,4 +25,11 @@ interface TeamServiceInterface
      * @return ArrayCollection A collection of Team entities
      */
     public function findByDriver($driverId);
+
+    /**
+     * Saves a team.
+     *
+     * @param Team $team The team to save
+     */
+    public function save(Team $team);
 }

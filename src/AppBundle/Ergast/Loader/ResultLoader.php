@@ -94,10 +94,8 @@ class ResultLoader extends AbstractLoader
                     ;
                 }
 
-                $this->resultService->persist($result);
+                $this->resultService->save($result);
             }
         }
-
-        $this->resultService->flush();
     }
 }

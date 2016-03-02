@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Tests\AppBundle;
+namespace Tests;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Liip\FunctionalTestBundle\Test\WebTestCase as LiipTest;

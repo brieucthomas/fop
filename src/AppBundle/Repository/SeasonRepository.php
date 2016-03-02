@@ -185,31 +185,7 @@ class SeasonRepository extends EntityRepository implements SeasonRepositoryInter
      */
     public function save(Season $season)
     {
-        $this
-            ->persist($season)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Season $season)
-    {
         $this->_em->persist($season);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 }

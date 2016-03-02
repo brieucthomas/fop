@@ -66,32 +66,8 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
      */
     public function save(DriverStandings $driverStandings)
     {
-        $this
-            ->persist($driverStandings)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(DriverStandings $driverStandings)
-    {
         $this->_em->persist($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -113,7 +89,5 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

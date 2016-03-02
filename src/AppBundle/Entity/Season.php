@@ -195,21 +195,21 @@ class Season
     /**
      * Returns a team by its driver and constructor.
      *
-     * @param string $driverSlug      The driver slug
-     * @param string $constructorSlug The constructor slug
+     * @param Driver $driver      The driver entity
+     * @param Constructor $constructor The constructor entity
      *
      * @return Team|null The Team entity or null if not found
      */
-    public function getTeamByDriverAndConstructor($driverSlug, $constructorSlug)
+    public function findTeamByDriverAndConstructor(Driver $driver, Constructor $constructor)
     {
         foreach ($this->teams as $team) {
             /* @var $team Team */
-            if (($team->getDriver()->getSlug() == $driverSlug) && ($team->getConstructor()->getSlug() == $constructorSlug)) {
+            if (($team->getDriver()->getSlug() == $driver->getSlug()) && ($team->getConstructor()->getSlug() == $constructor->getSlug())) {
                 return $team;
             }
         }
 
-        return;
+        return null;
     }
 
     /**

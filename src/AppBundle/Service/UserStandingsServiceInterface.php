@@ -30,8 +30,6 @@ interface UserStandingsServiceInterface
      * Removes by season.
      *
      * @param Season $season A Season entity
-     *
-     * @return $this
      */
     public function removeBySeason(Season $season);
 }

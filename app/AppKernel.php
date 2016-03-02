@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Ornicar\GravatarBundle\OrnicarGravatarBundle(),
             new JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Rollerworks\Bundle\NavigationBundle\RollerworksNavigationBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new AppBundle\AppBundle(),

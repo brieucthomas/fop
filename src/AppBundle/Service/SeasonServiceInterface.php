@@ -94,8 +94,6 @@ interface SeasonServiceInterface
      * Saves a season.
      *
      * @param Season $season A season entity
-     *
-     * @return $this
      */
     public function save(Season $season);
 
@@ -104,8 +102,6 @@ interface SeasonServiceInterface
      *
      * @param Season $season The season entity
      * @param Race   $race   The race entity
-     *
-     * @return $this
      */
     public function addRace(Season $season, Race $race);
 
@@ -114,24 +110,6 @@ interface SeasonServiceInterface
      *
      * @param Season $season The season entity
      * @param Team   $team   The team entity
-     *
-     * @return $this
      */
     public function addTeam(Season $season, Team $team);
-
-    /**
-     * Persists a season.
-     *
-     * @param Season $season The season to persist
-     *
-     * return $this
-     */
-    public function persist(Season $season);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
 }

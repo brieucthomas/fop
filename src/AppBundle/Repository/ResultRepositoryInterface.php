@@ -29,22 +29,6 @@ interface ResultRepositoryInterface
     public function save(Result $result);
 
     /**
-     * Persists a result.
-     *
-     * @param Result $result The result to persist
-     *
-     * return $this
-     */
-    public function persist(Result $result);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
-
-    /**
      * Returns the number of wins of a constructor.
      *
      * @param string $constructorId A constructor identifier
@@ -111,8 +95,6 @@ interface ResultRepositoryInterface
      * Removes results by season.
      *
      * @param Season $season A Season entity
-     *
-     * @return $this
      */
     public function removeBySeason(Season $season);
 }

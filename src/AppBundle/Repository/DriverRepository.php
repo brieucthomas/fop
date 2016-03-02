@@ -43,4 +43,13 @@ class DriverRepository extends EntityRepository implements DriverRepositoryInter
 
         return new ArrayCollection($builder->getQuery()->getResult());
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Driver $driver)
+    {
+        $this->_em->persist($driver);
+        $this->_em->flush();
+    }
 }

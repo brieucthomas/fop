@@ -10,7 +10,7 @@
 namespace Tests\AppBundle\Service;
 
 use AppBundle\Service\DriverServiceInterface;
-use Tests\AppBundle\WebTestCase;
+use Tests\WebTestCase;
 
 class DriverServiceTest extends WebTestCase
 {

@@ -9,8 +9,7 @@
 
 namespace Tests\AppBundle\Service;
 
-use AppBundle\Service\ConstructorServiceInterface;
-use Tests\AppBundle\WebTestCase;
+use Tests\WebTestCase;
 
 class ConstructorServiceTest extends WebTestCase
 {

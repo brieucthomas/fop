@@ -11,6 +11,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Driver;
 use AppBundle\Repository\DriverRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
@@ -18,10 +19,12 @@ use AppBundle\Repository\DriverRepositoryInterface;
 class DriverService implements DriverServiceInterface
 {
     private $driverRepository;
+    private $logger;
 
-    public function __construct(DriverRepositoryInterface $driverRepository)
+    public function __construct(DriverRepositoryInterface $driverRepository, LoggerInterface $logger)
     {
         $this->driverRepository = $driverRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -38,5 +41,15 @@ class DriverService implements DriverServiceInterface
     public function findBySlugs(array $slugs)
     {
         return $this->driverRepository->findBySlugs($slugs);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Driver $driver)
+    {
+        $this->logger->notice($driver->getId() ? 'Edit driver.' : 'New driver.', ['driver' => $driver]);
+
+        $this->driverRepository->save($driver);
     }
 }

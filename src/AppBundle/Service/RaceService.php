@@ -11,27 +11,20 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Race;
 use AppBundle\Repository\RaceRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class RaceService implements RaceServiceInterface
 {
-    /**
-     * The Race repository.
-     *
-     * @var RaceRepositoryInterface
-     */
     private $raceRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param RaceRepositoryInterface $raceRepository A RaceRepositoryInterface instance
-     */
-    public function __construct(RaceRepositoryInterface $raceRepository)
+    public function __construct(RaceRepositoryInterface $raceRepository, LoggerInterface $logger)
     {
         $this->raceRepository = $raceRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -64,27 +57,5 @@ class RaceService implements RaceServiceInterface
     public function save(Race $race)
     {
         $this->raceRepository->save($race);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Race $race)
-    {
-        $this->raceRepository->persist($race);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->raceRepository->flush();
-
-        return $this;
     }
 }

@@ -17,7 +17,19 @@ use Doctrine\Common\Collections\Collection;
  */
 interface CircuitServiceInterface
 {
+    /**
+     * Finds circuits by slugs.
+     *
+     * @param array $slugs An array of circuit slugs
+     *
+     * @return Collection A collection of Circuit entities indexed by slug
+     */
     public function findBySlugs(array $slugs) : Collection;
 
+    /**
+     * Saves a circuit.
+     *
+     * @param Circuit $circuit The circuit to save
+     */
     public function save(Circuit $circuit);
 }

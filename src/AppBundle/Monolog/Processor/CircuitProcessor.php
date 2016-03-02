@@ -32,7 +32,6 @@ class CircuitProcessor
 
         $record['context']['circuit'] = [
             'id' => $circuit->getId(),
-            'name' => $circuit->getName(),
             'slug' => $circuit->getSlug(),
         ];
 

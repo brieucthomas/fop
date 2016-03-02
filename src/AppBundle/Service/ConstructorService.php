@@ -11,7 +11,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Constructor;
 use AppBundle\Repository\ConstructorRepositoryInterface;
-use Nelmio\Alice\Instances\Collection;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
@@ -19,10 +19,12 @@ use Nelmio\Alice\Instances\Collection;
 class ConstructorService implements ConstructorServiceInterface
 {
     private $constructorRepository;
+    private $logger;
 
-    public function __construct(ConstructorRepositoryInterface $constructorRepository)
+    public function __construct(ConstructorRepositoryInterface $constructorRepository, LoggerInterface $logger)
     {
         $this->constructorRepository = $constructorRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -36,8 +38,8 @@ class ConstructorService implements ConstructorServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs) : Collection
+    public function save(Constructor $constructor)
     {
-        return $this->constructorRepository->findBySLugs($slugs);
+        $this->constructorRepository->save($constructor);
     }
 }

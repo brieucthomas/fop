@@ -10,8 +10,6 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Constructor;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -32,16 +30,9 @@ class ConstructorRepository extends EntityRepository implements ConstructorRepos
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs) : Collection
+    public function save(Constructor $constructor)
     {
-        $builder = $this->_em->createQueryBuilder();
-        $builder
-            ->select('c')
-            ->from($this->_entityName, 'c', 'c.slug')
-            ->where($builder->expr()->in('c.slug', ':slugs'))
-            ->setParameter(':slugs', $slugs)
-        ;
-
-        return new ArrayCollection($builder->getQuery()->getResult());
+        $this->_em->persist($constructor);
+        $this->_em->flush();
     }
 }

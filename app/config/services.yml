@@ -33,12 +33,6 @@ services:
         tags:
             - { name: twig.extension }
 
-    # Translation
-    app.translation.extractor:
-        class: AppBundle\Translation\MenuTranslationExtractor
-        tags:
-            - name: jms_translation.file_visitor
-
     # Repositories
     app.repository.user:
         class: AppBundle\Repository\UserRepository
@@ -108,80 +102,74 @@ services:
     # Services
     app.service.user:
         class: AppBundle\Service\UserService
-        arguments: ["@app.repository.user"]
+        arguments: ["@app.repository.user", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.circuit:
         class: AppBundle\Service\CircuitService
-        arguments: ["@app.repository.circuit"]
+        arguments: ["@app.repository.circuit", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.season:
         class: AppBundle\Service\SeasonService
-        arguments: ["@app.repository.season", "@app.repository.scoring_system", "@app.repository.user"]
+        arguments: ["@app.repository.season", "@app.repository.scoring_system", "@app.repository.user", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.constructor:
         class: AppBundle\Service\ConstructorService
-        arguments: ["@app.repository.constructor"]
+        arguments: ["@app.repository.constructor", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.driver:
         class: AppBundle\Service\DriverService
-        arguments: ["@app.repository.driver"]
+        arguments: ["@app.repository.driver", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.race:
         class: AppBundle\Service\RaceService
-        arguments: ["@app.repository.race"]
+        arguments: ["@app.repository.race", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.finishing_status:
         class: AppBundle\Service\FinishingStatusService
-        arguments: ["@app.repository.finishing_status"]
+        arguments: ["@app.repository.finishing_status", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.result:
         class: AppBundle\Service\ResultService
-        arguments: ["@app.repository.result"]
+        arguments: ["@app.repository.result", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.qualifying:
         class: AppBundle\Service\QualifyingService
-        arguments: ["@app.repository.qualifying"]
+        arguments: ["@app.repository.qualifying", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.team:
         class: AppBundle\Service\TeamService
-        arguments: ["@app.repository.team"]
+        arguments: ["@app.repository.team", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.driver_standings:
         class: AppBundle\Service\DriverStandingsService
-        arguments: ["@app.repository.driver_standings"]
+        arguments: ["@app.repository.driver_standings", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.constructor_standings:
         class: AppBundle\Service\ConstructorStandingsService
-        arguments: ["@app.repository.constructor_standings"]
+        arguments: ["@app.repository.constructor_standings", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.user_standings:
         class: AppBundle\Service\UserStandingsService
-        arguments: ["@app.repository.user_standings"]
+        arguments: ["@app.repository.user_standings", "@logger"]
+        tags:
+            - { name: monolog.logger, channel: app }
     app.service.prediction:
         class: AppBundle\Service\PredictionService
-        arguments: ["@doctrine.orm.entity_manager", "@app.repository.prediction", "@app.repository.finishing_position", "@app.repository.season", "@app.repository.user", "@app.repository.user_standings"]
-
-    # Menus
-    app.menu.builder:
-        class: AppBundle\Menu\Builder
-        scope: request
-        arguments: ["@knp_menu.factory", "@request_stack"]
-    app.menu.breadcrumb:
-        class: Knp\Menu\MenuItem
-        factory: ["@app.menu.builder", createBreadcrumb]
+        arguments: ["@doctrine.orm.entity_manager", "@app.repository.prediction", "@app.repository.finishing_position", "@app.repository.season", "@app.repository.user", "@app.repository.user_standings", "@logger"]
         tags:
-            - { name: knp_menu.menu, alias: breadcrumb }
-    app.menu.main:
-         class: Knp\Menu\MenuItem
-         factory: ["@app.menu.builder", createMainMenu]
-         tags:
-             - { name: knp_menu.menu, alias: main }
-    app.menu.footer:
-         class: Knp\Menu\MenuItem
-         factory: ["@app.menu.builder", createFooterMenu]
-         arguments: [ "%mail_admin%" ]
-         tags:
-             - { name: knp_menu.menu, alias: footer }
-    app.menu.user:
-         class: Knp\Menu\MenuItem
-         factory: ["@app.menu.builder", createUserMenu]
-         arguments: ["@security.authorization_checker", "@security.token_storage"]
-         tags:
-             - { name: knp_menu.menu, alias: user }
-    app.menu.locale_switcher:
-         class: Knp\Menu\MenuItem
-         factory: ["@app.menu.builder", createLocaleSwitcherMenu]
-         arguments: ["%locales%"]
-         tags:
-             - { name: knp_menu.menu, alias: locale_switcher }
+            - { name: monolog.logger, channel: app }
 
     # Listeners
     app.listener.console_exception:
@@ -319,6 +307,7 @@ services:
             - [ setSeasonService, ["@app.service.season"] ]
             - [ setDriverService, ["@app.service.driver"] ]
             - [ setConstructorService, ["@app.service.constructor"] ]
+            - [ setTeamService, ["@app.service.team"] ]
     app.ergast.loader.race:
         class: AppBundle\Ergast\Loader\RaceLoader
         parent: app.ergast.loader

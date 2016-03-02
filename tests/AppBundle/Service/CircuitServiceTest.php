@@ -9,8 +9,7 @@
 
 namespace Tests\AppBundle\Service;
 
-use AppBundle\Service\CircuitServiceInterface;
-use Tests\AppBundle\WebTestCase;
+use Tests\WebTestCase;
 
 class CircuitServiceTest extends WebTestCase
 {

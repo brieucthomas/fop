@@ -55,7 +55,5 @@ class FinishingPositionRepository extends EntityRepository implements FinishingP
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

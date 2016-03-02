@@ -60,31 +60,8 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
      */
     public function save(ConstructorStandings $constructorStandings)
     {
-        $this
-            ->persist($constructorStandings)
-            ->flush();
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(ConstructorStandings $constructorStandings)
-    {
         $this->_em->persist($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -105,7 +82,5 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

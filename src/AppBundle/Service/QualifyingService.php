@@ -12,27 +12,20 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Qualifying;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\QualifyingRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class QualifyingService implements QualifyingServiceInterface
 {
-    /**
-     * The qualifying repository.
-     *
-     * @var QualifyingRepositoryInterface
-     */
     private $qualifyingRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param QualifyingRepositoryInterface $qualifyingRepository
-     */
-    public function __construct(QualifyingRepositoryInterface $qualifyingRepository)
+    public function __construct(QualifyingRepositoryInterface $qualifyingRepository, LoggerInterface $logger)
     {
         $this->qualifyingRepository = $qualifyingRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -41,28 +34,6 @@ class QualifyingService implements QualifyingServiceInterface
     public function save(Qualifying $qualifying)
     {
         $this->qualifyingRepository->save($qualifying);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Qualifying $qualifying)
-    {
-        $this->qualifyingRepository->persist($qualifying);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->qualifyingRepository->flush();
-
-        return $this;
     }
 
     /**
@@ -87,7 +58,5 @@ class QualifyingService implements QualifyingServiceInterface
     public function removeBySeason(Season $season)
     {
         $this->qualifyingRepository->removeBySeason($season);
-
-        return $this;
     }
 }

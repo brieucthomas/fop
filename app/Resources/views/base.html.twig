@@ -26,7 +26,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="site-navbar-collapse">
                     {{ knp_menu_render('main', { 'style': 'navbar' }) }}
-                    {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
+                    {% if app.user %}
+                        {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
+                    {% else %}
+                        {{ knp_menu_render('sign', { 'style': 'navbar-right' }) }}
+                    {% endif %}
                 </div>
             </div>
         </nav>

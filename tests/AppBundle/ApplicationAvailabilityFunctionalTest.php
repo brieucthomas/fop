@@ -9,6 +9,8 @@
 
 namespace Tests\AppBundle;
 
+use Tests\WebTestCase;
+
 class ApplicationAvailabilityFunctionalTest extends WebTestCase
 {
     /**

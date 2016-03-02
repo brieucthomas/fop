@@ -28,24 +28,6 @@ interface FinishingStatusServiceInterface
      * Saves a finishingStatus.
      *
      * @param FinishingStatus $finishingStatus The finishingStatus to save
-     *
-     * @return $this
      */
     public function save(FinishingStatus $finishingStatus);
-
-    /**
-     * Persists a finishingStatus.
-     *
-     * @param FinishingStatus $finishingStatus The finishingStatus to persist
-     *
-     * return $this;
-     */
-    public function persist(FinishingStatus $finishingStatus);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this;
-     */
-    public function flush();
 }

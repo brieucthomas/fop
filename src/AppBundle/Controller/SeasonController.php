@@ -18,7 +18,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
- * @Route("/seasons/{year}", requirements={"year" = "\d{4}"})
+ * @Route("/seasons/{year}", requirements={"year"="\d{4}"})
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */

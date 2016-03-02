@@ -73,7 +73,5 @@ class UserStandingsRepository extends EntityRepository implements UserStandingsR
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

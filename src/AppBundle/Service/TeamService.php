@@ -9,28 +9,22 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Team;
 use AppBundle\Repository\TeamRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class TeamService implements TeamServiceInterface
 {
-    /**
-     * The Team repository.
-     *
-     * @var TeamRepositoryInterface
-     */
     private $teamRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param TeamRepositoryInterface $teamRepository
-     */
-    public function __construct(TeamRepositoryInterface $teamRepository)
+    public function __construct(TeamRepositoryInterface $teamRepository, LoggerInterface $logger)
     {
         $this->teamRepository = $teamRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -39,5 +33,13 @@ class TeamService implements TeamServiceInterface
     public function findByDriver($driverId)
     {
         return $this->teamRepository->findByDriver($driverId);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Team $team)
+    {
+        $this->teamRepository->save($team);
     }
 }

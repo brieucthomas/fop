@@ -10,8 +10,6 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Constructor;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 
 /**
  * The constructor repository.
@@ -30,11 +28,9 @@ interface ConstructorRepositoryInterface
     public function findBySlug($slug);
 
     /**
-     * Finds constructors by slugs.
+     * Saves a constructor.
      *
-     * @param array $slugs An array of constructor slugs
-     *
-     * @return Collection A collection of Constructor entities indexed by slug
+     * @param Constructor $constructor The constructor to save
      */
-    public function findBySlugs(array $slugs) : Collection;
+    public function save(Constructor $constructor);
 }

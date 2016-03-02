@@ -12,27 +12,20 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Result;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\ResultRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class ResultService implements ResultServiceInterface
 {
-    /**
-     * The result repository.
-     *
-     * @var ResultRepositoryInterface
-     */
     private $resultRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param ResultRepositoryInterface $resultRepository
-     */
-    public function __construct(ResultRepositoryInterface $resultRepository)
+    public function __construct(ResultRepositoryInterface $resultRepository, LoggerInterface $logger)
     {
         $this->resultRepository = $resultRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -41,28 +34,6 @@ class ResultService implements ResultServiceInterface
     public function save(Result $result)
     {
         $this->resultRepository->save($result);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Result $result)
-    {
-        $this->resultRepository->persist($result);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->resultRepository->flush();
-
-        return $this;
     }
 
     /**
@@ -127,7 +98,5 @@ class ResultService implements ResultServiceInterface
     public function removeBySeason(Season $season)
     {
         $this->resultRepository->removeBySeason($season);
-
-        return $this;
     }
 }

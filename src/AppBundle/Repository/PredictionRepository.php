@@ -36,8 +36,6 @@ class PredictionRepository extends EntityRepository implements PredictionReposit
     {
         $this->_em->remove($prediction);
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -47,7 +45,5 @@ class PredictionRepository extends EntityRepository implements PredictionReposit
     {
         $this->_em->persist($prediction);
         $this->_em->flush();
-
-        return $this;
     }
 }
