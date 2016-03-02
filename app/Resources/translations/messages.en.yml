@@ -1,0 +1,16 @@
+navigation:
+    main:
+        home: "Home"
+        calendar: "Calendar"
+        standings: "Standings"
+        user_standings: "User"
+        driver_standings: "Driver"
+        constructor_standings: "Constructor"
+    sign:
+        in: "Login"
+        up: "Sign up"
+    user:
+        account: "My account"
+        logout: "Logout"
+    footer:
+        contact: "Contact-us"

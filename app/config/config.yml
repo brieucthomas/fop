@@ -126,21 +126,21 @@ rollerworks_navigation:
                     label: navigation.main.standings
                     items:
                         user:
-                            label: navigation.main.standings.user
+                            label: navigation.main.user_standings
                             route: { name: season_user_standings, parameters: { year: 2016 } }
                         driver:
-                            label: navigation.main.standings.driver
+                            label: navigation.main.driver_standings
                             route: { name: season_driver_standings, parameters: { year: 2016 } }
                         constructor:
-                            label: navigation.main.standings.constructor
+                            label: navigation.main.constructor_standings
                             route: { name: season_constructor_standings, parameters: { year: 2016 } }
         sign:
             items:
                 login:
-                    label: navigation.sign.signin
+                    label: navigation.sign.in
                     route: { name: fos_user_security_login }
                 register:
-                    label: navigation.sign.signup
+                    label: navigation.sign.up
                     route: { name: fos_user_registration_register }
         user:
             items:
