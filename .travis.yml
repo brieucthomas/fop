@@ -3,8 +3,13 @@ language: php
 php:
     - 7.0
 
+sudo: false
+
+before_install:
+  - composer selfupdate
+
 install:
-    - composer install --dev --no-interaction --prefer-source
+    - composer install --dev --no-interaction --prefer-dist
     - wget https://scrutinizer-ci.com/ocular.phar
 
 script:
