@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "215ba885bd35ab4d4e59f5f42aa69db6",
-    "content-hash": "2b1c20f28e0cc618c08094b552440624",
+    "hash": "4dcab45a3a4564f45d10cff379dbe6c6",
+    "content-hash": "b06b55a4f9bc3f39b946a02dd68ce8b5",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -947,12 +947,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "a39d000577d735444bee97de9f5ee382e3f85fa1"
+                "reference": "88f84f631ee7859c069cf98b475c679e90b16b22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/a39d000577d735444bee97de9f5ee382e3f85fa1",
-                "reference": "a39d000577d735444bee97de9f5ee382e3f85fa1",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/88f84f631ee7859c069cf98b475c679e90b16b22",
+                "reference": "88f84f631ee7859c069cf98b475c679e90b16b22",
                 "shasum": ""
             },
             "require": {
@@ -1008,7 +1008,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2016-03-01 11:42:24"
+            "time": "2016-03-04 13:20:42"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -2003,16 +2003,16 @@
         },
         {
             "name": "rollerworks/navigation-bundle",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rollerworks/NavigationBundle.git",
-                "reference": "d88b2302ec48aa88c551d63b3063ffce93ea7062"
+                "reference": "3870b347d7dc399ef9ddf4f8e82c80d9434058d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rollerworks/NavigationBundle/zipball/d88b2302ec48aa88c551d63b3063ffce93ea7062",
-                "reference": "d88b2302ec48aa88c551d63b3063ffce93ea7062",
+                "url": "https://api.github.com/repos/rollerworks/NavigationBundle/zipball/3870b347d7dc399ef9ddf4f8e82c80d9434058d8",
+                "reference": "3870b347d7dc399ef9ddf4f8e82c80d9434058d8",
                 "shasum": ""
             },
             "require": {
@@ -2049,7 +2049,7 @@
                 }
             ],
             "description": "Symfony bundle for defining menu-structures and breadcrumbs in the KnpMenuBundle",
-            "time": "2015-12-26 13:18:31"
+            "time": "2016-03-05 14:29:46"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -3292,16 +3292,16 @@
         },
         {
             "name": "hautelook/alice-bundle",
-            "version": "dev-master",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hautelook/AliceBundle.git",
-                "reference": "744f6710a56ee4f3b61e7d59f7cf86b9d2a0eea5"
+                "reference": "39cba589a786dd51f1b34c420cdd9a2d6ecad9cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/744f6710a56ee4f3b61e7d59f7cf86b9d2a0eea5",
-                "reference": "744f6710a56ee4f3b61e7d59f7cf86b9d2a0eea5",
+                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/39cba589a786dd51f1b34c420cdd9a2d6ecad9cc",
+                "reference": "39cba589a786dd51f1b34c420cdd9a2d6ecad9cc",
                 "shasum": ""
             },
             "require": {
@@ -3370,7 +3370,7 @@
                 "orm",
                 "symfony"
             ],
-            "time": "2016-02-24 09:19:28"
+            "time": "2016-02-12 09:40:12"
         },
         {
             "name": "liip/functional-test-bundle",
@@ -3563,8 +3563,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "stof/doctrine-extensions-bundle": 20,
-        "friendsofsymfony/user-bundle": 20,
-        "hautelook/alice-bundle": 20
+        "friendsofsymfony/user-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

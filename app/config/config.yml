@@ -11,7 +11,7 @@ parameters:
     locales: [fr, en]
     database_prefix: fop_
     app_name: "FOP"
-    app_version: "0.0.2"
+    app_version: "0.0.1"
     mail_noreply: "noreply@fop.wtf"
     mail_admin: "postmaster@fop.wtf"
 
