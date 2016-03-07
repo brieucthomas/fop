@@ -13,12 +13,14 @@ use AppBundle\Entity\Prediction;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\User;
 use AppBundle\Security\PredictionVoter;
-use Tests\AppBundle\Fixtures\UserFixture;
+use Symfony\Component\Security\Core\Authentication\Token\AnonymousToken;
+use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Tests\WebTestCase;
 
-class PredictionVoterTest extends \PHPUnit_Framework_TestCase
+class PredictionVoterTest extends WebTestCase
 {
     /**
      * @var PredictionVoter
@@ -27,7 +29,9 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->voter = new PredictionVoter();
+        $this->voter = new PredictionVoter(
+            $this->get('security.access.decision_manager')
+        );
     }
 
     protected function tearDown()
@@ -37,15 +41,15 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
 
     public function testAdminCanShowOtherPredictionWhenTheRaceIsNotFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
-        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_ADMIN')]);
+        $prediction = new Prediction($this->getNextRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
 
     public function testUserCanShowHisPredictionWhenTheRaceIsNotFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_USER')]);
         $prediction = new Prediction($this->getNextRace(), $token->getUser());
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
@@ -53,55 +57,55 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
 
     public function testAnonymousCannotShowPredictionWhenTheRaceIsNotFinished()
     {
-        $token = $this->getMockedToken();
-        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
+        $token = new AnonymousToken('foo', 'bar');
+        $prediction = new Prediction($this->getNextRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['show']));
     }
 
     public function testAnonymousCanShowPredictionWhenTheRaceIsFinished()
     {
-        $token = $this->getMockedToken();
-        $prediction = new Prediction($this->getFinishedRace(), $this->getUserLoggedAsUser(2));
+        $token = new AnonymousToken('foo', 'bar');
+        $prediction = new Prediction($this->getFinishedRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
 
     public function testUserCanShowOtherPredictionWhenTheRaceInFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
-        $prediction = new Prediction($this->getFinishedRace(), $this->getUserLoggedAsUser(2));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_USER')]);
+        $prediction = new Prediction($this->getFinishedRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['show']));
     }
 
     public function testUserCannotShowOtherPredictionWhenTheRaceInNotFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
-        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_USER')]);
+        $prediction = new Prediction($this->getNextRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['show']));
     }
 
     public function testAdminCanEditOtherPredictionWhenTheRaceInNotFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
-        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_ADMIN')]);
+        $prediction = new Prediction($this->getNextRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
     }
 
     public function testAdminCanEditOtherPredictionWhenTheRaceInFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsAdmin(1));
-        $prediction = new Prediction($this->getFinishedRace(), $this->getUserLoggedAsUser(2));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_ADMIN')]);
+        $prediction = new Prediction($this->getFinishedRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
     }
 
     public function testUserCanEditAPredictionWhenTheRaceInNotFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_USER')]);
         $prediction = new Prediction($this->getNextRace(), $token->getUser());
 
         $this->assertSame(VoterInterface::ACCESS_GRANTED, $this->voter->vote($token, $prediction, ['edit']));
@@ -109,7 +113,7 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
 
     public function testUserCannotEditHisPredictionWhenTheRaceIsFinished()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_USER')]);
         $prediction = new Prediction($this->getFinishedRace(), $token->getUser());
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['edit']));
@@ -117,8 +121,8 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
 
     public function testUserCannotEditOtherPredictions()
     {
-        $token = $this->getMockedToken($this->getUserLoggedAsUser(1));
-        $prediction = new Prediction($this->getNextRace(), $this->getUserLoggedAsUser(2));
+        $token = $this->getMockedToken($this->getUser(1), [new Role('ROLE_USER')]);
+        $prediction = new Prediction($this->getNextRace(), $this->getUser(2));
 
         $this->assertSame(VoterInterface::ACCESS_DENIED, $this->voter->vote($token, $prediction, ['edit']));
     }
@@ -126,13 +130,18 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     /**
      * @return TokenInterface
      */
-    private function getMockedToken(UserInterface $user = null)
+    private function getMockedToken(UserInterface $user = null, array $roles)
     {
         $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
         $token
             ->expects($this->any())
             ->method('getUser')
             ->willReturn($user)
+        ;
+        $token
+            ->expects($this->any())
+            ->method('getRoles')
+            ->willReturn($roles)
         ;
 
         return $token;
@@ -168,30 +177,14 @@ class PredictionVoterTest extends \PHPUnit_Framework_TestCase
     /**
      * @return User
      */
-    private function getUserLoggedAsUser($id)
+    private function getUser($id)
     {
-        return $this->getUser($id, ['ROLE_USER']);
-    }
-
-    /**
-     * @return User
-     */
-    private function getUserLoggedAsAdmin($id)
-    {
-        return $this->getUser($id, ['ROLE_ADMIN']);
-    }
-
-    /**
-     * @return User
-     */
-    private function getUser($id, $roles = [])
-    {
-        $user = new UserFixture();
-        $user->setId($id);
-
-        foreach ($roles as $role) {
-            $user->addRole($role);
-        }
+        $user = $this->getMock('AppBundle\Entity\User');
+        $user
+            ->expects($this->any())
+            ->method('getId')
+            ->willReturn($id)
+        ;
 
         return $user;
     }

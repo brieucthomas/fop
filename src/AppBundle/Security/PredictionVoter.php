@@ -54,7 +54,7 @@ class PredictionVoter extends Voter
     protected function voteOnAttribute($attribute, $subject, TokenInterface $token)
     {
         $user = $token->getUser();
-        /* @var Prediction */
+        /* @var $prediction Prediction */
         $prediction = $subject;
 
         // administrators can do anythings
