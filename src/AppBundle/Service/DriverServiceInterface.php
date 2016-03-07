@@ -13,8 +13,6 @@ use AppBundle\Entity\Driver;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * The driver service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface DriverServiceInterface
@@ -36,4 +34,11 @@ interface DriverServiceInterface
      * @return ArrayCollection A collection of Driver entities indexed by slug
      */
     public function findBySlugs(array $slugs);
+
+    /**
+     * Saves a driver.
+     *
+     * @param Driver $driver The driver to save
+     */
+    public function save(Driver $driver);
 }

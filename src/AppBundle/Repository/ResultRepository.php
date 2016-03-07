@@ -28,32 +28,8 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
      */
     public function save(Result $result)
     {
-        $this
-            ->persist($result)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Result $result)
-    {
         $this->_em->persist($result);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -63,7 +39,7 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
     {
         $builder = $this->createQueryBuilder('r');
         $builder
-            ->select($builder->expr()->count('r'))
+            ->select($builder->expr()->count('r.position'))
             ->join('r.team', 't')
             ->where($builder->expr()->eq('r.position', ':position'))
             ->andWhere($builder->expr()->eq('t.constructor', ':constructor'))
@@ -81,7 +57,7 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
     {
         $builder = $this->createQueryBuilder('r');
         $builder
-            ->select($builder->expr()->count('r'))
+            ->select($builder->expr()->count('r.position'))
             ->join('r.team', 't')
             ->where($builder->expr()->eq('r.position', ':position'))
             ->andWhere($builder->expr()->eq('t.driver', ':driver'))
@@ -99,7 +75,7 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
     {
         $builder = $this->createQueryBuilder('r');
         $builder
-            ->select($builder->expr()->count('r'))
+            ->select($builder->expr()->count('r.position'))
             ->join('r.team', 't')
             ->where($builder->expr()->gte('r.position', ':position'))
             ->andWhere($builder->expr()->eq('t.driver', ':driver'))
@@ -130,7 +106,7 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
     {
         $builder = $this->createQueryBuilder('r');
         $builder
-            ->select($builder->expr()->count('r'))
+            ->select($builder->expr()->count('r.fastestLap'))
             ->join('r.team', 't')
             ->where($builder->expr()->eq('r.fastestLapRank', ':rank'))
             ->andWhere($builder->expr()->eq('t.driver', ':driver'))
@@ -148,7 +124,7 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
     {
         $builder = $this->createQueryBuilder('r');
         $builder
-            ->select($builder->expr()->count('r'))
+            ->select($builder->expr()->count('r.position'))
             ->join('r.team', 't')
             ->andWhere($builder->expr()->eq('t.driver', ':driver'))
             ->setParameter(':driver', $driverId)
@@ -196,7 +172,5 @@ class ResultRepository extends EntityRepository implements ResultRepositoryInter
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

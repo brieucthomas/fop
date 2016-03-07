@@ -12,12 +12,9 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * The user controller.
- *
  * @Route("/users")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
@@ -26,12 +23,12 @@ class UserController extends Controller
 {
     /**
      * @Route("/{slug}", requirements={"slug" = "[a-z0-9\-]+"}, name="user")
-     *
      * @Method({"GET"})
-     * @Template("user/show.html.twig")
      */
     public function showAction(User $user)
     {
-        return ['user' => $user];
+        return $this->render('user/show.html.twig', [
+            'user' => $user
+        ]);
     }
 }

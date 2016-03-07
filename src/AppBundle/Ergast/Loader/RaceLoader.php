@@ -110,10 +110,8 @@ class RaceLoader extends AbstractLoader
                 ->setCountry($this->country->getCodeByName($ergastCircuit->getLocation()->getCountry()))
             ;
 
-            $this->circuitService->persist($circuit);
+            $this->circuitService->save($circuit);
         }
-
-        $this->circuitService->flush();
 
         return $circuits;
     }

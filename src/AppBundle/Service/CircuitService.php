@@ -11,35 +11,27 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Circuit;
 use AppBundle\Repository\CircuitRepositoryInterface;
+use Doctrine\Common\Collections\Collection;
+use Psr\Log\LoggerInterface;
 
 /**
- * The circuit service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class CircuitService implements CircuitServiceInterface
 {
-    /**
-     * The Circuit repository.
-     *
-     * @var CircuitRepositoryInterface
-     */
     private $circuitRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param CircuitRepositoryInterface $circuitRepository A CircuitRepositoryInterface instance
-     */
-    public function __construct(CircuitRepositoryInterface $circuitRepository)
+    public function __construct(CircuitRepositoryInterface $circuitRepository, LoggerInterface $logger)
     {
         $this->circuitRepository = $circuitRepository;
+        $this->logger = $logger;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs)
+    public function findBySlugs(array $slugs) : Collection
     {
         return $this->circuitRepository->findBySlugs($slugs);
     }
@@ -49,28 +41,8 @@ class CircuitService implements CircuitServiceInterface
      */
     public function save(Circuit $circuit)
     {
+        $this->logger->notice($circuit->getId() ? 'Edit circuit.' : 'New circuit.', ['circuit' => $circuit]);
+
         $this->circuitRepository->save($circuit);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Circuit $circuit)
-    {
-        $this->circuitRepository->persist($circuit);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->circuitRepository->flush();
-
-        return $this;
     }
 }

@@ -9,6 +9,7 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Team;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
 
@@ -47,5 +48,14 @@ class TeamRepository extends EntityRepository implements TeamRepositoryInterface
         ;
 
         return new ArrayCollection($builder->getQuery()->getResult());
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function save(Team $team)
+    {
+        $this->_em->persist($team);
+        $this->_em->flush();
     }
 }

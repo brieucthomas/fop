@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ app.request.locale }}">
+<html lang="{{ app.request.locale }}" data-version="{{ app_version }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% stylesheets
-            'assets/css/fop.css'
-            'vendor/fontawesome/css/font-awesome.min.css'
-            'vendor/c3js-chart/c3.min.css' filter='cssrewrite' %}
-            <link rel="stylesheet" href="{{ asset_url }}" />
-        {% endstylesheets %}
+        <title>{% block title %}Formula One Prediction{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/fop.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendor/c3js-chart/c3.min.css') }}">
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -29,7 +26,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="site-navbar-collapse">
                     {{ knp_menu_render('main', { 'style': 'navbar' }) }}
-                    {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
+                    {% if app.user %}
+                        {{ knp_menu_render('user', { 'style': 'navbar-right' }) }}
+                    {% else %}
+                        {{ knp_menu_render('sign', { 'style': 'navbar-right' }) }}
+                    {% endif %}
                 </div>
             </div>
         </nav>

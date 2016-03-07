@@ -65,10 +65,8 @@ class QualifyingLoader extends AbstractLoader
                     ->setQ3($ergastQualifying->getQ3())
                 ;
 
-                $this->qualifyingService->persist($qualifying);
+                $this->qualifyingService->save($qualifying);
             }
         }
-
-        $this->qualifyingService->flush();
     }
 }

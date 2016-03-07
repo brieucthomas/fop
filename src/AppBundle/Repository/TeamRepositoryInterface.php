@@ -9,6 +9,10 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Constructor;
+use AppBundle\Entity\Driver;
+use AppBundle\Entity\Season;
+use AppBundle\Entity\Team;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\QueryBuilder;
 
@@ -36,4 +40,11 @@ interface TeamRepositoryInterface
      * @return ArrayCollection A collection of Team entities
      */
     public function findByDriver($driverId);
+
+    /**
+     * Saves a team.
+     *
+     * @param Team $team The team to save
+     */
+    public function save(Team $team);
 }

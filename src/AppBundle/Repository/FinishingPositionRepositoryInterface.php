@@ -22,8 +22,6 @@ interface FinishingPositionRepositoryInterface
      * Updates a season predictions finishing positions.
      *
      * @param int $year A season year in 4 digits
-     *
-     * @return $this
      */
     public function updateFinishingPositionsByYear($year);
 }

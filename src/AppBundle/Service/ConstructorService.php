@@ -11,29 +11,20 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\Constructor;
 use AppBundle\Repository\ConstructorRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The constructor service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class ConstructorService implements ConstructorServiceInterface
 {
-    /**
-     * The Constructor repository.
-     *
-     * @var ConstructorRepositoryInterface
-     */
     private $constructorRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param ConstructorRepositoryInterface $constructorRepository A ConstructorRepositoryInterface instance
-     */
-    public function __construct(ConstructorRepositoryInterface $constructorRepository)
+    public function __construct(ConstructorRepositoryInterface $constructorRepository, LoggerInterface $logger)
     {
         $this->constructorRepository = $constructorRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -47,8 +38,8 @@ class ConstructorService implements ConstructorServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs)
+    public function save(Constructor $constructor)
     {
-        return $this->constructorRepository->findBySLugs($slugs);
+        $this->constructorRepository->save($constructor);
     }
 }

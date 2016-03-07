@@ -11,29 +11,20 @@ namespace AppBundle\Service;
 
 use AppBundle\Entity\FinishingStatus;
 use AppBundle\Repository\FinishingStatusRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The finishing status service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class FinishingStatusService implements FinishingStatusServiceInterface
 {
-    /**
-     * The FinishingStatus repository.
-     *
-     * @var FinishingStatusRepositoryInterface
-     */
     private $finishingStatusRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param FinishingStatusRepositoryInterface $finishingStatusRepository A FinishingStatusRepositoryInterface instance
-     */
-    public function __construct(FinishingStatusRepositoryInterface $finishingStatusRepository)
+    public function __construct(FinishingStatusRepositoryInterface $finishingStatusRepository, LoggerInterface $logger)
     {
         $this->finishingStatusRepository = $finishingStatusRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -50,27 +41,5 @@ class FinishingStatusService implements FinishingStatusServiceInterface
     public function save(FinishingStatus $finishingStatus)
     {
         $this->finishingStatusRepository->save($finishingStatus);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(FinishingStatus $finishingStatus)
-    {
-        $this->finishingStatusRepository->persist($finishingStatus);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->finishingStatusRepository->flush();
-
-        return $this;
     }
 }

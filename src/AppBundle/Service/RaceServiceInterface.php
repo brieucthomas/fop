@@ -12,8 +12,6 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Race;
 
 /**
- * The race service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface RaceServiceInterface
@@ -43,24 +41,6 @@ interface RaceServiceInterface
      * Saves a race.
      *
      * @param Race $race The race to save
-     *
-     * @return $this
      */
     public function save(Race $race);
-
-    /**
-     * Persists a race.
-     *
-     * @param Race $race The race to persist
-     *
-     * return $this;
-     */
-    public function persist(Race $race);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this;
-     */
-    public function flush();
 }

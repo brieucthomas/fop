@@ -218,7 +218,7 @@ class Result
     /**
      * Get grid.
      *
-     * @return integer
+     * @return int
      */
     public function getGrid()
     {
@@ -228,7 +228,7 @@ class Result
     /**
      * Set grid.
      *
-     * @param integer $grid
+     * @param int $grid
      *
      * @return $this
      */
@@ -242,7 +242,7 @@ class Result
     /**
      * Get position.
      *
-     * @return integer
+     * @return int
      */
     public function getPosition()
     {
@@ -252,7 +252,7 @@ class Result
     /**
      * Set position.
      *
-     * @param integer $position
+     * @param int $position
      *
      * @return $this
      */
@@ -290,7 +290,7 @@ class Result
     /**
      * Get laps.
      *
-     * @return integer
+     * @return int
      */
     public function getLaps()
     {
@@ -300,7 +300,7 @@ class Result
     /**
      * Set laps.
      *
-     * @param integer $laps
+     * @param int $laps
      *
      * @return $this
      */
@@ -338,7 +338,7 @@ class Result
     /**
      * Get milliseconds.
      *
-     * @return integer
+     * @return int
      */
     public function getMilliseconds()
     {
@@ -348,7 +348,7 @@ class Result
     /**
      * Set milliseconds.
      *
-     * @param integer $milliseconds
+     * @param int $milliseconds
      *
      * @return $this
      */
@@ -362,7 +362,7 @@ class Result
     /**
      * Get fastestLap.
      *
-     * @return integer
+     * @return int
      */
     public function getFastestLap()
     {
@@ -372,7 +372,7 @@ class Result
     /**
      * Set fastestLap.
      *
-     * @param integer $fastestLap
+     * @param int $fastestLap
      *
      * @return $this
      */
@@ -386,7 +386,7 @@ class Result
     /**
      * Get fastestLapRank.
      *
-     * @return integer
+     * @return int
      */
     public function getFastestLapRank()
     {
@@ -396,7 +396,7 @@ class Result
     /**
      * Set fastestLapRank.
      *
-     * @param integer $fastestLapRank
+     * @param int $fastestLapRank
      *
      * @return $this
      */

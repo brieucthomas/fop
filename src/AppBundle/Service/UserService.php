@@ -10,28 +10,19 @@
 namespace AppBundle\Service;
 
 use AppBundle\Repository\UserRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The user service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class UserService implements UserServiceInterface
 {
-    /**
-     * The user repository object.
-     *
-     * @var UserRepositoryInterface
-     */
     private $userRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param UserRepositoryInterface $userRepository The user repository
-     */
-    public function __construct(UserRepositoryInterface $userRepository)
+    public function __construct(UserRepositoryInterface $userRepository, LoggerInterface $logger)
     {
         $this->userRepository = $userRepository;
+        $this->logger = $logger;
     }
 }

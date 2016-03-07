@@ -40,6 +40,10 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
         ;
         $race = $builder->getQuery()->getOneOrNullResult();
 
+        if (!$race) {
+            return [];
+        }
+
         $builder = $this->createQueryBuilder('cs');
         $builder
             ->join('cs.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
@@ -56,31 +60,8 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
      */
     public function save(ConstructorStandings $constructorStandings)
     {
-        $this
-            ->persist($constructorStandings)
-            ->flush();
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(ConstructorStandings $constructorStandings)
-    {
         $this->_em->persist($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -101,7 +82,5 @@ class ConstructorStandingsRepository extends EntityRepository implements Constru
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

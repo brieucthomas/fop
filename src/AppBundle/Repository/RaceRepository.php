@@ -83,31 +83,7 @@ class RaceRepository extends EntityRepository implements RaceRepositoryInterface
      */
     public function save(Race $race)
     {
-        $this
-            ->persist($race)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Race $race)
-    {
         $this->_em->persist($race);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 }

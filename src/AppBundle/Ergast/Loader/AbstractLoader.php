@@ -12,6 +12,7 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\ConstructorServiceInterface;
 use AppBundle\Service\DriverServiceInterface;
+use AppBundle\Service\TeamServiceInterface;
 use BrieucThomas\ErgastClient\Entity as ErgastEntity;
 use AppBundle\Service\SeasonServiceInterface;
 use AppBundle\Utils\Country;
@@ -54,6 +55,11 @@ abstract class AbstractLoader implements LoaderInterface
      * @var ConstructorServiceInterface
      */
     protected $constructorService;
+
+    /**
+     * @var TeamServiceInterface
+     */
+    protected $teamService;
 
     /**
      * Sets the ergast client.
@@ -121,6 +127,11 @@ abstract class AbstractLoader implements LoaderInterface
         $this->constructorService = $constructorService;
     }
 
+    public function setTeamService(TeamServiceInterface $teamService)
+    {
+        $this->teamService = $teamService;
+    }
+
     private function getDriver(ErgastEntity\Driver $ergastDriver)
     {
         $driver = $this->driverService->findBySlug($ergastDriver->getId());
@@ -169,17 +180,19 @@ abstract class AbstractLoader implements LoaderInterface
     {
         $driver = $this->getDriver($ergastDriver);
         $constructor = $this->getConstructor($ergastConstructor);
-        $team = $season->getTeamByDriverAndConstructor($driver->getSlug(), $constructor->getSlug());
+        $team = $season->findTeamByDriverAndConstructor($driver, $constructor);
 
         if (!$team) {
             $team = new AppEntity\Team();
             $team
+                ->setSeason($season)
                 ->setConstructor($constructor)
-                ->setDriver($driver);
-            $this->seasonService->addTeam($season, $team);
+                ->setDriver($driver)
+            ;
+            $this->driverService->save($driver);
+            $this->constructorService->save($constructor);
+            $this->teamService->save($team);
         }
-
-        $this->seasonService->save($season);
 
         return $team;
     }

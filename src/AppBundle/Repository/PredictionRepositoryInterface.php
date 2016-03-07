@@ -34,8 +34,6 @@ interface PredictionRepositoryInterface
      * Removes a prediction.
      *
      * @param Prediction $prediction A prediction entity
-     *
-     * @return $this
      */
     public function remove(Prediction $prediction);
 
@@ -43,8 +41,6 @@ interface PredictionRepositoryInterface
      * Saves a prediction.
      *
      * @param Prediction $prediction A Prediction entity
-     *
-     * @return $this
      */
     public function save(Prediction $prediction);
 }

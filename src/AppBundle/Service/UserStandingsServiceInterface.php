@@ -13,8 +13,6 @@ use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
 
 /**
- * The user standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface UserStandingsServiceInterface
@@ -32,8 +30,6 @@ interface UserStandingsServiceInterface
      * Removes by season.
      *
      * @param Season $season A Season entity
-     *
-     * @return $this
      */
     public function removeBySeason(Season $season);
 }

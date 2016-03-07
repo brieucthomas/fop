@@ -21,63 +21,29 @@ use AppBundle\Repository\UserRepositoryInterface;
 use AppBundle\Repository\UserStandingsRepositoryInterface;
 use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\EntityManagerInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The prediction service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class PredictionService implements PredictionServiceInterface
 {
-    /**
-     * @var EntityManagerInterface
-     */
     private $em;
-
-    /**
-     * @var PredictionRepositoryInterface
-     */
     private $predictionRepository;
-
-    /**
-     * @var FinishingPositionRepositoryInterface
-     */
     private $finishingPositionRepository;
-
-    /**
-     * @var SeasonRepositoryInterface
-     */
     private $seasonRepository;
-
-    /**
-     * The user repository.
-     *
-     * @var UserRepositoryInterface
-     */
     private $userRepository;
-
-    /**
-     * @var UserStandingsRepositoryInterface
-     */
     private $userStandingsRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param EntityManagerInterface               $em
-     * @param PredictionRepositoryInterface        $predictionRepository
-     * @param FinishingPositionRepositoryInterface $finishingPositionRepository
-     * @param SeasonRepositoryInterface            $seasonRepository
-     * @param UserRepositoryInterface              $userRepository
-     * @param UserStandingsRepositoryInterface     $userStandingsRepository
-     */
     public function __construct(
         EntityManagerInterface $em,
         PredictionRepositoryInterface $predictionRepository,
         FinishingPositionRepositoryInterface $finishingPositionRepository,
         SeasonRepositoryInterface $seasonRepository,
         UserRepositoryInterface $userRepository,
-        UserStandingsRepositoryInterface $userStandingsRepository
+        UserStandingsRepositoryInterface $userStandingsRepository,
+        LoggerInterface $logger
     ) {
         $this->em = $em;
         $this->predictionRepository = $predictionRepository;
@@ -85,6 +51,7 @@ class PredictionService implements PredictionServiceInterface
         $this->seasonRepository = $seasonRepository;
         $this->userRepository = $userRepository;
         $this->userStandingsRepository = $userStandingsRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -103,7 +70,8 @@ class PredictionService implements PredictionServiceInterface
         $this->em->beginTransaction();
 
         try {
-            $this->predictionRepository->remove($prediction)->save($prediction);
+            $this->predictionRepository->remove($prediction);
+            $this->predictionRepository->save($prediction);
             $this->em->commit();
         } catch (\Exception $failure) {
             $this->em->rollback();
@@ -181,7 +149,5 @@ class PredictionService implements PredictionServiceInterface
             $this->em->rollback();
             throw $failure;
         }
-
-        return $this;
     }
 }

@@ -14,8 +14,6 @@ use AppBundle\Entity\Result;
 use AppBundle\Entity\Season;
 
 /**
- * The result service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface ResultServiceInterface
@@ -24,26 +22,8 @@ interface ResultServiceInterface
      * Saves a result.
      *
      * @param Result $result The result to save
-     *
-     * @return $this
      */
     public function save(Result $result);
-
-    /**
-     * Persists a result.
-     *
-     * @param Result $result The result to persist
-     *
-     * return $this
-     */
-    public function persist(Result $result);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
 
     /**
      * Returns the number of wins of a constructor.
@@ -112,8 +92,6 @@ interface ResultServiceInterface
      * Removes results by season.
      *
      * @param Season $season A Season entity
-     *
-     * @return $this
      */
     public function removeBySeason(Season $season);
 }

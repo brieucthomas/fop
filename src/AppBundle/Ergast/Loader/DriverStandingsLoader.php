@@ -67,11 +67,9 @@ class DriverStandingsLoader extends AbstractLoader
                         ->setWins($ergastDriverStanding->getWins())
                     ;
 
-                    $this->driverStandingsService->persist($standing);
+                    $this->driverStandingsService->save($standing);
                 }
             }
         }
-
-        $this->driverStandingsService->flush();
     }
 }

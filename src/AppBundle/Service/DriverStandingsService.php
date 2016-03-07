@@ -14,29 +14,20 @@ use AppBundle\Entity\DriverStandings;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\DriverRepositoryInterface;
 use AppBundle\Repository\DriverStandingsRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The driver standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class DriverStandingsService implements DriverStandingsServiceInterface
 {
-    /**
-     * The driver standings repository.
-     *
-     * @var DriverRepositoryInterface
-     */
     private $driverStandingsRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param DriverStandingsRepositoryInterface $driverStandingsRepository
-     */
-    public function __construct(DriverStandingsRepositoryInterface $driverStandingsRepository)
+    public function __construct(DriverStandingsRepositoryInterface $driverStandingsRepository, LoggerInterface $logger)
     {
         $this->driverStandingsRepository = $driverStandingsRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -53,28 +44,6 @@ class DriverStandingsService implements DriverStandingsServiceInterface
     public function save(DriverStandings $driverStandings)
     {
         $this->driverStandingsRepository->save($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(DriverStandings $driverStandings)
-    {
-        $this->driverStandingsRepository->persist($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->driverStandingsRepository->flush();
-
-        return $this;
     }
 
     /**
@@ -83,7 +52,5 @@ class DriverStandingsService implements DriverStandingsServiceInterface
     public function removeBySeason(Season $season)
     {
         $this->driverStandingsRepository->removeBySeason($season);
-
-        return $this;
     }
 }

@@ -2,10 +2,10 @@
     "name": "fop",
     "dependencies": {
         "requirejs": "~2.1",
-        "jquery": "~2.1",
+        "jquery": "~2.2",
         "bootstrap": "~3.3",
         "bootstrap-sass-official": "~3.3",
-        "fontawesome": "~4.3",
+        "fontawesome": "~4.5",
         "moment": "~2.9",
         "d3": "~3.5",
         "c3js-chart": "~0.4",

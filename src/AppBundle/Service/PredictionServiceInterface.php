@@ -15,8 +15,6 @@ use AppBundle\Entity\Season;
 use AppBundle\Entity\User;
 
 /**
- * The prediction service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 interface PredictionServiceInterface
@@ -35,8 +33,6 @@ interface PredictionServiceInterface
      * Saves a prediction.
      *
      * @param Prediction $prediction A Prediction entity
-     *
-     * @return $this
      */
     public function save(Prediction $prediction);
 
@@ -44,8 +40,6 @@ interface PredictionServiceInterface
      * Computes season predictions scores.
      *
      * @param Season $season
-     *
-     * @return $this
      */
     public function computeBySeason(Season $season);
 }

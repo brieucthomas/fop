@@ -22,8 +22,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * The race controller.
- *
  * @Route("/races")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
@@ -32,33 +30,29 @@ class RaceController extends Controller
 {
     /**
      * @Route("/{season}/{round}", name="race", requirements={"season" = "\d{4}", "round" = "\d+"})
-     *
      * @Method({"GET"})
-     * @Template(":race:show.html.twig")
      */
     public function showAction(Race $race)
     {
-        return [
+        return $this->render('race/show.html.twig', [
             'race' => $race,
-        ];
+        ]);
     }
 
     /**
      * @Route("/{season}/{round}/predict/{slug}", name="prediction", requirements={"season" = "\d{4}", "round" = "\d+", "slug" = "[a-z0-9_]*"})
-     *
      * @Method({"GET", "POST"})
      * @Security("has_role('ROLE_USER')")
-     * @Template(":race:predict.html.twig")
      */
     public function predictAction(Request $request, Race $race, User $user)
     {
-        $prediction = $this->get('prediction_service')->findByRaceAndUser($race, $user);
+        $prediction = $this->get('app.service.prediction')->findByRaceAndUser($race, $user);
 
         if (!$prediction) {
             $prediction = new Prediction($race, $user);
             $limit = $race->getSeason()->getScoringSystem()->getLength();
 
-            for ($position = 1; $position <= $limit; $position++) {
+            for ($position = 1; $position <= $limit; ++$position) {
                 $finishingPosition = new FinishingPosition();
                 $finishingPosition->setPredictedPosition($position);
                 $prediction->addFinishingPosition($finishingPosition);
@@ -71,7 +65,7 @@ class RaceController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->get('prediction_service')->save($prediction);
+            $this->get('app.service.prediction')->save($prediction);
             $this->get('session')->getFlashBag()->add('success', $this->get('translator')->trans('race.prediction.success'));
 
             return $this->redirect(
@@ -79,17 +73,17 @@ class RaceController extends Controller
                     'prediction',
                     [
                         'season' => $race->getSeason()->getYear(),
-                        'round'  => $race->getRound(),
-                        'slug'   => $user->getSlug(),
+                        'round' => $race->getRound(),
+                        'slug' => $user->getSlug(),
                     ]
                 )
             );
         }
 
-        return [
+        return $this->render('race/predict.html.twig', [
             'race' => $race,
             'prediction' => $prediction,
             'form' => $form->createView(),
-        ];
+        ]);
     }
 }

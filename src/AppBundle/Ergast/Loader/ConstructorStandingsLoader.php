@@ -68,11 +68,9 @@ class ConstructorStandingsLoader extends AbstractLoader
                         ->setWins($ergastConstructorStanding->getWins())
                     ;
 
-                    $this->constructorStandingsService->persist($standing);
+                    $this->constructorStandingsService->save($standing);
                 }
             }
         }
-
-        $this->constructorStandingsService->flush();
     }
 }

@@ -17,7 +17,7 @@ parameters:
 
 framework:
     #esi:             ~
-    translator:      { fallback: "%locale%" }
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -25,58 +25,40 @@ framework:
     form:            ~
     csrf_protection: ~
     validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
     templating:
-        engines: ['twig']
-        #assets_version: SomeVersionScheme
+        engines: ['twig', 'php']
     default_locale:  "%locale%"
     trusted_hosts:   ~
     trusted_proxies: ~
     session:
-        # handler_id set to null will use default session handler from php.ini
-        handler_id:  ~
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
     fragments:       ~
     http_method_override: true
+    assets: ~
 
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-    form:
-        resources: ['bootstrap_3_layout.html.twig']
+    form_themes:      ['bootstrap_3_layout.html.twig']
     globals:
         app_name:    "%app_name%"
         app_version: "%app_version%"
 
-# Assetic Configuration
-assetic:
-    debug:          "%kernel.debug%"
-    use_controller: false
-    bundles:        [ ]
-    #java: /usr/bin/java
-    filters:
-        cssrewrite: ~
-        #closure:
-        #    jar: "%kernel.root_dir%/Resources/java/compiler.jar"
-        #yui_css:
-        #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
-
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   pdo_pgsql
-        host:     "%database_host%"
-        port:     "%database_port%"
-        dbname:   "%database_name%"
-        user:     "%database_user%"
-        password: "%database_password%"
-        charset:  UTF8
-        # if using pdo_sqlite as your database driver:
-        #   1. add the path in parameters.yml
-        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
-        #   2. Uncomment database_path in parameters.yml.dist
-        #   3. Uncomment next line:
-        #     path:     "%database_path%"
-
+        driver:         pdo_pgsql
+        host:           "%database_host%"
+        port:           "%database_port%"
+        dbname:         "%database_name%"
+        user:           "%database_user%"
+        password:       "%database_password%"
+        charset:        UTF8
+        server_version: 9.3.9
     orm:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_generate_proxy_classes: "%kernel.debug%"
@@ -107,19 +89,6 @@ jms_i18n_routing:
     locales:        "%locales%"
     strategy:       prefix
 
-# Tanslation Configuration
-jms_translation:
-    source_language:         "%locale%"
-    locales:                 "%locales%"
-    configs:
-        app:
-            dirs:            ["%kernel.root_dir%", "%kernel.root_dir%/../src"]
-            output_dir:      "%kernel.root_dir%/Resources/translations"
-            ignored_domains: ["routes"]
-            excluded_names:  ["*TestCase.php", "*Test.php"]
-            excluded_dirs:   ["var"]
-            output_format:   xliff
-
 # FOSUserBundle Configuration
 fos_user:
     db_driver: orm
@@ -140,16 +109,50 @@ knp_menu:
     twig:
         template: :menu:bootstrap.html.twig
 
-# EsayAdmin Configuration
-easy_admin:
-    entities:
-        - AppBundle\Entity\Circuit
-        - AppBundle\Entity\Constructor
-        - AppBundle\Entity\Driver
-        - AppBundle\Entity\FinishingPosition
-        - AppBundle\Entity\Prediction
-        - AppBundle\Entity\Race
-        - AppBundle\Entity\ScoringSystem
-        - AppBundle\Entity\Season
-        - AppBundle\Entity\Team
-        - AppBundle\Entity\User
+# Navigation Configuration
+rollerworks_navigation:
+    menus:
+        main:
+            items:
+                home:
+                    label: navigation.main.home
+                    route: { name: homepage }
+                calendar:
+                    label: navigation.main.calendar
+                    route: { name: season_races, parameters: { year: 2016 } }
+                calendar:
+                    label: navigation.main.teams
+                    route: { name: season_teams, parameters: { year: 2016 } }
+                standings:
+                    label: navigation.main.standings
+                    items:
+                        user:
+                            label: navigation.main.user_standings
+                            route: { name: season_user_standings, parameters: { year: 2016 } }
+                        driver:
+                            label: navigation.main.driver_standings
+                            route: { name: season_driver_standings, parameters: { year: 2016 } }
+                        constructor:
+                            label: navigation.main.constructor_standings
+                            route: { name: season_constructor_standings, parameters: { year: 2016 } }
+        sign:
+            items:
+                login:
+                    label: navigation.sign.in
+                    route: { name: fos_user_security_login }
+                register:
+                    label: navigation.sign.up
+                    route: { name: fos_user_registration_register }
+        user:
+            items:
+                account:
+                    label: navigation.user.account
+                    route: { name: homepage }
+                logout:
+                    label: navigation.user.logout
+                    route: { name: fos_user_security_logout }
+        footer:
+            items:
+                contact:
+                    label: navigation.footer.contact
+                    uri:   "mailto:%mail_noreply%"

@@ -17,50 +17,28 @@ use AppBundle\Repository\ScoringSystemRepository;
 use AppBundle\Repository\ScoringSystemRepositoryInterface;
 use AppBundle\Repository\SeasonRepositoryInterface;
 use AppBundle\Repository\UserRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The season service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class SeasonService implements SeasonServiceInterface
 {
-    /**
-     * The Season repository.
-     *
-     * @var SeasonRepositoryInterface
-     */
     private $seasonRepository;
-
-    /**
-     * The ScoringSystem repository.
-     *
-     * @var ScoringSystemRepositoryInterface
-     */
     private $scoringSystemRepository;
-
-    /**
-     * The user repository.
-     *
-     * @var UserRepositoryInterface
-     */
     private $userRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param SeasonRepositoryInterface        $seasonRepository        A SeasonRepositoryInterface instance
-     * @param ScoringSystemRepositoryInterface $scoringSystemRepository A ScoringSystemRepositoryInterface instance
-     * @param UserRepositoryInterface          $userRepository
-     */
     public function __construct(
         SeasonRepositoryInterface $seasonRepository,
         ScoringSystemRepositoryInterface $scoringSystemRepository,
-        UserRepositoryInterface $userRepository
+        UserRepositoryInterface $userRepository,
+        LoggerInterface $logger
     ) {
         $this->seasonRepository = $seasonRepository;
         $this->scoringSystemRepository = $scoringSystemRepository;
         $this->userRepository = $userRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -140,8 +118,6 @@ class SeasonService implements SeasonServiceInterface
     public function save(Season $season)
     {
         $this->seasonRepository->save($season);
-
-        return $this;
     }
 
     /**
@@ -150,8 +126,6 @@ class SeasonService implements SeasonServiceInterface
     public function addRace(Season $season, Race $race)
     {
         $season->addRace($race);
-
-        return $this;
     }
 
     /**
@@ -159,28 +133,8 @@ class SeasonService implements SeasonServiceInterface
      */
     public function addTeam(Season $season, Team $team)
     {
-        $season->addTeam($team);
+        $team->setSeason($season);
 
-        return $this;
-    }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Season $season)
-    {
-        $this->seasonRepository->persist($season);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->seasonRepository->flush();
-
-        return $this;
     }
 }

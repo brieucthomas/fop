@@ -85,24 +85,6 @@ interface SeasonRepositoryInterface
      * Saves a season.
      *
      * @param Season $season The season to save
-     *
-     * @return $this
      */
     public function save(Season $season);
-
-    /**
-     * Persists a season.
-     *
-     * @param Season $season The season to persist
-     *
-     * return $this
-     */
-    public function persist(Season $season);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
 }

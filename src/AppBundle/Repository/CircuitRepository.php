@@ -11,11 +11,10 @@ namespace AppBundle\Repository;
 
 use AppBundle\Entity\Circuit;
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\EntityRepository;
 
 /**
- * The circuit repository.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class CircuitRepository extends EntityRepository implements CircuitRepositoryInterface
@@ -23,7 +22,7 @@ class CircuitRepository extends EntityRepository implements CircuitRepositoryInt
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs)
+    public function findBySlugs(array $slugs) : Collection
     {
         $builder = $this->_em->createQueryBuilder();
         $builder
@@ -41,31 +40,7 @@ class CircuitRepository extends EntityRepository implements CircuitRepositoryInt
      */
     public function save(Circuit $circuit)
     {
-        $this
-            ->persist($circuit)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(Circuit $circuit)
-    {
         $this->_em->persist($circuit);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 }

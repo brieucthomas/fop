@@ -42,7 +42,7 @@
                         </li>
                     {% endif %}
                     <li>
-                        <span><a class="btn btn-primary" href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}">{{ 'homeapge.next-race.details'|trans }} »</a></span>
+                        <span><a class="btn btn-primary" href="{{ path('race', { 'season': nextRace.season.year, 'round': nextRace.round }) }}">{{ 'homepage.next-race.details'|trans }} »</a></span>
                     </li>
                     <li>
                         {% if app.user %}
@@ -91,7 +91,7 @@
                         {% endif %}
                     {% endif %}
                     <li>
-                        <span><a class="btn btn-primary" href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">{{ 'homeapge.last-race.details'|trans }} »</a></span>
+                        <span><a class="btn btn-primary" href="{{ path('race', { 'season': lastRace.season.year, 'round': lastRace.round }) }}">{{ 'homepage.last-race.details'|trans }} »</a></span>
                     </li>
                 </ul>
             </div>

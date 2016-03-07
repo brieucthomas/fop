@@ -23,26 +23,8 @@ interface QualifyingRepositoryInterface
      * Saves a qualifying.
      *
      * @param Qualifying $qualifying The qualifying to save
-     *
-     * @return $this
      */
     public function save(Qualifying $qualifying);
-
-    /**
-     * Persists a qualifying.
-     *
-     * @param Qualifying $qualifying The qualifying to persist
-     *
-     * return $this
-     */
-    public function persist(Qualifying $qualifying);
-
-    /**
-     * Flushes modifications.
-     *
-     * return $this
-     */
-    public function flush();
 
     /**
      * Returns the number of pole positions of a driver.
@@ -66,8 +48,6 @@ interface QualifyingRepositoryInterface
      * Removes qualifying by season.
      *
      * @param Season $season A Season entity
-     *
-     * @return $this
      */
     public function removeBySeason(Season $season);
 }

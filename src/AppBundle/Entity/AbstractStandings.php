@@ -151,7 +151,7 @@ abstract class AbstractStandings
      */
     public function increaseWins()
     {
-        $this->wins++;
+        ++$this->wins;
 
         return $this;
     }

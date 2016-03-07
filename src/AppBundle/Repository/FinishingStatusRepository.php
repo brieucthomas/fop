@@ -39,31 +39,7 @@ class FinishingStatusRepository extends EntityRepository implements FinishingSta
      */
     public function save(FinishingStatus $finishingStatus)
     {
-        $this
-            ->persist($finishingStatus)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(FinishingStatus $finishingStatus)
-    {
         $this->_em->persist($finishingStatus);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 }

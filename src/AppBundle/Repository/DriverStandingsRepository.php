@@ -40,6 +40,10 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
         ;
         $race = $builder->getQuery()->getOneOrNullResult();
 
+        if (!$race) {
+            return [];
+        }
+
         $builder = $this->_em->createQueryBuilder();
         $builder
             ->select('ds.position', 'ds.points', 'ds.wins', 'd.firstName', 'd.lastName', 'd.nationality', 'd.code', 'c.slug as constructorSlug', 'c.name as constructorName')
@@ -62,32 +66,8 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
      */
     public function save(DriverStandings $driverStandings)
     {
-        $this
-            ->persist($driverStandings)
-            ->flush()
-        ;
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(DriverStandings $driverStandings)
-    {
         $this->_em->persist($driverStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
         $this->_em->flush();
-
-        return $this;
     }
 
     /**
@@ -109,7 +89,5 @@ class DriverStandingsRepository extends EntityRepository implements DriverStandi
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

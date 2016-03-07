@@ -10,6 +10,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -148,7 +149,7 @@ class Season
             }
         }
 
-        return null;
+        return;
     }
 
     /**
@@ -165,22 +166,12 @@ class Season
         return $racesWithResults->last();
     }
 
-    /**
-     * Returns the season races.
-     *
-     * @return ArrayCollection A collection of race entities
-     */
-    public function getRaces()
+    public function getRaces() : Collection
     {
         return $this->races;
     }
 
-    /**
-     * Returns the season races.
-     *
-     * @return ArrayCollection A collection of race entities
-     */
-    public function getRacesWithResults()
+    public function getRacesWithResults() : Collection
     {
         return $this->races->filter(function (Race $race) {
             return $race->hasResults();
@@ -204,21 +195,21 @@ class Season
     /**
      * Returns a team by its driver and constructor.
      *
-     * @param string $driverSlug      The driver slug
-     * @param string $constructorSlug The constructor slug
+     * @param Driver $driver      The driver entity
+     * @param Constructor $constructor The constructor entity
      *
      * @return Team|null The Team entity or null if not found
      */
-    public function getTeamByDriverAndConstructor($driverSlug, $constructorSlug)
+    public function findTeamByDriverAndConstructor(Driver $driver, Constructor $constructor)
     {
         foreach ($this->teams as $team) {
             /* @var $team Team */
-            if (($team->getDriver()->getSlug() == $driverSlug) && ($team->getConstructor()->getSlug() == $constructorSlug)) {
+            if (($team->getDriver()->getSlug() == $driver->getSlug()) && ($team->getConstructor()->getSlug() == $constructor->getSlug())) {
                 return $team;
             }
         }
 
-        return;
+        return null;
     }
 
     /**

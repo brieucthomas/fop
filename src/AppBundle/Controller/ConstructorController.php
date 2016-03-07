@@ -12,12 +12,9 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Constructor;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * The constructor controller.
- *
  * @Route("/constructors")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
@@ -26,17 +23,15 @@ class ConstructorController extends Controller
 {
     /**
      * @Route("/{slug}", requirements={"slug" = "[a-z0-9\_]+"}, name="constructor")
-     *
      * @Method({"GET"})
-     * @Template(":constructor:show.html.twig")
      */
     public function showAction(Constructor $constructor)
     {
-        return [
+        return $this->render('constructor/show.html.twig', [
             'constructor' => $constructor,
-            'wins' => $this->get('result_service')->countWinsByConstructor($constructor->getId()),
-            'constructorsChampionships' => $this->get('season_service')->getConstructorsChampionshipsByConstructor($constructor->getId()),
-            'driversChampionships' => $this->get('season_service')->getDriversChampionshipsByConstructor($constructor->getId()),
-        ];
+            'wins' => $this->get('app.service.result')->countWinsByConstructor($constructor->getId()),
+            'constructorsChampionships' => $this->get('app.service.season')->getConstructorsChampionshipsByConstructor($constructor->getId()),
+            'driversChampionships' => $this->get('app.service.season')->getDriversChampionshipsByConstructor($constructor->getId()),
+        ]);
     }
 }

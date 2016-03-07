@@ -39,6 +39,10 @@ class UserStandingsRepository extends EntityRepository implements UserStandingsR
         ;
         $race = $builder->getQuery()->getOneOrNullResult();
 
+        if (!$race) {
+            return [];
+        }
+
         $builder = $this->createQueryBuilder('us');
         $builder
             ->join('us.race', 'r', Expr\Join::WITH, $builder->expr()->eq('r.id', $race->getId()))
@@ -69,7 +73,5 @@ class UserStandingsRepository extends EntityRepository implements UserStandingsR
         }
 
         $this->_em->flush();
-
-        return $this;
     }
 }

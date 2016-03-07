@@ -14,29 +14,20 @@ use AppBundle\Entity\ConstructorStandings;
 use AppBundle\Entity\Season;
 use AppBundle\Repository\ConstructorRepositoryInterface;
 use AppBundle\Repository\ConstructorStandingsRepositoryInterface;
+use Psr\Log\LoggerInterface;
 
 /**
- * The constructor standings service.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class ConstructorStandingsService implements ConstructorStandingsServiceInterface
 {
-    /**
-     * The constructor standings repository.
-     *
-     * @var ConstructorRepositoryInterface
-     */
     private $constructorStandingsRepository;
+    private $logger;
 
-    /**
-     * Constructor.
-     *
-     * @param ConstructorStandingsRepositoryInterface $constructorStandingsRepository
-     */
-    public function __construct(ConstructorStandingsRepositoryInterface $constructorStandingsRepository)
+    public function __construct(ConstructorStandingsRepositoryInterface $constructorStandingsRepository, LoggerInterface $logger)
     {
         $this->constructorStandingsRepository = $constructorStandingsRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -53,28 +44,6 @@ class ConstructorStandingsService implements ConstructorStandingsServiceInterfac
     public function save(ConstructorStandings $constructorStandings)
     {
         $this->constructorStandingsRepository->save($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function persist(ConstructorStandings $constructorStandings)
-    {
-        $this->constructorStandingsRepository->persist($constructorStandings);
-
-        return $this;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function flush()
-    {
-        $this->constructorStandingsRepository->flush();
-
-        return $this;
     }
 
     /**
@@ -83,7 +52,5 @@ class ConstructorStandingsService implements ConstructorStandingsServiceInterfac
     public function removeBySeason(Season $season)
     {
         $this->constructorStandingsRepository->removeBySeason($season);
-
-        return $this;
     }
 }
