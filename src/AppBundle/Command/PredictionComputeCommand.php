@@ -13,6 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
  * Ergast import command.
@@ -31,16 +32,19 @@ class PredictionComputeCommand extends ContainerAwareCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $io = new SymfonyStyle($input, $output);
+
         $year = ('current' == $input->getArgument('year')) ? date('Y') : $input->getArgument('year');
 
-        $season = $this->getContainer()->get('season_service')->findByYear($year);
+        $season = $this->getContainer()->get('app.service.season')->findByYear($year);
 
         if (!$season) {
             throw new \Exception('Season not found');
         }
 
-        $output->writeln(sprintf('Computing the %d season...', $year));
+        $io->title(sprintf('%d Formula One season', $year));
+        $io->comment('Computing predictions scores...');
 
-        $this->getContainer()->get('prediction_service')->computeBySeason($season);
+        $this->getContainer()->get('app.service.prediction')->computeBySeason($season);
     }
 }
