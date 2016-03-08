@@ -78,6 +78,7 @@
             "file": "app/config/parameters.yml",
             "env-map": {
                 "secret": "SYMFONY_SECRET",
+                "%current_season": "FOP_CURRENT_SEASON",
                 "mailer_host": "MAILER_HOST",
                 "mailer_port": "MAILER_PORT",
                 "mailer_user": "MAILER_USER",

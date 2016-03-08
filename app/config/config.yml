@@ -119,22 +119,22 @@ rollerworks_navigation:
                     route: { name: homepage }
                 calendar:
                     label: navigation.main.calendar
-                    route: { name: season_races, parameters: { year: 2016 } }
+                    route: { name: season_races, parameters: { year: "%current_season%" } }
                 teams:
                     label: navigation.main.teams
-                    route: { name: season_teams, parameters: { year: 2016 } }
+                    route: { name: season_teams, parameters: { year: "%current_season%" } }
                 standings:
                     label: navigation.main.standings
                     items:
                         user:
                             label: navigation.main.user_standings
-                            route: { name: season_user_standings, parameters: { year: 2016 } }
+                            route: { name: season_user_standings, parameters: { year: "%current_season%" } }
                         driver:
                             label: navigation.main.driver_standings
-                            route: { name: season_driver_standings, parameters: { year: 2016 } }
+                            route: { name: season_driver_standings, parameters: { year: "%current_season%" } }
                         constructor:
                             label: navigation.main.constructor_standings
-                            route: { name: season_constructor_standings, parameters: { year: 2016 } }
+                            route: { name: season_constructor_standings, parameters: { year: "%current_season%" } }
         sign:
             items:
                 login:
