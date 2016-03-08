@@ -61,7 +61,7 @@ class RaceController extends Controller
 
         $this->denyAccessUnlessGranted('edit', $prediction);
 
-        $form = $this->createForm(new PredictionType($race->getSeason()->getYear()), $prediction);
+        $form = $this->createForm(PredictionType::class, $prediction, ['year' => $race->getSeason()->getYear()]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

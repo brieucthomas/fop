@@ -152,10 +152,7 @@ class Team
         return $this;
     }
 
-    /**
-     * @return string
-     */
-    public function __toString()
+    public function __toString() : string
     {
         return implode(' - ', [
             $this->getSeason()->getYear(),

@@ -334,14 +334,4 @@ class Season
     {
         return $this->races->last() && $this->races->last()->hasResults();
     }
-
-    /**
-     * __toString.
-     *
-     * @return string The season year
-     */
-    public function __toString()
-    {
-        return (string) $this->year;
-    }
 }

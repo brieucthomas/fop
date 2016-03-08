@@ -20,13 +20,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class FinishingPositionType extends AbstractType
 {
-    private $year;
-
-    public function __construct($year)
-    {
-        $this->year = $year;
-    }
-
     /**
      * {@inheritdoc}
      */
@@ -35,8 +28,8 @@ class FinishingPositionType extends AbstractType
         $builder
             ->add('team', EntityType::class, [
                 'class' => 'AppBundle:Team',
-                'query_builder' => function (TeamRepositoryInterface $repository) {
-                    return $repository->findByYear($this->year);
+                'query_builder' => function (TeamRepositoryInterface $repository) use ($options) {
+                    return $repository->findByYear($options['year']);
                 },
             ]);
     }
@@ -46,8 +39,9 @@ class FinishingPositionType extends AbstractType
      */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => 'AppBundle\Entity\FinishingPosition',
-        ));
+        ]);
+        $resolver->setRequired('year');
     }
 }

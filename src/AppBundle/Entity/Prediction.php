@@ -39,7 +39,7 @@ class Prediction
      *
      * @var int
      */
-    protected $id;
+    protected $id = 0;
 
     /**
      * The race entity.
@@ -336,19 +336,5 @@ class Prediction
     public function isAuthor(User $user = null)
     {
         return $user && $user->getId() === $this->user->getId();
-    }
-
-    /**
-     * __toString.
-     *
-     * @return string The owner username
-     */
-    public function __toString()
-    {
-        return (string) implode(' - ', [
-            $this->race->getSeason()->getYear(),
-            $this->race->getName(),
-            $this->user->getUsername(),
-        ]);
     }
 }

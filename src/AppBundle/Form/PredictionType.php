@@ -19,13 +19,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  */
 class PredictionType extends AbstractType
 {
-    private $year;
-
-    public function __construct($year)
-    {
-        $this->year = $year;
-    }
-
     /**
      * {@inheritdoc}
      */
@@ -33,16 +26,21 @@ class PredictionType extends AbstractType
     {
         $builder
             ->add('finishingPositions', CollectionType::class, [
-                'type' => new FinishingPositionType($this->year),
+                'entry_type' => FinishingPositionType::class,
+                'entry_options' => ['year' => $options['year']],
                 'allow_add' => true,
             ])
         ;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
+        $resolver->setDefaults([
             'data_class' => 'AppBundle\Entity\Prediction'
-        ));
+        ]);
+        $resolver->setRequired('year');
     }
 }
