@@ -5,7 +5,7 @@
 {% block content %}
     {% if nextRace %}
         <section id="next-race" class="section section-lg section-inverse">
-            <div class="background" style="background-image:url('{{ asset('assets/img/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
+            <div class="background" style="background-image:url('{{ asset('assets/img/covers/circuits/' ~ nextRace.circuit.slug ~ '.jpg') }}')"></div>
             <div class="container">
                 <h1 class="h4 text-muted">{{ 'homepage.next-race.title'|trans }}</h1>
                 <h2 lang="en" class="section-heading"><span class="text-primary">{{ nextRace.season.year }}</span> {{ nextRace.name }}</h2>
