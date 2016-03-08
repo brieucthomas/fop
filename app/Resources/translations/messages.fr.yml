@@ -2,6 +2,7 @@ navigation:
     main:
         home: "Accueil"
         calendar: "Calendrier"
+        teams: "Équipes"
         standings: "Classements"
         user_standings: "Utilisateurs"
         driver_standings: "Pilotes"
@@ -108,11 +109,15 @@ signin:
 signup:
     submit: "S'inscrire"
     title: "S'inscrire"
+
 standings:
+    constructor:
+        heading: "Classement des constructeurs"
     driver:
         heading: "Classement pilotes %year%"
     user:
         heading: "Classements joueurs %year%"
+
 teams:
     heading: "Équipes %year%"
                 

@@ -10,27 +10,18 @@
 namespace AppBundle\Form;
 
 use AppBundle\Repository\TeamRepositoryInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
- * The prediction item type.
- *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
  */
 class FinishingPositionType extends AbstractType
 {
-    /**
-     * @var int
-     */
     private $year;
 
-    /**
-     * Constructor.
-     *
-     * @param int $year
-     */
     public function __construct($year)
     {
         $this->year = $year;
@@ -42,7 +33,7 @@ class FinishingPositionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('team', 'entity', [
+            ->add('team', EntityType::class, [
                 'class' => 'AppBundle:Team',
                 'query_builder' => function (TeamRepositoryInterface $repository) {
                     return $repository->findByYear($this->year);
@@ -53,18 +44,10 @@ class FinishingPositionType extends AbstractType
     /**
      * {@inheritdoc}
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
             'data_class' => 'AppBundle\Entity\FinishingPosition',
         ));
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
-    {
-        return 'finishing_position';
     }
 }

@@ -120,7 +120,7 @@ rollerworks_navigation:
                 calendar:
                     label: navigation.main.calendar
                     route: { name: season_races, parameters: { year: 2016 } }
-                calendar:
+                teams:
                     label: navigation.main.teams
                     route: { name: season_teams, parameters: { year: 2016 } }
                 standings:
