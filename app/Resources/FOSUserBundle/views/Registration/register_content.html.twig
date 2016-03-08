@@ -1,9 +1,13 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
 <div id="signup" class="row">
     <div class="col-md-offset-4 col-md-4">
-        <h1>{{ 'signup.title'|trans }}</h1>
-        <form id="form-signup" action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="well">
+        <h1>{{ 'signup.title'|trans({}, 'messages') }}</h1>
+        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
             {{ form_widget(form) }}
-            <button type="submit" class="btn btn-primary btn-block">{{ 'signup.submit'|trans }}</button>
-        </form>
+        <div>
+            <input type="submit" value="{{ 'signup.submit'|trans({}, 'messages') }}" class="btn btn-primary btn-block" />
+        </div>
+        {{ form_end(form) }}
     </div>
 </div>

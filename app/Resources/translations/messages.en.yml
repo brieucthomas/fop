@@ -11,7 +11,7 @@ navigation:
         in: "Login"
         up: "Sign up"
     user:
-        account: "My account"
+        my_account: "My account"
         logout: "Logout"
     footer:
         contact: "Contact-us"

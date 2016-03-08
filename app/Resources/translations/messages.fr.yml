@@ -11,7 +11,7 @@ navigation:
         in: "Se connecter"
         up: "S'inscrire"
     user:
-        account: "Mon compte"
+        my_account: "Mon compte"
         logout: "Se déconnecter"
     footer:
         contact: "Contactez-nous"
@@ -114,8 +114,8 @@ signin:
     title: Se connecter
     username_or_email: "Nom d'utilisateur"
 signup:
-    submit: "S'inscrire"
     title: "S'inscrire"
+    submit: "Créer son compte"
 
 standings:
     constructor:

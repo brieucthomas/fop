@@ -12,6 +12,40 @@ services:
         tags:
             - { name: security.voter }
 
+# Menus
+    menu_builder:
+        class: AppBundle\Menu\MenuBuilder
+        scope: request
+        arguments: ["@knp_menu.factory", "@request_stack", "%current_season%"]
+    menu_breadcrumb:
+        class: Knp\Menu\MenuItem
+        factory: ["@menu_builder", createBreadcrumb]
+        tags:
+            - { name: knp_menu.menu, alias: breadcrumb }
+    menu_main:
+         class: Knp\Menu\MenuItem
+         factory: ["@menu_builder", createMainMenu]
+         tags:
+             - { name: knp_menu.menu, alias: main }
+    menu_footer:
+         class: Knp\Menu\MenuItem
+         factory: ["@menu_builder", createFooterMenu]
+         arguments: [ "%mail_admin%" ]
+         tags:
+             - { name: knp_menu.menu, alias: footer }
+    menu_user:
+         class: Knp\Menu\MenuItem
+         factory: ["@menu_builder", createUserMenu]
+         arguments: ["@security.authorization_checker", "@security.token_storage"]
+         tags:
+             - { name: knp_menu.menu, alias: user }
+    menu_locale_switcher:
+         class: Knp\Menu\MenuItem
+         factory: ["@menu_builder", createLocaleSwitcherMenu]
+         arguments: ["%locales%"]
+         tags:
+             - { name: knp_menu.menu, alias: locale_switcher }
+
     # Utils
     app.utils.country:
         class: AppBundle\Utils\Country
