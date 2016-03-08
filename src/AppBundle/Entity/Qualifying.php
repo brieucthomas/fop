@@ -238,14 +238,4 @@ class Qualifying
 
         return $this;
     }
-
-    /**
-     * Converts the object to a string.
-     *
-     * @return string
-     */
-    public function __toString()
-    {
-        return (string) $this->position;
-    }
 }

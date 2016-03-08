@@ -151,14 +151,4 @@ class Constructor
 
         return $this;
     }
-
-    /**
-     * __toString.
-     *
-     * @return string The constructor name
-     */
-    public function __toString()
-    {
-        return (string) $this->name;
-    }
 }

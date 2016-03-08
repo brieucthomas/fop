@@ -311,14 +311,4 @@ class Driver
     {
         return $this->firstName[0].'. '.$this->lastName;
     }
-
-    /**
-     * __toString.
-     *
-     * @return string The driver name
-     */
-    public function __toString()
-    {
-        return (string) $this->getName();
-    }
 }
