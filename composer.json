@@ -78,6 +78,7 @@
             "env-map": {
                 "secret": "SYMFONY_SECRET",
                 "current_season": "FOP_CURRENT_SEASON",
+                "database_url": "DATABASE_URL",
                 "mailer_host": "MAILER_HOST",
                 "mailer_port": "MAILER_PORT",
                 "mailer_user": "MAILER_USER",

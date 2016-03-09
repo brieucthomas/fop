@@ -1,10 +1,6 @@
 # This file is a "template" of what your parameters.yml file should look like
 parameters:
-    database_host:     127.0.0.1
-    database_port:     5432
-    database_name:     fop
-    database_user:     root
-    database_password: ~
+    database_url:      postgres://postgres:password@127.0.0.1:5432/fop
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
