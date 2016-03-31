@@ -11,8 +11,8 @@ namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\DriverStandingsServiceInterface;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Url\Builder\DriverStandingsUrlBuilder;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
+use BrieucThomas\ErgastClient\Request\RequestBuilder;
 
 /**
  * The driver standings loader.
@@ -41,8 +41,11 @@ class DriverStandingsLoader extends AbstractLoader
      */
     public function load(AppEntity\Season $season)
     {
-        $urlBuilder = new DriverStandingsUrlBuilder('f1');
-        $urlBuilder->findBySeason($season->getYear());
+        $urlBuilder = new RequestBuilder();
+        $urlBuilder
+            ->findDriverStandings()
+            ->bySeason($season->getYear())
+        ;
         $drivers = $season->getDrivers();
 
         // remove season driver standings
@@ -50,7 +53,7 @@ class DriverStandingsLoader extends AbstractLoader
 
         foreach ($season->getRaces() as $race) {
             /* @var $race AppEntity\Race */
-            $urlBuilder->findByRound($race->getRound());
+            $urlBuilder->byRound($race->getRound());
             $response = $this->client->execute($urlBuilder->build());
             foreach ($response->getStandings() as $ergastStanding) {
                 /* @var $ergastStanding ErgastEntity\Standings */

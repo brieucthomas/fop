@@ -13,7 +13,7 @@ use AppBundle\Entity as AppEntity;
 use AppBundle\Service\ConstructorServiceInterface;
 use AppBundle\Service\DriverServiceInterface;
 use AppBundle\Service\TeamServiceInterface;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
 use AppBundle\Service\SeasonServiceInterface;
 use AppBundle\Utils\Country;
 use AppBundle\Utils\Nationality;
@@ -179,7 +179,7 @@ abstract class AbstractLoader implements LoaderInterface
     protected function getTeam(AppEntity\Season $season, ErgastEntity\Constructor $ergastConstructor, ErgastEntity\Driver $ergastDriver)
     {
         $driver = $this->getDriver($ergastDriver);
-        $constructor = $this->getConstructor($ergastConstructor);
+        $constructor = $this->getConstructor($ergastConstructor);        
         $team = $season->findTeamByDriverAndConstructor($driver, $constructor);
 
         if (!$team) {

@@ -10,10 +10,9 @@
 namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
-use AppBundle\Service\ConstructorStandingsService;
 use AppBundle\Service\ConstructorStandingsServiceInterface;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Url\Builder\ConstructorStandingsUrlBuilder;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
+use BrieucThomas\ErgastClient\Request\RequestBuilder;
 
 /**
  * The constructor standings loader.
@@ -42,8 +41,11 @@ class ConstructorStandingsLoader extends AbstractLoader
      */
     public function load(AppEntity\Season $season)
     {
-        $urlBuilder = new ConstructorStandingsUrlBuilder('f1');
-        $urlBuilder->findBySeason($season->getYear());
+        $requestBuilder = new RequestBuilder();
+        $requestBuilder
+            ->findRaces()
+            ->bySeason($season->getYear())
+        ;
         $constructors = $season->getConstructors();
 
         // remove season constructor standings
@@ -51,8 +53,8 @@ class ConstructorStandingsLoader extends AbstractLoader
 
         foreach ($season->getRaces() as $race) {
             /* @var $race AppEntity\Race */
-            $urlBuilder->findByRound($race->getRound());
-            $response = $this->client->execute($urlBuilder->build());
+            $requestBuilder->byRound($race->getRound());
+            $response = $this->client->execute($requestBuilder->build());
             foreach ($response->getStandings() as $ergastStanding) {
                 /* @var $ergastStanding ErgastEntity\Standings */
                 foreach ($ergastStanding->getConstructorStandings() as $ergastConstructorStanding) {

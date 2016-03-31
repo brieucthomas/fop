@@ -12,8 +12,8 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\FinishingStatusServiceInterface;
 use AppBundle\Service\ResultServiceInterface;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Url\Builder\ResultUrlBuilder;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
+use BrieucThomas\ErgastClient\Request\RequestBuilder;
 
 /**
  * The result loader.
@@ -49,8 +49,11 @@ class ResultLoader extends AbstractLoader
      */
     public function load(AppEntity\Season $season)
     {
-        $urlBuilder = new ResultUrlBuilder('f1');
-        $urlBuilder->findBySeason($season->getYear());
+        $urlBuilder = new RequestBuilder();
+        $urlBuilder
+            ->findResults()
+            ->bySeason($season->getYear())
+        ;
         $response = $this->client->execute($urlBuilder->build());
 
         // load all finishing statues

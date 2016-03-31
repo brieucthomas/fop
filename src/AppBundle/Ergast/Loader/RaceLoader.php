@@ -10,10 +10,9 @@
 namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
 use AppBundle\Service\CircuitServiceInterface;
-use BrieucThomas\ErgastClient\Entity\Response;
-use BrieucThomas\ErgastClient\Url\Builder\RaceUrlBuilder;
+use BrieucThomas\ErgastClient\Request\RequestBuilder;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
@@ -43,8 +42,11 @@ class RaceLoader extends AbstractLoader
      */
     public function load(AppEntity\Season $season)
     {
-        $urlBuilder = new RaceUrlBuilder('f1');
-        $urlBuilder->findBySeason($season->getYear());
+        $urlBuilder = new RequestBuilder();
+        $urlBuilder
+            ->findRaces()
+            ->bySeason($season->getYear())
+        ;
         $response = $this->client->execute($urlBuilder->build());
 
         $circuits = $this->loadCircuits($response);
@@ -65,7 +67,7 @@ class RaceLoader extends AbstractLoader
                 ->setRound($ergastRace->getRound())
                 ->setName($ergastRace->getName())
                 ->setCircuit($circuit)
-                ->setDate($ergastRace->getTime() ? $ergastRace->getTime() : $ergastRace->getDate())
+                ->setDate($ergastRace->getStartDate())
             ;
 
             $this->seasonService->addRace($season, $race);
@@ -77,11 +79,11 @@ class RaceLoader extends AbstractLoader
     /**
      * Loads circuits.
      *
-     * @param Response $response The response object
+     * @param ErgastEntity\Response $response The response object
      *
      * @return ArrayCollection A collection of Circuit entities
      */
-    private function loadCircuits(Response $response)
+    private function loadCircuits(ErgastEntity\Response $response)
     {
         // extract circuit identifiers
         $circuitSlugs = $response->getRaces()->map(function (ErgastEntity\Race $ergastRace) {

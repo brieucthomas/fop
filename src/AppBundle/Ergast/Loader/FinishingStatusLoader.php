@@ -11,8 +11,8 @@ namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\FinishingStatusServiceInterface;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Url\Builder\StatusUrlBuilder;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
+use BrieucThomas\ErgastClient\Request\RequestBuilder;
 
 /**
  * Finishing status loader.
@@ -50,7 +50,8 @@ class FinishingStatusLoader extends AbstractLoader
             return;
         }
 
-        $urlBuilder = new StatusUrlBuilder('f1');
+        $urlBuilder = new RequestBuilder();
+        $urlBuilder->findFinishingStatus();
         $response = $this->client->execute($urlBuilder->build());
 
         $finishingStatues = $this->finishingStatusService->findAll();

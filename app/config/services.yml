@@ -311,17 +311,9 @@ services:
             - { name: monolog.processor }
 
     # Ergast
-    app.ergast.http_adapter:
-        class: Ivory\HttpAdapter\FileGetContentsHttpAdapter
-    app.ergast.serializer_builder:
-        class: JMS\Serializer\SerializerBuilder
-        factory: [JMS\Serializer\SerializerBuilder, create]
-    app.ergast.serializer:
-        class: JMS\Serializer\Serializer
-        factory: ["@app.ergast.serializer_builder", build]
     app.ergast.client:
         class: BrieucThomas\ErgastClient\ErgastClient
-        arguments: ["@app.ergast.http_adapter", "@app.ergast.serializer"]
+        factory: [BrieucThomas\ErgastClient\ErgastClientFactory, createErgastClient]
     app.ergast.importer:
         class: AppBundle\Ergast\Importer
         arguments: ["@doctrine.orm.default_entity_manager", "@app.service.season"]

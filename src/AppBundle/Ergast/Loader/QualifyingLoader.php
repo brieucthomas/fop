@@ -11,8 +11,8 @@ namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\QualifyingServiceInterface;
-use BrieucThomas\ErgastClient\Entity as ErgastEntity;
-use BrieucThomas\ErgastClient\Url\Builder\QualifyingUrlBuilder;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
+use BrieucThomas\ErgastClient\Request\RequestBuilder;
 
 /**
  * Qualifying loader.
@@ -41,8 +41,11 @@ class QualifyingLoader extends AbstractLoader
      */
     public function load(AppEntity\Season $season)
     {
-        $urlBuilder = new QualifyingUrlBuilder('f1');
-        $urlBuilder->findBySeason($season->getYear());
+        $urlBuilder = new RequestBuilder();
+        $urlBuilder
+            ->findQualifying()
+            ->bySeason($season->getYear())
+        ;
         $response = $this->client->execute($urlBuilder->build());
 
         // remove all season qualifying
@@ -54,7 +57,8 @@ class QualifyingLoader extends AbstractLoader
             foreach ($ergastRace->getQualifying() as $ergastQualifying) {
                 /* @var $ergastQualifying ErgastEntity\Qualifying */
                 $team = $this->getTeam($season, $ergastQualifying->getConstructor(), $ergastQualifying->getDriver());
-
+                $season->addTeam($team);
+                
                 $qualifying = new AppEntity\Qualifying();
                 $qualifying
                     ->setRace($race)

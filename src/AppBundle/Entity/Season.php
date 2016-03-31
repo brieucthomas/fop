@@ -288,7 +288,9 @@ class Season
     {
         $team->setSeason($this);
 
-        $this->teams->add($team);
+        if (!$this->teams->contains($team)) {
+            $this->teams->add($team);
+        }
 
         return $this;
     }
