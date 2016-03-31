@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f9f995a42efd56e16935fd0c467d2d44",
-    "content-hash": "ab703a41a2c0acf072b0ddde3729ff26",
+    "hash": "f979366b8eae4d0ddd5dc6242fd531a8",
+    "content-hash": "f4ec401f30873acd03f862dc3ea7c11c",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -49,16 +49,16 @@
         },
         {
             "name": "brieucthomas/ergast-client",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brieucthomas/ergast-client.git",
-                "reference": "c0c2e30793ceb5a989da5155c7b5d00c15184190"
+                "reference": "af8eb18482c61de34d54cf572b593a445645f7c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brieucthomas/ergast-client/zipball/c0c2e30793ceb5a989da5155c7b5d00c15184190",
-                "reference": "c0c2e30793ceb5a989da5155c7b5d00c15184190",
+                "url": "https://api.github.com/repos/brieucthomas/ergast-client/zipball/af8eb18482c61de34d54cf572b593a445645f7c6",
+                "reference": "af8eb18482c61de34d54cf572b593a445645f7c6",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
             "license": [
                 "library"
             ],
-            "time": "2016-03-30 20:21:58"
+            "time": "2016-03-31 20:22:26"
         },
         {
             "name": "doctrine/annotations",
@@ -3450,7 +3450,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "stof/doctrine-extensions-bundle": 20,
-        "friendsofsymfony/user-bundle": 20
+        "friendsofsymfony/user-bundle": 20,
+        "brieucthomas/ergast-client": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

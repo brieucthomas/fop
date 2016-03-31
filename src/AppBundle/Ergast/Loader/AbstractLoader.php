@@ -149,7 +149,7 @@ abstract class AbstractLoader implements LoaderInterface
             ->setNationality($this->nationality->getCodeByName($ergastDriver->getNationality()))
         ;
 
-        if ($ergastDriver->getBirthDate()->format('Y') > 0) {
+        if ($ergastDriver->getBirthDate() instanceof \DateTime) {
             $driver->setBirthDate($ergastDriver->getBirthDate());
         }
 

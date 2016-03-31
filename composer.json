@@ -38,7 +38,7 @@
         "friendsofsymfony/user-bundle": "^2.0@dev",
         "ornicar/gravatar-bundle" : "^1.1",
         "knplabs/knp-menu-bundle": "^2.0",
-        "brieucthomas/ergast-client": "^1.0"
+        "brieucthomas/ergast-client": "^1.0@dev"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.0",
