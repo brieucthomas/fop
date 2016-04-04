@@ -144,8 +144,8 @@ abstract class AbstractLoader implements LoaderInterface
             ->setCode($ergastDriver->getCode())
             ->setSlug($ergastDriver->getId())
             ->setNumber($ergastDriver->getNumber())
-            ->setFirstName($ergastDriver->getFirstName())
-            ->setLastName($ergastDriver->getLastName())
+            ->setFirstName($ergastDriver->getGivenName())
+            ->setLastName($ergastDriver->getFamilyName())
             ->setNationality($this->nationality->getCodeByName($ergastDriver->getNationality()))
         ;
 

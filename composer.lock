@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f979366b8eae4d0ddd5dc6242fd531a8",
-    "content-hash": "f4ec401f30873acd03f862dc3ea7c11c",
+    "hash": "7ce69bcfe7d50de9455a0d22377fefb2",
+    "content-hash": "a974d308a8b712139416b5356801fadb",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -53,12 +53,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/brieucthomas/ergast-client.git",
-                "reference": "af8eb18482c61de34d54cf572b593a445645f7c6"
+                "reference": "dc2d9aa57879c654caffaf26394fd5d40be015c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brieucthomas/ergast-client/zipball/af8eb18482c61de34d54cf572b593a445645f7c6",
-                "reference": "af8eb18482c61de34d54cf572b593a445645f7c6",
+                "url": "https://api.github.com/repos/brieucthomas/ergast-client/zipball/dc2d9aa57879c654caffaf26394fd5d40be015c8",
+                "reference": "dc2d9aa57879c654caffaf26394fd5d40be015c8",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
             "type": "project",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -83,7 +83,7 @@
             "license": [
                 "library"
             ],
-            "time": "2016-03-31 20:22:26"
+            "time": "2016-04-04 07:21:52"
         },
         {
             "name": "doctrine/annotations",
@@ -1612,16 +1612,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.18.1",
+            "version": "1.18.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45"
+                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
-                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/064b38c16790249488e7a8b987acf1c9d7383c09",
+                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09",
                 "shasum": ""
             },
             "require": {
@@ -1636,13 +1636,13 @@
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
                 "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
                 "php-console/php-console": "^3.1.3",
                 "phpunit/phpunit": "~4.5",
                 "phpunit/phpunit-mock-objects": "2.3.0",
                 "raven/raven": "^0.13",
                 "ruflin/elastica": ">=0.90 <3.0",
-                "swiftmailer/swiftmailer": "~5.3",
-                "videlalvaro/php-amqplib": "~2.4"
+                "swiftmailer/swiftmailer": "~5.3"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -1651,11 +1651,11 @@
                 "ext-mongo": "Allow sending log messages to a MongoDB server",
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
                 "php-console/php-console": "Allow sending log messages to Google Chrome",
                 "raven/raven": "Allow sending log messages to a Sentry server",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "videlalvaro/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib"
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "type": "library",
             "extra": {
@@ -1686,7 +1686,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-03-13 16:08:35"
+            "time": "2016-04-02 13:12:58"
         },
         {
             "name": "openbuildings/postmark",
