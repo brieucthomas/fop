@@ -45,7 +45,7 @@ class Result
      * The team entity.
      *
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Team", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Team")
      * @ORM\JoinColumn(nullable=false)
      * @Assert\NotNull
      *

@@ -9,6 +9,9 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Constructor;
+use AppBundle\Entity\Driver;
+use AppBundle\Entity\Season;
 use AppBundle\Entity\Team;
 use Doctrine\Common\Collections\ArrayCollection;
 
@@ -17,6 +20,8 @@ use Doctrine\Common\Collections\ArrayCollection;
  */
 interface TeamServiceInterface
 {
+    public function findBySeasonAndDriverAndConstructor(Season $season, Driver $driver, Constructor $constructor);
+    
     /**
      * Returns the teams of a driver.
      *

@@ -9,6 +9,9 @@
 
 namespace AppBundle\Repository;
 
+use AppBundle\Entity\Constructor;
+use AppBundle\Entity\Driver;
+use AppBundle\Entity\Season;
 use AppBundle\Entity\Team;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
@@ -20,6 +23,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class TeamRepository extends EntityRepository implements TeamRepositoryInterface
 {
+    public function findBySeasonAndDriverAndConstructor(Season $season, Driver $driver, Constructor $constructor)
+    {
+        return $this->findOneBy([
+            'season' => $season,
+            'driver' => $driver,
+            'constructor' => $constructor
+        ]);
+    }
+
     /**
      * {@inheritdoc}
      */

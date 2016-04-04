@@ -40,7 +40,7 @@ class ErgastImportCommand extends ContainerAwareCommand
         if ('current' == $year) {
             $years = [date('Y')];
         } elseif ('all' == $year) {
-            $years = range(2008, date('Y'));
+            $years = range(1950, date('Y'));
         } else {
             $years = [(int) $year];
         }

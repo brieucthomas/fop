@@ -180,7 +180,7 @@ abstract class AbstractLoader implements LoaderInterface
     {
         $driver = $this->getDriver($ergastDriver);
         $constructor = $this->getConstructor($ergastConstructor);        
-        $team = $season->findTeamByDriverAndConstructor($driver, $constructor);
+        $team = $this->teamService->findBySeasonAndDriverAndConstructor($season, $driver, $constructor);
 
         if (!$team) {
             $team = new AppEntity\Team();

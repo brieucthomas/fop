@@ -23,6 +23,8 @@ use Doctrine\ORM\QueryBuilder;
  */
 interface TeamRepositoryInterface
 {
+    public function findBySeasonAndDriverAndConstructor(Season $season, Driver $driver, Constructor $constructor);
+    
     /**
      * Returns the teams by the given year.
      *

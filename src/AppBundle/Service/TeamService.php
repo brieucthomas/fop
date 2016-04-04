@@ -9,6 +9,9 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Constructor;
+use AppBundle\Entity\Driver;
+use AppBundle\Entity\Season;
 use AppBundle\Entity\Team;
 use AppBundle\Repository\TeamRepositoryInterface;
 use Psr\Log\LoggerInterface;
@@ -25,6 +28,11 @@ class TeamService implements TeamServiceInterface
     {
         $this->teamRepository = $teamRepository;
         $this->logger = $logger;
+    }
+
+    public function findBySeasonAndDriverAndConstructor(Season $season, Driver $driver, Constructor $constructor)
+    {
+        return $this->teamRepository->findBySeasonAndDriverAndConstructor($season, $driver, $constructor);
     }
 
     /**

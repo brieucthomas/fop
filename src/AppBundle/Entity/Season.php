@@ -193,26 +193,6 @@ class Season
     }
 
     /**
-     * Returns a team by its driver and constructor.
-     *
-     * @param Driver $driver      The driver entity
-     * @param Constructor $constructor The constructor entity
-     *
-     * @return Team|null The Team entity or null if not found
-     */
-    public function findTeamByDriverAndConstructor(Driver $driver, Constructor $constructor)
-    {
-        foreach ($this->teams as $team) {
-            /* @var $team Team */
-            if (($team->getDriver()->getSlug() == $driver->getSlug()) && ($team->getConstructor()->getSlug() == $constructor->getSlug())) {
-                return $team;
-            }
-        }
-
-        return null;
-    }
-
-    /**
      * Returns the season drivers.
      *
      * @return ArrayCollection A collection of Driver entities indexed by slug
