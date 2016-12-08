@@ -49,24 +49,7 @@ class WebTestCase extends LiipTest
     {
         parent::setUp();
 
-        $this->loadFixtureFiles([
-            '@AppBundle/DataFixtures/ORM/Test/users.yml',
-            '@AppBundle/DataFixtures/ORM/Test/scoring_systems.yml',
-            '@AppBundle/DataFixtures/ORM/Test/seasons.yml',
-            '@AppBundle/DataFixtures/ORM/Test/circuits.yml',
-            '@AppBundle/DataFixtures/ORM/Test/races.yml',
-            '@AppBundle/DataFixtures/ORM/Test/drivers.yml',
-            '@AppBundle/DataFixtures/ORM/Test/constructors.yml',
-            '@AppBundle/DataFixtures/ORM/Test/teams.yml',
-            '@AppBundle/DataFixtures/ORM/Test/qualifying.yml',
-            '@AppBundle/DataFixtures/ORM/Test/finishing_status.yml',
-            '@AppBundle/DataFixtures/ORM/Test/results.yml',
-            '@AppBundle/DataFixtures/ORM/Test/predictions.yml',
-            '@AppBundle/DataFixtures/ORM/Test/finishing_positions.yml',
-            '@AppBundle/DataFixtures/ORM/Test/driver_standings.yml',
-            '@AppBundle/DataFixtures/ORM/Test/constructor_standings.yml',
-            '@AppBundle/DataFixtures/ORM/Test/user_standings.yml',
-        ]);
+        $this->loadFixtureFiles(glob(__DIR__ . '/fixtures/*.yml'), true);
     }
 
     protected function tearDown()

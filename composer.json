@@ -17,34 +17,35 @@
         }
     },
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.1",
         "ext-intl": "*",
         "ext-mbstring": "*",
         "ext-openssl": "*",
-        "symfony/symfony": "^3.0",
+        "symfony/symfony": "^3.2",
         "doctrine/orm": "^2.5",
         "doctrine/doctrine-bundle": "^1.6",
-        "doctrine/doctrine-cache-bundle": "^1.2",
-        "twig/extensions": "^1.3",
-        "symfony/swiftmailer-bundle": "^2.3",
-        "symfony/monolog-bundle": "^2.8",
+        "doctrine/doctrine-cache-bundle": "^1.3",
+        "twig/extensions": "^1.4",
+        "symfony/swiftmailer-bundle": "^2.4",
+        "symfony/monolog-bundle": "^3.0",
         "sensio/distribution-bundle": "^5.0",
-        "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "^2.0",
+        "sensio/framework-extra-bundle": "^3.0",
+        "incenteev/composer-parameter-handler": "^2.1",
         "openbuildings/postmark": "^0.3",
-        "stof/doctrine-extensions-bundle": "dev-master",
+        "stof/doctrine-extensions-bundle": "^1.1",
         "sonata-project/intl-bundle": "^2.2",
         "jms/i18n-routing-bundle": "^2.0",
         "friendsofsymfony/user-bundle": "^2.0@dev",
         "ornicar/gravatar-bundle" : "^1.1",
-        "knplabs/knp-menu-bundle": "^2.0",
+        "knplabs/knp-menu-bundle": "^2.1",
         "brieucthomas/ergast-client": "^2.0@dev"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^3.0",
-        "liip/functional-test-bundle": "^1.5",
-        "doctrine/doctrine-fixtures-bundle": "^2.3",
-        "hautelook/alice-bundle": "^1.2"
+        "phpunit/phpunit": "^5.7",
+        "symfony/phpunit-bridge": "^3.2",
+        "liip/functional-test-bundle": "^1.6",
+        "doctrine/data-fixtures": "^1.2",
+        "hautelook/alice-bundle": "^1.4"
     },
     "scripts": {
         "post-install-cmd": [
@@ -63,9 +64,6 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "extra": {
         "symfony-app-dir": "app",

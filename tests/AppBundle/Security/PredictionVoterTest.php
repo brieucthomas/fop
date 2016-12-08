@@ -132,17 +132,9 @@ class PredictionVoterTest extends WebTestCase
      */
     private function getMockedToken(UserInterface $user = null, array $roles)
     {
-        $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
-        $token
-            ->expects($this->any())
-            ->method('getUser')
-            ->willReturn($user)
-        ;
-        $token
-            ->expects($this->any())
-            ->method('getRoles')
-            ->willReturn($roles)
-        ;
+        $token = $this->getMockBuilder(TokenInterface::class)->getMock();
+        $token->expects($this->any())->method('getUser')->willReturn($user);
+        $token->expects($this->any())->method('getRoles')->willReturn($roles);
 
         return $token;
     }
@@ -179,12 +171,8 @@ class PredictionVoterTest extends WebTestCase
      */
     private function getUser($id)
     {
-        $user = $this->getMock('AppBundle\Entity\User');
-        $user
-            ->expects($this->any())
-            ->method('getId')
-            ->willReturn($id)
-        ;
+        $user = $this->getMockBuilder(User::class)->getMock();
+        $user->expects($this->any())->method('getId')->willReturn($id);
 
         return $user;
     }

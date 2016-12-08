@@ -10,11 +10,13 @@ framework:
 
 doctrine:
     dbal:
-        default_connection: default
-        connections:
-            default:
-                driver:   pdo_sqlite
-                path:     %kernel.cache_dir%/test.db
+        url: ~
+        driver: pdo_sqlite
+        path: '%kernel.cache_dir%/test.db'
+
+hautelook_alice:
+    db_drivers:
+        orm: ~
 
 web_profiler:
     toolbar: false

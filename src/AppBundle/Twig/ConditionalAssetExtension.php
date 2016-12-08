@@ -31,7 +31,7 @@ class ConditionalAssetExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            'asset_if' => new \Twig_Function_Method($this, 'assetIf'),
+            new \Twig_SimpleFunction('asset_if', [$this, 'assetIf']),
         ];
     }
 
