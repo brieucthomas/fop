@@ -12,7 +12,6 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\Season;
 use AppBundle\Entity\Team;
-use AppBundle\Entity\User;
 use AppBundle\Repository\ScoringSystemRepository;
 use AppBundle\Repository\ScoringSystemRepositoryInterface;
 use AppBundle\Repository\SeasonRepositoryInterface;
@@ -134,7 +133,5 @@ class SeasonService implements SeasonServiceInterface
     public function addTeam(Season $season, Team $team)
     {
         $team->setSeason($season);
-
-
     }
 }

@@ -52,8 +52,8 @@ class ErgastImportCommand extends ContainerAwareCommand
             $s = microtime(true);
             $importer->import($year);
             $e = microtime(true);
-            $io->comment("Memory usage after: ".(memory_get_usage() / 1024)." KB");
-            $io->comment("in ". intval($e - $s)." secondes");
+            $io->comment('Memory usage after: '.(memory_get_usage() / 1024).' KB');
+            $io->comment('in '.intval($e - $s).' secondes');
         }
     }
 }

@@ -28,7 +28,7 @@ class TeamRepository extends EntityRepository implements TeamRepositoryInterface
         return $this->findOneBy([
             'season' => $season,
             'driver' => $driver,
-            'constructor' => $constructor
+            'constructor' => $constructor,
         ]);
     }
 

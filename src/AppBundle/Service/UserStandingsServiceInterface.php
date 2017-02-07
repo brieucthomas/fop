@@ -9,7 +9,6 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
 
 /**

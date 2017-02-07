@@ -85,7 +85,7 @@ abstract class AbstractStandings
     /**
      * Returns the number of scored points.
      *
-     * @return float The number of scored points.
+     * @return float the number of scored points
      */
     public function getPoints()
     {

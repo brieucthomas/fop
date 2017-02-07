@@ -69,7 +69,7 @@ class ResultLoader extends AbstractLoader
                 /* @var $ergastResult ErgastEntity\Result */
                 $team = $this->getTeam($season, $ergastResult->getConstructor(), $ergastResult->getDriver());
                 $season->addTeam($team);
-                
+
                 $result = new AppEntity\Result();
 
                 $result

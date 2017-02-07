@@ -39,7 +39,7 @@ class PredictionType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => 'AppBundle\Entity\Prediction'
+            'data_class' => 'AppBundle\Entity\Prediction',
         ]);
         $resolver->setRequired('year');
     }

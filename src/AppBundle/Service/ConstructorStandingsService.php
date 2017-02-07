@@ -9,10 +9,8 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Constructor;
 use AppBundle\Entity\ConstructorStandings;
 use AppBundle\Entity\Season;
-use AppBundle\Repository\ConstructorRepositoryInterface;
 use AppBundle\Repository\ConstructorStandingsRepositoryInterface;
 use Psr\Log\LoggerInterface;
 

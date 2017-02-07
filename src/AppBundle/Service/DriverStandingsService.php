@@ -9,10 +9,8 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Driver;
 use AppBundle\Entity\DriverStandings;
 use AppBundle\Entity\Season;
-use AppBundle\Repository\DriverRepositoryInterface;
 use AppBundle\Repository\DriverStandingsRepositoryInterface;
 use Psr\Log\LoggerInterface;
 

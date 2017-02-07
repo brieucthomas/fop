@@ -33,7 +33,7 @@ class ResultProcessor
         $record['context']['result'] = [
             'season' => $result->getRace()->getSeason()->getYear(),
             'round' => $result->getRace()->getRound(),
-            'position' => $result->getPosition()
+            'position' => $result->getPosition(),
         ];
 
         return $record;

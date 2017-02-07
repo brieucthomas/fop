@@ -179,7 +179,7 @@ abstract class AbstractLoader implements LoaderInterface
     protected function getTeam(AppEntity\Season $season, ErgastEntity\Constructor $ergastConstructor, ErgastEntity\Driver $ergastDriver)
     {
         $driver = $this->getDriver($ergastDriver);
-        $constructor = $this->getConstructor($ergastConstructor);        
+        $constructor = $this->getConstructor($ergastConstructor);
         $team = $this->teamService->findBySeasonAndDriverAndConstructor($season, $driver, $constructor);
 
         if (!$team) {

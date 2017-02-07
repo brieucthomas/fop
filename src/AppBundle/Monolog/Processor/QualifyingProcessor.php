@@ -9,7 +9,6 @@
 
 namespace AppBundle\Monolog\Processor;
 
-use AppBundle\Entity\Circuit;
 use AppBundle\Entity\Qualifying;
 
 /**
@@ -34,7 +33,7 @@ class QualifyingProcessor
         $record['context']['qualifying'] = [
             'race' => $qualifying->getRace()->getName(),
             'position' => $qualifying->getPosition(),
-            'driver' => $qualifying->getTeam()->getDriver()->getName()
+            'driver' => $qualifying->getTeam()->getDriver()->getName(),
         ];
 
         return $record;

@@ -21,7 +21,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 interface TeamServiceInterface
 {
     public function findBySeasonAndDriverAndConstructor(Season $season, Driver $driver, Constructor $constructor);
-    
+
     /**
      * Returns the teams of a driver.
      *

@@ -479,7 +479,7 @@ class Race
     /**
      * Returns the user standings after this race.
      *
-     * @return ArrayCollection A collection of UserStanding entities.
+     * @return ArrayCollection a collection of UserStanding entities
      */
     public function getUserStandings()
     {

@@ -133,7 +133,7 @@ class ScoringSystem
     /**
      * Sets the scoring system length.
      *
-     * @param int $length The scoring system length.
+     * @param int $length the scoring system length
      *
      * @return $this
      */
