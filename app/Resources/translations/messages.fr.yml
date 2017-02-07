@@ -34,6 +34,11 @@ homepage:
         time: Date
         title: Dernier Grand Prix
 
+constructor:
+    constructors_championships: Titres de Champion du Monde
+    drivers_championships: Titres pilote
+    wins: Victoires
+
 driver:
     birth_date: Date de naissance
     championships: Titres
