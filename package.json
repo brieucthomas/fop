@@ -2,14 +2,14 @@
     "name": "fop",
     "private": true,
     "dependencies": {
-        "del": "^2.2",
-        "gulp": "^3.9",
-        "gulp-sass": "^2.1",
-        "gulp-clean-css": "^2.0",
-        "gulp-uglify": "^1.5",
-        "gulp-imagemin": "^2.4",
-        "imagemin-pngquant": "^4.2",
-        "imagemin-jpegtran": "^4.3",
-        "imagemin-svgo": "^4.2"
+        "del": "2.2.2",
+        "gulp": "3.9.1",
+        "gulp-sass": "3.1.0",
+        "gulp-clean-css": "3.0.0",
+        "gulp-uglify": "2.0.1",
+        "gulp-imagemin": "3.1.1",
+        "imagemin-pngquant": "5.0.0",
+        "imagemin-jpegtran": "5.0.2",
+        "imagemin-svgo": "5.2.0"
     }
 }

@@ -15,7 +15,8 @@ gulp.task('task', function (cb) {
         console.log(stderr);
         cb(err);
     });
-})
+});
+
 var paths = {
     sass:  ['app/Resources/assets/sass/**/*.scss'],
     js:    ['app/Resources/assets/js/**/*.js'],
@@ -25,7 +26,7 @@ var paths = {
 };
 
 gulp.task('clean', function (cb) {
-    del([paths.dist], cb);
+    del.sync([paths.dist], cb);
 });
 
 gulp.task('css', function () {

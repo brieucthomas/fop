@@ -317,7 +317,7 @@
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    @extend .list-unstyled;
+    @include list-unstyled;
 
     > li {
       display: inline-block;
