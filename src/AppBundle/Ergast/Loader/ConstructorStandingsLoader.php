@@ -43,7 +43,7 @@ class ConstructorStandingsLoader extends AbstractLoader
     {
         $requestBuilder = new RequestBuilder();
         $requestBuilder
-            ->findRaces()
+            ->findConstructorStandings()
             ->bySeason($season->getYear())
         ;
         $constructors = $season->getConstructors();
