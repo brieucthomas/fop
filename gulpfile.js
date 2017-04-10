@@ -33,7 +33,8 @@ gulp.task('css', function () {
     gulp.src(paths.sass)
         .pipe(sass({
             noCache: true,
-            style: "compressed"
+            style: "compressed",
+            includePaths: ['node_modules', 'web/vendor']
         }))
         .pipe(mincss())
         .pipe(gulp.dest(paths.dist + '/css'));
@@ -47,11 +48,12 @@ gulp.task('js', function () {
 
 gulp.task('img', function () {
     return gulp.src(paths.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant(), jpegtran(), svgo()]
-        }))
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({plugins: [{removeViewBox: true}]})
+        ]))
         .pipe(gulp.dest(paths.dist + '/img'));
 });
 
