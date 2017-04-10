@@ -1,7 +1,7 @@
 {
     "name": "fop",
     "dependencies": {
-        "TableDnD": "0.9.1",
+        "TableDnD": "master",
         "bootstrap": "3.3.7",
         "bootstrap-sass-official": "3.3.7",
         "c3js-chart": "0.4.11",
