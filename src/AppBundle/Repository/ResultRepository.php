@@ -14,7 +14,6 @@ use AppBundle\Entity\Race;
 use AppBundle\Entity\Result;
 use AppBundle\Entity\Season;
 use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Query\Expr;
 
 /**
  * The result repository.

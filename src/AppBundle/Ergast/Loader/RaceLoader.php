@@ -10,8 +10,8 @@
 namespace AppBundle\Ergast\Loader;
 
 use AppBundle\Entity as AppEntity;
-use BrieucThomas\ErgastClient\Model as ErgastEntity;
 use AppBundle\Service\CircuitServiceInterface;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
 use BrieucThomas\ErgastClient\Request\RequestBuilder;
 use Doctrine\Common\Collections\ArrayCollection;
 

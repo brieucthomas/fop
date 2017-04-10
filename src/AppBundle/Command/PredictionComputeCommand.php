@@ -34,7 +34,7 @@ class PredictionComputeCommand extends ContainerAwareCommand
     {
         $io = new SymfonyStyle($input, $output);
 
-        $year = ('current' == $input->getArgument('year')) ? date('Y') : $input->getArgument('year');
+        $year = ('current' === $input->getArgument('year')) ? date('Y') : $input->getArgument('year');
 
         $season = $this->getContainer()->get('app.service.season')->findByYear($year);
 

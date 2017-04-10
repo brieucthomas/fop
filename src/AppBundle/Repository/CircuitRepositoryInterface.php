@@ -10,7 +10,6 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Circuit;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
@@ -25,7 +24,7 @@ interface CircuitRepositoryInterface
      *
      * @return Collection A collection of Circuit entities indexed by slug
      */
-    public function findBySlugs(array $slugs) : Collection;
+    public function findBySlugs(array $slugs): Collection;
 
     /**
      * Saves a circuit.

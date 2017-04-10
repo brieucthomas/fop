@@ -1,15 +1,15 @@
 {
     "name": "fop",
     "dependencies": {
-        "requirejs": "2.3.2",
-        "jquery": "3.1.1",
+        "TableDnD": "0.9.1",
         "bootstrap": "3.3.7",
         "bootstrap-sass-official": "3.3.7",
-        "fontawesome": "4.7.0",
-        "moment": "2.17.1",
-        "d3": "3.5.0",
         "c3js-chart": "0.4.11",
+        "d3": "3.5.0",
+        "fontawesome": "4.7.0",
+        "jquery": "3.2.0",
         "jquery.countdown": "2.2.0",
-        "TableDnD": "0.9.1"
+        "moment": "2.17.1",
+        "requirejs": "2.3.3"
     }
 }

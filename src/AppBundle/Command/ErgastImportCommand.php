@@ -37,9 +37,9 @@ class ErgastImportCommand extends ContainerAwareCommand
         $io = new SymfonyStyle($input, $output);
         $year = $input->getArgument('year');
 
-        if ('current' == $year) {
+        if ('current' === $year) {
             $years = [date('Y')];
-        } elseif ('all' == $year) {
+        } elseif ('all' === $year) {
             $years = range(1950, date('Y'));
         } else {
             $years = [(int) $year];
@@ -53,7 +53,7 @@ class ErgastImportCommand extends ContainerAwareCommand
             $importer->import($year);
             $e = microtime(true);
             $io->comment('Memory usage after: '.(memory_get_usage() / 1024).' KB');
-            $io->comment('in '.intval($e - $s).' secondes');
+            $io->comment('in '.(int) ($e - $s).' secondes');
         }
     }
 }

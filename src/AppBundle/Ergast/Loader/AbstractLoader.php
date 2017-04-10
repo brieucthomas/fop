@@ -12,12 +12,12 @@ namespace AppBundle\Ergast\Loader;
 use AppBundle\Entity as AppEntity;
 use AppBundle\Service\ConstructorServiceInterface;
 use AppBundle\Service\DriverServiceInterface;
-use AppBundle\Service\TeamServiceInterface;
-use BrieucThomas\ErgastClient\Model as ErgastEntity;
 use AppBundle\Service\SeasonServiceInterface;
+use AppBundle\Service\TeamServiceInterface;
 use AppBundle\Utils\Country;
 use AppBundle\Utils\Nationality;
 use BrieucThomas\ErgastClient\ErgastClientInterface;
+use BrieucThomas\ErgastClient\Model as ErgastEntity;
 
 /**
  * Base class for laoders.

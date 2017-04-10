@@ -14,9 +14,9 @@ use AppBundle\Entity\Race;
 use AppBundle\Entity\User;
 use AppBundle\Security\PredictionVoter;
 use Symfony\Component\Security\Core\Authentication\Token\AnonymousToken;
-use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
+use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Tests\WebTestCase;
 

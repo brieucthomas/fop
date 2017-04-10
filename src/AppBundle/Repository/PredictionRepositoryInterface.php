@@ -10,8 +10,8 @@
 namespace AppBundle\Repository;
 
 use AppBundle\Entity\Prediction;
-use AppBundle\Entity\User;
 use AppBundle\Entity\Race;
+use AppBundle\Entity\User;
 
 /**
  * The prediction repository.

@@ -79,9 +79,9 @@ class Nationality
      *
      * @param string $name A nationality name
      *
-     * @return string The nationality code
-     *
      * @throws \InvalidArgumentException if the nationality name is not found
+     *
+     * @return string The nationality code
      */
     public function getCodeByName($name)
     {

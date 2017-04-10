@@ -450,7 +450,7 @@ class Result
      */
     public function setFastestLapSpeed($fastestLapSpeed)
     {
-        if ($this->fastestLapSpeed != $fastestLapSpeed) {
+        if ($this->fastestLapSpeed !== $fastestLapSpeed) {
             $this->fastestLapSpeed = $fastestLapSpeed;
         }
 

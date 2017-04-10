@@ -11,7 +11,6 @@ namespace AppBundle\Repository;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityRepository;
-use Doctrine\ORM\Query\Expr;
 
 /**
  * The user repository.

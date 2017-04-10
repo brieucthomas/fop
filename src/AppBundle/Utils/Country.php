@@ -79,9 +79,9 @@ class Country
      *
      * @param string $name A country name
      *
-     * @return string The country code
-     *
      * @throws \InvalidArgumentException if the country name is not found
+     *
+     * @return string The country code
      */
     public function getCodeByName($name)
     {

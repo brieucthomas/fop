@@ -22,7 +22,7 @@ class CircuitRepository extends EntityRepository implements CircuitRepositoryInt
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs) : Collection
+    public function findBySlugs(array $slugs): Collection
     {
         $builder = $this->_em->createQueryBuilder();
         $builder

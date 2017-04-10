@@ -317,7 +317,7 @@ class Race
      */
     public function setDate(\DateTime $date)
     {
-        if ($date != $this->date) {
+        if ($date !== $this->date) {
             $this->date = $date;
         }
 
@@ -541,12 +541,10 @@ class Race
     {
         foreach ($this->predictions as $prediction) {
             /* @var $prediction Prediction */
-            if ($prediction->getUser() == $user) {
+            if ($prediction->getUser() === $user) {
                 return $prediction;
             }
         }
-
-        return;
     }
 
     /**

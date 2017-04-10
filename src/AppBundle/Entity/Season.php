@@ -111,7 +111,7 @@ class Season
     /**
      * Sets the season scoring system.
      *
-     * @param ScoringSystem $system The prediction scoring system.
+     * @param ScoringSystem $system the prediction scoring system
      *
      * @return $this
      */
@@ -144,12 +144,10 @@ class Season
     public function getRaceByCircuit(Circuit $circuit)
     {
         foreach ($this->races as $race) {
-            if ($race->getCircuit() == $circuit) {
+            if ($race->getCircuit() === $circuit) {
                 return $race;
             }
         }
-
-        return;
     }
 
     /**
@@ -160,18 +158,18 @@ class Season
     public function getLastRaceWithResults()
     {
         $racesWithResults = $this->races->filter(function (Race $race) {
-           return $race->hasResults();
+            return $race->hasResults();
         });
 
         return $racesWithResults->last();
     }
 
-    public function getRaces() : Collection
+    public function getRaces(): Collection
     {
         return $this->races;
     }
 
-    public function getRacesWithResults() : Collection
+    public function getRacesWithResults(): Collection
     {
         return $this->races->filter(function (Race $race) {
             return $race->hasResults();
@@ -222,7 +220,7 @@ class Season
 
         foreach ($this->teams as $team) {
             /* @var $team Team */
-            if ($team->getConstructor() == $constructor) {
+            if ($team->getConstructor() === $constructor) {
                 $drivers->set($team->getDriver()->getSlug(), $team->getDriver());
             }
         }

@@ -24,7 +24,7 @@ interface CircuitServiceInterface
      *
      * @return Collection A collection of Circuit entities indexed by slug
      */
-    public function findBySlugs(array $slugs) : Collection;
+    public function findBySlugs(array $slugs): Collection;
 
     /**
      * Saves a circuit.

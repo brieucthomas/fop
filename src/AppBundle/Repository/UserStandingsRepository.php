@@ -9,8 +9,8 @@
 
 namespace AppBundle\Repository;
 
-use AppBundle\Entity\User;
 use AppBundle\Entity\Season;
+use AppBundle\Entity\User;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query\Expr;
 

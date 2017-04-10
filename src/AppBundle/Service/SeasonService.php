@@ -12,7 +12,6 @@ namespace AppBundle\Service;
 use AppBundle\Entity\Race;
 use AppBundle\Entity\Season;
 use AppBundle\Entity\Team;
-use AppBundle\Repository\ScoringSystemRepository;
 use AppBundle\Repository\ScoringSystemRepositoryInterface;
 use AppBundle\Repository\SeasonRepositoryInterface;
 use AppBundle\Repository\UserRepositoryInterface;

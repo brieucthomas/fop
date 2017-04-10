@@ -10,8 +10,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * The team entity.
@@ -152,7 +152,7 @@ class Team
         return $this;
     }
 
-    public function __toString() : string
+    public function __toString(): string
     {
         return implode(' - ', [
             $this->getSeason()->getYear(),

@@ -31,7 +31,7 @@ class CircuitService implements CircuitServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function findBySlugs(array $slugs) : Collection
+    public function findBySlugs(array $slugs): Collection
     {
         return $this->circuitRepository->findBySlugs($slugs);
     }

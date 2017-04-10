@@ -49,7 +49,24 @@ class WebTestCase extends LiipTest
     {
         parent::setUp();
 
-        $this->loadFixtureFiles(glob(__DIR__ . '/fixtures/*.yml'), true);
+        $this->loadFixtureFiles([
+            __DIR__.'/fixtures/users.yml',
+            __DIR__.'/fixtures/scoring_systems.yml',
+            __DIR__.'/fixtures/seasons.yml',
+            __DIR__.'/fixtures/circuits.yml',
+            __DIR__.'/fixtures/races.yml',
+            __DIR__.'/fixtures/drivers.yml',
+            __DIR__.'/fixtures/constructors.yml',
+            __DIR__.'/fixtures/teams.yml',
+            __DIR__.'/fixtures/qualifying.yml',
+            __DIR__.'/fixtures/finishing_status.yml',
+            __DIR__.'/fixtures/results.yml',
+            __DIR__.'/fixtures/predictions.yml',
+            __DIR__.'/fixtures/finishing_positions.yml',
+            __DIR__.'/fixtures/driver_standings.yml',
+            __DIR__.'/fixtures/constructor_standings.yml',
+            __DIR__.'/fixtures/user_standings.yml',
+        ]);
     }
 
     protected function tearDown()
@@ -97,7 +114,7 @@ class WebTestCase extends LiipTest
     {
         $actual = $this->response->getStatusCode();
 
-        $this->assertEquals($code, $this->response->getStatusCode(), "Expected status code {$code}, got {$actual} (uri: {$this->currentUri}).");
+        $this->assertSame($code, $this->response->getStatusCode(), "Expected status code {$code}, got {$actual} (uri: {$this->currentUri}).");
 
         return $this;
     }
@@ -109,7 +126,7 @@ class WebTestCase extends LiipTest
 
     protected function seePageIs(string $uri)
     {
-        $this->assertEquals($uri, $this->currentUri, "Did not land on expected page [{$uri}].\n");
+        $this->assertSame($uri, $this->currentUri, "Did not land on expected page [{$uri}].\n");
 
         return $this;
     }
