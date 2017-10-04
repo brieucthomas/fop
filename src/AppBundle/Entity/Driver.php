@@ -19,7 +19,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass="AppBundle\Repository\DriverRepository")
  * @ORM\Table
  * @UniqueEntity("id")
- * @UniqueEntity("number")
  * @UniqueEntity("slug")
  *
  * @author Brieuc Thomas <tbrieuc@gmail.com>
@@ -50,7 +49,11 @@ class Driver
     /**
      * The driver permanent number.
      *
-     * @ORM\Column(type="integer", unique=true, nullable=true)
+     * This permanent number must not be unique because he can be reallocated
+     * if the driver associated with that number has driven in the last two
+     * seasons.
+     *
+     * @ORM\Column(type="integer", nullable=true)
      * @Assert\GreaterThanOrEqual(value = 1)
      *
      * @var int
