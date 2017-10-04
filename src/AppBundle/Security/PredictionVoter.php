@@ -63,17 +63,17 @@ class PredictionVoter extends Voter
         }
 
         // Finished predictions can be shown be everybody
-        if ($attribute === self::SHOW && $prediction->getRace()->isFinished()) {
+        if (self::SHOW === $attribute && $prediction->getRace()->isFinished()) {
             return true;
         }
 
         // Only author can show his prediction
-        if ($attribute === self::SHOW && (!$prediction->getRace()->isFinished()) && $user instanceof UserInterface && $prediction->isAuthor($user)) {
+        if (self::SHOW === $attribute && (!$prediction->getRace()->isFinished()) && $user instanceof UserInterface && $prediction->isAuthor($user)) {
             return true;
         }
 
         // Only author can edit his unfinished prediction
-        if ($attribute === self::EDIT && $user instanceof UserInterface && $this->decisionManager->decide($token, ['ROLE_USER']) && $prediction->isAuthor($user) && (!$prediction->getRace()->isFinished())) {
+        if (self::EDIT === $attribute && $user instanceof UserInterface && $this->decisionManager->decide($token, ['ROLE_USER']) && $prediction->isAuthor($user) && (!$prediction->getRace()->isFinished())) {
             return true;
         }
 
