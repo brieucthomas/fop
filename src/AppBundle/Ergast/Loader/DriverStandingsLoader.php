@@ -61,10 +61,16 @@ class DriverStandingsLoader extends AbstractLoader
                     /* @var $ergastDriverStanding ErgastEntity\DriverStanding */
                     $driverId = $ergastDriverStanding->getDriver()->getId();
 
+                    $driver = $drivers->get($driverId);
+
+                    if (!$driver) {
+                        continue 2;
+                    }
+
                     $standing = new AppEntity\DriverStandings();
                     $standing
                         ->setRace($race)
-                        ->setDriver($drivers->get($driverId))
+                        ->setDriver($driver)
                         ->setPoints($ergastDriverStanding->getPoints())
                         ->setPosition($ergastDriverStanding->getPosition())
                         ->setWins($ergastDriverStanding->getWins())
