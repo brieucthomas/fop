@@ -61,10 +61,16 @@ class ConstructorStandingsLoader extends AbstractLoader
                     /* @var $ergastConstructorStanding ErgastEntity\ConstructorStanding */
                     $constructorId = $ergastConstructorStanding->getConstructor()->getId();
 
+                    $constructor = $constructors->get($constructorId);
+
+                    if (!$constructor) {
+                        continue 2;
+                    }
+                    
                     $standing = new AppEntity\ConstructorStandings();
                     $standing
                         ->setRace($race)
-                        ->setConstructor($constructors->get($constructorId))
+                        ->setConstructor($constructor)
                         ->setPoints($ergastConstructorStanding->getPoints())
                         ->setPosition($ergastConstructorStanding->getPosition())
                         ->setWins($ergastConstructorStanding->getWins())
