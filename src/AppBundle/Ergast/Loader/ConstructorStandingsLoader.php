@@ -66,7 +66,7 @@ class ConstructorStandingsLoader extends AbstractLoader
                     if (!$constructor) {
                         continue 2;
                     }
-                    
+
                     $standing = new AppEntity\ConstructorStandings();
                     $standing
                         ->setRace($race)
